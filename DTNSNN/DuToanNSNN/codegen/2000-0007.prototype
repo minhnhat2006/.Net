@@ -1,0 +1,21 @@
+{
+  "__id": "2000-0007",
+  "files": {
+    "Frm__name__fieldname.cs": {
+      "type": "text",
+      "path": "2000-0007.prototype.1"
+    },
+    "__filedname.cs": {
+      "type": "text",
+      "path": "2000-0007.prototype.2"
+    },
+    "__filedname.Designer.cs": {
+      "type": "text",
+      "path": "2000-0007.prototype.3"
+    },
+    "__filedname.resx": {
+      "type": "text",
+      "path": "2000-0007.prototype.4"
+    }
+  }
+}

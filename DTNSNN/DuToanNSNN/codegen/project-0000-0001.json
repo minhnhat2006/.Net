@@ -1,0 +1,83 @@
+{
+  "__type": "project",
+  "__id": "0000-0001",
+  "__name": "QLCMND"
+  "language": "C#",
+  "name": "Demo Code Gen - Net Framework 2.0.50727 WinFrom & DevExpress 10.1.5",
+  "description": "Demo Code Generator - Net Framework 2.0.50727 WinFrom & DevExpress 10.1.5",
+  "version": "0.0.1",
+  "skeleton": "none",
+  "author": {
+    "name": "Nathan Nguyen",
+    "email": "minhnhat2006@gmail.com"
+  },
+  "keywords": ["demo", "winform", "devexpress"],
+  "dependencies": {
+    "devexpress": "10.1.5"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+
+  "build": {
+    "type": "",
+    "environment": {
+    },
+    "dir": "",
+    "command": ""
+  },
+
+  "structure": {
+    "path": "."
+
+    "files": {
+      "2000-0001": {
+      },
+      "2000-0002": {
+      },
+      "2000-0003": {
+      },
+      "2000-0004": {
+      },
+      "2000-0005": {
+      },
+      "2000-0006": {
+      },
+      "2000-0007": {
+          "__fieldname": "Home"
+      },
+      "2000-0008": {
+          "__fieldname": "RptPhieuChi"
+      },
+      "2000-0009": {
+          "__fieldname": "UCReport"
+      },
+      "2000-000a": {
+      }
+    },
+
+    "folders": {
+      "Properties": {
+        "structure": {
+          "path": "."
+          "files": {
+            "2000-000b": {
+            },
+            "2000-000c": {
+            },
+            "2000-000d": {
+              "__fieldname": "Resources"
+            },
+            "2000-000e": {
+              "__fieldname": "Settings"
+            },
+          }
+        },
+      "obj": {
+      },
+      "bin": {
+      }
+    }
+  }
+}

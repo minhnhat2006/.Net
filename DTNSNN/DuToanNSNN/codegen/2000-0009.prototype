@@ -1,0 +1,17 @@
+{
+  "__id": "2000-0009",
+  "files": {
+    "__fieldname.cs": {
+      "type": "text",
+      "path": "2000-0009.prototype.1"
+    },
+    "__filedname.Designer.cs": {
+      "type": "text",
+      "path": "2000-0009.prototype.2"
+    },
+    "__filedname.resx": {
+      "type": "text",
+      "path": "2000-0009.prototype.3"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "__id": "2000-000e",
+  "files": {
+    "__fieldname.Designer.cs": {
+      "type": "text",
+      "path": "2000-000e.prototype.1"
+    },
+    "fieldname.settings": {
+      "type": "text",
+      "path": "2000-000e.prototype.2"
+    }
+  }
+}

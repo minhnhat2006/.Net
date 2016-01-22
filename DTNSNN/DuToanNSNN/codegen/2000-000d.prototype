@@ -1,0 +1,13 @@
+{
+  "__id": "2000-000d",
+  "files": {
+    "__fieldname.Designer.cs": {
+      "type": "text",
+      "path": "2000-000d.prototype.1"
+    },
+    "fieldname.resx": {
+      "type": "text",
+      "path": "2000-000d.prototype.2"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "__id": "0000-0001",
+  "name": "Demo Code Gen - Net Framework 2.0.50727 WinFrom & DevExpress 10.1.5",
+  "description": "Demo Code Generator - Net Framework 2.0.50727 WinFrom & DevExpress 10.1.5",
+  "version": "0.0.1",
+  "skeleton": "none",
+  "author": {
+    "name": "Nathan Nguyen",
+    "email": "minhnhat2006@gmail.com"
+  },
+  "keywords": ["tc-admin"],
+  "dependencies": {
+    "metrics": ">=0.1.5"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "structure": {
+    "files": {
+      "project": 
+        {
+          "name": "QLCMND.csproj"
+          "path": "."
+          "__id": "2000-0001"
+        }
+      }
+  }
+}

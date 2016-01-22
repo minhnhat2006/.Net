@@ -1,0 +1,21 @@
+{
+  "__id": "2000-0006",
+  "files": {
+    "__name.xsc": {
+      "type": "text",
+      "path": "2000-0006.prototype.1"
+    },
+    "__name.xsd": {
+      "type": "text",
+      "path": "2000-0006.prototype.2"
+    },
+    "__name.xss": {
+      "type": "text",
+      "path": "2000-0006.prototype.3"
+    },
+    "__name.Designer.cs": {
+      "type": "text",
+      "path": "2000-0006.prototype.4"
+    }
+  }
+}
