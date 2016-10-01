@@ -92,3 +92,5 @@ E:\GDriver\Projects\Visual Studio 2008\DTNSNN\DuToanNSNN\obj\Release\DuToanNSNN.
 E:\GDriver\Projects\Visual Studio 2008\DTNSNN\DuToanNSNN\obj\Release\DuToanNSNN.UCReport.resources
 E:\GDriver\Projects\Visual Studio 2008\DTNSNN\DuToanNSNN\obj\Release\DuToanNSNN.csproj.GenerateResource.Cache
 E:\GDriver\Projects\Visual Studio 2008\DTNSNN\DuToanNSNN\obj\Release\DuToanNSNN.exe.licenses
+D:\Projects\Git\.Net\DTNSNN\DuToanNSNN\bin\Release\DuToanNSNN.exe.config
+D:\Projects\Git\.Net\DTNSNN\DuToanNSNN\obj\Release\DuToanNSNN.exe

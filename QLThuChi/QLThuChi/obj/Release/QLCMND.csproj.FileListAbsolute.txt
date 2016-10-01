@@ -1,0 +1,101 @@
+C:\Documents and Settings\tc\Local Settings\Application Data\Temporary Projects\QLCMND\bin\Release\QLCMND.exe
+C:\Documents and Settings\tc\Local Settings\Application Data\Temporary Projects\QLCMND\bin\Release\QLCMND.pdb
+C:\Documents and Settings\tc\Local Settings\Application Data\Temporary Projects\QLCMND\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\tc\Local Settings\Application Data\Temporary Projects\QLCMND\obj\Release\QLCMND.Properties.Resources.resources
+C:\Documents and Settings\tc\Local Settings\Application Data\Temporary Projects\QLCMND\obj\Release\QLCMND.csproj.GenerateResource.Cache
+C:\Documents and Settings\tc\Local Settings\Application Data\Temporary Projects\QLCMND\obj\Release\QLCMND.exe
+C:\Documents and Settings\tc\Local Settings\Application Data\Temporary Projects\QLCMND\obj\Release\QLCMND.pdb
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\obj\Release\QLCMND.exe
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\QLCMND.exe.config
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\obj\Release\QLCMND.Properties.Resources.resources
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\obj\Release\QLCMND.csproj.GenerateResource.Cache
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\obj\Release\QLCMND.exe.licenses
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\cmnd.mdb
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\QLCMND.exe
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\obj\Release\QLCMND.FrmHome.resources
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\obj\Release\QLCMND.UCReport.resources
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\obj\Release\QLCMND.RptPhieuThu.resources
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\obj\Release\QLCMND.RptPhieuChi.resources
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.Charts.v10.1.Core.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.Data.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.RichEdit.v10.1.Core.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.Utils.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraBars.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraCharts.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraEditors.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraGrid.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraLayout.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraNavBar.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraPivotGrid.v10.1.Core.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraPivotGrid.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraPrinting.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraReports.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraRichEdit.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraTreeList.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraVerticalGrid.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraWizard.v10.1.dll
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraPivotGrid.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraReports.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraRichEdit.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraPivotGrid.v10.1.Core.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraLayout.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraVerticalGrid.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.RichEdit.v10.1.Core.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraWizard.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraBars.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraNavBar.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.Utils.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.Data.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraPrinting.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraGrid.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraEditors.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraCharts.v10.1.xml
+C:\Documents and Settings\tc\My Documents\Visual Studio 2008\Projects\QLCMND\QLCMND\bin\Release\DevExpress.XtraTreeList.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\cmnd.mdb
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\QLCMND.exe.config
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\QLCMND.exe
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.Charts.v10.1.Core.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.Data.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.RichEdit.v10.1.Core.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.Utils.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraBars.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraCharts.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraEditors.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraGrid.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraLayout.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraNavBar.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraPivotGrid.v10.1.Core.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraPivotGrid.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraPrinting.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraReports.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraRichEdit.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraTreeList.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraVerticalGrid.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraWizard.v10.1.dll
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraPivotGrid.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraReports.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraRichEdit.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraPivotGrid.v10.1.Core.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraLayout.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraVerticalGrid.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.RichEdit.v10.1.Core.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraWizard.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraBars.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraNavBar.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.Utils.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.Data.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraPrinting.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraGrid.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraEditors.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraCharts.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\bin\Release\DevExpress.XtraTreeList.v10.1.xml
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\obj\Release\ResolveAssemblyReference.cache
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\obj\Release\QLCMND.RptPhieuChi.resources
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\obj\Release\QLCMND.FrmHome.resources
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\obj\Release\QLCMND.RptPhieuThu.resources
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\obj\Release\QLCMND.Properties.Resources.resources
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\obj\Release\QLCMND.UCReport.resources
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\obj\Release\QLCMND.csproj.GenerateResource.Cache
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\obj\Release\QLCMND.exe.licenses
+D:\Projects\Visual Studio 2008\QLCMND\QLCMND\obj\Release\QLCMND.exe

@@ -1,0 +1,15 @@
+D:\Projects\Git\.Net\QLMamNon\Backup\QLMamNon\bin\Debug\QLMamNon.exe.config
+D:\Projects\Git\.Net\QLMamNon\Backup\QLMamNon\obj\Debug\QLMamNon.Properties.Resources.resources
+D:\Projects\Git\.Net\QLMamNon\Backup\QLMamNon\obj\Debug\QLMamNon.UCReport.resources
+D:\Projects\Git\.Net\QLMamNon\Backup\QLMamNon\obj\Debug\QLMamNon.csproj.GenerateResource.Cache
+D:\Projects\Git\.Net\QLMamNon\Backup\QLMamNon\obj\Debug\QLMamNon.exe.licenses
+D:\Projects\Git\.Net\QLMamNon\Backup\QLMamNon\bin\Debug\QLMamNon.exe
+D:\Projects\Git\.Net\QLMamNon\Backup\QLMamNon\bin\Debug\QLMamNon.pdb
+D:\Projects\Git\.Net\QLMamNon\Backup\QLMamNon\obj\Debug\QLMamNon.exe
+D:\Projects\Git\.Net\QLMamNon\Backup\QLMamNon\obj\Debug\QLMamNon.pdb
+D:\Projects\Git\.Net\QLMamNon\Backup\QLMamNon\obj\Debug\QLMamNon.Forms.FrmMain.resources
+D:\Projects\Git\.Net\QLMamNon\Backup\QLMamNon\obj\Debug\QLMamNon.Forms.HocSinh.FrmThongTinHocSinh.resources
+D:\Projects\Git\.Net\QLMamNon\Backup\QLMamNon\obj\Debug\QLMamNon.UserControls.UCEditFormThongTinHocSinh.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\bin\Debug\QLMamNon.exe.config
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.exe
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.pdb
