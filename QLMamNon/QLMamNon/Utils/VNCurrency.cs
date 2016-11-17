@@ -2,7 +2,7 @@
 using System;
 namespace QLMamNon
 {
-    public class VNCurrency
+    public static class VNCurrency
     {
         public static string ToString(decimal number)
         {

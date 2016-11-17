@@ -26,20 +26,11 @@ namespace QLMamNon.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\mamnon.mdb")]
-        public string cmndConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;User Id=root;Persist Security Info=True;database=qlmamnon;Charac" +
+            "ter Set=utf8")]
+        public string qlmamnonConnectionString1 {
             get {
-                return ((string)(this["cmndConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;User Id=root;Persist Security Info=True;database=qlmamnon")]
-        public string qlmamnonConnectionString {
-            get {
-                return ((string)(this["qlmamnonConnectionString"]));
+                return ((string)(this["qlmamnonConnectionString1"]));
             }
         }
     }

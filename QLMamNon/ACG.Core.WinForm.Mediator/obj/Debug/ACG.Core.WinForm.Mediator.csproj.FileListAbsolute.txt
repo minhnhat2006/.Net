@@ -1,0 +1,4 @@
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Mediator\bin\Debug\ACG.Core.WinForm.Mediator.dll
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Mediator\bin\Debug\ACG.Core.WinForm.Mediator.pdb
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Mediator\obj\Debug\ACG.Core.WinForm.Mediator.dll
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Mediator\obj\Debug\ACG.Core.WinForm.Mediator.pdb

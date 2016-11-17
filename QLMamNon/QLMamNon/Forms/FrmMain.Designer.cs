@@ -41,6 +41,8 @@
             this.bbtnHocSinhSoLieuWHO = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnHocSinhBaoCaoSucKhoe = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnHocSinhThongKe = new DevExpress.XtraBars.BarButtonItem();
+            this.bsiManHinh = new DevExpress.XtraBars.BarStaticItem();
+            this.bsiTrangThai = new DevExpress.XtraBars.BarStaticItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.rpDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -55,6 +57,12 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.thanhPhoTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ThanhPhoTableAdapter();
+            this.quanHuyenTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.QuanHuyenTableAdapter();
+            this.phuongXaTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhuongXaTableAdapter();
+            this.truongTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.TruongTableAdapter();
+            this.khoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoiTableAdapter();
+            this.lopTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.LopTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -75,19 +83,21 @@
             this.bbtnHocSinhThongTinCanDo,
             this.bbtnHocSinhSoLieuWHO,
             this.bbtnHocSinhBaoCaoSucKhoe,
-            this.bbtnHocSinhThongKe});
+            this.bbtnHocSinhThongKe,
+            this.bsiManHinh,
+            this.bsiTrangThai});
             this.ribbon.LargeImages = this.imageCollection1;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbon.MaxItemId = 1;
+            this.ribbon.MaxItemId = 3;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.rpDanhMuc,
             this.rpHocSinh,
             this.rpGiaoVien,
             this.rpDinhDuong,
             this.rpThuChi,
-            this.rpBaoCao});
+            this.rpBaoCao,
+            this.rpDanhMuc});
             this.ribbon.Size = new System.Drawing.Size(990, 150);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -103,6 +113,7 @@
             this.bbtnHocSinhThongTin.Id = 5;
             this.bbtnHocSinhThongTin.LargeImageIndex = 3;
             this.bbtnHocSinhThongTin.Name = "bbtnHocSinhThongTin";
+            this.bbtnHocSinhThongTin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnHocSinhThongTin_ItemClick);
             // 
             // bbtnHocSinhKiemTraTrung
             // 
@@ -135,6 +146,7 @@
             this.bbtnHocSinhXepLop.Id = 9;
             this.bbtnHocSinhXepLop.LargeImageIndex = 5;
             this.bbtnHocSinhXepLop.Name = "bbtnHocSinhXepLop";
+            this.bbtnHocSinhXepLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnHocSinhXepLop_ItemClick);
             // 
             // bbtnHocSinhThongTinCanDo
             // 
@@ -168,6 +180,23 @@
             this.bbtnHocSinhThongKe.LargeImageIndex = 9;
             this.bbtnHocSinhThongKe.Name = "bbtnHocSinhThongKe";
             // 
+            // bsiManHinh
+            // 
+            this.bsiManHinh.Glyph = ((System.Drawing.Image)(resources.GetObject("bsiManHinh.Glyph")));
+            this.bsiManHinh.Id = 1;
+            this.bsiManHinh.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bsiManHinh.LargeGlyph")));
+            this.bsiManHinh.Name = "bsiManHinh";
+            this.bsiManHinh.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // bsiTrangThai
+            // 
+            this.bsiTrangThai.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.bsiTrangThai.Glyph = ((System.Drawing.Image)(resources.GetObject("bsiTrangThai.Glyph")));
+            this.bsiTrangThai.Id = 2;
+            this.bsiTrangThai.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bsiTrangThai.LargeGlyph")));
+            this.bsiTrangThai.Name = "bsiTrangThai";
+            this.bsiTrangThai.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -195,7 +224,7 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Địa chỉ";
             // 
             // rpHocSinh
             // 
@@ -262,6 +291,8 @@
             // 
             // ribbonStatusBar
             // 
+            this.ribbonStatusBar.ItemLinks.Add(this.bsiManHinh);
+            this.ribbonStatusBar.ItemLinks.Add(this.bsiTrangThai, true);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 718);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
@@ -277,6 +308,30 @@
                         | DevExpress.XtraTab.TabButtons.Default)));
             this.xtraTabbedMdiManager1.Images = this.imageCollection1;
             this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // thanhPhoTableAdapter
+            // 
+            this.thanhPhoTableAdapter.ClearBeforeFill = true;
+            // 
+            // quanHuyenTableAdapter
+            // 
+            this.quanHuyenTableAdapter.ClearBeforeFill = true;
+            // 
+            // phuongXaTableAdapter
+            // 
+            this.phuongXaTableAdapter.ClearBeforeFill = true;
+            // 
+            // truongTableAdapter
+            // 
+            this.truongTableAdapter.ClearBeforeFill = true;
+            // 
+            // khoiTableAdapter
+            // 
+            this.khoiTableAdapter.ClearBeforeFill = true;
+            // 
+            // lopTableAdapter
+            // 
+            this.lopTableAdapter.ClearBeforeFill = true;
             // 
             // FrmMain
             // 
@@ -333,5 +388,13 @@
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
         private DevExpress.Utils.ImageCollection imageCollection1;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarStaticItem bsiManHinh;
+        private DevExpress.XtraBars.BarStaticItem bsiTrangThai;
+        private Dao.QLMamNonDsTableAdapters.ThanhPhoTableAdapter thanhPhoTableAdapter;
+        private Dao.QLMamNonDsTableAdapters.QuanHuyenTableAdapter quanHuyenTableAdapter;
+        private Dao.QLMamNonDsTableAdapters.PhuongXaTableAdapter phuongXaTableAdapter;
+        private Dao.QLMamNonDsTableAdapters.TruongTableAdapter truongTableAdapter;
+        private Dao.QLMamNonDsTableAdapters.KhoiTableAdapter khoiTableAdapter;
+        private Dao.QLMamNonDsTableAdapters.LopTableAdapter lopTableAdapter;
     }
 }

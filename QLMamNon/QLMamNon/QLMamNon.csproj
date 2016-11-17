@@ -60,15 +60,16 @@
     <Reference Include="Accessibility">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="DevExpress.Data.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraBars.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraReports.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.6.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -86,17 +87,73 @@
     <Reference Include="UIAutomationClient" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\ActivityTracker\ControlHandler\SimpleButtonHandler.cs" />
+    <Compile Include="Components\ActivityTracker\ControlHandler\ComboBoxEditHandler.cs" />
+    <Compile Include="Components\ActivityTracker\ControlHandler\DateEditHandler.cs" />
+    <Compile Include="Components\ActivityTracker\ControlHandler\TextEditHandler.cs" />
+    <Compile Include="Components\ActivityTracker\ButtonClickObserver.cs" />
+    <Compile Include="Components\ActivityTracker\DEActivityTracker.cs" />
+    <Compile Include="Components\ActivityTracker\LoggingObserver.cs" />
+    <Compile Include="Components\Data.Static\NamHocData.cs" />
+    <Compile Include="Components\Data.Static\LopData.cs" />
+    <Compile Include="Components\Data.Static\KhoiData.cs" />
+    <Compile Include="Components\Data.Static\TruongData.cs" />
+    <Compile Include="Components\Data.Static\PhuongXaData.cs" />
+    <Compile Include="Components\Data.Static\QuanHuyenData.cs" />
+    <Compile Include="Components\Data.Static\DataKeys.cs" />
+    <Compile Include="Components\Data.Static\TinhThanhPhoData.cs" />
+    <Compile Include="Components\ModuleMediator\Channel\FormChannelManager.cs" />
+    <Compile Include="Components\ModuleMediator\Channel\IChannelManager.cs" />
+    <Compile Include="Constant\CommonConstant.cs" />
+    <Compile Include="Entity\Form\NamHoc.cs" />
+    <Compile Include="Facade\StaticDataFacade.cs" />
+    <Compile Include="Facade\FormMainFacade.cs" />
+    <Compile Include="Forms\CRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmTruongHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmTruongHoc.Designer.cs">
+      <DependentUpon>FrmTruongHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HocSinh\FrmXepLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HocSinh\FrmXepLop.Designer.cs">
+      <DependentUpon>FrmXepLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Resource\AppForms.cs" />
+    <Compile Include="Forms\Resource\FormCaptions.cs" />
+    <Compile Include="Forms\Resource\StatusCaptions.cs" />
+    <Compile Include="UserControls\UCEditFormTruongHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormTruongHoc.Designer.cs">
+      <DependentUpon>UCEditFormTruongHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\StaticDataUtil.cs" />
+    <Compile Include="Workflow\Handler\AdjustPopupEditFormAction.cs" />
+    <Compile Include="Workflow\Handler\InitFormTrackerAction.cs" />
+    <Compile Include="Dao\QLMamNonDs.cs">
+      <DependentUpon>QLMamNonDs.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Dao\QLMamNonDs.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLMamNonDs.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Facade\ActivityTrackerFacade.cs" />
+    <Compile Include="Facade\LoggerFacade.cs" />
+    <Compile Include="Facade\ModuleMediatorFacade.cs" />
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Helper\FormFactory.cs" />
     <Compile Include="Forms\HocSinh\FrmThongTinHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,17 +162,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workflow\Forms\FrmMainFlow.cs" />
+    <Compile Include="Workflow\Forms\IFormWorkFlow.cs" />
+    <Compile Include="Workflow\WorkFlowActions.cs" />
+    <EmbeddedResource Include="Forms\DanhMuc\FrmTruongHoc.resx">
+      <DependentUpon>FrmTruongHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HocSinh\FrmThongTinHocSinh.resx">
       <DependentUpon>FrmThongTinHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HocSinh\FrmXepLop.resx">
+      <DependentUpon>FrmXepLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCEditFormTruongHoc.resx">
+      <DependentUpon>UCEditFormTruongHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCEditFormThongTinHocSinh.resx">
       <DependentUpon>UCEditFormThongTinHocSinh.cs</DependentUpon>
@@ -128,7 +198,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Dao\QLMamNonDs.xsc">
       <DependentUpon>QLMamNonDs.xsd</DependentUpon>
     </None>
@@ -140,6 +212,14 @@
     <None Include="Dao\QLMamNonDs.xss">
       <DependentUpon>QLMamNonDs.xsd</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+HocSinhRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+KhoiRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+LopRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+PhuongXaRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+QuanHuyenRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ThanhPhoRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+TruongRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Entity.Form.NamHoc.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -199,9 +279,35 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Forms\ThuChi\" />
     <Folder Include="Images\icon\" />
     <Folder Include="Reports\" />
     <Folder Include="Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ACG.Core.WinForm.ActivityTracking\ACG.Core.WinForm.ActivityObserver.csproj">
+      <Project>{AB161BF4-8366-425D-9553-90113E6C5F8C}</Project>
+      <Name>ACG.Core.WinForm.ActivityObserver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ACG.Core.WinForm.Data.Static\ACG.Core.WinForm.Data.Static.csproj">
+      <Project>{A0485CA8-CE15-4A4E-8DB9-B683727C7E71}</Project>
+      <Name>ACG.Core.WinForm.Data.Static</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ACG.Core.WinForm.Logging\ACG.Core.WinForm.Logging.csproj">
+      <Project>{E71C9B63-1957-42AA-9C58-70E58A016487}</Project>
+      <Name>ACG.Core.WinForm.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ACG.Core.WinForm.Mediator\ACG.Core.WinForm.Mediator.csproj">
+      <Project>{746984E1-AAE2-4B55-8A77-A1A19FBA7E43}</Project>
+      <Name>ACG.Core.WinForm.Mediator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ACG.Core.WinForm.Util\ACG.Core.WinForm.Util.csproj">
+      <Project>{8DF619D1-4212-4F3E-AF09-F816EB93884D}</Project>
+      <Name>ACG.Core.WinForm.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

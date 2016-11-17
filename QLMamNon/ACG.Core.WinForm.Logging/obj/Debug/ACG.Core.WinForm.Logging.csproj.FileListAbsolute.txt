@@ -1,0 +1,4 @@
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Logging\bin\Debug\ACG.Core.WinForm.Logging.dll
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Logging\bin\Debug\ACG.Core.WinForm.Logging.pdb
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Logging\obj\Debug\ACG.Core.WinForm.Logging.dll
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Logging\obj\Debug\ACG.Core.WinForm.Logging.pdb

@@ -1,0 +1,4 @@
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Data.Static\bin\Debug\ACG.Core.WinForm.Data.Static.dll
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Data.Static\bin\Debug\ACG.Core.WinForm.Data.Static.pdb
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Data.Static\obj\Debug\ACG.Core.WinForm.Data.Static.dll
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Data.Static\obj\Debug\ACG.Core.WinForm.Data.Static.pdb
