@@ -150,6 +150,7 @@
     <Compile Include="Form\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Log\TraceListenerLogger.cs" />
     <Compile Include="Report\RptCTTMNhanVien.cs">
       <SubType>Component</SubType>
     </Compile>

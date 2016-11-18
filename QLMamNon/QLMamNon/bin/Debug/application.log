@@ -2257,3 +2257,469 @@
 2016-11-17 08:57:12 info : Text changed $FrmThongTinHocSinh$lcMain$cmbNamHoc$ 
 2016-11-17 08:57:12 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 
 2016-11-17 08:57:31 info : Text changed $FrmThongTinHocSinh$lcMain$cmbThanhPho$ Đà Nẵng
+2016-11-17 15:23:47 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 15:23:53 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:23:53 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:23:53 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:23:53 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:23:53 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:23:53 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:23:53 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:23:53 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:23:53 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:23:53 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:23:53 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:23:53 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:24:00 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Hải Châu
+2016-11-17 15:24:00 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Hải Châu
+2016-11-17 15:24:00 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Hải Châu
+2016-11-17 15:24:00 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Hải Châu
+2016-11-17 15:24:01 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Hải Châu 1
+2016-11-17 15:24:01 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Hải Châu 1
+2016-11-17 15:24:01 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Hải Châu 1
+2016-11-17 15:24:01 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Hải Châu 1
+2016-11-17 15:25:57 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 15:25:59 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:25:59 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:25:59 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:25:59 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:25:59 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:25:59 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:25:59 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:25:59 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:25:59 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:25:59 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:25:59 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:25:59 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:26:02 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 15:26:02 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 15:26:02 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 15:26:02 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 15:26:03 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 15:26:03 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 15:26:03 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 15:26:03 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 15:27:46 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 15:46:16 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 15:46:20 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:46:20 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:46:20 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:46:20 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:46:20 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:46:20 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:46:20 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:46:20 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:46:20 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:46:20 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:46:20 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:46:20 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 01/11/2016
+2016-11-17 15:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 01/11/2016
+2016-11-17 15:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 01/11/2016
+2016-11-17 15:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 01/11/2016
+2016-11-17 15:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 12/11/2016
+2016-11-17 15:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 12/11/2016
+2016-11-17 15:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 12/11/2016
+2016-11-17 15:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 12/11/2016
+2016-11-17 15:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 01/11/2016
+2016-11-17 15:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 01/11/2016
+2016-11-17 15:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 01/11/2016
+2016-11-17 15:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 01/11/2016
+2016-11-17 15:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 12/11/2016
+2016-11-17 15:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 12/11/2016
+2016-11-17 15:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 12/11/2016
+2016-11-17 15:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 12/11/2016
+2016-11-17 15:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 21/11/2016
+2016-11-17 15:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 21/11/2016
+2016-11-17 15:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 21/11/2016
+2016-11-17 15:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 21/11/2016
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ K
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ K
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ K
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ K
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Ki
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Ki
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Ki
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Ki
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kin
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kin
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kin
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kin
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 15:46:34 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ T
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ T
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ T
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ T
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Th
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Th
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Th
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Th
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thu
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thu
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thu
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thu
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Th
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Th
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Th
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Th
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thư
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thư
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thư
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thư
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thưo
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thưo
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thưo
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thưo
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thư
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thư
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thư
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thư
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươ
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươ
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươ
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươ
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươn
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươn
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươn
+2016-11-17 15:46:37 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươn
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thương
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thương
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thương
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thương
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươn
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươn
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươn
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươn
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươ
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươ
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươ
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thươ
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thư
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thư
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thư
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thư
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thườ
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thườ
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thườ
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thườ
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thườn
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thườn
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thườn
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thườn
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường
+2016-11-17 15:46:38 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường 
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường 
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường 
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường 
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường t
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường t
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường t
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường t
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường tr
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường tr
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường tr
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường tr
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường tru
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường tru
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường tru
+2016-11-17 15:46:39 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường tru
+2016-11-17 15:46:40 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường tr
+2016-11-17 15:46:40 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường tr
+2016-11-17 15:46:40 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường tr
+2016-11-17 15:46:40 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường tr
+2016-11-17 15:46:40 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường trú
+2016-11-17 15:46:40 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường trú
+2016-11-17 15:46:40 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường trú
+2016-11-17 15:46:40 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường trú
+2016-11-17 15:46:42 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 3
+2016-11-17 15:46:42 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 3
+2016-11-17 15:46:42 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 3
+2016-11-17 15:46:42 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 3
+2016-11-17 15:46:42 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 34
+2016-11-17 15:46:42 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 34
+2016-11-17 15:46:42 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 34
+2016-11-17 15:46:42 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 34
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 344
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 344
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 344
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 344
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 3443
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 3443
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 3443
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 3443
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 34434
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 34434
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 34434
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 34434
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 344343
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 344343
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 344343
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 344343
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 3443434
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 3443434
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 3443434
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 3443434
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 34434343
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 34434343
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 34434343
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 34434343
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 344343434
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 344343434
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 344343434
+2016-11-17 15:46:43 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 344343434
+2016-11-17 15:46:45 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 15:46:45 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 15:46:45 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 15:46:45 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 15:46:45 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 15:46:45 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 15:46:45 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 15:46:45 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 15:48:17 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 15:48:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:48:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:48:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:48:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 15:48:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:48:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:48:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:48:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 15:48:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:48:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:48:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:48:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 15:48:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 02/11/2016
+2016-11-17 15:48:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 02/11/2016
+2016-11-17 15:48:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 02/11/2016
+2016-11-17 15:48:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 02/11/2016
+2016-11-17 15:48:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 21/11/2016
+2016-11-17 15:48:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 21/11/2016
+2016-11-17 15:48:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 21/11/2016
+2016-11-17 15:48:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 21/11/2016
+2016-11-17 15:48:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 12/11/2016
+2016-11-17 15:48:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 12/11/2016
+2016-11-17 15:48:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 12/11/2016
+2016-11-17 15:48:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 12/11/2016
+2016-11-17 15:48:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 01/11/2016
+2016-11-17 15:48:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 01/11/2016
+2016-11-17 15:48:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 01/11/2016
+2016-11-17 15:48:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 01/11/2016
+2016-11-17 15:48:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ K
+2016-11-17 15:48:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ K
+2016-11-17 15:48:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ K
+2016-11-17 15:48:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ K
+2016-11-17 15:48:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Ki
+2016-11-17 15:48:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Ki
+2016-11-17 15:48:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Ki
+2016-11-17 15:48:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Ki
+2016-11-17 15:48:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kin
+2016-11-17 15:48:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kin
+2016-11-17 15:48:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kin
+2016-11-17 15:48:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kin
+2016-11-17 15:48:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 15:48:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 15:48:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 15:48:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 15:48:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 15:48:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 15:48:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 15:48:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 15:48:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 15:48:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 15:48:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 15:48:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 15:54:52 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 16:01:22 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 16:01:22 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha$ Tổ 49
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha$ Tổ 49
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha$ Tổ 49
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha$ Tổ 49
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha$ Tổ 49
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha$ Tổ 49
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe$ Tester 2
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe$ Tester 2
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe$ Tester 2
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe$ Tester 2
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe$ Tester 2
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe$ Tester 2
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha$ Tester 1
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha$ Tester 1
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha$ Tester 1
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha$ Tester 1
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha$ Tester 1
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha$ Tester 1
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 09122323232
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 09122323232
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 09122323232
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 09122323232
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 09122323232
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 09122323232
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường trú
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường trú
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường trú
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường trú
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường trú
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienCuTru$ Thường trú
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 06/10/2016
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 06/10/2016
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 06/10/2016
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 06/10/2016
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 06/10/2016
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 06/10/2016
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 02/10/2016
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 02/10/2016
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 02/10/2016
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 02/10/2016
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 02/10/2016
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 02/10/2016
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Tèo Em
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Tèo Em
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Tèo Em
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Tèo Em
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Tèo Em
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Tèo Em
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Nguyen Van
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Nguyen Van
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Nguyen Van
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Nguyen Van
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Nguyen Van
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Nguyen Van
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 16:01:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 16:07:06 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDanToc$ Kinh
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 01/11/2016
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 01/11/2016
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 01/11/2016
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgayVaoLop$ 01/11/2016
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 12/11/2016
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 12/11/2016
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 12/11/2016
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh$ 12/11/2016
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen$ Vũ
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem$ Trần Xuân
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 16:07:12 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh$ Đà Nẵng
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 23
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 23
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 23
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 23
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 232
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 232
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 232
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 232
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2323
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2323
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2323
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2323
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 23232
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 23232
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 23232
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 23232
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 232323
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 232323
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 232323
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 232323
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2323232
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2323232
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2323232
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2323232
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 23232323
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 23232323
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 23232323
+2016-11-17 16:07:14 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 23232323
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 232323232
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 232323232
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 232323232
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 232323232
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2323232323
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2323232323
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2323232323
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai$ 2323232323
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan$ Thanh Khê
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 16:07:15 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong$ Thanh Khê Đông
+2016-11-17 16:07:25 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 16:14:25 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 16:14:25 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 16:27:42 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 16:27:42 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-17 16:30:54 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-17 16:30:54 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-17 16:30:54 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-17 16:30:54 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-17 16:31:22 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-17 16:31:22 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-17 16:31:22 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-17 16:31:22 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 10:45:07 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 10:45:07 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 10:45:07 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 10:45:07 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 10:54:25 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-18 10:54:25 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-18 10:54:25 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-18 10:55:24 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 10:55:24 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 10:55:24 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 10:55:24 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 10:55:24 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 10:55:24 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 10:55:24 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 10:55:24 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 11:06:17 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 11:06:17 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 11:06:17 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 11:06:17 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 11:06:17 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 11:06:17 info : Text changed $$$$UCEditFormKhoiHoc$layoutControl1$txtName$ Lá (4-5 tuổi)
+2016-11-18 11:09:00 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 11:09:00 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 11:09:00 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 11:09:00 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 11:12:59 info : Text changed $FrmThongTinHocSinh$lcMain$cmbSoLuong$ 0
+2016-11-18 11:29:59 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 11:29:59 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 11:29:59 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 11:29:59 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ MNCL Hoa Hồng
+2016-11-18 11:30:03 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ 
+2016-11-18 11:30:03 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ 
+2016-11-18 11:30:03 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ 
+2016-11-18 11:30:03 info : Text changed $$$$UCEditFormTruongHoc$layoutControl1$txtName$ 

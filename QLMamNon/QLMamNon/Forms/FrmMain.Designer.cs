@@ -43,9 +43,13 @@
             this.bbtnHocSinhThongKe = new DevExpress.XtraBars.BarButtonItem();
             this.bsiManHinh = new DevExpress.XtraBars.BarStaticItem();
             this.bsiTrangThai = new DevExpress.XtraBars.BarStaticItem();
+            this.bbiTruongHoc = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiKhoiHoc = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiLopHoc = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiTinhThanhPho = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiQuanHuyen = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiPhuongXa = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
-            this.rpDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpHocSinh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgHocSinh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgHocSinhCanDo = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -54,6 +58,9 @@
             this.rpDinhDuong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpThuChi = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpBaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
@@ -85,11 +92,17 @@
             this.bbtnHocSinhBaoCaoSucKhoe,
             this.bbtnHocSinhThongKe,
             this.bsiManHinh,
-            this.bsiTrangThai});
+            this.bsiTrangThai,
+            this.bbiTruongHoc,
+            this.bbiKhoiHoc,
+            this.bbiLopHoc,
+            this.bbiTinhThanhPho,
+            this.bbiQuanHuyen,
+            this.bbiPhuongXa});
             this.ribbon.LargeImages = this.imageCollection1;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbon.MaxItemId = 3;
+            this.ribbon.MaxItemId = 10;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpHocSinh,
@@ -197,6 +210,60 @@
             this.bsiTrangThai.Name = "bsiTrangThai";
             this.bsiTrangThai.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
+            // bbiTruongHoc
+            // 
+            this.bbiTruongHoc.Caption = "Trường học";
+            this.bbiTruongHoc.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiTruongHoc.Glyph")));
+            this.bbiTruongHoc.Id = 3;
+            this.bbiTruongHoc.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiTruongHoc.LargeGlyph")));
+            this.bbiTruongHoc.Name = "bbiTruongHoc";
+            this.bbiTruongHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiTruongHoc_ItemClick);
+            // 
+            // bbiKhoiHoc
+            // 
+            this.bbiKhoiHoc.Caption = "Khối học";
+            this.bbiKhoiHoc.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiKhoiHoc.Glyph")));
+            this.bbiKhoiHoc.Id = 4;
+            this.bbiKhoiHoc.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiKhoiHoc.LargeGlyph")));
+            this.bbiKhoiHoc.Name = "bbiKhoiHoc";
+            this.bbiKhoiHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiKhoiHoc_ItemClick);
+            // 
+            // bbiLopHoc
+            // 
+            this.bbiLopHoc.Caption = "Lớp học";
+            this.bbiLopHoc.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiLopHoc.Glyph")));
+            this.bbiLopHoc.Id = 5;
+            this.bbiLopHoc.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiLopHoc.LargeGlyph")));
+            this.bbiLopHoc.Name = "bbiLopHoc";
+            this.bbiLopHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiLopHoc_ItemClick);
+            // 
+            // bbiTinhThanhPho
+            // 
+            this.bbiTinhThanhPho.Caption = "Tình/Thành phố";
+            this.bbiTinhThanhPho.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiTinhThanhPho.Glyph")));
+            this.bbiTinhThanhPho.Id = 7;
+            this.bbiTinhThanhPho.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiTinhThanhPho.LargeGlyph")));
+            this.bbiTinhThanhPho.Name = "bbiTinhThanhPho";
+            this.bbiTinhThanhPho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiTinhThanhPho_ItemClick);
+            // 
+            // bbiQuanHuyen
+            // 
+            this.bbiQuanHuyen.Caption = "Quận/Huyện";
+            this.bbiQuanHuyen.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiQuanHuyen.Glyph")));
+            this.bbiQuanHuyen.Id = 8;
+            this.bbiQuanHuyen.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiQuanHuyen.LargeGlyph")));
+            this.bbiQuanHuyen.Name = "bbiQuanHuyen";
+            this.bbiQuanHuyen.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiQuanHuyen_ItemClick);
+            // 
+            // bbiPhuongXa
+            // 
+            this.bbiPhuongXa.Caption = "Phường/Xã";
+            this.bbiPhuongXa.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiPhuongXa.Glyph")));
+            this.bbiPhuongXa.Id = 9;
+            this.bbiPhuongXa.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiPhuongXa.LargeGlyph")));
+            this.bbiPhuongXa.Name = "bbiPhuongXa";
+            this.bbiPhuongXa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiPhuongXa_ItemClick);
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -211,20 +278,6 @@
             this.imageCollection1.Images.SetKeyName(7, "nhapthongtinhoctap.jpg");
             this.imageCollection1.Images.SetKeyName(8, "suckhoe.jpg");
             this.imageCollection1.Images.SetKeyName(9, "thongke.jpg");
-            // 
-            // rpDanhMuc
-            // 
-            this.rpDanhMuc.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.rpDanhMuc.Appearance.Options.UseFont = true;
-            this.rpDanhMuc.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.rpDanhMuc.Name = "rpDanhMuc";
-            this.rpDanhMuc.Text = "Danh mục - Hệ thống";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Địa chỉ";
             // 
             // rpHocSinh
             // 
@@ -288,6 +341,32 @@
             this.rpBaoCao.Appearance.Options.UseFont = true;
             this.rpBaoCao.Name = "rpBaoCao";
             this.rpBaoCao.Text = "Báo cáo thống kê phòng giáo dục";
+            // 
+            // rpDanhMuc
+            // 
+            this.rpDanhMuc.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.rpDanhMuc.Appearance.Options.UseFont = true;
+            this.rpDanhMuc.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2});
+            this.rpDanhMuc.Name = "rpDanhMuc";
+            this.rpDanhMuc.Text = "Danh mục - Hệ thống";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiTruongHoc);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiKhoiHoc);
+            this.ribbonPageGroup1.ItemLinks.Add(this.bbiLopHoc);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Quản lý Trường học";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiTinhThanhPho);
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiQuanHuyen);
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiPhuongXa);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Quản lý Tỉnh/Thành phố";
             // 
             // ribbonStatusBar
             // 
@@ -396,5 +475,12 @@
         private Dao.QLMamNonDsTableAdapters.TruongTableAdapter truongTableAdapter;
         private Dao.QLMamNonDsTableAdapters.KhoiTableAdapter khoiTableAdapter;
         private Dao.QLMamNonDsTableAdapters.LopTableAdapter lopTableAdapter;
+        private DevExpress.XtraBars.BarButtonItem bbiTruongHoc;
+        private DevExpress.XtraBars.BarButtonItem bbiKhoiHoc;
+        private DevExpress.XtraBars.BarButtonItem bbiLopHoc;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem bbiTinhThanhPho;
+        private DevExpress.XtraBars.BarButtonItem bbiQuanHuyen;
+        private DevExpress.XtraBars.BarButtonItem bbiPhuongXa;
     }
 }

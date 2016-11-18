@@ -111,6 +111,36 @@
     <Compile Include="Forms\CRUDForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\DanhMuc\FrmKhoiHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmKhoiHoc.Designer.cs">
+      <DependentUpon>FrmKhoiHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmLopHoc.Designer.cs">
+      <DependentUpon>FrmLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmPhuongXa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmPhuongXa.Designer.cs">
+      <DependentUpon>FrmPhuongXa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmQuanHuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmQuanHuyen.Designer.cs">
+      <DependentUpon>FrmQuanHuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmTinhThanhPho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmTinhThanhPho.Designer.cs">
+      <DependentUpon>FrmTinhThanhPho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DanhMuc\FrmTruongHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,8 +154,26 @@
       <DependentUpon>FrmXepLop.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Resource\AppForms.cs" />
-    <Compile Include="Forms\Resource\FormCaptions.cs" />
+    <Compile Include="Forms\Resource\DanhMuc.cs" />
     <Compile Include="Forms\Resource\StatusCaptions.cs" />
+    <Compile Include="UserControls\UCEditFormTinhThanhPho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormTinhThanhPho.Designer.cs">
+      <DependentUpon>UCEditFormTinhThanhPho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormLopHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormLopHoc.Designer.cs">
+      <DependentUpon>UCEditFormLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormKhoiHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormKhoiHoc.Designer.cs">
+      <DependentUpon>UCEditFormKhoiHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCEditFormTruongHoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -165,6 +213,21 @@
     <Compile Include="Workflow\Forms\FrmMainFlow.cs" />
     <Compile Include="Workflow\Forms\IFormWorkFlow.cs" />
     <Compile Include="Workflow\WorkFlowActions.cs" />
+    <EmbeddedResource Include="Forms\DanhMuc\FrmKhoiHoc.resx">
+      <DependentUpon>FrmKhoiHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DanhMuc\FrmLopHoc.resx">
+      <DependentUpon>FrmLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DanhMuc\FrmPhuongXa.resx">
+      <DependentUpon>FrmPhuongXa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DanhMuc\FrmQuanHuyen.resx">
+      <DependentUpon>FrmQuanHuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DanhMuc\FrmTinhThanhPho.resx">
+      <DependentUpon>FrmTinhThanhPho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DanhMuc\FrmTruongHoc.resx">
       <DependentUpon>FrmTruongHoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +246,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCEditFormTinhThanhPho.resx">
+      <DependentUpon>UCEditFormTinhThanhPho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCEditFormLopHoc.resx">
+      <DependentUpon>UCEditFormLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCEditFormKhoiHoc.resx">
+      <DependentUpon>UCEditFormKhoiHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCEditFormTruongHoc.resx">
       <DependentUpon>UCEditFormTruongHoc.cs</DependentUpon>

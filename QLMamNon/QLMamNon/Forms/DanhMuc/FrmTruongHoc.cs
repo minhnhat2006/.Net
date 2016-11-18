@@ -22,58 +22,17 @@ namespace QLMamNon.Forms.DanhMuc
             InitializeComponent();
 
             this.TablePrimaryKey = "TruongId";
+            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.TruongHoc;
             this.FormKey = AppForms.FormDanhMucTruongHoc;
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.truongTableAdapter.Adapter);
+
+            this.truongRowBindingSource.DataSource = this.truongTableAdapter.GetData();
+            this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormTruongHoc();
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.truongTableAdapter.Adapter, this.truongRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.TruongDataTable);
         }
 
         private void FrmTruongHoc_Load(object sender, EventArgs e)
         {
-            this.truongRowBindingSource.DataSource = this.truongTableAdapter.GetData();
-            this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormTruongHoc();
+
         }
-
-        #region CRUD
-
-
-        protected override void onSaving()
-        {
-            QLMamNon.Dao.QLMamNonDs.TruongDataTable truongTable = this.truongRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.TruongDataTable;
-            DataTable table = truongTable.GetChanges();
-            if (table != null)
-            {
-                this.DataAdapter.Update(table as QLMamNon.Dao.QLMamNonDs.HocSinhDataTable);
-                truongTable.Merge(table);
-            }
-            truongTable.AcceptChanges();
-
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.SavedCaption);
-        }
-
-        protected override void onDeleting()
-        {
-            if (this.GridViewMain.FocusedRowHandle < 0)
-            {
-                return;
-            }
-
-            var confirmResult = MessageBox.Show("Bạn có chắc muốn xóa Thông tin Học sinh được chọn không?", "Xóa Học sinh",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (confirmResult == DialogResult.Yes)
-            {
-                this.GridViewMain.DeleteSelectedRows();
-                FormMainFacade.SetTrangThaiCaption(StatusCaptions.DeletedCaption);
-            }
-        }
-
-        protected override void onCanceling()
-        {
-            this.qLMamNonDs.HocSinh.RejectChanges();
-            this.qLMamNonDs.HocSinh.AcceptChanges();
-
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.CanceledCaption);
-        }
-
-        #endregion
     }
 }

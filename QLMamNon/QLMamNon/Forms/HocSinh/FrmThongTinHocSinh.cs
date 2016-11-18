@@ -29,15 +29,16 @@ namespace QLMamNon.Forms.HocSinh
             InitializeComponent();
 
             this.TablePrimaryKey = "HocSinhId";
+            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.ThongTinHocSinh;
             this.FormKey = AppForms.FormThongTinHocSinh;
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.hocSinhTableAdapter.Adapter);
+
+            this.hocSinhRowBindingSource.DataSource = this.hocSinhTableAdapter.GetData();
+            this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormThongTinHocSinh();
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.hocSinhTableAdapter.Adapter, this.hocSinhRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.HocSinhDataTable);
         }
 
         private void FrmThongTinHocSinh_Load(object sender, EventArgs e)
         {
-            this.hocSinhTableAdapter.Fill(this.qLMamNonDs.HocSinh);
-            this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormThongTinHocSinh();
-
             this.thanhPhoRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.TinhThanhPho);
             this.truongRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.TruongHoc);
             this.namHocBindingSource.DataSource = StaticDataFacade.Get(DataKeys.NamHoc);
@@ -185,62 +186,6 @@ namespace QLMamNon.Forms.HocSinh
         #endregion
 
         #region Validations
-
-        #endregion
-
-        #region CRUD
-
-        protected override void onAdding()
-        {
-            this.GridViewMain.FocusedRowHandle = GridControl.NewItemRowHandle;
-            this.GridViewMain.ShowEditForm();
-
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.AddedCaption);
-        }
-
-        protected override void onEditing()
-        {
-            this.GridViewMain.ShowPopupEditForm();
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.ModifiedCaption);
-        }
-
-        protected override void onSaving()
-        {
-            DataTable table = this.qLMamNonDs.HocSinh.GetChanges();
-            if (table != null)
-            {
-                this.hocSinhTableAdapter.Update(table as QLMamNon.Dao.QLMamNonDs.HocSinhDataTable);
-                this.qLMamNonDs.HocSinh.Merge(table);
-            }
-            this.qLMamNonDs.HocSinh.AcceptChanges();
-
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.SavedCaption);
-        }
-
-        protected override void onDeleting()
-        {
-            if (this.GridViewMain.FocusedRowHandle < 0)
-            {
-                return;
-            }
-
-            var confirmResult = MessageBox.Show("Bạn có chắc muốn xóa Thông tin Học sinh được chọn không?", "Xóa Học sinh",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (confirmResult == DialogResult.Yes)
-            {
-                this.GridViewMain.DeleteSelectedRows();
-                FormMainFacade.SetTrangThaiCaption(StatusCaptions.DeletedCaption);
-            }
-        }
-
-        protected override void onCanceling()
-        {
-            this.qLMamNonDs.HocSinh.RejectChanges();
-            this.qLMamNonDs.HocSinh.AcceptChanges();
-
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.CanceledCaption);
-        }
 
         #endregion
     }

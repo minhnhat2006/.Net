@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongTinHocSinh));
             this.lcMain = new DevExpress.XtraLayout.LayoutControl();
+            this.btnReset = new DevExpress.XtraEditors.SimpleButton();
             this.btnTimKiem = new DevExpress.XtraEditors.SimpleButton();
             this.cmbThanhPho = new DevExpress.XtraEditors.LookUpEdit();
             this.thanhPhoRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -57,6 +58,7 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelMain = new DevExpress.XtraEditors.PanelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnXuatExcel = new DevExpress.XtraEditors.SimpleButton();
@@ -66,7 +68,6 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
-            this.qLMamNonDs = new QLMamNon.Dao.QLMamNonDs();
             this.gvMain = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand16 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colSTT = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -106,8 +107,7 @@
             this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colTinh = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
-            this.btnReset = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.hocSinhRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbThanhPho.Properties)).BeginInit();
@@ -135,15 +135,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).BeginInit();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLMamNonDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lcMain
@@ -175,6 +175,17 @@
             this.lcMain.Size = new System.Drawing.Size(792, 80);
             this.lcMain.TabIndex = 0;
             this.lcMain.Text = "layoutControl1";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
+            this.btnReset.Location = new System.Drawing.Point(702, 42);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(78, 22);
+            this.btnReset.StyleController = this.lcMain;
+            this.btnReset.TabIndex = 13;
+            this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnTimKiem
             // 
@@ -499,6 +510,15 @@
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.btnReset;
+            this.layoutControlItem10.Location = new System.Drawing.Point(690, 30);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(82, 30);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
+            // 
             // panelMain
             // 
             this.panelMain.Controls.Add(this.panelControl1);
@@ -601,8 +621,7 @@
             this.gcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.gcMain.DataMember = "HocSinh";
-            this.gcMain.DataSource = this.qLMamNonDs;
+            this.gcMain.DataSource = this.hocSinhRowBindingSource;
             this.gcMain.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1);
             this.gcMain.Location = new System.Drawing.Point(2, 2);
             this.gcMain.MainView = this.gvMain;
@@ -613,11 +632,6 @@
             this.gcMain.TabIndex = 1;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
-            // 
-            // qLMamNonDs
-            // 
-            this.qLMamNonDs.DataSetName = "QLMamNonDs";
-            this.qLMamNonDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gvMain
             // 
@@ -1026,25 +1040,9 @@
             // 
             this.hocSinhTableAdapter.ClearBeforeFill = true;
             // 
-            // btnReset
+            // hocSinhRowBindingSource
             // 
-            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
-            this.btnReset.Location = new System.Drawing.Point(702, 42);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(78, 22);
-            this.btnReset.StyleController = this.lcMain;
-            this.btnReset.TabIndex = 13;
-            this.btnReset.Text = "Reset";
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.btnReset;
-            this.layoutControlItem10.Location = new System.Drawing.Point(690, 30);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(82, 30);
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem10.TextVisible = false;
+            this.hocSinhRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.HocSinhRow);
             // 
             // FrmThongTinHocSinh
             // 
@@ -1086,15 +1084,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).EndInit();
             this.panelMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLMamNonDs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1121,7 +1119,6 @@
         private DevExpress.XtraEditors.SimpleButton btnChinhSua;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnThem;
-        private Dao.QLMamNonDs qLMamNonDs;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSTT;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colHoDem;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colTen;
@@ -1179,6 +1176,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraEditors.SimpleButton btnReset;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private System.Windows.Forms.BindingSource hocSinhRowBindingSource;
 
 
     }

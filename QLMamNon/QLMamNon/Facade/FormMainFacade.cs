@@ -24,6 +24,7 @@ namespace QLMamNon.Facade
             Form frm = formFactory.GetForm(form);
             frm.MdiParent = frmMain;
             frm.Show();
+            frm.Activate();
         }
 
         public static void CloseForm(string form)

@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using System.Data.OleDb;
 using MySql.Data.MySqlClient;
+using QLThuChi.Log;
 
 namespace QLThuChi
 {
@@ -32,6 +33,10 @@ namespace QLThuChi
 
         private bool ValidateCTTMFields()
         {
+            this.txtCTTMNgay.DoValidate();
+            this.txtCTTMNo.DoValidate();
+            this.txtCTTMCo.DoValidate();
+
             bool isCTTMNgay = Validate_EmptyStringRule(this.txtCTTMNgay);
             bool isCTTMNo = Validate_EmptyStringRule(this.txtCTTMNo);
             bool isCTTMCo = Validate_EmptyStringRule(this.txtCTTMCo);
@@ -49,18 +54,27 @@ namespace QLThuChi
 
                 this.txtCTTMCo.Value = 0;
                 this.txtCTTMNo.Value = 0;
+                this.txtCTTMNgay.DateTime = DateTime.Now;
             }
         }
 
         private void CapNhatCTTM()
         {
-            QLThuChi.Dao.ThuChi.chungtutienmatRow row = (QLThuChi.Dao.ThuChi.chungtutienmatRow)((DataRowView)this.chungtutienmatBindingSource.Current).Row;
-            row.UserId = this.UserId;
+            try
+            {
+                QLThuChi.Dao.ThuChi.chungtutienmatRow row = (QLThuChi.Dao.ThuChi.chungtutienmatRow)((DataRowView)this.chungtutienmatBindingSource.Current).Row;
+                row.UserId = this.UserId;
 
-            this.chungtutienmatBindingSource.EndEdit();
-            this.thuChi.chungtutienmat.GetChanges();
-            this.chungtutienmatTableAdapter.Update(this.thuChi.chungtutienmat);
-            this.thuChi.chungtutienmat.AcceptChanges();
+                this.chungtutienmatBindingSource.EndEdit();
+                this.thuChi.chungtutienmat.GetChanges();
+                this.chungtutienmatTableAdapter.Update(this.thuChi.chungtutienmat);
+                this.thuChi.chungtutienmat.AcceptChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xuất hiện lỗi trong khi cập nhật dữ liệu. Xin vui lòng thử lại.", "Error", MessageBoxButtons.OK);
+                TraceListenerLogger.Error(ex);
+            }
         }
 
         private void CapNhatCTTM(object sender, ItemClickEventArgs e)

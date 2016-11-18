@@ -1,0 +1,20 @@
+2016-11-14 09:41:04 error : Column 'Ngay' does not allow nulls.
+   at System.Data.DataColumn.CheckNullable(DataRow row)
+   at System.Data.DataColumn.CheckColumnConstraint(DataRow row, DataRowAction action)
+   at System.Data.DataTable.RaiseRowChanging(DataRowChangeEventArgs args, DataRow eRow, DataRowAction eAction, Boolean fireEvent)
+   at System.Data.DataTable.SetNewRecordWorker(DataRow row, Int32 proposedRecord, DataRowAction action, Boolean isInMerge, Int32 position, Boolean fireEvent, Exception& deferredException)
+   at System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   at System.Data.DataView.FinishAddNew(Boolean success)
+   at System.Data.DataRowView.EndEdit()
+   at System.Windows.Forms.CurrencyManager.EndCurrentEdit()
+   at System.Windows.Forms.BindingSource.EndEdit()
+   at QLThuChi.FrmHome.CapNhatCTTM() in D:\Projects\Git\.Net\QLThuChi\QLThuChi\Form\FrmHomeChungTuTienMat.cs:line 68
+2016-11-14 09:42:31 error : Value was either too large or too small for a UInt32.
+   at System.Data.Common.DbDataAdapter.UpdatedRowStatusErrors(RowUpdatedEventArgs rowUpdatedEvent, BatchCommandInfo[] batchCommands, Int32 commandCount)
+   at System.Data.Common.DbDataAdapter.UpdatedRowStatus(RowUpdatedEventArgs rowUpdatedEvent, BatchCommandInfo[] batchCommands, Int32 commandCount)
+   at System.Data.Common.DbDataAdapter.Update(DataRow[] dataRows, DataTableMapping tableMapping)
+   at MySql.Data.MySqlClient.MySqlDataAdapter.Update(DataRow[] dataRows, DataTableMapping tableMapping)
+   at System.Data.Common.DbDataAdapter.UpdateFromDataTable(DataTable dataTable, DataTableMapping tableMapping)
+   at System.Data.Common.DbDataAdapter.Update(DataTable dataTable)
+   at QLThuChi.Dao.ThuChiTableAdapters.chungtutienmatTableAdapter.Update(chungtutienmatDataTable dataTable) in D:\Projects\Git\.Net\QLThuChi\QLThuChi\Dao\ThuChi.Designer.cs:line 2994
+   at QLThuChi.FrmHome.CapNhatCTTM() in D:\Projects\Git\.Net\QLThuChi\QLThuChi\Form\FrmHomeChungTuTienMat.cs:line 70

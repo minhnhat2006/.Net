@@ -33,7 +33,11 @@ namespace QLMamNon.Forms
 
         protected MySqlDataAdapter DataAdapter { get; set; }
 
+        protected DataTable DataTable { get; set; }
+
         protected string FormKey { get; set; }
+
+        protected string DanhMuc { get; set; }
 
         protected string TablePrimaryKey { get; set; }
 
@@ -48,7 +52,7 @@ namespace QLMamNon.Forms
 
         #region Construction
 
-        protected void InitForm(SimpleButton buttonAdd, SimpleButton buttonEdit, SimpleButton buttonDelete, SimpleButton buttonSave, SimpleButton buttonCancel, GridView gridView, MySqlDataAdapter dataAdapter)
+        protected void InitForm(SimpleButton buttonAdd, SimpleButton buttonEdit, SimpleButton buttonDelete, SimpleButton buttonSave, SimpleButton buttonCancel, GridView gridView, MySqlDataAdapter dataAdapter, DataTable dataTable)
         {
             this.ButtonAdd = buttonAdd;
             this.ButtonCancel = buttonCancel;
@@ -57,6 +61,7 @@ namespace QLMamNon.Forms
             this.ButtonSave = buttonSave;
             this.GridViewMain = gridView;
             this.DataAdapter = dataAdapter;
+            this.DataTable = dataTable;
 
             this.InitEvents();
         }
@@ -184,15 +189,44 @@ namespace QLMamNon.Forms
 
         protected virtual void onSaving()
         {
+            DataTable table = this.DataTable.GetChanges();
+            if (table != null)
+            {
+                this.DataAdapter.Update(table);
+                this.DataTable.Merge(table);
+            }
+            this.DataTable.AcceptChanges();
+
             FormMainFacade.SetTrangThaiCaption(StatusCaptions.SavedCaption);
         }
 
         protected virtual void onDeleting()
         {
+            if (this.GridViewMain.FocusedRowHandle < 0)
+            {
+                return;
+            }
+
+            var confirmResult = MessageBox.Show(String.Format("Bạn có chắc muốn xóa {0} được chọn không?", this.DanhMuc), String.Format("Xóa {0}", this.DanhMuc),
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                this.GridViewMain.DeleteSelectedRows();
+                FormMainFacade.SetTrangThaiCaption(StatusCaptions.DeletedCaption);
+            }
         }
 
         protected virtual void onCanceling()
         {
+            DataTable changedTable = this.DataTable.GetChanges();
+
+            if (changedTable != null)
+            {
+                this.DataTable.RejectChanges();
+                this.DataTable.AcceptChanges();
+            }
+
             FormMainFacade.SetTrangThaiCaption(StatusCaptions.CanceledCaption);
         }
 

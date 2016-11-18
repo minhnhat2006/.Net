@@ -23,7 +23,7 @@ namespace QLMamNon.Forms.HocSinh
             InitializeComponent();
 
             this.FormKey = AppForms.FormXepLop;
-            this.InitForm(null, null, null, this.btnSave, null, null, null);
+            this.InitForm(null, null, null, this.btnSave, null, null, null, null);
         }
 
         private bool isHocSinhExisted(BindingSource hocSinhRowBindingSource, int hocSinhId)

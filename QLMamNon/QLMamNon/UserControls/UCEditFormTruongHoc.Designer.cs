@@ -32,19 +32,19 @@
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.dxValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -67,7 +67,7 @@
             this.layoutControl1.OptionsPrint.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.layoutControl1.OptionsPrint.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(400, 120);
+            this.layoutControl1.Size = new System.Drawing.Size(400, 100);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -86,6 +86,18 @@
             conditionValidationRule1.ErrorText = "This value is not valid";
             this.dxValidationProvider.SetValidationRule(this.txtName, conditionValidationRule1);
             // 
+            // txtDescription
+            // 
+            this.SetBoundFieldName(this.txtDescription, "Description");
+            this.SetBoundPropertyName(this.txtDescription, "EditValue");
+            this.txtDescription.Location = new System.Drawing.Point(85, 42);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtDescription.Properties.Appearance.Options.UseFont = true;
+            this.txtDescription.Size = new System.Drawing.Size(303, 46);
+            this.txtDescription.StyleController = this.layoutControl1;
+            this.txtDescription.TabIndex = 4;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -95,7 +107,7 @@
             this.layoutControlItem5});
             this.Root.Location = new System.Drawing.Point(0, 0);
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(400, 120);
+            this.Root.Size = new System.Drawing.Size(400, 100);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -122,7 +134,7 @@
             this.layoutControlItem5.Control = this.txtDescription;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(380, 70);
+            this.layoutControlItem5.Size = new System.Drawing.Size(380, 50);
             this.layoutControlItem5.Text = "Chi tiết:";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(70, 19);
             // 
@@ -130,34 +142,22 @@
             // 
             this.dxValidationProvider.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
             // 
-            // txtDescription
-            // 
-            this.SetBoundFieldName(this.txtDescription, "Description");
-            this.SetBoundPropertyName(this.txtDescription, "EditValue");
-            this.txtDescription.Location = new System.Drawing.Point(85, 42);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtDescription.Properties.Appearance.Options.UseFont = true;
-            this.txtDescription.Size = new System.Drawing.Size(303, 66);
-            this.txtDescription.StyleController = this.layoutControl1;
-            this.txtDescription.TabIndex = 4;
-            // 
             // UCEditFormTruongHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
             this.Name = "UCEditFormTruongHoc";
-            this.Size = new System.Drawing.Size(400, 120);
+            this.Size = new System.Drawing.Size(400, 100);
             this.Load += new System.EventHandler(this.UCEditFormThongTinHocSinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -524,10 +524,10 @@
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(2, 569);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(2, 570);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(899, 24);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(899, 23);
             // 
             // xtraTabControl1
             // 
@@ -566,7 +566,6 @@
             // 
             // gcCTTM
             // 
-            this.gcCTTM.DataMember = null;
             this.gcCTTM.DataSource = this.chungtutienmatBindingSource;
             this.gcCTTM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcCTTM.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
@@ -583,7 +582,6 @@
             // 
             // chungtutienmatBindingSource
             // 
-            this.chungtutienmatBindingSource.AllowNew = true;
             this.chungtutienmatBindingSource.DataMember = "chungtutienmat";
             this.chungtutienmatBindingSource.DataSource = this.thuChi;
             this.chungtutienmatBindingSource.CurrentChanged += new System.EventHandler(this.thuChiBindingSource_CurrentChanged);
@@ -1451,7 +1449,6 @@
         private DevExpress.XtraLayout.LayoutControl lcThuChi;
         private DevExpress.XtraEditors.TextEdit txtCTTMHoTen;
         private Dao.ThuChi thuChi;
-        private System.Windows.Forms.BindingSource chungtutienmatBindingSource;
         private QLThuChi.Dao.ThuChiTableAdapters.chungtutienmatTableAdapter chungtutienmatTableAdapter;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.BarButtonItem iTienTCSLuu;
@@ -1544,6 +1541,7 @@
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraGrid.Columns.GridColumn colAdmin;
+        private System.Windows.Forms.BindingSource chungtutienmatBindingSource;
 
 
 

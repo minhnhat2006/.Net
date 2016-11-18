@@ -82,6 +82,7 @@ namespace QLThuChi
                 row.FullName = "";
                 row.Code = "";
                 row.Password = "";
+                row.IsAdmin = false;
 
                 this.iUserXoa.Enabled = false;
                 this.gcUser.Enabled = false;

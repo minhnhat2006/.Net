@@ -5,6 +5,7 @@ using DevExpress.XtraGrid.EditForm.Helpers.Controls;
 using QLMamNon.Facade;
 using QLMamNon.Forms.HocSinh;
 using DevExpress.XtraGrid.Views.BandedGrid;
+using DevExpress.XtraGrid.Views.Grid;
 
 
 namespace QLMamNon.Workflow.Handler
@@ -62,7 +63,7 @@ namespace QLMamNon.Workflow.Handler
 
         public override void Receive(object from, object message)
         {
-            BandedGridView gv = message as BandedGridView;
+            GridView gv = message as GridView;
             gv.ShowingPopupEditForm += new DevExpress.XtraGrid.Views.Grid.ShowingPopupEditFormEventHandler(this.gvMain_ShowingPopupEditForm);
         }
     }

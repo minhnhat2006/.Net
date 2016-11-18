@@ -66,6 +66,36 @@ namespace QLMamNon.Forms
             FormMainFacade.ShowForm(AppForms.FormXepLop);
         }
 
+        private void bbiTruongHoc_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormDanhMucTruongHoc);
+        }
+
+        private void bbiKhoiHoc_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormDanhMucKhoiHoc);
+        }
+
+        private void bbiLopHoc_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormDanhMucLopHoc);
+        }
+
+        private void bbiTinhThanhPho_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormDanhMucTinhThanhPho);
+        }
+
+        private void bbiQuanHuyen_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormDanhMucQuanHuyen);
+        }
+
+        private void bbiPhuongXa_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormDanhMucPhuongXa);
+        }
+
         #endregion
     }
 }
