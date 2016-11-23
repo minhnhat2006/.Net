@@ -26,8 +26,8 @@ namespace QLMamNon.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;User Id=root;Persist Security Info=True;database=qlmamnon;Charac" +
-            "ter Set=utf8")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;User Id=root;Password=root;Persist Security Info=True;database=q" +
+            "lmamnon;Character Set=utf8")]
         public string qlmamnonConnectionString1 {
             get {
                 return ((string)(this["qlmamnonConnectionString1"]));

@@ -34,9 +34,11 @@
             this.gcMain = new DevExpress.XtraGrid.GridControl();
             this.khoiRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colKhoiId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSTT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTruong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colKhoiId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
@@ -44,6 +46,7 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.khoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoiTableAdapter();
+            this.khoiTruongTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoiTruongTableAdapter();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoiRowBindingSource)).BeginInit();
@@ -81,9 +84,11 @@
             // gvMain
             // 
             this.gvMain.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colKhoiId,
+            this.colSTT,
             this.colName,
-            this.colDescription});
+            this.colTruong,
+            this.colDescription,
+            this.colKhoiId});
             this.gvMain.GridControl = this.gcMain;
             this.gvMain.Name = "gvMain";
             this.gvMain.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
@@ -91,13 +96,14 @@
             this.gvMain.OptionsEditForm.PopupEditFormWidth = 500;
             this.gvMain.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gvMain.OptionsView.ShowGroupPanel = false;
+            this.gvMain.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.gvMain_CustomColumnDisplayText);
             // 
-            // colKhoiId
+            // colSTT
             // 
-            this.colKhoiId.Caption = "STT";
-            this.colKhoiId.Name = "colKhoiId";
-            this.colKhoiId.Visible = true;
-            this.colKhoiId.VisibleIndex = 0;
+            this.colSTT.Caption = "STT";
+            this.colSTT.Name = "colSTT";
+            this.colSTT.Visible = true;
+            this.colSTT.VisibleIndex = 0;
             // 
             // colName
             // 
@@ -107,13 +113,26 @@
             this.colName.Visible = true;
             this.colName.VisibleIndex = 1;
             // 
+            // colTruong
+            // 
+            this.colTruong.Caption = "Trường";
+            this.colTruong.Name = "colTruong";
+            this.colTruong.Visible = true;
+            this.colTruong.VisibleIndex = 2;
+            // 
             // colDescription
             // 
             this.colDescription.Caption = "Chi tiết";
             this.colDescription.FieldName = "Description";
             this.colDescription.Name = "colDescription";
             this.colDescription.Visible = true;
-            this.colDescription.VisibleIndex = 2;
+            this.colDescription.VisibleIndex = 3;
+            // 
+            // colKhoiId
+            // 
+            this.colKhoiId.Caption = "Khối Id";
+            this.colKhoiId.FieldName = "KhoiId";
+            this.colKhoiId.Name = "colKhoiId";
             // 
             // panelControl1
             // 
@@ -192,6 +211,10 @@
             // 
             this.khoiTableAdapter.ClearBeforeFill = true;
             // 
+            // khoiTruongTableAdapter
+            // 
+            this.khoiTruongTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmKhoiHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,9 +246,12 @@
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.BindingSource khoiRowBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colKhoiId;
+        private DevExpress.XtraGrid.Columns.GridColumn colSTT;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colDescription;
         private Dao.QLMamNonDsTableAdapters.KhoiTableAdapter khoiTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colTruong;
+        private DevExpress.XtraGrid.Columns.GridColumn colKhoiId;
+        private Dao.QLMamNonDsTableAdapters.KhoiTruongTableAdapter khoiTruongTableAdapter;
     }
 }

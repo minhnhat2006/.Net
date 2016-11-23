@@ -31,25 +31,34 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cmbKhoi = new DevExpress.XtraEditors.LookUpEdit();
+            this.khoiRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.dxValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
+            this.khoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoiTableAdapter();
+            this.lopKhoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbKhoi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khoiRowBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
             this.SetBoundPropertyName(this.layoutControl1, "");
+            this.layoutControl1.Controls.Add(this.cmbKhoi);
             this.layoutControl1.Controls.Add(this.txtName);
             this.layoutControl1.Controls.Add(this.txtDescription);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -71,15 +80,39 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // cmbKhoi
+            // 
+            this.SetBoundPropertyName(this.cmbKhoi, "");
+            this.cmbKhoi.Location = new System.Drawing.Point(257, 12);
+            this.cmbKhoi.Name = "cmbKhoi";
+            this.cmbKhoi.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.cmbKhoi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbKhoi.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 37, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.cmbKhoi.Properties.DataSource = this.khoiRowBindingSource;
+            this.cmbKhoi.Properties.DisplayMember = "Name";
+            this.cmbKhoi.Properties.NullText = "Chọn Khối";
+            this.cmbKhoi.Properties.ShowHeader = false;
+            this.cmbKhoi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbKhoi.Properties.ValueMember = "KhoiId";
+            this.cmbKhoi.Size = new System.Drawing.Size(131, 20);
+            this.cmbKhoi.StyleController = this.layoutControl1;
+            this.cmbKhoi.TabIndex = 5;
+            // 
+            // khoiRowBindingSource
+            // 
+            this.khoiRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.KhoiRow);
+            // 
             // txtName
             // 
             this.SetBoundFieldName(this.txtName, "Name");
             this.SetBoundPropertyName(this.txtName, "EditValue");
-            this.txtName.Location = new System.Drawing.Point(64, 12);
+            this.txtName.Location = new System.Drawing.Point(67, 12);
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtName.Properties.Appearance.Options.UseFont = true;
-            this.txtName.Size = new System.Drawing.Size(324, 26);
+            this.txtName.Size = new System.Drawing.Size(131, 26);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 0;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -90,11 +123,11 @@
             // 
             this.SetBoundFieldName(this.txtDescription, "Description");
             this.SetBoundPropertyName(this.txtDescription, "EditValue");
-            this.txtDescription.Location = new System.Drawing.Point(64, 42);
+            this.txtDescription.Location = new System.Drawing.Point(67, 42);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtDescription.Properties.Appearance.Options.UseFont = true;
-            this.txtDescription.Size = new System.Drawing.Size(324, 46);
+            this.txtDescription.Size = new System.Drawing.Size(321, 46);
             this.txtDescription.StyleController = this.layoutControl1;
             this.txtDescription.TabIndex = 4;
             // 
@@ -104,7 +137,8 @@
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem2});
             this.Root.Location = new System.Drawing.Point(0, 0);
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(400, 100);
@@ -121,9 +155,9 @@
             this.layoutControlItem1.Control = this.txtName;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(380, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(190, 30);
             this.layoutControlItem1.Text = "Tên lớp:";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(49, 19);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(52, 19);
             // 
             // layoutControlItem5
             // 
@@ -136,11 +170,28 @@
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(380, 50);
             this.layoutControlItem5.Text = "Chi tiết:";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(49, 19);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(52, 19);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.cmbKhoi;
+            this.layoutControlItem2.Location = new System.Drawing.Point(190, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(190, 30);
+            this.layoutControlItem2.Text = "Chọn Khối:";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(52, 13);
             // 
             // dxValidationProvider
             // 
             this.dxValidationProvider.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
+            // 
+            // khoiTableAdapter
+            // 
+            this.khoiTableAdapter.ClearBeforeFill = true;
+            // 
+            // lopKhoiTableAdapter
+            // 
+            this.lopKhoiTableAdapter.ClearBeforeFill = true;
             // 
             // UCEditFormLopHoc
             // 
@@ -149,14 +200,18 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "UCEditFormLopHoc";
             this.Size = new System.Drawing.Size(400, 100);
-            this.Load += new System.EventHandler(this.UCEditFormThongTinHocSinh_Load);
+            this.Load += new System.EventHandler(this.UCEditFormLopHoc_Load);
+            this.Enter += new System.EventHandler(this.UCEditFormLopHoc_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbKhoi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khoiRowBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider)).EndInit();
             this.ResumeLayout(false);
 
@@ -171,5 +226,10 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider;
         private DevExpress.XtraEditors.MemoEdit txtDescription;
+        private Dao.QLMamNonDsTableAdapters.KhoiTableAdapter khoiTableAdapter;
+        private DevExpress.XtraEditors.LookUpEdit cmbKhoi;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private System.Windows.Forms.BindingSource khoiRowBindingSource;
+        private Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter lopKhoiTableAdapter;
     }
 }

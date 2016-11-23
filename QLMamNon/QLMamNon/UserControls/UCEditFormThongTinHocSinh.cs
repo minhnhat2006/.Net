@@ -12,7 +12,7 @@ using QLMamNon.Components.Data.Static;
 
 namespace QLMamNon.UserControls
 {
-    public partial class UCEditFormThongTinHocSinh : EditFormUserControl
+    public partial class UCEditFormThongTinHocSinh : UCCRUDBase
     {
         public UCEditFormThongTinHocSinh()
         {

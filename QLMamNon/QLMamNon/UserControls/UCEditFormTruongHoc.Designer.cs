@@ -149,7 +149,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "UCEditFormTruongHoc";
             this.Size = new System.Drawing.Size(400, 100);
-            this.Load += new System.EventHandler(this.UCEditFormThongTinHocSinh_Load);
+            this.Load += new System.EventHandler(this.UCEditFormTruongHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();

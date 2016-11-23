@@ -12,15 +12,16 @@ using QLMamNon.Components.Data.Static;
 
 namespace QLMamNon.UserControls
 {
-    public partial class UCEditFormTruongHoc : EditFormUserControl
+    public partial class UCEditFormTruongHoc : UCCRUDBase
     {
         public UCEditFormTruongHoc()
         {
             InitializeComponent();
         }
 
-        private void UCEditFormThongTinHocSinh_Load(object sender, EventArgs e)
+        private void UCEditFormTruongHoc_Load(object sender, EventArgs e)
         {
+
         }
     }
 }

@@ -2,6 +2,9 @@
 using System;
 using System.Data;
 using QLMamNon.Constant;
+using QLMamNon.Dao.QLMamNonDsTableAdapters;
+using QLMamNon.Facade;
+using QLMamNon.Components.Data.Static;
 namespace QLMamNon
 {
     public static class StaticDataUtil
@@ -49,6 +52,70 @@ namespace QLMamNon
             if (rows != null && rows.Length > 0)
             {
                 return rows[0]["Name"] as String;
+            }
+
+            return CommonConstant.EMPTY;
+        }
+
+        public static int? GetTruongIdByKhoiId(KhoiTruongTableAdapter khoiTruongTableAdapter, Int32 khoiId)
+        {
+            if (khoiId < 0)
+            {
+                return null;
+            }
+
+            QLMamNon.Dao.QLMamNonDs.KhoiTruongDataTable table = khoiTruongTableAdapter.GetDataByKhoiId(khoiId);
+
+            if (table != null && table.Rows.Count > 0)
+            {
+                QLMamNon.Dao.QLMamNonDs.KhoiTruongRow row = table[0];
+                return row.TruongId;
+            }
+
+            return null;
+        }
+
+        public static string GetTruongByKhoiId(KhoiTruongTableAdapter khoiTruongTableAdapter, Int32 khoiId)
+        {
+            int? truongId = GetTruongIdByKhoiId(khoiTruongTableAdapter, khoiId);
+
+            if (truongId != null)
+            {
+                QLMamNon.Dao.QLMamNonDs.TruongDataTable truongTable = StaticDataFacade.Get(DataKeys.TruongHoc) as QLMamNon.Dao.QLMamNonDs.TruongDataTable;
+                QLMamNon.Dao.QLMamNonDs.TruongRow truongRow = truongTable.FindByTruongId(truongId.Value);
+                return truongRow.Name;
+            }
+
+            return CommonConstant.EMPTY;
+        }
+
+        public static int? GetKhoiIdByLopId(LopKhoiTableAdapter lopKhoiTableAdapter, Int32 lopId)
+        {
+            if (lopId < 0)
+            {
+                return null;
+            }
+
+            QLMamNon.Dao.QLMamNonDs.LopKhoiDataTable table = lopKhoiTableAdapter.GetDataByLopId(lopId);
+
+            if (table != null && table.Rows.Count > 0)
+            {
+                QLMamNon.Dao.QLMamNonDs.LopKhoiRow row = table[0];
+                return row.KhoiId;
+            }
+
+            return null;
+        }
+
+        public static string GetKhoiByLopId(LopKhoiTableAdapter lopKhoiTableAdapter, Int32 lopId)
+        {
+            int? khoiId = GetKhoiIdByLopId(lopKhoiTableAdapter, lopId);
+
+            if (khoiId != null)
+            {
+                QLMamNon.Dao.QLMamNonDs.KhoiDataTable khoiTable = StaticDataFacade.Get(DataKeys.KhoiHoc) as QLMamNon.Dao.QLMamNonDs.KhoiDataTable;
+                QLMamNon.Dao.QLMamNonDs.KhoiRow khoiRow = khoiTable.FindByKhoiId(khoiId.Value);
+                return khoiRow.Name;
             }
 
             return CommonConstant.EMPTY;

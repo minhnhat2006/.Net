@@ -6,6 +6,7 @@ using QLMamNon.Facade;
 using QLMamNon.Forms.HocSinh;
 using DevExpress.XtraGrid.Views.BandedGrid;
 using DevExpress.XtraGrid.Views.Grid;
+using QLMamNon.UserControls;
 
 
 namespace QLMamNon.Workflow.Handler
@@ -32,6 +33,9 @@ namespace QLMamNon.Workflow.Handler
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongTinHocSinh));
 
+            e.EditForm.MaximizeBox = false;
+            e.EditForm.MinimizeBox = false;
+
             foreach (Control control in e.EditForm.Controls)
             {
                 if (control is EditFormContainer)
@@ -56,6 +60,30 @@ namespace QLMamNon.Workflow.Handler
                                     ActivityTrackerFacade.InitActivityTracker(e.EditForm);
                                 }
                         }
+                    }
+                }
+            }
+
+            // Perform cancelling on EditForm closed
+            GridView gridView = sender as GridView;
+            UCCRUDBase uc = gridView.OptionsEditForm.CustomEditFormLayout as UCCRUDBase;
+            uc.GridView = gridView;
+            e.EditForm.FormClosed += new FormClosedEventHandler(EditForm_FormClosed);
+        }
+
+        private void EditForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            XtraForm form = sender as XtraForm;
+
+            foreach (Control control in form.Controls)
+            {
+                if (control is EditFormContainer)
+                {
+                    UCCRUDBase uc = (control as EditFormContainer).ActiveControl as UCCRUDBase;
+
+                    if (uc != null)
+                    {
+                        uc.GridView.CancelUpdateCurrentRow();
                     }
                 }
             }
