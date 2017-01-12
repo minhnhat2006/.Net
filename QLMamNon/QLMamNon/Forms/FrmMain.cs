@@ -96,6 +96,31 @@ namespace QLMamNon.Forms
             FormMainFacade.ShowForm(AppForms.FormDanhMucPhuongXa);
         }
 
+        private void bbiTaoPhieuThu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowDialog(AppForms.FormTaoPhieuThu);
+        }
+
+        private void bbiTaoPhieuChi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowDialog(AppForms.FormTaoPhieuChi);
+        }
+
+        private void bbiPhanLoaiChi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormDanhMucPhanLoaiChi);
+        }
+
+        private void bbiDSPhieuThu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormPhieuThu);
+        }
+
+        private void bbiDSPhieuChi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormPhieuChi);
+        }
+
         #endregion
     }
 }
