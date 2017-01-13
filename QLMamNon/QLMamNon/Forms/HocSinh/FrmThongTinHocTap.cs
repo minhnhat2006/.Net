@@ -34,7 +34,7 @@ namespace QLMamNon.Forms.HocSinh
 
             this.hocSinhRowBindingSource.DataSource = this.hocSinhTableAdapter.GetData();
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormThongTinHocSinh();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.hocSinhTableAdapter.Adapter, this.hocSinhRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.HocSinhDataTable);
+            this.InitForm(null, null, null, this.btnLuu, this.btnHuyBo, this.gvMain, this.hocSinhTableAdapter.Adapter, this.hocSinhRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.HocSinhDataTable);
         }
 
         private void FrmThongTinHocTap_Load(object sender, EventArgs e)

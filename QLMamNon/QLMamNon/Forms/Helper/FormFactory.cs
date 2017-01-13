@@ -8,6 +8,7 @@ using DevExpress.XtraEditors;
 using QLMamNon.Forms.HocSinh;
 using QLMamNon.Constant;
 using QLMamNon.Forms.DanhMuc;
+using QLMamNon.Forms.ThuChi;
 
 namespace QLMamNon.Forms.Resource
 {
@@ -27,11 +28,24 @@ namespace QLMamNon.Forms.Resource
             formToTypes.Add(AppForms.FormDanhMucTinhThanhPho, typeof(FrmTinhThanhPho).FullName);
             formToTypes.Add(AppForms.FormDanhMucQuanHuyen, typeof(FrmQuanHuyen).FullName);
             formToTypes.Add(AppForms.FormDanhMucPhuongXa, typeof(FrmPhuongXa).FullName);
+            formToTypes.Add(AppForms.FormDanhMucPhanLoaiChi, typeof(FrmPhanLoaiChi).FullName);
+            formToTypes.Add(AppForms.FormPhieuThu, typeof(FrmPhieuThu).FullName);
+            formToTypes.Add(AppForms.FormTaoPhieuChi, typeof(FrmTaoPhieuChi).FullName);
+            formToTypes.Add(AppForms.FormPhieuChi, typeof(FrmPhieuChi).FullName);
+            formToTypes.Add(AppForms.FormTaoPhieuThu, typeof(FrmTaoPhieuThu).FullName);
         }
 
         public Form GetForm(string key)
         {
-            if (!forms.ContainsKey(key))
+            bool isFormCreated = forms.ContainsKey(key);
+
+            if (isFormCreated && forms[key].IsDisposed)
+            {
+                forms.Remove(key);
+                isFormCreated = false;
+            }
+
+            if (!isFormCreated)
             {
                 string type = formToTypes[key];
                 Form frm = Activator.CreateInstance(Type.GetType(type)) as Form;

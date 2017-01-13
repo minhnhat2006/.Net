@@ -167,7 +167,6 @@
             this.gvMain.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gvMain.OptionsEditForm.FormCaptionFormat = "Chỉnh sửa thông tin Trường học";
             this.gvMain.OptionsEditForm.PopupEditFormWidth = 500;
-            this.gvMain.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gvMain.OptionsView.ShowGroupPanel = false;
             // 
             // colTruongId

@@ -18,3 +18,5 @@
    at System.Data.Common.DbDataAdapter.Update(DataTable dataTable)
    at QLThuChi.Dao.ThuChiTableAdapters.chungtutienmatTableAdapter.Update(chungtutienmatDataTable dataTable) in D:\Projects\Git\.Net\QLThuChi\QLThuChi\Dao\ThuChi.Designer.cs:line 2994
    at QLThuChi.FrmHome.CapNhatCTTM() in D:\Projects\Git\.Net\QLThuChi\QLThuChi\Form\FrmHomeChungTuTienMat.cs:line 70
+QLThuChi.exe Error: 0 : Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Access denied for user 'root'@'localhost' (using password: NO)
+QLThuChi.exe Error: 0 : Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'khobac_qlthuchi'

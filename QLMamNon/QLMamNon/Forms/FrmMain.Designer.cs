@@ -87,9 +87,6 @@
             // ribbon
             // 
             this.ribbon.ApplicationButtonDropDownControl = this.applicationMenu1;
-            // 
-            // 
-            // 
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
@@ -129,6 +126,10 @@
             this.rpDanhMuc});
             this.ribbon.Size = new System.Drawing.Size(990, 150);
             this.ribbon.StatusBar = this.ribbonStatusBar;
+            // 
+            // applicationMenu1
+            // 
+            this.applicationMenu1.Name = "applicationMenu1";
             // 
             // bbtnHocSinhThongTin
             // 
@@ -284,6 +285,7 @@
             this.bbiTaoPhieuThu.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiTaoPhieuThu.LargeGlyph")));
             this.bbiTaoPhieuThu.Name = "bbiTaoPhieuThu";
             this.bbiTaoPhieuThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiTaoPhieuThu_ItemClick);
+            this.bbiTaoPhieuThu.ItemDoubleClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiTaoPhieuThu_ItemClick);
             // 
             // bbiTaoPhieuChi
             // 
@@ -293,6 +295,7 @@
             this.bbiTaoPhieuChi.Id = 12;
             this.bbiTaoPhieuChi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiTaoPhieuChi.LargeGlyph")));
             this.bbiTaoPhieuChi.Name = "bbiTaoPhieuChi";
+            this.bbiTaoPhieuChi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiTaoPhieuChi_ItemClick);
             // 
             // bbiDSPhieuThu
             // 
@@ -303,6 +306,7 @@
             this.bbiDSPhieuThu.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiDSPhieuThu.LargeGlyph")));
             this.bbiDSPhieuThu.Name = "bbiDSPhieuThu";
             this.bbiDSPhieuThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDSPhieuThu_ItemClick);
+            this.bbiDSPhieuThu.ItemDoubleClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDSPhieuThu_ItemClick);
             // 
             // bbiDSPhieuChi
             // 
@@ -312,6 +316,7 @@
             this.bbiDSPhieuChi.Id = 14;
             this.bbiDSPhieuChi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiDSPhieuChi.LargeGlyph")));
             this.bbiDSPhieuChi.Name = "bbiDSPhieuChi";
+            this.bbiDSPhieuChi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDSPhieuChi_ItemClick);
             // 
             // bbiPhanLoaiChi
             // 
@@ -352,16 +357,25 @@
             // 
             // rpgHocSinh
             // 
+            this.rpgHocSinh.ItemLinks.Add(this.bbtnHocSinhThongTin);
+            this.rpgHocSinh.ItemLinks.Add(this.bbtnHocSinhKiemTraTrung);
+            this.rpgHocSinh.ItemLinks.Add(this.bbtnHocSinhThongTinHocTap);
+            this.rpgHocSinh.ItemLinks.Add(this.bbtnHocSinhTuExcel);
+            this.rpgHocSinh.ItemLinks.Add(this.bbtnHocSinhXepLop);
             this.rpgHocSinh.Name = "rpgHocSinh";
             this.rpgHocSinh.Text = "Học sinh";
             // 
             // rpgHocSinhCanDo
             // 
+            this.rpgHocSinhCanDo.ItemLinks.Add(this.bbtnHocSinhThongTinCanDo);
+            this.rpgHocSinhCanDo.ItemLinks.Add(this.bbtnHocSinhSoLieuWHO);
             this.rpgHocSinhCanDo.Name = "rpgHocSinhCanDo";
             this.rpgHocSinhCanDo.Text = "Cân đo";
             // 
             // rpgHocSinhBaoCao
             // 
+            this.rpgHocSinhBaoCao.ItemLinks.Add(this.bbtnHocSinhBaoCaoSucKhoe);
+            this.rpgHocSinhBaoCao.ItemLinks.Add(this.bbtnHocSinhThongKe);
             this.rpgHocSinhBaoCao.Name = "rpgHocSinhBaoCao";
             this.rpgHocSinhBaoCao.Text = "Báo cáo";
             // 
@@ -386,19 +400,23 @@
             this.rpThuChi.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.rpThuChi.Appearance.Options.UseFont = true;
             this.rpThuChi.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rpgPhieuThu,
-            this.rpgPhieuChi});
+            this.rpgPhieuChi,
+            this.rpgPhieuThu});
             this.rpThuChi.Image = ((System.Drawing.Image)(resources.GetObject("rpThuChi.Image")));
             this.rpThuChi.Name = "rpThuChi";
             this.rpThuChi.Text = "Quản lý thu chi";
             // 
             // rpgPhieuThu
             // 
+            this.rpgPhieuThu.ItemLinks.Add(this.bbiTaoPhieuThu);
+            this.rpgPhieuThu.ItemLinks.Add(this.bbiDSPhieuThu);
             this.rpgPhieuThu.Name = "rpgPhieuThu";
             this.rpgPhieuThu.Text = "Phiếu Thu";
             // 
             // rpgPhieuChi
             // 
+            this.rpgPhieuChi.ItemLinks.Add(this.bbiTaoPhieuChi);
+            this.rpgPhieuChi.ItemLinks.Add(this.bbiDSPhieuChi);
             this.rpgPhieuChi.Name = "rpgPhieuChi";
             this.rpgPhieuChi.Text = "Phiếu Chi";
             // 
@@ -424,21 +442,30 @@
             // 
             // rpgTruongHoc
             // 
+            this.rpgTruongHoc.ItemLinks.Add(this.bbiTruongHoc);
+            this.rpgTruongHoc.ItemLinks.Add(this.bbiKhoiHoc);
+            this.rpgTruongHoc.ItemLinks.Add(this.bbiLopHoc);
             this.rpgTruongHoc.Name = "rpgTruongHoc";
             this.rpgTruongHoc.Text = "Quản lý Trường học";
             // 
             // rpgTinhThanhPho
             // 
+            this.rpgTinhThanhPho.ItemLinks.Add(this.bbiTinhThanhPho);
+            this.rpgTinhThanhPho.ItemLinks.Add(this.bbiQuanHuyen);
+            this.rpgTinhThanhPho.ItemLinks.Add(this.bbiPhuongXa);
             this.rpgTinhThanhPho.Name = "rpgTinhThanhPho";
             this.rpgTinhThanhPho.Text = "Quản lý Tỉnh/Thành phố";
             // 
             // rpgThuChi
             // 
+            this.rpgThuChi.ItemLinks.Add(this.bbiPhanLoaiChi);
             this.rpgThuChi.Name = "rpgThuChi";
             this.rpgThuChi.Text = "Quản lý Thu Chi";
             // 
             // ribbonStatusBar
             // 
+            this.ribbonStatusBar.ItemLinks.Add(this.bsiManHinh);
+            this.ribbonStatusBar.ItemLinks.Add(this.bsiTrangThai, true);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 718);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
@@ -499,6 +526,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);

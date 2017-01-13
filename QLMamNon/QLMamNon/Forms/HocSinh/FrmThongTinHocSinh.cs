@@ -56,6 +56,11 @@ namespace QLMamNon.Forms.HocSinh
                     case 1: e.DisplayText = "Nam"; break;
                 }
             }
+            else if (e.Column.FieldName == "ThoiHoc" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
+            {
+                Object thoiHoc = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "ThoiHoc");
+                e.DisplayText = (thoiHoc != null && thoiHoc.Equals(true)) ? "Thôi học" : "Đang học";
+            }
             else if (e.Column.FieldName == "TinhThanhPhoId" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
             {
                 object tinhId = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "TinhThanhPhoId");

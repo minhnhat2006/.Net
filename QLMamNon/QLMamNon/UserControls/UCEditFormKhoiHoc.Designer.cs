@@ -83,8 +83,9 @@
             // 
             // cmbTruong
             // 
-            this.SetBoundPropertyName(this.cmbTruong, "");
-            this.cmbTruong.Location = new System.Drawing.Point(272, 12);
+            this.SetBoundFieldName(this.cmbTruong, "TruongId");
+            this.SetBoundPropertyName(this.cmbTruong, "EditValue");
+            this.cmbTruong.Location = new System.Drawing.Point(82, 12);
             this.cmbTruong.Name = "cmbTruong";
             this.cmbTruong.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbTruong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -97,7 +98,7 @@
             this.cmbTruong.Properties.ShowHeader = false;
             this.cmbTruong.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbTruong.Properties.ValueMember = "TruongId";
-            this.cmbTruong.Size = new System.Drawing.Size(116, 20);
+            this.cmbTruong.Size = new System.Drawing.Size(112, 20);
             this.cmbTruong.StyleController = this.layoutControl1;
             this.cmbTruong.TabIndex = 1;
             // 
@@ -109,13 +110,13 @@
             // 
             this.SetBoundFieldName(this.txtName, "Name");
             this.SetBoundPropertyName(this.txtName, "EditValue");
-            this.txtName.Location = new System.Drawing.Point(82, 12);
+            this.txtName.Location = new System.Drawing.Point(268, 12);
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtName.Properties.Appearance.Options.UseFont = true;
-            this.txtName.Size = new System.Drawing.Size(116, 26);
+            this.txtName.Size = new System.Drawing.Size(120, 26);
             this.txtName.StyleController = this.layoutControl1;
-            this.txtName.TabIndex = 0;
+            this.txtName.TabIndex = 2;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule1.ErrorText = "This value is not valid";
             this.dxValidationProvider.SetValidationRule(this.txtName, conditionValidationRule1);
@@ -130,7 +131,7 @@
             this.txtDescription.Properties.Appearance.Options.UseFont = true;
             this.txtDescription.Size = new System.Drawing.Size(306, 46);
             this.txtDescription.StyleController = this.layoutControl1;
-            this.txtDescription.TabIndex = 2;
+            this.txtDescription.TabIndex = 3;
             // 
             // Root
             // 
@@ -154,9 +155,9 @@
             this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem1.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem1.Control = this.txtName;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(186, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(190, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(194, 30);
             this.layoutControlItem1.Text = "Tên khối:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(67, 19);
             // 
@@ -176,9 +177,9 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.cmbTruong;
-            this.layoutControlItem2.Location = new System.Drawing.Point(190, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(190, 30);
+            this.layoutControlItem2.Size = new System.Drawing.Size(186, 30);
             this.layoutControlItem2.Text = "Chọn Trường:";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(67, 13);
             // 

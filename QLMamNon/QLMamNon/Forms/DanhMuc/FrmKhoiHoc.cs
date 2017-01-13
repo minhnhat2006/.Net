@@ -23,19 +23,36 @@ namespace QLMamNon.Forms.DanhMuc
             this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.KhoiHoc;
             this.FormKey = AppForms.FormDanhMucTruongHoc;
 
-            this.khoiRowBindingSource.DataSource = this.khoiTableAdapter.GetData();
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormKhoiHoc();
+            this.loadKhoiData();
             this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.khoiTableAdapter.Adapter, this.khoiRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.KhoiDataTable);
         }
 
         private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
         {
             ColumnView view = sender as ColumnView;
-            if (e.Column.Caption == "Trường" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
+            if (e.Column.FieldName == "TruongId" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
             {
-                int khoiId = (int)view.GetListSourceRowCellValue(e.ListSourceRowIndex, "KhoiId");
-                e.DisplayText = StaticDataUtil.GetTruongByKhoiId(this.khoiTruongTableAdapter, khoiId);
+                int truongId = (int)view.GetListSourceRowCellValue(e.ListSourceRowIndex, "TruongId");
+                e.DisplayText = StaticDataUtil.GetTruongNameByTruongId(truongId);
             }
+        }
+
+        private void loadKhoiData()
+        {
+            QLMamNon.Dao.QLMamNonDs.KhoiDataTable dataTable = this.khoiTableAdapter.GetData();
+
+            foreach (QLMamNon.Dao.QLMamNonDs.KhoiRow row in dataTable)
+            {
+                row.TruongId = StaticDataUtil.GetTruongIdByKhoiId(this.khoiTruongTableAdapter, row.KhoiId);
+            }
+
+            this.khoiRowBindingSource.DataSource = dataTable;
+        }
+
+        protected override void onSaving()
+        {
+            base.onSaving();
         }
     }
 }

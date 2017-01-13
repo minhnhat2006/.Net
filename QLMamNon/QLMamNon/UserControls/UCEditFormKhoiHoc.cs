@@ -27,8 +27,12 @@ namespace QLMamNon.UserControls
 
         private void UCEditFormKhoiHoc_Enter(object sender, EventArgs e)
         {
-            int khoiId = (int)this.GridView.GetFocusedRowCellValue("KhoiId");
-            this.cmbTruong.EditValue = StaticDataUtil.GetTruongIdByKhoiId(this.khoiTruongTableAdapter, khoiId);
+            QLMamNon.Dao.QLMamNonDs.KhoiRow row = this.GridView.GetFocusedDataRow() as QLMamNon.Dao.QLMamNonDs.KhoiRow;
+
+            if (row != null)
+            {
+                this.cmbTruong.EditValue = StaticDataUtil.GetTruongIdByKhoiId(this.khoiTruongTableAdapter, row.KhoiId);
+            }
         }
     }
 }

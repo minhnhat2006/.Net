@@ -111,6 +111,12 @@
     <Compile Include="Forms\CRUDForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\DanhMuc\FrmPhanLoaiChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmPhanLoaiChi.Designer.cs">
+      <DependentUpon>FrmPhanLoaiChi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DanhMuc\FrmKhoiHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,36 @@
     <Compile Include="Forms\Resource\AppForms.cs" />
     <Compile Include="Forms\Resource\DanhMuc.cs" />
     <Compile Include="Forms\Resource\StatusCaptions.cs" />
+    <Compile Include="Forms\ThuChi\FrmPhieuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmPhieuChi.Designer.cs">
+      <DependentUpon>FrmPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmTaoPhieuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmTaoPhieuChi.Designer.cs">
+      <DependentUpon>FrmTaoPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmPhieuThu.Designer.cs">
+      <DependentUpon>FrmPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmTaoPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmTaoPhieuThu.Designer.cs">
+      <DependentUpon>FrmTaoPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormPhanLoaiChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormPhanLoaiChi.Designer.cs">
+      <DependentUpon>UCEditFormPhanLoaiChi.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCCRUDBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -228,6 +264,9 @@
     <Compile Include="Workflow\Forms\FrmMainFlow.cs" />
     <Compile Include="Workflow\Forms\IFormWorkFlow.cs" />
     <Compile Include="Workflow\WorkFlowActions.cs" />
+    <EmbeddedResource Include="Forms\DanhMuc\FrmPhanLoaiChi.resx">
+      <DependentUpon>FrmPhanLoaiChi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DanhMuc\FrmKhoiHoc.resx">
       <DependentUpon>FrmKhoiHoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,11 +301,26 @@
     <EmbeddedResource Include="Forms\HocSinh\FrmXepLop.resx">
       <DependentUpon>FrmXepLop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuChi\FrmPhieuChi.resx">
+      <DependentUpon>FrmPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuChi\FrmTaoPhieuChi.resx">
+      <DependentUpon>FrmTaoPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuChi\FrmPhieuThu.resx">
+      <DependentUpon>FrmPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuChi\FrmTaoPhieuThu.resx">
+      <DependentUpon>FrmTaoPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCEditFormPhanLoaiChi.resx">
+      <DependentUpon>UCEditFormPhanLoaiChi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCEditFormTinhThanhPho.resx">
       <DependentUpon>UCEditFormTinhThanhPho.cs</DependentUpon>
@@ -308,6 +362,7 @@
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+HocSinhRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+KhoiRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+LopRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+PhanLoaiChiRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+PhuongXaRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+QuanHuyenRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ThanhPhoRow.datasource" />
@@ -374,7 +429,6 @@
   <ItemGroup>
     <Folder Include="Forms\BaoCao\" />
     <Folder Include="Forms\GiaoVien\" />
-    <Folder Include="Forms\ThuChi\" />
     <Folder Include="Images\icon\" />
     <Folder Include="Reports\" />
     <Folder Include="Service\" />

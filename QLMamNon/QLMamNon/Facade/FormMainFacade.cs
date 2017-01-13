@@ -19,11 +19,24 @@ namespace QLMamNon.Facade
             frmMain = formMain;
         }
 
+        public static Form GetForm(string form)
+        {
+            Form frm = formFactory.GetForm(form);
+            return frm;
+        }
+
         public static void ShowForm(string form)
         {
             Form frm = formFactory.GetForm(form);
             frm.MdiParent = frmMain;
             frm.Show();
+            frm.Activate();
+        }
+
+        public static void ShowDialog(string form)
+        {
+            Form frm = formFactory.GetForm(form);
+            frm.ShowDialog();
             frm.Activate();
         }
 

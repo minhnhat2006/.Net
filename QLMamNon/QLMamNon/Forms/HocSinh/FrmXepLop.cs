@@ -204,7 +204,7 @@ namespace QLMamNon.Forms.HocSinh
                 int tuNam = (int)cmbNamHocDen.EditValue;
                 int denNam = (int)cmbNamHocDen.EditValue + 1;
                 DateTime ngayVaoLop = dateNgayVaoLop.DateTime;
-                this.hocSinhTableAdapter.insertHocSinhToLop(hocSinh, lop, ngayVaoLop, tuNam, denNam);
+                this.hocSinhTableAdapter.InsertHocSinhToLop(hocSinh, lop, ngayVaoLop, tuNam, denNam);
             }
 
             base.onSaving();

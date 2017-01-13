@@ -97,6 +97,7 @@ namespace QLMamNon.Forms
             }
             if (this.GridViewMain != null)
             {
+                this.GridViewMain.ShowingPopupEditForm += new ShowingPopupEditFormEventHandler(GridViewMain_ShowingPopupEditForm);
                 this.GridViewMain.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(GridViewMain_CustomDrawCell);
                 ModuleMediatorFacade.Invoke(this, WorkFlowActions.AdjustPopupEditForm, this.GridViewMain);
             }
@@ -127,6 +128,11 @@ namespace QLMamNon.Forms
                 e.Row[this.TablePrimaryKey] = cmdNewID.ExecuteScalar();
                 e.Status = UpdateStatus.SkipCurrentRow;
             }
+        }
+
+        protected void GridViewMain_ShowingPopupEditForm(object sender, DevExpress.XtraGrid.Views.Grid.ShowingPopupEditFormEventArgs e)
+        {
+            e.EditForm.ControlBox = false;
         }
 
         protected void GridViewMain_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
@@ -175,7 +181,9 @@ namespace QLMamNon.Forms
 
         protected virtual void onAdding()
         {
-            this.GridViewMain.FocusedRowHandle = GridControl.NewItemRowHandle;
+            BindingSource bindingSource = this.GridViewMain.GridControl.DataSource as BindingSource;
+            bindingSource.AddNew();
+            this.GridViewMain.GridControl.DataSource = GridControl.NewItemRowHandle;
             this.GridViewMain.ShowEditForm();
 
             FormMainFacade.SetTrangThaiCaption(StatusCaptions.AddedCaption);

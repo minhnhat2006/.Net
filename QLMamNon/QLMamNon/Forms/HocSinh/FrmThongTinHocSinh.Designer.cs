@@ -68,6 +68,7 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
+            this.hocSinhRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvMain = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand16 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colSTT = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -106,8 +107,9 @@
             this.colQuan = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colTinh = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colTinhTrang = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
-            this.hocSinhRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbThanhPho.Properties)).BeginInit();
@@ -141,9 +143,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lcMain
@@ -633,6 +635,10 @@
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
             // 
+            // hocSinhRowBindingSource
+            // 
+            this.hocSinhRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.HocSinhRow);
+            // 
             // gvMain
             // 
             this.gvMain.Appearance.BandPanel.Font = new System.Drawing.Font("Times New Roman", 12F);
@@ -652,7 +658,8 @@
             this.gridBand1,
             this.gridBand2,
             this.gridBand3,
-            this.gridBand4});
+            this.gridBand4,
+            this.gridBand5});
             this.gvMain.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
             this.colSTT,
             this.colHoDem,
@@ -670,7 +677,8 @@
             this.colDiaChi,
             this.colPhuong,
             this.colQuan,
-            this.colTinh});
+            this.colTinh,
+            this.colTinhTrang});
             this.gvMain.GridControl = this.gcMain;
             this.gvMain.Name = "gvMain";
             this.gvMain.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
@@ -759,6 +767,7 @@
             // 
             // colGioiTinh
             // 
+            this.colGioiTinh.Caption = "Gioi tinh";
             this.colGioiTinh.ColumnEdit = this.repositoryItemTextEdit1;
             this.colGioiTinh.FieldName = "GioiTinh";
             this.colGioiTinh.Name = "colGioiTinh";
@@ -1036,13 +1045,25 @@
             this.colTinh.OptionsEditForm.StartNewRow = true;
             this.colTinh.Visible = true;
             // 
+            // gridBand5
+            // 
+            this.gridBand5.Caption = "Tình trạng";
+            this.gridBand5.Columns.Add(this.colTinhTrang);
+            this.gridBand5.Name = "gridBand5";
+            this.gridBand5.VisibleIndex = 13;
+            this.gridBand5.Width = 75;
+            // 
+            // colTinhTrang
+            // 
+            this.colTinhTrang.Caption = "Tình trạng";
+            this.colTinhTrang.ColumnEdit = this.repositoryItemTextEdit1;
+            this.colTinhTrang.FieldName = "ThoiHoc";
+            this.colTinhTrang.Name = "colTinhTrang";
+            this.colTinhTrang.Visible = true;
+            // 
             // hocSinhTableAdapter
             // 
             this.hocSinhTableAdapter.ClearBeforeFill = true;
-            // 
-            // hocSinhRowBindingSource
-            // 
-            this.hocSinhRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.HocSinhRow);
             // 
             // FrmThongTinHocSinh
             // 
@@ -1090,9 +1111,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1152,6 +1173,12 @@
         private System.Windows.Forms.BindingSource namHocBindingSource;
         private DevExpress.XtraEditors.SimpleButton btnTimKiem;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraEditors.SimpleButton btnReset;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private System.Windows.Forms.BindingSource hocSinhRowBindingSource;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand16;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand17;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand18;
@@ -1159,9 +1186,7 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand20;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand21;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand22;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand23;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand24;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand25;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand26;
@@ -1173,10 +1198,8 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
-        private DevExpress.XtraEditors.SimpleButton btnReset;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-        private System.Windows.Forms.BindingSource hocSinhRowBindingSource;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colTinhTrang;
 
 
     }

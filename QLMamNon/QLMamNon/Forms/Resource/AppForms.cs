@@ -7,6 +7,7 @@ namespace QLMamNon.Forms.Resource
 {
     public static class AppForms
     {
+        public const string FormDanhMucPhanLoaiChi = "FrmPhanLoaiChi";
         public const string FormDanhMucTruongHoc = "FrmTruongHoc";
         public const string FormDanhMucKhoiHoc = "FrmKhoiHoc";
         public const string FormDanhMucLopHoc = "FrmLopHoc";
@@ -15,5 +16,9 @@ namespace QLMamNon.Forms.Resource
         public const string FormDanhMucPhuongXa = "FrmPhuongXa";
         public const string FormThongTinHocSinh = "FrmThongTinHocSinh";
         public const string FormXepLop = "FrmXepLop";
+        public const string FormPhieuChi = "FrmPhieuChi";
+        public const string FormTaoPhieuChi = "FrmTaoPhieuChi";
+        public const string FormPhieuThu = "FrmPhieuThu";
+        public const string FormTaoPhieuThu = "FrmTaoPhieuThu";
     }
 }

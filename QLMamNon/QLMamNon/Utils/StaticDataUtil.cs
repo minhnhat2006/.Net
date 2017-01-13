@@ -75,6 +75,18 @@ namespace QLMamNon
             return null;
         }
 
+        public static string GetTruongNameByTruongId(Int32 truongId)
+        {
+            if (truongId != null)
+            {
+                QLMamNon.Dao.QLMamNonDs.TruongDataTable truongTable = StaticDataFacade.Get(DataKeys.TruongHoc) as QLMamNon.Dao.QLMamNonDs.TruongDataTable;
+                QLMamNon.Dao.QLMamNonDs.TruongRow truongRow = truongTable.FindByTruongId(truongId);
+                return truongRow.Name;
+            }
+
+            return CommonConstant.EMPTY;
+        }
+
         public static string GetTruongByKhoiId(KhoiTruongTableAdapter khoiTruongTableAdapter, Int32 khoiId)
         {
             int? truongId = GetTruongIdByKhoiId(khoiTruongTableAdapter, khoiId);
@@ -116,6 +128,22 @@ namespace QLMamNon
                 QLMamNon.Dao.QLMamNonDs.KhoiDataTable khoiTable = StaticDataFacade.Get(DataKeys.KhoiHoc) as QLMamNon.Dao.QLMamNonDs.KhoiDataTable;
                 QLMamNon.Dao.QLMamNonDs.KhoiRow khoiRow = khoiTable.FindByKhoiId(khoiId.Value);
                 return khoiRow.Name;
+            }
+
+            return CommonConstant.EMPTY;
+        }
+
+        public static string GetHocSinhById(QLMamNon.Dao.QLMamNonDs.HocSinhDataTable table, Int32 id)
+        {
+            if (id < 0)
+            {
+                return CommonConstant.EMPTY;
+            }
+
+            DataRow[] rows = table.Select(String.Format("HocSinhId={0}", id));
+            if (rows != null && rows.Length > 0)
+            {
+                return String.Format("{0} {1}", (rows[0]["HoDem"] as String), (rows[0]["Ten"] as String));
             }
 
             return CommonConstant.EMPTY;
