@@ -82,8 +82,9 @@
             // 
             // cmbKhoi
             // 
-            this.SetBoundPropertyName(this.cmbKhoi, "");
-            this.cmbKhoi.Location = new System.Drawing.Point(257, 12);
+            this.SetBoundFieldName(this.cmbKhoi, "KhoiId");
+            this.SetBoundPropertyName(this.cmbKhoi, "EditValue");
+            this.cmbKhoi.Location = new System.Drawing.Point(67, 12);
             this.cmbKhoi.Name = "cmbKhoi";
             this.cmbKhoi.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbKhoi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -98,7 +99,7 @@
             this.cmbKhoi.Properties.ValueMember = "KhoiId";
             this.cmbKhoi.Size = new System.Drawing.Size(131, 20);
             this.cmbKhoi.StyleController = this.layoutControl1;
-            this.cmbKhoi.TabIndex = 5;
+            this.cmbKhoi.TabIndex = 0;
             // 
             // khoiRowBindingSource
             // 
@@ -108,13 +109,13 @@
             // 
             this.SetBoundFieldName(this.txtName, "Name");
             this.SetBoundPropertyName(this.txtName, "EditValue");
-            this.txtName.Location = new System.Drawing.Point(67, 12);
+            this.txtName.Location = new System.Drawing.Point(257, 12);
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtName.Properties.Appearance.Options.UseFont = true;
             this.txtName.Size = new System.Drawing.Size(131, 26);
             this.txtName.StyleController = this.layoutControl1;
-            this.txtName.TabIndex = 0;
+            this.txtName.TabIndex = 1;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule1.ErrorText = "This value is not valid";
             this.dxValidationProvider.SetValidationRule(this.txtName, conditionValidationRule1);
@@ -129,7 +130,7 @@
             this.txtDescription.Properties.Appearance.Options.UseFont = true;
             this.txtDescription.Size = new System.Drawing.Size(321, 46);
             this.txtDescription.StyleController = this.layoutControl1;
-            this.txtDescription.TabIndex = 4;
+            this.txtDescription.TabIndex = 2;
             // 
             // Root
             // 
@@ -153,7 +154,7 @@
             this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem1.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem1.Control = this.txtName;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(190, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(190, 30);
             this.layoutControlItem1.Text = "Tên lớp:";
@@ -175,7 +176,7 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.cmbKhoi;
-            this.layoutControlItem2.Location = new System.Drawing.Point(190, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(190, 30);
             this.layoutControlItem2.Text = "Chọn Khối:";

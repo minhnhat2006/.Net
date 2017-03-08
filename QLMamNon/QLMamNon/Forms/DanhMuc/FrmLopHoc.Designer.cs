@@ -38,7 +38,6 @@
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKhoi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLopId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
@@ -87,8 +86,7 @@
             this.colSTT,
             this.colName,
             this.colKhoi,
-            this.colDescription,
-            this.colLopId});
+            this.colDescription});
             this.gvMain.GridControl = this.gcMain;
             this.gvMain.Name = "gvMain";
             this.gvMain.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
@@ -117,6 +115,7 @@
             // colKhoi
             // 
             this.colKhoi.Caption = "Khối";
+            this.colKhoi.FieldName = "KhoiId";
             this.colKhoi.Name = "colKhoi";
             this.colKhoi.Visible = true;
             this.colKhoi.VisibleIndex = 2;
@@ -130,12 +129,6 @@
             this.colDescription.Visible = true;
             this.colDescription.VisibleIndex = 3;
             this.colDescription.Width = 462;
-            // 
-            // colLopId
-            // 
-            this.colLopId.Caption = "Lớp Id";
-            this.colLopId.FieldName = "LopId";
-            this.colLopId.Name = "colLopId";
             // 
             // panelControl1
             // 
@@ -254,7 +247,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colDescription;
         private DevExpress.XtraGrid.Columns.GridColumn colKhoi;
-        private DevExpress.XtraGrid.Columns.GridColumn colLopId;
         private Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter lopKhoiTableAdapter;
     }
 }

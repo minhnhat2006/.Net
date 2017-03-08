@@ -54,6 +54,9 @@
             this.bbiDSPhieuThu = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDSPhieuChi = new DevExpress.XtraBars.BarButtonItem();
             this.bbiPhanLoaiChi = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSoThuTienHS = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiKhoanThu = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiKhoanThuHangNam = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.rpHocSinh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgHocSinh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -62,8 +65,9 @@
             this.rpGiaoVien = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpDinhDuong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpThuChi = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rpgPhieuThu = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgPhieuChi = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgPhieuThu = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgSoThuTien = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpBaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgTruongHoc = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -78,6 +82,7 @@
             this.truongTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.TruongTableAdapter();
             this.khoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoiTableAdapter();
             this.lopTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.LopTableAdapter();
+            this.khoanThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -111,11 +116,14 @@
             this.bbiTaoPhieuChi,
             this.bbiDSPhieuThu,
             this.bbiDSPhieuChi,
-            this.bbiPhanLoaiChi});
+            this.bbiPhanLoaiChi,
+            this.bbiSoThuTienHS,
+            this.bbiKhoanThu,
+            this.bbiKhoanThuHangNam});
             this.ribbon.LargeImages = this.imageCollection1;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbon.MaxItemId = 16;
+            this.ribbon.MaxItemId = 19;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpHocSinh,
@@ -328,6 +336,36 @@
             this.bbiPhanLoaiChi.Name = "bbiPhanLoaiChi";
             this.bbiPhanLoaiChi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiPhanLoaiChi_ItemClick);
             // 
+            // bbiSoThuTienHS
+            // 
+            this.bbiSoThuTienHS.Caption = "Sổ thu tiền Học sinh";
+            this.bbiSoThuTienHS.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.bbiSoThuTienHS.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiSoThuTienHS.Glyph")));
+            this.bbiSoThuTienHS.Id = 16;
+            this.bbiSoThuTienHS.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiSoThuTienHS.LargeGlyph")));
+            this.bbiSoThuTienHS.Name = "bbiSoThuTienHS";
+            this.bbiSoThuTienHS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiSoThuTienHS_ItemClick);
+            // 
+            // bbiKhoanThu
+            // 
+            this.bbiKhoanThu.Caption = "Các Khoản thu";
+            this.bbiKhoanThu.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.bbiKhoanThu.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiKhoanThu.Glyph")));
+            this.bbiKhoanThu.Id = 17;
+            this.bbiKhoanThu.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiKhoanThu.LargeGlyph")));
+            this.bbiKhoanThu.Name = "bbiKhoanThu";
+            this.bbiKhoanThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiKhoanThu_ItemClick);
+            // 
+            // bbiKhoanThuHangNam
+            // 
+            this.bbiKhoanThuHangNam.Caption = "Khoản thu hằng năm";
+            this.bbiKhoanThuHangNam.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.bbiKhoanThuHangNam.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiKhoanThuHangNam.Glyph")));
+            this.bbiKhoanThuHangNam.Id = 18;
+            this.bbiKhoanThuHangNam.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiKhoanThuHangNam.LargeGlyph")));
+            this.bbiKhoanThuHangNam.Name = "bbiKhoanThuHangNam";
+            this.bbiKhoanThuHangNam.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiKhoanThuHangNam_ItemClick);
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -401,10 +439,18 @@
             this.rpThuChi.Appearance.Options.UseFont = true;
             this.rpThuChi.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgPhieuChi,
-            this.rpgPhieuThu});
+            this.rpgPhieuThu,
+            this.rpgSoThuTien});
             this.rpThuChi.Image = ((System.Drawing.Image)(resources.GetObject("rpThuChi.Image")));
             this.rpThuChi.Name = "rpThuChi";
             this.rpThuChi.Text = "Quản lý thu chi";
+            // 
+            // rpgPhieuChi
+            // 
+            this.rpgPhieuChi.ItemLinks.Add(this.bbiTaoPhieuChi);
+            this.rpgPhieuChi.ItemLinks.Add(this.bbiDSPhieuChi);
+            this.rpgPhieuChi.Name = "rpgPhieuChi";
+            this.rpgPhieuChi.Text = "Phiếu Chi";
             // 
             // rpgPhieuThu
             // 
@@ -413,12 +459,11 @@
             this.rpgPhieuThu.Name = "rpgPhieuThu";
             this.rpgPhieuThu.Text = "Phiếu Thu";
             // 
-            // rpgPhieuChi
+            // rpgSoThuTien
             // 
-            this.rpgPhieuChi.ItemLinks.Add(this.bbiTaoPhieuChi);
-            this.rpgPhieuChi.ItemLinks.Add(this.bbiDSPhieuChi);
-            this.rpgPhieuChi.Name = "rpgPhieuChi";
-            this.rpgPhieuChi.Text = "Phiếu Chi";
+            this.rpgSoThuTien.ItemLinks.Add(this.bbiSoThuTienHS);
+            this.rpgSoThuTien.Name = "rpgSoThuTien";
+            this.rpgSoThuTien.Text = "Sổ thu tiền";
             // 
             // rpBaoCao
             // 
@@ -459,6 +504,8 @@
             // rpgThuChi
             // 
             this.rpgThuChi.ItemLinks.Add(this.bbiPhanLoaiChi);
+            this.rpgThuChi.ItemLinks.Add(this.bbiKhoanThu);
+            this.rpgThuChi.ItemLinks.Add(this.bbiKhoanThuHangNam);
             this.rpgThuChi.Name = "rpgThuChi";
             this.rpgThuChi.Text = "Quản lý Thu Chi";
             // 
@@ -505,6 +552,10 @@
             // lopTableAdapter
             // 
             this.lopTableAdapter.ClearBeforeFill = true;
+            // 
+            // khoanThuTableAdapter
+            // 
+            this.khoanThuTableAdapter.ClearBeforeFill = true;
             // 
             // FrmMain
             // 
@@ -584,5 +635,10 @@
         private DevExpress.XtraBars.BarButtonItem bbiDSPhieuChi;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgThuChi;
         private DevExpress.XtraBars.BarButtonItem bbiPhanLoaiChi;
+        private DevExpress.XtraBars.BarButtonItem bbiSoThuTienHS;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgSoThuTien;
+        private DevExpress.XtraBars.BarButtonItem bbiKhoanThu;
+        private DevExpress.XtraBars.BarButtonItem bbiKhoanThuHangNam;
+        private Dao.QLMamNonDsTableAdapters.KhoanThuTableAdapter khoanThuTableAdapter;
     }
 }

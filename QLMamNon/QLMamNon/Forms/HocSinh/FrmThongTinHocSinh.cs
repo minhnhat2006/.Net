@@ -190,7 +190,7 @@ namespace QLMamNon.Forms.HocSinh
 
         #endregion
 
-        #region Validations
+        #region Validation
 
         #endregion
     }

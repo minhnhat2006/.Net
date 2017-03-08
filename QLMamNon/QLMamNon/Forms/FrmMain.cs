@@ -54,6 +54,7 @@ namespace QLMamNon.Forms
             StaticDataFacade.Add(DataKeys.NamHoc, new NamHocData());
             StaticDataFacade.Add(DataKeys.KhoiHoc, new KhoiData(khoiTableAdapter));
             StaticDataFacade.Add(DataKeys.LopHoc, new LopData(lopTableAdapter));
+            StaticDataFacade.Add(DataKeys.KhoanThu, new KhoanThuData(khoanThuTableAdapter));
         }
 
         private void bbtnHocSinhThongTin_ItemClick(object sender, ItemClickEventArgs e)
@@ -119,6 +120,21 @@ namespace QLMamNon.Forms
         private void bbiDSPhieuChi_ItemClick(object sender, ItemClickEventArgs e)
         {
             FormMainFacade.ShowForm(AppForms.FormPhieuChi);
+        }
+
+        private void bbiSoThuTienHS_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormSoThuTien);
+        }
+
+        private void bbiKhoanThu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormDanhMucKhoanThu);
+        }
+
+        private void bbiKhoanThuHangNam_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormDanhMucKhoanThuHangNam);
         }
 
         #endregion

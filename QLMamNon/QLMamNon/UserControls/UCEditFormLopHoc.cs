@@ -18,8 +18,12 @@ namespace QLMamNon.UserControls
 
         private void UCEditFormLopHoc_Enter(object sender, EventArgs e)
         {
-            int lopId = (int)this.GridView.GetFocusedRowCellValue("LopId");
-            this.cmbKhoi.EditValue = StaticDataUtil.GetKhoiIdByLopId(this.lopKhoiTableAdapter, lopId);
+            QLMamNon.Dao.QLMamNonDs.LopRow row = this.GridView.GetFocusedDataRow() as QLMamNon.Dao.QLMamNonDs.LopRow;
+
+            if (row != null)
+            {
+                this.cmbKhoi.EditValue = StaticDataUtil.GetKhoiIdByLopId(this.lopKhoiTableAdapter, row.LopId);
+            }
         }
     }
 }

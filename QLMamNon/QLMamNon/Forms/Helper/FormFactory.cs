@@ -29,10 +29,13 @@ namespace QLMamNon.Forms.Resource
             formToTypes.Add(AppForms.FormDanhMucQuanHuyen, typeof(FrmQuanHuyen).FullName);
             formToTypes.Add(AppForms.FormDanhMucPhuongXa, typeof(FrmPhuongXa).FullName);
             formToTypes.Add(AppForms.FormDanhMucPhanLoaiChi, typeof(FrmPhanLoaiChi).FullName);
+            formToTypes.Add(AppForms.FormDanhMucKhoanThu, typeof(FrmKhoanThu).FullName);
+            formToTypes.Add(AppForms.FormDanhMucKhoanThuHangNam, typeof(FrmKhoanThuHangNam).FullName);
             formToTypes.Add(AppForms.FormPhieuThu, typeof(FrmPhieuThu).FullName);
             formToTypes.Add(AppForms.FormTaoPhieuChi, typeof(FrmTaoPhieuChi).FullName);
             formToTypes.Add(AppForms.FormPhieuChi, typeof(FrmPhieuChi).FullName);
             formToTypes.Add(AppForms.FormTaoPhieuThu, typeof(FrmTaoPhieuThu).FullName);
+            formToTypes.Add(AppForms.FormSoThuTien, typeof(FrmSoThuTien).FullName);
         }
 
         public Form GetForm(string key)

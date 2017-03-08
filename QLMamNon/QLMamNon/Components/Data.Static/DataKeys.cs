@@ -14,5 +14,6 @@ namespace QLMamNon.Components.Data.Static
         public const string NamHoc = "NamHoc";
         public const string KhoiHoc = "KhoiHoc";
         public const string LopHoc = "LopHoc";
+        public const string KhoanThu = "KhoanThu";
     }
 }

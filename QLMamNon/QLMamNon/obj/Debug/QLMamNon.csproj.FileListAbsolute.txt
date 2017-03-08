@@ -52,3 +52,8 @@ D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.DanhMuc.FrmPhanL
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.UserControls.UCEditFormPhanLoaiChi.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.DanhMuc.FrmPhieuThu.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.DanhMuc.FrmPhieuChi.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.HocSinh.FrmSoThuTien.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.DanhMuc.FrmKhoanThu.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.UserControls.UCEditFormKhoanThu.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.DanhMuc.FrmKhoanThuHangNam.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.UserControls.UCEditFormKhoanThuHangNam.resources
