@@ -12,6 +12,7 @@ using QLMamNon.Components.Data.Static;
 using DevExpress.XtraPrinting;
 using System.Collections.Generic;
 using ACG.Core.WinForm.Util;
+using QLThuChi;
 
 namespace QLMamNon.Forms.HocSinh
 {
@@ -35,13 +36,13 @@ namespace QLMamNon.Forms.HocSinh
             this.hocSinhRowBindingSource.DataSource = this.hocSinhTableAdapter.GetData();
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormThongTinHocSinh();
             this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.hocSinhTableAdapter.Adapter, this.hocSinhRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.HocSinhDataTable);
+            this.loadThongTinHocSinh(this.DataTable as QLMamNon.Dao.QLMamNonDs.HocSinhDataTable);
         }
 
         private void FrmThongTinHocSinh_Load(object sender, EventArgs e)
         {
-            this.thanhPhoRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.TinhThanhPho);
-            this.truongRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.TruongHoc);
-            this.namHocBindingSource.DataSource = StaticDataFacade.Get(DataKeys.NamHoc);
+            this.quanHuyenRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.QuanHuyen);
+            this.lopRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.LopHoc);
         }
 
         private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
@@ -85,38 +86,32 @@ namespace QLMamNon.Forms.HocSinh
                     e.DisplayText = StaticDataUtil.GetPhuongXaById(StaticDataFacade.Get(DataKeys.PhuongXa) as QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable, (int)phuongXaId);
                 }
             }
-            else if (e.Column.FieldName == "NgaySinh" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle && e.Value != DBNull.Value)
+            else if (e.Column.Caption == "NgaySinh" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle && e.Value != DBNull.Value)
             {
-                DateTime ngaySinh = (DateTime)e.Value;
-                if (e.Column.Caption == "Ngay")
+                object ngaySinhObj = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "NgaySinh");
+                if (ngaySinhObj != DBNull.Value)
                 {
+                    DateTime ngaySinh = (DateTime)ngaySinhObj;
                     e.DisplayText = ngaySinh.Day.ToString();
                 }
-                else if (e.Column.Caption == "Thang")
+            }
+            else if (e.Column.Caption == "ThangSinh" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle && e.Value != DBNull.Value)
+            {
+                object ngaySinhObj = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "NgaySinh");
+                if (ngaySinhObj != DBNull.Value)
                 {
+                    DateTime ngaySinh = (DateTime)ngaySinhObj;
                     e.DisplayText = ngaySinh.Month.ToString();
                 }
-                else if (e.Column.Caption == "Nam")
+            }
+            else if (e.Column.Caption == "NamSinh" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle && e.Value != DBNull.Value)
+            {
+                object ngaySinhObj = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "NgaySinh");
+                if (ngaySinhObj != DBNull.Value)
                 {
+                    DateTime ngaySinh = (DateTime)ngaySinhObj;
                     e.DisplayText = ngaySinh.Year.ToString();
                 }
-            }
-            else if (e.Column.Caption == this.GridViewColumnSequenceName && e.ListSourceRowIndex >= 0)
-            {
-                e.DisplayText = String.Format("{0}", e.ListSourceRowIndex + 1);
-            }
-        }
-
-        private void cmbThanhPho_EditValueChanged(object sender, EventArgs e)
-        {
-            QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable table = StaticDataFacade.Get(DataKeys.QuanHuyen) as QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable;
-            if (cmbThanhPho.EditValue != DBNull.Value && cmbThanhPho.EditValue != null)
-            {
-                this.quanHuyenRowBindingSource.DataSource = table.Select(String.Format("ThanhPhoId={0}", cmbThanhPho.EditValue));
-            }
-            else
-            {
-                this.quanHuyenRowBindingSource.DataSource = null;
             }
         }
 
@@ -133,24 +128,9 @@ namespace QLMamNon.Forms.HocSinh
             }
         }
 
-        private void cmbTruongHoc_EditValueChanged(object sender, EventArgs e)
-        {
-            this.khoiRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.KhoiHoc);
-        }
-
-        private void cmbKhoiHoc_EditValueChanged(object sender, EventArgs e)
-        {
-            this.lopRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.LopHoc);
-        }
-
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             List<string> filters = new List<string>();
-            if (!ControlUtil.IsEditValueNull(this.cmbThanhPho))
-            {
-                filters.Add(string.Format("[TinhThanhPhoId] = {0}", this.cmbThanhPho.EditValue));
-            }
-
             if (!ControlUtil.IsEditValueNull(this.cmbQuanHuyen))
             {
                 filters.Add(string.Format("[QuanHuyenId] = {0}", this.cmbQuanHuyen.EditValue));
@@ -161,19 +141,31 @@ namespace QLMamNon.Forms.HocSinh
                 filters.Add(string.Format("[PhuongXaId] = {0}", this.cmbPhuongXa.EditValue));
             }
 
+            if (!ControlUtil.IsEditValueNull(this.cmbLop))
+            {
+                filters.Add(string.Format("[LopDangHoc] = '{0}'", this.cmbLop.Text));
+            }
+
+            if (!StringUtil.IsEmpty(this.cmbThang.Text))
+            {
+                filters.Add(string.Format("[ThangSinh] = {0}", this.cmbThang.Text));
+            }
+
+            if (!StringUtil.IsEmpty(this.cmbNgaySinh.Text))
+            {
+                filters.Add(string.Format("[NgaySinh] = #{0}#", this.cmbNgaySinh.Text));
+            }
+
             this.gvMain.ActiveFilterString = String.Join(" AND ", filters);
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            this.cmbThanhPho.EditValue = DBNull.Value;
             this.cmbQuanHuyen.EditValue = DBNull.Value;
             this.cmbPhuongXa.EditValue = DBNull.Value;
-            this.cmbTruongHoc.EditValue = DBNull.Value;
-            this.cmbKhoiHoc.EditValue = DBNull.Value;
-            this.cmbLopHoc.EditValue = DBNull.Value;
-            this.cmbNamHoc.EditValue = DBNull.Value;
-            this.cmbSoLuong.EditValue = DBNull.Value;
+            this.cmbLop.EditValue = DBNull.Value;
+            this.cmbNgaySinh.EditValue = DBNull.Value;
+            this.cmbThang.EditValue = DBNull.Value;
         }
 
         private void btnXuatExcel_Click(object sender, EventArgs e)
@@ -188,9 +180,75 @@ namespace QLMamNon.Forms.HocSinh
             }
         }
 
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            RptThongTinHocSinh rpt = new RptThongTinHocSinh();
+            this.fillReportHocSinh(rpt);
+            FormMainFacade.ShowReport(rpt);
+        }
+
         #endregion
 
         #region Validation
+
+        #endregion
+
+        #region Helper
+
+        private void loadThongTinHocSinh(QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable)
+        {
+            List<int> hocSinhIds = new List<int>(hocSinhTable.Rows.Count);
+            foreach (QLMamNon.Dao.QLMamNonDs.HocSinhRow row in hocSinhTable)
+            {
+                hocSinhIds.Add(row.HocSinhId);
+            }
+
+            Dictionary<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow> hocSinhIdsToHocSinhLops = StaticDataUtil.GetHocSinhLopsByHocSinhIds(hocSinhLopTableAdapter, hocSinhIds, DateTime.Now); ;
+            Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow> hocSinhIdsToLops = StaticDataUtil.GetLopsByHocSinhIds(hocSinhLopTableAdapter, hocSinhIds, DateTime.Now);
+
+            foreach (QLMamNon.Dao.QLMamNonDs.HocSinhRow row in hocSinhTable)
+            {
+                row.ThangSinh = row.NgaySinh.Month;
+
+                if (hocSinhIdsToLops.ContainsKey(row.HocSinhId))
+                {
+                    QLMamNon.Dao.QLMamNonDs.LopRow lop = hocSinhIdsToLops[row.HocSinhId];
+                    row.LopDangHoc = lop.Name;
+                }
+
+                if (hocSinhIdsToHocSinhLops.ContainsKey(row.HocSinhId))
+                {
+                    QLMamNon.Dao.QLMamNonDs.HocSinhLopRow hocSinhLop = hocSinhIdsToHocSinhLops[row.HocSinhId];
+                    row.NgayVaoLop = hocSinhLop.DateJoin;
+                }
+            }
+        }
+
+        private void fillReportHocSinh(RptThongTinHocSinh rpt)
+        {
+            List<object> rows = new List<object>(this.GridViewMain.RowCount);
+
+            for (int i = 0; i < this.GridViewMain.DataRowCount; i++)
+            {
+                object dataRow = this.GridViewMain.GetRow(this.GridViewMain.GetVisibleRowHandle(i));
+                rows.Add(dataRow);
+
+                QLMamNon.Dao.QLMamNonDs.HocSinhRow hocSinhRow = (dataRow as DataRowView).Row as QLMamNon.Dao.QLMamNonDs.HocSinhRow;
+                hocSinhRow.STT = i + 1;
+
+                if (!hocSinhRow.IsPhuongXaIdNull())
+                {
+                    hocSinhRow.PhuongXa = StaticDataUtil.GetPhuongXaById(StaticDataFacade.Get(DataKeys.PhuongXa) as QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable, hocSinhRow.PhuongXaId);
+                }
+
+                if (!hocSinhRow.IsQuanHuyenIdNull())
+                {
+                    hocSinhRow.QuanHuyen = StaticDataUtil.GetQuanHuyenById(StaticDataFacade.Get(DataKeys.QuanHuyen) as QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable, hocSinhRow.QuanHuyenId);
+                }
+            }
+
+            rpt.hocSinhBindingSource.DataSource = rows;
+        }
 
         #endregion
     }

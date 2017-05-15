@@ -23,7 +23,6 @@ namespace QLMamNon.UserControls
         {
             this.khoanThuRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.KhoanThu);
             this.khoiRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.KhoiHoc);
-            this.namHocBindingSource.DataSource = StaticDataFacade.Get(DataKeys.NamHoc);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace ACG.Core.WinForm.Util
 {
     public class IntUtil
     {
-        public static int? stringToInt(string value)
+        public static int? StringToInt(string value)
         {
             int intValue = 0;
 

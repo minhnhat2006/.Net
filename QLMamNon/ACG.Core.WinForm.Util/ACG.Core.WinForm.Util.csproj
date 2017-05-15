@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlUtil.cs" />
+    <Compile Include="ArrayUtil.cs" />
+    <Compile Include="ListUtil.cs" />
+    <Compile Include="StringUtil.cs" />
     <Compile Include="InitUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

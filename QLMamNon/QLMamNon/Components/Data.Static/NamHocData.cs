@@ -15,7 +15,7 @@ namespace QLMamNon.Components.Data.Static
         {
             List<NamHoc> namHocList = new List<NamHoc>();
 
-            for (int i = 2000; i < 2049; i++)
+            for (int i = 2010; i < 2049; i++)
             {
                 namHocList.Add(new NamHoc(i, i + 1));
             }

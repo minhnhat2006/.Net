@@ -43,6 +43,7 @@ namespace QLMamNon.Forms
             FormMainFacade.InitFormMain(this);
 
             this.initStaticData();
+            this.ribbon.Minimized = true;
         }
 
         private void initStaticData()
@@ -55,11 +56,18 @@ namespace QLMamNon.Forms
             StaticDataFacade.Add(DataKeys.KhoiHoc, new KhoiData(khoiTableAdapter));
             StaticDataFacade.Add(DataKeys.LopHoc, new LopData(lopTableAdapter));
             StaticDataFacade.Add(DataKeys.KhoanThu, new KhoanThuData(khoanThuTableAdapter));
+            StaticDataFacade.Add(DataKeys.PhanLoaiChi, new PhanLoaiChi(phanLoaiChiTableAdapter));
+            StaticDataFacade.Add(DataKeys.BangTinhPhi, new BangTinhPhi(bangTinhPhiTableAdapter));
         }
 
         private void bbtnHocSinhThongTin_ItemClick(object sender, ItemClickEventArgs e)
         {
             FormMainFacade.ShowForm(AppForms.FormThongTinHocSinh);
+        }
+
+        private void bbtnHocSinhThongTinHocTap_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormThongTinHocTap);
         }
 
         private void bbtnHocSinhXepLop_ItemClick(object sender, ItemClickEventArgs e)
@@ -135,6 +143,31 @@ namespace QLMamNon.Forms
         private void bbiKhoanThuHangNam_ItemClick(object sender, ItemClickEventArgs e)
         {
             FormMainFacade.ShowForm(AppForms.FormDanhMucKhoanThuHangNam);
+        }
+
+        private void bbiRptBaoCaoHoatDongTaiChinh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowDialog(AppForms.FormBaoCaoHoatDongTaiChinh);
+        }
+
+        private void bbiRptBaoCaoChiTietHoatDongTaiChinh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowDialog(AppForms.FormBaoCaoChiTietHoatDongTaiChinh);
+        }
+
+        private void bbiTaiSan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormTaiSan);
+        }
+
+        private void bbiPhanBoTaiSan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormPhanBoTaiSan);
+        }
+
+        private void bbiSoTheoDoiTaiSan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormSoTheoDoiTaiSan);
         }
 
         #endregion

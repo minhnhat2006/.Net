@@ -3,6 +3,7 @@ using System.Threading;
 using System.Windows.Forms;
 using QLMamNon.Forms;
 using System.Drawing;
+using System.Globalization;
 
 namespace QLMamNon
 {
@@ -16,10 +17,18 @@ namespace QLMamNon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("vi-VN");
+            var newCulture = new CultureInfo("vi-VN");
+            newCulture.DateTimeFormat = new DateTimeFormatInfo();
+            newCulture.NumberFormat = new NumberFormatInfo();
+            newCulture.NumberFormat.NumberGroupSeparator = ".";
+            newCulture.NumberFormat.NumberDecimalSeparator = ",";
+            Thread.CurrentThread.CurrentCulture = newCulture;
+            Thread.CurrentThread.CurrentUICulture = newCulture;
+
             DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new Font("Times New Roman", 12);
             DevExpress.XtraEditors.WindowsFormsSettings.DefaultMenuFont = new Font("Times New Roman", 12);
             DevExpress.XtraEditors.WindowsFormsSettings.DefaultPrintFont = new Font("Times New Roman", 12);
+
             Application.Run(new FrmMain());
         }
     }

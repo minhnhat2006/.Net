@@ -36,8 +36,7 @@
             this.txtSoTien = new DevExpress.XtraEditors.CalcEdit();
             this.txtTenKhoanThu = new DevExpress.XtraEditors.LookUpEdit();
             this.khoanThuRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbNam = new DevExpress.XtraEditors.LookUpEdit();
-            this.namHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbNam = new DevExpress.XtraEditors.DateEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -53,8 +52,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenKhoanThu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoanThuRowBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbNam.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.namHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -175,31 +174,20 @@
             // 
             // cmbNam
             // 
-            this.SetBoundFieldName(this.cmbNam, "Nam");
+            this.SetBoundFieldName(this.cmbNam, "NgayTinh");
             this.SetBoundPropertyName(this.cmbNam, "EditValue");
-            this.cmbNam.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.namHocBindingSource, "FromYear", true));
-            this.cmbNam.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.namHocBindingSource, "Text", true));
+            this.cmbNam.EditValue = null;
             this.cmbNam.Location = new System.Drawing.Point(113, 66);
             this.cmbNam.Name = "cmbNam";
             this.cmbNam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbNam.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Text", "Text", 5, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.cmbNam.Properties.DataSource = this.namHocBindingSource;
-            this.cmbNam.Properties.DisplayMember = "Text";
-            this.cmbNam.Properties.NullText = "";
-            this.cmbNam.Properties.PopupSizeable = false;
-            this.cmbNam.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            this.cmbNam.Properties.ShowHeader = false;
-            this.cmbNam.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cmbNam.Properties.ValueMember = "FromYear";
+            this.cmbNam.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbNam.Properties.Mask.EditMask = "";
+            this.cmbNam.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.cmbNam.Size = new System.Drawing.Size(259, 20);
             this.cmbNam.StyleController = this.layoutControl1;
             this.cmbNam.TabIndex = 2;
-            // 
-            // namHocBindingSource
-            // 
-            this.namHocBindingSource.DataSource = typeof(QLMamNon.Entity.Form.NamHoc);
             // 
             // Root
             // 
@@ -268,7 +256,7 @@
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 54);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(364, 24);
-            this.layoutControlItem4.Text = "Năm học:";
+            this.layoutControlItem4.Text = "Ngày bắt đầu:";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(98, 13);
             // 
             // dxValidationProvider
@@ -291,8 +279,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoTien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenKhoanThu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoanThuRowBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbNam.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.namHocBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
@@ -319,8 +307,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private System.Windows.Forms.BindingSource khoanThuRowBindingSource;
-        private System.Windows.Forms.BindingSource namHocBindingSource;
         private System.Windows.Forms.BindingSource khoiRowBindingSource;
-        private DevExpress.XtraEditors.LookUpEdit cmbNam;
+        private DevExpress.XtraEditors.DateEdit cmbNam;
     }
 }

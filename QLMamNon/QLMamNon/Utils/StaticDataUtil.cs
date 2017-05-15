@@ -5,6 +5,8 @@ using QLMamNon.Constant;
 using QLMamNon.Dao.QLMamNonDsTableAdapters;
 using QLMamNon.Facade;
 using QLMamNon.Components.Data.Static;
+using System.Collections.Generic;
+using ACG.Core.WinForm.Util;
 namespace QLMamNon
 {
     public static class StaticDataUtil
@@ -95,7 +97,7 @@ namespace QLMamNon
 
         public static string GetTruongNameByTruongId(Int32 truongId)
         {
-            if (truongId != null)
+            if (truongId > 0)
             {
                 QLMamNon.Dao.QLMamNonDs.TruongDataTable truongTable = StaticDataFacade.Get(DataKeys.TruongHoc) as QLMamNon.Dao.QLMamNonDs.TruongDataTable;
                 QLMamNon.Dao.QLMamNonDs.TruongRow truongRow = truongTable.FindByTruongId(truongId);
@@ -201,6 +203,85 @@ namespace QLMamNon
             if (hocSinhRow != null)
             {
                 return hocSinhRow.HoTen;
+            }
+
+            return CommonConstant.EMPTY;
+        }
+
+        public static Dictionary<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow> GetHocSinhLopsByHocSinhIds(HocSinhLopTableAdapter hocSinhLopTableAdapter, List<int> hocSinhIds, DateTime ngay)
+        {
+            if (ListUtil.IsEmpty(hocSinhIds))
+            {
+                return null;
+            }
+
+            Dictionary<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow> hocSinhIdsToHocSinhLops = new Dictionary<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow>();
+            QLMamNon.Dao.QLMamNonDs.HocSinhLopDataTable table = hocSinhLopTableAdapter.GetHocSinhLopByHocSinhIdsAndNgay(StringUtil.Join(hocSinhIds, ","), ngay);
+
+            if (!ListUtil.IsEmpty(table.Rows))
+            {
+                foreach (QLMamNon.Dao.QLMamNonDs.HocSinhLopRow row in table)
+                {
+                    hocSinhIdsToHocSinhLops.Add(row.HocSinhId, row);
+                }
+            }
+
+            return hocSinhIdsToHocSinhLops;
+        }
+
+        public static Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow> GetLopsByHocSinhIds(HocSinhLopTableAdapter hocSinhLopTableAdapter, List<int> hocSinhIds, DateTime ngay)
+        {
+            Dictionary<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow> hocSinhIdsToLopIds = GetHocSinhLopsByHocSinhIds(hocSinhLopTableAdapter, hocSinhIds, ngay);
+            QLMamNon.Dao.QLMamNonDs.LopDataTable lopTable = StaticDataFacade.Get(DataKeys.LopHoc) as QLMamNon.Dao.QLMamNonDs.LopDataTable;
+            Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow> hocSinhIdsToLopNames = new Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow>();
+
+            if (ListUtil.IsEmpty(hocSinhIdsToLopIds))
+            {
+                return hocSinhIdsToLopNames;
+            }
+
+            foreach (KeyValuePair<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow> pair in hocSinhIdsToLopIds)
+            {
+                if (pair.Value == null)
+                {
+                    continue;
+                }
+
+                QLMamNon.Dao.QLMamNonDs.LopRow[] rows = lopTable.Select(String.Format("LopId={0}", pair.Value.LopId)) as QLMamNon.Dao.QLMamNonDs.LopRow[];
+                if (!ArrayUtil.IsEmpty(rows))
+                {
+                    hocSinhIdsToLopNames.Add(pair.Key, rows[0]);
+                }
+            }
+
+            return hocSinhIdsToLopNames;
+        }
+
+        public static string GetPhanLoaiChiNameByPhieuChiId(PhieuChiTableAdapter adapter, Int32 phieuChiId)
+        {
+            if (phieuChiId < 0)
+            {
+                return CommonConstant.EMPTY;
+            }
+
+            QLMamNon.Dao.QLMamNonDs.PhieuChiDataTable phieChiTable = adapter.GetPhieuChiById(phieuChiId);
+
+            if (ListUtil.IsEmpty(phieChiTable.Rows))
+            {
+                return CommonConstant.EMPTY;
+            }
+
+            QLMamNon.Dao.QLMamNonDs.PhieuChiRow phieChiRow = phieChiTable.Rows[0] as QLMamNon.Dao.QLMamNonDs.PhieuChiRow;
+
+            if (phieChiRow != null)
+            {
+                QLMamNon.Dao.QLMamNonDs.PhanLoaiChiDataTable table = StaticDataFacade.Get(DataKeys.PhanLoaiChi) as QLMamNon.Dao.QLMamNonDs.PhanLoaiChiDataTable;
+                QLMamNon.Dao.QLMamNonDs.PhanLoaiChiRow[] rows = (QLMamNon.Dao.QLMamNonDs.PhanLoaiChiRow[])table.Select(String.Format("PhanLoaiChiId={0}", phieChiRow.PhanLoaiChiId));
+
+                if (!ArrayUtil.IsEmpty(rows))
+                {
+                    return rows[0].DienGiai;
+                }
             }
 
             return CommonConstant.EMPTY;

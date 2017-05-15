@@ -44,6 +44,7 @@
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKhoi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNam = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoTien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBatBuoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.khoanThuHangNamTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuHangNamTableAdapter();
@@ -140,12 +141,14 @@
             // 
             // gcMain
             // 
+            this.gcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.gcMain.DataSource = this.khoanThuHangNamRowBindingSource;
-            this.gcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcMain.Location = new System.Drawing.Point(0, 0);
             this.gcMain.MainView = this.gvMain;
             this.gcMain.Name = "gcMain";
-            this.gcMain.Size = new System.Drawing.Size(792, 733);
+            this.gcMain.Size = new System.Drawing.Size(792, 684);
             this.gcMain.TabIndex = 6;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
@@ -161,6 +164,7 @@
             this.colName,
             this.colKhoi,
             this.colNam,
+            this.gridColumn1,
             this.colSoTien,
             this.colBatBuoc});
             this.gvMain.GridControl = this.gcMain;
@@ -198,11 +202,19 @@
             // 
             // colNam
             // 
-            this.colNam.Caption = "Năm học";
-            this.colNam.FieldName = "Nam";
+            this.colNam.Caption = "Ngày bắt đầu";
+            this.colNam.FieldName = "NgayTinh";
             this.colNam.Name = "colNam";
             this.colNam.Visible = true;
             this.colNam.VisibleIndex = 3;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Ngày kết thúc";
+            this.gridColumn1.FieldName = "NgayKetThuc";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 4;
             // 
             // colSoTien
             // 
@@ -212,7 +224,7 @@
             this.colSoTien.FieldName = "SoTien";
             this.colSoTien.Name = "colSoTien";
             this.colSoTien.Visible = true;
-            this.colSoTien.VisibleIndex = 4;
+            this.colSoTien.VisibleIndex = 5;
             this.colSoTien.Width = 354;
             // 
             // colBatBuoc
@@ -221,7 +233,7 @@
             this.colBatBuoc.FieldName = "IsBatBuoc";
             this.colBatBuoc.Name = "colBatBuoc";
             this.colBatBuoc.Visible = true;
-            this.colBatBuoc.VisibleIndex = 5;
+            this.colBatBuoc.VisibleIndex = 6;
             // 
             // khoanThuHangNamTableAdapter
             // 
@@ -265,5 +277,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colBatBuoc;
         private DevExpress.XtraGrid.Columns.GridColumn colKhoi;
         private DevExpress.XtraGrid.Columns.GridColumn colNam;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

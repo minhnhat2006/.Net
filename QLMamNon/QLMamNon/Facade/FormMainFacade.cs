@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Windows.Forms;
+using DevExpress.XtraReports.UI;
 using QLMamNon.Forms;
-using System.Windows.Forms;
 using QLMamNon.Forms.Resource;
 
 namespace QLMamNon.Facade
@@ -38,6 +35,12 @@ namespace QLMamNon.Facade
             Form frm = formFactory.GetForm(form);
             frm.ShowDialog();
             frm.Activate();
+        }
+
+        public static void ShowReport(XtraReport rpt)
+        {
+            ReportPrintTool printTool = new ReportPrintTool(rpt);
+            printTool.ShowPreview();
         }
 
         public static void CloseForm(string form)

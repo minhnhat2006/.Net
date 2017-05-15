@@ -44,21 +44,26 @@ namespace QLMamNon.Forms.HocSinh
         private void loadHocSinhToGridDi()
         {
             int? namHoc = (int?)this.cmbNamHocDi.EditValue;
-            int? khoiHoc = (int?)this.cmbKhoiHocDi.EditValue;
             int? lopHoc = (int?)this.cmbLopHocDi.EditValue;
-            this.hocSinhRowBindingSourceDi.DataSource = this.hocSinhTableAdapter.GetDataByParams(namHoc, khoiHoc, lopHoc, null);
+
+            if (namHoc != null)
+            {
+                this.hocSinhRowBindingSourceDi.DataSource = this.hocSinhTableAdapter.GetHocSinhByParams(new DateTime(namHoc.Value + 1, 1, 1), null, lopHoc, null);
+            }
+            else
+            {
+                this.hocSinhRowBindingSourceDi.DataSource = this.hocSinhTableAdapter.GetHocSinhByParams(null, null, lopHoc, null);
+            }
         }
 
         private void loadHocSinhToGridDen()
         {
-            if (ControlUtil.IsEditValueNull(this.cmbNamHocDen) || ControlUtil.IsEditValueNull(this.cmbKhoiHocDen) || ControlUtil.IsEditValueNull(this.cmbLopHocDen)
-                || ControlUtil.IsEditValueNull(this.dateNgayVaoLop))
+            if (ControlUtil.IsEditValueNull(this.dateNgayVaoLop) || ControlUtil.IsEditValueNull(this.cmbLopHocDen))
             {
                 return;
             }
 
-            this.hocSinhRowBindingSourceDen.DataSource = this.hocSinhTableAdapter.GetDataByParams(
-                (int)this.cmbNamHocDen.EditValue, (int)this.cmbKhoiHocDen.EditValue, (int)this.cmbLopHocDen.EditValue, this.dateNgayVaoLop.DateTime);
+            this.hocSinhRowBindingSourceDen.DataSource = this.hocSinhTableAdapter.GetHocSinhByParams(null, null, (int)this.cmbLopHocDen.EditValue, this.dateNgayVaoLop.DateTime);
         }
 
         private void FrmXepLop_Load(object sender, EventArgs e)
@@ -71,7 +76,8 @@ namespace QLMamNon.Forms.HocSinh
             this.hocSinhRowBindingSourceDi.DataSource = this.hocSinhTableAdapter.GetData();
 
             this.namHocBindingSource.DataSource = StaticDataFacade.Get(DataKeys.NamHoc);
-            this.khoiRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.KhoiHoc);
+            this.lopRowBindingSourceDi.DataSource = StaticDataFacade.Get(DataKeys.LopHoc);
+            this.lopRowBindingSourceDen.DataSource = StaticDataFacade.Get(DataKeys.LopHoc);
         }
 
         private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
@@ -131,6 +137,7 @@ namespace QLMamNon.Forms.HocSinh
 
             if (this.isHocSinhExisted(this.hocSinhRowBindingSourceDi, oldRow.HocSinhId))
             {
+                this.hocSinhRowBindingSourceDen.RemoveCurrent();
                 return;
             }
 
@@ -149,12 +156,6 @@ namespace QLMamNon.Forms.HocSinh
             this.hocSinhRowBindingSourceDen.RemoveCurrent();
         }
 
-        private void cmbKhoiHocDi_EditValueChanged(object sender, EventArgs e)
-        {
-            this.lopRowBindingSourceDi.DataSource = StaticDataFacade.Get(DataKeys.LopHoc);
-            this.loadHocSinhToGridDi();
-        }
-
         private void cmbLopHocDi_EditValueChanged(object sender, EventArgs e)
         {
             this.loadHocSinhToGridDi();
@@ -170,12 +171,6 @@ namespace QLMamNon.Forms.HocSinh
             this.loadHocSinhToGridDen();
         }
 
-        private void cmbKhoiHocDen_EditValueChanged(object sender, EventArgs e)
-        {
-            this.lopRowBindingSourceDen.DataSource = StaticDataFacade.Get(DataKeys.LopHoc);
-            this.loadHocSinhToGridDen();
-        }
-
         private void cmbLopHocDen_EditValueChanged(object sender, EventArgs e)
         {
             this.loadHocSinhToGridDen();
@@ -188,26 +183,41 @@ namespace QLMamNon.Forms.HocSinh
 
         protected override void onSaving()
         {
-            if (ControlUtil.IsEditValueNull(this.cmbNamHocDen) || ControlUtil.IsEditValueNull(this.cmbKhoiHocDen) || ControlUtil.IsEditValueNull(this.cmbLopHocDen)
-                || ControlUtil.IsEditValueNull(this.dateNgayVaoLop))
+            if (ControlUtil.IsEditValueNull(this.dateNgayVaoLop) || ControlUtil.IsEditValueNull(this.cmbLopHocDen))
             {
-                MessageBox.Show("Xin vui long chọn Năm học, Lớp học, và Ngày vào lớp", "Không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xin vui long chọn Năm học và Lớp học", "Không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+
+            List<int> hocSinhIds = new List<int>();
+            int lop = (int)cmbLopHocDen.EditValue;
+            DateTime ngayVaoLop = dateNgayVaoLop.DateTime;
+            QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable = this.hocSinhTableAdapter.GetHocSinhByLopAndNgay(lop, ngayVaoLop);
 
             foreach (var item in hocSinhRowBindingSourceDen)
             {
                 DataRowView rowView = item as DataRowView;
                 QLMamNon.Dao.QLMamNonDs.HocSinhRow row = rowView.Row as QLMamNon.Dao.QLMamNonDs.HocSinhRow;
                 int hocSinh = row.HocSinhId;
-                int lop = (int)cmbLopHocDen.EditValue;
-                int tuNam = (int)cmbNamHocDen.EditValue;
-                int denNam = (int)cmbNamHocDen.EditValue + 1;
-                DateTime ngayVaoLop = dateNgayVaoLop.DateTime;
-                this.hocSinhTableAdapter.InsertHocSinhToLop(hocSinh, lop, ngayVaoLop, tuNam, denNam);
+                this.hocSinhTableAdapter.InsertHocSinhToLop(hocSinh, lop, ngayVaoLop);
+                hocSinhIds.Add(hocSinh);
             }
 
-            base.onSaving();
+            List<int> deletingHocSinhIds = new List<int>();
+            foreach (QLMamNon.Dao.QLMamNonDs.HocSinhRow hsRow in hocSinhTable)
+            {
+                if (!hocSinhIds.Contains(hsRow.HocSinhId))
+                {
+                    deletingHocSinhIds.Add(hsRow.HocSinhId);
+                }
+            }
+
+            if (!ListUtil.IsEmpty(deletingHocSinhIds))
+            {
+                this.hocSinhLopTableAdapter.DeleteHocSinhLopByHocSinhIds(StringUtil.Join(deletingHocSinhIds, ","), ngayVaoLop);
+            }
+
+            FormMainFacade.SetTrangThaiCaption(StatusCaptions.SavedCaption);
         }
 
     }

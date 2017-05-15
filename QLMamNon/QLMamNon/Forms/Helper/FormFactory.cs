@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using DevExpress.XtraGrid.EditForm.Helpers.Controls;
-using DevExpress.XtraEditors;
-using QLMamNon.Forms.HocSinh;
 using QLMamNon.Constant;
 using QLMamNon.Forms.DanhMuc;
+using QLMamNon.Forms.HocSinh;
 using QLMamNon.Forms.ThuChi;
 
 namespace QLMamNon.Forms.Resource
@@ -21,6 +17,7 @@ namespace QLMamNon.Forms.Resource
         public FormFactory()
         {
             formToTypes.Add(AppForms.FormThongTinHocSinh, typeof(FrmThongTinHocSinh).FullName);
+            formToTypes.Add(AppForms.FormThongTinHocTap, typeof(FrmThongTinHocTap).FullName);
             formToTypes.Add(AppForms.FormXepLop, typeof(FrmXepLop).FullName);
             formToTypes.Add(AppForms.FormDanhMucTruongHoc, typeof(FrmTruongHoc).FullName);
             formToTypes.Add(AppForms.FormDanhMucKhoiHoc, typeof(FrmKhoiHoc).FullName);
@@ -36,6 +33,10 @@ namespace QLMamNon.Forms.Resource
             formToTypes.Add(AppForms.FormPhieuChi, typeof(FrmPhieuChi).FullName);
             formToTypes.Add(AppForms.FormTaoPhieuThu, typeof(FrmTaoPhieuThu).FullName);
             formToTypes.Add(AppForms.FormSoThuTien, typeof(FrmSoThuTien).FullName);
+            formToTypes.Add(AppForms.FormBaoCaoHoatDongTaiChinh, typeof(FrmBaoCaoHoatDongTaiChinh).FullName);
+            formToTypes.Add(AppForms.FormBaoCaoChiTietHoatDongTaiChinh, typeof(FrmBaoCaoChiTietHoatDongTaiChinh).FullName);
+            formToTypes.Add(AppForms.FormTaiSan, typeof(FrmTaiSan).FullName);
+            formToTypes.Add(AppForms.FormPhanBoTaiSan, typeof(FrmPhanBoTaiSan).FullName);
         }
 
         public Form GetForm(string key)

@@ -44,8 +44,8 @@
             this.btnChinhSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.lopTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.LopTableAdapter();
             this.lopKhoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter();
+            this.lopTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.LopTableAdapter();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopRowBindingSource)).BeginInit();
@@ -65,12 +65,14 @@
             // 
             // gcMain
             // 
+            this.gcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.gcMain.DataSource = this.lopRowBindingSource;
-            this.gcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcMain.Location = new System.Drawing.Point(0, 0);
             this.gcMain.MainView = this.gvMain;
             this.gcMain.Name = "gcMain";
-            this.gcMain.Size = new System.Drawing.Size(792, 573);
+            this.gcMain.Size = new System.Drawing.Size(792, 524);
             this.gcMain.TabIndex = 0;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
@@ -203,13 +205,13 @@
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             // 
-            // lopTableAdapter
-            // 
-            this.lopTableAdapter.ClearBeforeFill = true;
-            // 
             // lopKhoiTableAdapter
             // 
             this.lopKhoiTableAdapter.ClearBeforeFill = true;
+            // 
+            // lopTableAdapter
+            // 
+            this.lopTableAdapter.ClearBeforeFill = true;
             // 
             // FrmLopHoc
             // 
@@ -241,12 +243,12 @@
         private DevExpress.XtraEditors.SimpleButton btnChinhSua;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnThem;
-        private Dao.QLMamNonDsTableAdapters.LopTableAdapter lopTableAdapter;
         private System.Windows.Forms.BindingSource lopRowBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colSTT;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colDescription;
         private DevExpress.XtraGrid.Columns.GridColumn colKhoi;
         private Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter lopKhoiTableAdapter;
+        private Dao.QLMamNonDsTableAdapters.LopTableAdapter lopTableAdapter;
     }
 }

@@ -198,13 +198,14 @@ namespace QLMamNon.Forms
         protected virtual void onSaving()
         {
             DataTable table = this.DataTable.GetChanges();
+
             if (table != null)
             {
                 this.DataAdapter.Update(table);
                 this.DataTable.Merge(table);
             }
-            this.DataTable.AcceptChanges();
 
+            this.DataTable.AcceptChanges();
             FormMainFacade.SetTrangThaiCaption(StatusCaptions.SavedCaption);
         }
 

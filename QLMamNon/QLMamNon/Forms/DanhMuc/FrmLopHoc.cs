@@ -55,14 +55,13 @@ namespace QLMamNon.Forms.DanhMuc
 
         protected override void onSaving()
         {
-            DataTable table = this.DataTable.GetChanges();
-            if (table != null)
+            if (this.DataTable != null)
             {
                 List<DataRow> deletedRow = new List<DataRow>();
                 List<DataRow> addedRow = new List<DataRow>();
                 List<DataRow> modifiedRow = new List<DataRow>();
 
-                foreach (DataRow row in table.Rows)
+                foreach (DataRow row in this.DataTable.Rows)
                 {
                     if (row.RowState == DataRowState.Deleted)
                     {
@@ -79,7 +78,6 @@ namespace QLMamNon.Forms.DanhMuc
                 }
 
                 base.onSaving();
-                table.Merge(this.DataTable);
 
                 foreach (DataRow row in deletedRow)
                 {

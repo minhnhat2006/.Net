@@ -118,18 +118,891 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="namHocBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>766, 17</value>
+    <value>931, 17</value>
   </metadata>
   <metadata name="khoiRowBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>929, 17</value>
+    <value>17, 17</value>
   </metadata>
   <metadata name="lopRowBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1094, 17</value>
   </metadata>
-  <metadata name="viewBangThuTienRowBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>534, 17</value>
-  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lcMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnPrint2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAMdEVYdFRpdGxlAFByaW50O8g2MuoAAAK/SURBVDhPfZPZT1NREMbLFtlEcEl89cU/QCE+GVAk
+        8gBKIhACcQESFEwQigopRYKsxZQ9GCQBIyS+GYkEJGKRGgJSCviGEhFau1AKdAdK28+Za9CUB0/yy9xz
+        7sw3Z+bOFQH4C62A9lfqic7BBXQOzgt0EO0DaoGWvi+T5BPsF+O3EYmCSABenw9erw8exuPDPuHe90Le
+        r2KnI34xfhuRKETeNysEmS072Nh2ETswbTux6/ZA9mKGncIOxQgrgAgiwmW9M0I246aTcMBA1mB2wrWz
+        j/ruKY6IIYKJQEJYgY09yqSOwa9zeeIuFFW+xO6eB/oNO3QmB2GD1mSH3bmHfPFzZBU0Uinq+arW0WSK
+        5aSikLaBxXUjZcksaEAeOTlcbmiNNqwZrdAYrFgjtmy7yClqQUqOBHqTE029KhPFhrJAqLx/gcoBUrIl
+        yC5sgdWxh1W9BT91FqzotgW4HzfyGpB4vUTwre2e5XIiWCC8oWcObrcX6XeqkJj2kJyIa0wZLjOpYlxK
+        ESOBSM0qE3ylrUI/olggsrpzmrK68V6hRnL6A1xIzEVcQi5i42/jfPwtnLt4E7HElZQijIzPwkr9eNQ0
+        yQLRLBBV8UwJw5YTPww2rAjY6dpkdXbh7OBcsHSupy9T/HScBY6zQHRpvQLfdVYsLpsRlyz5LwvLG1jS
+        WFEoHWOBEywQc//JB8x9M0Mxr0Vt1xQstj3Ujf1CzagW0mEtHg+tYpMGi9+Nq1ahWtpAfvkIC5xkgcjM
+        e/1TOcWvkXG3H9XtSmEKq4Y1kLzToPztGsRvVmHacqG6TYmkjDpczZIhIU06TbFCE3kY+OEUcUYq/4R1
+        cl6nOhmeD6OZJpJspXyCs54lThPHiODD/0JYac2wsqL5IyqaFQRZ2QEKlNQMfSafCL8Yv82f20QS3F2u
+        j+GbMfx8lAj6FwPRb5NeblZb3v46AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnPrint2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>700, 33</value>
+  </data>
+  <data name="btnPrint2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 22</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnPrint2.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnPrint2.Text" xml:space="preserve">
+    <value>In trang 2</value>
+  </data>
+  <data name="&gt;&gt;btnPrint2.Name" xml:space="preserve">
+    <value>btnPrint2</value>
+  </data>
+  <data name="&gt;&gt;btnPrint2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnPrint2.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;btnPrint2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnPrint1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAMdEVYdFRpdGxlAFByaW50O8g2MuoAAAK/SURBVDhPfZPZT1NREMbLFtlEcEl89cU/QCE+GVAk
+        8gBKIhACcQESFEwQigopRYKsxZQ9GCQBIyS+GYkEJGKRGgJSCviGEhFau1AKdAdK28+Za9CUB0/yy9xz
+        7sw3Z+bOFQH4C62A9lfqic7BBXQOzgt0EO0DaoGWvi+T5BPsF+O3EYmCSABenw9erw8exuPDPuHe90Le
+        r2KnI34xfhuRKETeNysEmS072Nh2ETswbTux6/ZA9mKGncIOxQgrgAgiwmW9M0I246aTcMBA1mB2wrWz
+        j/ruKY6IIYKJQEJYgY09yqSOwa9zeeIuFFW+xO6eB/oNO3QmB2GD1mSH3bmHfPFzZBU0Uinq+arW0WSK
+        5aSikLaBxXUjZcksaEAeOTlcbmiNNqwZrdAYrFgjtmy7yClqQUqOBHqTE029KhPFhrJAqLx/gcoBUrIl
+        yC5sgdWxh1W9BT91FqzotgW4HzfyGpB4vUTwre2e5XIiWCC8oWcObrcX6XeqkJj2kJyIa0wZLjOpYlxK
+        ESOBSM0qE3ylrUI/olggsrpzmrK68V6hRnL6A1xIzEVcQi5i42/jfPwtnLt4E7HElZQijIzPwkr9eNQ0
+        yQLRLBBV8UwJw5YTPww2rAjY6dpkdXbh7OBcsHSupy9T/HScBY6zQHRpvQLfdVYsLpsRlyz5LwvLG1jS
+        WFEoHWOBEywQc//JB8x9M0Mxr0Vt1xQstj3Ujf1CzagW0mEtHg+tYpMGi9+Nq1ahWtpAfvkIC5xkgcjM
+        e/1TOcWvkXG3H9XtSmEKq4Y1kLzToPztGsRvVmHacqG6TYmkjDpczZIhIU06TbFCE3kY+OEUcUYq/4R1
+        cl6nOhmeD6OZJpJspXyCs54lThPHiODD/0JYac2wsqL5IyqaFQRZ2QEKlNQMfSafCL8Yv82f20QS3F2u
+        j+GbMfx8lAj6FwPRb5NeblZb3v46AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnPrint1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>618, 33</value>
+  </data>
+  <data name="btnPrint1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 22</value>
+  </data>
+  <data name="btnPrint1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btnPrint1.Text" xml:space="preserve">
+    <value>In trang 1</value>
+  </data>
+  <data name="&gt;&gt;btnPrint1.Name" xml:space="preserve">
+    <value>btnPrint1</value>
+  </data>
+  <data name="&gt;&gt;btnPrint1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnPrint1.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;btnPrint1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnPrint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAMdEVYdFRpdGxlAFByaW50O8g2MuoAAAK/SURBVDhPfZPZT1NREMbLFtlEcEl89cU/QCE+GVAk
+        8gBKIhACcQESFEwQigopRYKsxZQ9GCQBIyS+GYkEJGKRGgJSCviGEhFau1AKdAdK28+Za9CUB0/yy9xz
+        7sw3Z+bOFQH4C62A9lfqic7BBXQOzgt0EO0DaoGWvi+T5BPsF+O3EYmCSABenw9erw8exuPDPuHe90Le
+        r2KnI34xfhuRKETeNysEmS072Nh2ETswbTux6/ZA9mKGncIOxQgrgAgiwmW9M0I246aTcMBA1mB2wrWz
+        j/ruKY6IIYKJQEJYgY09yqSOwa9zeeIuFFW+xO6eB/oNO3QmB2GD1mSH3bmHfPFzZBU0Uinq+arW0WSK
+        5aSikLaBxXUjZcksaEAeOTlcbmiNNqwZrdAYrFgjtmy7yClqQUqOBHqTE029KhPFhrJAqLx/gcoBUrIl
+        yC5sgdWxh1W9BT91FqzotgW4HzfyGpB4vUTwre2e5XIiWCC8oWcObrcX6XeqkJj2kJyIa0wZLjOpYlxK
+        ESOBSM0qE3ylrUI/olggsrpzmrK68V6hRnL6A1xIzEVcQi5i42/jfPwtnLt4E7HElZQijIzPwkr9eNQ0
+        yQLRLBBV8UwJw5YTPww2rAjY6dpkdXbh7OBcsHSupy9T/HScBY6zQHRpvQLfdVYsLpsRlyz5LwvLG1jS
+        WFEoHWOBEywQc//JB8x9M0Mxr0Vt1xQstj3Ujf1CzagW0mEtHg+tYpMGi9+Nq1ahWtpAfvkIC5xkgcjM
+        e/1TOcWvkXG3H9XtSmEKq4Y1kLzToPztGsRvVmHacqG6TYmkjDpczZIhIU06TbFCE3kY+OEUcUYq/4R1
+        cl6nOhmeD6OZJpJspXyCs54lThPHiODD/0JYac2wsqL5IyqaFQRZ2QEKlNQMfSafCL8Yv82f20QS3F2u
+        j+GbMfx8lAj6FwPRb5NeblZb3v46AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>498, 33</value>
+  </data>
+  <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="btnPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnPrint.Text" xml:space="preserve">
+    <value>In Bảng kê thu chi</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
+    <value>btnPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="gcMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <metadata name="viewBangThuTienRowBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>699, 17</value>
+  </metadata>
+  <data name="gcMain.EmbeddedNavigator.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="gcMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 75</value>
+  </data>
+  <data name="gvMain.Appearance.BandPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="gvMain.Appearance.Row.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="gridBand16.Caption" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="colSTT.Caption" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="colSTT.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSTT.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="gridBand16.Name" xml:space="preserve">
+    <value>gridBand16</value>
+  </data>
+  <data name="gridBand16.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gridBand16.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="gridBand17.Caption" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="colHoTen.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <assembly alias="DevExpress.Data.v14.2" name="DevExpress.Data.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="colHoTen.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Count</value>
+  </data>
+  <data name="colHoTen.Summary1" xml:space="preserve">
+    <value>HocSinhId</value>
+  </data>
+  <data name="colHoTen.Summary2" xml:space="preserve">
+    <value>Tổng cộng ({0})</value>
+  </data>
+  <data name="colHoTen.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colHoTen.Width" type="System.Int32, mscorlib">
+    <value>171</value>
+  </data>
+  <data name="gridBand17.Name" xml:space="preserve">
+    <value>gridBand17</value>
+  </data>
+  <data name="gridBand17.Width" type="System.Int32, mscorlib">
+    <value>171</value>
+  </data>
+  <data name="gridBand19.Caption" xml:space="preserve">
+    <value>Tiền ăn &amp; sữa</value>
+  </data>
+  <data name="colTienAnSua.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colTienAnSua.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colTienAnSua.Summary1" xml:space="preserve">
+    <value>TienAnSua</value>
+  </data>
+  <data name="colTienAnSua.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colTienAnSua.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colTienAnSua.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand19.Name" xml:space="preserve">
+    <value>gridBand19</value>
+  </data>
+  <data name="gridBand19.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand6.Caption" xml:space="preserve">
+    <value>Phụ phí</value>
+  </data>
+  <data name="colPhuPhi.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colPhuPhi.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colPhuPhi.Summary1" xml:space="preserve">
+    <value>PhuPhi</value>
+  </data>
+  <data name="colPhuPhi.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colPhuPhi.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colPhuPhi.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand6.Name" xml:space="preserve">
+    <value>gridBand6</value>
+  </data>
+  <data name="gridBand6.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand21.Caption" xml:space="preserve">
+    <value>Bán trú</value>
+  </data>
+  <data name="colBanTru.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colBanTru.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colBanTru.Summary1" xml:space="preserve">
+    <value>BanTru</value>
+  </data>
+  <data name="colBanTru.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colBanTru.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colBanTru.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand21.Name" xml:space="preserve">
+    <value>gridBand21</value>
+  </data>
+  <data name="gridBand21.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand22.Caption" xml:space="preserve">
+    <value>Học phí</value>
+  </data>
+  <data name="colHocPhi.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colHocPhi.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colHocPhi.Summary1" xml:space="preserve">
+    <value>HocPhi</value>
+  </data>
+  <data name="colHocPhi.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colHocPhi.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colHocPhi.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand22.Name" xml:space="preserve">
+    <value>gridBand22</value>
+  </data>
+  <data name="gridBand22.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand23.Caption" xml:space="preserve">
+    <value>Khoản thu chính</value>
+  </data>
+  <data name="colKhoanThuChinh.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colKhoanThuChinh.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colKhoanThuChinh.Summary1" xml:space="preserve">
+    <value>KhoanThuChinh</value>
+  </data>
+  <data name="colKhoanThuChinh.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colKhoanThuChinh.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colKhoanThuChinh.Width" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="gridBand23.Name" xml:space="preserve">
+    <value>gridBand23</value>
+  </data>
+  <data name="gridBand23.Width" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="gridBand20.Caption" xml:space="preserve">
+    <value>Dư tháng trước</value>
+  </data>
+  <data name="gridBand24.Caption" xml:space="preserve">
+    <value>SX</value>
+  </data>
+  <data name="colSXThangTruoc.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="colSXThangTruoc.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colSXThangTruoc.Summary1" xml:space="preserve">
+    <value>SXThangTruoc</value>
+  </data>
+  <data name="colSXThangTruoc.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colSXThangTruoc.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSXThangTruoc.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand24.Name" xml:space="preserve">
+    <value>gridBand24</value>
+  </data>
+  <data name="gridBand24.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand25.Caption" xml:space="preserve">
+    <value>Số tiền</value>
+  </data>
+  <data name="colSoTienSXThangTruoc.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colSoTienSXThangTruoc.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colSoTienSXThangTruoc.Summary1" xml:space="preserve">
+    <value>SoTienSXThangTruoc</value>
+  </data>
+  <data name="colSoTienSXThangTruoc.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colSoTienSXThangTruoc.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSoTienSXThangTruoc.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand25.Name" xml:space="preserve">
+    <value>gridBand25</value>
+  </data>
+  <data name="gridBand25.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand20.Name" xml:space="preserve">
+    <value>gridBand20</value>
+  </data>
+  <data name="gridBand20.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="gridBand27.Caption" xml:space="preserve">
+    <value>Ăn sáng</value>
+  </data>
+  <data name="gridBand1.Caption" xml:space="preserve">
+    <value>Tháng trước</value>
+  </data>
+  <data name="gridBand26.Caption" xml:space="preserve">
+    <value>SX</value>
+  </data>
+  <data name="colAnSangThangTruoc.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colAnSangThangTruoc.Summary1" xml:space="preserve">
+    <value>AnSangThangTruoc</value>
+  </data>
+  <data name="colAnSangThangTruoc.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colAnSangThangTruoc.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colAnSangThangTruoc.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand26.Name" xml:space="preserve">
+    <value>gridBand26</value>
+  </data>
+  <data name="gridBand26.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand28.Caption" xml:space="preserve">
+    <value>Số tiền</value>
+  </data>
+  <data name="colSoTienAnSangThangTruoc.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colSoTienAnSangThangTruoc.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colSoTienAnSangThangTruoc.Summary1" xml:space="preserve">
+    <value>SoTienAnSangThangTruoc</value>
+  </data>
+  <data name="colSoTienAnSangThangTruoc.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colSoTienAnSangThangTruoc.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSoTienAnSangThangTruoc.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand28.Name" xml:space="preserve">
+    <value>gridBand28</value>
+  </data>
+  <data name="gridBand28.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand1.Name" xml:space="preserve">
+    <value>gridBand1</value>
+  </data>
+  <data name="gridBand1.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="gridBand30.Caption" xml:space="preserve">
+    <value>Tháng này</value>
+  </data>
+  <data name="colSoTienAnSangThangNay.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colSoTienAnSangThangNay.Summary1" xml:space="preserve">
+    <value>SoTienAnSangThangNay</value>
+  </data>
+  <data name="colSoTienAnSangThangNay.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colSoTienAnSangThangNay.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSoTienAnSangThangNay.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand30.Name" xml:space="preserve">
+    <value>gridBand30</value>
+  </data>
+  <data name="gridBand30.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand29.Caption" xml:space="preserve">
+    <value>Còn lại</value>
+  </data>
+  <data name="colSoTienAnSangConLai.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colSoTienAnSangConLai.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colSoTienAnSangConLai.Summary1" xml:space="preserve">
+    <value>SoTienAnSangConLai</value>
+  </data>
+  <data name="colSoTienAnSangConLai.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colSoTienAnSangConLai.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSoTienAnSangConLai.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand29.Name" xml:space="preserve">
+    <value>gridBand29</value>
+  </data>
+  <data name="gridBand29.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand27.Name" xml:space="preserve">
+    <value>gridBand27</value>
+  </data>
+  <data name="gridBand27.Width" type="System.Int32, mscorlib">
+    <value>360</value>
+  </data>
+  <data name="gridBand2.Caption" xml:space="preserve">
+    <value>Ăn tối</value>
+  </data>
+  <data name="gridBand3.Caption" xml:space="preserve">
+    <value>Dư tháng trước</value>
+  </data>
+  <data name="colSoTienAnToiThangTruoc.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colSoTienAnToiThangTruoc.Summary1" xml:space="preserve">
+    <value>SoTienAnToiThangTruoc</value>
+  </data>
+  <data name="colSoTienAnToiThangTruoc.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colSoTienAnToiThangTruoc.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSoTienAnToiThangTruoc.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand3.Name" xml:space="preserve">
+    <value>gridBand3</value>
+  </data>
+  <data name="gridBand3.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand4.Caption" xml:space="preserve">
+    <value>Tháng này</value>
+  </data>
+  <data name="colSoTienAnToiThangNay.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colSoTienAnToiThangNay.Summary1" xml:space="preserve">
+    <value>SoTienAnToiThangNay</value>
+  </data>
+  <data name="colSoTienAnToiThangNay.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colSoTienAnToiThangNay.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSoTienAnToiThangNay.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand4.Name" xml:space="preserve">
+    <value>gridBand4</value>
+  </data>
+  <data name="gridBand4.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand5.Caption" xml:space="preserve">
+    <value>Còn lại</value>
+  </data>
+  <data name="colSoTienAnToiConLai.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colSoTienAnToiConLai.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colSoTienAnToiConLai.Summary1" xml:space="preserve">
+    <value>SoTienAnToiConLai</value>
+  </data>
+  <data name="colSoTienAnToiConLai.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colSoTienAnToiConLai.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSoTienAnToiConLai.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand5.Name" xml:space="preserve">
+    <value>gridBand5</value>
+  </data>
+  <data name="gridBand5.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand2.Name" xml:space="preserve">
+    <value>gridBand2</value>
+  </data>
+  <data name="gridBand2.Width" type="System.Int32, mscorlib">
+    <value>270</value>
+  </data>
+  <data name="gridBand7.Caption" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="colSTT2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSTT2.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="gridBand7.Name" xml:space="preserve">
+    <value>gridBand7</value>
+  </data>
+  <data name="gridBand7.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="gridBand8.Caption" xml:space="preserve">
+    <value>Năng khiếu</value>
+  </data>
+  <data name="colSoTienNangKhieu.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colSoTienNangKhieu.Summary1" xml:space="preserve">
+    <value>SoTienNangKhieu</value>
+  </data>
+  <data name="colSoTienNangKhieu.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colSoTienNangKhieu.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSoTienNangKhieu.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand8.Name" xml:space="preserve">
+    <value>gridBand8</value>
+  </data>
+  <data name="gridBand8.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand33.Caption" xml:space="preserve">
+    <value>Thu đồ dùng</value>
+  </data>
+  <data name="colThuDoDung.Caption" xml:space="preserve">
+    <value>thudodung</value>
+  </data>
+  <data name="colThuDoDung.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colThuDoDung.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand33.Name" xml:space="preserve">
+    <value>gridBand33</value>
+  </data>
+  <data name="gridBand33.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand32.Caption" xml:space="preserve">
+    <value>Điều hòa</value>
+  </data>
+  <data name="colDieuHoa.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colDieuHoa.Summary1" xml:space="preserve">
+    <value>SoTienDieuHoa</value>
+  </data>
+  <data name="colDieuHoa.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colDieuHoa.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colDieuHoa.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand32.Name" xml:space="preserve">
+    <value>gridBand32</value>
+  </data>
+  <data name="gridBand32.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand9.Caption" xml:space="preserve">
+    <value>Truy thu</value>
+  </data>
+  <data name="colSoTienTruyThu.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colSoTienTruyThu.Summary1" xml:space="preserve">
+    <value>SoTienTruyThu</value>
+  </data>
+  <data name="colSoTienTruyThu.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colSoTienTruyThu.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSoTienTruyThu.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand9.Name" xml:space="preserve">
+    <value>gridBand9</value>
+  </data>
+  <data name="gridBand9.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand10.Caption" xml:space="preserve">
+    <value>Thành tiền</value>
+  </data>
+  <data name="colThanhTien.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colThanhTien.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colThanhTien.Summary1" xml:space="preserve">
+    <value>ThanhTien</value>
+  </data>
+  <data name="colThanhTien.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colThanhTien.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colThanhTien.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="gridBand10.Name" xml:space="preserve">
+    <value>gridBand10</value>
+  </data>
+  <data name="gridBand10.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="gridBand11.Caption" xml:space="preserve">
+    <value>Nộp lần 1</value>
+  </data>
+  <data name="gridBand12.Caption" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="colNgayNopLan1.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colNgayNopLan1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colNgayNopLan1.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand12.Name" xml:space="preserve">
+    <value>gridBand12</value>
+  </data>
+  <data name="gridBand12.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand13.Caption" xml:space="preserve">
+    <value>Số tiền</value>
+  </data>
+  <data name="colSoTienNopLan1.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colSoTienNopLan1.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colSoTienNopLan1.Summary1" xml:space="preserve">
+    <value>SoTienNopLan1</value>
+  </data>
+  <data name="colSoTienNopLan1.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colSoTienNopLan1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSoTienNopLan1.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand13.Name" xml:space="preserve">
+    <value>gridBand13</value>
+  </data>
+  <data name="gridBand13.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand11.Name" xml:space="preserve">
+    <value>gridBand11</value>
+  </data>
+  <data name="gridBand11.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="gridBand14.Caption" xml:space="preserve">
+    <value>Nộp lần 2</value>
+  </data>
+  <data name="gridBand15.Caption" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="colNgayNopLan2.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colNgayNopLan2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colNgayNopLan2.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand15.Name" xml:space="preserve">
+    <value>gridBand15</value>
+  </data>
+  <data name="gridBand15.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand18.Caption" xml:space="preserve">
+    <value>Số tiền</value>
+  </data>
+  <data name="colSoTienNopLan2.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="colSoTienNopLan2.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colSoTienNopLan2.Summary1" xml:space="preserve">
+    <value>SoTienNopLan2</value>
+  </data>
+  <data name="colSoTienNopLan2.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colSoTienNopLan2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colSoTienNopLan2.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand18.Name" xml:space="preserve">
+    <value>gridBand18</value>
+  </data>
+  <data name="gridBand18.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="gridBand14.Name" xml:space="preserve">
+    <value>gridBand14</value>
+  </data>
+  <data name="gridBand14.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="gridBand31.Caption" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="colGhiChu.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colGhiChu.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="gridBand31.Name" xml:space="preserve">
+    <value>gridBand31</value>
+  </data>
+  <data name="gridBand31.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="repositoryItemTextEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gcMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>788, 447</value>
+  </data>
+  <data name="gcMain.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gcMain.Name" xml:space="preserve">
+    <value>gcMain</value>
+  </data>
+  <data name="&gt;&gt;gcMain.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gcMain.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;gcMain.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="btnReset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -147,6 +1020,30 @@
         8z4gQYttSjW2xlXAN1Y17Rl9Rb9sjdfsyUkOfDIXW9gQB8oKijPFxQp7dqT8+u8XxvYH/h8gPwFeirJN
         2P6HzQAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="btnReset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>436, 33</value>
+  </data>
+  <data name="btnReset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="btnReset.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnReset.Text" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="&gt;&gt;btnReset.Name" xml:space="preserve">
+    <value>btnReset</value>
+  </data>
+  <data name="&gt;&gt;btnReset.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnReset.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;btnReset.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="btnTimKiem.Appearance.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -222,6 +1119,199 @@
         RO9E2+l7vpngQ/AmbCI8QfD4f33HmIT6BwJEEY+T4HTzAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnTimKiem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>361, 33</value>
+  </data>
+  <data name="btnTimKiem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 22</value>
+  </data>
+  <data name="btnTimKiem.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btnTimKiem.Text" xml:space="preserve">
+    <value>Tìm Kiếm</value>
+  </data>
+  <data name="&gt;&gt;btnTimKiem.Name" xml:space="preserve">
+    <value>btnTimKiem</value>
+  </data>
+  <data name="&gt;&gt;btnTimKiem.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnTimKiem.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;btnTimKiem.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cmbThang.EditValue" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbThang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 33</value>
+  </data>
+  <data name="cmbThang.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v14.2" name="DevExpress.Utils.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="cmbThang.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbThang.Properties.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbThang.Properties.Items1" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cmbThang.Properties.Items2" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cmbThang.Properties.Items3" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cmbThang.Properties.Items4" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cmbThang.Properties.Items5" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cmbThang.Properties.Items6" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cmbThang.Properties.Items7" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cmbThang.Properties.Items8" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cmbThang.Properties.Items9" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="cmbThang.Properties.Items10" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="cmbThang.Properties.Items11" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="cmbThang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 26</value>
+  </data>
+  <data name="cmbThang.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cmbThang.Name" xml:space="preserve">
+    <value>cmbThang</value>
+  </data>
+  <data name="&gt;&gt;cmbThang.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbThang.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;cmbThang.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="cmbNam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 33</value>
+  </data>
+  <data name="cmbNam.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="cmbNam.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbNam.Properties.Columns" xml:space="preserve">
+    <value>FromYear</value>
+  </data>
+  <data name="cmbNam.Properties.Columns1" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="cmbNam.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="cmbNam.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v14.2">
+    <value>None</value>
+  </data>
+  <data name="cmbNam.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbNam.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbNam.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v14.2">
+    <value>Near</value>
+  </data>
+  <data name="cmbNam.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbNam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 26</value>
+  </data>
+  <data name="cmbNam.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cmbNam.Name" xml:space="preserve">
+    <value>cmbNam</value>
+  </data>
+  <data name="&gt;&gt;cmbNam.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbNam.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;cmbNam.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lcMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lcMain.OptionsPrint.AppearanceGroupCaption.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>LightGray</value>
+  </data>
+  <data name="lcMain.OptionsPrint.AppearanceGroupCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.25pt</value>
+  </data>
+  <data name="Root.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="layoutControlItem2.Text" xml:space="preserve">
+    <value>Tháng</value>
+  </data>
+  <data name="layoutControlItem1.Text" xml:space="preserve">
+    <value>Năm</value>
+  </data>
+  <data name="layoutControlGroup1.Text" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="Root.Text" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="lcMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>792, 524</value>
+  </data>
+  <data name="lcMain.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lcMain.Text" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="&gt;&gt;lcMain.Name" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;lcMain.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lcMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lcMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnXuatExcel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnXuatExcel.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
   <data name="btnXuatExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -238,6 +1328,36 @@
         DfqvP88Fb21jbGobfA1MZeC/maHnLfhv0P2kyejkFi5fe7ZLmlMnkf/KZ4jzxAXiosVwH5cs+H6IcACQ
         /gI4G2s/4fW3BgAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="btnXuatExcel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 10</value>
+  </data>
+  <data name="btnXuatExcel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 25</value>
+  </data>
+  <data name="btnXuatExcel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnXuatExcel.Text" xml:space="preserve">
+    <value>Xuất Excel</value>
+  </data>
+  <data name="&gt;&gt;btnXuatExcel.Name" xml:space="preserve">
+    <value>btnXuatExcel</value>
+  </data>
+  <data name="&gt;&gt;btnXuatExcel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnXuatExcel.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;btnXuatExcel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnLuu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnLuu.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="btnLuu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -261,6 +1381,36 @@
         RO9E2+l7vpngQ/AmbCI8QfD4f33HmIT6BwJEEY+T4HTzAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnLuu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>557, 10</value>
+  </data>
+  <data name="btnLuu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 25</value>
+  </data>
+  <data name="btnLuu.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnLuu.Text" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="&gt;&gt;btnLuu.Name" xml:space="preserve">
+    <value>btnLuu</value>
+  </data>
+  <data name="&gt;&gt;btnLuu.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnLuu.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;btnLuu.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnHuyBo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnHuyBo.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
   <data name="btnHuyBo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -270,6 +1420,36 @@
         DJSxgQRXdKGZyqGBBbRk7A/IRa4hgVxkH36uatCCfRjK5cyhJe8IZ4QWXKzwmTq0ILYGspTQxhJa8GEN
         hnQ49IM3ayFkLR/RROpbyCILZ8T4gvzN80hy8xP9OxfdAZqNET3XMOzVAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="btnHuyBo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>450, 10</value>
+  </data>
+  <data name="btnHuyBo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 25</value>
+  </data>
+  <data name="btnHuyBo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnHuyBo.Text" xml:space="preserve">
+    <value>Hủy bỏ</value>
+  </data>
+  <data name="&gt;&gt;btnHuyBo.Name" xml:space="preserve">
+    <value>btnHuyBo</value>
+  </data>
+  <data name="&gt;&gt;btnHuyBo.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnHuyBo.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;btnHuyBo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnXoa.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnXoa.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="btnXoa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -288,31 +1468,634 @@
         bC8nnR9ARYN0vjKGJLRfqIUeGekF0ocV9NLl30HYT5jov8COKRjfAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnXoa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>343, 10</value>
+  </data>
+  <data name="btnXoa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 25</value>
+  </data>
+  <data name="btnXoa.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnXoa.Text" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="&gt;&gt;btnXoa.Name" xml:space="preserve">
+    <value>btnXoa</value>
+  </data>
+  <data name="&gt;&gt;btnXoa.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnXoa.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;btnXoa.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 530</value>
+  </data>
+  <data name="panelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>792, 43</value>
+  </data>
+  <data name="panelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Name" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="viewBangThuTienTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>182, 17</value>
   </metadata>
   <metadata name="hocSinhTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>223, 17</value>
+    <value>388, 17</value>
   </metadata>
   <metadata name="lopKhoiTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>380, 17</value>
+    <value>545, 17</value>
   </metadata>
   <metadata name="bangThuTienGenHistoryTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1253, 17</value>
   </metadata>
   <metadata name="bangThuTienTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 54</value>
+    <value>634, 54</value>
   </metadata>
   <metadata name="bangThuTienKhoanThuTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>200, 44</value>
+    <value>17, 54</value>
   </metadata>
   <metadata name="khoanThuTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>422, 42</value>
+    <value>251, 54</value>
   </metadata>
   <metadata name="khoanThuHangNamTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>573, 44</value>
+    <value>418, 54</value>
+  </metadata>
+  <metadata name="hocSinhLopTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>817, 54</value>
+  </metadata>
+  <metadata name="viewHocTapTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>992, 54</value>
+  </metadata>
+  <metadata name="soNgayNghiThangByHocSinhIdTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1170, 54</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>147</value>
+    <value>89</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 19</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>792, 573</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Sổ thu tiền Học sinh</value>
+  </data>
+  <data name="&gt;&gt;namHocBindingSource.Name" xml:space="preserve">
+    <value>namHocBindingSource</value>
+  </data>
+  <data name="&gt;&gt;namHocBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;khoiRowBindingSource.Name" xml:space="preserve">
+    <value>khoiRowBindingSource</value>
+  </data>
+  <data name="&gt;&gt;khoiRowBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lopRowBindingSource.Name" xml:space="preserve">
+    <value>lopRowBindingSource</value>
+  </data>
+  <data name="&gt;&gt;lopRowBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;viewBangThuTienRowBindingSource.Name" xml:space="preserve">
+    <value>viewBangThuTienRowBindingSource</value>
+  </data>
+  <data name="&gt;&gt;viewBangThuTienRowBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gvMain.Name" xml:space="preserve">
+    <value>gvMain</value>
+  </data>
+  <data name="&gt;&gt;gvMain.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridView, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand16.Name" xml:space="preserve">
+    <value>gridBand16</value>
+  </data>
+  <data name="&gt;&gt;gridBand16.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSTT.Name" xml:space="preserve">
+    <value>colSTT</value>
+  </data>
+  <data name="&gt;&gt;colSTT.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand17.Name" xml:space="preserve">
+    <value>gridBand17</value>
+  </data>
+  <data name="&gt;&gt;gridBand17.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colHoTen.Name" xml:space="preserve">
+    <value>colHoTen</value>
+  </data>
+  <data name="&gt;&gt;colHoTen.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand19.Name" xml:space="preserve">
+    <value>gridBand19</value>
+  </data>
+  <data name="&gt;&gt;gridBand19.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colTienAnSua.Name" xml:space="preserve">
+    <value>colTienAnSua</value>
+  </data>
+  <data name="&gt;&gt;colTienAnSua.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand6.Name" xml:space="preserve">
+    <value>gridBand6</value>
+  </data>
+  <data name="&gt;&gt;gridBand6.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colPhuPhi.Name" xml:space="preserve">
+    <value>colPhuPhi</value>
+  </data>
+  <data name="&gt;&gt;colPhuPhi.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand21.Name" xml:space="preserve">
+    <value>gridBand21</value>
+  </data>
+  <data name="&gt;&gt;gridBand21.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colBanTru.Name" xml:space="preserve">
+    <value>colBanTru</value>
+  </data>
+  <data name="&gt;&gt;colBanTru.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand22.Name" xml:space="preserve">
+    <value>gridBand22</value>
+  </data>
+  <data name="&gt;&gt;gridBand22.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colHocPhi.Name" xml:space="preserve">
+    <value>colHocPhi</value>
+  </data>
+  <data name="&gt;&gt;colHocPhi.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand23.Name" xml:space="preserve">
+    <value>gridBand23</value>
+  </data>
+  <data name="&gt;&gt;gridBand23.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colKhoanThuChinh.Name" xml:space="preserve">
+    <value>colKhoanThuChinh</value>
+  </data>
+  <data name="&gt;&gt;colKhoanThuChinh.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand20.Name" xml:space="preserve">
+    <value>gridBand20</value>
+  </data>
+  <data name="&gt;&gt;gridBand20.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand24.Name" xml:space="preserve">
+    <value>gridBand24</value>
+  </data>
+  <data name="&gt;&gt;gridBand24.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSXThangTruoc.Name" xml:space="preserve">
+    <value>colSXThangTruoc</value>
+  </data>
+  <data name="&gt;&gt;colSXThangTruoc.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand25.Name" xml:space="preserve">
+    <value>gridBand25</value>
+  </data>
+  <data name="&gt;&gt;gridBand25.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSoTienSXThangTruoc.Name" xml:space="preserve">
+    <value>colSoTienSXThangTruoc</value>
+  </data>
+  <data name="&gt;&gt;colSoTienSXThangTruoc.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand27.Name" xml:space="preserve">
+    <value>gridBand27</value>
+  </data>
+  <data name="&gt;&gt;gridBand27.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand1.Name" xml:space="preserve">
+    <value>gridBand1</value>
+  </data>
+  <data name="&gt;&gt;gridBand1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand26.Name" xml:space="preserve">
+    <value>gridBand26</value>
+  </data>
+  <data name="&gt;&gt;gridBand26.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colAnSangThangTruoc.Name" xml:space="preserve">
+    <value>colAnSangThangTruoc</value>
+  </data>
+  <data name="&gt;&gt;colAnSangThangTruoc.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand28.Name" xml:space="preserve">
+    <value>gridBand28</value>
+  </data>
+  <data name="&gt;&gt;gridBand28.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSoTienAnSangThangTruoc.Name" xml:space="preserve">
+    <value>colSoTienAnSangThangTruoc</value>
+  </data>
+  <data name="&gt;&gt;colSoTienAnSangThangTruoc.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand30.Name" xml:space="preserve">
+    <value>gridBand30</value>
+  </data>
+  <data name="&gt;&gt;gridBand30.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSoTienAnSangThangNay.Name" xml:space="preserve">
+    <value>colSoTienAnSangThangNay</value>
+  </data>
+  <data name="&gt;&gt;colSoTienAnSangThangNay.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand29.Name" xml:space="preserve">
+    <value>gridBand29</value>
+  </data>
+  <data name="&gt;&gt;gridBand29.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSoTienAnSangConLai.Name" xml:space="preserve">
+    <value>colSoTienAnSangConLai</value>
+  </data>
+  <data name="&gt;&gt;colSoTienAnSangConLai.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand2.Name" xml:space="preserve">
+    <value>gridBand2</value>
+  </data>
+  <data name="&gt;&gt;gridBand2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand3.Name" xml:space="preserve">
+    <value>gridBand3</value>
+  </data>
+  <data name="&gt;&gt;gridBand3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSoTienAnToiThangTruoc.Name" xml:space="preserve">
+    <value>colSoTienAnToiThangTruoc</value>
+  </data>
+  <data name="&gt;&gt;colSoTienAnToiThangTruoc.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand4.Name" xml:space="preserve">
+    <value>gridBand4</value>
+  </data>
+  <data name="&gt;&gt;gridBand4.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSoTienAnToiThangNay.Name" xml:space="preserve">
+    <value>colSoTienAnToiThangNay</value>
+  </data>
+  <data name="&gt;&gt;colSoTienAnToiThangNay.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand5.Name" xml:space="preserve">
+    <value>gridBand5</value>
+  </data>
+  <data name="&gt;&gt;gridBand5.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSoTienAnToiConLai.Name" xml:space="preserve">
+    <value>colSoTienAnToiConLai</value>
+  </data>
+  <data name="&gt;&gt;colSoTienAnToiConLai.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand7.Name" xml:space="preserve">
+    <value>gridBand7</value>
+  </data>
+  <data name="&gt;&gt;gridBand7.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSTT2.Name" xml:space="preserve">
+    <value>colSTT2</value>
+  </data>
+  <data name="&gt;&gt;colSTT2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand8.Name" xml:space="preserve">
+    <value>gridBand8</value>
+  </data>
+  <data name="&gt;&gt;gridBand8.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSoTienNangKhieu.Name" xml:space="preserve">
+    <value>colSoTienNangKhieu</value>
+  </data>
+  <data name="&gt;&gt;colSoTienNangKhieu.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand33.Name" xml:space="preserve">
+    <value>gridBand33</value>
+  </data>
+  <data name="&gt;&gt;gridBand33.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colThuDoDung.Name" xml:space="preserve">
+    <value>colThuDoDung</value>
+  </data>
+  <data name="&gt;&gt;colThuDoDung.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand32.Name" xml:space="preserve">
+    <value>gridBand32</value>
+  </data>
+  <data name="&gt;&gt;gridBand32.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colDieuHoa.Name" xml:space="preserve">
+    <value>colDieuHoa</value>
+  </data>
+  <data name="&gt;&gt;colDieuHoa.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand9.Name" xml:space="preserve">
+    <value>gridBand9</value>
+  </data>
+  <data name="&gt;&gt;gridBand9.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSoTienTruyThu.Name" xml:space="preserve">
+    <value>colSoTienTruyThu</value>
+  </data>
+  <data name="&gt;&gt;colSoTienTruyThu.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand10.Name" xml:space="preserve">
+    <value>gridBand10</value>
+  </data>
+  <data name="&gt;&gt;gridBand10.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colThanhTien.Name" xml:space="preserve">
+    <value>colThanhTien</value>
+  </data>
+  <data name="&gt;&gt;colThanhTien.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand11.Name" xml:space="preserve">
+    <value>gridBand11</value>
+  </data>
+  <data name="&gt;&gt;gridBand11.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand12.Name" xml:space="preserve">
+    <value>gridBand12</value>
+  </data>
+  <data name="&gt;&gt;gridBand12.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colNgayNopLan1.Name" xml:space="preserve">
+    <value>colNgayNopLan1</value>
+  </data>
+  <data name="&gt;&gt;colNgayNopLan1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand13.Name" xml:space="preserve">
+    <value>gridBand13</value>
+  </data>
+  <data name="&gt;&gt;gridBand13.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSoTienNopLan1.Name" xml:space="preserve">
+    <value>colSoTienNopLan1</value>
+  </data>
+  <data name="&gt;&gt;colSoTienNopLan1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand14.Name" xml:space="preserve">
+    <value>gridBand14</value>
+  </data>
+  <data name="&gt;&gt;gridBand14.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand15.Name" xml:space="preserve">
+    <value>gridBand15</value>
+  </data>
+  <data name="&gt;&gt;gridBand15.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colNgayNopLan2.Name" xml:space="preserve">
+    <value>colNgayNopLan2</value>
+  </data>
+  <data name="&gt;&gt;colNgayNopLan2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand18.Name" xml:space="preserve">
+    <value>gridBand18</value>
+  </data>
+  <data name="&gt;&gt;gridBand18.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colSoTienNopLan2.Name" xml:space="preserve">
+    <value>colSoTienNopLan2</value>
+  </data>
+  <data name="&gt;&gt;colSoTienNopLan2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand31.Name" xml:space="preserve">
+    <value>gridBand31</value>
+  </data>
+  <data name="&gt;&gt;gridBand31.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colGhiChu.Name" xml:space="preserve">
+    <value>colGhiChu</value>
+  </data>
+  <data name="&gt;&gt;colGhiChu.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit1.Name" xml:space="preserve">
+    <value>repositoryItemTextEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Root.Name" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="&gt;&gt;Root.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Name" xml:space="preserve">
+    <value>layoutControlItem11</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Name" xml:space="preserve">
+    <value>layoutControlItem1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
+    <value>layoutControlItem5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Name" xml:space="preserve">
+    <value>layoutControlItem4</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;viewBangThuTienTableAdapter.Name" xml:space="preserve">
+    <value>viewBangThuTienTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;viewBangThuTienTableAdapter.Type" xml:space="preserve">
+    <value>QLMamNon.Dao.QLMamNonDsTableAdapters.ViewBangThuTienTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;hocSinhTableAdapter.Name" xml:space="preserve">
+    <value>hocSinhTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;hocSinhTableAdapter.Type" xml:space="preserve">
+    <value>QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lopKhoiTableAdapter.Name" xml:space="preserve">
+    <value>lopKhoiTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;lopKhoiTableAdapter.Type" xml:space="preserve">
+    <value>QLMamNon.Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bangThuTienGenHistoryTableAdapter.Name" xml:space="preserve">
+    <value>bangThuTienGenHistoryTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;bangThuTienGenHistoryTableAdapter.Type" xml:space="preserve">
+    <value>QLMamNon.Dao.QLMamNonDsTableAdapters.BangThuTienGenHistoryTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bangThuTienTableAdapter.Name" xml:space="preserve">
+    <value>bangThuTienTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;bangThuTienTableAdapter.Type" xml:space="preserve">
+    <value>QLMamNon.Dao.QLMamNonDsTableAdapters.BangThuTienTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bangThuTienKhoanThuTableAdapter.Name" xml:space="preserve">
+    <value>bangThuTienKhoanThuTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;bangThuTienKhoanThuTableAdapter.Type" xml:space="preserve">
+    <value>QLMamNon.Dao.QLMamNonDsTableAdapters.BangThuTienKhoanThuTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;khoanThuTableAdapter.Name" xml:space="preserve">
+    <value>khoanThuTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;khoanThuTableAdapter.Type" xml:space="preserve">
+    <value>QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;khoanThuHangNamTableAdapter.Name" xml:space="preserve">
+    <value>khoanThuHangNamTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;khoanThuHangNamTableAdapter.Type" xml:space="preserve">
+    <value>QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuHangNamTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;hocSinhLopTableAdapter.Name" xml:space="preserve">
+    <value>hocSinhLopTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;hocSinhLopTableAdapter.Type" xml:space="preserve">
+    <value>QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;viewHocTapTableAdapter.Name" xml:space="preserve">
+    <value>viewHocTapTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;viewHocTapTableAdapter.Type" xml:space="preserve">
+    <value>QLMamNon.Dao.QLMamNonDsTableAdapters.ViewHocTapTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;soNgayNghiThangByHocSinhIdTableAdapter.Name" xml:space="preserve">
+    <value>soNgayNghiThangByHocSinhIdTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;soNgayNghiThangByHocSinhIdTableAdapter.Type" xml:space="preserve">
+    <value>QLMamNon.Dao.QLMamNonDsTableAdapters.UnknownColumnViewTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmSoThuTien</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>QLMamNon.Forms.CRUDForm, QLMamNon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
 </root>

@@ -17,11 +17,17 @@ namespace QLMamNon.Forms.Resource
         public const string FormDanhMucQuanHuyen = "FrmQuanHuyen";
         public const string FormDanhMucPhuongXa = "FrmPhuongXa";
         public const string FormThongTinHocSinh = "FrmThongTinHocSinh";
+        public const string FormThongTinHocTap = "FrmThongTinHocTap";
         public const string FormXepLop = "FrmXepLop";
         public const string FormPhieuChi = "FrmPhieuChi";
         public const string FormTaoPhieuChi = "FrmTaoPhieuChi";
         public const string FormPhieuThu = "FrmPhieuThu";
         public const string FormTaoPhieuThu = "FrmTaoPhieuThu";
         public const string FormSoThuTien = "FrmSoThuTien";
+        public const string FormBaoCaoHoatDongTaiChinh = "FrmBaoCaoHoatDongTaiChinh";
+        public const string FormBaoCaoChiTietHoatDongTaiChinh = "FrmBaoCaoChiTietHoatDongTaiChinh";
+        public const string FormTaiSan = "FrmTaiSan";
+        public const string FormPhanBoTaiSan = "FrmPhanBoTaiSan";
+        public const string FormSoTheoDoiTaiSan = "FrmSoTheoDoiTaiSan";
     }
 }

@@ -67,12 +67,13 @@
             // 
             // gcMain
             // 
+            this.gcMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.gcMain.DataSource = this.phieuChiRowBindingSource;
-            this.gcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcMain.Location = new System.Drawing.Point(0, 0);
             this.gcMain.MainView = this.gvMain;
             this.gcMain.Name = "gcMain";
-            this.gcMain.Size = new System.Drawing.Size(792, 573);
+            this.gcMain.Size = new System.Drawing.Size(792, 524);
             this.gcMain.TabIndex = 0;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});

@@ -60,16 +60,36 @@
     <Reference Include="Accessibility">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="DevExpress.CodeParser.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v14.2.UI, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.2.UI, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v14.2.Extensions, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v14.2.Wizard, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v14.2.Extensions, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.6.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -77,11 +97,16 @@
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
     <Reference Include="UIAutomationClient" />
@@ -94,6 +119,8 @@
     <Compile Include="Components\ActivityTracker\ButtonClickObserver.cs" />
     <Compile Include="Components\ActivityTracker\DEActivityTracker.cs" />
     <Compile Include="Components\ActivityTracker\LoggingObserver.cs" />
+    <Compile Include="Components\Data.Static\BangTinhPhi.cs" />
+    <Compile Include="Components\Data.Static\PhanLoaiChi.cs" />
     <Compile Include="Components\Data.Static\KhoanThuData.cs" />
     <Compile Include="Components\Data.Static\NamHocData.cs" />
     <Compile Include="Components\Data.Static\LopData.cs" />
@@ -107,6 +134,12 @@
     <Compile Include="Components\ModuleMediator\Channel\IChannelManager.cs" />
     <Compile Include="Constant\CommonConstant.cs" />
     <Compile Include="Constant\BangThuTienConstant.cs" />
+    <Compile Include="Dao\QLMamNonDs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLMamNonDs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Form\PhieuChiBCHDTC.cs" />
     <Compile Include="Entity\Form\NamHoc.cs" />
     <Compile Include="Facade\StaticDataFacade.cs" />
     <Compile Include="Facade\FormMainFacade.cs" />
@@ -167,17 +200,17 @@
     <Compile Include="Forms\DanhMuc\FrmTruongHoc.Designer.cs">
       <DependentUpon>FrmTruongHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\HocSinh\FrmThongTinCanDo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\HocSinh\FrmThongTinCanDo.Designer.cs">
-      <DependentUpon>FrmThongTinCanDo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\HocSinh\FrmThongTinHocTap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\HocSinh\FrmThongTinHocTap.Designer.cs">
       <DependentUpon>FrmThongTinHocTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HocSinh\FrmThongTinCanDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HocSinh\FrmThongTinCanDo.Designer.cs">
+      <DependentUpon>FrmThongTinCanDo.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\HocSinh\FrmXepLop.cs">
       <SubType>Form</SubType>
@@ -188,6 +221,30 @@
     <Compile Include="Forms\Resource\AppForms.cs" />
     <Compile Include="Forms\Resource\DanhMuc.cs" />
     <Compile Include="Forms\Resource\StatusCaptions.cs" />
+    <Compile Include="Forms\TaiSan\FrmTaiSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TaiSan\FrmTaiSan.Designer.cs">
+      <DependentUpon>FrmTaiSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TaiSan\FrmPhanBoTaiSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TaiSan\FrmPhanBoTaiSan.Designer.cs">
+      <DependentUpon>FrmPhanBoTaiSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmBaoCaoChiTietHoatDongTaiChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmBaoCaoChiTietHoatDongTaiChinh.Designer.cs">
+      <DependentUpon>FrmBaoCaoChiTietHoatDongTaiChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmBaoCaoHoatDongTaiChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmBaoCaoHoatDongTaiChinh.Designer.cs">
+      <DependentUpon>FrmBaoCaoHoatDongTaiChinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ThuChi\FrmPhieuChi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +274,59 @@
     </Compile>
     <Compile Include="Forms\ThuChi\FrmSoThuTien.Designer.cs">
       <DependentUpon>FrmSoThuTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptSoThuTienTrang2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptSoThuTienTrang2.designer.cs">
+      <DependentUpon>RptSoThuTienTrang2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptSoThuTienTrang1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptSoThuTienTrang1.designer.cs">
+      <DependentUpon>RptSoThuTienTrang1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptBaoCaoChiTietHoatDongTaiChinh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptBaoCaoChiTietHoatDongTaiChinh.designer.cs">
+      <DependentUpon>RptBaoCaoChiTietHoatDongTaiChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptBaoCaoHoatDongTaiChinh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptBaoCaoHoatDongTaiChinh.designer.cs">
+      <DependentUpon>RptBaoCaoHoatDongTaiChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptThongTinHocSinh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptThongTinHocSinh.designer.cs">
+      <DependentUpon>RptThongTinHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptBangKeTongHopThuTienHS.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptBangKeTongHopThuTienHS.designer.cs">
+      <DependentUpon>RptBangKeTongHopThuTienHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormBanGiaoTaiSan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormBanGiaoTaiSan.Designer.cs">
+      <DependentUpon>UCEditFormBanGiaoTaiSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormTaiSan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormTaiSan.Designer.cs">
+      <DependentUpon>UCEditFormTaiSan.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCEditFormKhoanThuHangNam.cs">
       <SubType>UserControl</SubType>
@@ -270,11 +380,6 @@
       <DependentUpon>QLMamNonDs.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Dao\QLMamNonDs.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLMamNonDs.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Facade\ActivityTrackerFacade.cs" />
     <Compile Include="Facade\LoggerFacade.cs" />
     <Compile Include="Facade\ModuleMediatorFacade.cs" />
@@ -327,17 +432,29 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\HocSinh\FrmThongTinCanDo.resx">
-      <DependentUpon>FrmThongTinCanDo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\HocSinh\FrmThongTinHocTap.resx">
       <DependentUpon>FrmThongTinHocTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HocSinh\FrmThongTinCanDo.resx">
+      <DependentUpon>FrmThongTinCanDo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HocSinh\FrmThongTinHocSinh.resx">
       <DependentUpon>FrmThongTinHocSinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HocSinh\FrmXepLop.resx">
       <DependentUpon>FrmXepLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TaiSan\FrmTaiSan.resx">
+      <DependentUpon>FrmTaiSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TaiSan\FrmPhanBoTaiSan.resx">
+      <DependentUpon>FrmPhanBoTaiSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuChi\FrmBaoCaoChiTietHoatDongTaiChinh.resx">
+      <DependentUpon>FrmBaoCaoChiTietHoatDongTaiChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuChi\FrmBaoCaoHoatDongTaiChinh.resx">
+      <DependentUpon>FrmBaoCaoHoatDongTaiChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ThuChi\FrmPhieuChi.resx">
       <DependentUpon>FrmPhieuChi.cs</DependentUpon>
@@ -354,11 +471,39 @@
     <EmbeddedResource Include="Forms\ThuChi\FrmSoThuTien.resx">
       <DependentUpon>FrmSoThuTien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptSoThuTienTrang2.resx">
+      <DependentUpon>RptSoThuTienTrang2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptSoThuTienTrang1.resx">
+      <DependentUpon>RptSoThuTienTrang1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptBaoCaoChiTietHoatDongTaiChinh.resx">
+      <DependentUpon>RptBaoCaoChiTietHoatDongTaiChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptBaoCaoHoatDongTaiChinh.resx">
+      <DependentUpon>RptBaoCaoHoatDongTaiChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptThongTinHocSinh.resx">
+      <DependentUpon>RptThongTinHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptBangKeTongHopThuTienHS.resx">
+      <DependentUpon>RptBangKeTongHopThuTienHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCEditFormBanGiaoTaiSan.resx">
+      <DependentUpon>UCEditFormBanGiaoTaiSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCEditFormTaiSan.resx">
+      <DependentUpon>UCEditFormTaiSan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCEditFormKhoanThuHangNam.resx">
       <DependentUpon>UCEditFormKhoanThuHangNam.cs</DependentUpon>
@@ -383,9 +528,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCEditFormThongTinHocSinh.resx">
       <DependentUpon>UCEditFormThongTinHocSinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCReport.resx">
-      <DependentUpon>UCReport.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -416,7 +558,10 @@
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+QuanHuyenRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ThanhPhoRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+TruongRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewBanGiaoTaiSanRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewBangThuTienRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewHocTapRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewTaiSanRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Entity.Form.NamHoc.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -432,12 +577,6 @@
     </Compile>
     <Compile Include="UserControls\UCEditFormThongTinHocSinh.Designer.cs">
       <DependentUpon>UCEditFormThongTinHocSinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UCReport.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UCReport.Designer.cs">
-      <DependentUpon>UCReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\VNCurrency.cs" />
   </ItemGroup>
@@ -479,8 +618,8 @@
   <ItemGroup>
     <Folder Include="Forms\BaoCao\" />
     <Folder Include="Forms\GiaoVien\" />
+    <Folder Include="Forms\Report\" />
     <Folder Include="Images\icon\" />
-    <Folder Include="Reports\" />
     <Folder Include="Service\" />
   </ItemGroup>
   <ItemGroup>

@@ -11,6 +11,7 @@ namespace QLMamNon.Forms.Resource
         public static readonly string KhoanThuHangNam = "Khoản thu hằng năm";
         public static readonly string PhanLoaiChi = "Phân loại chi";
         public static readonly string ThongTinHocSinh = "Thông tin Học sinh";
+        public static readonly string ThongTinHocTap = "Thông tin học tập";
         public static readonly string TruongHoc = "Trường học";
         public static readonly string KhoiHoc = "Khối học";
         public static readonly string LopHoc = "Lớp học";
@@ -22,5 +23,7 @@ namespace QLMamNon.Forms.Resource
         public static readonly string PhieuThu = "Phiếu thu";
         public static readonly string TaoPhieuThu = "Tạo Phiếu thu";
         public static readonly string SoThuTien = "Sổ thu tiền";
+        public static readonly string QuanLyTaiSan = "Quản lý Tài sản";
+        public static readonly string PhanBoTaiSan = "Bàn giao Tài sản";
     }
 }
