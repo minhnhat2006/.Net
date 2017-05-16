@@ -772,6 +772,15 @@
   <data name="colThuDoDung.Caption" xml:space="preserve">
     <value>thudodung</value>
   </data>
+  <data name="colThuDoDung.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colThuDoDung.Summary1" xml:space="preserve">
+    <value>SoTienDoDung</value>
+  </data>
+  <data name="colThuDoDung.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
   <data name="colThuDoDung.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>

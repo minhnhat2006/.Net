@@ -15,7 +15,7 @@ namespace QLMamNon.UserControls
 
         private void UCEditFormBanGiaoTaiSan_Load(object sender, EventArgs e)
         {
-            this.phanLoaiChiRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.PhanLoaiChi);
+            this.phanLoaiChiRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.PhanLoaiChi);
         }
 
         private void UCEditFormBanGiaoTaiSan_Enter(object sender, EventArgs e)

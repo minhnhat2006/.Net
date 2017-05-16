@@ -101,6 +101,7 @@ namespace QLMamNon.Forms.ThuChi
             if (!this.PhieuThuRow.IsHocSinhIdNull())
             {
                 this.cmbHocSinh.EditValue = this.PhieuThuRow.HocSinhId;
+                this.txtConLai.Text = String.Format("{0:n0}", this.unknownColumnViewTableAdapter.GetSoTienTruyThuByHocSinhId(this.PhieuThuRow.HocSinhId));
             }
         }
 
@@ -148,6 +149,7 @@ namespace QLMamNon.Forms.ThuChi
             this.txtSoTien.Value = 0;
             this.txtMaPhieu.Text = "";
             this.txtGhiChu.Text = "";
+            this.txtConLai.Text = "";
             this.cmbHocSinh.EditValue = null;
         }
     }

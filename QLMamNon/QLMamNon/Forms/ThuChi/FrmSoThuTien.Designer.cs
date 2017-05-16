@@ -709,7 +709,12 @@ namespace QLMamNon.Forms.HocSinh
             // colThuDoDung
             // 
             resources.ApplyResources(this.colThuDoDung, "colThuDoDung");
+            this.colThuDoDung.DisplayFormat.FormatString = "n0";
+            this.colThuDoDung.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colThuDoDung.FieldName = "SoTienDoDung";
             this.colThuDoDung.Name = "colThuDoDung";
+            this.colThuDoDung.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("colThuDoDung.Summary"))), resources.GetString("colThuDoDung.Summary1"), resources.GetString("colThuDoDung.Summary2"))});
             // 
             // gridBand32
             // 

@@ -21,14 +21,14 @@ namespace QLMamNon.UserControls
 
         private void UCEditFormThongTinHocSinh_Load(object sender, EventArgs e)
         {
-            this.thanhPhoRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.TinhThanhPho);
+            this.thanhPhoRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.TinhThanhPho);
         }
 
         private void cmbTinh_EditValueChanged(object sender, EventArgs e)
         {
             if (cmbTinh.EditValue != DBNull.Value)
             {
-                QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable table = StaticDataFacade.Get(DataKeys.QuanHuyen) as QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable;
+                QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable table = StaticDataFacade.Get(StaticDataKeys.QuanHuyen) as QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable;
                 this.quanHuyenRowBindingSource.DataSource = table.Select(String.Format("ThanhPhoId={0}", cmbTinh.EditValue));
             }
         }
@@ -37,7 +37,7 @@ namespace QLMamNon.UserControls
         {
             if (cmbQuan.EditValue != DBNull.Value)
             {
-                QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable table = StaticDataFacade.Get(DataKeys.PhuongXa) as QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable;
+                QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable table = StaticDataFacade.Get(StaticDataKeys.PhuongXa) as QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable;
                 this.phuongXaRowBindingSource.DataSource = table.Select(String.Format("QuanHuyenId={0}", cmbQuan.EditValue));
             }
         }

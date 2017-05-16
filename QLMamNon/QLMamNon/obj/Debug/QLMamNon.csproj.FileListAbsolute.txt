@@ -69,3 +69,5 @@ D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.csproj.GenerateResourc
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.exe.licenses
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.exe
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.pdb
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.ThuChi.FrmSoTheoDoiTaiSan.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLThuChi.RptSoTheoDoiTaiSan.resources

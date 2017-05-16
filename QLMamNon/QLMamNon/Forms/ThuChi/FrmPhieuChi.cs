@@ -13,8 +13,6 @@ namespace QLMamNon.Forms.DanhMuc
     {
         #region Properties
 
-        private QLMamNon.Dao.QLMamNonDs.HocSinhDataTable _hocSinhTable;
-
         #endregion
 
         public FrmPhieuChi()
@@ -25,22 +23,20 @@ namespace QLMamNon.Forms.DanhMuc
             this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.PhieuChi;
             this.FormKey = AppForms.FormDanhMucTruongHoc;
 
-            this.phieuChiRowBindingSource.DataSource = this.phieuChiTableAdapter.GetData();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.phieuChiTableAdapter.Adapter, this.phieuChiRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.PhieuChiDataTable);
-            this._hocSinhTable = this.hocSinhTableAdapter.GetData();
+            this.loadPhieuChi();
+            this.InitForm(this.btnThem, this.btnChinhSua, null, null, null, this.gvMain, this.phieuChiTableAdapter.Adapter, this.phieuChiRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.PhieuChiDataTable);
         }
 
-        private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
+        private void loadPhieuChi()
         {
-            ColumnView view = sender as ColumnView;
-            if (e.Column.FieldName == "HocSinhId" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
+            QLMamNon.Dao.QLMamNonDs.PhieuChiDataTable table = this.phieuChiTableAdapter.GetData();
+
+            foreach (QLMamNon.Dao.QLMamNonDs.PhieuChiRow row in table)
             {
-                object hocSinhId = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "HocSinhId");
-                if (hocSinhId != null && DBNull.Value != hocSinhId)
-                {
-                    e.DisplayText = StaticDataUtil.GetHocSinhById(this._hocSinhTable, (int)hocSinhId);
-                }
+                row.PhanLoaiChi = StaticDataUtil.GetPhanLoaiChiNameByPhieuChiId(this.phieuChiTableAdapter, row.PhieuChiId);
             }
+
+            this.phieuChiRowBindingSource.DataSource = table;
         }
 
         protected override void onAdding()
@@ -63,6 +59,11 @@ namespace QLMamNon.Forms.DanhMuc
 
             FormMainFacade.ShowDialog(AppForms.FormTaoPhieuChi);
             FormMainFacade.SetTrangThaiCaption(StatusCaptions.ModifiedCaption);
+        }
+
+        private void gvMain_DoubleClick(object sender, EventArgs e)
+        {
+            this.onEditing();
         }
     }
 }

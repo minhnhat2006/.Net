@@ -6,6 +6,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using QLMamNon.Facade;
 using QLMamNon.Forms.Resource;
 using QLThuChi;
+using QLMamNon.Components.Data.Static;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -29,7 +30,6 @@ namespace QLMamNon.Forms.ThuChi
             InitializeComponent();
         }
 
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -37,21 +37,27 @@ namespace QLMamNon.Forms.ThuChi
 
         private void btnXemBaoCao_Click(object sender, EventArgs e)
         {
-            if (ControlUtil.IsEditValueNull(this.dateTuNgay))
+            if (ControlUtil.IsEditValueNull(this.cmbYear))
             {
                 MessageBox.Show("Xin vui lòng chọn năm", "Chọn năm", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            RptBaoCaoChiTietHoatDongTaiChinh rpt = new RptBaoCaoChiTietHoatDongTaiChinh();
-            rpt.TuNgay.Value = this.dateTuNgay.DateTime;
+            RptSoTheoDoiTaiSan rpt = new RptSoTheoDoiTaiSan();
+            QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanDataTable table = this.viewBanGiaoTaiSanTableAdapter.GetDataByYear((int)cmbYear.EditValue);
 
+            foreach (QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanRow row in table)
+            {
+                row.LopName = StaticDataUtil.GetLopNameByLopId(row.LopId);
+            }
+
+            rpt.bindingSource.DataSource = table;
             FormMainFacade.ShowReport(rpt);
         }
 
         private void FrmBaoCaoHoatDongTaiChinh_Load(object sender, EventArgs e)
         {
-            this.phanLoaiChiRowBindingSource.DataSource = this.phanLoaiChiTableAdapter.GetData();
+            this.namHocBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.NamHoc);
         }
     }
 }

@@ -21,8 +21,8 @@ namespace QLMamNon.UserControls
 
         private void UCEditFormKhoanThuHangNam_Load(object sender, EventArgs e)
         {
-            this.khoanThuRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.KhoanThu);
-            this.khoiRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.KhoiHoc);
+            this.khoanThuRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.KhoanThu);
+            this.khoiRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.KhoiHoc);
         }
     }
 }

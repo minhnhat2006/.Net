@@ -25,22 +25,24 @@ namespace QLMamNon.Forms.DanhMuc
             this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.PhieuThu;
             this.FormKey = AppForms.FormDanhMucTruongHoc;
 
-            this.phieuThuRowBindingSource.DataSource = this.phieuThuTableAdapter.GetData();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.phieuThuTableAdapter.Adapter, this.phieuThuRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable);
             this._hocSinhTable = this.hocSinhTableAdapter.GetData();
+            this.loadPhieuThu();
+            this.InitForm(this.btnThem, this.btnChinhSua, null, null, null, this.gvMain, this.phieuThuTableAdapter.Adapter, this.phieuThuRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable);
         }
 
-        private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
+        private void loadPhieuThu()
         {
-            ColumnView view = sender as ColumnView;
-            if (e.Column.FieldName == "HocSinhId" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
+            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable table = this.phieuThuTableAdapter.GetData();
+
+            foreach (QLMamNon.Dao.QLMamNonDs.PhieuThuRow row in table)
             {
-                object hocSinhId = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "HocSinhId");
-                if (hocSinhId != null && DBNull.Value != hocSinhId)
+                if (!row.IsHocSinhIdNull())
                 {
-                    e.DisplayText = StaticDataUtil.GetHocSinhById(this._hocSinhTable, (int)hocSinhId);
+                    row.HocSinh = StaticDataUtil.getHocSinhFullNameByHocSinhId(this._hocSinhTable, row.HocSinhId);
                 }
             }
+
+            this.phieuThuRowBindingSource.DataSource = table;
         }
 
         protected override void onAdding()
@@ -63,6 +65,11 @@ namespace QLMamNon.Forms.DanhMuc
 
             FormMainFacade.ShowDialog(AppForms.FormTaoPhieuThu);
             FormMainFacade.SetTrangThaiCaption(StatusCaptions.ModifiedCaption);
+        }
+
+        private void gvMain_DoubleClick(object sender, EventArgs e)
+        {
+            this.onEditing();
         }
     }
 }

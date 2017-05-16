@@ -38,8 +38,8 @@ namespace QLMamNon.Forms.HocSinh
 
         private void FrmThongTinHocTap_Load(object sender, EventArgs e)
         {
-            this.lopRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.LopHoc);
-            this.namHocBindingSource.DataSource = StaticDataFacade.Get(DataKeys.NamHoc);
+            this.lopRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.LopHoc);
+            this.namHocBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.NamHoc);
         }
 
         private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)

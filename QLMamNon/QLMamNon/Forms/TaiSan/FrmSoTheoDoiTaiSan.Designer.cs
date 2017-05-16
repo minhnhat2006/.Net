@@ -32,29 +32,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSoTheoDoiTaiSan));
             this.lcMain = new DevExpress.XtraLayout.LayoutControl();
             this.lblTaoPhieuThu = new System.Windows.Forms.Label();
+            this.cmbYear = new DevExpress.XtraEditors.LookUpEdit();
+            this.namHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciLblTaoPhieuThu = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciNgay = new DevExpress.XtraLayout.LayoutControlItem();
-            this.phanLoaiChiRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hocSinhRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dxValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
-            this.phieuThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnXemBaoCao = new DevExpress.XtraEditors.SimpleButton();
-            this.phanLoaiChiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhanLoaiChiTableAdapter();
-            this.dateTuNgay = new DevExpress.XtraEditors.LookUpEdit();
-            this.namHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.viewBanGiaoTaiSanTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ViewBanGiaoTaiSanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbYear.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciLblTaoPhieuThu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNgay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phanLoaiChiRowBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.namHocBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lcMain
@@ -62,7 +56,7 @@
             this.lcMain.Appearance.Control.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.lcMain.Appearance.Control.Options.UseFont = true;
             this.lcMain.Controls.Add(this.lblTaoPhieuThu);
-            this.lcMain.Controls.Add(this.dateTuNgay);
+            this.lcMain.Controls.Add(this.cmbYear);
             this.lcMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.lcMain.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.lcMain.Location = new System.Drawing.Point(0, 0);
@@ -81,7 +75,7 @@
             this.lcMain.OptionsPrint.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.lcMain.OptionsPrint.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lcMain.Root = this.layoutControlGroup1;
-            this.lcMain.Size = new System.Drawing.Size(292, 89);
+            this.lcMain.Size = new System.Drawing.Size(194, 60);
             this.lcMain.TabIndex = 0;
             this.lcMain.Text = "layoutControl1";
             // 
@@ -90,10 +84,34 @@
             this.lblTaoPhieuThu.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
             this.lblTaoPhieuThu.Location = new System.Drawing.Point(12, 12);
             this.lblTaoPhieuThu.Name = "lblTaoPhieuThu";
-            this.lblTaoPhieuThu.Size = new System.Drawing.Size(268, 35);
+            this.lblTaoPhieuThu.Size = new System.Drawing.Size(154, 20);
             this.lblTaoPhieuThu.TabIndex = 4;
             this.lblTaoPhieuThu.Text = "SỔ THEO DÕI TÀI SẢN";
             this.lblTaoPhieuThu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmbYear
+            // 
+            this.cmbYear.Location = new System.Drawing.Point(80, 36);
+            this.cmbYear.Name = "cmbYear";
+            this.cmbYear.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbYear.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("FromYear", "From Year", 30, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.cmbYear.Properties.DataSource = this.namHocBindingSource;
+            this.cmbYear.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.cmbYear.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.cmbYear.Properties.DisplayMember = "FromYear";
+            this.cmbYear.Properties.NullText = "";
+            this.cmbYear.Properties.ShowHeader = false;
+            this.cmbYear.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbYear.Properties.ValueMember = "FromYear";
+            this.cmbYear.Size = new System.Drawing.Size(86, 26);
+            this.cmbYear.StyleController = this.lcMain;
+            this.cmbYear.TabIndex = 1;
+            // 
+            // namHocBindingSource
+            // 
+            this.namHocBindingSource.DataSource = typeof(QLMamNon.Entity.Form.NamHoc);
             // 
             // layoutControlGroup1
             // 
@@ -106,7 +124,7 @@
             this.lciNgay});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(292, 89);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(178, 74);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // lciLblTaoPhieuThu
@@ -114,48 +132,31 @@
             this.lciLblTaoPhieuThu.Control = this.lblTaoPhieuThu;
             this.lciLblTaoPhieuThu.Location = new System.Drawing.Point(0, 0);
             this.lciLblTaoPhieuThu.Name = "lciLblTaoPhieuThu";
-            this.lciLblTaoPhieuThu.Size = new System.Drawing.Size(272, 39);
+            this.lciLblTaoPhieuThu.Size = new System.Drawing.Size(158, 24);
             this.lciLblTaoPhieuThu.TextSize = new System.Drawing.Size(0, 0);
             this.lciLblTaoPhieuThu.TextVisible = false;
             // 
             // lciNgay
             // 
-            this.lciNgay.Control = this.dateTuNgay;
-            this.lciNgay.Location = new System.Drawing.Point(0, 39);
+            this.lciNgay.Control = this.cmbYear;
+            this.lciNgay.Location = new System.Drawing.Point(0, 24);
             this.lciNgay.Name = "lciNgay";
-            this.lciNgay.Size = new System.Drawing.Size(272, 30);
+            this.lciNgay.Size = new System.Drawing.Size(158, 30);
             this.lciNgay.Text = "Chọn năm:";
             this.lciNgay.TextSize = new System.Drawing.Size(65, 19);
-            // 
-            // phanLoaiChiRowBindingSource
-            // 
-            this.phanLoaiChiRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhanLoaiChiRow);
-            // 
-            // hocSinhRowBindingSource
-            // 
-            this.hocSinhRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.HocSinhRow);
             // 
             // dxValidationProvider
             // 
             this.dxValidationProvider.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
             // 
-            // hocSinhTableAdapter
-            // 
-            this.hocSinhTableAdapter.ClearBeforeFill = true;
-            // 
-            // phieuThuTableAdapter
-            // 
-            this.phieuThuTableAdapter.ClearBeforeFill = true;
-            // 
             // btnClose
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(45, 91);
+            this.btnClose.Location = new System.Drawing.Point(12, 63);
             this.btnClose.MaximumSize = new System.Drawing.Size(250, 25);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(71, 25);
+            this.btnClose.Size = new System.Drawing.Size(60, 25);
             this.btnClose.StyleController = this.lcMain;
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Đóng";
@@ -163,51 +164,26 @@
             // 
             // btnXemBaoCao
             // 
-            this.btnXemBaoCao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXemBaoCao.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnXemBaoCao.Image = ((System.Drawing.Image)(resources.GetObject("btnXemBaoCao.Image")));
-            this.btnXemBaoCao.Location = new System.Drawing.Point(135, 91);
+            this.btnXemBaoCao.Location = new System.Drawing.Point(78, 63);
             this.btnXemBaoCao.MaximumSize = new System.Drawing.Size(250, 25);
             this.btnXemBaoCao.Name = "btnXemBaoCao";
-            this.btnXemBaoCao.Size = new System.Drawing.Size(115, 25);
+            this.btnXemBaoCao.Size = new System.Drawing.Size(104, 25);
             this.btnXemBaoCao.StyleController = this.lcMain;
             this.btnXemBaoCao.TabIndex = 4;
             this.btnXemBaoCao.Text = "Xem báo cáo";
             this.btnXemBaoCao.Click += new System.EventHandler(this.btnXemBaoCao_Click);
             // 
-            // phanLoaiChiTableAdapter
+            // viewBanGiaoTaiSanTableAdapter
             // 
-            this.phanLoaiChiTableAdapter.ClearBeforeFill = true;
-            // 
-            // dateTuNgay
-            // 
-            this.dateTuNgay.Location = new System.Drawing.Point(80, 51);
-            this.dateTuNgay.Name = "dateTuNgay";
-            this.dateTuNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateTuNgay.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("FromYear", "From Year", 72, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far)});
-            this.dateTuNgay.Properties.DataSource = this.namHocBindingSource;
-            this.dateTuNgay.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
-            this.dateTuNgay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateTuNgay.Properties.DisplayMember = "FromYear";
-            this.dateTuNgay.Properties.NullText = "";
-            this.dateTuNgay.Properties.ShowHeader = false;
-            this.dateTuNgay.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.dateTuNgay.Properties.ValueMember = "FromYear";
-            this.dateTuNgay.Size = new System.Drawing.Size(200, 26);
-            this.dateTuNgay.StyleController = this.lcMain;
-            this.dateTuNgay.TabIndex = 1;
-            // 
-            // namHocBindingSource
-            // 
-            this.namHocBindingSource.DataSource = typeof(QLMamNon.Entity.Form.NamHoc);
+            this.viewBanGiaoTaiSanTableAdapter.ClearBeforeFill = true;
             // 
             // FrmSoTheoDoiTaiSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 123);
+            this.ClientSize = new System.Drawing.Size(194, 95);
             this.Controls.Add(this.btnXemBaoCao);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lcMain);
@@ -220,14 +196,12 @@
             this.Load += new System.EventHandler(this.FrmBaoCaoHoatDongTaiChinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).EndInit();
             this.lcMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbYear.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namHocBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciLblTaoPhieuThu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNgay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phanLoaiChiRowBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.namHocBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,14 +214,10 @@
         private DevExpress.XtraLayout.LayoutControlItem lciLblTaoPhieuThu;
         private DevExpress.XtraLayout.LayoutControlItem lciNgay;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider;
-        private Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
-        private System.Windows.Forms.BindingSource hocSinhRowBindingSource;
-        private Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter phieuThuTableAdapter;
         private DevExpress.XtraEditors.SimpleButton btnClose;
         private DevExpress.XtraEditors.SimpleButton btnXemBaoCao;
-        private System.Windows.Forms.BindingSource phanLoaiChiRowBindingSource;
-        private Dao.QLMamNonDsTableAdapters.PhanLoaiChiTableAdapter phanLoaiChiTableAdapter;
-        private DevExpress.XtraEditors.LookUpEdit dateTuNgay;
+        private DevExpress.XtraEditors.LookUpEdit cmbYear;
         private System.Windows.Forms.BindingSource namHocBindingSource;
+        private Dao.QLMamNonDsTableAdapters.ViewBanGiaoTaiSanTableAdapter viewBanGiaoTaiSanTableAdapter;
     }
 }

@@ -128,7 +128,7 @@
     <Compile Include="Components\Data.Static\TruongData.cs" />
     <Compile Include="Components\Data.Static\PhuongXaData.cs" />
     <Compile Include="Components\Data.Static\QuanHuyenData.cs" />
-    <Compile Include="Components\Data.Static\DataKeys.cs" />
+    <Compile Include="Components\Data.Static\StaticDataKeys.cs" />
     <Compile Include="Components\Data.Static\TinhThanhPhoData.cs" />
     <Compile Include="Components\ModuleMediator\Channel\FormChannelManager.cs" />
     <Compile Include="Components\ModuleMediator\Channel\IChannelManager.cs" />
@@ -221,6 +221,12 @@
     <Compile Include="Forms\Resource\AppForms.cs" />
     <Compile Include="Forms\Resource\DanhMuc.cs" />
     <Compile Include="Forms\Resource\StatusCaptions.cs" />
+    <Compile Include="Forms\TaiSan\FrmSoTheoDoiTaiSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TaiSan\FrmSoTheoDoiTaiSan.Designer.cs">
+      <DependentUpon>FrmSoTheoDoiTaiSan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TaiSan\FrmTaiSan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +285,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptSoTheoDoiTaiSan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptSoTheoDoiTaiSan.designer.cs">
+      <DependentUpon>RptSoTheoDoiTaiSan.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RptSoThuTienTrang2.cs">
       <SubType>Component</SubType>
@@ -444,6 +456,9 @@
     <EmbeddedResource Include="Forms\HocSinh\FrmXepLop.resx">
       <DependentUpon>FrmXepLop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TaiSan\FrmSoTheoDoiTaiSan.resx">
+      <DependentUpon>FrmSoTheoDoiTaiSan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TaiSan\FrmTaiSan.resx">
       <DependentUpon>FrmTaiSan.cs</DependentUpon>
     </EmbeddedResource>
@@ -480,6 +495,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptSoTheoDoiTaiSan.resx">
+      <DependentUpon>RptSoTheoDoiTaiSan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RptSoThuTienTrang2.resx">
       <DependentUpon>RptSoThuTienTrang2.cs</DependentUpon>

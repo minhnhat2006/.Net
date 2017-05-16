@@ -48,16 +48,16 @@ namespace QLMamNon.Forms
 
         private void initStaticData()
         {
-            StaticDataFacade.Add(DataKeys.TinhThanhPho, new TinhThanhPhoData(thanhPhoTableAdapter));
-            StaticDataFacade.Add(DataKeys.PhuongXa, new PhuongXaData(phuongXaTableAdapter));
-            StaticDataFacade.Add(DataKeys.QuanHuyen, new QuanHuyenData(quanHuyenTableAdapter));
-            StaticDataFacade.Add(DataKeys.TruongHoc, new TruongData(truongTableAdapter));
-            StaticDataFacade.Add(DataKeys.NamHoc, new NamHocData());
-            StaticDataFacade.Add(DataKeys.KhoiHoc, new KhoiData(khoiTableAdapter));
-            StaticDataFacade.Add(DataKeys.LopHoc, new LopData(lopTableAdapter));
-            StaticDataFacade.Add(DataKeys.KhoanThu, new KhoanThuData(khoanThuTableAdapter));
-            StaticDataFacade.Add(DataKeys.PhanLoaiChi, new PhanLoaiChi(phanLoaiChiTableAdapter));
-            StaticDataFacade.Add(DataKeys.BangTinhPhi, new BangTinhPhi(bangTinhPhiTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.TinhThanhPho, new TinhThanhPhoData(thanhPhoTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.PhuongXa, new PhuongXaData(phuongXaTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.QuanHuyen, new QuanHuyenData(quanHuyenTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.TruongHoc, new TruongData(truongTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.NamHoc, new NamHocData());
+            StaticDataFacade.Add(StaticDataKeys.KhoiHoc, new KhoiData(khoiTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.LopHoc, new LopData(lopTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.KhoanThu, new KhoanThuData(khoanThuTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.PhanLoaiChi, new PhanLoaiChi(phanLoaiChiTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.BangTinhPhi, new BangTinhPhi(bangTinhPhiTableAdapter));
         }
 
         private void bbtnHocSinhThongTin_ItemClick(object sender, ItemClickEventArgs e)
@@ -167,7 +167,7 @@ namespace QLMamNon.Forms
 
         private void bbiSoTheoDoiTaiSan_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FormMainFacade.ShowForm(AppForms.FormSoTheoDoiTaiSan);
+            FormMainFacade.ShowDialog(AppForms.FormSoTheoDoiTaiSan);
         }
 
         #endregion

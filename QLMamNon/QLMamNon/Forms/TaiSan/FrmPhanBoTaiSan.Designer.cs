@@ -541,7 +541,7 @@
             this.ClientSize = new System.Drawing.Size(992, 573);
             this.Controls.Add(this.lcMain);
             this.Name = "FrmPhanBoTaiSan";
-            this.Text = "Lên lớp - Xếp lớp";
+            this.Text = "Bàn giao Tài sản";
             this.Load += new System.EventHandler(this.FrmPhanBoTaiSan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).EndInit();
             this.lcMain.ResumeLayout(false);

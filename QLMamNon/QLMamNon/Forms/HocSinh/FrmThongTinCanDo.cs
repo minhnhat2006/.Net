@@ -39,9 +39,9 @@ namespace QLMamNon.Forms.HocSinh
 
         private void FrmThongTinCanDo_Load(object sender, EventArgs e)
         {
-            this.thanhPhoRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.TinhThanhPho);
-            this.truongRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.TruongHoc);
-            this.namHocBindingSource.DataSource = StaticDataFacade.Get(DataKeys.NamHoc);
+            this.thanhPhoRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.TinhThanhPho);
+            this.truongRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.TruongHoc);
+            this.namHocBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.NamHoc);
         }
 
         private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
@@ -61,7 +61,7 @@ namespace QLMamNon.Forms.HocSinh
                 object tinhId = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "TinhThanhPhoId");
                 if (tinhId != DBNull.Value)
                 {
-                    e.DisplayText = StaticDataUtil.GetThanhPhoById(StaticDataFacade.Get(DataKeys.TinhThanhPho) as QLMamNon.Dao.QLMamNonDs.ThanhPhoDataTable, (int)tinhId);
+                    e.DisplayText = StaticDataUtil.GetThanhPhoById(StaticDataFacade.Get(StaticDataKeys.TinhThanhPho) as QLMamNon.Dao.QLMamNonDs.ThanhPhoDataTable, (int)tinhId);
                 }
             }
             else if (e.Column.FieldName == "QuanHuyenId" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
@@ -69,7 +69,7 @@ namespace QLMamNon.Forms.HocSinh
                 object quanHuyenId = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "QuanHuyenId");
                 if (quanHuyenId != DBNull.Value)
                 {
-                    e.DisplayText = StaticDataUtil.GetQuanHuyenById(StaticDataFacade.Get(DataKeys.QuanHuyen) as QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable, (int)quanHuyenId);
+                    e.DisplayText = StaticDataUtil.GetQuanHuyenById(StaticDataFacade.Get(StaticDataKeys.QuanHuyen) as QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable, (int)quanHuyenId);
                 }
             }
             else if (e.Column.FieldName == "PhuongXaId" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
@@ -77,7 +77,7 @@ namespace QLMamNon.Forms.HocSinh
                 object phuongXaId = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "PhuongXaId");
                 if (phuongXaId != DBNull.Value)
                 {
-                    e.DisplayText = StaticDataUtil.GetPhuongXaById(StaticDataFacade.Get(DataKeys.PhuongXa) as QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable, (int)phuongXaId);
+                    e.DisplayText = StaticDataUtil.GetPhuongXaById(StaticDataFacade.Get(StaticDataKeys.PhuongXa) as QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable, (int)phuongXaId);
                 }
             }
             else if (e.Column.FieldName == "NgaySinh" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle && e.Value != DBNull.Value)
@@ -104,7 +104,7 @@ namespace QLMamNon.Forms.HocSinh
 
         private void cmbThanhPho_EditValueChanged(object sender, EventArgs e)
         {
-            QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable table = StaticDataFacade.Get(DataKeys.QuanHuyen) as QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable;
+            QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable table = StaticDataFacade.Get(StaticDataKeys.QuanHuyen) as QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable;
             if (cmbThanhPho.EditValue != DBNull.Value && cmbThanhPho.EditValue != null)
             {
                 this.quanHuyenRowBindingSource.DataSource = table.Select(String.Format("ThanhPhoId={0}", cmbThanhPho.EditValue));
@@ -117,7 +117,7 @@ namespace QLMamNon.Forms.HocSinh
 
         private void cmbQuanHuyen_EditValueChanged(object sender, EventArgs e)
         {
-            QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable table = StaticDataFacade.Get(DataKeys.PhuongXa) as QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable;
+            QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable table = StaticDataFacade.Get(StaticDataKeys.PhuongXa) as QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable;
             if (cmbQuanHuyen.EditValue != DBNull.Value && cmbQuanHuyen.EditValue != null)
             {
                 this.phuongXaRowBindingSource.DataSource = table.Select(String.Format("QuanHuyenId={0}", cmbQuanHuyen.EditValue));
@@ -130,12 +130,12 @@ namespace QLMamNon.Forms.HocSinh
 
         private void cmbTruongHoc_EditValueChanged(object sender, EventArgs e)
         {
-            this.khoiRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.KhoiHoc);
+            this.khoiRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.KhoiHoc);
         }
 
         private void cmbKhoiHoc_EditValueChanged(object sender, EventArgs e)
         {
-            this.lopRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.LopHoc);
+            this.lopRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.LopHoc);
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)

@@ -41,10 +41,7 @@
             this.colMaPhieu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
             this.btnChinhSua = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.phieuChiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuChiTableAdapter();
             this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
@@ -100,7 +97,7 @@
             this.gvMain.OptionsEditForm.FormCaptionFormat = "Chỉnh sửa thông tin Lớp học";
             this.gvMain.OptionsEditForm.PopupEditFormWidth = 500;
             this.gvMain.OptionsView.ShowGroupPanel = false;
-            this.gvMain.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.gvMain_CustomColumnDisplayText);
+            this.gvMain.DoubleClick += new System.EventHandler(this.gvMain_DoubleClick);
             // 
             // colSTT
             // 
@@ -124,7 +121,7 @@
             this.colPhanLoaiChi.AppearanceCell.Options.UseTextOptions = true;
             this.colPhanLoaiChi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.colPhanLoaiChi.Caption = "Phân loại Chi";
-            this.colPhanLoaiChi.FieldName = "PhanLoaiChiId";
+            this.colPhanLoaiChi.FieldName = "PhanLoaiChi";
             this.colPhanLoaiChi.Name = "colPhanLoaiChi";
             this.colPhanLoaiChi.Visible = true;
             this.colPhanLoaiChi.VisibleIndex = 2;
@@ -161,10 +158,7 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.btnLuu);
-            this.panelControl1.Controls.Add(this.btnHuyBo);
             this.panelControl1.Controls.Add(this.btnChinhSua);
-            this.panelControl1.Controls.Add(this.btnXoa);
             this.panelControl1.Controls.Add(this.btnThem);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl1.Location = new System.Drawing.Point(0, 530);
@@ -172,53 +166,17 @@
             this.panelControl1.Size = new System.Drawing.Size(792, 43);
             this.panelControl1.TabIndex = 8;
             // 
-            // btnLuu
-            // 
-            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLuu.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnLuu.Appearance.Options.UseFont = true;
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(681, 10);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(99, 25);
-            this.btnLuu.TabIndex = 0;
-            this.btnLuu.Text = "Lưu";
-            // 
-            // btnHuyBo
-            // 
-            this.btnHuyBo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHuyBo.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnHuyBo.Appearance.Options.UseFont = true;
-            this.btnHuyBo.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyBo.Image")));
-            this.btnHuyBo.Location = new System.Drawing.Point(574, 10);
-            this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.Size = new System.Drawing.Size(99, 25);
-            this.btnHuyBo.TabIndex = 0;
-            this.btnHuyBo.Text = "Hủy bỏ";
-            // 
             // btnChinhSua
             // 
             this.btnChinhSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnChinhSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnChinhSua.Appearance.Options.UseFont = true;
             this.btnChinhSua.Image = ((System.Drawing.Image)(resources.GetObject("btnChinhSua.Image")));
-            this.btnChinhSua.Location = new System.Drawing.Point(467, 10);
+            this.btnChinhSua.Location = new System.Drawing.Point(682, 10);
             this.btnChinhSua.Name = "btnChinhSua";
             this.btnChinhSua.Size = new System.Drawing.Size(99, 25);
             this.btnChinhSua.TabIndex = 0;
             this.btnChinhSua.Text = "Chỉnh sửa";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnXoa.Appearance.Options.UseFont = true;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(360, 10);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(99, 25);
-            this.btnXoa.TabIndex = 0;
-            this.btnXoa.Text = "Xóa";
             // 
             // btnThem
             // 
@@ -226,7 +184,7 @@
             this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(253, 10);
+            this.btnThem.Location = new System.Drawing.Point(571, 10);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(99, 25);
             this.btnThem.TabIndex = 0;
@@ -265,10 +223,7 @@
         private DevExpress.XtraGrid.GridControl gcMain;
         private DevExpress.XtraGrid.Views.Grid.GridView gvMain;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.SimpleButton btnLuu;
-        private DevExpress.XtraEditors.SimpleButton btnHuyBo;
         private DevExpress.XtraEditors.SimpleButton btnChinhSua;
-        private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private Dao.QLMamNonDsTableAdapters.PhieuChiTableAdapter phieuChiTableAdapter;
         private System.Windows.Forms.BindingSource phieuChiRowBindingSource;

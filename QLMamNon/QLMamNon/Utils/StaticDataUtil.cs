@@ -99,7 +99,7 @@ namespace QLMamNon
         {
             if (truongId > 0)
             {
-                QLMamNon.Dao.QLMamNonDs.TruongDataTable truongTable = StaticDataFacade.Get(DataKeys.TruongHoc) as QLMamNon.Dao.QLMamNonDs.TruongDataTable;
+                QLMamNon.Dao.QLMamNonDs.TruongDataTable truongTable = StaticDataFacade.Get(StaticDataKeys.TruongHoc) as QLMamNon.Dao.QLMamNonDs.TruongDataTable;
                 QLMamNon.Dao.QLMamNonDs.TruongRow truongRow = truongTable.FindByTruongId(truongId);
                 return truongRow.Name;
             }
@@ -113,7 +113,7 @@ namespace QLMamNon
 
             if (truongId != null)
             {
-                QLMamNon.Dao.QLMamNonDs.TruongDataTable truongTable = StaticDataFacade.Get(DataKeys.TruongHoc) as QLMamNon.Dao.QLMamNonDs.TruongDataTable;
+                QLMamNon.Dao.QLMamNonDs.TruongDataTable truongTable = StaticDataFacade.Get(StaticDataKeys.TruongHoc) as QLMamNon.Dao.QLMamNonDs.TruongDataTable;
                 QLMamNon.Dao.QLMamNonDs.TruongRow truongRow = truongTable.FindByTruongId(truongId.Value);
                 return truongRow.Name;
             }
@@ -146,12 +146,30 @@ namespace QLMamNon
                 return CommonConstant.EMPTY;
             }
 
-            QLMamNon.Dao.QLMamNonDs.KhoiDataTable khoiTable = StaticDataFacade.Get(DataKeys.KhoiHoc) as QLMamNon.Dao.QLMamNonDs.KhoiDataTable;
+            QLMamNon.Dao.QLMamNonDs.KhoiDataTable khoiTable = StaticDataFacade.Get(StaticDataKeys.KhoiHoc) as QLMamNon.Dao.QLMamNonDs.KhoiDataTable;
             QLMamNon.Dao.QLMamNonDs.KhoiRow khoiRow = khoiTable.FindByKhoiId(khoiId);
 
             if (khoiRow != null)
             {
                 return khoiRow.Name;
+            }
+
+            return CommonConstant.EMPTY;
+        }
+
+        public static string GetLopNameByLopId(Int32 lopId)
+        {
+            if (lopId < 0)
+            {
+                return CommonConstant.EMPTY;
+            }
+
+            QLMamNon.Dao.QLMamNonDs.LopDataTable lopTable = StaticDataFacade.Get(StaticDataKeys.LopHoc) as QLMamNon.Dao.QLMamNonDs.LopDataTable;
+            QLMamNon.Dao.QLMamNonDs.LopRow lopRow = lopTable.FindByLopId(lopId);
+
+            if (lopRow != null)
+            {
+                return lopRow.Name;
             }
 
             return CommonConstant.EMPTY;
@@ -180,7 +198,7 @@ namespace QLMamNon
                 return CommonConstant.EMPTY;
             }
 
-            QLMamNon.Dao.QLMamNonDs.KhoanThuDataTable khoanThuTable = StaticDataFacade.Get(DataKeys.KhoanThu) as QLMamNon.Dao.QLMamNonDs.KhoanThuDataTable;
+            QLMamNon.Dao.QLMamNonDs.KhoanThuDataTable khoanThuTable = StaticDataFacade.Get(StaticDataKeys.KhoanThu) as QLMamNon.Dao.QLMamNonDs.KhoanThuDataTable;
             QLMamNon.Dao.QLMamNonDs.KhoanThuRow khoanThuRow = khoanThuTable.FindByKhoanThuId(khoanThuId);
 
             if (khoanThuRow != null)
@@ -232,7 +250,7 @@ namespace QLMamNon
         public static Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow> GetLopsByHocSinhIds(HocSinhLopTableAdapter hocSinhLopTableAdapter, List<int> hocSinhIds, DateTime ngay)
         {
             Dictionary<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow> hocSinhIdsToLopIds = GetHocSinhLopsByHocSinhIds(hocSinhLopTableAdapter, hocSinhIds, ngay);
-            QLMamNon.Dao.QLMamNonDs.LopDataTable lopTable = StaticDataFacade.Get(DataKeys.LopHoc) as QLMamNon.Dao.QLMamNonDs.LopDataTable;
+            QLMamNon.Dao.QLMamNonDs.LopDataTable lopTable = StaticDataFacade.Get(StaticDataKeys.LopHoc) as QLMamNon.Dao.QLMamNonDs.LopDataTable;
             Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow> hocSinhIdsToLopNames = new Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow>();
 
             if (ListUtil.IsEmpty(hocSinhIdsToLopIds))
@@ -275,7 +293,7 @@ namespace QLMamNon
 
             if (phieChiRow != null)
             {
-                QLMamNon.Dao.QLMamNonDs.PhanLoaiChiDataTable table = StaticDataFacade.Get(DataKeys.PhanLoaiChi) as QLMamNon.Dao.QLMamNonDs.PhanLoaiChiDataTable;
+                QLMamNon.Dao.QLMamNonDs.PhanLoaiChiDataTable table = StaticDataFacade.Get(StaticDataKeys.PhanLoaiChi) as QLMamNon.Dao.QLMamNonDs.PhanLoaiChiDataTable;
                 QLMamNon.Dao.QLMamNonDs.PhanLoaiChiRow[] rows = (QLMamNon.Dao.QLMamNonDs.PhanLoaiChiRow[])table.Select(String.Format("PhanLoaiChiId={0}", phieChiRow.PhanLoaiChiId));
 
                 if (!ArrayUtil.IsEmpty(rows))

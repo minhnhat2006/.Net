@@ -412,7 +412,7 @@
             // 
             // bbiPhanBoTaiSan
             // 
-            this.bbiPhanBoTaiSan.Caption = "Phân bổ Tài sản cho lớp";
+            this.bbiPhanBoTaiSan.Caption = "Bàn giao Tài sản cho lớp";
             this.bbiPhanBoTaiSan.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
             this.bbiPhanBoTaiSan.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiPhanBoTaiSan.Glyph")));
             this.bbiPhanBoTaiSan.Id = 5;

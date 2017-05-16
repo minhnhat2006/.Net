@@ -44,8 +44,8 @@ namespace QLMamNon.Forms.HocSinh
 
         private void FrmSoThuTien_Load(object sender, EventArgs e)
         {
-            this.lopRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.LopHoc);
-            this.namHocBindingSource.DataSource = StaticDataFacade.Get(DataKeys.NamHoc);
+            this.lopRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.LopHoc);
+            this.namHocBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.NamHoc);
         }
 
         private void gvMain_CellValueChanged(object sender, CellValueChangedEventArgs e)
@@ -144,7 +144,7 @@ namespace QLMamNon.Forms.HocSinh
 
         private void loadLopData()
         {
-            QLMamNon.Dao.QLMamNonDs.LopDataTable dataTable = StaticDataFacade.Get(DataKeys.LopHoc) as QLMamNon.Dao.QLMamNonDs.LopDataTable;
+            QLMamNon.Dao.QLMamNonDs.LopDataTable dataTable = StaticDataFacade.Get(StaticDataKeys.LopHoc) as QLMamNon.Dao.QLMamNonDs.LopDataTable;
 
             foreach (QLMamNon.Dao.QLMamNonDs.LopRow row in dataTable)
             {
@@ -256,7 +256,7 @@ namespace QLMamNon.Forms.HocSinh
 
             if (khoiId.HasValue)
             {
-                QLMamNon.Dao.QLMamNonDs.BangTinhPhiDataTable bangTinhPhiTable = StaticDataFacade.Get(DataKeys.BangTinhPhi) as QLMamNon.Dao.QLMamNonDs.BangTinhPhiDataTable;
+                QLMamNon.Dao.QLMamNonDs.BangTinhPhiDataTable bangTinhPhiTable = StaticDataFacade.Get(StaticDataKeys.BangTinhPhi) as QLMamNon.Dao.QLMamNonDs.BangTinhPhiDataTable;
                 QLMamNon.Dao.QLMamNonDs.BangTinhPhiRow[] bangTinhPhiRows = bangTinhPhiTable.Select(String.Format("KhoiId={0} AND SoNgayNghiMin<={1} AND SoNgayNghiMax>={1} AND KhoanThuId={2}", khoiId.Value, soNgayNghiThang, khoanThuId)) as QLMamNon.Dao.QLMamNonDs.BangTinhPhiRow[];
                 if (!ArrayUtil.IsEmpty(bangTinhPhiRows))
                 {

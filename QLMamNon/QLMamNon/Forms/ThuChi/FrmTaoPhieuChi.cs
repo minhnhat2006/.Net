@@ -87,7 +87,7 @@ namespace QLMamNon.Forms.ThuChi
         {
             this.dateNgay.DateTime = this.PhieuChiRow.Ngay;
             this.txtSoTien.Value = this.PhieuChiRow.SoTien;
-            this.txtMaPhieu.Text = this.PhieuChiRow.MaPhieu;
+            this.txtMaPhieu.Text = this.PhieuChiRow.IsMaPhieuNull() ? null : this.PhieuChiRow.MaPhieu;
 
             if (!this.PhieuChiRow.IsGhiChuNull())
             {
@@ -133,7 +133,8 @@ namespace QLMamNon.Forms.ThuChi
             string maPhieu = this.txtMaPhieu.Text;
             string ghiChu = this.txtGhiChu.Text;
             int phanLoaiChiId = (int)this.cmbPhanLoaiChi.EditValue;
-            this.phieuChiTableAdapter.Update(maPhieu, ngay, soTien, ghiChu, phanLoaiChiId, DateTime.Now, this.PhieuChiRow.PhieuChiId, this.PhieuChiRow.MaPhieu, this.PhieuChiRow.Ngay, this.PhieuChiRow.SoTien, this.PhieuChiRow.PhanLoaiChiId, this.PhieuChiRow.CreatedDate);
+            this.phieuChiTableAdapter.Update(maPhieu, ngay, soTien, ghiChu, phanLoaiChiId, DateTime.Now, this.PhieuChiRow.PhieuChiId, this.PhieuChiRow.IsMaPhieuNull() ? null : this.PhieuChiRow.MaPhieu,
+                this.PhieuChiRow.Ngay, this.PhieuChiRow.SoTien, this.PhieuChiRow.PhanLoaiChiId, this.PhieuChiRow.CreatedDate);
         }
 
         private void resetForm()

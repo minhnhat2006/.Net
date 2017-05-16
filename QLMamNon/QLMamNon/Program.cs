@@ -19,9 +19,13 @@ namespace QLMamNon
             Application.SetCompatibleTextRenderingDefault(false);
             var newCulture = new CultureInfo("vi-VN");
             newCulture.DateTimeFormat = new DateTimeFormatInfo();
+            newCulture.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy";
             newCulture.NumberFormat = new NumberFormatInfo();
             newCulture.NumberFormat.NumberGroupSeparator = ".";
             newCulture.NumberFormat.NumberDecimalSeparator = ",";
+            newCulture.NumberFormat.CurrencySymbol = "VNĐ ";
+            newCulture.NumberFormat.CurrencyGroupSeparator = ".";
+            newCulture.NumberFormat.CurrencyDecimalSeparator = ",";
             Thread.CurrentThread.CurrentCulture = newCulture;
             Thread.CurrentThread.CurrentUICulture = newCulture;
 

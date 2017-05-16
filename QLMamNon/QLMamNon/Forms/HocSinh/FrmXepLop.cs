@@ -75,9 +75,9 @@ namespace QLMamNon.Forms.HocSinh
             this.gridView2.CustomColumnDisplayText += new CustomColumnDisplayTextEventHandler(gvMain_CustomColumnDisplayText);
             this.hocSinhRowBindingSourceDi.DataSource = this.hocSinhTableAdapter.GetData();
 
-            this.namHocBindingSource.DataSource = StaticDataFacade.Get(DataKeys.NamHoc);
-            this.lopRowBindingSourceDi.DataSource = StaticDataFacade.Get(DataKeys.LopHoc);
-            this.lopRowBindingSourceDen.DataSource = StaticDataFacade.Get(DataKeys.LopHoc);
+            this.namHocBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.NamHoc);
+            this.lopRowBindingSourceDi.DataSource = StaticDataFacade.Get(StaticDataKeys.LopHoc);
+            this.lopRowBindingSourceDen.DataSource = StaticDataFacade.Get(StaticDataKeys.LopHoc);
         }
 
         private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)

@@ -13,7 +13,7 @@ namespace QLMamNon.UserControls
 
         private void UCEditFormLopHoc_Load(object sender, EventArgs e)
         {
-            this.khoiRowBindingSource.DataSource = StaticDataFacade.Get(DataKeys.KhoiHoc);
+            this.khoiRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.KhoiHoc);
         }
 
         private void UCEditFormLopHoc_Enter(object sender, EventArgs e)

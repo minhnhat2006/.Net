@@ -5,7 +5,7 @@ using System.Text;
 
 namespace QLMamNon.Components.Data.Static
 {
-    public static class DataKeys
+    public static class StaticDataKeys
     {
         public const string TinhThanhPho = "TinhThanhPho";
         public const string QuanHuyen = "QuanHuyen";
