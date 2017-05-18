@@ -482,13 +482,10 @@
     <value>True</value>
   </data>
   <data name="colSXThangTruoc.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>70</value>
   </data>
   <data name="gridBand24.Name" xml:space="preserve">
     <value>gridBand24</value>
-  </data>
-  <data name="gridBand24.Width" type="System.Int32, mscorlib">
-    <value>90</value>
   </data>
   <data name="gridBand25.Caption" xml:space="preserve">
     <value>Số tiền</value>
@@ -521,7 +518,7 @@
     <value>gridBand20</value>
   </data>
   <data name="gridBand20.Width" type="System.Int32, mscorlib">
-    <value>180</value>
+    <value>160</value>
   </data>
   <data name="gridBand27.Caption" xml:space="preserve">
     <value>Ăn sáng</value>
@@ -544,14 +541,11 @@
   <data name="colAnSangThangTruoc.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="colAnSangThangTruoc.Width" type="System.Int32, mscorlib">
-    <value>90</value>
-  </data>
   <data name="gridBand26.Name" xml:space="preserve">
     <value>gridBand26</value>
   </data>
   <data name="gridBand26.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>75</value>
   </data>
   <data name="gridBand28.Caption" xml:space="preserve">
     <value>Số tiền</value>
@@ -584,7 +578,7 @@
     <value>gridBand1</value>
   </data>
   <data name="gridBand1.Width" type="System.Int32, mscorlib">
-    <value>180</value>
+    <value>165</value>
   </data>
   <data name="gridBand30.Caption" xml:space="preserve">
     <value>Tháng này</value>
@@ -641,13 +635,40 @@
     <value>gridBand27</value>
   </data>
   <data name="gridBand27.Width" type="System.Int32, mscorlib">
-    <value>360</value>
+    <value>345</value>
   </data>
   <data name="gridBand2.Caption" xml:space="preserve">
     <value>Ăn tối</value>
   </data>
   <data name="gridBand3.Caption" xml:space="preserve">
     <value>Dư tháng trước</value>
+  </data>
+  <data name="gridBand34.Caption" xml:space="preserve">
+    <value>SX</value>
+  </data>
+  <data name="colAnToiThangTruoc.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
+    <value>Sum</value>
+  </data>
+  <data name="colAnToiThangTruoc.Summary1" xml:space="preserve">
+    <value>AnToiThangTruoc</value>
+  </data>
+  <data name="colAnToiThangTruoc.Summary2" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="colAnToiThangTruoc.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridBand34.Name" xml:space="preserve">
+    <value>gridBand34</value>
+  </data>
+  <data name="gridBand34.Width" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="gridBand35.Caption" xml:space="preserve">
+    <value>Số tiền</value>
+  </data>
+  <data name="colSoTienAnToiThangTruoc.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
   </data>
   <data name="colSoTienAnToiThangTruoc.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
     <value>Sum</value>
@@ -662,13 +683,16 @@
     <value>True</value>
   </data>
   <data name="colSoTienAnToiThangTruoc.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>70</value>
+  </data>
+  <data name="gridBand35.Name" xml:space="preserve">
+    <value>gridBand35</value>
   </data>
   <data name="gridBand3.Name" xml:space="preserve">
     <value>gridBand3</value>
   </data>
   <data name="gridBand3.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>145</value>
   </data>
   <data name="gridBand4.Caption" xml:space="preserve">
     <value>Tháng này</value>
@@ -725,7 +749,7 @@
     <value>gridBand2</value>
   </data>
   <data name="gridBand2.Width" type="System.Int32, mscorlib">
-    <value>270</value>
+    <value>325</value>
   </data>
   <data name="gridBand7.Caption" xml:space="preserve">
     <value>STT</value>
@@ -1315,53 +1339,6 @@
   <data name="&gt;&gt;lcMain.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btnXuatExcel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="btnXuatExcel.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="btnXuatExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAfdEVYdFRpdGxlAEV4cG9ydDtYc2x0O0V4cG9ydFRvWHNsdDsT1nubAAACZUlEQVQ4T12Ty28S
-        YRTFh2erNmr905RCKSDtwo2p1kSDUFppUaitJl3ooq+40VRLnY0aoiYqtiYt3bt1p9ZSXsMwDAP0eO83
-        A1JJfswMyTnnnjsfEgCJPjbCTjgIp4WrD/d/8G82obUM7Ivr+7lHGwdgljbyWFzPY4l4uHZA7GNhNY+F
-        lT2kV/aRfJrbYZN+A+fiWh4n9CCgL5MTQadLxyT55BuLBvsNXKnVPSFq6G1oRL1homotQU1rQyGMdgeJ
-        5R0Wne03cLMrG6gNU9AVCaHaRrXeQoVotjqIP/7ConOnDBLLX8W4Nc1ArW5QWqsnYsqqgRKhNzv4uPvj
-        n8FAekImMJAahzsVhvsBcf8qXMx8CK65EJyJABz3xuCY8cEe9xI+2KbpGvPKbICm0SKDCepvkDhE3Y2e
-        OP4hg4qio6w0YJ/x47iskXgEf4p12KIjkNzpcei0NE7WqL87GRYVnHNBkVyp6XDMjpF4FPZpH45KZBD1
-        4PBYhXT3CiROTnyWhXj202s45wNQ6s3e2LH3WyhVNTjifpEcebuJQ0q/8+YFGXhoAivZlQxBZSElKyql
-        cudZv0iOZl+hwMkxrxBz8q8CTRChCXhhGm2eO9dEchBVq3M0+xLFckOII+82ReffYnQPfh7VTANXMiiz
-        uNvZTLY607Zp0yJZ4oVxZx6bhSZy9xwMhW/L4pAo9M6rtMQKvXPx7hUDxaqB46qOQkXHESFnv7NouP8g
-        DfqvP88Fb21jbGobfA1MZeC/maHnLfhv0P2kyejkFi5fe7ZLmlMnkf/KZ4jzxAXiosVwH5cs+H6IcACQ
-        /gI4G2s/4fW3BgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnXuatExcel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>664, 10</value>
-  </data>
-  <data name="btnXuatExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 25</value>
-  </data>
-  <data name="btnXuatExcel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnXuatExcel.Text" xml:space="preserve">
-    <value>Xuất Excel</value>
-  </data>
-  <data name="&gt;&gt;btnXuatExcel.Name" xml:space="preserve">
-    <value>btnXuatExcel</value>
-  </data>
-  <data name="&gt;&gt;btnXuatExcel.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;btnXuatExcel.Parent" xml:space="preserve">
-    <value>panelControl1</value>
-  </data>
-  <data name="&gt;&gt;btnXuatExcel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="btnLuu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -1391,7 +1368,7 @@
 </value>
   </data>
   <data name="btnLuu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>557, 10</value>
+    <value>683, 10</value>
   </data>
   <data name="btnLuu.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 25</value>
@@ -1412,7 +1389,7 @@
     <value>panelControl1</value>
   </data>
   <data name="&gt;&gt;btnLuu.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="btnHuyBo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -1431,7 +1408,7 @@
 </value>
   </data>
   <data name="btnHuyBo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>450, 10</value>
+    <value>576, 10</value>
   </data>
   <data name="btnHuyBo.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 25</value>
@@ -1452,7 +1429,7 @@
     <value>panelControl1</value>
   </data>
   <data name="&gt;&gt;btnHuyBo.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="btnXoa.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -1478,7 +1455,7 @@
 </value>
   </data>
   <data name="btnXoa.Location" type="System.Drawing.Point, System.Drawing">
-    <value>343, 10</value>
+    <value>469, 10</value>
   </data>
   <data name="btnXoa.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 25</value>
@@ -1499,7 +1476,7 @@
     <value>panelControl1</value>
   </data>
   <data name="&gt;&gt;btnXoa.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="panelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -1557,6 +1534,9 @@
   </metadata>
   <metadata name="soNgayNghiThangByHocSinhIdTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1170, 54</value>
+  </metadata>
+  <metadata name="phieuThuTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 91</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1793,6 +1773,24 @@
     <value>gridBand3</value>
   </data>
   <data name="&gt;&gt;gridBand3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand34.Name" xml:space="preserve">
+    <value>gridBand34</value>
+  </data>
+  <data name="&gt;&gt;gridBand34.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colAnToiThangTruoc.Name" xml:space="preserve">
+    <value>colAnToiThangTruoc</value>
+  </data>
+  <data name="&gt;&gt;colAnToiThangTruoc.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridBand35.Name" xml:space="preserve">
+    <value>gridBand35</value>
+  </data>
+  <data name="&gt;&gt;gridBand35.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;colSoTienAnToiThangTruoc.Name" xml:space="preserve">
@@ -2100,6 +2098,12 @@
   </data>
   <data name="&gt;&gt;soNgayNghiThangByHocSinhIdTableAdapter.Type" xml:space="preserve">
     <value>QLMamNon.Dao.QLMamNonDsTableAdapters.UnknownColumnViewTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;phieuThuTableAdapter.Name" xml:space="preserve">
+    <value>phieuThuTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;phieuThuTableAdapter.Type" xml:space="preserve">
+    <value>QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter, Dao.QLMamNonDs.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmSoThuTien</value>

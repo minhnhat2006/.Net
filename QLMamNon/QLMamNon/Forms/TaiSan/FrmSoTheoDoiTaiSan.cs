@@ -52,6 +52,7 @@ namespace QLMamNon.Forms.ThuChi
             }
 
             rpt.bindingSource.DataSource = table;
+            rpt.Year.Value = this.cmbYear.EditValue;
             FormMainFacade.ShowReport(rpt);
         }
 

@@ -234,7 +234,7 @@
             // 
             // colNgayHetHan
             // 
-            this.colNgayHetHan.Caption = "Ngày hết hạn";
+            this.colNgayHetHan.Caption = "Ngày thu hồi";
             this.colNgayHetHan.FieldName = "NgayHetHan";
             this.colNgayHetHan.Name = "colNgayHetHan";
             this.colNgayHetHan.Visible = true;

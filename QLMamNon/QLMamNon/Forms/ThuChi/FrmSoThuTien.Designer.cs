@@ -73,6 +73,9 @@ namespace QLMamNon.Forms.HocSinh
             this.colSoTienAnSangConLai = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand34 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colAnToiThangTruoc = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand35 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colSoTienAnToiThangTruoc = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colSoTienAnToiThangNay = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -118,7 +121,6 @@ namespace QLMamNon.Forms.HocSinh
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnXuatExcel = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
@@ -133,6 +135,7 @@ namespace QLMamNon.Forms.HocSinh
             this.hocSinhLopTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter();
             this.viewHocTapTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ViewHocTapTableAdapter();
             this.soNgayNghiThangByHocSinhIdTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.UnknownColumnViewTableAdapter();
+            this.phieuThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.namHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoiRowBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopRowBindingSource)).BeginInit();
@@ -290,7 +293,8 @@ namespace QLMamNon.Forms.HocSinh
             this.colNgayNopLan2,
             this.colSoTienNopLan2,
             this.colGhiChu,
-            this.colThuDoDung});
+            this.colThuDoDung,
+            this.colAnToiThangTruoc});
             this.gvMain.GridControl = this.gcMain;
             this.gvMain.Name = "gvMain";
             this.gvMain.OptionsView.ColumnAutoWidth = false;
@@ -614,17 +618,46 @@ namespace QLMamNon.Forms.HocSinh
             this.gridBand3.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             resources.ApplyResources(this.gridBand3, "gridBand3");
-            this.gridBand3.Columns.Add(this.colSoTienAnToiThangTruoc);
+            this.gridBand3.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand34,
+            this.gridBand35});
             this.gridBand3.VisibleIndex = 0;
+            // 
+            // gridBand34
+            // 
+            resources.ApplyResources(this.gridBand34, "gridBand34");
+            this.gridBand34.Columns.Add(this.colAnToiThangTruoc);
+            this.gridBand34.VisibleIndex = 0;
+            // 
+            // colAnToiThangTruoc
+            // 
+            this.colAnToiThangTruoc.AppearanceCell.Options.UseTextOptions = true;
+            this.colAnToiThangTruoc.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.colAnToiThangTruoc.DisplayFormat.FormatString = "n0";
+            this.colAnToiThangTruoc.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colAnToiThangTruoc.FieldName = "AnToiThangTruoc";
+            this.colAnToiThangTruoc.Name = "colAnToiThangTruoc";
+            this.colAnToiThangTruoc.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("colAnToiThangTruoc.Summary"))), resources.GetString("colAnToiThangTruoc.Summary1"), resources.GetString("colAnToiThangTruoc.Summary2"))});
+            resources.ApplyResources(this.colAnToiThangTruoc, "colAnToiThangTruoc");
+            // 
+            // gridBand35
+            // 
+            resources.ApplyResources(this.gridBand35, "gridBand35");
+            this.gridBand35.Columns.Add(this.colSoTienAnToiThangTruoc);
+            this.gridBand35.VisibleIndex = 1;
             // 
             // colSoTienAnToiThangTruoc
             // 
+            this.colSoTienAnToiThangTruoc.AppearanceCell.BackColor = ((System.Drawing.Color)(resources.GetObject("colSoTienAnToiThangTruoc.AppearanceCell.BackColor")));
+            this.colSoTienAnToiThangTruoc.AppearanceCell.Options.UseBackColor = true;
             this.colSoTienAnToiThangTruoc.AppearanceCell.Options.UseTextOptions = true;
             this.colSoTienAnToiThangTruoc.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.colSoTienAnToiThangTruoc.DisplayFormat.FormatString = "n0";
             this.colSoTienAnToiThangTruoc.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSoTienAnToiThangTruoc.FieldName = "SoTienAnToiThangTruoc";
             this.colSoTienAnToiThangTruoc.Name = "colSoTienAnToiThangTruoc";
+            this.colSoTienAnToiThangTruoc.OptionsColumn.AllowEdit = false;
             this.colSoTienAnToiThangTruoc.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("colSoTienAnToiThangTruoc.Summary"))), resources.GetString("colSoTienAnToiThangTruoc.Summary1"), resources.GetString("colSoTienAnToiThangTruoc.Summary2"))});
             resources.ApplyResources(this.colSoTienAnToiThangTruoc, "colSoTienAnToiThangTruoc");
@@ -1067,20 +1100,11 @@ namespace QLMamNon.Forms.HocSinh
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.btnXuatExcel);
             this.panelControl1.Controls.Add(this.btnLuu);
             this.panelControl1.Controls.Add(this.btnHuyBo);
             this.panelControl1.Controls.Add(this.btnXoa);
             resources.ApplyResources(this.panelControl1, "panelControl1");
             this.panelControl1.Name = "panelControl1";
-            // 
-            // btnXuatExcel
-            // 
-            resources.ApplyResources(this.btnXuatExcel, "btnXuatExcel");
-            this.btnXuatExcel.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnXuatExcel.Appearance.Font")));
-            this.btnXuatExcel.Appearance.Options.UseFont = true;
-            this.btnXuatExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnXuatExcel.Image")));
-            this.btnXuatExcel.Name = "btnXuatExcel";
             // 
             // btnLuu
             // 
@@ -1149,6 +1173,10 @@ namespace QLMamNon.Forms.HocSinh
             // soNgayNghiThangByHocSinhIdTableAdapter
             // 
             this.soNgayNghiThangByHocSinhIdTableAdapter.ClearBeforeFill = true;
+            // 
+            // phieuThuTableAdapter
+            // 
+            this.phieuThuTableAdapter.ClearBeforeFill = true;
             // 
             // FrmSoThuTien
             // 
@@ -1221,7 +1249,6 @@ namespace QLMamNon.Forms.HocSinh
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSTT2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.SimpleButton btnXuatExcel;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnHuyBo;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
@@ -1274,6 +1301,9 @@ namespace QLMamNon.Forms.HocSinh
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand29;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand34;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colAnToiThangTruoc;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand35;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand7;
@@ -1289,6 +1319,7 @@ namespace QLMamNon.Forms.HocSinh
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand15;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand18;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand31;
+        private Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter phieuThuTableAdapter;
 
 
     }

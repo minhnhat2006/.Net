@@ -192,7 +192,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmSoTheoDoiTaiSan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tạo Phiếu Thu";
+            this.Text = "Sổ theo dõi Tài sản";
             this.Load += new System.EventHandler(this.FrmBaoCaoHoatDongTaiChinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).EndInit();
             this.lcMain.ResumeLayout(false);

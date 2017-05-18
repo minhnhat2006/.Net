@@ -134,6 +134,7 @@
     <Compile Include="Components\ModuleMediator\Channel\IChannelManager.cs" />
     <Compile Include="Constant\CommonConstant.cs" />
     <Compile Include="Constant\BangThuTienConstant.cs" />
+    <Compile Include="Constant\ConfigConstant.cs" />
     <Compile Include="Dao\QLMamNonDs.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -385,6 +386,7 @@
     <Compile Include="UserControls\UCEditFormTruongHoc.Designer.cs">
       <DependentUpon>UCEditFormTruongHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\BangThuTienUtil.cs" />
     <Compile Include="Utils\StaticDataUtil.cs" />
     <Compile Include="Workflow\Handler\AdjustPopupEditFormAction.cs" />
     <Compile Include="Workflow\Handler\InitFormTrackerAction.cs" />
