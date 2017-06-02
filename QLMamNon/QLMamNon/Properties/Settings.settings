@@ -16,5 +16,8 @@
     <Setting Name="DefaultMaPhanLoaiChi" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Thực phẩm, Phụ phí</Value>
     </Setting>
+    <Setting Name="SMSWSSendMessageUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_get?Phone={0}&amp;Content={1}&amp;ApiKey=9BB708A18DC3EE2D63879D0D2E55CC&amp;SecretKey=27AD94C5BC577605E8D26BCDBF086F&amp;SmsType=4&amp;IsUnicode=0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -41,7 +41,7 @@ namespace QLMamNon
 
             if (bangThuTienThangTruocRow != null)
             {
-                return bangThuTienThangTruocRow.ThanhTien + bangThuTienThangTruocRow.SoTienTruyThu - bangThuTienThangTruocRow.SoTienNopLan1 - bangThuTienThangTruocRow.SoTienNopLan2;
+                return bangThuTienThangTruocRow.ThanhTien - bangThuTienThangTruocRow.SoTienNopLan1 - bangThuTienThangTruocRow.SoTienNopLan2;
             }
 
             return 0;
@@ -64,12 +64,13 @@ namespace QLMamNon
             row.SoTienAnToiThangTruoc = BangThuTienUtil.SXAnToiToSoTienAnToi(row.AnToiThangTruoc);
             row.SoTienAnSangConLai = row.SoTienAnSangThangNay - row.SoTienAnSangThangTruoc;
             row.SoTienAnToiConLai = row.SoTienAnToiThangNay - row.SoTienAnToiThangTruoc;
-            row.ThanhTien = BangThuTienUtil.CalculateThanhTien(row);
 
             if (!ignoreTruyThu)
             {
                 row.SoTienTruyThu = BangThuTienUtil.CalculateTruyThu(row, bangThuTienThangTruocRow);
             }
+
+            row.ThanhTien = BangThuTienUtil.CalculateThanhTien(row);
         }
 
         private static void evaluateValuesForAdditionalFields(QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row, QLMamNon.Dao.QLMamNonDs.BangThuTienKhoanThuDataTable bTTKTDataTable)

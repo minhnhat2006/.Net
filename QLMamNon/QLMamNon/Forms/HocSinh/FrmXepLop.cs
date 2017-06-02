@@ -217,7 +217,7 @@ namespace QLMamNon.Forms.HocSinh
                 this.hocSinhLopTableAdapter.DeleteHocSinhLopByHocSinhIds(StringUtil.Join(deletingHocSinhIds, ","), ngayVaoLop);
             }
 
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.SavedCaption);
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.SavedCaption);
         }
 
     }

@@ -50,11 +50,15 @@ namespace QLMamNon.Forms.HocSinh
             ColumnView view = sender as ColumnView;
             if (e.Column.FieldName == "GioiTinh" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
             {
-                sbyte gioiTinh = (sbyte)view.GetListSourceRowCellValue(e.ListSourceRowIndex, "GioiTinh");
-                switch (gioiTinh)
+                object objGioiTinh = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "GioiTinh");
+                if (objGioiTinh != DBNull.Value)
                 {
-                    case 0: e.DisplayText = "Nữ"; break;
-                    case 1: e.DisplayText = "Nam"; break;
+                    sbyte gioiTinh = (sbyte)objGioiTinh;
+                    switch (gioiTinh)
+                    {
+                        case 0: e.DisplayText = "Nữ"; break;
+                        case 1: e.DisplayText = "Nam"; break;
+                    }
                 }
             }
             else if (e.Column.FieldName == "ThoiHoc" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)

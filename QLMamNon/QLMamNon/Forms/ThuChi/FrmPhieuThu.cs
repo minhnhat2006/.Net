@@ -23,7 +23,7 @@ namespace QLMamNon.Forms.DanhMuc
 
             this.TablePrimaryKey = "PhieuThuId";
             this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.PhieuThu;
-            this.FormKey = AppForms.FormDanhMucTruongHoc;
+            this.FormKey = AppForms.FormPhieuThu;
 
             this._hocSinhTable = this.hocSinhTableAdapter.GetData();
             this.loadPhieuThu();
@@ -52,7 +52,7 @@ namespace QLMamNon.Forms.DanhMuc
             frm.IsEditing = false;
 
             FormMainFacade.ShowDialog(AppForms.FormTaoPhieuThu);
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.AddedCaption);
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.AddedCaption);
         }
 
         protected override void onEditing()
@@ -64,7 +64,7 @@ namespace QLMamNon.Forms.DanhMuc
             frm.PhieuThuRow = rowView.Row as QLMamNon.Dao.QLMamNonDs.PhieuThuRow;
 
             FormMainFacade.ShowDialog(AppForms.FormTaoPhieuThu);
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.ModifiedCaption);
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.ModifiedCaption);
         }
 
         private void gvMain_DoubleClick(object sender, EventArgs e)

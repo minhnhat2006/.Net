@@ -71,3 +71,5 @@ D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.exe
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.pdb
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.ThuChi.FrmSoTheoDoiTaiSan.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLThuChi.RptSoTheoDoiTaiSan.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLThuChi.RptTaiSaHistory.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.TinNhan.FrmTinNhanPhuHuynh.resources

@@ -99,6 +99,7 @@ namespace QLMamNon.Forms
             {
                 this.GridViewMain.ShowingPopupEditForm += new ShowingPopupEditFormEventHandler(GridViewMain_ShowingPopupEditForm);
                 this.GridViewMain.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(GridViewMain_CustomDrawCell);
+                this.GridViewMain.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(GridViewMain_CellValueChanged);
                 ModuleMediatorFacade.Invoke(this, WorkFlowActions.AdjustPopupEditForm, this.GridViewMain);
             }
 
@@ -116,7 +117,7 @@ namespace QLMamNon.Forms
 
         protected void Form_Activated(object sender, EventArgs e)
         {
-            FormMainFacade.SetManHinhCaption(this.FormKey);
+            FormMainFacade.SetFormCaption(this.FormKey);
         }
 
         protected void onRowUpdated(object sender, MySqlRowUpdatedEventArgs e)
@@ -148,6 +149,11 @@ namespace QLMamNon.Forms
                     e.DisplayText = "";
                 }
             }
+        }
+
+        void GridViewMain_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.ModifiedCaption);
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)
@@ -186,13 +192,13 @@ namespace QLMamNon.Forms
             this.GridViewMain.GridControl.DataSource = GridControl.NewItemRowHandle;
             this.GridViewMain.ShowEditForm();
 
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.AddedCaption);
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.AddedCaption);
         }
 
         protected virtual void onEditing()
         {
             this.GridViewMain.ShowPopupEditForm();
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.ModifiedCaption);
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.ModifiedCaption);
         }
 
         protected virtual void onSaving()
@@ -206,7 +212,7 @@ namespace QLMamNon.Forms
             }
 
             this.DataTable.AcceptChanges();
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.SavedCaption);
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.SavedCaption);
         }
 
         protected virtual void onDeleting()
@@ -222,7 +228,7 @@ namespace QLMamNon.Forms
             if (confirmResult == DialogResult.Yes)
             {
                 this.GridViewMain.DeleteSelectedRows();
-                FormMainFacade.SetTrangThaiCaption(StatusCaptions.DeletedCaption);
+                FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.DeletedCaption);
             }
         }
 
@@ -236,7 +242,7 @@ namespace QLMamNon.Forms
                 this.DataTable.AcceptChanges();
             }
 
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.CanceledCaption);
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.CanceledCaption);
         }
 
         #endregion

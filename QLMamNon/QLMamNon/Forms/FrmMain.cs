@@ -67,7 +67,7 @@ namespace QLMamNon.Forms
 
         private void bbtnHocSinhThongTinHocTap_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FormMainFacade.ShowForm(AppForms.FormThongTinHocTap);
+            //FormMainFacade.ShowForm(AppForms.FormThongTinHocTap);
         }
 
         private void bbtnHocSinhXepLop_ItemClick(object sender, ItemClickEventArgs e)
@@ -168,6 +168,11 @@ namespace QLMamNon.Forms
         private void bbiSoTheoDoiTaiSan_ItemClick(object sender, ItemClickEventArgs e)
         {
             FormMainFacade.ShowDialog(AppForms.FormSoTheoDoiTaiSan);
+        }
+
+        private void bbiPhuHuynhHS_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormTinNhanPhuHuynh);
         }
 
         #endregion

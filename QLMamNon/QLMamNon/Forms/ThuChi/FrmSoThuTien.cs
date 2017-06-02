@@ -10,6 +10,8 @@ using QLMamNon.Dao.QLMamNonDsTableAdapters;
 using QLMamNon.Facade;
 using QLMamNon.Forms.Resource;
 using QLThuChi;
+using QLMamNon.Components.Command;
+using QLMamNon.Components.Command.QLMNDao;
 
 namespace QLMamNon.Forms.HocSinh
 {
@@ -51,14 +53,16 @@ namespace QLMamNon.Forms.HocSinh
         private void gvMain_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
             GridView gv = sender as GridView;
-            List<String> fieldsToEvaluate = new List<string>() { "SXThangTruoc",
-                "AnSangThangTruoc",
-                "SoTienAnSangThangNay",
-                "AnToiThangTruoc",
-                "SoTienAnToiThangNay",
-                "SoTienNangKhieu",
-                "SoTienTruyThu",
-                "SoTienDieuHoa" };
+            List<String> fieldsToEvaluate = new List<string>() { ViewBangThuTienFieldName.SXThangTruoc,
+                ViewBangThuTienFieldName.AnSangThangTruoc,
+                ViewBangThuTienFieldName.SoTienAnSangThangNay,
+                ViewBangThuTienFieldName.AnToiThangTruoc,
+                ViewBangThuTienFieldName.SoTienAnToiThangNay,
+                ViewBangThuTienFieldName.SoTienNangKhieu,
+                ViewBangThuTienFieldName.SoTienTruyThu,
+                ViewBangThuTienFieldName.SoTienDieuHoa,
+                ViewBangThuTienFieldName.SoTienDoDung
+            };
 
             if (fieldsToEvaluate.Contains(e.Column.FieldName) && e.RowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
             {
@@ -67,6 +71,11 @@ namespace QLMamNon.Forms.HocSinh
                     DataRowView rowView = gv.GetRow(e.RowHandle) as DataRowView;
                     QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row = rowView.Row as QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow;
                     BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row, prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(row.HocSinhId) ? prevMonthRowDictionary[row.HocSinhId] : null, bTTKTDataTable, phieuThuDataTable, false);
+
+                    if (ViewBangThuTienFieldName.SXThangTruoc.Equals(e.Column.FieldName))
+                    {
+                        this.recalculateBangThuTienKhoanThuList(row);
+                    }
                 }
             }
         }
@@ -77,7 +86,7 @@ namespace QLMamNon.Forms.HocSinh
             DateTime ngayTinh = this.GetNgayTinh();
             if (ngayTinh != DateTime.MinValue)
             {
-                this.loadViewBangThuTienData(ngayTinh);
+                this.loadViewBangThuTiens(ngayTinh);
             }
         }
 
@@ -126,12 +135,78 @@ namespace QLMamNon.Forms.HocSinh
         protected override void onSaving()
         {
             QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable table = this.DataTable as QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable;
-            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row in table)
+            List<int> bangThuTienIds = new List<int>();
+            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow in table)
             {
-                row.SoTienSXThangTruoc = BangThuTienUtil.SXToSoTienSX(row.SXThangTruoc);
-                row.SoTienAnSangThangTruoc = BangThuTienUtil.SXAnSangToSoTienAnSang(row.AnSangThangTruoc);
-                row.SoTienAnToiThangTruoc = BangThuTienUtil.SXAnToiToSoTienAnToi(row.AnToiThangTruoc);
+                viewBangThuTienRow.SoTienSXThangTruoc = BangThuTienUtil.SXToSoTienSX(viewBangThuTienRow.SXThangTruoc);
+                viewBangThuTienRow.SoTienAnSangThangTruoc = BangThuTienUtil.SXAnSangToSoTienAnSang(viewBangThuTienRow.AnSangThangTruoc);
+                viewBangThuTienRow.SoTienAnToiThangTruoc = BangThuTienUtil.SXAnToiToSoTienAnToi(viewBangThuTienRow.AnToiThangTruoc);
+
+                if (viewBangThuTienRow[ViewBangThuTienFieldName.SXThangTruoc, DataRowVersion.Original] != DBNull.Value && viewBangThuTienRow[ViewBangThuTienFieldName.SXThangTruoc, DataRowVersion.Current] != DBNull.Value)
+                {
+                    int originalVersionToCompare = (int)viewBangThuTienRow[ViewBangThuTienFieldName.SXThangTruoc, DataRowVersion.Original];
+                    int currentVersionToCompare = (int)viewBangThuTienRow[ViewBangThuTienFieldName.SXThangTruoc, DataRowVersion.Current];
+
+                    if (originalVersionToCompare != currentVersionToCompare)
+                    {
+                        bangThuTienIds.Add(viewBangThuTienRow.BangThuTienId);
+                    }
+                }
             }
+
+            if (!ListUtil.IsEmpty(bangThuTienIds))
+            {
+                QLMamNon.Dao.QLMamNonDs.BangThuTienKhoanThuDataTable bangThuTienKhoanThuDataTable = bangThuTienKhoanThuTableAdapter.GetBangThuTienKhoanThuByBangThuTienIds(StringUtil.Join(bangThuTienIds, ","));
+
+                foreach (QLMamNon.Dao.QLMamNonDs.BangThuTienKhoanThuRow bangThuTienKhoanThuRow in bangThuTienKhoanThuDataTable)
+                {
+                    QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow[] viewBangThuTienRows = (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow[])table.Select(String.Format("BangThuTienId={0}", bangThuTienKhoanThuRow.BangThuTienId));
+                    QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow = viewBangThuTienRows[0];
+                    switch (bangThuTienKhoanThuRow.KhoanThuId)
+                    {
+                        case BangThuTienConstant.KhoanThuIdTienAnSua:
+                            bangThuTienKhoanThuRow.SoTien = viewBangThuTienRow.TienAnSua;
+                            break;
+                        case BangThuTienConstant.KhoanThuIdPhuPhi:
+                            bangThuTienKhoanThuRow.SoTien = viewBangThuTienRow.PhuPhi;
+                            break;
+                        case BangThuTienConstant.KhoanThuIdBanTru:
+                            bangThuTienKhoanThuRow.SoTien = viewBangThuTienRow.BanTru;
+                            break;
+                        case BangThuTienConstant.KhoanThuIdHocPhi:
+                            bangThuTienKhoanThuRow.SoTien = viewBangThuTienRow.HocPhi;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+                bangThuTienKhoanThuTableAdapter.Update(bangThuTienKhoanThuDataTable);
+            }
+
+            // Start Updating SoTienTruyThu for each BangThuTienRow
+            QLMNDaoJobInvoker qlmnDaoJobInvoker = new QLMNDaoJobInvoker();
+            qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand = new UpdateSoTienTruyThuOfBangThuTienCommand();
+            qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand.CommandParameter.Add(UpdateSoTienTruyThuOfBangThuTienCommand.ParameterViewBangThuTienTableAdapter, this.viewBangThuTienTableAdapter);
+
+            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow in table)
+            {
+                if (viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Original] != DBNull.Value && viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Current] != DBNull.Value)
+                {
+                    long originalVersionToCompare = (long)viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Original];
+                    long currentVersionToCompare = (long)viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Current];
+
+                    if (originalVersionToCompare != currentVersionToCompare)
+                    {
+                        qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand.CommandParameter.Remove(UpdateSoTienTruyThuOfBangThuTienCommand.ParameterCurrentViewBangThuTien);
+                        qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand.CommandParameter.Remove(UpdateSoTienTruyThuOfBangThuTienCommand.ParameterSoTienAdded);
+                        qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand.CommandParameter.Add(UpdateSoTienTruyThuOfBangThuTienCommand.ParameterCurrentViewBangThuTien, viewBangThuTienRow);
+                        qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand.CommandParameter.Add(UpdateSoTienTruyThuOfBangThuTienCommand.ParameterSoTienAdded, currentVersionToCompare - originalVersionToCompare);
+                        qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTien();
+                    }
+                }
+            }
+            // Finished Updating SoTienTruyThu for each BangThuTien
 
             base.onSaving();
         }
@@ -165,7 +240,7 @@ namespace QLMamNon.Forms.HocSinh
             hocSinhDataTable = this.hocSinhTableAdapter.GetData();
         }
 
-        private void loadViewBangThuTienData(DateTime ngayTinh)
+        private void loadViewBangThuTiens(DateTime ngayTinh)
         {
             long genHistoryCount = (long)bangThuTienGenHistoryTableAdapter.countBangThuTienGenHistoryByLopAndNgayTinh(null, ngayTinh);
 
@@ -194,6 +269,7 @@ namespace QLMamNon.Forms.HocSinh
                 {
                     row.HoTen = StaticDataUtil.getHocSinhFullNameByHocSinhId(hocSinhDataTable, row.HocSinhId);
                     BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row, prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(row.HocSinhId) ? prevMonthRowDictionary[row.HocSinhId] : null, bTTKTDataTable, phieuThuDataTable, false);
+                    row.AcceptChanges();
                 }
             }
 
@@ -278,10 +354,10 @@ namespace QLMamNon.Forms.HocSinh
             bangThuTienTableAdapter.Insert(hocSinhId, lopId, sXThangTruoc, soTienSXThangTruoc, anSangThangTruoc, soTienAnSangThangTruoc, soTienAnSangThangNay, soTienAnToiThangTruoc, anToiThangTruoc, soTienAnToiThangNay, soTienDoDung, soTienNangKhieu, soTienTruyThu, soTienDieuHoa, ngayTinh, stt, 0, DateTime.Now, ghiChu);
             int bangThuTienId = (int)bangThuTienTableAdapter.Adapter.InsertCommand.LastInsertedId;
             int khoiId = StaticDataUtil.GetKhoiIdByLopId(lopKhoiTableAdapter, lopId).Value;
-            this.generateBangThuTienKhoanThu(bangThuTienId, khoiId, hocSinhId, ngayTinh, 0);
+            this.generateBangThuTienKhoanThu(bangThuTienId, khoiId, ngayTinh, 0);
         }
 
-        private void generateBangThuTienKhoanThu(int bangThuTienId, int khoiId, int hocSinhId, DateTime ngayTinh, int soNgayNghiThang)
+        private void generateBangThuTienKhoanThu(int bangThuTienId, int khoiId, DateTime ngayTinh, int soNgayNghiThang)
         {
             int[] khoanThuIds = new int[] { BangThuTienConstant.KhoanThuIdBanTru, BangThuTienConstant.KhoanThuIdHocPhi, BangThuTienConstant.KhoanThuIdPhuPhi, BangThuTienConstant.KhoanThuIdTienAnSua, BangThuTienConstant.KhoanThuIdAnSang, BangThuTienConstant.KhoanThuIdAnToi };
             QLMamNon.Dao.QLMamNonDs.KhoanThuHangNamDataTable khoanThuHangNamTable = khoanThuHangNamTableAdapter.GetKhoanThuHangNamByParams(String.Join(",", khoanThuIds), khoiId, ngayTinh);
@@ -290,6 +366,35 @@ namespace QLMamNon.Forms.HocSinh
             {
                 long soTien = BangThuTienUtil.CalculateSoTienPhi(khoiId, soNgayNghiThang, row.SoTien, row.KhoanThuId);
                 bangThuTienKhoanThuTableAdapter.Insert(row.KhoanThuId, bangThuTienId, soTien);
+            }
+        }
+
+        private void recalculateBangThuTienKhoanThuList(QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow)
+        {
+            int khoiId = StaticDataUtil.GetKhoiIdByLopId(lopKhoiTableAdapter, viewBangThuTienRow.LopId).Value;
+            int[] khoanThuIds = new int[] { BangThuTienConstant.KhoanThuIdBanTru, BangThuTienConstant.KhoanThuIdHocPhi, BangThuTienConstant.KhoanThuIdPhuPhi, BangThuTienConstant.KhoanThuIdTienAnSua, BangThuTienConstant.KhoanThuIdAnSang, BangThuTienConstant.KhoanThuIdAnToi };
+            QLMamNon.Dao.QLMamNonDs.KhoanThuHangNamDataTable khoanThuHangNamTable = khoanThuHangNamTableAdapter.GetKhoanThuHangNamByParams(String.Join(",", khoanThuIds), khoiId, viewBangThuTienRow.NgayTinh);
+
+            foreach (QLMamNon.Dao.QLMamNonDs.KhoanThuHangNamRow row in khoanThuHangNamTable)
+            {
+                long soTien = BangThuTienUtil.CalculateSoTienPhi(khoiId, viewBangThuTienRow.SXThangTruoc, row.SoTien, row.KhoanThuId);
+                switch (row.KhoanThuId)
+                {
+                    case BangThuTienConstant.KhoanThuIdTienAnSua:
+                        viewBangThuTienRow.TienAnSua = soTien;
+                        break;
+                    case BangThuTienConstant.KhoanThuIdPhuPhi:
+                        viewBangThuTienRow.PhuPhi = soTien;
+                        break;
+                    case BangThuTienConstant.KhoanThuIdBanTru:
+                        viewBangThuTienRow.BanTru = soTien;
+                        break;
+                    case BangThuTienConstant.KhoanThuIdHocPhi:
+                        viewBangThuTienRow.HocPhi = soTien;
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 

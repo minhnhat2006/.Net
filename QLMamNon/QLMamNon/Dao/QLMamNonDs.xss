@@ -28,7 +28,7 @@
     <Shape ID="DesignTable:ViewTaiSan" ZOrder="7" X="62" Y="475" Height="50" Width="208" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="57" OldDataTableHeight="228" SplitterPosition="22" />
     <Shape ID="DesignTable:ViewBanGiaoTaiSan" ZOrder="8" X="61" Y="555" Height="51" Width="255" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="74" OldDataTableHeight="228" SplitterPosition="23" />
     <Shape ID="DesignTable:PhieuChi" ZOrder="5" X="364" Y="275" Height="50" Width="190" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="58" OldDataTableHeight="160" SplitterPosition="22" />
-    <Shape ID="DesignTable:ViewBangThuTien" ZOrder="2" X="365" Y="435" Height="50" Width="294" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="57" OldDataTableHeight="228" SplitterPosition="22" />
+    <Shape ID="DesignTable:ViewBangThuTien" ZOrder="2" X="365" Y="435" Height="51" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="74" OldDataTableHeight="228" SplitterPosition="23" />
     <Shape ID="DesignTable:BangThuTien" ZOrder="1" X="63" Y="404" Height="50" Width="211" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="41" OldDataTableHeight="228" SplitterPosition="22" />
   </Shapes>
   <Connectors />

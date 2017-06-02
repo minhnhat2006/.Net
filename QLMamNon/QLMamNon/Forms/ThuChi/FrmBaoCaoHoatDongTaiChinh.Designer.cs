@@ -131,6 +131,7 @@
             this.gvMain.OptionsSelection.CheckBoxSelectorColumnWidth = 25;
             this.gvMain.OptionsSelection.MultiSelect = true;
             this.gvMain.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gvMain.OptionsView.ShowGroupPanel = false;
             // 
             // colPhanLoaiChiId
             // 

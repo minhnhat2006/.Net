@@ -119,6 +119,10 @@
     <Compile Include="Components\ActivityTracker\ButtonClickObserver.cs" />
     <Compile Include="Components\ActivityTracker\DEActivityTracker.cs" />
     <Compile Include="Components\ActivityTracker\LoggingObserver.cs" />
+    <Compile Include="Components\Command\CommandParameter.cs" />
+    <Compile Include="Components\Command\QLMNDaoJobInvoker.cs" />
+    <Compile Include="Components\Command\QLMNDao\QLMNDaoCommand.cs" />
+    <Compile Include="Components\Command\QLMNDao\UpdateSoTienTruyThuOfBangThuTienCommand.cs" />
     <Compile Include="Components\Data.Static\BangTinhPhi.cs" />
     <Compile Include="Components\Data.Static\PhanLoaiChi.cs" />
     <Compile Include="Components\Data.Static\KhoanThuData.cs" />
@@ -135,11 +139,13 @@
     <Compile Include="Constant\CommonConstant.cs" />
     <Compile Include="Constant\BangThuTienConstant.cs" />
     <Compile Include="Constant\ConfigConstant.cs" />
+    <Compile Include="Dao\Constant\ViewBangThuTienFieldName.cs" />
     <Compile Include="Dao\QLMamNonDs.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLMamNonDs.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Entity\Form\SoTheoDoiTaiSanItem.cs" />
     <Compile Include="Entity\Form\PhieuChiBCHDTC.cs" />
     <Compile Include="Entity\Form\NamHoc.cs" />
     <Compile Include="Facade\StaticDataFacade.cs" />
@@ -282,10 +288,22 @@
     <Compile Include="Forms\ThuChi\FrmSoThuTien.Designer.cs">
       <DependentUpon>FrmSoThuTien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TinNhan\FrmTinNhanPhuHuynh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TinNhan\FrmTinNhanPhuHuynh.Designer.cs">
+      <DependentUpon>FrmTinNhanPhuHuynh.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptTaiSaHistory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptTaiSaHistory.designer.cs">
+      <DependentUpon>RptTaiSaHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RptSoTheoDoiTaiSan.cs">
       <SubType>Component</SubType>
@@ -488,6 +506,9 @@
     <EmbeddedResource Include="Forms\ThuChi\FrmSoThuTien.resx">
       <DependentUpon>FrmSoThuTien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TinNhan\FrmTinNhanPhuHuynh.resx">
+      <DependentUpon>FrmTinNhanPhuHuynh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
@@ -497,6 +518,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptTaiSaHistory.resx">
+      <DependentUpon>RptTaiSaHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RptSoTheoDoiTaiSan.resx">
       <DependentUpon>RptSoTheoDoiTaiSan.cs</DependentUpon>
@@ -583,6 +607,7 @@
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewHocTapRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewTaiSanRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Entity.Form.NamHoc.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Entity.Form.SoTheoDoiTaiSanItem.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

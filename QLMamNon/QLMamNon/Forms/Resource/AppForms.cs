@@ -29,5 +29,6 @@ namespace QLMamNon.Forms.Resource
         public const string FormTaiSan = "FrmTaiSan";
         public const string FormPhanBoTaiSan = "FrmPhanBoTaiSan";
         public const string FormSoTheoDoiTaiSan = "FrmSoTheoDoiTaiSan";
+        public const string FormTinNhanPhuHuynh = "FrmTinNhanPhuHuynh";
     }
 }

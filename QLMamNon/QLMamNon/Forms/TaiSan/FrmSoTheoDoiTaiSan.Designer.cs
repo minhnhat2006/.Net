@@ -84,7 +84,7 @@
             this.lblTaoPhieuThu.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
             this.lblTaoPhieuThu.Location = new System.Drawing.Point(12, 12);
             this.lblTaoPhieuThu.Name = "lblTaoPhieuThu";
-            this.lblTaoPhieuThu.Size = new System.Drawing.Size(154, 20);
+            this.lblTaoPhieuThu.Size = new System.Drawing.Size(153, 20);
             this.lblTaoPhieuThu.TabIndex = 4;
             this.lblTaoPhieuThu.Text = "SỔ THEO DÕI TÀI SẢN";
             this.lblTaoPhieuThu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -105,7 +105,7 @@
             this.cmbYear.Properties.ShowHeader = false;
             this.cmbYear.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbYear.Properties.ValueMember = "FromYear";
-            this.cmbYear.Size = new System.Drawing.Size(86, 26);
+            this.cmbYear.Size = new System.Drawing.Size(85, 26);
             this.cmbYear.StyleController = this.lcMain;
             this.cmbYear.TabIndex = 1;
             // 
@@ -124,7 +124,7 @@
             this.lciNgay});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(178, 74);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(177, 74);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // lciLblTaoPhieuThu
@@ -132,7 +132,7 @@
             this.lciLblTaoPhieuThu.Control = this.lblTaoPhieuThu;
             this.lciLblTaoPhieuThu.Location = new System.Drawing.Point(0, 0);
             this.lciLblTaoPhieuThu.Name = "lciLblTaoPhieuThu";
-            this.lciLblTaoPhieuThu.Size = new System.Drawing.Size(158, 24);
+            this.lciLblTaoPhieuThu.Size = new System.Drawing.Size(157, 24);
             this.lciLblTaoPhieuThu.TextSize = new System.Drawing.Size(0, 0);
             this.lciLblTaoPhieuThu.TextVisible = false;
             // 
@@ -141,7 +141,7 @@
             this.lciNgay.Control = this.cmbYear;
             this.lciNgay.Location = new System.Drawing.Point(0, 24);
             this.lciNgay.Name = "lciNgay";
-            this.lciNgay.Size = new System.Drawing.Size(158, 30);
+            this.lciNgay.Size = new System.Drawing.Size(157, 30);
             this.lciNgay.Text = "Chọn năm:";
             this.lciNgay.TextSize = new System.Drawing.Size(65, 19);
             // 
@@ -153,7 +153,7 @@
             // 
             this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(12, 63);
+            this.btnClose.Location = new System.Drawing.Point(122, 63);
             this.btnClose.MaximumSize = new System.Drawing.Size(250, 25);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(60, 25);
@@ -166,12 +166,12 @@
             // 
             this.btnXemBaoCao.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnXemBaoCao.Image = ((System.Drawing.Image)(resources.GetObject("btnXemBaoCao.Image")));
-            this.btnXemBaoCao.Location = new System.Drawing.Point(78, 63);
+            this.btnXemBaoCao.Location = new System.Drawing.Point(12, 63);
             this.btnXemBaoCao.MaximumSize = new System.Drawing.Size(250, 25);
             this.btnXemBaoCao.Name = "btnXemBaoCao";
-            this.btnXemBaoCao.Size = new System.Drawing.Size(104, 25);
+            this.btnXemBaoCao.Size = new System.Drawing.Size(100, 25);
             this.btnXemBaoCao.StyleController = this.lcMain;
-            this.btnXemBaoCao.TabIndex = 4;
+            this.btnXemBaoCao.TabIndex = 2;
             this.btnXemBaoCao.Text = "Xem báo cáo";
             this.btnXemBaoCao.Click += new System.EventHandler(this.btnXemBaoCao_Click);
             // 

@@ -51,7 +51,7 @@ namespace QLMamNon.Forms.ThuChi
 
         protected void FrmTaoPhieuThu_Activated(object sender, EventArgs e)
         {
-            FormMainFacade.SetManHinhCaption(this.FormKey);
+            FormMainFacade.SetFormCaption(this.FormKey);
         }
 
         private void FrmTaoPhieuThu_FormClosed(object sender, FormClosedEventArgs e)
@@ -68,7 +68,7 @@ namespace QLMamNon.Forms.ThuChi
 
             this.luuPhieuThu();
             this.resetForm();
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.AddedAndAddingPhieuThuCaption);
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.AddedAndAddingPhieuThuCaption);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace QLMamNon.Forms.ThuChi
 
             this.btnLuuTao_Click(sender, e);
             this.Close();
-            FormMainFacade.SetTrangThaiCaption(StatusCaptions.AddedPhieuThuCaption);
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.AddedPhieuThuCaption);
         }
 
         private void loadPhieuThu()

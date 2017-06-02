@@ -92,6 +92,9 @@
             this.khoanThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuTableAdapter();
             this.bangTinhPhiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.BangTinhPhiTableAdapter();
             this.phanLoaiChiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhanLoaiChiTableAdapter();
+            this.rpTinNhan = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgGuiTinNhan = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.bbiPhuHuynhHS = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -133,19 +136,21 @@
             this.bbiRptBaoCaoChiTietHoatDongTaiChinh,
             this.bbiTaiSan,
             this.bbiPhanBoTaiSan,
-            this.bbiSoTheoDoiTaiSan});
+            this.bbiSoTheoDoiTaiSan,
+            this.bbiPhuHuynhHS});
             this.ribbon.LargeImages = this.imageCollection1;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbon.MaxItemId = 7;
+            this.ribbon.MaxItemId = 8;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpHocSinh,
             this.rpGiaoVien,
             this.rpTaiSan,
             this.rpThuChi,
-            this.rpDanhMuc});
-            this.ribbon.Size = new System.Drawing.Size(990, 150);
+            this.rpDanhMuc,
+            this.rpTinNhan});
+            this.ribbon.Size = new System.Drawing.Size(990, 163);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // applicationMenu1
@@ -645,6 +650,30 @@
             // 
             this.phanLoaiChiTableAdapter.ClearBeforeFill = true;
             // 
+            // rpTinNhan
+            // 
+            this.rpTinNhan.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgGuiTinNhan});
+            this.rpTinNhan.Image = ((System.Drawing.Image)(resources.GetObject("rpTinNhan.Image")));
+            this.rpTinNhan.Name = "rpTinNhan";
+            this.rpTinNhan.Text = "Tin nhắn";
+            // 
+            // rpgGuiTinNhan
+            // 
+            this.rpgGuiTinNhan.ItemLinks.Add(this.bbiPhuHuynhHS);
+            this.rpgGuiTinNhan.Name = "rpgGuiTinNhan";
+            this.rpgGuiTinNhan.Text = "Gửi tin nhắn";
+            // 
+            // bbiPhuHuynhHS
+            // 
+            this.bbiPhuHuynhHS.Caption = "Phụ huynh học sinh";
+            this.bbiPhuHuynhHS.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
+            this.bbiPhuHuynhHS.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiPhuHuynhHS.Glyph")));
+            this.bbiPhuHuynhHS.Id = 7;
+            this.bbiPhuHuynhHS.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiPhuHuynhHS.LargeGlyph")));
+            this.bbiPhuHuynhHS.Name = "bbiPhuHuynhHS";
+            this.bbiPhuHuynhHS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiPhuHuynhHS_ItemClick);
+            // 
             // FrmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -737,5 +766,8 @@
         private DevExpress.XtraBars.BarButtonItem bbiSoTheoDoiTaiSan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgBaoCaoTaiSan;
         private Dao.QLMamNonDsTableAdapters.PhanLoaiChiTableAdapter phanLoaiChiTableAdapter;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpTinNhan;
+        private DevExpress.XtraBars.BarButtonItem bbiPhuHuynhHS;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgGuiTinNhan;
     }
 }

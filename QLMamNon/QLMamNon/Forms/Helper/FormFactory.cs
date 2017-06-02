@@ -5,6 +5,7 @@ using QLMamNon.Constant;
 using QLMamNon.Forms.DanhMuc;
 using QLMamNon.Forms.HocSinh;
 using QLMamNon.Forms.ThuChi;
+using QLMamNon.Forms.TinNhan;
 
 namespace QLMamNon.Forms.Resource
 {
@@ -38,6 +39,7 @@ namespace QLMamNon.Forms.Resource
             formToTypes.Add(AppForms.FormTaiSan, typeof(FrmTaiSan).FullName);
             formToTypes.Add(AppForms.FormPhanBoTaiSan, typeof(FrmPhanBoTaiSan).FullName);
             formToTypes.Add(AppForms.FormSoTheoDoiTaiSan, typeof(FrmSoTheoDoiTaiSan).FullName);
+            formToTypes.Add(AppForms.FormTinNhanPhuHuynh, typeof(FrmTinNhanPhuHuynh).FullName);
         }
 
         public Form GetForm(string key)
