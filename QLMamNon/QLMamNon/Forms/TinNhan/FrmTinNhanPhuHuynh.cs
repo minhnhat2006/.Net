@@ -23,6 +23,7 @@ namespace QLMamNon.Forms.TinNhan
             fillTxtGuide();
 
             this.lopRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.LopHoc);
+            this.cmbLop_EditValueChanged(sender, e);
         }
 
         private void fillTxtGuide()
@@ -52,7 +53,15 @@ namespace QLMamNon.Forms.TinNhan
 
         private void cmbLop_EditValueChanged(object sender, EventArgs e)
         {
-            this.hocSinhRowBindingSource.DataSource = this.hocSinhTableAdapter.GetHocSinhByLopAndNgay((int)this.cmbLop.EditValue, DateTime.Now);
+            if (this.cmbLop.EditValue == null)
+            {
+                this.hocSinhRowBindingSource.DataSource = this.hocSinhTableAdapter.GetHocSinhByLopAndNgay(null, DateTime.Now);
+            }
+            else
+            {
+                this.hocSinhRowBindingSource.DataSource = this.hocSinhTableAdapter.GetHocSinhByLopAndNgay((int)this.cmbLop.EditValue, DateTime.Now);
+            }
+
             this.gvMain.SelectAll();
         }
 

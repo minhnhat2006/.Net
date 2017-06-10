@@ -12,6 +12,7 @@ using QLMamNon.Forms.Resource;
 using DevExpress.XtraGrid;
 using System.Data;
 using QLMamNon.Dao;
+using System.Threading;
 
 namespace QLMamNon.Forms
 {
@@ -203,17 +204,35 @@ namespace QLMamNon.Forms
 
         protected virtual void onSaving()
         {
-            DataTable table = this.DataTable.GetChanges();
-
-            if (table != null)
+            try
             {
-                this.DataAdapter.Update(table);
-                this.DataTable.Merge(table);
+                DataTable table = this.DataTable.GetChanges();
+
+                if (table != null)
+                {
+                    this.DataAdapter.Update(table);
+                    this.DataTable.Merge(table);
+                }
+
+                this.DataTable.AcceptChanges();
+            }
+            catch (Exception ex)
+            {
+                this.onSavingError(ex);
             }
 
-            this.DataTable.AcceptChanges();
             FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.SavedCaption);
         }
+
+        protected virtual void onSavingError(Exception ex)
+        {
+            if (ex is DBConcurrencyException)
+            {
+                this.reloadDataTable();
+            }
+        }
+
+        protected virtual void reloadDataTable() { }
 
         protected virtual void onDeleting()
         {
@@ -243,6 +262,20 @@ namespace QLMamNon.Forms
             }
 
             FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.CanceledCaption);
+        }
+
+        #endregion
+
+        #region Additional utils
+
+        protected void ShowGridLoadingPanel()
+        {
+            this.GridViewMain.ShowLoadingPanel();
+        }
+
+        protected void HideGridLoadingPanel()
+        {
+            this.GridViewMain.HideLoadingPanel();
         }
 
         #endregion

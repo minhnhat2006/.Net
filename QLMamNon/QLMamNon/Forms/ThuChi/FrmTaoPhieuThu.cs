@@ -1,11 +1,8 @@
 ﻿using System;
-using DevExpress.XtraGrid.Views.Grid;
-using QLMamNon.Components.Data.Static;
-using QLMamNon.Facade;
-using System.Data;
-using QLMamNon.Forms.Resource;
-using DevExpress.XtraEditors;
 using System.Windows.Forms;
+using DevExpress.XtraGrid.Views.Grid;
+using QLMamNon.Facade;
+using QLMamNon.Forms.Resource;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -67,6 +64,8 @@ namespace QLMamNon.Forms.ThuChi
             }
 
             this.luuPhieuThu();
+            this.updateSoTienTruyThuForBangThuTienNextMonths(this.dateNgay.DateTime, (int)this.cmbHocSinh.EditValue);
+
             this.resetForm();
             FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.AddedAndAddingPhieuThuCaption);
         }

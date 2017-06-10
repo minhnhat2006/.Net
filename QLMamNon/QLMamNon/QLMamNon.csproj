@@ -219,6 +219,10 @@
     <Compile Include="Forms\HocSinh\FrmThongTinCanDo.Designer.cs">
       <DependentUpon>FrmThongTinCanDo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\HocSinh\FrmXepLop..Service.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FrmXepLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\HocSinh\FrmXepLop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +250,12 @@
     <Compile Include="Forms\TaiSan\FrmPhanBoTaiSan.Designer.cs">
       <DependentUpon>FrmPhanBoTaiSan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ThuChi\FrmSelectHocSinhsToGenerate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmSelectHocSinhsToGenerate.Designer.cs">
+      <DependentUpon>FrmSelectHocSinhsToGenerate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ThuChi\FrmBaoCaoChiTietHoatDongTaiChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +273,14 @@
     </Compile>
     <Compile Include="Forms\ThuChi\FrmPhieuChi.Designer.cs">
       <DependentUpon>FrmPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmSoThuTien.GenerateSoThuTien.cs">
+      <DependentUpon>FrmSoThuTien.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmSoThuTien.MoveRow.cs">
+      <DependentUpon>FrmSoThuTien.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ThuChi\FrmTaoPhieuChi.cs">
       <SubType>Form</SubType>
@@ -287,6 +305,10 @@
     </Compile>
     <Compile Include="Forms\ThuChi\FrmSoThuTien.Designer.cs">
       <DependentUpon>FrmSoThuTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmTaoPhieuThu.Service.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FrmTaoPhieuThu.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TinNhan\FrmTinNhanPhuHuynh.cs">
       <SubType>Form</SubType>
@@ -347,6 +369,12 @@
     <Compile Include="Reports\RptBangKeTongHopThuTienHS.designer.cs">
       <DependentUpon>RptBangKeTongHopThuTienHS.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCEditFormXepLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormXepLop.Designer.cs">
+      <DependentUpon>UCEditFormXepLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCEditFormBanGiaoTaiSan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -405,6 +433,7 @@
       <DependentUpon>UCEditFormTruongHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\BangThuTienUtil.cs" />
+    <Compile Include="Utils\ThongTinHocSinhUtil.cs" />
     <Compile Include="Utils\StaticDataUtil.cs" />
     <Compile Include="Workflow\Handler\AdjustPopupEditFormAction.cs" />
     <Compile Include="Workflow\Handler\InitFormTrackerAction.cs" />
@@ -485,6 +514,9 @@
     <EmbeddedResource Include="Forms\TaiSan\FrmPhanBoTaiSan.resx">
       <DependentUpon>FrmPhanBoTaiSan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuChi\FrmSelectHocSinhsToGenerate.resx">
+      <DependentUpon>FrmSelectHocSinhsToGenerate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ThuChi\FrmBaoCaoChiTietHoatDongTaiChinh.resx">
       <DependentUpon>FrmBaoCaoChiTietHoatDongTaiChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -542,6 +574,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RptBangKeTongHopThuTienHS.resx">
       <DependentUpon>RptBangKeTongHopThuTienHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCEditFormXepLop.resx">
+      <DependentUpon>UCEditFormXepLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCEditFormBanGiaoTaiSan.resx">
       <DependentUpon>UCEditFormBanGiaoTaiSan.cs</DependentUpon>

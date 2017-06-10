@@ -46,7 +46,6 @@ D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.DanhMuc.FrmPhieu
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.ThuChi.FrmTaoPhieuChi.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.DanhMuc.FrmPhieuThu.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.ThuChi.FrmTaoPhieuThu.resources
-D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.HocSinh.FrmSoThuTien.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.PrintRibbonControllerResources.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Properties.Resources.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLThuChi.RptSoThuTienTrang2.resources
@@ -73,3 +72,6 @@ D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.ThuChi.FrmSoTheo
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLThuChi.RptSoTheoDoiTaiSan.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLThuChi.RptTaiSaHistory.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.TinNhan.FrmTinNhanPhuHuynh.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.ThuChi.FrmSelectHocSinhsToGenerate.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.UserControls.UCEditFormXepLop.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.ThuChi.FrmSoThuTien.resources

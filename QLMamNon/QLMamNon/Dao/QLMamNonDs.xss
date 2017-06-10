@@ -13,7 +13,7 @@
     <Shape ID="DesignTable:QuanHuyen" ZOrder="23" X="64" Y="273" Height="50" Width="208" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="41" OldDataTableHeight="75" SplitterPosition="22" />
     <Shape ID="DesignTable:PhuongXa" ZOrder="22" X="65" Y="331" Height="50" Width="199" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="41" OldDataTableHeight="75" SplitterPosition="22" />
     <Shape ID="DesignTable:KhoiTruong" ZOrder="21" X="404" Y="32" Height="50" Width="207" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="75" OldDataTableHeight="75" SplitterPosition="22" />
-    <Shape ID="DesignTable:HocSinh" ZOrder="15" X="68" Y="35" Height="50" Width="188" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="91" OldDataTableHeight="228" SplitterPosition="22" />
+    <Shape ID="DesignTable:HocSinh" ZOrder="15" X="68" Y="35" Height="54" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="139" OldDataTableHeight="228" SplitterPosition="24" />
     <Shape ID="DesignTable:PhanLoaiChi" ZOrder="6" X="366" Y="348" Height="50" Width="212" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="41" OldDataTableHeight="75" SplitterPosition="22" />
     <Shape ID="DesignTable:PhieuThu" ZOrder="4" X="722" Y="373" Height="51" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="57" OldDataTableHeight="160" SplitterPosition="23" />
     <Shape ID="DesignTable:HocSinhLop" ZOrder="19" X="65" Y="119" Height="50" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="74" OldDataTableHeight="143" SplitterPosition="22" />
@@ -28,7 +28,7 @@
     <Shape ID="DesignTable:ViewTaiSan" ZOrder="7" X="62" Y="475" Height="50" Width="208" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="57" OldDataTableHeight="228" SplitterPosition="22" />
     <Shape ID="DesignTable:ViewBanGiaoTaiSan" ZOrder="8" X="61" Y="555" Height="51" Width="255" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="74" OldDataTableHeight="228" SplitterPosition="23" />
     <Shape ID="DesignTable:PhieuChi" ZOrder="5" X="364" Y="275" Height="50" Width="190" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="58" OldDataTableHeight="160" SplitterPosition="22" />
-    <Shape ID="DesignTable:ViewBangThuTien" ZOrder="2" X="365" Y="435" Height="51" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="74" OldDataTableHeight="228" SplitterPosition="23" />
+    <Shape ID="DesignTable:ViewBangThuTien" ZOrder="2" X="365" Y="435" Height="55" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="101" OldDataTableHeight="228" SplitterPosition="25" />
     <Shape ID="DesignTable:BangThuTien" ZOrder="1" X="63" Y="404" Height="50" Width="211" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="41" OldDataTableHeight="228" SplitterPosition="22" />
   </Shapes>
   <Connectors />

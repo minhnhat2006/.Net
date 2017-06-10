@@ -15,5 +15,10 @@ namespace ACG.Core.WinForm.Util
         {
             return arr == null || arr.Length == 0;
         }
+
+        public static bool Contains(object[] arr, object value)
+        {
+            return Array.LastIndexOf(arr, value) > -1;
+        }
     }
 }

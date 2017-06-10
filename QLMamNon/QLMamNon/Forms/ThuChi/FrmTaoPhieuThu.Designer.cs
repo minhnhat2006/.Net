@@ -58,6 +58,8 @@
             this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
             this.phieuThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter();
             this.unknownColumnViewTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.UnknownColumnViewTableAdapter();
+            this.viewBangThuTienTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ViewBangThuTienTableAdapter();
+            this.bangThuTienKhoanThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.BangThuTienKhoanThuTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).BeginInit();
@@ -119,19 +121,19 @@
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.Location = new System.Drawing.Point(180, 201);
+            this.txtGhiChu.Location = new System.Drawing.Point(180, 256);
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(234, 36);
+            this.txtGhiChu.Size = new System.Drawing.Size(233, 36);
             this.txtGhiChu.StyleController = this.lcMain;
             this.txtGhiChu.TabIndex = 12;
             // 
             // btnLuuTao
             // 
             this.btnLuuTao.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuTao.Image")));
-            this.btnLuuTao.Location = new System.Drawing.Point(164, 241);
+            this.btnLuuTao.Location = new System.Drawing.Point(164, 296);
             this.btnLuuTao.MaximumSize = new System.Drawing.Size(250, 0);
             this.btnLuuTao.Name = "btnLuuTao";
-            this.btnLuuTao.Size = new System.Drawing.Size(250, 40);
+            this.btnLuuTao.Size = new System.Drawing.Size(249, 40);
             this.btnLuuTao.StyleController = this.lcMain;
             this.btnLuuTao.TabIndex = 10;
             this.btnLuuTao.Text = "Lưu và Tạo mới";
@@ -140,7 +142,7 @@
             // btnLuu
             // 
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(33, 241);
+            this.btnLuu.Location = new System.Drawing.Point(33, 296);
             this.btnLuu.MaximumSize = new System.Drawing.Size(150, 0);
             this.btnLuu.MinimumSize = new System.Drawing.Size(100, 0);
             this.btnLuu.Name = "btnLuu";
@@ -152,14 +154,14 @@
             // 
             // txtSoTien
             // 
-            this.txtSoTien.Location = new System.Drawing.Point(180, 113);
+            this.txtSoTien.Location = new System.Drawing.Point(180, 168);
             this.txtSoTien.Name = "txtSoTien";
             this.txtSoTien.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtSoTien.Properties.DisplayFormat.FormatString = "c0";
             this.txtSoTien.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtSoTien.Properties.Mask.EditMask = "c0";
-            this.txtSoTien.Size = new System.Drawing.Size(234, 40);
+            this.txtSoTien.Size = new System.Drawing.Size(233, 40);
             this.txtSoTien.StyleController = this.lcMain;
             this.txtSoTien.TabIndex = 7;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Greater;
@@ -171,22 +173,22 @@
             // 
             // txtMaPhieu
             // 
-            this.txtMaPhieu.Location = new System.Drawing.Point(180, 69);
+            this.txtMaPhieu.Location = new System.Drawing.Point(180, 124);
             this.txtMaPhieu.Name = "txtMaPhieu";
-            this.txtMaPhieu.Size = new System.Drawing.Size(234, 40);
+            this.txtMaPhieu.Size = new System.Drawing.Size(233, 40);
             this.txtMaPhieu.StyleController = this.lcMain;
             this.txtMaPhieu.TabIndex = 6;
             // 
             // dateNgay
             // 
             this.dateNgay.EditValue = null;
-            this.dateNgay.Location = new System.Drawing.Point(180, -19);
+            this.dateNgay.Location = new System.Drawing.Point(180, 36);
             this.dateNgay.Name = "dateNgay";
             this.dateNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateNgay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgay.Size = new System.Drawing.Size(234, 40);
+            this.dateNgay.Size = new System.Drawing.Size(233, 40);
             this.dateNgay.StyleController = this.lcMain;
             this.dateNgay.TabIndex = 5;
             conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -196,16 +198,16 @@
             // lblTaoPhieuThu
             // 
             this.lblTaoPhieuThu.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold);
-            this.lblTaoPhieuThu.Location = new System.Drawing.Point(12, -43);
+            this.lblTaoPhieuThu.Location = new System.Drawing.Point(12, 12);
             this.lblTaoPhieuThu.Name = "lblTaoPhieuThu";
-            this.lblTaoPhieuThu.Size = new System.Drawing.Size(402, 20);
+            this.lblTaoPhieuThu.Size = new System.Drawing.Size(401, 20);
             this.lblTaoPhieuThu.TabIndex = 4;
             this.lblTaoPhieuThu.Text = "TẠO/CẬP NHẬT PHIẾU THU";
             this.lblTaoPhieuThu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cmbHocSinh
             // 
-            this.cmbHocSinh.Location = new System.Drawing.Point(180, 25);
+            this.cmbHocSinh.Location = new System.Drawing.Point(180, 80);
             this.cmbHocSinh.Name = "cmbHocSinh";
             this.cmbHocSinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -219,7 +221,7 @@
             this.cmbHocSinh.Properties.PopupSizeable = false;
             this.cmbHocSinh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbHocSinh.Properties.ValueMember = "HocSinhId";
-            this.cmbHocSinh.Size = new System.Drawing.Size(234, 40);
+            this.cmbHocSinh.Size = new System.Drawing.Size(233, 40);
             this.cmbHocSinh.StyleController = this.lcMain;
             this.cmbHocSinh.TabIndex = 11;
             // 
@@ -229,10 +231,10 @@
             // 
             // txtConLai
             // 
-            this.txtConLai.Location = new System.Drawing.Point(180, 157);
+            this.txtConLai.Location = new System.Drawing.Point(180, 212);
             this.txtConLai.Name = "txtConLai";
             this.txtConLai.Properties.ReadOnly = true;
-            this.txtConLai.Size = new System.Drawing.Size(234, 40);
+            this.txtConLai.Size = new System.Drawing.Size(233, 40);
             this.txtConLai.StyleController = this.lcMain;
             this.txtConLai.TabIndex = 8;
             // 
@@ -253,9 +255,9 @@
             this.lciCmbHocSinh,
             this.emptySpaceItem1,
             this.layoutControlItem3});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, -55);
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(426, 348);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(425, 348);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // lciLblTaoPhieuThu
@@ -263,7 +265,7 @@
             this.lciLblTaoPhieuThu.Control = this.lblTaoPhieuThu;
             this.lciLblTaoPhieuThu.Location = new System.Drawing.Point(0, 0);
             this.lciLblTaoPhieuThu.Name = "lciLblTaoPhieuThu";
-            this.lciLblTaoPhieuThu.Size = new System.Drawing.Size(406, 24);
+            this.lciLblTaoPhieuThu.Size = new System.Drawing.Size(405, 24);
             this.lciLblTaoPhieuThu.TextSize = new System.Drawing.Size(0, 0);
             this.lciLblTaoPhieuThu.TextVisible = false;
             // 
@@ -272,7 +274,7 @@
             this.lciNgay.Control = this.dateNgay;
             this.lciNgay.Location = new System.Drawing.Point(0, 24);
             this.lciNgay.Name = "lciNgay";
-            this.lciNgay.Size = new System.Drawing.Size(406, 44);
+            this.lciNgay.Size = new System.Drawing.Size(405, 44);
             this.lciNgay.Text = "Ngày thu:";
             this.lciNgay.TextSize = new System.Drawing.Size(165, 33);
             // 
@@ -281,7 +283,7 @@
             this.lciTxtMaPhieu.Control = this.txtMaPhieu;
             this.lciTxtMaPhieu.Location = new System.Drawing.Point(0, 112);
             this.lciTxtMaPhieu.Name = "lciTxtMaPhieu";
-            this.lciTxtMaPhieu.Size = new System.Drawing.Size(406, 44);
+            this.lciTxtMaPhieu.Size = new System.Drawing.Size(405, 44);
             this.lciTxtMaPhieu.Text = "Số biên lai:";
             this.lciTxtMaPhieu.TextSize = new System.Drawing.Size(165, 33);
             // 
@@ -290,7 +292,7 @@
             this.lciTxtSoTien.Control = this.txtSoTien;
             this.lciTxtSoTien.Location = new System.Drawing.Point(0, 156);
             this.lciTxtSoTien.Name = "lciTxtSoTien";
-            this.lciTxtSoTien.Size = new System.Drawing.Size(406, 44);
+            this.lciTxtSoTien.Size = new System.Drawing.Size(405, 44);
             this.lciTxtSoTien.Text = "Số tiền nộp:";
             this.lciTxtSoTien.TextSize = new System.Drawing.Size(165, 33);
             // 
@@ -299,7 +301,7 @@
             this.lciTxtChiChu.Control = this.txtConLai;
             this.lciTxtChiChu.Location = new System.Drawing.Point(0, 200);
             this.lciTxtChiChu.Name = "lciTxtChiChu";
-            this.lciTxtChiChu.Size = new System.Drawing.Size(406, 44);
+            this.lciTxtChiChu.Size = new System.Drawing.Size(405, 44);
             this.lciTxtChiChu.Text = "Còn lại:";
             this.lciTxtChiChu.TextSize = new System.Drawing.Size(165, 33);
             // 
@@ -322,7 +324,7 @@
             this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.layoutControlItem2.Location = new System.Drawing.Point(152, 284);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(254, 44);
+            this.layoutControlItem2.Size = new System.Drawing.Size(253, 44);
             this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
@@ -333,7 +335,7 @@
             this.lciCmbHocSinh.Control = this.cmbHocSinh;
             this.lciCmbHocSinh.Location = new System.Drawing.Point(0, 68);
             this.lciCmbHocSinh.Name = "lciCmbHocSinh";
-            this.lciCmbHocSinh.Size = new System.Drawing.Size(406, 44);
+            this.lciCmbHocSinh.Size = new System.Drawing.Size(405, 44);
             this.lciCmbHocSinh.Text = "Cho Học sinh:";
             this.lciCmbHocSinh.TextSize = new System.Drawing.Size(165, 33);
             // 
@@ -350,7 +352,7 @@
             this.layoutControlItem3.Control = this.txtGhiChu;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 244);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(406, 40);
+            this.layoutControlItem3.Size = new System.Drawing.Size(405, 40);
             this.layoutControlItem3.Text = "Ghi chú:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(165, 33);
             // 
@@ -369,6 +371,14 @@
             // unknownColumnViewTableAdapter
             // 
             this.unknownColumnViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // viewBangThuTienTableAdapter
+            // 
+            this.viewBangThuTienTableAdapter.ClearBeforeFill = true;
+            // 
+            // bangThuTienKhoanThuTableAdapter
+            // 
+            this.bangThuTienKhoanThuTableAdapter.ClearBeforeFill = true;
             // 
             // FrmTaoPhieuThu
             // 
@@ -439,5 +449,7 @@
         private DevExpress.XtraEditors.MemoEdit txtGhiChu;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private Dao.QLMamNonDsTableAdapters.UnknownColumnViewTableAdapter unknownColumnViewTableAdapter;
+        private Dao.QLMamNonDsTableAdapters.ViewBangThuTienTableAdapter viewBangThuTienTableAdapter;
+        private Dao.QLMamNonDsTableAdapters.BangThuTienKhoanThuTableAdapter bangThuTienKhoanThuTableAdapter;
     }
 }

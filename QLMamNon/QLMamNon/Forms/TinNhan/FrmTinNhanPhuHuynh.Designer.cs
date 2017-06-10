@@ -184,6 +184,7 @@
             // 
             this.cmbLop.Location = new System.Drawing.Point(52, 12);
             this.cmbLop.Name = "cmbLop";
+            this.cmbLop.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbLop.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {

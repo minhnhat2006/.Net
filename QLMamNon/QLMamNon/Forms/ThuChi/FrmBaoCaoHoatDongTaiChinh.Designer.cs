@@ -277,24 +277,24 @@
             // btnClose
             // 
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(40, 374);
+            this.btnClose.Location = new System.Drawing.Point(170, 374);
             this.btnClose.MaximumSize = new System.Drawing.Size(250, 25);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(78, 25);
             this.btnClose.StyleController = this.lcMain;
-            this.btnClose.TabIndex = 3;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Đóng";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnXemBaoCao
             // 
             this.btnXemBaoCao.Image = ((System.Drawing.Image)(resources.GetObject("btnXemBaoCao.Image")));
-            this.btnXemBaoCao.Location = new System.Drawing.Point(138, 374);
+            this.btnXemBaoCao.Location = new System.Drawing.Point(40, 374);
             this.btnXemBaoCao.MaximumSize = new System.Drawing.Size(250, 25);
             this.btnXemBaoCao.Name = "btnXemBaoCao";
             this.btnXemBaoCao.Size = new System.Drawing.Size(112, 25);
             this.btnXemBaoCao.StyleController = this.lcMain;
-            this.btnXemBaoCao.TabIndex = 4;
+            this.btnXemBaoCao.TabIndex = 3;
             this.btnXemBaoCao.Text = "Xem báo cáo";
             this.btnXemBaoCao.Click += new System.EventHandler(this.btnXemBaoCao_Click);
             // 
@@ -314,7 +314,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmBaoCaoHoatDongTaiChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tạo Phiếu Thu";
+            this.Text = "Báo cáo hoạt động tài chính";
             this.Load += new System.EventHandler(this.FrmBaoCaoHoatDongTaiChinh_Load);
             this.Shown += new System.EventHandler(this.FrmBaoCaoHoatDongTaiChinh_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).EndInit();

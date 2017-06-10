@@ -36,7 +36,7 @@ namespace QLMamNon.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("09/30/2016 16:20:00")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2017-06-06")]
         public global::System.DateTime AppLannchDate {
             get {
                 return ((global::System.DateTime)(this["AppLannchDate"]));

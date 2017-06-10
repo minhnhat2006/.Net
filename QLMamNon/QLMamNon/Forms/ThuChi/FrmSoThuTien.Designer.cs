@@ -1,6 +1,6 @@
 ﻿using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Base;
-namespace QLMamNon.Forms.HocSinh
+namespace QLMamNon.Forms.ThuChi
 {
     partial class FrmSoThuTien
     {
@@ -121,9 +121,13 @@ namespace QLMamNon.Forms.HocSinh
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnLast = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNext = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPrev = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFirst = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTaoSoThuTien = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.viewBangThuTienTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ViewBangThuTienTableAdapter();
             this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
             this.lopKhoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter();
@@ -239,6 +243,7 @@ namespace QLMamNon.Forms.HocSinh
             // viewBangThuTienRowBindingSource
             // 
             this.viewBangThuTienRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow);
+            this.viewBangThuTienRowBindingSource.Sort = "STT";
             // 
             // gvMain
             // 
@@ -302,8 +307,6 @@ namespace QLMamNon.Forms.HocSinh
             this.gvMain.OptionsView.ShowFooter = true;
             this.gvMain.OptionsView.ShowGroupPanel = false;
             this.gvMain.OptionsView.ShowIndicator = false;
-            this.gvMain.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colSTT, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gvMain.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvMain_CellValueChanged);
             // 
             // gridBand16
@@ -1100,11 +1103,52 @@ namespace QLMamNon.Forms.HocSinh
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.btnLast);
+            this.panelControl1.Controls.Add(this.btnNext);
+            this.panelControl1.Controls.Add(this.btnPrev);
+            this.panelControl1.Controls.Add(this.btnFirst);
+            this.panelControl1.Controls.Add(this.btnTaoSoThuTien);
             this.panelControl1.Controls.Add(this.btnLuu);
             this.panelControl1.Controls.Add(this.btnHuyBo);
-            this.panelControl1.Controls.Add(this.btnXoa);
             resources.ApplyResources(this.panelControl1, "panelControl1");
             this.panelControl1.Name = "panelControl1";
+            // 
+            // btnLast
+            // 
+            resources.ApplyResources(this.btnLast, "btnLast");
+            this.btnLast.Image = ((System.Drawing.Image)(resources.GetObject("btnLast.Image")));
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
+            // 
+            // btnNext
+            // 
+            resources.ApplyResources(this.btnNext, "btnNext");
+            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrev
+            // 
+            resources.ApplyResources(this.btnPrev, "btnPrev");
+            this.btnPrev.Image = ((System.Drawing.Image)(resources.GetObject("btnPrev.Image")));
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
+            // 
+            // btnFirst
+            // 
+            resources.ApplyResources(this.btnFirst, "btnFirst");
+            this.btnFirst.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.Image")));
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
+            // 
+            // btnTaoSoThuTien
+            // 
+            resources.ApplyResources(this.btnTaoSoThuTien, "btnTaoSoThuTien");
+            this.btnTaoSoThuTien.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnTaoSoThuTien.Appearance.Font")));
+            this.btnTaoSoThuTien.Appearance.Options.UseFont = true;
+            this.btnTaoSoThuTien.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoSoThuTien.Image")));
+            this.btnTaoSoThuTien.Name = "btnTaoSoThuTien";
+            this.btnTaoSoThuTien.Click += new System.EventHandler(this.btnTaoSoThuTien_Click);
             // 
             // btnLuu
             // 
@@ -1121,14 +1165,6 @@ namespace QLMamNon.Forms.HocSinh
             this.btnHuyBo.Appearance.Options.UseFont = true;
             this.btnHuyBo.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyBo.Image")));
             this.btnHuyBo.Name = "btnHuyBo";
-            // 
-            // btnXoa
-            // 
-            resources.ApplyResources(this.btnXoa, "btnXoa");
-            this.btnXoa.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnXoa.Appearance.Font")));
-            this.btnXoa.Appearance.Options.UseFont = true;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Name = "btnXoa";
             // 
             // viewBangThuTienTableAdapter
             // 
@@ -1251,7 +1287,6 @@ namespace QLMamNon.Forms.HocSinh
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnHuyBo;
-        private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSoTienNangKhieu;
         private System.Windows.Forms.BindingSource viewBangThuTienRowBindingSource;
@@ -1320,6 +1355,11 @@ namespace QLMamNon.Forms.HocSinh
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand18;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand31;
         private Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter phieuThuTableAdapter;
+        private DevExpress.XtraEditors.SimpleButton btnTaoSoThuTien;
+        private DevExpress.XtraEditors.SimpleButton btnFirst;
+        private DevExpress.XtraEditors.SimpleButton btnLast;
+        private DevExpress.XtraEditors.SimpleButton btnNext;
+        private DevExpress.XtraEditors.SimpleButton btnPrev;
 
 
     }

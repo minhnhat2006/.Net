@@ -36,12 +36,14 @@
             this.btnMoveRight = new DevExpress.XtraEditors.SimpleButton();
             this.gcChuyenDen = new DevExpress.XtraGrid.GridControl();
             this.hocSinhRowBindingSourceDen = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvDen = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colHocSinhId1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSTT1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHoDem1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGioiTinh1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgaySinh1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNgayVaoLop = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLopDangHoc1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcChuyenDi = new DevExpress.XtraGrid.GridControl();
             this.hocSinhRowBindingSourceDi = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -50,7 +52,7 @@
             this.colHoDem = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGioiTinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dateNgayVaoLop = new DevExpress.XtraEditors.DateEdit();
+            this.colLopDangHoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmbNamHocDi = new DevExpress.XtraEditors.LookUpEdit();
             this.namHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbLopHocDi = new DevExpress.XtraEditors.LookUpEdit();
@@ -58,28 +60,25 @@
             this.cmbLopHocDen = new DevExpress.XtraEditors.LookUpEdit();
             this.lopRowBindingSourceDen = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lciLopHoc = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciNamHoc = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciLopHocDen = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciLopHoc = new DevExpress.XtraLayout.LayoutControlItem();
             this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
             this.hocSinhLopTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcChuyenDen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSourceDen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcChuyenDi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSourceDi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayVaoLop.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayVaoLop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNamHocDi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.namHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbLopHocDi.Properties)).BeginInit();
@@ -87,16 +86,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbLopHocDen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopRowBindingSourceDen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciLopHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNamHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciLopHocDen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciLopHoc)).BeginInit();
             this.SuspendLayout();
             // 
             // lcMain
@@ -106,7 +104,6 @@
             this.lcMain.Controls.Add(this.btnMoveRight);
             this.lcMain.Controls.Add(this.gcChuyenDen);
             this.lcMain.Controls.Add(this.gcChuyenDi);
-            this.lcMain.Controls.Add(this.dateNgayVaoLop);
             this.lcMain.Controls.Add(this.cmbNamHocDi);
             this.lcMain.Controls.Add(this.cmbLopHocDi);
             this.lcMain.Controls.Add(this.cmbLopHocDen);
@@ -169,32 +166,37 @@
             // gcChuyenDen
             // 
             this.gcChuyenDen.DataSource = this.hocSinhRowBindingSourceDen;
-            this.gcChuyenDen.Location = new System.Drawing.Point(552, 60);
-            this.gcChuyenDen.MainView = this.gridView2;
+            this.gcChuyenDen.Location = new System.Drawing.Point(552, 36);
+            this.gcChuyenDen.MainView = this.gvDen;
             this.gcChuyenDen.Name = "gcChuyenDen";
-            this.gcChuyenDen.Size = new System.Drawing.Size(428, 501);
+            this.gcChuyenDen.Size = new System.Drawing.Size(428, 525);
             this.gcChuyenDen.TabIndex = 14;
             this.gcChuyenDen.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.gvDen});
             // 
             // hocSinhRowBindingSourceDen
             // 
             this.hocSinhRowBindingSourceDen.AllowNew = true;
             this.hocSinhRowBindingSourceDen.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.HocSinhRow);
             // 
-            // gridView2
+            // gvDen
             // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvDen.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colHocSinhId1,
             this.colSTT1,
             this.colHoDem1,
             this.colGioiTinh1,
-            this.colNgaySinh1});
-            this.gridView2.GridControl = this.gcChuyenDen;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsBehavior.Editable = false;
-            this.gridView2.OptionsBehavior.ReadOnly = true;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.colNgaySinh1,
+            this.colNgayVaoLop,
+            this.colLopDangHoc1});
+            this.gvDen.GridControl = this.gcChuyenDen;
+            this.gvDen.Name = "gvDen";
+            this.gvDen.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
+            this.gvDen.OptionsEditForm.EditFormColumnCount = 1;
+            this.gvDen.OptionsEditForm.FormCaptionFormat = "Xếp lớp cho học sinh";
+            this.gvDen.OptionsEditForm.PopupEditFormWidth = 500;
+            this.gvDen.OptionsView.ShowGroupPanel = false;
+            this.gvDen.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gvDen_RowUpdated);
             // 
             // colHocSinhId1
             // 
@@ -226,24 +228,42 @@
             this.colGioiTinh1.Name = "colGioiTinh1";
             this.colGioiTinh1.Visible = true;
             this.colGioiTinh1.VisibleIndex = 2;
-            this.colGioiTinh1.Width = 90;
+            this.colGioiTinh1.Width = 50;
             // 
             // colNgaySinh1
             // 
             this.colNgaySinh1.Caption = "Ngày sinh";
+            this.colNgaySinh1.DisplayFormat.FormatString = "d";
+            this.colNgaySinh1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colNgaySinh1.FieldName = "NgaySinh";
             this.colNgaySinh1.Name = "colNgaySinh1";
             this.colNgaySinh1.Visible = true;
             this.colNgaySinh1.VisibleIndex = 3;
-            this.colNgaySinh1.Width = 100;
+            this.colNgaySinh1.Width = 111;
+            // 
+            // colNgayVaoLop
+            // 
+            this.colNgayVaoLop.Caption = "Ngày vào lớp";
+            this.colNgayVaoLop.DisplayFormat.FormatString = "d";
+            this.colNgayVaoLop.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colNgayVaoLop.FieldName = "NgayVaoLop";
+            this.colNgayVaoLop.Name = "colNgayVaoLop";
+            this.colNgayVaoLop.Visible = true;
+            this.colNgayVaoLop.VisibleIndex = 4;
+            this.colNgayVaoLop.Width = 87;
+            // 
+            // colLopDangHoc1
+            // 
+            this.colLopDangHoc1.FieldName = "LopDangHoc";
+            this.colLopDangHoc1.Name = "colLopDangHoc1";
             // 
             // gcChuyenDi
             // 
             this.gcChuyenDi.DataSource = this.hocSinhRowBindingSourceDi;
-            this.gcChuyenDi.Location = new System.Drawing.Point(12, 60);
+            this.gcChuyenDi.Location = new System.Drawing.Point(12, 36);
             this.gcChuyenDi.MainView = this.gridView1;
             this.gcChuyenDi.Name = "gcChuyenDi";
-            this.gcChuyenDi.Size = new System.Drawing.Size(454, 501);
+            this.gcChuyenDi.Size = new System.Drawing.Size(454, 525);
             this.gcChuyenDi.TabIndex = 13;
             this.gcChuyenDi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -259,7 +279,8 @@
             this.colSTT,
             this.colHoDem,
             this.colGioiTinh,
-            this.colNgaySinh});
+            this.colNgaySinh,
+            this.colLopDangHoc});
             this.gridView1.GridControl = this.gcChuyenDi;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -307,26 +328,19 @@
             this.colNgaySinh.VisibleIndex = 3;
             this.colNgaySinh.Width = 100;
             // 
-            // dateNgayVaoLop
+            // colLopDangHoc
             // 
-            this.dateNgayVaoLop.EditValue = null;
-            this.dateNgayVaoLop.Location = new System.Drawing.Point(618, 36);
-            this.dateNgayVaoLop.Name = "dateNgayVaoLop";
-            this.dateNgayVaoLop.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.dateNgayVaoLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgayVaoLop.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgayVaoLop.Size = new System.Drawing.Size(362, 20);
-            this.dateNgayVaoLop.StyleController = this.lcMain;
-            this.dateNgayVaoLop.TabIndex = 12;
-            this.dateNgayVaoLop.EditValueChanged += new System.EventHandler(this.dateNgayVaoLop_EditValueChanged);
+            this.colLopDangHoc.Caption = "Lớp";
+            this.colLopDangHoc.FieldName = "LopDangHoc";
+            this.colLopDangHoc.Name = "colLopDangHoc";
+            this.colLopDangHoc.Visible = true;
+            this.colLopDangHoc.VisibleIndex = 4;
             // 
             // cmbNamHocDi
             // 
-            this.cmbNamHocDi.Location = new System.Drawing.Point(78, 12);
+            this.cmbNamHocDi.Location = new System.Drawing.Point(56, 12);
             this.cmbNamHocDi.Name = "cmbNamHocDi";
-            this.cmbNamHocDi.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.cmbNamHocDi.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.cmbNamHocDi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbNamHocDi.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -334,11 +348,12 @@
             this.cmbNamHocDi.Properties.DataSource = this.namHocBindingSource;
             this.cmbNamHocDi.Properties.DisplayMember = "Text";
             this.cmbNamHocDi.Properties.NullText = "";
+            this.cmbNamHocDi.Properties.NullValuePrompt = "[Chọn năm học]";
             this.cmbNamHocDi.Properties.PopupSizeable = false;
             this.cmbNamHocDi.Properties.ShowHeader = false;
             this.cmbNamHocDi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbNamHocDi.Properties.ValueMember = "FromYear";
-            this.cmbNamHocDi.Size = new System.Drawing.Size(388, 20);
+            this.cmbNamHocDi.Size = new System.Drawing.Size(181, 20);
             this.cmbNamHocDi.StyleController = this.lcMain;
             this.cmbNamHocDi.TabIndex = 4;
             this.cmbNamHocDi.EditValueChanged += new System.EventHandler(this.cmbNamHocDi_EditValueChanged);
@@ -349,7 +364,7 @@
             // 
             // cmbLopHocDi
             // 
-            this.cmbLopHocDi.Location = new System.Drawing.Point(78, 36);
+            this.cmbLopHocDi.Location = new System.Drawing.Point(285, 12);
             this.cmbLopHocDi.Name = "cmbLopHocDi";
             this.cmbLopHocDi.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbLopHocDi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -363,7 +378,7 @@
             this.cmbLopHocDi.Properties.ShowHeader = false;
             this.cmbLopHocDi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbLopHocDi.Properties.ValueMember = "LopId";
-            this.cmbLopHocDi.Size = new System.Drawing.Size(388, 20);
+            this.cmbLopHocDi.Size = new System.Drawing.Size(181, 20);
             this.cmbLopHocDi.StyleController = this.lcMain;
             this.cmbLopHocDi.TabIndex = 6;
             this.cmbLopHocDi.EditValueChanged += new System.EventHandler(this.cmbLopHocDi_EditValueChanged);
@@ -374,7 +389,7 @@
             // 
             // cmbLopHocDen
             // 
-            this.cmbLopHocDen.Location = new System.Drawing.Point(618, 12);
+            this.cmbLopHocDen.Location = new System.Drawing.Point(596, 12);
             this.cmbLopHocDen.Name = "cmbLopHocDen";
             this.cmbLopHocDen.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbLopHocDen.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -388,7 +403,7 @@
             this.cmbLopHocDen.Properties.ShowHeader = false;
             this.cmbLopHocDen.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbLopHocDen.Properties.ValueMember = "LopId";
-            this.cmbLopHocDen.Size = new System.Drawing.Size(362, 20);
+            this.cmbLopHocDen.Size = new System.Drawing.Size(384, 20);
             this.cmbLopHocDen.StyleController = this.lcMain;
             this.cmbLopHocDen.TabIndex = 10;
             this.cmbLopHocDen.EditValueChanged += new System.EventHandler(this.cmbLopHocDen_EditValueChanged);
@@ -401,39 +416,29 @@
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lciLopHoc,
             this.lciNamHoc,
             this.lciLopHocDen,
-            this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.emptySpaceItem1,
             this.layoutControlItem5,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.lciLopHoc});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(992, 573);
             this.layoutControlGroup1.Text = "Lên lớp - Xếp lớp";
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // lciLopHoc
-            // 
-            this.lciLopHoc.Control = this.cmbLopHocDi;
-            this.lciLopHoc.Location = new System.Drawing.Point(0, 24);
-            this.lciLopHoc.Name = "lciLopHoc";
-            this.lciLopHoc.Size = new System.Drawing.Size(458, 24);
-            this.lciLopHoc.Text = "Lớp học";
-            this.lciLopHoc.TextSize = new System.Drawing.Size(63, 13);
-            // 
             // lciNamHoc
             // 
             this.lciNamHoc.Control = this.cmbNamHocDi;
             this.lciNamHoc.Location = new System.Drawing.Point(0, 0);
             this.lciNamHoc.Name = "lciNamHoc";
-            this.lciNamHoc.Size = new System.Drawing.Size(458, 24);
+            this.lciNamHoc.Size = new System.Drawing.Size(229, 24);
             this.lciNamHoc.Text = "Năm học";
-            this.lciNamHoc.TextSize = new System.Drawing.Size(63, 13);
+            this.lciNamHoc.TextSize = new System.Drawing.Size(41, 13);
             // 
             // lciLopHocDen
             // 
@@ -442,32 +447,23 @@
             this.lciLopHocDen.Name = "lciLopHocDen";
             this.lciLopHocDen.Size = new System.Drawing.Size(432, 24);
             this.lciLopHocDen.Text = "Lớp học";
-            this.lciLopHocDen.TextSize = new System.Drawing.Size(63, 13);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.dateNgayVaoLop;
-            this.layoutControlItem1.Location = new System.Drawing.Point(540, 24);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(432, 24);
-            this.layoutControlItem1.Text = "Ngày vào lớp";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(63, 13);
+            this.lciLopHocDen.TextSize = new System.Drawing.Size(41, 13);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gcChuyenDi;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(458, 505);
+            this.layoutControlItem2.Size = new System.Drawing.Size(458, 529);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.gcChuyenDen;
-            this.layoutControlItem3.Location = new System.Drawing.Point(540, 48);
+            this.layoutControlItem3.Location = new System.Drawing.Point(540, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(432, 505);
+            this.layoutControlItem3.Size = new System.Drawing.Size(432, 529);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -519,6 +515,15 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
+            // lciLopHoc
+            // 
+            this.lciLopHoc.Control = this.cmbLopHocDi;
+            this.lciLopHoc.Location = new System.Drawing.Point(229, 0);
+            this.lciLopHoc.Name = "lciLopHoc";
+            this.lciLopHoc.Size = new System.Drawing.Size(229, 24);
+            this.lciLopHoc.Text = "Lớp học";
+            this.lciLopHoc.TextSize = new System.Drawing.Size(41, 13);
+            // 
             // hocSinhTableAdapter
             // 
             this.hocSinhTableAdapter.ClearBeforeFill = true;
@@ -540,12 +545,10 @@
             this.lcMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcChuyenDen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSourceDen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcChuyenDi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSourceDi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayVaoLop.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgayVaoLop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNamHocDi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.namHocBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbLopHocDi.Properties)).EndInit();
@@ -553,16 +556,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbLopHocDen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopRowBindingSourceDen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciLopHoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNamHoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciLopHocDen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciLopHoc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -574,13 +576,11 @@
         private DevExpress.XtraLayout.LayoutControlItem lciNamHoc;
         private DevExpress.XtraLayout.LayoutControlItem lciLopHoc;
         private DevExpress.XtraLayout.LayoutControlItem lciLopHocDen;
-        private DevExpress.XtraEditors.DateEdit dateNgayVaoLop;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraGrid.GridControl gcChuyenDi;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraGrid.GridControl gcChuyenDen;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvDen;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.SimpleButton btnMoveRight;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
@@ -609,5 +609,8 @@
         private System.Windows.Forms.BindingSource lopRowBindingSourceDi;
         private System.Windows.Forms.BindingSource lopRowBindingSourceDen;
         private Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter hocSinhLopTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colNgayVaoLop;
+        private DevExpress.XtraGrid.Columns.GridColumn colLopDangHoc;
+        private DevExpress.XtraGrid.Columns.GridColumn colLopDangHoc1;
     }
 }
