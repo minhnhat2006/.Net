@@ -27081,3 +27081,50 @@ QLMamNon.vshost.exe Error: 0 : Authentication to host 'localhost' for user 'root
 2017-06-10 22:46:51 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
 2017-06-10 22:46:51 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
 2017-06-10 22:46:52 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-11 10:56:52 info : Text changed $FrmThongTinHocSinh$lcMain$cmbLop$ [Chọn lớp]
+2017-06-11 10:56:52 info : Text changed $FrmThongTinHocSinh$lcMain$cmbQuanHuyen$ [Chọn quận huyện]
+2017-06-11 10:56:52 info : Text changed $FrmThongTinHocSinh$lcMain$cmbPhuongXa$ [Chọn phường xã]
+2017-06-11 10:58:01 info : Text changed $FrmThongTinHocSinh$lcMain$cmbLop$ [Chọn lớp]
+2017-06-11 10:58:02 info : Text changed $FrmThongTinHocSinh$lcMain$cmbQuanHuyen$ [Chọn quận huyện]
+2017-06-11 10:58:02 info : Text changed $FrmThongTinHocSinh$lcMain$cmbPhuongXa$ [Chọn phường xã]
+2017-06-11 10:58:59 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-11 10:58:59 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-11 10:59:01 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-11 10:59:59 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-11 10:59:59 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-11 11:00:00 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-11 11:02:11 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-11 11:02:11 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-11 11:02:12 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-11 11:09:43 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-11 11:09:43 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-11 11:09:44 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-12 15:48:37 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-12 15:48:38 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-12 15:48:39 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-12 16:56:27 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-12 16:56:27 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-12 16:56:28 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-12 17:01:34 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-12 17:01:34 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-12 17:01:35 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-12 17:03:35 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-12 17:03:36 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-12 17:03:37 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-12 17:09:15 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-12 17:09:15 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-12 17:09:16 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-12 17:10:48 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-12 17:10:48 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-12 17:10:49 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-12 17:11:52 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-12 17:11:52 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-12 17:11:53 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 5
+2017-06-12 17:11:54 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 
+2017-06-12 17:11:54 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-12 17:12:52 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-12 17:12:52 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-12 17:12:52 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
+2017-06-12 17:22:12 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2010
+2017-06-12 17:22:12 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
+2017-06-12 17:22:13 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6

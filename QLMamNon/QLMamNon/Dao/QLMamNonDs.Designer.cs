@@ -20831,7 +20831,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[3];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `PhieuThuId`, `Ngay`, `SoTien`, `MaPhieu`, `GhiChu`, `HocSinhId`, `Created" +
@@ -20855,6 +20855,31 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.Size = 2147483647;
             param.IsNullable = true;
             this._commandCollection[1].Parameters.Add(param);
+            this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "`qlmamnon`.`getPhieuThuByHocSinhAndThangNam`";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "hocsinhids";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Text;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[2].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "nam";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[2].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "thang";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[2].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20898,6 +20923,35 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            QLMamNonDs.PhieuThuDataTable dataTable = new QLMamNonDs.PhieuThuDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual QLMamNonDs.PhieuThuDataTable GetDataByHocSinhIdsAndThangNam(string hocsinhids, global::System.Nullable<int> nam, global::System.Nullable<int> thang) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((hocsinhids == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(hocsinhids));
+            }
+            if ((nam.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(nam.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((thang.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(thang.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             QLMamNonDs.PhieuThuDataTable dataTable = new QLMamNonDs.PhieuThuDataTable();
             this.Adapter.Fill(dataTable);

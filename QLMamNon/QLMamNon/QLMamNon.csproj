@@ -145,6 +145,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLMamNonDs.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Entity\Form\BangKeThuTienItem.cs" />
     <Compile Include="Entity\Form\SoTheoDoiTaiSanItem.cs" />
     <Compile Include="Entity\Form\PhieuChiBCHDTC.cs" />
     <Compile Include="Entity\Form\NamHoc.cs" />
@@ -641,6 +642,7 @@
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewBangThuTienRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewHocTapRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewTaiSanRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Entity.Form.BangKeThuTienItem.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Entity.Form.NamHoc.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Entity.Form.SoTheoDoiTaiSanItem.datasource" />
     <None Include="Properties\Settings.settings">

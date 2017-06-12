@@ -8,6 +8,7 @@ using QLMamNon.Components.Command;
 using QLMamNon.Components.Command.QLMNDao;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
+using QLMamNon.Entity.Form;
 using QLMamNon.Facade;
 using QLMamNon.Forms.Resource;
 using QLThuChi;
@@ -111,23 +112,32 @@ namespace QLMamNon.Forms.ThuChi
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            RptBangKeTongHopThuTienHS rpt = new RptBangKeTongHopThuTienHS();
-            this.fillReportBangKeTongHopThuTien(rpt);
-            FormMainFacade.ShowReport(rpt);
+            if (this.isValidNgayTinh())
+            {
+                RptBangKeTongHopThuTienHS rpt = new RptBangKeTongHopThuTienHS();
+                this.fillReportBangKeTongHopThuTien(rpt);
+                FormMainFacade.ShowReport(rpt);
+            }
         }
 
         private void btnPrint1_Click(object sender, EventArgs e)
         {
-            RptSoThuTienTrang1 rpt = new RptSoThuTienTrang1();
-            this.fillRptSoThuTienTrang1(rpt);
-            FormMainFacade.ShowReport(rpt);
+            if (this.isValidNgayTinh())
+            {
+                RptSoThuTienTrang1 rpt = new RptSoThuTienTrang1();
+                this.fillRptSoThuTienTrang1(rpt);
+                FormMainFacade.ShowReport(rpt);
+            }
         }
 
         private void btnPrint2_Click(object sender, EventArgs e)
         {
-            RptSoThuTienTrang2 rpt = new RptSoThuTienTrang2();
-            this.fillRptSoThuTienTrang2(rpt);
-            FormMainFacade.ShowReport(rpt);
+            if (this.isValidNgayTinh())
+            {
+                RptSoThuTienTrang2 rpt = new RptSoThuTienTrang2();
+                this.fillRptSoThuTienTrang2(rpt);
+                FormMainFacade.ShowReport(rpt);
+            }
         }
 
         protected override void onSaving()
@@ -334,7 +344,59 @@ namespace QLMamNon.Forms.ThuChi
         private void fillReportBangKeTongHopThuTien(RptBangKeTongHopThuTienHS rpt)
         {
             List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> rows = evaluateViewBangThuTienRowsForReport();
-            rpt.viewBangThuTienRowbindingSource.DataSource = rows;
+            List<BangKeThuTienItem> rowsToDisplay = new List<BangKeThuTienItem>();
+            Dictionary<int, QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> hocSinhIdsToViewBangThuTienRows = new Dictionary<int, QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow>();
+
+            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow in rows)
+            {
+                hocSinhIdsToViewBangThuTienRows.Add(viewBangThuTienRow.HocSinhId, viewBangThuTienRow);
+            }
+
+            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable = phieuThuTableAdapter.GetDataByHocSinhIdsAndThangNam(StringUtil.Join(new List<int>(hocSinhIdsToViewBangThuTienRows.Keys), ","), this.GetNgayTinh().Year, this.GetNgayTinh().Month);
+            int stt = 1;
+
+            foreach (QLMamNon.Dao.QLMamNonDs.PhieuThuRow phieuThuRow in phieuThuDataTable)
+            {
+                QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow = hocSinhIdsToViewBangThuTienRows[phieuThuRow.HocSinhId];
+                BangKeThuTienItem bangKeThuTienItem = new BangKeThuTienItem()
+                {
+                    STT = stt++,
+                    HocSinhId = viewBangThuTienRow.HocSinhId,
+                    HoTen = viewBangThuTienRow.HoTen,
+                    Lop = viewBangThuTienRow.Lop,
+                    NgayNop = phieuThuRow.Ngay,
+                    SoBienLai = phieuThuRow.MaPhieu,
+                    PhuPhi = viewBangThuTienRow.PhuPhi,
+                    BanTru = viewBangThuTienRow.BanTru,
+                    HocPhi = viewBangThuTienRow.HocPhi,
+                    AnChinh = viewBangThuTienRow.TienAnSua,
+                    AnSang = viewBangThuTienRow.SoTienAnSangConLai,
+                    AnToi = viewBangThuTienRow.SoTienAnToiConLai,
+                    NangKhieu = viewBangThuTienRow.SoTienNangKhieu,
+                    DoDung = viewBangThuTienRow.SoTienDoDung,
+                    DieuHoa = viewBangThuTienRow.SoTienDieuHoa,
+                    TruyThu = viewBangThuTienRow.SoTienTruyThu,
+                    PhaiThu = viewBangThuTienRow.ThanhTien,
+                    DaThu = phieuThuRow.SoTien,
+                    ConNo = viewBangThuTienRow.ThanhTien - phieuThuRow.SoTien
+                };
+
+                if (!ListUtil.IsEmpty(rowsToDisplay))
+                {
+                    BangKeThuTienItem prevVangKeThuTienItem = rowsToDisplay[rowsToDisplay.Count - 1];
+
+                    if (prevVangKeThuTienItem.HocSinhId == bangKeThuTienItem.HocSinhId)
+                    {
+                        bangKeThuTienItem.TruyThu = prevVangKeThuTienItem.ConNo;
+                        bangKeThuTienItem.PhaiThu = prevVangKeThuTienItem.ConNo;
+                        bangKeThuTienItem.ConNo = bangKeThuTienItem.PhaiThu - bangKeThuTienItem.DaThu;
+                    }
+                }
+
+                rowsToDisplay.Add(bangKeThuTienItem);
+            }
+
+            rpt.viewBangThuTienRowbindingSource.DataSource = rowsToDisplay;
             rpt.Ngay.Value = this.GetNgayTinh();
         }
 
