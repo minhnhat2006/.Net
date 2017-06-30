@@ -6,7 +6,7 @@ namespace QLMamNon
 {
     public static class ThongTinHocSinhUtil
     {
-        public static void evaluateLopInfoForHocSinhTable(HocSinhLopTableAdapter hocSinhLopTableAdapter, QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable)
+        public static void EvaluateLopInfoForHocSinhTable(HocSinhLopTableAdapter hocSinhLopTableAdapter, QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable)
         {
             List<int> hocSinhIds = new List<int>(hocSinhTable.Rows.Count);
             foreach (QLMamNon.Dao.QLMamNonDs.HocSinhRow row in hocSinhTable)
@@ -19,8 +19,6 @@ namespace QLMamNon
 
             foreach (QLMamNon.Dao.QLMamNonDs.HocSinhRow row in hocSinhTable)
             {
-                row.ThangSinh = row.NgaySinh.Month;
-
                 if (hocSinhIdsToLops.ContainsKey(row.HocSinhId))
                 {
                     QLMamNon.Dao.QLMamNonDs.LopRow lop = hocSinhIdsToLops[row.HocSinhId];

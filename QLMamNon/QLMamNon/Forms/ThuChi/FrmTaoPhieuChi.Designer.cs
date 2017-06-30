@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTaoPhieuChi));
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.lcMain = new DevExpress.XtraLayout.LayoutControl();
             this.btnLuuTao = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
@@ -150,18 +150,18 @@
             this.txtSoTien.Name = "txtSoTien";
             this.txtSoTien.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtSoTien.Properties.DisplayFormat.FormatString = "c0";
+            this.txtSoTien.Properties.DisplayFormat.FormatString = "n0";
             this.txtSoTien.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtSoTien.Properties.Mask.EditMask = "c0";
+            this.txtSoTien.Properties.Mask.EditMask = "n0";
             this.txtSoTien.Size = new System.Drawing.Size(302, 40);
             this.txtSoTien.StyleController = this.lcMain;
             this.txtSoTien.TabIndex = 7;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Greater;
-            conditionValidationRule2.ErrorText = "Vui lòng nhập Số tiền";
-            conditionValidationRule2.Value1 = ((long)(0));
-            conditionValidationRule2.Value2 = "0";
-            conditionValidationRule2.Values.Add("0");
-            this.dxValidationProvider.SetValidationRule(this.txtSoTien, conditionValidationRule2);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Greater;
+            conditionValidationRule1.ErrorText = "Vui lòng nhập Số tiền";
+            conditionValidationRule1.Value1 = ((long)(0));
+            conditionValidationRule1.Value2 = "0";
+            conditionValidationRule1.Values.Add("0");
+            this.dxValidationProvider.SetValidationRule(this.txtSoTien, conditionValidationRule1);
             // 
             // txtMaPhieu
             // 
@@ -183,9 +183,9 @@
             this.dateNgay.Size = new System.Drawing.Size(302, 40);
             this.dateNgay.StyleController = this.lcMain;
             this.dateNgay.TabIndex = 5;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "Vui lòng chọn Ngày";
-            this.dxValidationProvider.SetValidationRule(this.dateNgay, conditionValidationRule3);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "Vui lòng chọn Ngày";
+            this.dxValidationProvider.SetValidationRule(this.dateNgay, conditionValidationRule2);
             // 
             // lblTaoPhieuChi
             // 

@@ -158,9 +158,9 @@
             this.txtSoTien.Name = "txtSoTien";
             this.txtSoTien.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtSoTien.Properties.DisplayFormat.FormatString = "c0";
+            this.txtSoTien.Properties.DisplayFormat.FormatString = "n0";
             this.txtSoTien.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtSoTien.Properties.Mask.EditMask = "c0";
+            this.txtSoTien.Properties.Mask.EditMask = "n0";
             this.txtSoTien.Size = new System.Drawing.Size(233, 40);
             this.txtSoTien.StyleController = this.lcMain;
             this.txtSoTien.TabIndex = 7;

@@ -1,11 +1,10 @@
 ﻿using System;
 using DevExpress.XtraBars;
+using QLMamNon.Components.Data.Static;
 using QLMamNon.Components.ModuleMediator.Channel;
-using QLMamNon.Forms.HocSinh;
-using QLMamNon.Workflow.Forms;
 using QLMamNon.Facade;
 using QLMamNon.Forms.Resource;
-using QLMamNon.Components.Data.Static;
+using QLMamNon.Workflow.Forms;
 
 namespace QLMamNon.Forms
 {
@@ -58,6 +57,7 @@ namespace QLMamNon.Forms
             StaticDataFacade.Add(StaticDataKeys.KhoanThu, new KhoanThuData(khoanThuTableAdapter));
             StaticDataFacade.Add(StaticDataKeys.PhanLoaiChi, new PhanLoaiChi(phanLoaiChiTableAdapter));
             StaticDataFacade.Add(StaticDataKeys.BangTinhPhi, new BangTinhPhi(bangTinhPhiTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.TrangThaiHS, new TrangThaiHSData());
         }
 
         private void bbtnHocSinhThongTin_ItemClick(object sender, ItemClickEventArgs e)

@@ -3168,8 +3168,6 @@ namespace QLMamNon.Dao {
             
             private global::System.Data.DataColumn columnHoTen;
             
-            private global::System.Data.DataColumn columnThangSinh;
-            
             private global::System.Data.DataColumn columnLopDangHoc;
             
             private global::System.Data.DataColumn columnSTT;
@@ -3352,14 +3350,6 @@ namespace QLMamNon.Dao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ThangSinhColumn {
-                get {
-                    return this.columnThangSinh;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn LopDangHocColumn {
                 get {
                     return this.columnLopDangHoc;
@@ -3482,7 +3472,6 @@ namespace QLMamNon.Dao {
                         string DiaChi, 
                         bool ThoiHoc, 
                         string HoTen, 
-                        int ThangSinh, 
                         string LopDangHoc, 
                         int STT, 
                         string PhuongXa, 
@@ -3509,7 +3498,6 @@ namespace QLMamNon.Dao {
                         DiaChi,
                         ThoiHoc,
                         HoTen,
-                        ThangSinh,
                         LopDangHoc,
                         STT,
                         PhuongXa,
@@ -3540,7 +3528,6 @@ namespace QLMamNon.Dao {
                         int PhuongXaId, 
                         string DiaChi, 
                         bool ThoiHoc, 
-                        int ThangSinh, 
                         string LopDangHoc, 
                         int STT, 
                         string PhuongXa, 
@@ -3567,7 +3554,6 @@ namespace QLMamNon.Dao {
                         DiaChi,
                         ThoiHoc,
                         null,
-                        ThangSinh,
                         LopDangHoc,
                         STT,
                         PhuongXa,
@@ -3621,7 +3607,6 @@ namespace QLMamNon.Dao {
                 this.columnDiaChi = base.Columns["DiaChi"];
                 this.columnThoiHoc = base.Columns["ThoiHoc"];
                 this.columnHoTen = base.Columns["HoTen"];
-                this.columnThangSinh = base.Columns["ThangSinh"];
                 this.columnLopDangHoc = base.Columns["LopDangHoc"];
                 this.columnSTT = base.Columns["STT"];
                 this.columnPhuongXa = base.Columns["PhuongXa"];
@@ -3666,8 +3651,6 @@ namespace QLMamNon.Dao {
                 base.Columns.Add(this.columnThoiHoc);
                 this.columnHoTen = new global::System.Data.DataColumn("HoTen", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHoTen);
-                this.columnThangSinh = new global::System.Data.DataColumn("ThangSinh", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnThangSinh);
                 this.columnLopDangHoc = new global::System.Data.DataColumn("LopDangHoc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLopDangHoc);
                 this.columnSTT = new global::System.Data.DataColumn("STT", typeof(int), null, global::System.Data.MappingType.Element);
@@ -3698,6 +3681,7 @@ namespace QLMamNon.Dao {
                 this.columnTen.AllowDBNull = false;
                 this.columnTen.MaxLength = 50;
                 this.columnGioiTinh.AllowDBNull = false;
+                this.columnGioiTinh.DefaultValue = ((sbyte)(1));
                 this.columnDanToc.MaxLength = 50;
                 this.columnDienCuTru.MaxLength = 50;
                 this.columnDienThoai.MaxLength = 50;
@@ -3705,6 +3689,7 @@ namespace QLMamNon.Dao {
                 this.columnHoTenMe.MaxLength = 255;
                 this.columnDiaChi.MaxLength = 255;
                 this.columnThoiHoc.AllowDBNull = false;
+                this.columnThoiHoc.DefaultValue = ((bool)(false));
                 this.columnHoTen.ReadOnly = true;
                 this.columnHoTen.DefaultValue = ((string)(""));
                 this.columnDienThoaiMe.MaxLength = 50;
@@ -11059,22 +11044,6 @@ namespace QLMamNon.Dao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ThangSinh {
-                get {
-                    try {
-                        return ((int)(this[this.tableHocSinh.ThangSinhColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ThangSinh\' in table \'HocSinh\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableHocSinh.ThangSinhColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string LopDangHoc {
                 get {
                     try {
@@ -11335,18 +11304,6 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetHoTenNull() {
                 this[this.tableHocSinh.HoTenColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsThangSinhNull() {
-                return this.IsNull(this.tableHocSinh.ThangSinhColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetThangSinhNull() {
-                this[this.tableHocSinh.ThangSinhColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18450,7 +18407,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `hocsinh` WHERE ((`HocSinhId` = @Original_HocSinhId) AND (`HoDem` = @Original_HoDem) AND (`Ten` = @Original_Ten) AND (`GioiTinh` = @Original_GioiTinh) AND ((@IsNull_DanToc = 1 AND `DanToc` IS NULL) OR (`DanToc` = @Original_DanToc)) AND ((@IsNull_DienCuTru = 1 AND `DienCuTru` IS NULL) OR (`DienCuTru` = @Original_DienCuTru)) AND ((@IsNull_DienThoai = 1 AND `DienThoai` IS NULL) OR (`DienThoai` = @Original_DienThoai)) AND ((@IsNull_HoTenCha = 1 AND `HoTenCha` IS NULL) OR (`HoTenCha` = @Original_HoTenCha)) AND ((@IsNull_HoTenMe = 1 AND `HoTenMe` IS NULL) OR (`HoTenMe` = @Original_HoTenMe)) AND ((@IsNull_TinhThanhPhoId = 1 AND `TinhThanhPhoId` IS NULL) OR (`TinhThanhPhoId` = @Original_TinhThanhPhoId)) AND ((@IsNull_QuanHuyenId = 1 AND `QuanHuyenId` IS NULL) OR (`QuanHuyenId` = @Original_QuanHuyenId)) AND ((@IsNull_PhuongXaId = 1 AND `PhuongXaId` IS NULL) OR (`PhuongXaId` = @Original_PhuongXaId)) AND ((@IsNull_DiaChi = 1 AND `DiaChi` IS NULL) OR (`DiaChi` = @Original_DiaChi)) AND (`ThoiHoc` = @Original_ThoiHoc) AND ((@IsNull_DienThoaiMe = 1 AND `DienThoaiMe` IS NULL) OR (`DienThoaiMe` = @Original_DienThoaiMe)) AND ((@IsNull_NgaySinh = 1 AND `NgaySinh` IS NULL) OR (`NgaySinh` = @Original_NgaySinh)) AND ((@IsNull_NgayVaoLop = 1 AND `NgayVaoLop` IS NULL) OR (`NgayVaoLop` = @Original_NgayVaoLop)) AND ((@IsNull_CreatedDate = 1 AND `CreatedDate` IS NULL) OR (`CreatedDate` = @Original_CreatedDate)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `hocsinh` WHERE ((`HocSinhId` = @Original_HocSinhId) AND (`HoDem` = @Original_HoDem) AND (`Ten` = @Original_Ten) AND (`GioiTinh` = @Original_GioiTinh) AND ((@IsNull_DanToc = 1 AND `DanToc` IS NULL) OR (`DanToc` = @Original_DanToc)) AND ((@IsNull_DienCuTru = 1 AND `DienCuTru` IS NULL) OR (`DienCuTru` = @Original_DienCuTru)) AND ((@IsNull_DienThoai = 1 AND `DienThoai` IS NULL) OR (`DienThoai` = @Original_DienThoai)) AND ((@IsNull_HoTenCha = 1 AND `HoTenCha` IS NULL) OR (`HoTenCha` = @Original_HoTenCha)) AND ((@IsNull_HoTenMe = 1 AND `HoTenMe` IS NULL) OR (`HoTenMe` = @Original_HoTenMe)) AND ((@IsNull_TinhThanhPhoId = 1 AND `TinhThanhPhoId` IS NULL) OR (`TinhThanhPhoId` = @Original_TinhThanhPhoId)) AND ((@IsNull_QuanHuyenId = 1 AND `QuanHuyenId` IS NULL) OR (`QuanHuyenId` = @Original_QuanHuyenId)) AND ((@IsNull_PhuongXaId = 1 AND `PhuongXaId` IS NULL) OR (`PhuongXaId` = @Original_PhuongXaId)) AND ((@IsNull_DiaChi = 1 AND `DiaChi` IS NULL) OR (`DiaChi` = @Original_DiaChi)) AND (`ThoiHoc` = @Original_ThoiHoc) AND ((@IsNull_DienThoaiMe = 1 AND `DienThoaiMe` IS NULL) OR (`DienThoaiMe` = @Original_DienThoaiMe)) AND ((@IsNull_NgaySinh = 1 AND `NgaySinh` IS NULL) OR (`NgaySinh` = @Original_NgaySinh)) AND ((@IsNull_CreatedDate = 1 AND `CreatedDate` IS NULL) OR (`CreatedDate` = @Original_CreatedDate)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_HocSinhId";
@@ -18464,6 +18421,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_HoDem";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "HoDem";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -18472,14 +18430,16 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_Ten";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "Ten";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_GioiTinh";
-            param.DbType = global::System.Data.DbType.SByte;
+            param.DbType = global::System.Data.DbType.Object;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
+            param.Size = 1024;
             param.IsNullable = true;
             param.SourceColumn = "GioiTinh";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -18497,6 +18457,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_DanToc";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "DanToc";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -18514,6 +18475,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_DienCuTru";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "DienCuTru";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -18531,6 +18493,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_DienThoai";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "DienThoai";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -18548,6 +18511,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_HoTenCha";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "HoTenCha";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -18565,6 +18529,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_HoTenMe";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "HoTenMe";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -18633,14 +18598,16 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_DiaChi";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "DiaChi";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_ThoiHoc";
-            param.DbType = global::System.Data.DbType.SByte;
+            param.DbType = global::System.Data.DbType.Object;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
+            param.Size = 1024;
             param.IsNullable = true;
             param.SourceColumn = "ThoiHoc";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -18658,6 +18625,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_DienThoaiMe";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "DienThoaiMe";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -18673,27 +18641,10 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_NgaySinh";
-            param.DbType = global::System.Data.DbType.Date;
+            param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.IsNullable = true;
             param.SourceColumn = "NgaySinh";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_NgayVaoLop";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "NgayVaoLop";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_NgayVaoLop";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "NgayVaoLop";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18858,14 +18809,14 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
                 "ND `DiaChi` IS NULL) OR (`DiaChi` = @Original_DiaChi)) AND (`ThoiHoc` = @Origina" +
                 "l_ThoiHoc) AND ((@IsNull_DienThoaiMe = 1 AND `DienThoaiMe` IS NULL) OR (`DienTho" +
                 "aiMe` = @Original_DienThoaiMe)) AND ((@IsNull_NgaySinh = 1 AND `NgaySinh` IS NUL" +
-                "L) OR (`NgaySinh` = @Original_NgaySinh)) AND ((@IsNull_NgayVaoLop = 1 AND `NgayV" +
-                "aoLop` IS NULL) OR (`NgayVaoLop` = @Original_NgayVaoLop)) AND ((@IsNull_CreatedD" +
-                "ate = 1 AND `CreatedDate` IS NULL) OR (`CreatedDate` = @Original_CreatedDate)))";
+                "L) OR (`NgaySinh` = @Original_NgaySinh)) AND ((@IsNull_CreatedDate = 1 AND `Crea" +
+                "tedDate` IS NULL) OR (`CreatedDate` = @Original_CreatedDate)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@HoDem";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "HoDem";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -18873,13 +18824,15 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Ten";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "Ten";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@GioiTinh";
-            param.DbType = global::System.Data.DbType.SByte;
+            param.DbType = global::System.Data.DbType.Object;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
+            param.Size = 1024;
             param.IsNullable = true;
             param.SourceColumn = "GioiTinh";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -18887,6 +18840,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@DanToc";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "DanToc";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -18894,6 +18848,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@DienCuTru";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "DienCuTru";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -18901,6 +18856,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@DienThoai";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "DienThoai";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -18908,6 +18864,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@HoTenCha";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "HoTenCha";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -18915,6 +18872,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@HoTenMe";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "HoTenMe";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -18943,13 +18901,15 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@DiaChi";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "DiaChi";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@ThoiHoc";
-            param.DbType = global::System.Data.DbType.SByte;
+            param.DbType = global::System.Data.DbType.Object;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
+            param.Size = 1024;
             param.IsNullable = true;
             param.SourceColumn = "ThoiHoc";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -18957,19 +18917,20 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@DienThoaiMe";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "DienThoaiMe";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@NgaySinh";
-            param.DbType = global::System.Data.DbType.Date;
+            param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.IsNullable = true;
             param.SourceColumn = "NgaySinh";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@NgayVaoLop";
-            param.DbType = global::System.Data.DbType.Date;
+            param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.IsNullable = true;
             param.SourceColumn = "NgayVaoLop";
@@ -18993,6 +18954,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_HoDem";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "HoDem";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -19001,14 +18963,16 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_Ten";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "Ten";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_GioiTinh";
-            param.DbType = global::System.Data.DbType.SByte;
+            param.DbType = global::System.Data.DbType.Object;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
+            param.Size = 1024;
             param.IsNullable = true;
             param.SourceColumn = "GioiTinh";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -19026,6 +18990,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_DanToc";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "DanToc";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -19043,6 +19008,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_DienCuTru";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "DienCuTru";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -19060,6 +19026,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_DienThoai";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "DienThoai";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -19077,6 +19044,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_HoTenCha";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "HoTenCha";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -19094,6 +19062,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_HoTenMe";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "HoTenMe";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -19162,14 +19131,16 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_DiaChi";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "DiaChi";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_ThoiHoc";
-            param.DbType = global::System.Data.DbType.SByte;
+            param.DbType = global::System.Data.DbType.Object;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
+            param.Size = 1024;
             param.IsNullable = true;
             param.SourceColumn = "ThoiHoc";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -19187,6 +19158,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.ParameterName = "@Original_DienThoaiMe";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "DienThoaiMe";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -19202,27 +19174,10 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_NgaySinh";
-            param.DbType = global::System.Data.DbType.Date;
+            param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.IsNullable = true;
             param.SourceColumn = "NgaySinh";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_NgayVaoLop";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "NgayVaoLop";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_NgayVaoLop";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "NgayVaoLop";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -19254,7 +19209,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[5];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[6];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT HocSinhId, HoDem, Ten, GioiTinh, DanToc, DienCuTru, DienThoai, HoTenCha, H" +
@@ -19263,9 +19218,37 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "`qlmamnon`.`getHocSinhByLopAndNgay`";
+            this._commandCollection[1].CommandText = "`qlmamnon`.`getHocSinhForThongTinHocSinh`";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "quan";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "phuong";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "ngaysinh";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "thangsinh";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "lop";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -19273,39 +19256,25 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.IsNullable = true;
             this._commandCollection[1].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "ngay";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.ParameterName = "thoihoc";
+            param.DbType = global::System.Data.DbType.Object;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Bit;
             param.Size = 2147483647;
             param.IsNullable = true;
             this._commandCollection[1].Parameters.Add(param);
             this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "`qlmamnon`.`getHocSinhByParams`";
+            this._commandCollection[2].CommandText = "`qlmamnon`.`getHocSinhByLopAndNgay`";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "lop";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[2].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "ngay";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
-            param.Size = 2147483647;
-            param.IsNullable = true;
-            this._commandCollection[2].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "khoihoc";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.Size = 2147483647;
-            param.IsNullable = true;
-            this._commandCollection[2].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "lophoc";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.Size = 2147483647;
-            param.IsNullable = true;
-            this._commandCollection[2].Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "ngayvaolop";
             param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.Size = 2147483647;
@@ -19313,33 +19282,65 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             this._commandCollection[2].Parameters.Add(param);
             this._commandCollection[3] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "`qlmamnon`.`getHocSinhNotAssignedToLop`";
+            this._commandCollection[3].CommandText = "`qlmamnon`.`getHocSinhByParams`";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[4] = new global::MySql.Data.MySqlClient.MySqlCommand();
-            this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "`qlmamnon`.`insertHocSinhToLop`";
-            this._commandCollection[4].CommandType = global::System.Data.CommandType.StoredProcedure;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "hocsinh";
+            param.ParameterName = "ngay";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[3].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "khoihoc";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.Size = 2147483647;
             param.IsNullable = true;
-            this._commandCollection[4].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "lop";
+            param.ParameterName = "lophoc";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.Size = 2147483647;
             param.IsNullable = true;
-            this._commandCollection[4].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "ngayvaolop";
             param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
             param.Size = 2147483647;
             param.IsNullable = true;
-            this._commandCollection[4].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
+            this._commandCollection[4] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "`qlmamnon`.`getHocSinhNotAssignedToLop`";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[5] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "`qlmamnon`.`insertHocSinhToLop`";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.StoredProcedure;
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "hocsinh";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[5].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "lop";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[5].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "ngayvaolop";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[5].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19370,8 +19371,55 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual QLMamNonDs.HocSinhDataTable GetHocSinhByLopAndNgay(global::System.Nullable<int> lop, global::System.Nullable<global::System.DateTime> ngay) {
+        public virtual QLMamNonDs.HocSinhDataTable GetDataForThongTinHocSinh(global::System.Nullable<int> quan, global::System.Nullable<int> phuong, global::System.Nullable<global::System.DateTime> ngaysinh, global::System.Nullable<int> thangsinh, global::System.Nullable<int> lop, object thoihoc) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((quan.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(quan.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((phuong.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(phuong.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ngaysinh.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(ngaysinh.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((thangsinh.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(thangsinh.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((lop.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(lop.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((thoihoc == null)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((object)(thoihoc));
+            }
+            QLMamNonDs.HocSinhDataTable dataTable = new QLMamNonDs.HocSinhDataTable(true);
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual QLMamNonDs.HocSinhDataTable GetHocSinhByLopAndNgay(global::System.Nullable<int> lop, global::System.Nullable<global::System.DateTime> ngay) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((lop.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(lop.Value));
             }
@@ -19394,7 +19442,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual QLMamNonDs.HocSinhDataTable GetHocSinhByParams(global::System.Nullable<global::System.DateTime> ngay, global::System.Nullable<int> khoihoc, global::System.Nullable<int> lophoc, global::System.Nullable<global::System.DateTime> ngayvaolop) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((ngay.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(ngay.Value));
             }
@@ -19429,7 +19477,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual QLMamNonDs.HocSinhDataTable GetHocSinhNotAssignedToLop() {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             QLMamNonDs.HocSinhDataTable dataTable = new QLMamNonDs.HocSinhDataTable(true);
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -19472,7 +19520,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
                     int Original_HocSinhId, 
                     string Original_HoDem, 
                     string Original_Ten, 
-                    byte Original_GioiTinh, 
+                    object Original_GioiTinh, 
                     string Original_DanToc, 
                     string Original_DienCuTru, 
                     string Original_DienThoai, 
@@ -19482,10 +19530,9 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
                     global::System.Nullable<int> Original_QuanHuyenId, 
                     global::System.Nullable<int> Original_PhuongXaId, 
                     string Original_DiaChi, 
-                    byte Original_ThoiHoc, 
+                    object Original_ThoiHoc, 
                     string Original_DienThoaiMe, 
                     global::System.Nullable<global::System.DateTime> Original_NgaySinh, 
-                    global::System.Nullable<global::System.DateTime> Original_NgayVaoLop, 
                     global::System.Nullable<global::System.DateTime> Original_CreatedDate) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_HocSinhId));
             if ((Original_HoDem == null)) {
@@ -19500,7 +19547,12 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Ten));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((byte)(Original_GioiTinh));
+            if ((Original_GioiTinh == null)) {
+                throw new global::System.ArgumentNullException("Original_GioiTinh");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(Original_GioiTinh));
+            }
             if ((Original_DanToc == null)) {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
@@ -19573,7 +19625,12 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((string)(Original_DiaChi));
             }
-            this.Adapter.DeleteCommand.Parameters[22].Value = ((byte)(Original_ThoiHoc));
+            if ((Original_ThoiHoc == null)) {
+                throw new global::System.ArgumentNullException("Original_ThoiHoc");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(Original_ThoiHoc));
+            }
             if ((Original_DienThoaiMe == null)) {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
@@ -19590,21 +19647,13 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
-            if ((Original_NgayVaoLop.HasValue == true)) {
+            if ((Original_CreatedDate.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((System.DateTime)(Original_NgayVaoLop.Value));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((System.DateTime)(Original_CreatedDate.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            if ((Original_CreatedDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((System.DateTime)(Original_CreatedDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -19759,7 +19808,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
         public virtual int Update(
                     string HoDem, 
                     string Ten, 
-                    byte GioiTinh, 
+                    object GioiTinh, 
                     string DanToc, 
                     string DienCuTru, 
                     string DienThoai, 
@@ -19769,7 +19818,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
                     global::System.Nullable<int> QuanHuyenId, 
                     global::System.Nullable<int> PhuongXaId, 
                     string DiaChi, 
-                    byte ThoiHoc, 
+                    object ThoiHoc, 
                     string DienThoaiMe, 
                     global::System.Nullable<global::System.DateTime> NgaySinh, 
                     global::System.Nullable<global::System.DateTime> NgayVaoLop, 
@@ -19777,7 +19826,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
                     int Original_HocSinhId, 
                     string Original_HoDem, 
                     string Original_Ten, 
-                    byte Original_GioiTinh, 
+                    object Original_GioiTinh, 
                     string Original_DanToc, 
                     string Original_DienCuTru, 
                     string Original_DienThoai, 
@@ -19787,10 +19836,9 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
                     global::System.Nullable<int> Original_QuanHuyenId, 
                     global::System.Nullable<int> Original_PhuongXaId, 
                     string Original_DiaChi, 
-                    byte Original_ThoiHoc, 
+                    object Original_ThoiHoc, 
                     string Original_DienThoaiMe, 
                     global::System.Nullable<global::System.DateTime> Original_NgaySinh, 
-                    global::System.Nullable<global::System.DateTime> Original_NgayVaoLop, 
                     global::System.Nullable<global::System.DateTime> Original_CreatedDate) {
             if ((HoDem == null)) {
                 throw new global::System.ArgumentNullException("HoDem");
@@ -19804,7 +19852,12 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Ten));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((byte)(GioiTinh));
+            if ((GioiTinh == null)) {
+                throw new global::System.ArgumentNullException("GioiTinh");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(GioiTinh));
+            }
             if ((DanToc == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
@@ -19859,7 +19912,12 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(DiaChi));
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((byte)(ThoiHoc));
+            if ((ThoiHoc == null)) {
+                throw new global::System.ArgumentNullException("ThoiHoc");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(ThoiHoc));
+            }
             if ((DienThoaiMe == null)) {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
@@ -19897,7 +19955,12 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Ten));
             }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((byte)(Original_GioiTinh));
+            if ((Original_GioiTinh == null)) {
+                throw new global::System.ArgumentNullException("Original_GioiTinh");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(Original_GioiTinh));
+            }
             if ((Original_DanToc == null)) {
                 this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
@@ -19970,7 +20033,12 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_DiaChi));
             }
-            this.Adapter.UpdateCommand.Parameters[39].Value = ((byte)(Original_ThoiHoc));
+            if ((Original_ThoiHoc == null)) {
+                throw new global::System.ArgumentNullException("Original_ThoiHoc");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(Original_ThoiHoc));
+            }
             if ((Original_DienThoaiMe == null)) {
                 this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
@@ -19987,21 +20055,13 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
             }
-            if ((Original_NgayVaoLop.HasValue == true)) {
+            if ((Original_CreatedDate.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((System.DateTime)(Original_NgayVaoLop.Value));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((System.DateTime)(Original_CreatedDate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
-            }
-            if ((Original_CreatedDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((System.DateTime)(Original_CreatedDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -20023,7 +20083,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int InsertHocSinhToLop(global::System.Nullable<int> hocsinh, global::System.Nullable<int> lop, global::System.Nullable<global::System.DateTime> ngayvaolop) {
-            global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[4];
+            global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[5];
             if ((hocsinh.HasValue == true)) {
                 command.Parameters[0].Value = ((int)(hocsinh.Value));
             }

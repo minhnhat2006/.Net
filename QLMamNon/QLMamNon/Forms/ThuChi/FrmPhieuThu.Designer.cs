@@ -130,7 +130,7 @@
             // colSoTien
             // 
             this.colSoTien.Caption = "Số tiền";
-            this.colSoTien.DisplayFormat.FormatString = "c0";
+            this.colSoTien.DisplayFormat.FormatString = "n0";
             this.colSoTien.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.colSoTien.FieldName = "SoTien";
             this.colSoTien.Name = "colSoTien";

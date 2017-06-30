@@ -48,7 +48,7 @@
     <Compile Include="DateTimeUtil.cs" />
     <Compile Include="ListUtil.cs" />
     <Compile Include="StringUtil.cs" />
-    <Compile Include="InitUtil.cs" />
+    <Compile Include="IntUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

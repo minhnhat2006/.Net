@@ -32,5 +32,23 @@ namespace ACG.Core.WinForm.Util
             string dateToCompareStr = dateToCompare.ToString(compareFormat);
             return dateStr.Equals(dateToCompareStr);
         }
+
+        public static int GetNumberDayOfWeekInMonth(int year, int month, DayOfWeek dayOfWeek)
+        {
+            int count = 0;
+            int day = DateTime.DaysInMonth(year, month);
+
+            for (; day > 0; day--)
+            {
+                DateTime d = new DateTime(year, month, day);
+                //Compare date with sunday
+                if (d.DayOfWeek == dayOfWeek)
+                {
+                    count = count + 1;
+                }
+            }
+
+            return count;
+        }
     }
 }

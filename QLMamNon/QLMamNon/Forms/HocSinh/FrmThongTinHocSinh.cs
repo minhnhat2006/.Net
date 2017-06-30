@@ -1,18 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
-using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Base;
-using MySql.Data.MySqlClient;
+using DevExpress.XtraPrinting;
+using QLMamNon.Components.Data.Static;
 using QLMamNon.Facade;
 using QLMamNon.Forms.Resource;
 using QLMamNon.UserControls;
-using QLMamNon.Workflow;
-using QLMamNon.Components.Data.Static;
-using DevExpress.XtraPrinting;
-using System.Collections.Generic;
-using ACG.Core.WinForm.Util;
 using QLThuChi;
+using ACG.Core.WinForm.Util;
 
 namespace QLMamNon.Forms.HocSinh
 {
@@ -33,16 +30,16 @@ namespace QLMamNon.Forms.HocSinh
             this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.ThongTinHocSinh;
             this.FormKey = AppForms.FormThongTinHocSinh;
 
-            this.hocSinhRowBindingSource.DataSource = this.hocSinhTableAdapter.GetData();
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormThongTinHocSinh();
             this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.hocSinhTableAdapter.Adapter, this.hocSinhRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.HocSinhDataTable);
-            this.loadThongTinHocSinh(this.DataTable as QLMamNon.Dao.QLMamNonDs.HocSinhDataTable);
+            this.loadThongTinHocSinh(null, null, null, null, null, null);
         }
 
         private void FrmThongTinHocSinh_Load(object sender, EventArgs e)
         {
             this.quanHuyenRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.QuanHuyen);
             this.lopRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.LopHoc);
+            this.keyValuePairBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.TrangThaiHS);
         }
 
         private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
@@ -134,42 +131,17 @@ namespace QLMamNon.Forms.HocSinh
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            List<string> filters = new List<string>();
-            if (!ControlUtil.IsEditValueNull(this.cmbQuanHuyen))
-            {
-                filters.Add(string.Format("[QuanHuyenId] = {0}", this.cmbQuanHuyen.EditValue));
-            }
-
-            if (!ControlUtil.IsEditValueNull(this.cmbPhuongXa))
-            {
-                filters.Add(string.Format("[PhuongXaId] = {0}", this.cmbPhuongXa.EditValue));
-            }
-
-            if (!ControlUtil.IsEditValueNull(this.cmbLop))
-            {
-                filters.Add(string.Format("[LopDangHoc] = '{0}'", this.cmbLop.Text));
-            }
-
-            if (!StringUtil.IsEmpty(this.cmbThang.Text))
-            {
-                filters.Add(string.Format("[ThangSinh] = {0}", this.cmbThang.Text));
-            }
-
-            if (!StringUtil.IsEmpty(this.cmbNgaySinh.Text))
-            {
-                filters.Add(string.Format("[NgaySinh] = #{0}#", this.cmbNgaySinh.Text));
-            }
-
-            this.gvMain.ActiveFilterString = String.Join(" AND ", filters);
+            this.loadThongTinHocSinh((int?)cmbQuanHuyen.EditValue, (int?)cmbPhuongXa.EditValue, (int?)cmbLop.EditValue, IntUtil.StringToInt((string)cmbThang.EditValue), (DateTime?)cmbNgaySinh.EditValue, (int?)cmbThoiHoc.EditValue);
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            this.cmbQuanHuyen.EditValue = DBNull.Value;
-            this.cmbPhuongXa.EditValue = DBNull.Value;
-            this.cmbLop.EditValue = DBNull.Value;
-            this.cmbNgaySinh.EditValue = DBNull.Value;
-            this.cmbThang.EditValue = DBNull.Value;
+            this.cmbQuanHuyen.EditValue = null;
+            this.cmbPhuongXa.EditValue = null;
+            this.cmbLop.EditValue = null;
+            this.cmbThang.EditValue = null;
+            this.cmbThoiHoc.EditValue = null;
+            this.cmbNgaySinh.EditValue = null;
         }
 
         private void btnXuatExcel_Click(object sender, EventArgs e)
@@ -199,33 +171,14 @@ namespace QLMamNon.Forms.HocSinh
 
         #region Helper
 
-        private void loadThongTinHocSinh(QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable)
+        private void loadThongTinHocSinh(int? quan, int? phuong, int? lop, int? thangSinh, DateTime? ngaySinh, int? thoiHoc)
         {
-            List<int> hocSinhIds = new List<int>(hocSinhTable.Rows.Count);
-            foreach (QLMamNon.Dao.QLMamNonDs.HocSinhRow row in hocSinhTable)
-            {
-                hocSinhIds.Add(row.HocSinhId);
-            }
-
-            Dictionary<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow> hocSinhIdsToHocSinhLops = StaticDataUtil.GetHocSinhLopsByHocSinhIds(hocSinhLopTableAdapter, hocSinhIds, DateTime.Now); ;
-            Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow> hocSinhIdsToLops = StaticDataUtil.GetLopsByHocSinhIds(hocSinhLopTableAdapter, hocSinhIds, DateTime.Now);
-
-            foreach (QLMamNon.Dao.QLMamNonDs.HocSinhRow row in hocSinhTable)
-            {
-                row.ThangSinh = row.NgaySinh.Month;
-
-                if (hocSinhIdsToLops.ContainsKey(row.HocSinhId))
-                {
-                    QLMamNon.Dao.QLMamNonDs.LopRow lop = hocSinhIdsToLops[row.HocSinhId];
-                    row.LopDangHoc = lop.Name;
-                }
-
-                if (hocSinhIdsToHocSinhLops.ContainsKey(row.HocSinhId))
-                {
-                    QLMamNon.Dao.QLMamNonDs.HocSinhLopRow hocSinhLop = hocSinhIdsToHocSinhLops[row.HocSinhId];
-                    row.NgayVaoLop = hocSinhLop.DateJoin;
-                }
-            }
+            QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable = this.hocSinhTableAdapter.GetDataForThongTinHocSinh(quan, phuong, ngaySinh, thangSinh, lop, thoiHoc);
+            hocSinhTable.CreatedDateColumn.DefaultValue = DateTime.Now;
+            ThongTinHocSinhUtil.EvaluateLopInfoForHocSinhTable(hocSinhLopTableAdapter, hocSinhTable);
+            hocSinhTable.AcceptChanges();
+            this.DataTable = hocSinhTable;
+            this.hocSinhRowBindingSource.DataSource = this.DataTable;
         }
 
         private void fillReportHocSinh(RptThongTinHocSinh rpt)

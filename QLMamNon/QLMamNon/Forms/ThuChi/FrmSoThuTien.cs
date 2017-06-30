@@ -140,6 +140,16 @@ namespace QLMamNon.Forms.ThuChi
             }
         }
 
+        private void btnPrintGiayBaoNopTien_Click(object sender, EventArgs e)
+        {
+            if (this.isValidNgayTinh())
+            {
+                RptGiayBaoNopTien rpt = new RptGiayBaoNopTien();
+                this.fillRptGiayBaoNopTien(rpt);
+                FormMainFacade.ShowReport(rpt);
+            }
+        }
+
         protected override void onSaving()
         {
             QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable table = this.DataTable as QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable;
@@ -437,6 +447,42 @@ namespace QLMamNon.Forms.ThuChi
         {
             rpt.viewBangThuTienRowbindingSource.DataSource = this.viewBangThuTienRowBindingSource.DataSource;
             rpt.Ngay.Value = this.GetNgayTinh();
+        }
+
+        private void fillRptGiayBaoNopTien(RptGiayBaoNopTien rpt)
+        {
+            rpt.NgayLapPhieu.Value = DateTime.Now;
+            DateTime ngayTinh = this.GetNgayTinh();
+            rpt.NgayNop.Value = ngayTinh;
+            rpt.SoXuat.Value = DateTime.DaysInMonth(ngayTinh.Year, ngayTinh.Month) - DateTimeUtil.GetNumberDayOfWeekInMonth(ngayTinh.Year, ngayTinh.Month, DayOfWeek.Sunday);
+
+            List<GiayBaoNopTientem> giayBaoNopTiens = new List<GiayBaoNopTientem>();
+            List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> rows = evaluateViewBangThuTienRowsForReport();
+
+            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow in rows)
+            {
+                GiayBaoNopTientem giayBaoNopTien = new GiayBaoNopTientem()
+                {
+                    HoTen = viewBangThuTienRow.HoTen,
+                    Lop = viewBangThuTienRow.Lop,
+                    Lan = viewBangThuTienRow.IsNgayNopLan1Null() ? 1 : 2,
+                    SoTienAnSang = viewBangThuTienRow.SoTienAnSangThangNay,
+                    SoTienAnToi = viewBangThuTienRow.SoTienAnToiThangNay,
+                    SoTienAnTrua = viewBangThuTienRow.TienAnSua,
+                    SoTienDieuHoa = viewBangThuTienRow.SoTienDieuHoa,
+                    SoTienNoThangTruoc = viewBangThuTienRow.SoTienTruyThu,
+                    SoTienAnSangThuaThangTruoc = viewBangThuTienRow.SoTienAnSangThangTruoc,
+                    SoTienAnToiThuaThangTruoc = viewBangThuTienRow.SoTienAnToiThangTruoc,
+                    SoTienAnTruaThuaThangTruoc = viewBangThuTienRow.SoTienSXThangTruoc,
+                    SoXuatAnSangThuaThangTruoc = viewBangThuTienRow.AnSangThangTruoc,
+                    SoXuatAnToiThuaThangTruoc = viewBangThuTienRow.AnToiThangTruoc,
+                    SoXuatAnTruaThuaThangTruoc = viewBangThuTienRow.SXThangTruoc
+                };
+
+                giayBaoNopTiens.Add(giayBaoNopTien);
+            }
+
+            rpt.GiayBaoNopTienDataSource.DataSource = giayBaoNopTiens;
         }
 
         #endregion

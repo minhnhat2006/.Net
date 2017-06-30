@@ -43,7 +43,7 @@ namespace QLMamNon.Forms.HocSinh
                 hocSinhTable = this.hocSinhTableAdapter.GetHocSinhByParams(new DateTime(namHoc.Value + 1, 1, 1), null, lopHoc, null);
             }
 
-            ThongTinHocSinhUtil.evaluateLopInfoForHocSinhTable(hocSinhLopTableAdapter, hocSinhTable);
+            ThongTinHocSinhUtil.EvaluateLopInfoForHocSinhTable(hocSinhLopTableAdapter, hocSinhTable);
 
             this.hocSinhRowBindingSourceDi.DataSource = hocSinhTable;
         }
@@ -57,7 +57,7 @@ namespace QLMamNon.Forms.HocSinh
 
             QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable = this.hocSinhTableAdapter.GetHocSinhByParams(DateTime.Now, null, (int)this.cmbLopHocDen.EditValue, null);
 
-            ThongTinHocSinhUtil.evaluateLopInfoForHocSinhTable(hocSinhLopTableAdapter, hocSinhTable);
+            ThongTinHocSinhUtil.EvaluateLopInfoForHocSinhTable(hocSinhLopTableAdapter, hocSinhTable);
 
             this.hocSinhRowBindingSourceDen.DataSource = hocSinhTable;
         }

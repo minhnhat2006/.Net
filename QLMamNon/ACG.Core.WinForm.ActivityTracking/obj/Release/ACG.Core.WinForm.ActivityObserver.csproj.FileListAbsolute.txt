@@ -1,0 +1,7 @@
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.ActivityTracking\bin\Release\ACG.Core.WinForm.ActivityObserver.dll
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.ActivityTracking\bin\Release\ACG.Core.WinForm.ActivityObserver.pdb
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.ActivityTracking\bin\Release\ACG.Core.WinForm.Util.dll
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.ActivityTracking\bin\Release\ACG.Core.WinForm.Util.pdb
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.ActivityTracking\obj\Release\ACG.Core.WinForm.ActivityObserver.csprojResolveAssemblyReference.cache
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.ActivityTracking\obj\Release\ACG.Core.WinForm.ActivityObserver.dll
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.ActivityTracking\obj\Release\ACG.Core.WinForm.ActivityObserver.pdb

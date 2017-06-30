@@ -1,0 +1,4 @@
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Data.Static\bin\Release\ACG.Core.WinForm.Data.Static.dll
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Data.Static\bin\Release\ACG.Core.WinForm.Data.Static.pdb
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Data.Static\obj\Release\ACG.Core.WinForm.Data.Static.dll
+D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Data.Static\obj\Release\ACG.Core.WinForm.Data.Static.pdb

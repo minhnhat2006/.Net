@@ -12,17 +12,17 @@ namespace QLMamNon
     {
         public static long SXToSoTienSX(int sx)
         {
-            return sx * 20000;
+            return sx * Settings.Default.TienAnChinh;
         }
 
         public static long SXAnSangToSoTienAnSang(int sx)
         {
-            return sx * 6000;
+            return sx * Settings.Default.TienAnSang;
         }
 
         public static long SXAnToiToSoTienAnToi(int sx)
         {
-            return sx * 6000;
+            return sx * Settings.Default.TienAnToi;
         }
 
         public static long CalculateThanhTien(QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow bangThuTienRow)

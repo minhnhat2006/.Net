@@ -75,3 +75,4 @@ D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.TinNhan.FrmTinNh
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.ThuChi.FrmSelectHocSinhsToGenerate.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.UserControls.UCEditFormXepLop.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.ThuChi.FrmSoThuTien.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLThuChi.RptGiayBaoNopTien.resources

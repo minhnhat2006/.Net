@@ -36,6 +36,7 @@ namespace QLMamNon.Forms.ThuChi
             this.khoiRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lopRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lcMain = new DevExpress.XtraLayout.LayoutControl();
+            this.btnPrintGiayBaoNopTien = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
@@ -120,6 +121,7 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnLast = new DevExpress.XtraEditors.SimpleButton();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
@@ -161,6 +163,7 @@ namespace QLMamNon.Forms.ThuChi
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.SuspendLayout();
@@ -180,6 +183,7 @@ namespace QLMamNon.Forms.ThuChi
             // lcMain
             // 
             resources.ApplyResources(this.lcMain, "lcMain");
+            this.lcMain.Controls.Add(this.btnPrintGiayBaoNopTien);
             this.lcMain.Controls.Add(this.btnPrint2);
             this.lcMain.Controls.Add(this.btnPrint1);
             this.lcMain.Controls.Add(this.btnPrint);
@@ -203,6 +207,14 @@ namespace QLMamNon.Forms.ThuChi
             this.lcMain.OptionsPrint.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lcMain.OptionsView.UseParentAutoScaleFactor = true;
             this.lcMain.Root = this.Root;
+            // 
+            // btnPrintGiayBaoNopTien
+            // 
+            this.btnPrintGiayBaoNopTien.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintGiayBaoNopTien.Image")));
+            resources.ApplyResources(this.btnPrintGiayBaoNopTien, "btnPrintGiayBaoNopTien");
+            this.btnPrintGiayBaoNopTien.Name = "btnPrintGiayBaoNopTien";
+            this.btnPrintGiayBaoNopTien.StyleController = this.lcMain;
+            this.btnPrintGiayBaoNopTien.Click += new System.EventHandler(this.btnPrintGiayBaoNopTien_Click);
             // 
             // btnPrint2
             // 
@@ -1032,7 +1044,8 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlItem10,
             this.layoutControlItem5,
             this.layoutControlItem3,
-            this.layoutControlItem4});
+            this.layoutControlItem4,
+            this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(792, 73);
@@ -1041,7 +1054,7 @@ namespace QLMamNon.Forms.ThuChi
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnTimKiem;
-            this.layoutControlItem9.Location = new System.Drawing.Point(347, 0);
+            this.layoutControlItem9.Location = new System.Drawing.Point(216, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(75, 30);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
@@ -1050,9 +1063,9 @@ namespace QLMamNon.Forms.ThuChi
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.cmbThang;
-            this.layoutControlItem2.Location = new System.Drawing.Point(175, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(122, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(172, 30);
+            this.layoutControlItem2.Size = new System.Drawing.Size(94, 30);
             resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
             this.layoutControlItem2.TextSize = new System.Drawing.Size(37, 19);
             // 
@@ -1061,14 +1074,14 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlItem1.Control = this.cmbNam;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(175, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(122, 30);
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
             this.layoutControlItem1.TextSize = new System.Drawing.Size(37, 19);
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.btnReset;
-            this.layoutControlItem10.Location = new System.Drawing.Point(422, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(291, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(62, 30);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
@@ -1100,6 +1113,15 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlItem4.Size = new System.Drawing.Size(82, 30);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.btnPrintGiayBaoNopTien;
+            this.layoutControlItem6.Location = new System.Drawing.Point(353, 0);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(131, 30);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // panelControl1
             // 
@@ -1244,6 +1266,7 @@ namespace QLMamNon.Forms.ThuChi
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1360,6 +1383,8 @@ namespace QLMamNon.Forms.ThuChi
         private DevExpress.XtraEditors.SimpleButton btnLast;
         private DevExpress.XtraEditors.SimpleButton btnNext;
         private DevExpress.XtraEditors.SimpleButton btnPrev;
+        private DevExpress.XtraEditors.SimpleButton btnPrintGiayBaoNopTien;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
 
 
     }

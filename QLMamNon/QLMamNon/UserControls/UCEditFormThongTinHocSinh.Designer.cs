@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtDienThoaiMe = new DevExpress.XtraEditors.TextEdit();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -137,7 +138,7 @@
             // 
             this.SetBoundFieldName(this.txtDienThoaiMe, "DienThoaiMe");
             this.SetBoundPropertyName(this.txtDienThoaiMe, "EditValue");
-            this.txtDienThoaiMe.Location = new System.Drawing.Point(373, 40);
+            this.txtDienThoaiMe.Location = new System.Drawing.Point(373, 102);
             this.txtDienThoaiMe.Name = "txtDienThoaiMe";
             this.txtDienThoaiMe.Size = new System.Drawing.Size(198, 20);
             this.txtDienThoaiMe.StyleController = this.layoutControl1;
@@ -147,7 +148,7 @@
             // 
             this.SetBoundFieldName(this.checkBox1, "ThoiHoc");
             this.SetBoundPropertyName(this.checkBox1, "Checked");
-            this.checkBox1.Location = new System.Drawing.Point(107, 133);
+            this.checkBox1.Location = new System.Drawing.Point(107, 195);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(464, 20);
             this.checkBox1.TabIndex = 12;
@@ -157,7 +158,7 @@
             // 
             this.SetBoundFieldName(this.txtSoNha, "DiaChi");
             this.SetBoundPropertyName(this.txtSoNha, "EditValue");
-            this.txtSoNha.Location = new System.Drawing.Point(373, 103);
+            this.txtSoNha.Location = new System.Drawing.Point(373, 165);
             this.txtSoNha.Name = "txtSoNha";
             this.txtSoNha.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtSoNha.Properties.Appearance.Options.UseFont = true;
@@ -169,7 +170,7 @@
             // 
             this.SetBoundFieldName(this.txtMe, "HoTenMe");
             this.SetBoundPropertyName(this.txtMe, "EditValue");
-            this.txtMe.Location = new System.Drawing.Point(107, 43);
+            this.txtMe.Location = new System.Drawing.Point(107, 105);
             this.txtMe.Name = "txtMe";
             this.txtMe.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtMe.Properties.Appearance.Options.UseFont = true;
@@ -181,7 +182,7 @@
             // 
             this.SetBoundFieldName(this.txtCha, "HoTenCha");
             this.SetBoundPropertyName(this.txtCha, "EditValue");
-            this.txtCha.Location = new System.Drawing.Point(107, 13);
+            this.txtCha.Location = new System.Drawing.Point(107, 75);
             this.txtCha.Name = "txtCha";
             this.txtCha.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtCha.Properties.Appearance.Options.UseFont = true;
@@ -193,7 +194,7 @@
             // 
             this.SetBoundFieldName(this.txtDienThoai, "DienThoai");
             this.SetBoundPropertyName(this.txtDienThoai, "EditValue");
-            this.txtDienThoai.Location = new System.Drawing.Point(373, 10);
+            this.txtDienThoai.Location = new System.Drawing.Point(373, 72);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtDienThoai.Properties.Appearance.Options.UseFont = true;
@@ -206,7 +207,7 @@
             this.SetBoundFieldName(this.txtNgaySinh, "NgaySinh");
             this.SetBoundPropertyName(this.txtNgaySinh, "EditValue");
             this.txtNgaySinh.EditValue = null;
-            this.txtNgaySinh.Location = new System.Drawing.Point(373, -20);
+            this.txtNgaySinh.Location = new System.Drawing.Point(373, 42);
             this.txtNgaySinh.Name = "txtNgaySinh";
             this.txtNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtNgaySinh.Properties.Appearance.Options.UseFont = true;
@@ -217,13 +218,16 @@
             this.txtNgaySinh.Size = new System.Drawing.Size(198, 26);
             this.txtNgaySinh.StyleController = this.layoutControl1;
             this.txtNgaySinh.TabIndex = 3;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "This value is not valid";
+            this.dxValidationProvider.SetValidationRule(this.txtNgaySinh, conditionValidationRule1);
             // 
             // chkGioiTinh
             // 
             this.chkGioiTinh.AutoSizeInLayoutControl = true;
             this.SetBoundFieldName(this.chkGioiTinh, "GioiTinh");
             this.SetBoundPropertyName(this.chkGioiTinh, "EditValue");
-            this.chkGioiTinh.Location = new System.Drawing.Point(107, -20);
+            this.chkGioiTinh.Location = new System.Drawing.Point(107, 42);
             this.chkGioiTinh.Name = "chkGioiTinh";
             this.chkGioiTinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.chkGioiTinh.Properties.Appearance.Options.UseFont = true;
@@ -240,37 +244,37 @@
             // 
             this.SetBoundFieldName(this.txtTen, "Ten");
             this.SetBoundPropertyName(this.txtTen, "EditValue");
-            this.txtTen.Location = new System.Drawing.Point(373, -50);
+            this.txtTen.Location = new System.Drawing.Point(373, 12);
             this.txtTen.Name = "txtTen";
             this.txtTen.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtTen.Properties.Appearance.Options.UseFont = true;
             this.txtTen.Size = new System.Drawing.Size(198, 26);
             this.txtTen.StyleController = this.layoutControl1;
             this.txtTen.TabIndex = 1;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "This value is not valid";
-            this.dxValidationProvider.SetValidationRule(this.txtTen, conditionValidationRule1);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "This value is not valid";
+            this.dxValidationProvider.SetValidationRule(this.txtTen, conditionValidationRule2);
             // 
             // txtHoDem
             // 
             this.SetBoundFieldName(this.txtHoDem, "HoDem");
             this.SetBoundPropertyName(this.txtHoDem, "EditValue");
-            this.txtHoDem.Location = new System.Drawing.Point(107, -50);
+            this.txtHoDem.Location = new System.Drawing.Point(107, 12);
             this.txtHoDem.Name = "txtHoDem";
             this.txtHoDem.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtHoDem.Properties.Appearance.Options.UseFont = true;
             this.txtHoDem.Size = new System.Drawing.Size(167, 26);
             this.txtHoDem.StyleController = this.layoutControl1;
             this.txtHoDem.TabIndex = 0;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "This value is not valid";
-            this.dxValidationProvider.SetValidationRule(this.txtHoDem, conditionValidationRule2);
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "This value is not valid";
+            this.dxValidationProvider.SetValidationRule(this.txtHoDem, conditionValidationRule3);
             // 
             // cmbTinh
             // 
             this.SetBoundFieldName(this.cmbTinh, "TinhThanhPhoId");
             this.SetBoundPropertyName(this.cmbTinh, "EditValue");
-            this.cmbTinh.Location = new System.Drawing.Point(107, 73);
+            this.cmbTinh.Location = new System.Drawing.Point(107, 135);
             this.cmbTinh.Name = "cmbTinh";
             this.cmbTinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.cmbTinh.Properties.Appearance.Options.UseFont = true;
@@ -298,7 +302,7 @@
             // 
             this.SetBoundFieldName(this.cmbQuan, "QuanHuyenId");
             this.SetBoundPropertyName(this.cmbQuan, "EditValue");
-            this.cmbQuan.Location = new System.Drawing.Point(373, 64);
+            this.cmbQuan.Location = new System.Drawing.Point(373, 126);
             this.cmbQuan.Name = "cmbQuan";
             this.cmbQuan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.cmbQuan.Properties.Appearance.Options.UseFont = true;
@@ -324,7 +328,7 @@
             // 
             this.SetBoundFieldName(this.cmbPhuong, "PhuongXaId");
             this.SetBoundPropertyName(this.cmbPhuong, "EditValue");
-            this.cmbPhuong.Location = new System.Drawing.Point(107, 103);
+            this.cmbPhuong.Location = new System.Drawing.Point(107, 165);
             this.cmbPhuong.Name = "cmbPhuong";
             this.cmbPhuong.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.cmbPhuong.Properties.Appearance.Options.UseFont = true;
@@ -363,7 +367,7 @@
             this.layoutControlItem10,
             this.layoutControlItem8,
             this.layoutControlItem5});
-            this.Root.Location = new System.Drawing.Point(0, -62);
+            this.Root.Location = new System.Drawing.Point(0, 0);
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(583, 227);
             this.Root.TextVisible = false;

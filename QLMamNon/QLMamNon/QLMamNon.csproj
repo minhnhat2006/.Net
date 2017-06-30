@@ -14,7 +14,8 @@
     <FileAlignment>512</FileAlignment>
     <StartupObject>QLMamNon.Program</StartupObject>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -124,6 +125,7 @@
     <Compile Include="Components\Command\QLMNDao\QLMNDaoCommand.cs" />
     <Compile Include="Components\Command\QLMNDao\UpdateSoTienTruyThuOfBangThuTienCommand.cs" />
     <Compile Include="Components\Data.Static\BangTinhPhi.cs" />
+    <Compile Include="Components\Data.Static\TrangThaiHSData.cs" />
     <Compile Include="Components\Data.Static\PhanLoaiChi.cs" />
     <Compile Include="Components\Data.Static\KhoanThuData.cs" />
     <Compile Include="Components\Data.Static\NamHocData.cs" />
@@ -146,6 +148,8 @@
       <DependentUpon>QLMamNonDs.xsd</DependentUpon>
     </Compile>
     <Compile Include="Entity\Form\BangKeThuTienItem.cs" />
+    <Compile Include="Entity\Form\GiayBaoNopTientem.cs" />
+    <Compile Include="Entity\Form\KeyValuePair.cs" />
     <Compile Include="Entity\Form\SoTheoDoiTaiSanItem.cs" />
     <Compile Include="Entity\Form\PhieuChiBCHDTC.cs" />
     <Compile Include="Entity\Form\NamHoc.cs" />
@@ -321,6 +325,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptGiayBaoNopTien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptGiayBaoNopTien.designer.cs">
+      <DependentUpon>RptGiayBaoNopTien.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RptTaiSaHistory.cs">
       <SubType>Component</SubType>
@@ -552,6 +562,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptGiayBaoNopTien.resx">
+      <DependentUpon>RptGiayBaoNopTien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RptTaiSaHistory.resx">
       <DependentUpon>RptTaiSaHistory.cs</DependentUpon>
     </EmbeddedResource>
@@ -643,6 +656,7 @@
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewHocTapRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewTaiSanRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Entity.Form.BangKeThuTienItem.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Entity.Form.KeyValuePair.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Entity.Form.NamHoc.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Entity.Form.SoTheoDoiTaiSanItem.datasource" />
     <None Include="Properties\Settings.settings">
