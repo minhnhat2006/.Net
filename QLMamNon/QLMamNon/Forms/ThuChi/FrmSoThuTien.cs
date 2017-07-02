@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Windows.Forms;
 using ACG.Core.WinForm.Util;
+using DevExpress.Utils;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using QLMamNon.Components.Command;
@@ -23,6 +25,8 @@ namespace QLMamNon.Forms.ThuChi
         private QLMamNon.Dao.QLMamNonDs.BangThuTienKhoanThuDataTable bTTKTDataTable;
         private Dictionary<int, QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> prevMonthRowDictionary;
         private QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable;
+        private DateTime ngayTinh;
+        private int lop;
 
         #endregion
 
@@ -73,20 +77,33 @@ namespace QLMamNon.Forms.ThuChi
 
                     if (ViewBangThuTienFieldName.SXThangTruoc.Equals(e.Column.FieldName))
                     {
-                        this.recalculateBangThuTienKhoanThuList(row);
+                        BangThuTienUtil.RecalculateBangThuTienKhoanThuList(lopKhoiTableAdapter, khoanThuHangNamTableAdapter, row);
                     }
                 }
             }
         }
 
+        private void gvMain_CustomDrawFooterCell(object sender, FooterCellCustomDrawEventArgs e)
+        {
+            if (e.Column.FieldName == "HoTen")
+            {
+                e.Appearance.TextOptions.HAlignment = HorzAlignment.Near;
+            }
+        }
+
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            List<string> filters = new List<string>();
-            DateTime ngayTinh = this.GetNgayTinh();
-            if (ngayTinh != DateTime.MinValue)
+            if (this.isValidNgayTinhAndLop())
             {
-                this.loadViewBangThuTiens(ngayTinh);
+                this.persistNgayTinhAndLop();
+                this.loadViewBangThuTiens(ngayTinh, lop);
             }
+        }
+
+        private void persistNgayTinhAndLop()
+        {
+            this.ngayTinh = this.GetNgayTinh();
+            this.lop = (int)this.cmbLop.EditValue;
         }
 
         private DateTime GetNgayTinh()
@@ -112,7 +129,7 @@ namespace QLMamNon.Forms.ThuChi
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            if (this.isValidNgayTinh())
+            if (this.isValidNgayTinhAndLop() && !this.isDataTableEmpty())
             {
                 RptBangKeTongHopThuTienHS rpt = new RptBangKeTongHopThuTienHS();
                 this.fillReportBangKeTongHopThuTien(rpt);
@@ -122,7 +139,7 @@ namespace QLMamNon.Forms.ThuChi
 
         private void btnPrint1_Click(object sender, EventArgs e)
         {
-            if (this.isValidNgayTinh())
+            if (this.isValidNgayTinhAndLop() && !this.isDataTableEmpty())
             {
                 RptSoThuTienTrang1 rpt = new RptSoThuTienTrang1();
                 this.fillRptSoThuTienTrang1(rpt);
@@ -132,7 +149,7 @@ namespace QLMamNon.Forms.ThuChi
 
         private void btnPrint2_Click(object sender, EventArgs e)
         {
-            if (this.isValidNgayTinh())
+            if (this.isValidNgayTinhAndLop() && !this.isDataTableEmpty())
             {
                 RptSoThuTienTrang2 rpt = new RptSoThuTienTrang2();
                 this.fillRptSoThuTienTrang2(rpt);
@@ -142,7 +159,7 @@ namespace QLMamNon.Forms.ThuChi
 
         private void btnPrintGiayBaoNopTien_Click(object sender, EventArgs e)
         {
-            if (this.isValidNgayTinh())
+            if (this.isValidNgayTinhAndLop() && !this.isDataTableEmpty())
             {
                 RptGiayBaoNopTien rpt = new RptGiayBaoNopTien();
                 this.fillRptGiayBaoNopTien(rpt);
@@ -237,6 +254,17 @@ namespace QLMamNon.Forms.ThuChi
 
         #region Helper
 
+        private bool isDataTableEmpty()
+        {
+            if (this.DataTable == null || this.DataTable.Rows.Count == 0)
+            {
+                MessageBox.Show("Danh sách sổ thu tiền trống", "Danh sách trống", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+
+            return false;
+        }
+
         private void loadLopData()
         {
             QLMamNon.Dao.QLMamNonDs.LopDataTable dataTable = StaticDataFacade.Get(StaticDataKeys.LopHoc) as QLMamNon.Dao.QLMamNonDs.LopDataTable;
@@ -258,20 +286,15 @@ namespace QLMamNon.Forms.ThuChi
             hocSinhDataTable = this.hocSinhTableAdapter.GetData();
         }
 
-        private void loadViewBangThuTiens(DateTime ngayTinh)
+        private void loadViewBangThuTiens(DateTime ngayTinh, int lop)
         {
-            if (!this.isValidNgayTinh())
-            {
-                return;
-            }
-
-            if (this.isNeedToGenerateSoThuTiens(ngayTinh))
+            if (this.isNeedToGenerateSoThuTiens(ngayTinh, lop))
             {
                 this.showFormGenerateSoThuTiens(true);
                 return;
             }
 
-            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable table = viewBangThuTienTableAdapter.GetViewBangThuTienByNgayTinhAndLop(ngayTinh, null);
+            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable table = viewBangThuTienTableAdapter.GetViewBangThuTienByNgayTinhAndLop(ngayTinh, lop);
             List<int> bangThuTienIds = new List<int>(table.Rows.Count);
 
             foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row in table)
@@ -284,7 +307,7 @@ namespace QLMamNon.Forms.ThuChi
                 bTTKTDataTable = bangThuTienKhoanThuTableAdapter.GetBangThuTienKhoanThuByBangThuTienIds(String.Join(",", bangThuTienIds));
                 phieuThuDataTable = phieuThuTableAdapter.GetDataByHocSinhIdAndNgayTinh(-1, ngayTinh);
 
-                evaluatePrevMonthViewBangThuTienTable(ngayTinh.AddMonths(-1));
+                evaluatePrevMonthViewBangThuTienTable(ngayTinh.AddMonths(-1), lop);
 
                 foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row in table)
                 {
@@ -298,9 +321,9 @@ namespace QLMamNon.Forms.ThuChi
             this.DataTable = table;
         }
 
-        private void evaluatePrevMonthViewBangThuTienTable(DateTime ngayTinh)
+        private void evaluatePrevMonthViewBangThuTienTable(DateTime ngayTinh, int lop)
         {
-            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable prevMonthBangThuTienTable = viewBangThuTienTableAdapter.GetViewBangThuTienByNgayTinhAndLop(ngayTinh, null);
+            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable prevMonthBangThuTienTable = viewBangThuTienTableAdapter.GetViewBangThuTienByNgayTinhAndLop(ngayTinh, lop);
             List<int> prevMonthBangThuTienIds = new List<int>(prevMonthBangThuTienTable.Rows.Count);
 
             foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row in prevMonthBangThuTienTable)
@@ -320,169 +343,6 @@ namespace QLMamNon.Forms.ThuChi
                     prevMonthRowDictionary.Add(row.HocSinhId, row);
                 }
             }
-        }
-
-        private void recalculateBangThuTienKhoanThuList(QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow)
-        {
-            int khoiId = StaticDataUtil.GetKhoiIdByLopId(lopKhoiTableAdapter, viewBangThuTienRow.LopId).Value;
-            int[] khoanThuIds = new int[] { BangThuTienConstant.KhoanThuIdBanTru, BangThuTienConstant.KhoanThuIdHocPhi, BangThuTienConstant.KhoanThuIdPhuPhi, BangThuTienConstant.KhoanThuIdTienAnSua, BangThuTienConstant.KhoanThuIdAnSang, BangThuTienConstant.KhoanThuIdAnToi };
-            QLMamNon.Dao.QLMamNonDs.KhoanThuHangNamDataTable khoanThuHangNamTable = khoanThuHangNamTableAdapter.GetKhoanThuHangNamByParams(String.Join(",", khoanThuIds), khoiId, viewBangThuTienRow.NgayTinh);
-
-            foreach (QLMamNon.Dao.QLMamNonDs.KhoanThuHangNamRow row in khoanThuHangNamTable)
-            {
-                long soTien = BangThuTienUtil.CalculateSoTienPhi(khoiId, viewBangThuTienRow.SXThangTruoc, row.SoTien, row.KhoanThuId);
-                switch (row.KhoanThuId)
-                {
-                    case BangThuTienConstant.KhoanThuIdTienAnSua:
-                        viewBangThuTienRow.TienAnSua = soTien;
-                        break;
-                    case BangThuTienConstant.KhoanThuIdPhuPhi:
-                        viewBangThuTienRow.PhuPhi = soTien;
-                        break;
-                    case BangThuTienConstant.KhoanThuIdBanTru:
-                        viewBangThuTienRow.BanTru = soTien;
-                        break;
-                    case BangThuTienConstant.KhoanThuIdHocPhi:
-                        viewBangThuTienRow.HocPhi = soTien;
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-
-        private void fillReportBangKeTongHopThuTien(RptBangKeTongHopThuTienHS rpt)
-        {
-            List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> rows = evaluateViewBangThuTienRowsForReport();
-            List<BangKeThuTienItem> rowsToDisplay = new List<BangKeThuTienItem>();
-            Dictionary<int, QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> hocSinhIdsToViewBangThuTienRows = new Dictionary<int, QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow>();
-
-            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow in rows)
-            {
-                hocSinhIdsToViewBangThuTienRows.Add(viewBangThuTienRow.HocSinhId, viewBangThuTienRow);
-            }
-
-            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable = phieuThuTableAdapter.GetDataByHocSinhIdsAndThangNam(StringUtil.Join(new List<int>(hocSinhIdsToViewBangThuTienRows.Keys), ","), this.GetNgayTinh().Year, this.GetNgayTinh().Month);
-            int stt = 1;
-
-            foreach (QLMamNon.Dao.QLMamNonDs.PhieuThuRow phieuThuRow in phieuThuDataTable)
-            {
-                QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow = hocSinhIdsToViewBangThuTienRows[phieuThuRow.HocSinhId];
-                BangKeThuTienItem bangKeThuTienItem = new BangKeThuTienItem()
-                {
-                    STT = stt++,
-                    HocSinhId = viewBangThuTienRow.HocSinhId,
-                    HoTen = viewBangThuTienRow.HoTen,
-                    Lop = viewBangThuTienRow.Lop,
-                    NgayNop = phieuThuRow.Ngay,
-                    SoBienLai = phieuThuRow.MaPhieu,
-                    PhuPhi = viewBangThuTienRow.PhuPhi,
-                    BanTru = viewBangThuTienRow.BanTru,
-                    HocPhi = viewBangThuTienRow.HocPhi,
-                    AnChinh = viewBangThuTienRow.TienAnSua,
-                    AnSang = viewBangThuTienRow.SoTienAnSangConLai,
-                    AnToi = viewBangThuTienRow.SoTienAnToiConLai,
-                    NangKhieu = viewBangThuTienRow.SoTienNangKhieu,
-                    DoDung = viewBangThuTienRow.SoTienDoDung,
-                    DieuHoa = viewBangThuTienRow.SoTienDieuHoa,
-                    TruyThu = viewBangThuTienRow.SoTienTruyThu,
-                    PhaiThu = viewBangThuTienRow.ThanhTien,
-                    DaThu = phieuThuRow.SoTien,
-                    ConNo = viewBangThuTienRow.ThanhTien - phieuThuRow.SoTien
-                };
-
-                if (!ListUtil.IsEmpty(rowsToDisplay))
-                {
-                    BangKeThuTienItem prevVangKeThuTienItem = rowsToDisplay[rowsToDisplay.Count - 1];
-
-                    if (prevVangKeThuTienItem.HocSinhId == bangKeThuTienItem.HocSinhId)
-                    {
-                        bangKeThuTienItem.TruyThu = prevVangKeThuTienItem.ConNo;
-                        bangKeThuTienItem.PhaiThu = prevVangKeThuTienItem.ConNo;
-                        bangKeThuTienItem.ConNo = bangKeThuTienItem.PhaiThu - bangKeThuTienItem.DaThu;
-                    }
-                }
-
-                rowsToDisplay.Add(bangKeThuTienItem);
-            }
-
-            rpt.viewBangThuTienRowbindingSource.DataSource = rowsToDisplay;
-            rpt.Ngay.Value = this.GetNgayTinh();
-        }
-
-        private List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> evaluateViewBangThuTienRowsForReport()
-        {
-            List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> rows = new List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow>(this.GridViewMain.RowCount);
-            List<int> hocSinhIds = new List<int>(this.GridViewMain.DataRowCount);
-            for (int i = 0; i < this.GridViewMain.DataRowCount; i++)
-            {
-                object dataRow = this.GridViewMain.GetRow(this.GridViewMain.GetVisibleRowHandle(i));
-                QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow = (dataRow as DataRowView).Row as QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow;
-                rows.Add(viewBangThuTienRow);
-                hocSinhIds.Add(viewBangThuTienRow.HocSinhId);
-            }
-
-            Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow> hocSinhIdsToLopNames = StaticDataUtil.GetLopsByHocSinhIds(hocSinhLopTableAdapter, hocSinhIds, this.GetNgayTinh());
-
-            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow in rows)
-            {
-                viewBangThuTienRow.HoTen = StaticDataUtil.getHocSinhFullNameByHocSinhId(this.hocSinhDataTable, viewBangThuTienRow.HocSinhId);
-
-                if (hocSinhIdsToLopNames.ContainsKey(viewBangThuTienRow.HocSinhId))
-                {
-                    viewBangThuTienRow.Lop = hocSinhIdsToLopNames[viewBangThuTienRow.HocSinhId].Name;
-                }
-            }
-            return rows;
-        }
-
-        private void fillRptSoThuTienTrang1(RptSoThuTienTrang1 rpt)
-        {
-            List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> rows = evaluateViewBangThuTienRowsForReport();
-            rpt.viewBangThuTienRowbindingSource.DataSource = rows;
-            rpt.Ngay.Value = this.GetNgayTinh();
-        }
-
-        private void fillRptSoThuTienTrang2(RptSoThuTienTrang2 rpt)
-        {
-            rpt.viewBangThuTienRowbindingSource.DataSource = this.viewBangThuTienRowBindingSource.DataSource;
-            rpt.Ngay.Value = this.GetNgayTinh();
-        }
-
-        private void fillRptGiayBaoNopTien(RptGiayBaoNopTien rpt)
-        {
-            rpt.NgayLapPhieu.Value = DateTime.Now;
-            DateTime ngayTinh = this.GetNgayTinh();
-            rpt.NgayNop.Value = ngayTinh;
-            rpt.SoXuat.Value = DateTime.DaysInMonth(ngayTinh.Year, ngayTinh.Month) - DateTimeUtil.GetNumberDayOfWeekInMonth(ngayTinh.Year, ngayTinh.Month, DayOfWeek.Sunday);
-
-            List<GiayBaoNopTientem> giayBaoNopTiens = new List<GiayBaoNopTientem>();
-            List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> rows = evaluateViewBangThuTienRowsForReport();
-
-            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow in rows)
-            {
-                GiayBaoNopTientem giayBaoNopTien = new GiayBaoNopTientem()
-                {
-                    HoTen = viewBangThuTienRow.HoTen,
-                    Lop = viewBangThuTienRow.Lop,
-                    Lan = viewBangThuTienRow.IsNgayNopLan1Null() ? 1 : 2,
-                    SoTienAnSang = viewBangThuTienRow.SoTienAnSangThangNay,
-                    SoTienAnToi = viewBangThuTienRow.SoTienAnToiThangNay,
-                    SoTienAnTrua = viewBangThuTienRow.TienAnSua,
-                    SoTienDieuHoa = viewBangThuTienRow.SoTienDieuHoa,
-                    SoTienNoThangTruoc = viewBangThuTienRow.SoTienTruyThu,
-                    SoTienAnSangThuaThangTruoc = viewBangThuTienRow.SoTienAnSangThangTruoc,
-                    SoTienAnToiThuaThangTruoc = viewBangThuTienRow.SoTienAnToiThangTruoc,
-                    SoTienAnTruaThuaThangTruoc = viewBangThuTienRow.SoTienSXThangTruoc,
-                    SoXuatAnSangThuaThangTruoc = viewBangThuTienRow.AnSangThangTruoc,
-                    SoXuatAnToiThuaThangTruoc = viewBangThuTienRow.AnToiThangTruoc,
-                    SoXuatAnTruaThuaThangTruoc = viewBangThuTienRow.SXThangTruoc
-                };
-
-                giayBaoNopTiens.Add(giayBaoNopTien);
-            }
-
-            rpt.GiayBaoNopTienDataSource.DataSource = giayBaoNopTiens;
         }
 
         #endregion

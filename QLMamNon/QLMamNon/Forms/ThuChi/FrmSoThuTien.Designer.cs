@@ -36,6 +36,7 @@ namespace QLMamNon.Forms.ThuChi
             this.khoiRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lopRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lcMain = new DevExpress.XtraLayout.LayoutControl();
+            this.cmbLop = new DevExpress.XtraEditors.LookUpEdit();
             this.btnPrintGiayBaoNopTien = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint1 = new DevExpress.XtraEditors.SimpleButton();
@@ -122,6 +123,7 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnLast = new DevExpress.XtraEditors.SimpleButton();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
@@ -147,6 +149,7 @@ namespace QLMamNon.Forms.ThuChi
             ((System.ComponentModel.ISupportInitialize)(this.lopRowBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbLop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBangThuTienRowBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).BeginInit();
@@ -164,6 +167,7 @@ namespace QLMamNon.Forms.ThuChi
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.SuspendLayout();
@@ -183,6 +187,7 @@ namespace QLMamNon.Forms.ThuChi
             // lcMain
             // 
             resources.ApplyResources(this.lcMain, "lcMain");
+            this.lcMain.Controls.Add(this.cmbLop);
             this.lcMain.Controls.Add(this.btnPrintGiayBaoNopTien);
             this.lcMain.Controls.Add(this.btnPrint2);
             this.lcMain.Controls.Add(this.btnPrint1);
@@ -207,6 +212,24 @@ namespace QLMamNon.Forms.ThuChi
             this.lcMain.OptionsPrint.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lcMain.OptionsView.UseParentAutoScaleFactor = true;
             this.lcMain.Root = this.Root;
+            // 
+            // cmbLop
+            // 
+            resources.ApplyResources(this.cmbLop, "cmbLop");
+            this.cmbLop.Name = "cmbLop";
+            this.cmbLop.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cmbLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cmbLop.Properties.Buttons"))))});
+            this.cmbLop.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("cmbLop.Properties.Columns"), resources.GetString("cmbLop.Properties.Columns1"), ((int)(resources.GetObject("cmbLop.Properties.Columns2"))), ((DevExpress.Utils.FormatType)(resources.GetObject("cmbLop.Properties.Columns3"))), resources.GetString("cmbLop.Properties.Columns4"), ((bool)(resources.GetObject("cmbLop.Properties.Columns5"))), ((DevExpress.Utils.HorzAlignment)(resources.GetObject("cmbLop.Properties.Columns6"))))});
+            this.cmbLop.Properties.DataSource = this.lopRowBindingSource;
+            this.cmbLop.Properties.DisplayMember = "Name";
+            this.cmbLop.Properties.DropDownRows = 8;
+            this.cmbLop.Properties.NullText = resources.GetString("cmbLop.Properties.NullText");
+            this.cmbLop.Properties.ShowHeader = false;
+            this.cmbLop.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbLop.Properties.ValueMember = "LopId";
+            this.cmbLop.StyleController = this.lcMain;
             // 
             // btnPrintGiayBaoNopTien
             // 
@@ -319,6 +342,7 @@ namespace QLMamNon.Forms.ThuChi
             this.gvMain.OptionsView.ShowFooter = true;
             this.gvMain.OptionsView.ShowGroupPanel = false;
             this.gvMain.OptionsView.ShowIndicator = false;
+            this.gvMain.CustomDrawFooterCell += new DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventHandler(this.gvMain_CustomDrawFooterCell);
             this.gvMain.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvMain_CellValueChanged);
             // 
             // gridBand16
@@ -667,7 +691,7 @@ namespace QLMamNon.Forms.ThuChi
             this.colSoTienAnToiThangTruoc.AppearanceCell.BackColor = ((System.Drawing.Color)(resources.GetObject("colSoTienAnToiThangTruoc.AppearanceCell.BackColor")));
             this.colSoTienAnToiThangTruoc.AppearanceCell.Options.UseBackColor = true;
             this.colSoTienAnToiThangTruoc.AppearanceCell.Options.UseTextOptions = true;
-            this.colSoTienAnToiThangTruoc.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.colSoTienAnToiThangTruoc.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.colSoTienAnToiThangTruoc.DisplayFormat.FormatString = "n0";
             this.colSoTienAnToiThangTruoc.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSoTienAnToiThangTruoc.FieldName = "SoTienAnToiThangTruoc";
@@ -688,7 +712,7 @@ namespace QLMamNon.Forms.ThuChi
             // colSoTienAnToiThangNay
             // 
             this.colSoTienAnToiThangNay.AppearanceCell.Options.UseTextOptions = true;
-            this.colSoTienAnToiThangNay.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.colSoTienAnToiThangNay.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.colSoTienAnToiThangNay.DisplayFormat.FormatString = "n0";
             this.colSoTienAnToiThangNay.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSoTienAnToiThangNay.FieldName = "SoTienAnToiThangNay";
@@ -708,7 +732,7 @@ namespace QLMamNon.Forms.ThuChi
             this.colSoTienAnToiConLai.AppearanceCell.BackColor = ((System.Drawing.Color)(resources.GetObject("colSoTienAnToiConLai.AppearanceCell.BackColor")));
             this.colSoTienAnToiConLai.AppearanceCell.Options.UseBackColor = true;
             this.colSoTienAnToiConLai.AppearanceCell.Options.UseTextOptions = true;
-            this.colSoTienAnToiConLai.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.colSoTienAnToiConLai.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.colSoTienAnToiConLai.DisplayFormat.FormatString = "n0";
             this.colSoTienAnToiConLai.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSoTienAnToiConLai.FieldName = "SoTienAnToiConLai";
@@ -974,6 +998,7 @@ namespace QLMamNon.Forms.ThuChi
             this.cmbThang.Properties.Appearance.Options.UseFont = true;
             this.cmbThang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cmbThang.Properties.Buttons"))))});
+            this.cmbThang.Properties.DropDownRows = 12;
             this.cmbThang.Properties.Items.AddRange(new object[] {
             resources.GetString("cmbThang.Properties.Items"),
             resources.GetString("cmbThang.Properties.Items1"),
@@ -1021,7 +1046,7 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlGroup1});
             this.Root.Location = new System.Drawing.Point(0, 0);
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(792, 524);
+            this.Root.Size = new System.Drawing.Size(858, 507);
             resources.ApplyResources(this.Root, "Root");
             // 
             // layoutControlItem11
@@ -1029,7 +1054,7 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlItem11.Control = this.gcMain;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 73);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(792, 451);
+            this.layoutControlItem11.Size = new System.Drawing.Size(858, 434);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -1045,16 +1070,17 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlItem5,
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.layoutControlItem7});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(792, 73);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(858, 73);
             resources.ApplyResources(this.layoutControlGroup1, "layoutControlGroup1");
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnTimKiem;
-            this.layoutControlItem9.Location = new System.Drawing.Point(216, 0);
+            this.layoutControlItem9.Location = new System.Drawing.Point(282, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(75, 30);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
@@ -1063,7 +1089,7 @@ namespace QLMamNon.Forms.ThuChi
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.cmbThang;
-            this.layoutControlItem2.Location = new System.Drawing.Point(122, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(94, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(94, 30);
             resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
@@ -1074,14 +1100,14 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlItem1.Control = this.cmbNam;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(122, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(94, 30);
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
             this.layoutControlItem1.TextSize = new System.Drawing.Size(37, 19);
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.btnReset;
-            this.layoutControlItem10.Location = new System.Drawing.Point(291, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(357, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(62, 30);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
@@ -1090,7 +1116,7 @@ namespace QLMamNon.Forms.ThuChi
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnPrint;
-            this.layoutControlItem5.Location = new System.Drawing.Point(484, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(550, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(120, 30);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
@@ -1099,7 +1125,7 @@ namespace QLMamNon.Forms.ThuChi
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnPrint1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(604, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(670, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(82, 30);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -1108,7 +1134,7 @@ namespace QLMamNon.Forms.ThuChi
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnPrint2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(686, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(752, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(82, 30);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -1117,11 +1143,20 @@ namespace QLMamNon.Forms.ThuChi
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnPrintGiayBaoNopTien;
-            this.layoutControlItem6.Location = new System.Drawing.Point(353, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(419, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(131, 30);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.cmbLop;
+            this.layoutControlItem7.Location = new System.Drawing.Point(188, 0);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(94, 30);
+            resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(37, 19);
             // 
             // panelControl1
             // 
@@ -1250,6 +1285,7 @@ namespace QLMamNon.Forms.ThuChi
             ((System.ComponentModel.ISupportInitialize)(this.lopRowBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).EndInit();
             this.lcMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbLop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBangThuTienRowBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).EndInit();
@@ -1267,6 +1303,7 @@ namespace QLMamNon.Forms.ThuChi
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1341,6 +1378,15 @@ namespace QLMamNon.Forms.ThuChi
         private DevExpress.XtraEditors.SimpleButton btnPrint1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colAnToiThangTruoc;
+        private Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter phieuThuTableAdapter;
+        private DevExpress.XtraEditors.SimpleButton btnTaoSoThuTien;
+        private DevExpress.XtraEditors.SimpleButton btnFirst;
+        private DevExpress.XtraEditors.SimpleButton btnLast;
+        private DevExpress.XtraEditors.SimpleButton btnNext;
+        private DevExpress.XtraEditors.SimpleButton btnPrev;
+        private DevExpress.XtraEditors.SimpleButton btnPrintGiayBaoNopTien;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand16;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand17;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand19;
@@ -1360,7 +1406,6 @@ namespace QLMamNon.Forms.ThuChi
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand34;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colAnToiThangTruoc;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand35;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
@@ -1377,14 +1422,8 @@ namespace QLMamNon.Forms.ThuChi
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand15;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand18;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand31;
-        private Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter phieuThuTableAdapter;
-        private DevExpress.XtraEditors.SimpleButton btnTaoSoThuTien;
-        private DevExpress.XtraEditors.SimpleButton btnFirst;
-        private DevExpress.XtraEditors.SimpleButton btnLast;
-        private DevExpress.XtraEditors.SimpleButton btnNext;
-        private DevExpress.XtraEditors.SimpleButton btnPrev;
-        private DevExpress.XtraEditors.SimpleButton btnPrintGiayBaoNopTien;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.LookUpEdit cmbLop;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
 
 
     }

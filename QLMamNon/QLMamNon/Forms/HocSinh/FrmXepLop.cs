@@ -114,7 +114,7 @@ namespace QLMamNon.Forms.HocSinh
                 QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable = this.hocSinhRowBindingSourceDi.DataSource as QLMamNon.Dao.QLMamNonDs.HocSinhDataTable;
                 QLMamNon.Dao.QLMamNonDs.HocSinhRow[] hocSinhRows = hocSinhTable.Select(String.Format("HocSinhId={0}", oldRow.HocSinhId)) as QLMamNon.Dao.QLMamNonDs.HocSinhRow[];
                 hocSinhRows[0].LopDangHoc = CommonConstant.EMPTY;
-                this.hocSinhRowBindingSourceDen.RemoveCurrent();
+                this.gvDen.DeleteSelectedRows();
 
                 return;
             }
@@ -123,7 +123,7 @@ namespace QLMamNon.Forms.HocSinh
             QLMamNon.Dao.QLMamNonDs.HocSinhRow newRow = newRowView.Row as QLMamNon.Dao.QLMamNonDs.HocSinhRow;
             copyHocSinhRow(oldRow, newRow);
 
-            this.hocSinhRowBindingSourceDen.RemoveCurrent();
+            this.gvDen.DeleteSelectedRows();
         }
 
         private void cmbLopHocDi_EditValueChanged(object sender, EventArgs e)

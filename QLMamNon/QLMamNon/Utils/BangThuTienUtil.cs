@@ -3,6 +3,7 @@ using System;
 using ACG.Core.WinForm.Util;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
+using QLMamNon.Dao.QLMamNonDsTableAdapters;
 using QLMamNon.Facade;
 using QLMamNon.Properties;
 
@@ -150,6 +151,40 @@ namespace QLMamNon
             }
 
             return soTien;
+        }
+
+        public static void RecalculateBangThuTienKhoanThuList(LopKhoiTableAdapter lopKhoiTableAdapter,
+            KhoanThuHangNamTableAdapter khoanThuHangNamTableAdapter,
+            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow)
+        {
+            int khoiId = StaticDataUtil.GetKhoiIdByLopId(lopKhoiTableAdapter, viewBangThuTienRow.LopId).Value;
+            int[] khoanThuIds = new int[] { BangThuTienConstant.KhoanThuIdBanTru, BangThuTienConstant.KhoanThuIdHocPhi, BangThuTienConstant.KhoanThuIdPhuPhi, BangThuTienConstant.KhoanThuIdTienAnSua, BangThuTienConstant.KhoanThuIdAnSang, BangThuTienConstant.KhoanThuIdAnToi };
+            QLMamNon.Dao.QLMamNonDs.KhoanThuHangNamDataTable khoanThuHangNamTable = khoanThuHangNamTableAdapter.GetKhoanThuHangNamByParams(String.Join(",", khoanThuIds), khoiId, viewBangThuTienRow.NgayTinh);
+
+            foreach (QLMamNon.Dao.QLMamNonDs.KhoanThuHangNamRow row in khoanThuHangNamTable)
+            {
+                long soTien = BangThuTienUtil.CalculateSoTienPhi(khoiId, viewBangThuTienRow.SXThangTruoc, row.SoTien, row.KhoanThuId);
+                switch (row.KhoanThuId)
+                {
+                    case BangThuTienConstant.KhoanThuIdTienAnSua:
+                        viewBangThuTienRow.TienAnSua = soTien;
+                        break;
+                    case BangThuTienConstant.KhoanThuIdPhuPhi:
+                        viewBangThuTienRow.PhuPhi = soTien;
+                        break;
+                    case BangThuTienConstant.KhoanThuIdBanTru:
+                        viewBangThuTienRow.BanTru = soTien;
+                        break;
+                    case BangThuTienConstant.KhoanThuIdHocPhi:
+                        viewBangThuTienRow.HocPhi = soTien;
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            viewBangThuTienRow.KhoanThuChinh = viewBangThuTienRow.TienAnSua + viewBangThuTienRow.PhuPhi + viewBangThuTienRow.BanTru + viewBangThuTienRow.HocPhi;
+            viewBangThuTienRow.ThanhTien = BangThuTienUtil.CalculateThanhTien(viewBangThuTienRow);
         }
     }
 }

@@ -131,6 +131,57 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmbLop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>242, 33</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v14.2" name="DevExpress.Utils.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="cmbLop.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.2">
+    <value>Combo</value>
+  </data>
+  <data name="cmbLop.Properties.Columns" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="cmbLop.Properties.Columns1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cmbLop.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <assembly alias="DevExpress.Data.v14.2" name="DevExpress.Data.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="cmbLop.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v14.2">
+    <value>None</value>
+  </data>
+  <data name="cmbLop.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbLop.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbLop.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v14.2">
+    <value>Near</value>
+  </data>
+  <data name="cmbLop.Properties.NullText" xml:space="preserve">
+    <value>[Chọn lớp]</value>
+  </data>
+  <data name="cmbLop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="cmbLop.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;cmbLop.Name" xml:space="preserve">
+    <value>cmbLop</value>
+  </data>
+  <data name="&gt;&gt;cmbLop.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbLop.Parent" xml:space="preserve">
+    <value>lcMain</value>
+  </data>
+  <data name="&gt;&gt;cmbLop.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="btnPrintGiayBaoNopTien.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAx0RVh0VGl0
@@ -150,12 +201,11 @@
 </value>
   </data>
   <data name="btnPrintGiayBaoNopTien.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 33</value>
+    <value>433, 33</value>
   </data>
   <data name="btnPrintGiayBaoNopTien.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 22</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnPrintGiayBaoNopTien.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
@@ -172,7 +222,7 @@
     <value>lcMain</value>
   </data>
   <data name="&gt;&gt;btnPrintGiayBaoNopTien.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnPrint2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -193,7 +243,7 @@
 </value>
   </data>
   <data name="btnPrint2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>700, 33</value>
+    <value>766, 33</value>
   </data>
   <data name="btnPrint2.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 22</value>
@@ -214,7 +264,7 @@
     <value>lcMain</value>
   </data>
   <data name="&gt;&gt;btnPrint2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnPrint1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -235,7 +285,7 @@
 </value>
   </data>
   <data name="btnPrint1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>618, 33</value>
+    <value>684, 33</value>
   </data>
   <data name="btnPrint1.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 22</value>
@@ -256,7 +306,7 @@
     <value>lcMain</value>
   </data>
   <data name="&gt;&gt;btnPrint1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btnPrint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -277,7 +327,7 @@
 </value>
   </data>
   <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>498, 33</value>
+    <value>564, 33</value>
   </data>
   <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 22</value>
@@ -298,7 +348,7 @@
     <value>lcMain</value>
   </data>
   <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="gcMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -328,7 +378,7 @@
     <value>True</value>
   </data>
   <data name="colSTT.Width" type="System.Int32, mscorlib">
-    <value>40</value>
+    <value>41</value>
   </data>
   <data name="gridBand16.Name" xml:space="preserve">
     <value>gridBand16</value>
@@ -337,7 +387,7 @@
     <value>2</value>
   </data>
   <data name="gridBand16.Width" type="System.Int32, mscorlib">
-    <value>40</value>
+    <value>41</value>
   </data>
   <data name="gridBand17.Caption" xml:space="preserve">
     <value>Họ và tên</value>
@@ -345,7 +395,6 @@
   <data name="colHoTen.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>224, 224, 224</value>
   </data>
-  <assembly alias="DevExpress.Data.v14.2" name="DevExpress.Data.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="colHoTen.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
     <value>Count</value>
   </data>
@@ -386,13 +435,13 @@
     <value>True</value>
   </data>
   <data name="colTienAnSua.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>99</value>
   </data>
   <data name="gridBand19.Name" xml:space="preserve">
     <value>gridBand19</value>
   </data>
   <data name="gridBand19.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>99</value>
   </data>
   <data name="gridBand6.Caption" xml:space="preserve">
     <value>Phụ phí</value>
@@ -1061,7 +1110,7 @@
     <value>False</value>
   </data>
   <data name="gcMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>788, 447</value>
+    <value>854, 430</value>
   </data>
   <data name="gcMain.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1076,7 +1125,7 @@
     <value>lcMain</value>
   </data>
   <data name="&gt;&gt;gcMain.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnReset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1097,7 +1146,7 @@
 </value>
   </data>
   <data name="btnReset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>305, 33</value>
+    <value>371, 33</value>
   </data>
   <data name="btnReset.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 22</value>
@@ -1118,7 +1167,7 @@
     <value>lcMain</value>
   </data>
   <data name="&gt;&gt;btnReset.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="btnTimKiem.Appearance.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1195,7 +1244,7 @@
 </value>
   </data>
   <data name="btnTimKiem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 33</value>
+    <value>296, 33</value>
   </data>
   <data name="btnTimKiem.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 22</value>
@@ -1216,18 +1265,17 @@
     <value>lcMain</value>
   </data>
   <data name="&gt;&gt;btnTimKiem.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="cmbThang.EditValue" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="cmbThang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 33</value>
+    <value>148, 33</value>
   </data>
   <data name="cmbThang.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <assembly alias="DevExpress.Utils.v14.2" name="DevExpress.Utils.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="cmbThang.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.2">
     <value>Combo</value>
   </data>
@@ -1283,7 +1331,7 @@
     <value>lcMain</value>
   </data>
   <data name="&gt;&gt;cmbThang.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="cmbNam.Location" type="System.Drawing.Point, System.Drawing">
     <value>54, 33</value>
@@ -1319,7 +1367,7 @@
     <value />
   </data>
   <data name="cmbNam.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 26</value>
+    <value>50, 26</value>
   </data>
   <data name="cmbNam.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1334,7 +1382,7 @@
     <value>lcMain</value>
   </data>
   <data name="&gt;&gt;cmbNam.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="lcMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -1353,6 +1401,9 @@
   </data>
   <data name="layoutControlItem1.Text" xml:space="preserve">
     <value>Năm</value>
+  </data>
+  <data name="layoutControlItem7.Text" xml:space="preserve">
+    <value>Lớp</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>Tìm kiếm</value>
@@ -2303,6 +2354,12 @@
     <value>layoutControlItem6</value>
   </data>
   <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
+    <value>layoutControlItem7</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;viewBangThuTienTableAdapter.Name" xml:space="preserve">

@@ -14,14 +14,11 @@ namespace QLMamNon.Forms.ThuChi
             }
 
             this.setCurrentViewBangThuTienRowSTT(this.viewBangThuTienRowBindingSource.Current, 0);
+            this.viewBangThuTienRowBindingSource.MoveNext();
 
-            for (int i = 0; i < this.GridViewMain.RowCount - 1; i++)
+            for (int i = 1; i < this.GridViewMain.RowCount; i++)
             {
-                if (this.viewBangThuTienRowBindingSource.Position < this.viewBangThuTienRowBindingSource.Count - 1)
-                {
-                    this.viewBangThuTienRowBindingSource.MoveNext();
-                    this.setCurrentViewBangThuTienRowSTT(this.viewBangThuTienRowBindingSource.Current, i + 2);
-                }
+                this.setCurrentViewBangThuTienRowSTT(this.viewBangThuTienRowBindingSource[i], i + 1);
             }
 
             this.viewBangThuTienRowBindingSource.MoveFirst();
@@ -37,6 +34,8 @@ namespace QLMamNon.Forms.ThuChi
             {
                 bangThuTienRow.STT = stt;
             }
+
+            this.GridViewMain_CellValueChanged(null, null);
         }
 
         private int getCurrentViewBangThuTienRowSTT(object current)

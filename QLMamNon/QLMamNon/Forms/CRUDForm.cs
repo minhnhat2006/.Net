@@ -101,6 +101,8 @@ namespace QLMamNon.Forms
                 this.GridViewMain.ShowingPopupEditForm += new ShowingPopupEditFormEventHandler(GridViewMain_ShowingPopupEditForm);
                 this.GridViewMain.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(GridViewMain_CustomDrawCell);
                 this.GridViewMain.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(GridViewMain_CellValueChanged);
+                this.GridViewMain.RowDeleting += new DevExpress.Data.RowDeletingEventHandler(GridViewMain_RowDeleting);
+                this.GridViewMain.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(GridViewMain_RowUpdated);
                 ModuleMediatorFacade.Invoke(this, WorkFlowActions.AdjustPopupEditForm, this.GridViewMain);
             }
 
@@ -139,6 +141,11 @@ namespace QLMamNon.Forms
 
         protected void GridViewMain_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
         {
+            if (e == null)
+            {
+                return;
+            }
+
             if (e.Column.Caption == this.GridViewColumnSequenceName)
             {
                 if (e.RowHandle >= 0)
@@ -152,7 +159,17 @@ namespace QLMamNon.Forms
             }
         }
 
-        void GridViewMain_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        protected void GridViewMain_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.ModifiedCaption);
+        }
+
+        protected void GridViewMain_RowDeleting(object sender, DevExpress.Data.RowDeletingEventArgs e)
+        {
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.ModifiedCaption);
+        }
+
+        protected void GridViewMain_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
             FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.ModifiedCaption);
         }

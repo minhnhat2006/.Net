@@ -12,11 +12,13 @@ namespace QLMamNon.Entity.Form
 
         public double SoTienAnSang { get; set; }
 
-        public double SoTienAnTrua { get; set; }
+        public double SoTienKhoanThuChinh { get; set; }
 
         public double SoTienAnToi { get; set; }
 
         public double SoTienDieuHoa { get; set; }
+
+        public double SoTienNangKhieu { get; set; }
 
         public double SoTienNoThangTruoc { get; set; }
 

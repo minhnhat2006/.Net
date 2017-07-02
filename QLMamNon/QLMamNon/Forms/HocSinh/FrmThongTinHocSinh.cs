@@ -32,7 +32,6 @@ namespace QLMamNon.Forms.HocSinh
 
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormThongTinHocSinh();
             this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.hocSinhTableAdapter.Adapter, this.hocSinhRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.HocSinhDataTable);
-            this.loadThongTinHocSinh(null, null, null, null, null, null);
         }
 
         private void FrmThongTinHocSinh_Load(object sender, EventArgs e)
@@ -40,6 +39,8 @@ namespace QLMamNon.Forms.HocSinh
             this.quanHuyenRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.QuanHuyen);
             this.lopRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.LopHoc);
             this.keyValuePairBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.TrangThaiHS);
+            this.cmbThoiHoc.EditValue = 0;
+            this.loadThongTinHocSinh(null, null, null, null, null, 0);
         }
 
         private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)

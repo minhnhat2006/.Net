@@ -14,13 +14,13 @@ namespace QLMamNon.Forms.ThuChi
     {
         private void btnTaoSoThuTien_Click(object sender, EventArgs e)
         {
-            if (this.isValidNgayTinh())
+            if (this.isValidNgayTinhAndLop())
             {
                 this.showFormGenerateSoThuTiens(false);
             }
         }
 
-        private bool isValidNgayTinh()
+        private bool isValidNgayTinhAndLop()
         {
             DateTime ngayTinh = this.GetNgayTinh();
 
@@ -32,18 +32,32 @@ namespace QLMamNon.Forms.ThuChi
                 return false;
             }
 
+            if (ControlUtil.IsEditValueNull(this.cmbLop))
+            {
+                MessageBox.Show("Xin vui lòng chọn Lớp", "Chọn lớp", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                return false;
+            }
+
             return true;
         }
 
         private void showFormGenerateSoThuTiens(bool needToCheckGenerated)
         {
-            DateTime ngayTinh = this.GetNgayTinh();
-            if (ngayTinh != DateTime.MinValue && (needToCheckGenerated && this.isNeedToGenerateSoThuTiens(ngayTinh) || !needToCheckGenerated))
+            if (this.isValidNgayTinhAndLop())
             {
+                DateTime ngayTinh = this.GetNgayTinh();
+                int lop = (int)this.cmbLop.EditValue;
+
+                if (!(needToCheckGenerated && this.isNeedToGenerateSoThuTiens(ngayTinh, lop) || !needToCheckGenerated))
+                {
+                    return;
+                }
+
                 using (FrmSelectHocSinhsToGenerate frmSelectHocSinhsToGenerate = new FrmSelectHocSinhsToGenerate())
                 {
                     List<int> selectedHocSinhIds = new List<int>();
-                    QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable viewBangThuTienTable = viewBangThuTienTableAdapter.GetViewBangThuTienByNgayTinhAndLop(this.GetNgayTinh(), null);
+                    QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable viewBangThuTienTable = viewBangThuTienTableAdapter.GetViewBangThuTienByNgayTinhAndLop(ngayTinh, lop);
 
                     foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow in viewBangThuTienTable)
                     {
@@ -52,7 +66,7 @@ namespace QLMamNon.Forms.ThuChi
 
                     frmSelectHocSinhsToGenerate.GeneratedHocSinhIds = selectedHocSinhIds;
 
-                    QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable = hocSinhTableAdapter.GetHocSinhByLopAndNgay(null, this.GetNgayTinh());
+                    QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable = hocSinhTableAdapter.GetHocSinhByLopAndNgay(lop, ngayTinh);
                     frmSelectHocSinhsToGenerate.HocSinhTable = hocSinhTable;
                     DialogResult result = frmSelectHocSinhsToGenerate.ShowDialog(this);
 
@@ -69,19 +83,19 @@ namespace QLMamNon.Forms.ThuChi
             }
         }
 
-        private bool isNeedToGenerateSoThuTiens(DateTime ngayTinh)
+        private bool isNeedToGenerateSoThuTiens(DateTime ngayTinh, int lop)
         {
-            long genHistoryCount = (long)bangThuTienGenHistoryTableAdapter.countBangThuTienGenHistoryByLopAndNgayTinh(null, ngayTinh);
+            long genHistoryCount = (long)bangThuTienGenHistoryTableAdapter.countBangThuTienGenHistoryByLopAndNgayTinh(lop, ngayTinh);
 
             if (genHistoryCount == 0)
             {
                 if (!DateTimeUtil.IsSameMonthYear(ngayTinh, Settings.Default.AppLannchDate))
                 {
-                    long prevMonthGenHistoryCount = (long)bangThuTienGenHistoryTableAdapter.countBangThuTienGenHistoryByLopAndNgayTinh(null, ngayTinh.AddMonths(-1));
+                    long prevMonthGenHistoryCount = (long)bangThuTienGenHistoryTableAdapter.countBangThuTienGenHistoryByLopAndNgayTinh(lop, ngayTinh.AddMonths(-1));
 
                     if (prevMonthGenHistoryCount == 0)
                     {
-                        MessageBox.Show(String.Format("Xin vui lòng tạo sổ thu tiền tháng {0:MM/yyyy} trước", ngayTinh.AddMonths(-1)),
+                        MessageBox.Show(String.Format("Xin vui lòng tạo sổ thu tiền cho lớp {0} tháng {1:MM/yyyy} trước", lop, ngayTinh.AddMonths(-1)),
                         "Tạo số thu tiền", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return true;
                     }
@@ -95,25 +109,25 @@ namespace QLMamNon.Forms.ThuChi
 
         private void generateSoThuTiens(object sender, DoWorkEventArgs e)
         {
-            DateTime ngayTinh = this.GetNgayTinh();
+            this.persistNgayTinhAndLop();
             List<QLMamNon.Dao.QLMamNonDs.HocSinhRow> hocSinhRows = e.Argument as List<QLMamNon.Dao.QLMamNonDs.HocSinhRow>;
             int generatedRowsCount = this.generateSoThuTienByHocSinhRows(ngayTinh, hocSinhRows);
 
-            if (this.isNeedToGenerateSoThuTiens(ngayTinh))
+            if (this.isNeedToGenerateSoThuTiens(ngayTinh, lop))
             {
-                this.bangThuTienGenHistoryTableAdapter.Insert(ngayTinh, null, DateTime.Now);
+                this.bangThuTienGenHistoryTableAdapter.Insert(ngayTinh, lop, DateTime.Now);
             }
         }
 
         private void generatedSoThuTiens(object sender, RunWorkerCompletedEventArgs e)
         {
             this.HideGridLoadingPanel();
-            this.loadViewBangThuTiens(this.GetNgayTinh());
+            this.loadViewBangThuTiens(this.ngayTinh, this.lop);
         }
 
         private int generateSoThuTienByHocSinhRows(DateTime ngayTinh, List<QLMamNon.Dao.QLMamNonDs.HocSinhRow> hocSinhRows)
         {
-            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable viewBangThuTienTable = viewBangThuTienTableAdapter.GetViewBangThuTienByNgayTinhAndLop(this.GetNgayTinh(), null);
+            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable viewBangThuTienTable = viewBangThuTienTableAdapter.GetViewBangThuTienByNgayTinhAndLop(this.ngayTinh, null);
 
             List<int> hocSinhIds = new List<int>();
             List<QLMamNon.Dao.QLMamNonDs.HocSinhRow> needToGenerateHocSinhRows = new List<Dao.QLMamNonDs.HocSinhRow>();
@@ -129,7 +143,7 @@ namespace QLMamNon.Forms.ThuChi
                 }
             }
 
-            Dictionary<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow> hocSinhIdsToHocSinhLops = StaticDataUtil.GetHocSinhLopsByHocSinhIds(hocSinhLopTableAdapter, hocSinhIds, this.GetNgayTinh());
+            Dictionary<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow> hocSinhIdsToHocSinhLops = StaticDataUtil.GetHocSinhLopsByHocSinhIds(hocSinhLopTableAdapter, hocSinhIds, this.ngayTinh);
 
             int stt = viewBangThuTienTable.Rows.Count + 1;
             foreach (QLMamNon.Dao.QLMamNonDs.HocSinhRow hocSinh in needToGenerateHocSinhRows)
