@@ -26,7 +26,9 @@ namespace QLMamNon.Forms.ThuChi
             QLMamNon.Dao.QLMamNonDs.BangThuTienKhoanThuDataTable bTTKTDataTable = bangThuTienKhoanThuTableAdapter.GetBangThuTienKhoanThuByBangThuTienIds(viewBangThuTienRow.BangThuTienId.ToString());
             QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable = phieuThuTableAdapter.GetDataByHocSinhIdAndNgayTinh(-1, ngay);
             Dictionary<int, QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> prevMonthRowDictionary = evaluatePrevMonthViewBangThuTienTable(ngay.AddMonths(-1), hocSinhId);
-            BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(viewBangThuTienRow, prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(viewBangThuTienRow.HocSinhId) ? prevMonthRowDictionary[viewBangThuTienRow.HocSinhId] : null, bTTKTDataTable, phieuThuDataTable, false);
+            BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(viewBangThuTienRow,
+                prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(viewBangThuTienRow.HocSinhId) ? prevMonthRowDictionary[viewBangThuTienRow.HocSinhId] : null, 
+                bTTKTDataTable, phieuThuDataTable, false, false, true);
 
             if (viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Original] != DBNull.Value && viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Current] != DBNull.Value)
             {
@@ -63,7 +65,7 @@ namespace QLMamNon.Forms.ThuChi
 
                 foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row in prevMonthBangThuTienTable)
                 {
-                    BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row, null, prevMonthBTTKTDataTable, prevMonthPhieuThuDataTable, true);
+                    BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row, null, prevMonthBTTKTDataTable, prevMonthPhieuThuDataTable, true, false, true);
                     prevMonthRowDictionary.Add(row.HocSinhId, row);
                 }
             }

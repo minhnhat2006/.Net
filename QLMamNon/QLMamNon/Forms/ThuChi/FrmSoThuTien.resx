@@ -168,7 +168,7 @@
     <value>50, 20</value>
   </data>
   <data name="cmbLop.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;cmbLop.Name" xml:space="preserve">
     <value>cmbLop</value>
@@ -207,7 +207,7 @@
     <value>127, 22</value>
   </data>
   <data name="btnPrintGiayBaoNopTien.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>9</value>
   </data>
   <data name="btnPrintGiayBaoNopTien.Text" xml:space="preserve">
     <value>In Giấy báo nộp tiền</value>
@@ -249,7 +249,7 @@
     <value>78, 22</value>
   </data>
   <data name="btnPrint2.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>12</value>
   </data>
   <data name="btnPrint2.Text" xml:space="preserve">
     <value>In trang 2</value>
@@ -291,7 +291,7 @@
     <value>78, 22</value>
   </data>
   <data name="btnPrint1.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>11</value>
   </data>
   <data name="btnPrint1.Text" xml:space="preserve">
     <value>In trang 1</value>
@@ -333,7 +333,7 @@
     <value>116, 22</value>
   </data>
   <data name="btnPrint.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>10</value>
   </data>
   <data name="btnPrint.Text" xml:space="preserve">
     <value>In Bảng kê thu chi</value>
@@ -420,7 +420,7 @@
     <value>Tiền ăn &amp; sữa</value>
   </data>
   <data name="colTienAnSua.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
-    <value>224, 224, 224</value>
+    <value>Transparent</value>
   </data>
   <data name="colTienAnSua.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
     <value>Sum</value>
@@ -447,7 +447,7 @@
     <value>Phụ phí</value>
   </data>
   <data name="colPhuPhi.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
-    <value>224, 224, 224</value>
+    <value>Transparent</value>
   </data>
   <data name="colPhuPhi.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
     <value>Sum</value>
@@ -474,7 +474,7 @@
     <value>Bán trú</value>
   </data>
   <data name="colBanTru.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
-    <value>224, 224, 224</value>
+    <value>Transparent</value>
   </data>
   <data name="colBanTru.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
     <value>Sum</value>
@@ -501,7 +501,7 @@
     <value>Học phí</value>
   </data>
   <data name="colHocPhi.AppearanceCell.BackColor" type="System.Drawing.Color, System.Drawing">
-    <value>224, 224, 224</value>
+    <value>Transparent</value>
   </data>
   <data name="colHocPhi.Summary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v14.2">
     <value>Sum</value>
@@ -1152,7 +1152,7 @@
     <value>58, 22</value>
   </data>
   <data name="btnReset.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>8</value>
   </data>
   <data name="btnReset.Text" xml:space="preserve">
     <value>Reset</value>
@@ -1250,7 +1250,7 @@
     <value>71, 22</value>
   </data>
   <data name="btnTimKiem.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>7</value>
   </data>
   <data name="btnTimKiem.Text" xml:space="preserve">
     <value>Tìm Kiếm</value>

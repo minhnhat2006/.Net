@@ -17,5 +17,9 @@ namespace QLMamNon.Constant
         public const String SoTienDieuHoa = "SoTienDieuHoa";
         public const String SoTienDoDung = "SoTienDoDung";
         public const String ThanhTien = "ThanhTien";
+        public const String PhuPhi = "PhuPhi";
+        public const String BanTru = "BanTru";
+        public const String HocPhi = "HocPhi";
+        public const String TienAnVaSua = "TienAnSua";
     }
 }

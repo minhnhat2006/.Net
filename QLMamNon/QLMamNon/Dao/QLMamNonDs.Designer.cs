@@ -9718,21 +9718,10 @@ namespace QLMamNon.Dao {
                 this.columnBangThuTienId.Unique = true;
                 this.columnHocSinhId.AllowDBNull = false;
                 this.columnLopId.AllowDBNull = false;
-                this.columnSoTienAnSangThangNay.AllowDBNull = false;
-                this.columnAnToiThangTruoc.AllowDBNull = false;
-                this.columnSoTienAnToiThangNay.AllowDBNull = false;
                 this.columnNgayTinh.AllowDBNull = false;
                 this.columnSTT.AllowDBNull = false;
                 this.columnIsDeleted.AllowDBNull = false;
                 this.columnDateCreated.AllowDBNull = false;
-                this.columnSoTienAnSangConLai.AllowDBNull = false;
-                this.columnSoTienAnToiConLai.AllowDBNull = false;
-                this.columnThanhTien.AllowDBNull = false;
-                this.columnTienAnSua.AllowDBNull = false;
-                this.columnPhuPhi.AllowDBNull = false;
-                this.columnBanTru.AllowDBNull = false;
-                this.columnHocPhi.AllowDBNull = false;
-                this.columnKhoanThuChinh.AllowDBNull = false;
                 this.columnHoTen.AllowDBNull = false;
                 this.columnGhiChu.AllowDBNull = false;
                 this.columnGhiChu.MaxLength = 21845;
@@ -9740,9 +9729,7 @@ namespace QLMamNon.Dao {
                 this.columnLop.MaxLength = 21845;
                 this.columnSoBienLai.AllowDBNull = false;
                 this.columnSoBienLai.MaxLength = 21845;
-                this.columnTongThu.AllowDBNull = false;
                 this.columnTongThu.MaxLength = 21845;
-                this.columnTienAn.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13752,11 +13739,11 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int SXThangTruoc {
                 get {
-                    try {
-                        return ((int)(this[this.tableViewBangThuTien.SXThangTruocColumn]));
+                    if (this.IsSXThangTruocNull()) {
+                        return 0;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SXThangTruoc\' in table \'ViewBangThuTien\' is DBNull.", e);
+                    else {
+                        return ((int)(this[this.tableViewBangThuTien.SXThangTruocColumn]));
                     }
                 }
                 set {
@@ -13768,11 +13755,11 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long SoTienSXThangTruoc {
                 get {
-                    try {
-                        return ((long)(this[this.tableViewBangThuTien.SoTienSXThangTruocColumn]));
+                    if (this.IsSoTienSXThangTruocNull()) {
+                        return 0;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SoTienSXThangTruoc\' in table \'ViewBangThuTien\' is DBNull.", e);
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.SoTienSXThangTruocColumn]));
                     }
                 }
                 set {
@@ -13784,11 +13771,11 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int AnSangThangTruoc {
                 get {
-                    try {
-                        return ((int)(this[this.tableViewBangThuTien.AnSangThangTruocColumn]));
+                    if (this.IsAnSangThangTruocNull()) {
+                        return 0;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AnSangThangTruoc\' in table \'ViewBangThuTien\' is DBNull.", e);
+                    else {
+                        return ((int)(this[this.tableViewBangThuTien.AnSangThangTruocColumn]));
                     }
                 }
                 set {
@@ -13800,12 +13787,11 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long SoTienAnSangThangTruoc {
                 get {
-                    try {
-                        return ((long)(this[this.tableViewBangThuTien.SoTienAnSangThangTruocColumn]));
+                    if (this.IsSoTienAnSangThangTruocNull()) {
+                        return 0;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SoTienAnSangThangTruoc\' in table \'ViewBangThuTien\' is DBNul" +
-                                "l.", e);
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.SoTienAnSangThangTruocColumn]));
                     }
                 }
                 set {
@@ -13817,7 +13803,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long SoTienAnSangThangNay {
                 get {
-                    return ((long)(this[this.tableViewBangThuTien.SoTienAnSangThangNayColumn]));
+                    if (this.IsSoTienAnSangThangNayNull()) {
+                        return 0;
+                    }
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.SoTienAnSangThangNayColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.SoTienAnSangThangNayColumn] = value;
@@ -13828,7 +13819,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int AnToiThangTruoc {
                 get {
-                    return ((int)(this[this.tableViewBangThuTien.AnToiThangTruocColumn]));
+                    if (this.IsAnToiThangTruocNull()) {
+                        return 0;
+                    }
+                    else {
+                        return ((int)(this[this.tableViewBangThuTien.AnToiThangTruocColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.AnToiThangTruocColumn] = value;
@@ -13839,12 +13835,11 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long SoTienAnToiThangTruoc {
                 get {
-                    try {
-                        return ((long)(this[this.tableViewBangThuTien.SoTienAnToiThangTruocColumn]));
+                    if (this.IsSoTienAnToiThangTruocNull()) {
+                        return 0;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SoTienAnToiThangTruoc\' in table \'ViewBangThuTien\' is DBNull" +
-                                ".", e);
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.SoTienAnToiThangTruocColumn]));
                     }
                 }
                 set {
@@ -13856,7 +13851,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long SoTienAnToiThangNay {
                 get {
-                    return ((long)(this[this.tableViewBangThuTien.SoTienAnToiThangNayColumn]));
+                    if (this.IsSoTienAnToiThangNayNull()) {
+                        return 0;
+                    }
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.SoTienAnToiThangNayColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.SoTienAnToiThangNayColumn] = value;
@@ -13867,11 +13867,11 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long SoTienNangKhieu {
                 get {
-                    try {
-                        return ((long)(this[this.tableViewBangThuTien.SoTienNangKhieuColumn]));
+                    if (this.IsSoTienNangKhieuNull()) {
+                        return 0;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SoTienNangKhieu\' in table \'ViewBangThuTien\' is DBNull.", e);
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.SoTienNangKhieuColumn]));
                     }
                 }
                 set {
@@ -13883,11 +13883,11 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long SoTienTruyThu {
                 get {
-                    try {
-                        return ((long)(this[this.tableViewBangThuTien.SoTienTruyThuColumn]));
+                    if (this.IsSoTienTruyThuNull()) {
+                        return 0;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SoTienTruyThu\' in table \'ViewBangThuTien\' is DBNull.", e);
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.SoTienTruyThuColumn]));
                     }
                 }
                 set {
@@ -13899,11 +13899,11 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long SoTienDoDung {
                 get {
-                    try {
-                        return ((long)(this[this.tableViewBangThuTien.SoTienDoDungColumn]));
+                    if (this.IsSoTienDoDungNull()) {
+                        return 0;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SoTienDoDung\' in table \'ViewBangThuTien\' is DBNull.", e);
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.SoTienDoDungColumn]));
                     }
                 }
                 set {
@@ -13915,11 +13915,11 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long SoTienDieuHoa {
                 get {
-                    try {
-                        return ((long)(this[this.tableViewBangThuTien.SoTienDieuHoaColumn]));
+                    if (this.IsSoTienDieuHoaNull()) {
+                        return 0;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SoTienDieuHoa\' in table \'ViewBangThuTien\' is DBNull.", e);
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.SoTienDieuHoaColumn]));
                     }
                 }
                 set {
@@ -13975,7 +13975,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long SoTienAnSangConLai {
                 get {
-                    return ((long)(this[this.tableViewBangThuTien.SoTienAnSangConLaiColumn]));
+                    if (this.IsSoTienAnSangConLaiNull()) {
+                        return 0;
+                    }
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.SoTienAnSangConLaiColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.SoTienAnSangConLaiColumn] = value;
@@ -13986,7 +13991,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long SoTienAnToiConLai {
                 get {
-                    return ((long)(this[this.tableViewBangThuTien.SoTienAnToiConLaiColumn]));
+                    if (this.IsSoTienAnToiConLaiNull()) {
+                        return 0;
+                    }
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.SoTienAnToiConLaiColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.SoTienAnToiConLaiColumn] = value;
@@ -13997,7 +14007,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long ThanhTien {
                 get {
-                    return ((long)(this[this.tableViewBangThuTien.ThanhTienColumn]));
+                    if (this.IsThanhTienNull()) {
+                        return 0;
+                    }
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.ThanhTienColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.ThanhTienColumn] = value;
@@ -14008,7 +14023,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long TienAnSua {
                 get {
-                    return ((long)(this[this.tableViewBangThuTien.TienAnSuaColumn]));
+                    if (this.IsTienAnSuaNull()) {
+                        return 0;
+                    }
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.TienAnSuaColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.TienAnSuaColumn] = value;
@@ -14019,7 +14039,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long PhuPhi {
                 get {
-                    return ((long)(this[this.tableViewBangThuTien.PhuPhiColumn]));
+                    if (this.IsPhuPhiNull()) {
+                        return 0;
+                    }
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.PhuPhiColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.PhuPhiColumn] = value;
@@ -14030,7 +14055,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long BanTru {
                 get {
-                    return ((long)(this[this.tableViewBangThuTien.BanTruColumn]));
+                    if (this.IsBanTruNull()) {
+                        return 0;
+                    }
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.BanTruColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.BanTruColumn] = value;
@@ -14041,7 +14071,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long HocPhi {
                 get {
-                    return ((long)(this[this.tableViewBangThuTien.HocPhiColumn]));
+                    if (this.IsHocPhiNull()) {
+                        return 0;
+                    }
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.HocPhiColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.HocPhiColumn] = value;
@@ -14052,7 +14087,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long KhoanThuChinh {
                 get {
-                    return ((long)(this[this.tableViewBangThuTien.KhoanThuChinhColumn]));
+                    if (this.IsKhoanThuChinhNull()) {
+                        return 0;
+                    }
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.KhoanThuChinhColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.KhoanThuChinhColumn] = value;
@@ -14171,7 +14211,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string TongThu {
                 get {
-                    return ((string)(this[this.tableViewBangThuTien.TongThuColumn]));
+                    if (this.IsTongThuNull()) {
+                        return "0";
+                    }
+                    else {
+                        return ((string)(this[this.tableViewBangThuTien.TongThuColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.TongThuColumn] = value;
@@ -14182,7 +14227,12 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long TienAn {
                 get {
-                    return ((long)(this[this.tableViewBangThuTien.TienAnColumn]));
+                    if (this.IsTienAnNull()) {
+                        return 0;
+                    }
+                    else {
+                        return ((long)(this[this.tableViewBangThuTien.TienAnColumn]));
+                    }
                 }
                 set {
                     this[this.tableViewBangThuTien.TienAnColumn] = value;
@@ -14239,6 +14289,30 @@ namespace QLMamNon.Dao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSoTienAnSangThangNayNull() {
+                return this.IsNull(this.tableViewBangThuTien.SoTienAnSangThangNayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSoTienAnSangThangNayNull() {
+                this[this.tableViewBangThuTien.SoTienAnSangThangNayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAnToiThangTruocNull() {
+                return this.IsNull(this.tableViewBangThuTien.AnToiThangTruocColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAnToiThangTruocNull() {
+                this[this.tableViewBangThuTien.AnToiThangTruocColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSoTienAnToiThangTruocNull() {
                 return this.IsNull(this.tableViewBangThuTien.SoTienAnToiThangTruocColumn);
             }
@@ -14247,6 +14321,18 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSoTienAnToiThangTruocNull() {
                 this[this.tableViewBangThuTien.SoTienAnToiThangTruocColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSoTienAnToiThangNayNull() {
+                return this.IsNull(this.tableViewBangThuTien.SoTienAnToiThangNayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSoTienAnToiThangNayNull() {
+                this[this.tableViewBangThuTien.SoTienAnToiThangNayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14299,6 +14385,102 @@ namespace QLMamNon.Dao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSoTienAnSangConLaiNull() {
+                return this.IsNull(this.tableViewBangThuTien.SoTienAnSangConLaiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSoTienAnSangConLaiNull() {
+                this[this.tableViewBangThuTien.SoTienAnSangConLaiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSoTienAnToiConLaiNull() {
+                return this.IsNull(this.tableViewBangThuTien.SoTienAnToiConLaiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSoTienAnToiConLaiNull() {
+                this[this.tableViewBangThuTien.SoTienAnToiConLaiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsThanhTienNull() {
+                return this.IsNull(this.tableViewBangThuTien.ThanhTienColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetThanhTienNull() {
+                this[this.tableViewBangThuTien.ThanhTienColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTienAnSuaNull() {
+                return this.IsNull(this.tableViewBangThuTien.TienAnSuaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTienAnSuaNull() {
+                this[this.tableViewBangThuTien.TienAnSuaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPhuPhiNull() {
+                return this.IsNull(this.tableViewBangThuTien.PhuPhiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPhuPhiNull() {
+                this[this.tableViewBangThuTien.PhuPhiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBanTruNull() {
+                return this.IsNull(this.tableViewBangThuTien.BanTruColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBanTruNull() {
+                this[this.tableViewBangThuTien.BanTruColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHocPhiNull() {
+                return this.IsNull(this.tableViewBangThuTien.HocPhiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHocPhiNull() {
+                this[this.tableViewBangThuTien.HocPhiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKhoanThuChinhNull() {
+                return this.IsNull(this.tableViewBangThuTien.KhoanThuChinhColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKhoanThuChinhNull() {
+                this[this.tableViewBangThuTien.KhoanThuChinhColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNgayNopLan1Null() {
                 return this.IsNull(this.tableViewBangThuTien.NgayNopLan1Column);
             }
@@ -14343,6 +14525,30 @@ namespace QLMamNon.Dao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSoTienNopLan2Null() {
                 this[this.tableViewBangThuTien.SoTienNopLan2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTongThuNull() {
+                return this.IsNull(this.tableViewBangThuTien.TongThuColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTongThuNull() {
+                this[this.tableViewBangThuTien.TongThuColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTienAnNull() {
+                return this.IsNull(this.tableViewBangThuTien.TienAnColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTienAnNull() {
+                this[this.tableViewBangThuTien.TienAnColumn] = global::System.Convert.DBNull;
             }
         }
         

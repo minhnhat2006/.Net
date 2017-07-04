@@ -9,12 +9,20 @@ namespace QLMamNon.Components.ActivityTracker.ControlHandler
 {
     public class SimpleButtonHandler : ButtonHandler
     {
-        protected virtual bool isControlNeedTrack(Control c)
+        public override void HandleControl(System.Windows.Forms.Control control)
+        {
+            if (isControlNeedTrack(control))
+            {
+                (control as SimpleButton).Click += new EventHandler(onClick);
+            }
+        }
+
+        protected override bool isControlNeedTrack(Control c)
         {
             return (c is SimpleButton);
         }
 
-        protected void onClick(object sender, EventArgs e)
+        protected override void onClick(object sender, EventArgs e)
         {
             Control c = sender as Control;
             string controlName = ControlUtil.GetFullNameOfControl(c);

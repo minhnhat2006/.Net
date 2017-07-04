@@ -404,7 +404,6 @@ namespace QLMamNon.Forms.ThuChi
             this.colTienAnSua.GroupFormat.FormatString = "n0";
             this.colTienAnSua.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colTienAnSua.Name = "colTienAnSua";
-            this.colTienAnSua.OptionsColumn.AllowEdit = false;
             this.colTienAnSua.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("colTienAnSua.Summary"))), resources.GetString("colTienAnSua.Summary1"), resources.GetString("colTienAnSua.Summary2"))});
             resources.ApplyResources(this.colTienAnSua, "colTienAnSua");
@@ -423,7 +422,6 @@ namespace QLMamNon.Forms.ThuChi
             this.colPhuPhi.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colPhuPhi.FieldName = "PhuPhi";
             this.colPhuPhi.Name = "colPhuPhi";
-            this.colPhuPhi.OptionsColumn.AllowEdit = false;
             this.colPhuPhi.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("colPhuPhi.Summary"))), resources.GetString("colPhuPhi.Summary1"), resources.GetString("colPhuPhi.Summary2"))});
             resources.ApplyResources(this.colPhuPhi, "colPhuPhi");
@@ -444,7 +442,6 @@ namespace QLMamNon.Forms.ThuChi
             this.colBanTru.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colBanTru.FieldName = "BanTru";
             this.colBanTru.Name = "colBanTru";
-            this.colBanTru.OptionsColumn.AllowEdit = false;
             this.colBanTru.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("colBanTru.Summary"))), resources.GetString("colBanTru.Summary1"), resources.GetString("colBanTru.Summary2"))});
             resources.ApplyResources(this.colBanTru, "colBanTru");
@@ -465,7 +462,6 @@ namespace QLMamNon.Forms.ThuChi
             this.colHocPhi.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colHocPhi.FieldName = "HocPhi";
             this.colHocPhi.Name = "colHocPhi";
-            this.colHocPhi.OptionsColumn.AllowEdit = false;
             this.colHocPhi.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("colHocPhi.Summary"))), resources.GetString("colHocPhi.Summary1"), resources.GetString("colHocPhi.Summary2"))});
             resources.ApplyResources(this.colHocPhi, "colHocPhi");

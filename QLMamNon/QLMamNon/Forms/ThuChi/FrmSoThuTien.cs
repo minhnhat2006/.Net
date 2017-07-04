@@ -64,7 +64,11 @@ namespace QLMamNon.Forms.ThuChi
                 ViewBangThuTienFieldName.SoTienNangKhieu,
                 ViewBangThuTienFieldName.SoTienTruyThu,
                 ViewBangThuTienFieldName.SoTienDieuHoa,
-                ViewBangThuTienFieldName.SoTienDoDung
+                ViewBangThuTienFieldName.SoTienDoDung,
+                ViewBangThuTienFieldName.TienAnVaSua,
+                ViewBangThuTienFieldName.PhuPhi,
+                ViewBangThuTienFieldName.BanTru,
+                ViewBangThuTienFieldName.HocPhi
             };
 
             if (fieldsToEvaluate.Contains(e.Column.FieldName) && e.RowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
@@ -73,7 +77,9 @@ namespace QLMamNon.Forms.ThuChi
                 {
                     DataRowView rowView = gv.GetRow(e.RowHandle) as DataRowView;
                     QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row = rowView.Row as QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow;
-                    BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row, prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(row.HocSinhId) ? prevMonthRowDictionary[row.HocSinhId] : null, bTTKTDataTable, phieuThuDataTable, false);
+                    BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row,
+                        prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(row.HocSinhId) ? prevMonthRowDictionary[row.HocSinhId] : null,
+                        bTTKTDataTable, phieuThuDataTable, false, false, false);
 
                     if (ViewBangThuTienFieldName.SXThangTruoc.Equals(e.Column.FieldName))
                     {
@@ -177,15 +183,9 @@ namespace QLMamNon.Forms.ThuChi
                 viewBangThuTienRow.SoTienAnSangThangTruoc = BangThuTienUtil.SXAnSangToSoTienAnSang(viewBangThuTienRow.AnSangThangTruoc);
                 viewBangThuTienRow.SoTienAnToiThangTruoc = BangThuTienUtil.SXAnToiToSoTienAnToi(viewBangThuTienRow.AnToiThangTruoc);
 
-                if (viewBangThuTienRow[ViewBangThuTienFieldName.SXThangTruoc, DataRowVersion.Original] != DBNull.Value && viewBangThuTienRow[ViewBangThuTienFieldName.SXThangTruoc, DataRowVersion.Current] != DBNull.Value)
+                if (this.isNeedToUpdateBangThuTienKhoanThu(viewBangThuTienRow))
                 {
-                    int originalVersionToCompare = (int)viewBangThuTienRow[ViewBangThuTienFieldName.SXThangTruoc, DataRowVersion.Original];
-                    int currentVersionToCompare = (int)viewBangThuTienRow[ViewBangThuTienFieldName.SXThangTruoc, DataRowVersion.Current];
-
-                    if (originalVersionToCompare != currentVersionToCompare)
-                    {
-                        bangThuTienIds.Add(viewBangThuTienRow.BangThuTienId);
-                    }
+                    bangThuTienIds.Add(viewBangThuTienRow.BangThuTienId);
                 }
             }
 
@@ -265,6 +265,30 @@ namespace QLMamNon.Forms.ThuChi
             return false;
         }
 
+        private bool isNeedToUpdateBangThuTienKhoanThu(QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow)
+        {
+            List<String> fieldsToCheck = new List<string>() { ViewBangThuTienFieldName.SXThangTruoc,
+                ViewBangThuTienFieldName.TienAnVaSua,
+                ViewBangThuTienFieldName.PhuPhi,
+                ViewBangThuTienFieldName.BanTru,
+                ViewBangThuTienFieldName.HocPhi
+            };
+
+            foreach (String field in fieldsToCheck)
+            {
+                object original = viewBangThuTienRow[field, DataRowVersion.Original];
+                object current = viewBangThuTienRow[field, DataRowVersion.Current];
+                bool isChanged = original != current;
+
+                if (isChanged)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         private void loadLopData()
         {
             QLMamNon.Dao.QLMamNonDs.LopDataTable dataTable = StaticDataFacade.Get(StaticDataKeys.LopHoc) as QLMamNon.Dao.QLMamNonDs.LopDataTable;
@@ -312,7 +336,9 @@ namespace QLMamNon.Forms.ThuChi
                 foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row in table)
                 {
                     row.HoTen = StaticDataUtil.getHocSinhFullNameByHocSinhId(hocSinhDataTable, row.HocSinhId);
-                    BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row, prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(row.HocSinhId) ? prevMonthRowDictionary[row.HocSinhId] : null, bTTKTDataTable, phieuThuDataTable, false);
+                    BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row,
+                        prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(row.HocSinhId) ? prevMonthRowDictionary[row.HocSinhId] : null,
+                        bTTKTDataTable, phieuThuDataTable, false, false, true);
                     row.AcceptChanges();
                 }
             }
@@ -339,7 +365,7 @@ namespace QLMamNon.Forms.ThuChi
 
                 foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row in prevMonthBangThuTienTable)
                 {
-                    BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row, null, prevMonthBTTKTDataTable, prevMonthPhieuThuDataTable, true);
+                    BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row, null, prevMonthBTTKTDataTable, prevMonthPhieuThuDataTable, true, false, true);
                     prevMonthRowDictionary.Add(row.HocSinhId, row);
                 }
             }

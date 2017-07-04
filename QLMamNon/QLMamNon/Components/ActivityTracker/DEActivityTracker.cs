@@ -10,7 +10,7 @@ namespace QLMamNon.Components.ActivityTracker
 {
     public class DEActivityTracker : BaseActivityTracker
     {
-        protected virtual void initControlHandlers()
+        protected override void initControlHandlers()
         {
             controlHandlers.Add(new TextEditHandler());
             controlHandlers.Add(new ComboBoxEditHandler());
