@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using DevExpress.XtraGrid.Views.Base;
-using QLMamNon.Forms.Resource;
+using QLMamNon.Constant;
 using QLMamNon.UserControls;
 
 namespace QLMamNon.Forms.DanhMuc
@@ -14,7 +14,7 @@ namespace QLMamNon.Forms.DanhMuc
             InitializeComponent();
 
             this.TablePrimaryKey = "LopId";
-            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.LopHoc;
+            this.DanhMuc = DanhMucConstant.LopHoc;
             this.FormKey = AppForms.FormDanhMucTruongHoc;
 
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormLopHoc();

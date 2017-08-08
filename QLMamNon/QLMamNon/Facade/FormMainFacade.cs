@@ -1,13 +1,20 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using DevExpress.XtraReports.UI;
+using QLMamNon.Components.Data.Static;
+using QLMamNon.Constant;
+using QLMamNon.Entity;
 using QLMamNon.Forms;
 using QLMamNon.Forms.Resource;
-using System.Collections.Generic;
+using QLMamNon.Service.Data;
+using UserPrivilegeDataTable = QLMamNon.Dao.QLMamNonDs.UserPrivilegeDataTable;
 
 namespace QLMamNon.Facade
 {
     public static class FormMainFacade
     {
+        public enum FormShowType { Normal, Dialog };
+
         private static IDictionary<string, string> formKeysToCaptions;
 
         private static FrmMain frmMain;
@@ -28,6 +35,13 @@ namespace QLMamNon.Facade
 
         public static void ShowForm(string form)
         {
+            saveCurrentForm(form, FormShowType.Normal);
+
+            if (!checkPrivilegeToAccessForm(form))
+            {
+                return;
+            }
+
             Form frm = formFactory.GetForm(form);
             frm.MdiParent = frmMain;
             frm.Show();
@@ -40,8 +54,53 @@ namespace QLMamNon.Facade
             }
         }
 
+        private static void saveCurrentForm(string form, FormShowType showType)
+        {
+            if (AppForms.FormLogin != form)
+            {
+                StaticDataFacade.Save(StaticDataKeys.CurrentForm, form);
+                StaticDataFacade.Save(StaticDataKeys.CurrentFormShowType, showType);
+            }
+        }
+
+        private static bool checkPrivilegeToAccessForm(string form)
+        {
+            AuthenService authenService = new AuthenService();
+            UserPrivilegeDataTable upTable = null;
+
+            if (authenService.IsAuthenticated())
+            {
+                AuthenticatedEntity authenData = (AuthenticatedEntity)StaticDataFacade.Get(StaticDataKeys.AuthenticatedData);
+                upTable = authenData.UserPrivilegeTable;
+            }
+
+            if (!authenService.CanAccess(form, upTable))
+            {
+                if (!authenService.IsAuthenticated())
+                {
+                    ShowDialog(AppForms.FormLogin);
+                }
+                else
+                {
+                    MessageBox.Show("Bạn không thể truy cập vào phần này.", "Thiếu quyền truy cập",
+                            MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+
+                return false;
+            }
+
+            return true;
+        }
+
         public static void ShowDialog(string form)
         {
+            saveCurrentForm(form, FormShowType.Dialog);
+
+            if (!checkPrivilegeToAccessForm(form))
+            {
+                return;
+            }
+
             Form frm = formFactory.GetForm(form);
             frm.ShowDialog();
             frm.Activate();

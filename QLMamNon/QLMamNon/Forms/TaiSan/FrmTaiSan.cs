@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using DevExpress.XtraGrid.Views.Base;
-using QLMamNon.Forms.Resource;
+﻿using QLMamNon.Constant;
 using QLMamNon.UserControls;
 
 namespace QLMamNon.Forms.DanhMuc
@@ -14,7 +10,7 @@ namespace QLMamNon.Forms.DanhMuc
             InitializeComponent();
 
             this.TablePrimaryKey = "TaiSanId";
-            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.QuanLyTaiSan;
+            this.DanhMuc = DanhMucConstant.QuanLyTaiSan;
             this.FormKey = AppForms.FormTaiSan;
 
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormTaiSan();

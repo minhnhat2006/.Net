@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DevExpress.XtraEditors;
-using QLMamNon.Facade;
-using System.Windows.Forms;
-using DevExpress.XtraGrid.Views.Grid;
-using QLMamNon.Workflow;
-using MySql.Data.MySqlClient;
-using QLMamNon.Forms.Resource;
-using DevExpress.XtraGrid;
 using System.Data;
-using QLMamNon.Dao;
-using System.Threading;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
+using MySql.Data.MySqlClient;
+using QLMamNon.Constant;
+using QLMamNon.Facade;
+using QLMamNon.Workflow;
 
 namespace QLMamNon.Forms
 {

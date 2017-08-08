@@ -47,13 +47,9 @@
             this.lciNgay = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.hocSinhRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dxValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
-            this.phieuThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnXemBaoCao = new DevExpress.XtraEditors.SimpleButton();
-            this.phanLoaiChiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhanLoaiChiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
@@ -69,7 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciNgay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -258,21 +253,9 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // hocSinhRowBindingSource
-            // 
-            this.hocSinhRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.HocSinhRow);
-            // 
             // dxValidationProvider
             // 
             this.dxValidationProvider.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
-            // 
-            // hocSinhTableAdapter
-            // 
-            this.hocSinhTableAdapter.ClearBeforeFill = true;
-            // 
-            // phieuThuTableAdapter
-            // 
-            this.phieuThuTableAdapter.ClearBeforeFill = true;
             // 
             // btnClose
             // 
@@ -297,10 +280,6 @@
             this.btnXemBaoCao.TabIndex = 3;
             this.btnXemBaoCao.Text = "Xem báo cáo";
             this.btnXemBaoCao.Click += new System.EventHandler(this.btnXemBaoCao_Click);
-            // 
-            // phanLoaiChiTableAdapter
-            // 
-            this.phanLoaiChiTableAdapter.ClearBeforeFill = true;
             // 
             // FrmBaoCaoHoatDongTaiChinh
             // 
@@ -332,7 +311,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciNgay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hocSinhRowBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider)).EndInit();
             this.ResumeLayout(false);
 
@@ -347,9 +325,6 @@
         private DevExpress.XtraEditors.DateEdit dateTuNgay;
         private DevExpress.XtraLayout.LayoutControlItem lciNgay;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider;
-        private Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
-        private System.Windows.Forms.BindingSource hocSinhRowBindingSource;
-        private Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter phieuThuTableAdapter;
         private DevExpress.XtraEditors.SimpleButton btnClose;
         private DevExpress.XtraEditors.SimpleButton btnXemBaoCao;
         private DevExpress.XtraEditors.DateEdit dateDenNgay;
@@ -362,6 +337,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMaPhanLoai;
         private DevExpress.XtraGrid.Columns.GridColumn colDienGiai;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private Dao.QLMamNonDsTableAdapters.PhanLoaiChiTableAdapter phanLoaiChiTableAdapter;
     }
 }

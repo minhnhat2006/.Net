@@ -23,7 +23,7 @@ namespace QLMamNon
             newCulture.NumberFormat = new NumberFormatInfo();
             newCulture.NumberFormat.NumberGroupSeparator = ".";
             newCulture.NumberFormat.NumberDecimalSeparator = ",";
-            newCulture.NumberFormat.CurrencySymbol = "VNĐ ";
+            newCulture.NumberFormat.CurrencySymbol = "";// "VNĐ "
             newCulture.NumberFormat.CurrencyGroupSeparator = ".";
             newCulture.NumberFormat.CurrencyDecimalSeparator = ",";
             Thread.CurrentThread.CurrentCulture = newCulture;

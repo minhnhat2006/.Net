@@ -1,16 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using QLMamNon.Forms.Resource;
-using QLMamNon.UserControls;
 using DevExpress.XtraGrid.Views.Base;
-using QLMamNon.Facade;
+using QLMamNon.Constant;
+using QLMamNon.UserControls;
 
 namespace QLMamNon.Forms.DanhMuc
 {
@@ -21,7 +14,7 @@ namespace QLMamNon.Forms.DanhMuc
             InitializeComponent();
 
             this.TablePrimaryKey = "KhoiId";
-            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.KhoiHoc;
+            this.DanhMuc = DanhMucConstant.KhoiHoc;
             this.FormKey = AppForms.FormDanhMucTruongHoc;
 
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormKhoiHoc();

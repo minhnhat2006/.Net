@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
-using ACG.Core.WinForm.Util;
 using DevExpress.XtraGrid.Views.Grid;
+using QLMamNon.Constant;
 using QLMamNon.Facade;
-using QLMamNon.Forms.Resource;
 using QLThuChi;
 
 namespace QLMamNon.Forms.ThuChi
@@ -28,7 +26,6 @@ namespace QLMamNon.Forms.ThuChi
             this.FormKey = AppForms.FormBaoCaoChiTietHoatDongTaiChinh;
             InitializeComponent();
         }
-
 
         private void btnClose_Click(object sender, EventArgs e)
         {

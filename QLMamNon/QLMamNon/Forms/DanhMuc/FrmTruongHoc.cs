@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using QLMamNon.Forms.Resource;
-using MySql.Data.MySqlClient;
+using QLMamNon.Constant;
 using QLMamNon.UserControls;
-using QLMamNon.Facade;
-using DevExpress.XtraGrid;
 
 namespace QLMamNon.Forms.DanhMuc
 {
@@ -22,7 +11,7 @@ namespace QLMamNon.Forms.DanhMuc
             InitializeComponent();
 
             this.TablePrimaryKey = "TruongId";
-            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.TruongHoc;
+            this.DanhMuc = DanhMucConstant.TruongHoc;
             this.FormKey = AppForms.FormDanhMucTruongHoc;
 
             this.truongRowBindingSource.DataSource = this.truongTableAdapter.GetData();

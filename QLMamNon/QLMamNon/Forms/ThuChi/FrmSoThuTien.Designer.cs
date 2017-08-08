@@ -40,7 +40,6 @@ namespace QLMamNon.Forms.ThuChi
             this.btnPrintGiayBaoNopTien = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
             this.viewBangThuTienRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvMain = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
@@ -119,7 +118,6 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -163,7 +161,6 @@ namespace QLMamNon.Forms.ThuChi
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
@@ -191,7 +188,6 @@ namespace QLMamNon.Forms.ThuChi
             this.lcMain.Controls.Add(this.btnPrintGiayBaoNopTien);
             this.lcMain.Controls.Add(this.btnPrint2);
             this.lcMain.Controls.Add(this.btnPrint1);
-            this.lcMain.Controls.Add(this.btnPrint);
             this.lcMain.Controls.Add(this.gcMain);
             this.lcMain.Controls.Add(this.btnReset);
             this.lcMain.Controls.Add(this.btnTimKiem);
@@ -254,14 +250,6 @@ namespace QLMamNon.Forms.ThuChi
             this.btnPrint1.Name = "btnPrint1";
             this.btnPrint1.StyleController = this.lcMain;
             this.btnPrint1.Click += new System.EventHandler(this.btnPrint1_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            resources.ApplyResources(this.btnPrint, "btnPrint");
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.StyleController = this.lcMain;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // gcMain
             // 
@@ -1042,7 +1030,7 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlGroup1});
             this.Root.Location = new System.Drawing.Point(0, 0);
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(858, 507);
+            this.Root.Size = new System.Drawing.Size(792, 524);
             resources.ApplyResources(this.Root, "Root");
             // 
             // layoutControlItem11
@@ -1050,7 +1038,7 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlItem11.Control = this.gcMain;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 73);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(858, 434);
+            this.layoutControlItem11.Size = new System.Drawing.Size(792, 451);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -1063,14 +1051,13 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlItem2,
             this.layoutControlItem1,
             this.layoutControlItem10,
-            this.layoutControlItem5,
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem6,
             this.layoutControlItem7});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(858, 73);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(792, 73);
             resources.ApplyResources(this.layoutControlGroup1, "layoutControlGroup1");
             // 
             // layoutControlItem9
@@ -1109,30 +1096,21 @@ namespace QLMamNon.Forms.ThuChi
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.btnPrint;
-            this.layoutControlItem5.Location = new System.Drawing.Point(550, 0);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(120, 30);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnPrint1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(670, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(550, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(82, 30);
+            this.layoutControlItem3.Size = new System.Drawing.Size(110, 30);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnPrint2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(752, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(660, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(82, 30);
+            this.layoutControlItem4.Size = new System.Drawing.Size(108, 30);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -1295,7 +1273,6 @@ namespace QLMamNon.Forms.ThuChi
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
@@ -1364,8 +1341,6 @@ namespace QLMamNon.Forms.ThuChi
         private Dao.QLMamNonDsTableAdapters.KhoanThuTableAdapter khoanThuTableAdapter;
         private Dao.QLMamNonDsTableAdapters.KhoanThuHangNamTableAdapter khoanThuHangNamTableAdapter;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colDieuHoa;
-        private DevExpress.XtraEditors.SimpleButton btnPrint;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter hocSinhLopTableAdapter;
         private Dao.QLMamNonDsTableAdapters.ViewHocTapTableAdapter viewHocTapTableAdapter;
         private Dao.QLMamNonDsTableAdapters.UnknownColumnViewTableAdapter soNgayNghiThangByHocSinhIdTableAdapter;

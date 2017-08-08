@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ObjectUtil.cs" />
+    <Compile Include="PasswordUtil.cs" />
     <Compile Include="ControlUtil.cs" />
     <Compile Include="ArrayUtil.cs" />
     <Compile Include="DateTimeUtil.cs" />

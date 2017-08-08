@@ -1,18 +1,10 @@
 ﻿using System;
 using System.Data;
-using System.Windows.Forms;
-using DevExpress.XtraGrid;
-using DevExpress.XtraGrid.Views.Base;
-using MySql.Data.MySqlClient;
-using QLMamNon.Facade;
-using QLMamNon.Forms.Resource;
-using QLMamNon.UserControls;
-using QLMamNon.Workflow;
-using QLMamNon.Components.Data.Static;
-using DevExpress.XtraPrinting;
-using System.Collections.Generic;
 using ACG.Core.WinForm.Util;
-using QLThuChi;
+using DevExpress.XtraGrid.Views.Base;
+using QLMamNon.Components.Data.Static;
+using QLMamNon.Constant;
+using QLMamNon.Facade;
 
 namespace QLMamNon.Forms.HocSinh
 {
@@ -30,7 +22,7 @@ namespace QLMamNon.Forms.HocSinh
             InitializeComponent();
 
             this.TablePrimaryKey = "HocTapId";
-            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.ThongTinHocTap;
+            this.DanhMuc = DanhMucConstant.ThongTinHocTap;
             this.FormKey = AppForms.FormThongTinHocTap;
             this.loadThongTinHocTap();
             this.InitForm(null, null, null, this.btnLuu, this.btnHuyBo, this.gvMain, this.viewHocTapTableAdapter.Adapter, this.viewHocTapRowBindingSource.DataSource as DataTable);

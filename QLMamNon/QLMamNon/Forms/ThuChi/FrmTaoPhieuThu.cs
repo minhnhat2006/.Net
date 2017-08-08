@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Views.Grid;
+using QLMamNon.Components.Data.Static;
+using QLMamNon.Constant;
+using QLMamNon.Dao.QLMamNonDsTableAdapters;
 using QLMamNon.Facade;
-using QLMamNon.Forms.Resource;
+using QLMamNon.Service.Data;
+using LayoutVisibility = DevExpress.XtraLayout.Utils.LayoutVisibility;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -28,7 +32,13 @@ namespace QLMamNon.Forms.ThuChi
 
         private void FrmTaoPhieuThu_Load(object sender, EventArgs e)
         {
-            this.hocSinhRowBindingSource.DataSource = this.hocSinhTableAdapter.GetData();
+            HocSinhTableAdapter hocSinhTableAdapter = (HocSinhTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterHocSinh);
+            HocSinhLopTableAdapter hocSinhLopTableAdapter = (HocSinhLopTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterHocSinhLop);
+
+            QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable = hocSinhTableAdapter.GetData();
+            ThongTinHocSinhUtil.EvaluateLopInfoForHocSinhTable(hocSinhLopTableAdapter, hocSinhTable);
+            this.hocSinhRowBindingSource.DataSource = hocSinhTable;
+            this.phanLoaiThuRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.PhanLoaiThu);
 
             if (this.IsEditing)
             {
@@ -43,7 +53,9 @@ namespace QLMamNon.Forms.ThuChi
         private void FrmTaoPhieuThu_Enter(object sender, EventArgs e)
         {
             int hocSinhId = (int)this.GridView.GetFocusedRowCellValue("HocSinhId");
+            int phanLoaiThuId = (int)this.GridView.GetFocusedRowCellValue("PhanLoaiThuId");
             this.cmbHocSinh.EditValue = hocSinhId;
+            this.cmbPhanLoaiThu.EditValue = phanLoaiThuId;
         }
 
         protected void FrmTaoPhieuThu_Activated(object sender, EventArgs e)
@@ -58,32 +70,43 @@ namespace QLMamNon.Forms.ThuChi
 
         private void btnLuuTao_Click(object sender, EventArgs e)
         {
-            if (!this.dxValidationProvider.Validate())
+            if (this.onSavePhieuThu())
             {
-                return;
+                this.resetForm();
+                FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.AddedAndAddingPhieuThuCaption);
+                this.IsEditing = false;
             }
-
-            this.luuPhieuThu();
-            this.updateSoTienTruyThuForBangThuTienNextMonths(this.dateNgay.DateTime, (int)this.cmbHocSinh.EditValue);
-
-            this.resetForm();
-            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.AddedAndAddingPhieuThuCaption);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if (this.onSavePhieuThu())
+            {
+                this.Close();
+                FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.AddedPhieuThuCaption);
+            }
+        }
+
+        private bool onSavePhieuThu()
+        {
             if (!this.dxValidationProvider.Validate())
             {
-                return;
+                return false;
             }
 
-            this.btnLuuTao_Click(sender, e);
-            this.Close();
-            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.AddedPhieuThuCaption);
+            this.luuPhieuThu();
+
+            if ((int)cmbPhanLoaiThu.EditValue == PhanLoaiThuConstant.PhanLoaiThuIdThuTienHocPhi)
+            {
+                this.updateSoTienTruyThuForBangThuTienNextMonths(this.dateNgay.DateTime, (int)this.cmbHocSinh.EditValue);
+            }
+
+            return true;
         }
 
         private void loadPhieuThu()
         {
+            UnknownColumnViewTableAdapter unknownColumnViewTableAdapter = (UnknownColumnViewTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterUnknownColumnView);
             this.dateNgay.DateTime = this.PhieuThuRow.Ngay;
             this.txtSoTien.Value = this.PhieuThuRow.SoTien;
 
@@ -100,7 +123,12 @@ namespace QLMamNon.Forms.ThuChi
             if (!this.PhieuThuRow.IsHocSinhIdNull())
             {
                 this.cmbHocSinh.EditValue = this.PhieuThuRow.HocSinhId;
-                this.txtConLai.Text = String.Format("{0:n0}", this.unknownColumnViewTableAdapter.GetSoTienTruyThuByHocSinhId(this.PhieuThuRow.HocSinhId));
+                this.txtConLai.Text = String.Format("{0:n0}", unknownColumnViewTableAdapter.GetSoTienTruyThuByHocSinhId(this.PhieuThuRow.HocSinhId));
+            }
+
+            if (!this.PhieuThuRow.IsPhanLoaiThuIdNull())
+            {
+                this.cmbPhanLoaiThu.EditValue = this.PhieuThuRow.PhanLoaiThuId;
             }
         }
 
@@ -117,8 +145,10 @@ namespace QLMamNon.Forms.ThuChi
 
             if (this.GridView != null)
             {
+                HocSinhTableAdapter hocSinhTableAdapter = (HocSinhTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterHocSinh);
                 BindingSource phieuThuBindingSource = this.GridView.GridControl.DataSource as BindingSource;
-                phieuThuBindingSource.DataSource = this.phieuThuTableAdapter.GetData();
+                PhieuThuService phieuThuService = new PhieuThuService();
+                phieuThuBindingSource.DataSource = phieuThuService.LoadPhieuThu(hocSinhTableAdapter.GetData());
             }
         }
 
@@ -129,7 +159,9 @@ namespace QLMamNon.Forms.ThuChi
             string maPhieu = this.txtMaPhieu.Text;
             string ghiChu = this.txtGhiChu.Text;
             int? hocSinhId = (int?)this.cmbHocSinh.EditValue;
-            this.phieuThuTableAdapter.Insert(ngay, soTien, maPhieu, ghiChu, hocSinhId, DateTime.Now);
+            int? phanLoaiThuId = (int?)this.cmbPhanLoaiThu.EditValue;
+            PhieuThuService phieuThuService = new PhieuThuService();
+            phieuThuService.InsertPhieuThu(ngay, soTien, maPhieu, ghiChu, hocSinhId, phanLoaiThuId);
         }
 
         private void updatePhieuThu()
@@ -139,8 +171,9 @@ namespace QLMamNon.Forms.ThuChi
             string maPhieu = this.txtMaPhieu.Text;
             string ghiChu = this.txtGhiChu.Text;
             int? hocSinhId = (int?)this.cmbHocSinh.EditValue;
-            int? origHocSinhId = this.PhieuThuRow.IsHocSinhIdNull() ? (int?)null : this.PhieuThuRow.HocSinhId;
-            this.phieuThuTableAdapter.Update(ngay, soTien, maPhieu, ghiChu, hocSinhId, DateTime.Now, this.PhieuThuRow.PhieuThuId, this.PhieuThuRow.Ngay, this.PhieuThuRow.SoTien, this.PhieuThuRow.MaPhieu, origHocSinhId, this.PhieuThuRow.CreatedDate);
+            int? phanLoaiThuId = (int?)this.cmbPhanLoaiThu.EditValue;
+            PhieuThuService phieuThuService = new PhieuThuService();
+            phieuThuService.UpdatePhieuThu(this.PhieuThuRow, ngay, soTien, maPhieu, ghiChu, hocSinhId, phanLoaiThuId);
         }
 
         private void resetForm()
@@ -150,6 +183,13 @@ namespace QLMamNon.Forms.ThuChi
             this.txtGhiChu.Text = "";
             this.txtConLai.Text = "";
             this.cmbHocSinh.EditValue = null;
+        }
+
+        private void cmbPhanLoaiThu_EditValueChanged(object sender, EventArgs e)
+        {
+            LayoutVisibility enableCmbHocSinhId = (int)cmbPhanLoaiThu.EditValue == PhanLoaiThuConstant.PhanLoaiThuIdThuTienHocPhi ? LayoutVisibility.Always : LayoutVisibility.Never;
+            lciCmbHocSinh.Visibility = enableCmbHocSinhId;
+            lciTxtConLai.Visibility = enableCmbHocSinhId;
         }
     }
 }

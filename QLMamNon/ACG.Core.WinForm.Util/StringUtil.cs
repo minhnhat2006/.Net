@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace ACG.Core.WinForm.Util
 {
@@ -30,6 +26,11 @@ namespace ACG.Core.WinForm.Util
             }
 
             return String.Join(separator, listStr);
+        }
+
+        public static String JoinWithCommas(IList list)
+        {
+            return Join(list, ",");
         }
     }
 }

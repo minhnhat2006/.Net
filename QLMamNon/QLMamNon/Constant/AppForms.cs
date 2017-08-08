@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace QLMamNon.Forms.Resource
+﻿
+namespace QLMamNon.Constant
 {
     public static class AppForms
     {
         public const string FormDanhMucKhoanThu = "FrmKhoanThu";
         public const string FormDanhMucKhoanThuHangNam = "FrmKhoanThuHangNam";
         public const string FormDanhMucPhanLoaiChi = "FrmPhanLoaiChi";
+        public const string FormDanhMucPhanLoaiThu = "FrmPhanLoaiThu";
         public const string FormDanhMucTruongHoc = "FrmTruongHoc";
         public const string FormDanhMucKhoiHoc = "FrmKhoiHoc";
         public const string FormDanhMucLopHoc = "FrmLopHoc";
@@ -26,9 +23,17 @@ namespace QLMamNon.Forms.Resource
         public const string FormSoThuTien = "FrmSoThuTien";
         public const string FormBaoCaoHoatDongTaiChinh = "FrmBaoCaoHoatDongTaiChinh";
         public const string FormBaoCaoChiTietHoatDongTaiChinh = "FrmBaoCaoChiTietHoatDongTaiChinh";
+        public const string FormSoQuyTienMat = "FrmSoQuyTienMat";
+        public const string FormBangKeThuHocPhi = "FrmBangKeThuHocPhi";
+        public const string FormBaoCaoTinhHinhThuChi = "FrmBaoCaoTinhHinhThuChi";
         public const string FormTaiSan = "FrmTaiSan";
         public const string FormPhanBoTaiSan = "FrmPhanBoTaiSan";
         public const string FormSoTheoDoiTaiSan = "FrmSoTheoDoiTaiSan";
         public const string FormTinNhanPhuHuynh = "FrmTinNhanPhuHuynh";
+        public const string FormGiaoVien = "FrmGiaoVien";
+        public const string FormLogin = "FrmLogin";
+        public const string FormPreference = "FrmPreference";
+        public const string FormUser = "FrmUser";
+        public const string FormBangTinhPhi = "FrmBangTinhPhi";
     }
 }

@@ -41,10 +41,12 @@
             this.colMaPhieu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnChinhSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.phieuThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter();
             this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
+            this.colPhanLoaiThu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuThuRowBindingSource)).BeginInit();
@@ -64,13 +66,14 @@
             // 
             // gcMain
             // 
-            this.gcMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gcMain.DataSource = this.phieuThuRowBindingSource;
             this.gcMain.Location = new System.Drawing.Point(0, 0);
             this.gcMain.MainView = this.gvMain;
             this.gcMain.Name = "gcMain";
-            this.gcMain.Size = new System.Drawing.Size(792, 524);
+            this.gcMain.Size = new System.Drawing.Size(792, 530);
             this.gcMain.TabIndex = 0;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
@@ -79,11 +82,13 @@
             // 
             this.phieuThuRowBindingSource.AllowNew = true;
             this.phieuThuRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhieuThuRow);
+            this.phieuThuRowBindingSource.Sort = "Ngay,MaPhieu";
             // 
             // gvMain
             // 
             this.gvMain.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colSTT,
+            this.colPhanLoaiThu,
             this.colNgay,
             this.colHocSinh,
             this.colSoTien,
@@ -96,7 +101,10 @@
             this.gvMain.OptionsBehavior.ReadOnly = true;
             this.gvMain.OptionsEditForm.FormCaptionFormat = "Chỉnh sửa thông tin Lớp học";
             this.gvMain.OptionsEditForm.PopupEditFormWidth = 500;
+            this.gvMain.OptionsView.ShowFooter = true;
             this.gvMain.OptionsView.ShowGroupPanel = false;
+            this.gvMain.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colNgay, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gvMain.DoubleClick += new System.EventHandler(this.gvMain_DoubleClick);
             // 
             // colSTT
@@ -105,7 +113,7 @@
             this.colSTT.Name = "colSTT";
             this.colSTT.Visible = true;
             this.colSTT.VisibleIndex = 0;
-            this.colSTT.Width = 41;
+            this.colSTT.Width = 37;
             // 
             // colNgay
             // 
@@ -113,8 +121,8 @@
             this.colNgay.FieldName = "Ngay";
             this.colNgay.Name = "colNgay";
             this.colNgay.Visible = true;
-            this.colNgay.VisibleIndex = 1;
-            this.colNgay.Width = 110;
+            this.colNgay.VisibleIndex = 2;
+            this.colNgay.Width = 87;
             // 
             // colHocSinh
             // 
@@ -124,8 +132,8 @@
             this.colHocSinh.FieldName = "HocSinh";
             this.colHocSinh.Name = "colHocSinh";
             this.colHocSinh.Visible = true;
-            this.colHocSinh.VisibleIndex = 2;
-            this.colHocSinh.Width = 108;
+            this.colHocSinh.VisibleIndex = 3;
+            this.colHocSinh.Width = 85;
             // 
             // colSoTien
             // 
@@ -134,9 +142,11 @@
             this.colSoTien.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.colSoTien.FieldName = "SoTien";
             this.colSoTien.Name = "colSoTien";
+            this.colSoTien.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoTien", "{0:n0}")});
             this.colSoTien.Visible = true;
-            this.colSoTien.VisibleIndex = 3;
-            this.colSoTien.Width = 118;
+            this.colSoTien.VisibleIndex = 4;
+            this.colSoTien.Width = 93;
             // 
             // colMaPhieu
             // 
@@ -144,8 +154,8 @@
             this.colMaPhieu.FieldName = "MaPhieu";
             this.colMaPhieu.Name = "colMaPhieu";
             this.colMaPhieu.Visible = true;
-            this.colMaPhieu.VisibleIndex = 4;
-            this.colMaPhieu.Width = 192;
+            this.colMaPhieu.VisibleIndex = 5;
+            this.colMaPhieu.Width = 153;
             // 
             // colGhiChu
             // 
@@ -153,11 +163,12 @@
             this.colGhiChu.FieldName = "GhiChu";
             this.colGhiChu.Name = "colGhiChu";
             this.colGhiChu.Visible = true;
-            this.colGhiChu.VisibleIndex = 5;
-            this.colGhiChu.Width = 205;
+            this.colGhiChu.VisibleIndex = 6;
+            this.colGhiChu.Width = 174;
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.btnXoa);
             this.panelControl1.Controls.Add(this.btnChinhSua);
             this.panelControl1.Controls.Add(this.btnThem);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -166,13 +177,25 @@
             this.panelControl1.Size = new System.Drawing.Size(792, 43);
             this.panelControl1.TabIndex = 8;
             // 
+            // btnXoa
+            // 
+            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnXoa.Appearance.Options.UseFont = true;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(682, 9);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(99, 25);
+            this.btnXoa.TabIndex = 1;
+            this.btnXoa.Text = "Xóa";
+            // 
             // btnChinhSua
             // 
             this.btnChinhSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnChinhSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnChinhSua.Appearance.Options.UseFont = true;
             this.btnChinhSua.Image = ((System.Drawing.Image)(resources.GetObject("btnChinhSua.Image")));
-            this.btnChinhSua.Location = new System.Drawing.Point(681, 10);
+            this.btnChinhSua.Location = new System.Drawing.Point(573, 10);
             this.btnChinhSua.Name = "btnChinhSua";
             this.btnChinhSua.Size = new System.Drawing.Size(99, 25);
             this.btnChinhSua.TabIndex = 0;
@@ -184,7 +207,7 @@
             this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(571, 10);
+            this.btnThem.Location = new System.Drawing.Point(463, 10);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(99, 25);
             this.btnThem.TabIndex = 0;
@@ -197,6 +220,15 @@
             // hocSinhTableAdapter
             // 
             this.hocSinhTableAdapter.ClearBeforeFill = true;
+            // 
+            // colPhanLoaiThu
+            // 
+            this.colPhanLoaiThu.Caption = "Phân loại thu";
+            this.colPhanLoaiThu.FieldName = "PhanLoaiThu";
+            this.colPhanLoaiThu.Name = "colPhanLoaiThu";
+            this.colPhanLoaiThu.Visible = true;
+            this.colPhanLoaiThu.VisibleIndex = 1;
+            this.colPhanLoaiThu.Width = 145;
             // 
             // FrmPhieuThu
             // 
@@ -234,5 +266,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMaPhieu;
         private DevExpress.XtraGrid.Columns.GridColumn colGhiChu;
         private Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
+        private DevExpress.XtraEditors.SimpleButton btnXoa;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhanLoaiThu;
     }
 }

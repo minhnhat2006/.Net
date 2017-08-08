@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Data;
-using System.Windows.Forms;
-using DevExpress.XtraGrid;
-using DevExpress.XtraGrid.Views.Base;
-using MySql.Data.MySqlClient;
-using QLMamNon.Facade;
-using QLMamNon.Forms.Resource;
-using QLMamNon.UserControls;
-using QLMamNon.Workflow;
-using QLMamNon.Components.Data.Static;
-using DevExpress.XtraPrinting;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using ACG.Core.WinForm.Util;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraPrinting;
+using QLMamNon.Components.Data.Static;
+using QLMamNon.Constant;
+using QLMamNon.Facade;
+using QLMamNon.UserControls;
 
 namespace QLMamNon.Forms.HocSinh
 {
@@ -29,7 +25,7 @@ namespace QLMamNon.Forms.HocSinh
             InitializeComponent();
 
             this.TablePrimaryKey = "HocSinhId";
-            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.ThongTinHocSinh;
+            this.DanhMuc = DanhMucConstant.ThongTinHocSinh;
             this.FormKey = AppForms.FormThongTinHocSinh;
 
             this.hocSinhRowBindingSource.DataSource = this.hocSinhTableAdapter.GetData();

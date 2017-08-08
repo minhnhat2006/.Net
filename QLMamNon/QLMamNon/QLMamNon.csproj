@@ -125,6 +125,7 @@
     <Compile Include="Components\Command\QLMNDao\QLMNDaoCommand.cs" />
     <Compile Include="Components\Command\QLMNDao\UpdateSoTienTruyThuOfBangThuTienCommand.cs" />
     <Compile Include="Components\Data.Static\BangTinhPhi.cs" />
+    <Compile Include="Components\Data.Static\PhanLoaiThu.cs" />
     <Compile Include="Components\Data.Static\TrangThaiHSData.cs" />
     <Compile Include="Components\Data.Static\PhanLoaiChi.cs" />
     <Compile Include="Components\Data.Static\KhoanThuData.cs" />
@@ -141,6 +142,8 @@
     <Compile Include="Constant\CommonConstant.cs" />
     <Compile Include="Constant\BangThuTienConstant.cs" />
     <Compile Include="Constant\ConfigConstant.cs" />
+    <Compile Include="Constant\PhanLoaiThuConstant.cs" />
+    <Compile Include="Constant\FormPrivilegeConstant.cs" />
     <Compile Include="Dao\Constant\ViewBangThuTienFieldName.cs" />
     <Compile Include="Dao\QLMamNonDs.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -148,15 +151,29 @@
       <DependentUpon>QLMamNonDs.xsd</DependentUpon>
     </Compile>
     <Compile Include="Entity\Form\BangKeThuTienItem.cs" />
+    <Compile Include="Entity\Form\SoQuyTienMatItem.cs" />
     <Compile Include="Entity\Form\GiayBaoNopTientem.cs" />
     <Compile Include="Entity\Form\KeyValuePair.cs" />
     <Compile Include="Entity\Form\SoTheoDoiTaiSanItem.cs" />
     <Compile Include="Entity\Form\PhieuChiBCHDTC.cs" />
     <Compile Include="Entity\Form\NamHoc.cs" />
+    <Compile Include="Entity\AuthenticatedEntity.cs" />
     <Compile Include="Facade\StaticDataFacade.cs" />
     <Compile Include="Facade\FormMainFacade.cs" />
+    <Compile Include="Forms\Authenticate\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Authenticate\FrmLogin.designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CRUDForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmBangTinhPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmBangTinhPhi.Designer.cs">
+      <DependentUpon>FrmBangTinhPhi.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DanhMuc\FrmKhoanThuHangNam.cs">
       <SubType>Form</SubType>
@@ -188,6 +205,12 @@
     <Compile Include="Forms\DanhMuc\FrmLopHoc.Designer.cs">
       <DependentUpon>FrmLopHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DanhMuc\FrmPhanLoaiThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhMuc\FrmPhanLoaiThu.Designer.cs">
+      <DependentUpon>FrmPhanLoaiThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DanhMuc\FrmPhuongXa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +235,12 @@
     <Compile Include="Forms\DanhMuc\FrmTruongHoc.Designer.cs">
       <DependentUpon>FrmTruongHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GiaoVien\FrmGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GiaoVien\FrmGiaoVien.Designer.cs">
+      <DependentUpon>FrmGiaoVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\HocSinh\FrmThongTinHocTap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,8 +254,8 @@
       <DependentUpon>FrmThongTinCanDo.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\HocSinh\FrmXepLop..Service.cs">
-      <SubType>Form</SubType>
       <DependentUpon>FrmXepLop.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\HocSinh\FrmXepLop.cs">
       <SubType>Form</SubType>
@@ -234,9 +263,21 @@
     <Compile Include="Forms\HocSinh\FrmXepLop.Designer.cs">
       <DependentUpon>FrmXepLop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Resource\AppForms.cs" />
-    <Compile Include="Forms\Resource\DanhMuc.cs" />
-    <Compile Include="Forms\Resource\StatusCaptions.cs" />
+    <Compile Include="Constant\AppForms.cs" />
+    <Compile Include="Constant\DanhMucConstant.cs" />
+    <Compile Include="Constant\StatusCaptions.cs" />
+    <Compile Include="Forms\SystemSetting\FrmPreference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SystemSetting\FrmPreference.Designer.cs">
+      <DependentUpon>FrmPreference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SystemSetting\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SystemSetting\FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TaiSan\FrmSoTheoDoiTaiSan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +295,24 @@
     </Compile>
     <Compile Include="Forms\TaiSan\FrmPhanBoTaiSan.Designer.cs">
       <DependentUpon>FrmPhanBoTaiSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmBaoCaoTinhHinhThuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmBaoCaoTinhHinhThuChi.Designer.cs">
+      <DependentUpon>FrmBaoCaoTinhHinhThuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmBangKeThuHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmBangKeThuHocPhi.Designer.cs">
+      <DependentUpon>FrmBangKeThuHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmSoQuyTienMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThuChi\FrmSoQuyTienMat.Designer.cs">
+      <DependentUpon>FrmSoQuyTienMat.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ThuChi\FrmSelectHocSinhsToGenerate.cs">
       <SubType>Form</SubType>
@@ -288,8 +347,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ThuChi\FrmSoThuTien.Report.cs">
-      <SubType>Form</SubType>
       <DependentUpon>FrmSoThuTien.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ThuChi\FrmTaoPhieuChi.cs">
       <SubType>Form</SubType>
@@ -316,8 +375,8 @@
       <DependentUpon>FrmSoThuTien.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ThuChi\FrmTaoPhieuThu.Service.cs">
-      <SubType>Form</SubType>
       <DependentUpon>FrmTaoPhieuThu.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\TinNhan\FrmTinNhanPhuHuynh.cs">
       <SubType>Form</SubType>
@@ -329,6 +388,24 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptBaoCaoChiTietHoatDongTaiChinh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptBaoCaoChiTietHoatDongTaiChinh.designer.cs">
+      <DependentUpon>RptBaoCaoChiTietHoatDongTaiChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptTinhHinhThuChi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptTinhHinhThuChi.designer.cs">
+      <DependentUpon>RptTinhHinhThuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptSoQuyTienMat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptSoQuyTienMat.designer.cs">
+      <DependentUpon>RptSoQuyTienMat.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RptGiayBaoNopTien.cs">
       <SubType>Component</SubType>
@@ -360,12 +437,6 @@
     <Compile Include="Reports\RptSoThuTienTrang1.designer.cs">
       <DependentUpon>RptSoThuTienTrang1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\RptBaoCaoChiTietHoatDongTaiChinh.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\RptBaoCaoChiTietHoatDongTaiChinh.designer.cs">
-      <DependentUpon>RptBaoCaoChiTietHoatDongTaiChinh.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\RptBaoCaoHoatDongTaiChinh.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -383,6 +454,36 @@
     </Compile>
     <Compile Include="Reports\RptBangKeTongHopThuTienHS.designer.cs">
       <DependentUpon>RptBangKeTongHopThuTienHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Data\BaseDataService.cs" />
+    <Compile Include="Service\Data\AuthenService.cs" />
+    <Compile Include="Service\Data\SoThuTienService.cs" />
+    <Compile Include="Service\Data\GiaoVienService.cs" />
+    <Compile Include="Service\Data\PhieuChiService.cs" />
+    <Compile Include="Service\Data\PhieuThuService.cs" />
+    <Compile Include="UserControls\UCEditFormPhanLoaiThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormPhanLoaiThu.Designer.cs">
+      <DependentUpon>UCEditFormPhanLoaiThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormBangTinhPhi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormBangTinhPhi.Designer.cs">
+      <DependentUpon>UCEditFormBangTinhPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormUser.Designer.cs">
+      <DependentUpon>UCEditFormUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormGiaoVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCEditFormGiaoVien.Designer.cs">
+      <DependentUpon>UCEditFormGiaoVien.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCEditFormXepLop.cs">
       <SubType>UserControl</SubType>
@@ -477,6 +578,12 @@
     <Compile Include="Workflow\Forms\FrmMainFlow.cs" />
     <Compile Include="Workflow\Forms\IFormWorkFlow.cs" />
     <Compile Include="Workflow\WorkFlowActions.cs" />
+    <EmbeddedResource Include="Forms\Authenticate\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DanhMuc\FrmBangTinhPhi.resx">
+      <DependentUpon>FrmBangTinhPhi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DanhMuc\FrmKhoanThuHangNam.resx">
       <DependentUpon>FrmKhoanThuHangNam.cs</DependentUpon>
     </EmbeddedResource>
@@ -491,6 +598,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DanhMuc\FrmLopHoc.resx">
       <DependentUpon>FrmLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DanhMuc\FrmPhanLoaiThu.resx">
+      <DependentUpon>FrmPhanLoaiThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DanhMuc\FrmPhuongXa.resx">
       <DependentUpon>FrmPhuongXa.cs</DependentUpon>
@@ -508,6 +618,9 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GiaoVien\FrmGiaoVien.resx">
+      <DependentUpon>FrmGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\HocSinh\FrmThongTinHocTap.resx">
       <DependentUpon>FrmThongTinHocTap.cs</DependentUpon>
     </EmbeddedResource>
@@ -520,6 +633,12 @@
     <EmbeddedResource Include="Forms\HocSinh\FrmXepLop.resx">
       <DependentUpon>FrmXepLop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SystemSetting\FrmPreference.resx">
+      <DependentUpon>FrmPreference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SystemSetting\FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TaiSan\FrmSoTheoDoiTaiSan.resx">
       <DependentUpon>FrmSoTheoDoiTaiSan.cs</DependentUpon>
     </EmbeddedResource>
@@ -528,6 +647,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TaiSan\FrmPhanBoTaiSan.resx">
       <DependentUpon>FrmPhanBoTaiSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuChi\FrmBaoCaoTinhHinhThuChi.resx">
+      <DependentUpon>FrmBaoCaoTinhHinhThuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuChi\FrmBangKeThuHocPhi.resx">
+      <DependentUpon>FrmBangKeThuHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThuChi\FrmSoQuyTienMat.resx">
+      <DependentUpon>FrmSoQuyTienMat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ThuChi\FrmSelectHocSinhsToGenerate.resx">
       <DependentUpon>FrmSelectHocSinhsToGenerate.cs</DependentUpon>
@@ -566,6 +694,15 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptBaoCaoChiTietHoatDongTaiChinh.resx">
+      <DependentUpon>RptBaoCaoChiTietHoatDongTaiChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptTinhHinhThuChi.resx">
+      <DependentUpon>RptTinhHinhThuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptSoQuyTienMat.resx">
+      <DependentUpon>RptSoQuyTienMat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RptGiayBaoNopTien.resx">
       <DependentUpon>RptGiayBaoNopTien.cs</DependentUpon>
     </EmbeddedResource>
@@ -581,9 +718,6 @@
     <EmbeddedResource Include="Reports\RptSoThuTienTrang1.resx">
       <DependentUpon>RptSoThuTienTrang1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RptBaoCaoChiTietHoatDongTaiChinh.resx">
-      <DependentUpon>RptBaoCaoChiTietHoatDongTaiChinh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RptBaoCaoHoatDongTaiChinh.resx">
       <DependentUpon>RptBaoCaoHoatDongTaiChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -592,6 +726,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RptBangKeTongHopThuTienHS.resx">
       <DependentUpon>RptBangKeTongHopThuTienHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCEditFormPhanLoaiThu.resx">
+      <DependentUpon>UCEditFormPhanLoaiThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCEditFormBangTinhPhi.resx">
+      <DependentUpon>UCEditFormBangTinhPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCEditFormUser.resx">
+      <DependentUpon>UCEditFormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCEditFormGiaoVien.resx">
+      <DependentUpon>UCEditFormGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCEditFormXepLop.resx">
       <DependentUpon>UCEditFormXepLop.cs</DependentUpon>
@@ -646,15 +792,19 @@
       <DependentUpon>QLMamNonDs.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+BangThuTienRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+BangTinhPhiRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+GiaoVienRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+HocSinhRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+KhoanThuRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+KhoiRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+LopRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+PhanLoaiChiRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+PhanLoaiThuRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+PhuongXaRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+QuanHuyenRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ThanhPhoRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+TruongRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+UserRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewBanGiaoTaiSanRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewBangThuTienRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ViewHocTapRow.datasource" />
@@ -662,6 +812,7 @@
     <None Include="Properties\DataSources\QLMamNon.Entity.Form.BangKeThuTienItem.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Entity.Form.KeyValuePair.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Entity.Form.NamHoc.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Entity.Form.SoQuyTienMatItem.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Entity.Form.SoTheoDoiTaiSanItem.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -682,6 +833,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <Content Include="login.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -717,8 +869,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Forms\BaoCao\" />
-    <Folder Include="Forms\GiaoVien\" />
     <Folder Include="Forms\Report\" />
+    <Folder Include="Forms\Resource\" />
     <Folder Include="Images\icon\" />
     <Folder Include="Service\SMS\" />
   </ItemGroup>

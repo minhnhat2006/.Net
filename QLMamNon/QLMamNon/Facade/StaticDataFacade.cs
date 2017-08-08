@@ -11,14 +11,29 @@ namespace QLMamNon.Facade
     {
         private static IStaticDataMap staticDataMap = new StaticDataMap();
 
-        public static void Add(string key, IStaticData staticData)
+        public static void Add(string key, object staticData)
         {
             staticDataMap.Add(key, staticData);
+        }
+
+        public static void Save(string key, object staticData)
+        {
+            staticDataMap.Save(key, staticData);
+        }
+
+        public static void Remove(string key)
+        {
+            staticDataMap.Remove(key);
         }
 
         public static object Get(string key)
         {
             return staticDataMap.Get(key);
+        }
+
+        public static bool Contains(string key)
+        {
+            return staticDataMap.Contains(key);
         }
     }
 }

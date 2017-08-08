@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
-using DevExpress.XtraGrid.Views.Base;
-using QLMamNon.Facade;
-using QLMamNon.Components.Data.Static;
 using ACG.Core.WinForm.Util;
-using QLMamNon.Forms.Resource;
+using DevExpress.XtraGrid.Views.Base;
+using QLMamNon.Components.Data.Static;
+using QLMamNon.Constant;
+using QLMamNon.Facade;
 using QLMamNon.UserControls;
 
 namespace QLMamNon.Forms.HocSinh
@@ -18,7 +17,7 @@ namespace QLMamNon.Forms.HocSinh
             InitializeComponent();
 
             this.TablePrimaryKey = "TaiSanLopId";
-            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.PhanBoTaiSan;
+            this.DanhMuc = DanhMucConstant.PhanBoTaiSan;
             this.FormKey = AppForms.FormPhanBoTaiSan;
             this.gvLop.OptionsEditForm.CustomEditFormLayout = new UCEditFormBanGiaoTaiSan();
             this.InitForm(null, null, null, this.btnSave, null, this.gvLop, this.viewBanGiaoTaiSanTableAdapter.Adapter, this.viewBanGiaoTaiSanRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanDataTable);

@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using QLMamNon.Forms.Resource;
+﻿using QLMamNon.Constant;
 using QLMamNon.UserControls;
 
 namespace QLMamNon.Forms.DanhMuc
@@ -19,7 +10,7 @@ namespace QLMamNon.Forms.DanhMuc
             InitializeComponent();
 
             this.TablePrimaryKey = "ThanhPhoId";
-            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.TinhThanhPho;
+            this.DanhMuc = DanhMucConstant.TinhThanhPho;
             this.FormKey = AppForms.FormDanhMucTruongHoc;
 
             this.thanhPhoRowBindingSource.DataSource = this.thanhPhoTableAdapter.GetData();

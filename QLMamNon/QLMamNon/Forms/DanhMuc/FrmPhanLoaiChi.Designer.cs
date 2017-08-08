@@ -201,7 +201,7 @@
             this.ClientSize = new System.Drawing.Size(792, 733);
             this.Controls.Add(this.panelMain);
             this.Name = "FrmPhanLoaiChi";
-            this.Text = "Trường học";
+            this.Text = "Phân loại chi";
             this.Load += new System.EventHandler(this.FrmPhanLoaiChi_Load);
             this.panelMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

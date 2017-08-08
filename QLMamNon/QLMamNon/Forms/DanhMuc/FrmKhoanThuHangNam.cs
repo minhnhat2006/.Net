@@ -1,6 +1,6 @@
 ﻿using System;
 using DevExpress.XtraGrid.Views.Base;
-using QLMamNon.Forms.Resource;
+using QLMamNon.Constant;
 using QLMamNon.UserControls;
 
 namespace QLMamNon.Forms.DanhMuc
@@ -12,7 +12,7 @@ namespace QLMamNon.Forms.DanhMuc
             InitializeComponent();
 
             this.TablePrimaryKey = "KhoanThuHangNamId";
-            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.KhoanThuHangNam;
+            this.DanhMuc = DanhMucConstant.KhoanThuHangNam;
             this.FormKey = AppForms.FormDanhMucKhoanThuHangNam;
 
             this.khoanThuHangNamRowBindingSource.DataSource = this.khoanThuHangNamTableAdapter.GetData();

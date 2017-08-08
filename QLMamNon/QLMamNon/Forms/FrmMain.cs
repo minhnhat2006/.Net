@@ -2,8 +2,8 @@
 using DevExpress.XtraBars;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Components.ModuleMediator.Channel;
+using QLMamNon.Constant;
 using QLMamNon.Facade;
-using QLMamNon.Forms.Resource;
 using QLMamNon.Workflow.Forms;
 
 namespace QLMamNon.Forms
@@ -56,8 +56,23 @@ namespace QLMamNon.Forms
             StaticDataFacade.Add(StaticDataKeys.LopHoc, new LopData(lopTableAdapter));
             StaticDataFacade.Add(StaticDataKeys.KhoanThu, new KhoanThuData(khoanThuTableAdapter));
             StaticDataFacade.Add(StaticDataKeys.PhanLoaiChi, new PhanLoaiChi(phanLoaiChiTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.PhanLoaiThu, new PhanLoaiThu(phanLoaiThuTableAdapter));
             StaticDataFacade.Add(StaticDataKeys.BangTinhPhi, new BangTinhPhi(bangTinhPhiTableAdapter));
             StaticDataFacade.Add(StaticDataKeys.TrangThaiHS, new TrangThaiHSData());
+
+            StaticDataFacade.Add(StaticDataKeys.AdapterBangTinhPhi, this.bangTinhPhiTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterBangThuTien, this.bangThuTienTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterViewBangThuTien, this.viewBangThuTienTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterHocSinh, this.hocSinhTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterHocSinhLop, this.hocSinhLopTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterLopKhoi, this.lopKhoiTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterPhieuChi, this.phieuChiTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterPhieuThu, this.phieuThuTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterBangThuTienGenHistory, this.bangThuTienGenHistoryTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterBangThuTienKhoanThu, this.bangThuTienKhoanThuTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterUnknownColumnView, this.unknownColumnViewTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterKhoanThuHangNam, this.khoanThuHangNamTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterUser, this.userTableAdapter);
         }
 
         private void bbtnHocSinhThongTin_ItemClick(object sender, ItemClickEventArgs e)
@@ -173,6 +188,41 @@ namespace QLMamNon.Forms
         private void bbiPhuHuynhHS_ItemClick(object sender, ItemClickEventArgs e)
         {
             FormMainFacade.ShowForm(AppForms.FormTinNhanPhuHuynh);
+        }
+
+        private void bbỉptSoQuyTienMat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowDialog(AppForms.FormSoQuyTienMat);
+        }
+
+        private void bbiBaoCaoTinhHinhThuChi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowDialog(AppForms.FormBaoCaoTinhHinhThuChi);
+        }
+
+        private void bbiBangKeThuHocPhi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowDialog(AppForms.FormBangKeThuHocPhi);
+        }
+
+        private void bbiPreference_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowDialog(AppForms.FormPreference);
+        }
+
+        private void bbiUser_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormUser);
+        }
+
+        private void bbiBangTinhPhi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormBangTinhPhi);
+        }
+
+        private void bbiPhanLoaiThu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowForm(AppForms.FormDanhMucPhanLoaiThu);
         }
 
         #endregion

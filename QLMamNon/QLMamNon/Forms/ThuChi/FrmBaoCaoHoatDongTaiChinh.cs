@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using ACG.Core.WinForm.Util;
 using DevExpress.XtraGrid.Views.Grid;
+using QLMamNon.Components.Data.Static;
+using QLMamNon.Constant;
 using QLMamNon.Facade;
-using QLMamNon.Forms.Resource;
 using QLThuChi;
 
 namespace QLMamNon.Forms.ThuChi
@@ -28,7 +29,6 @@ namespace QLMamNon.Forms.ThuChi
             this.FormKey = AppForms.FormBaoCaoHoatDongTaiChinh;
             InitializeComponent();
         }
-
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -69,7 +69,7 @@ namespace QLMamNon.Forms.ThuChi
 
         private void FrmBaoCaoHoatDongTaiChinh_Load(object sender, EventArgs e)
         {
-            this.phanLoaiChiRowBindingSource.DataSource = this.phanLoaiChiTableAdapter.GetData();
+            this.phanLoaiChiRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.PhanLoaiChi);
         }
 
         private void FrmBaoCaoHoatDongTaiChinh_Shown(object sender, EventArgs e)

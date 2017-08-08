@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
+using ACG.Core.WinForm.Util;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraPrinting;
 using QLMamNon.Components.Data.Static;
+using QLMamNon.Constant;
 using QLMamNon.Facade;
-using QLMamNon.Forms.Resource;
 using QLMamNon.UserControls;
 using QLThuChi;
-using ACG.Core.WinForm.Util;
+using QLMamNon.Properties;
 
 namespace QLMamNon.Forms.HocSinh
 {
@@ -27,7 +28,7 @@ namespace QLMamNon.Forms.HocSinh
             InitializeComponent();
 
             this.TablePrimaryKey = "HocSinhId";
-            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.ThongTinHocSinh;
+            this.DanhMuc = DanhMucConstant.ThongTinHocSinh;
             this.FormKey = AppForms.FormThongTinHocSinh;
 
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormThongTinHocSinh();
@@ -40,7 +41,20 @@ namespace QLMamNon.Forms.HocSinh
             this.lopRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.LopHoc);
             this.keyValuePairBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.TrangThaiHS);
             this.cmbThoiHoc.EditValue = 0;
-            this.loadThongTinHocSinh(null, null, null, null, null, 0);
+            this.initCmbNamSinh();
+            this.loadThongTinHocSinh(null, null, null, null, null, null, 0);
+        }
+
+        private void initCmbNamSinh()
+        {
+            List<int> namSinhs = new List<int>();
+
+            for (int i = Settings.Default.NamSinhStart; i < DateTime.Now.Year; i++)
+            {
+                namSinhs.Add(i);
+            }
+
+            this.cmbNamSinh.Properties.Items.AddRange(namSinhs);
         }
 
         private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
@@ -132,7 +146,8 @@ namespace QLMamNon.Forms.HocSinh
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            this.loadThongTinHocSinh((int?)cmbQuanHuyen.EditValue, (int?)cmbPhuongXa.EditValue, (int?)cmbLop.EditValue, IntUtil.StringToInt((string)cmbThang.EditValue), (DateTime?)cmbNgaySinh.EditValue, (int?)cmbThoiHoc.EditValue);
+            this.loadThongTinHocSinh((int?)cmbQuanHuyen.EditValue, (int?)cmbPhuongXa.EditValue, (int?)cmbLop.EditValue, IntUtil.StringToInt((string)cmbThang.Text), IntUtil.StringToInt((string)cmbNamSinh.Text),
+                (DateTime?)cmbNgaySinh.EditValue, (int?)cmbThoiHoc.EditValue);
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -141,6 +156,7 @@ namespace QLMamNon.Forms.HocSinh
             this.cmbPhuongXa.EditValue = null;
             this.cmbLop.EditValue = null;
             this.cmbThang.EditValue = null;
+            this.cmbNamSinh.EditValue = null;
             this.cmbThoiHoc.EditValue = null;
             this.cmbNgaySinh.EditValue = null;
         }
@@ -172,9 +188,9 @@ namespace QLMamNon.Forms.HocSinh
 
         #region Helper
 
-        private void loadThongTinHocSinh(int? quan, int? phuong, int? lop, int? thangSinh, DateTime? ngaySinh, int? thoiHoc)
+        private void loadThongTinHocSinh(int? quan, int? phuong, int? lop, int? thangSinh, int? namSinh, DateTime? ngaySinh, int? thoiHoc)
         {
-            QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable = this.hocSinhTableAdapter.GetDataForThongTinHocSinh(quan, phuong, ngaySinh, thangSinh, lop, thoiHoc);
+            QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable = this.hocSinhTableAdapter.GetDataForThongTinHocSinh(quan, phuong, ngaySinh, thangSinh, lop, thoiHoc, namSinh);
             hocSinhTable.CreatedDateColumn.DefaultValue = DateTime.Now;
             ThongTinHocSinhUtil.EvaluateLopInfoForHocSinhTable(hocSinhLopTableAdapter, hocSinhTable);
             hocSinhTable.AcceptChanges();

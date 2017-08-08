@@ -14,8 +14,8 @@ namespace QLMamNon
                 hocSinhIds.Add(row.HocSinhId);
             }
 
-            Dictionary<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow> hocSinhIdsToHocSinhLops = StaticDataUtil.GetHocSinhLopsByHocSinhIds(hocSinhLopTableAdapter, hocSinhIds, DateTime.Now);
-            Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow> hocSinhIdsToLops = StaticDataUtil.GetLopsByHocSinhIds(hocSinhLopTableAdapter, hocSinhIds, DateTime.Now);
+            Dictionary<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow> hocSinhIdsToHocSinhLops = StaticDataUtil.GetHocSinhLopsByHocSinhIds(hocSinhIds, DateTime.Now);
+            Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow> hocSinhIdsToLops = StaticDataUtil.GetLopsByHocSinhIds(hocSinhIds, DateTime.Now);
 
             foreach (QLMamNon.Dao.QLMamNonDs.HocSinhRow row in hocSinhTable)
             {

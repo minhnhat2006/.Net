@@ -62,3 +62,16 @@ D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.csproj.GenerateResou
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.exe.licenses
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.exe
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLThuChi.RptGiayBaoNopTien.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.ThuChi.FrmSoQuyTienMat.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLThuChi.RptSoQuyTienMat.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.ThuChi.FrmBaoCaoTinhHinhThuChi.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLThuChi.RptTinhHinhThuChi.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.UserControls.UCEditFormGiaoVien.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.GiaoVien.FrmGiaoVien.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.Authenticate.FrmLogin.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.ThuChi.FrmBangKeThuHocPhi.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.SystemSetting.FrmPreference.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.SystemSetting.FrmUser.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.UserControls.UCEditFormUser.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.DanhMuc.FrmBangTinhPhi.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.UserControls.UCEditFormBangTinhPhi.resources

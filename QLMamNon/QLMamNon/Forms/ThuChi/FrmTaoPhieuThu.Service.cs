@@ -4,7 +4,10 @@ using System.Data;
 using ACG.Core.WinForm.Util;
 using QLMamNon.Components.Command;
 using QLMamNon.Components.Command.QLMNDao;
+using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
+using QLMamNon.Dao.QLMamNonDsTableAdapters;
+using QLMamNon.Facade;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -12,10 +15,14 @@ namespace QLMamNon.Forms.ThuChi
     {
         private void updateSoTienTruyThuForBangThuTienNextMonths(DateTime ngay, int hocSinhId)
         {
+            ViewBangThuTienTableAdapter viewBangThuTienTableAdapter = (ViewBangThuTienTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterViewBangThuTien);
+            BangThuTienKhoanThuTableAdapter bangThuTienKhoanThuTableAdapter = (BangThuTienKhoanThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterBangThuTienKhoanThu);
+            PhieuThuTableAdapter phieuThuTableAdapter = (PhieuThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterPhieuThu);
+
             QLMNDaoJobInvoker qlmnDaoJobInvoker = new QLMNDaoJobInvoker();
             qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand = new UpdateSoTienTruyThuOfBangThuTienCommand();
-            qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand.CommandParameter.Add(UpdateSoTienTruyThuOfBangThuTienCommand.ParameterViewBangThuTienTableAdapter, this.viewBangThuTienTableAdapter);
-            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable table = this.viewBangThuTienTableAdapter.GetDataByNgayTinhAndHocSinhId(ngay, hocSinhId);
+            qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand.CommandParameter.Add(UpdateSoTienTruyThuOfBangThuTienCommand.ParameterViewBangThuTienTableAdapter, viewBangThuTienTableAdapter);
+            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable table = viewBangThuTienTableAdapter.GetDataByNgayTinhAndHocSinhId(ngay.AddMonths(1), hocSinhId);
 
             if (ListUtil.IsEmpty(table.Rows))
             {
@@ -27,7 +34,7 @@ namespace QLMamNon.Forms.ThuChi
             QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable = phieuThuTableAdapter.GetDataByHocSinhIdAndNgayTinh(-1, ngay);
             Dictionary<int, QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> prevMonthRowDictionary = evaluatePrevMonthViewBangThuTienTable(ngay.AddMonths(-1), hocSinhId);
             BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(viewBangThuTienRow,
-                prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(viewBangThuTienRow.HocSinhId) ? prevMonthRowDictionary[viewBangThuTienRow.HocSinhId] : null, 
+                prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(viewBangThuTienRow.HocSinhId) ? prevMonthRowDictionary[viewBangThuTienRow.HocSinhId] : null,
                 bTTKTDataTable, phieuThuDataTable, false, false, true);
 
             if (viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Original] != DBNull.Value && viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Current] != DBNull.Value)
@@ -48,6 +55,10 @@ namespace QLMamNon.Forms.ThuChi
 
         private Dictionary<int, QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> evaluatePrevMonthViewBangThuTienTable(DateTime ngayTinh, int hocSinhId)
         {
+            ViewBangThuTienTableAdapter viewBangThuTienTableAdapter = (ViewBangThuTienTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterViewBangThuTien);
+            BangThuTienKhoanThuTableAdapter bangThuTienKhoanThuTableAdapter = (BangThuTienKhoanThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterBangThuTienKhoanThu);
+            PhieuThuTableAdapter phieuThuTableAdapter = (PhieuThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterPhieuThu);
+
             Dictionary<int, QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> prevMonthRowDictionary = null;
             QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable prevMonthBangThuTienTable = viewBangThuTienTableAdapter.GetDataByNgayTinhAndHocSinhId(ngayTinh, hocSinhId);
             List<int> prevMonthBangThuTienIds = new List<int>(prevMonthBangThuTienTable.Rows.Count);

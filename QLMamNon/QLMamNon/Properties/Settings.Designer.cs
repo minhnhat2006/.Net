@@ -63,39 +63,75 @@ namespace QLMamNon.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("6000")]
         public long TienAnSang {
             get {
                 return ((long)(this["TienAnSang"]));
             }
+            set {
+                this["TienAnSang"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("6000")]
         public long TienAnToi {
             get {
                 return ((long)(this["TienAnToi"]));
             }
+            set {
+                this["TienAnToi"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("20000")]
         public long TienAnChinh {
             get {
                 return ((long)(this["TienAnChinh"]));
             }
+            set {
+                this["TienAnChinh"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2015")]
         public int StartYearForDropDown {
             get {
                 return ((int)(this["StartYearForDropDown"]));
+            }
+            set {
+                this["StartYearForDropDown"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public long SoTienTonDauKy {
+            get {
+                return ((long)(this["SoTienTonDauKy"]));
+            }
+            set {
+                this["SoTienTonDauKy"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2005")]
+        public int NamSinhStart {
+            get {
+                return ((int)(this["NamSinhStart"]));
+            }
+            set {
+                this["NamSinhStart"] = value;
             }
         }
     }

@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 namespace ACG.Core.WinForm.Data.Static
 {
     public interface IStaticDataMap
     {
-        void Add(string key, IStaticData function);
+        void Add(string key, object obj);
 
         object Get(string key);
+
+        void Remove(string key);
+
+        bool Contains(string key);
+
+        void Save(string key, object obj);
     }
 }

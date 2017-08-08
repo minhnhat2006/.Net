@@ -1,11 +1,10 @@
-﻿using DevExpress.XtraGrid.Views.Base;
-using QLMamNon.Forms.Resource;
-using QLMamNon.UserControls;
-using System;
-using DevExpress.XtraGrid;
+﻿using System;
+using System.Data;
+using System.Windows.Forms;
+using QLMamNon.Constant;
 using QLMamNon.Facade;
 using QLMamNon.Forms.ThuChi;
-using System.Data;
+using QLMamNon.Service.Data;
 
 namespace QLMamNon.Forms.DanhMuc
 {
@@ -22,27 +21,18 @@ namespace QLMamNon.Forms.DanhMuc
             InitializeComponent();
 
             this.TablePrimaryKey = "PhieuThuId";
-            this.DanhMuc = QLMamNon.Forms.Resource.DanhMuc.PhieuThu;
+            this.DanhMuc = DanhMucConstant.PhieuThu;
             this.FormKey = AppForms.FormPhieuThu;
 
             this._hocSinhTable = this.hocSinhTableAdapter.GetData();
             this.loadPhieuThu();
-            this.InitForm(this.btnThem, this.btnChinhSua, null, null, null, this.gvMain, this.phieuThuTableAdapter.Adapter, this.phieuThuRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable);
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, null, null, this.gvMain, this.phieuThuTableAdapter.Adapter, this.phieuThuRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable);
         }
 
         private void loadPhieuThu()
         {
-            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable table = this.phieuThuTableAdapter.GetData();
-
-            foreach (QLMamNon.Dao.QLMamNonDs.PhieuThuRow row in table)
-            {
-                if (!row.IsHocSinhIdNull())
-                {
-                    row.HocSinh = StaticDataUtil.getHocSinhFullNameByHocSinhId(this._hocSinhTable, row.HocSinhId);
-                }
-            }
-
-            this.phieuThuRowBindingSource.DataSource = table;
+            PhieuThuService phieuThuService = new PhieuThuService();
+            this.phieuThuRowBindingSource.DataSource = phieuThuService.LoadPhieuThu(this._hocSinhTable);
         }
 
         protected override void onAdding()
@@ -65,6 +55,32 @@ namespace QLMamNon.Forms.DanhMuc
 
             FormMainFacade.ShowDialog(AppForms.FormTaoPhieuThu);
             FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.ModifiedCaption);
+        }
+
+        protected override void onDeleting()
+        {
+            if (this.GridViewMain.FocusedRowHandle < 0)
+            {
+                return;
+            }
+
+            var confirmResult = System.Windows.Forms.MessageBox.Show(String.Format("Bạn có chắc muốn xóa {0} được chọn không?", this.DanhMuc), String.Format("Xóa {0}", this.DanhMuc),
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                int phieuThuId = (int)this.GridViewMain.GetFocusedRowCellValue("PhieuThuId");
+                DateTime ngay = (DateTime)this.GridViewMain.GetFocusedRowCellValue("Ngay");
+                long soTien = (long)this.GridViewMain.GetFocusedRowCellValue("SoTien");
+                string maPhieu = (string)this.GridViewMain.GetFocusedRowCellValue("MaPhieu");
+                int hocSinhId = (int)this.GridViewMain.GetFocusedRowCellValue("HocSinhId");
+                DateTime createdDate = (DateTime)this.GridViewMain.GetFocusedRowCellValue("CreatedDate");
+                int phanLoaiThuId = (int)this.GridViewMain.GetFocusedRowCellValue("PhanLoaiThuId");
+
+                this.phieuThuTableAdapter.Delete(phieuThuId, soTien, maPhieu, hocSinhId, phanLoaiThuId, ngay, createdDate);
+                this.loadPhieuThu();
+                FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.DeletedCaption);
+            }
         }
 
         private void gvMain_DoubleClick(object sender, EventArgs e)

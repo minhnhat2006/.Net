@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongTinHocSinh));
             this.lcMain = new DevExpress.XtraLayout.LayoutControl();
+            this.cmbNamSinh = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbThoiHoc = new DevExpress.XtraEditors.LookUpEdit();
             this.keyValuePairBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbLop = new DevExpress.XtraEditors.LookUpEdit();
@@ -98,6 +99,7 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnIn = new DevExpress.XtraEditors.SimpleButton();
@@ -109,6 +111,7 @@
             this.hocSinhLopTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbNamSinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbThoiHoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyValuePairBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbLop.Properties)).BeginInit();
@@ -135,15 +138,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lcMain
             // 
-            this.lcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lcMain.Controls.Add(this.cmbNamSinh);
             this.lcMain.Controls.Add(this.cmbThoiHoc);
             this.lcMain.Controls.Add(this.cmbLop);
             this.lcMain.Controls.Add(this.gcMain);
@@ -170,6 +175,19 @@
             this.lcMain.TabIndex = 0;
             this.lcMain.Text = "layoutControl1";
             // 
+            // cmbNamSinh
+            // 
+            this.cmbNamSinh.EditValue = "[Chọn năm]";
+            this.cmbNamSinh.Location = new System.Drawing.Point(698, 39);
+            this.cmbNamSinh.Name = "cmbNamSinh";
+            this.cmbNamSinh.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.cmbNamSinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbNamSinh.Properties.NullText = "[Chọn năm]";
+            this.cmbNamSinh.Size = new System.Drawing.Size(50, 20);
+            this.cmbNamSinh.StyleController = this.lcMain;
+            this.cmbNamSinh.TabIndex = 8;
+            // 
             // cmbThoiHoc
             // 
             this.cmbThoiHoc.Location = new System.Drawing.Point(454, 39);
@@ -187,7 +205,7 @@
             this.cmbThoiHoc.Properties.ValueMember = "Key";
             this.cmbThoiHoc.Size = new System.Drawing.Size(50, 20);
             this.cmbThoiHoc.StyleController = this.lcMain;
-            this.cmbThoiHoc.TabIndex = 10;
+            this.cmbThoiHoc.TabIndex = 5;
             // 
             // keyValuePairBindingSource
             // 
@@ -210,7 +228,7 @@
             this.cmbLop.Properties.ValueMember = "LopId";
             this.cmbLop.Size = new System.Drawing.Size(50, 20);
             this.cmbLop.StyleController = this.lcMain;
-            this.cmbLop.TabIndex = 9;
+            this.cmbLop.TabIndex = 4;
             // 
             // lopRowBindingSource
             // 
@@ -225,7 +243,7 @@
             this.gcMain.Name = "gcMain";
             this.gcMain.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gcMain.Size = new System.Drawing.Size(889, 418);
+            this.gcMain.Size = new System.Drawing.Size(1011, 418);
             this.gcMain.TabIndex = 8;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
@@ -666,11 +684,11 @@
             // btnReset
             // 
             this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
-            this.btnReset.Location = new System.Drawing.Point(827, 39);
+            this.btnReset.Location = new System.Drawing.Point(949, 39);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(58, 22);
             this.btnReset.StyleController = this.lcMain;
-            this.btnReset.TabIndex = 7;
+            this.btnReset.TabIndex = 11;
             this.btnReset.Text = "Reset";
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -680,11 +698,11 @@
             this.btnTimKiem.Appearance.Options.UseImage = true;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(752, 39);
+            this.btnTimKiem.Location = new System.Drawing.Point(874, 39);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(71, 22);
             this.btnTimKiem.StyleController = this.lcMain;
-            this.btnTimKiem.TabIndex = 6;
+            this.btnTimKiem.TabIndex = 10;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -744,7 +762,7 @@
             // cmbNgaySinh
             // 
             this.cmbNgaySinh.EditValue = null;
-            this.cmbNgaySinh.Location = new System.Drawing.Point(698, 39);
+            this.cmbNgaySinh.Location = new System.Drawing.Point(820, 39);
             this.cmbNgaySinh.Name = "cmbNgaySinh";
             this.cmbNgaySinh.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
@@ -757,7 +775,7 @@
             this.cmbNgaySinh.Properties.NullText = "[Chọn ngày sinh]";
             this.cmbNgaySinh.Size = new System.Drawing.Size(50, 26);
             this.cmbNgaySinh.StyleController = this.lcMain;
-            this.cmbNgaySinh.TabIndex = 5;
+            this.cmbNgaySinh.TabIndex = 9;
             // 
             // cmbThang
             // 
@@ -784,7 +802,7 @@
             this.cmbThang.Properties.NullText = "[Chọn tháng]";
             this.cmbThang.Size = new System.Drawing.Size(50, 26);
             this.cmbThang.StyleController = this.lcMain;
-            this.cmbThang.TabIndex = 4;
+            this.cmbThang.TabIndex = 6;
             // 
             // Root
             // 
@@ -798,7 +816,7 @@
             this.Root.Location = new System.Drawing.Point(0, 0);
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
-            this.Root.Size = new System.Drawing.Size(905, 507);
+            this.Root.Size = new System.Drawing.Size(1027, 507);
             this.Root.Text = "Tìm kiếm";
             this.Root.TextVisible = false;
             // 
@@ -807,7 +825,7 @@
             this.layoutControlItem6.Control = this.gcMain;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 73);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(893, 422);
+            this.layoutControlItem6.Size = new System.Drawing.Size(1015, 422);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -823,16 +841,17 @@
             this.layoutControlItem2,
             this.layoutControlItem5,
             this.layoutControlItem1,
-            this.layoutControlItem7});
+            this.layoutControlItem7,
+            this.layoutControlItem8});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(893, 73);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1015, 73);
             this.layoutControlGroup1.Text = "Tìm kiếm";
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.btnReset;
-            this.layoutControlItem10.Location = new System.Drawing.Point(807, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(929, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(62, 30);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
@@ -841,7 +860,7 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnTimKiem;
-            this.layoutControlItem9.Location = new System.Drawing.Point(732, 0);
+            this.layoutControlItem9.Location = new System.Drawing.Point(854, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(75, 30);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
@@ -850,7 +869,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.cmbNgaySinh;
-            this.layoutControlItem4.Location = new System.Drawing.Point(610, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(732, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(122, 30);
             this.layoutControlItem4.Text = "Ngày sinh";
@@ -900,6 +919,15 @@
             this.layoutControlItem7.Size = new System.Drawing.Size(122, 30);
             this.layoutControlItem7.Text = "Trạng thái";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(65, 19);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.cmbNamSinh;
+            this.layoutControlItem8.Location = new System.Drawing.Point(610, 0);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(122, 30);
+            this.layoutControlItem8.Text = "Năm sinh";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(65, 19);
             // 
             // hocSinhTableAdapter
             // 
@@ -1011,6 +1039,7 @@
             this.Load += new System.EventHandler(this.FrmThongTinHocSinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).EndInit();
             this.lcMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbNamSinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbThoiHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.keyValuePairBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbLop.Properties)).EndInit();
@@ -1037,6 +1066,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1122,6 +1152,8 @@
         private DevExpress.XtraEditors.LookUpEdit cmbThoiHoc;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private System.Windows.Forms.BindingSource keyValuePairBindingSource;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbNamSinh;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
 
 
     }

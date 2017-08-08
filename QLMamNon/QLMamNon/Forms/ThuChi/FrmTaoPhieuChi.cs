@@ -1,11 +1,9 @@
 ﻿using System;
-using DevExpress.XtraGrid.Views.Grid;
-using QLMamNon.Components.Data.Static;
-using QLMamNon.Facade;
-using System.Data;
-using QLMamNon.Forms.Resource;
-using DevExpress.XtraEditors;
 using System.Windows.Forms;
+using DevExpress.XtraGrid.Views.Grid;
+using QLMamNon.Constant;
+using QLMamNon.Facade;
+using QLMamNon.Service.Data;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -18,6 +16,8 @@ namespace QLMamNon.Forms.ThuChi
         public GridView GridView { get; set; }
 
         public bool IsEditing { get; set; }
+
+        public bool IsLoading { get; set; }
 
         public QLMamNon.Dao.QLMamNonDs.PhieuChiRow PhieuChiRow { get; set; }
 
@@ -41,12 +41,6 @@ namespace QLMamNon.Forms.ThuChi
             {
                 this.resetForm();
             }
-        }
-
-        private void FrmTaoPhieuChi_Enter(object sender, EventArgs e)
-        {
-            int phanLoaiChiId = (int)this.GridView.GetFocusedRowCellValue("PhanLoaiChiId");
-            this.cmbPhanLoaiChi.EditValue = phanLoaiChiId;
         }
 
         protected void FrmTaoPhieuChi_Activated(object sender, EventArgs e)
@@ -86,6 +80,8 @@ namespace QLMamNon.Forms.ThuChi
         private void loadPhieuChi()
         {
             this.dateNgay.DateTime = this.PhieuChiRow.Ngay;
+            this.txtSoLuong.Value = (decimal)this.PhieuChiRow.SoLuong;
+            this.txtDonGia.Value = (decimal)this.PhieuChiRow.DonGia;
             this.txtSoTien.Value = this.PhieuChiRow.SoTien;
             this.txtMaPhieu.Text = this.PhieuChiRow.IsMaPhieuNull() ? null : this.PhieuChiRow.MaPhieu;
 
@@ -94,8 +90,8 @@ namespace QLMamNon.Forms.ThuChi
                 this.txtGhiChu.Text = this.PhieuChiRow.GhiChu;
             }
 
-
             this.cmbPhanLoaiChi.EditValue = this.PhieuChiRow.PhanLoaiChiId;
+            this.txtNoiDung.Text = this.PhieuChiRow.NoiDung;
         }
 
         private void luuPhieuChi()
@@ -112,37 +108,63 @@ namespace QLMamNon.Forms.ThuChi
             if (this.GridView != null)
             {
                 BindingSource phieuChiBindingSource = this.GridView.GridControl.DataSource as BindingSource;
-                phieuChiBindingSource.DataSource = this.phieuChiTableAdapter.GetData();
+                PhieuChiService phieuChiService = new PhieuChiService();
+                phieuChiBindingSource.DataSource = phieuChiService.LoadPhieuChi(this.phieuChiTableAdapter);
             }
         }
 
         private void insertPhieuChi()
         {
             DateTime ngay = this.dateNgay.DateTime;
-            long soTien = (long)this.txtSoTien.Value;
             string maPhieu = this.txtMaPhieu.Text;
             string ghiChu = this.txtGhiChu.Text;
             int phanLoaiChiId = (int)this.cmbPhanLoaiChi.EditValue;
-            this.phieuChiTableAdapter.Insert(maPhieu, ngay, soTien, ghiChu, phanLoaiChiId, DateTime.Now);
+            string noiDung = txtNoiDung.Text;
+            double soLuong = (double)txtSoLuong.Value;
+            double donGia = (double)txtDonGia.Value;
+            long soTien = (long)this.txtSoTien.Value;
+            PhieuChiService phieuChiService = new PhieuChiService();
+            phieuChiService.InsertPhieuChi(this.phieuChiTableAdapter, ngay, soTien, maPhieu, ghiChu, phanLoaiChiId, noiDung, soLuong, donGia);
         }
 
         private void updatePhieuChi()
         {
             DateTime ngay = this.dateNgay.DateTime;
-            long soTien = (long)this.txtSoTien.Value;
             string maPhieu = this.txtMaPhieu.Text;
             string ghiChu = this.txtGhiChu.Text;
             int phanLoaiChiId = (int)this.cmbPhanLoaiChi.EditValue;
-            this.phieuChiTableAdapter.Update(maPhieu, ngay, soTien, ghiChu, phanLoaiChiId, DateTime.Now, this.PhieuChiRow.PhieuChiId, this.PhieuChiRow.IsMaPhieuNull() ? null : this.PhieuChiRow.MaPhieu,
-                this.PhieuChiRow.Ngay, this.PhieuChiRow.SoTien, this.PhieuChiRow.PhanLoaiChiId, this.PhieuChiRow.CreatedDate);
+            string noiDung = txtNoiDung.Text;
+            double soLuong = (double)txtSoLuong.Value;
+            double donGia = (double)txtDonGia.Value;
+            long soTien = (long)this.txtSoTien.Value;
+            PhieuChiService phieuChiService = new PhieuChiService();
+            phieuChiService.UpdatePhieuChi(this.phieuChiTableAdapter, this.PhieuChiRow, ngay, soTien, maPhieu, ghiChu, phanLoaiChiId, noiDung, soLuong, donGia);
         }
 
         private void resetForm()
         {
-            this.txtSoTien.Value = 0;
             this.txtMaPhieu.Text = "";
             this.txtGhiChu.Text = "";
             this.cmbPhanLoaiChi.EditValue = null;
+            this.txtNoiDung.Text = "";
+            this.txtSoLuong.Value = 0;
+            this.txtDonGia.Value = 0;
+            this.txtSoTien.Value = 0;
+        }
+
+        private void txtSoLuong_EditValueChanged(object sender, EventArgs e)
+        {
+            this.txtSoTien.Value = this.txtSoLuong.Value * this.txtDonGia.Value;
+        }
+
+        private void txtDonGia_EditValueChanged(object sender, EventArgs e)
+        {
+            this.txtSoTien.Value = this.txtSoLuong.Value * this.txtDonGia.Value;
+        }
+
+        private void cmbPhanLoaiChi_EditValueChanged(object sender, EventArgs e)
+        {
+            this.txtNoiDung.Text = (String)cmbPhanLoaiChi.GetColumnValue("DienGiai");
         }
     }
 }
