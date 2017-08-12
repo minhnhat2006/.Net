@@ -30103,3 +30103,454 @@ QLMamNon.vshost.exe Error: 0 : Authentication to host 'localhost' for user 'root
 2017-08-08 14:09:01 info : Text changed $$$$UCEditFormPhanLoaiThu$layoutControl1$txtDienGiai Thu thử
 2017-08-08 14:09:01 info : Text changed $$$$UCEditFormPhanLoaiThu$layoutControl1$txtDienGiai Thu thử
 2017-08-08 14:09:01 info : Text changed $$$$UCEditFormPhanLoaiThu$layoutControl1$txtDienGiai Thu thử
+2017-08-09 09:31:06 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
+2017-08-09 09:31:08 info : Text changed $FrmSoThuTien$lcMain$cmbThang 7
+2017-08-09 09:31:08 info : Text changed $FrmSoThuTien$lcMain$cmbThang 7
+2017-08-09 09:31:10 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
+2017-08-09 09:31:18 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 2
+2017-08-09 09:31:24 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 09:31:24 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 09:31:25 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
+2017-08-09 09:31:41 info : Text changed $FrmSoThuTien$lcMain$cmbLop Bé 1
+2017-08-09 09:31:47 info : Text changed $FrmSoThuTien$lcMain$cmbLop Nhỡ 1
+2017-08-09 09:31:54 info : Text changed $FrmSoThuTien$lcMain$cmbLop Nhỡ 2
+2017-08-09 09:37:19 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
+2017-08-09 09:37:21 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 09:37:21 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 09:37:24 info : Text changed $FrmSoThuTien$lcMain$cmbLop Nhỡ 2
+2017-08-09 09:37:32 info : Text changed $FrmSoThuTien$lcMain$cmbThang 7
+2017-08-09 09:37:32 info : Text changed $FrmSoThuTien$lcMain$cmbThang 7
+2017-08-09 09:37:39 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 09:37:39 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 09:37:40 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 2
+2017-08-09 09:42:30 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
+2017-08-09 09:42:32 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 09:42:32 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 09:42:34 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 2
+2017-08-09 09:50:45 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
+2017-08-09 09:50:47 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 09:50:47 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 09:50:49 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 2
+2017-08-09 11:44:34 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
+2017-08-09 11:44:36 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 11:44:36 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 11:44:38 info : Text changed $FrmSoThuTien$lcMain$cmbLop Nhỡ 2
+2017-08-09 11:46:06 info : Text changed $FrmXepLop$lcMain$cmbNamHocDi 2017 - 2018
+2017-08-09 11:46:06 info : Text changed $FrmXepLop$lcMain$cmbNamHocDi 2017 - 2018
+2017-08-09 11:46:14 info : Text changed $FrmXepLop$lcMain$cmbLopHocDen Nhỡ 2
+2017-08-09 11:46:14 info : Text changed $FrmXepLop$lcMain$cmbLopHocDen Nhỡ 2
+2017-08-09 11:46:19 info : Text changed $FrmThongTinHocSinh$lcMain$cmbThoiHoc Đang học
+2017-08-09 11:46:19 info : Text changed $FrmThongTinHocSinh$lcMain$cmbThoiHoc Đang học
+2017-08-09 11:46:19 info : Text changed $FrmThongTinHocSinh$lcMain$cmbThoiHoc Đang học
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong 
+2017-08-09 11:46:21 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong 
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem N
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem N
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem N
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem N
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem N
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem N
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem N
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem N
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ng
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ng
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ng
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ng
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ng
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ng
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ng
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ng
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ngu
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ngu
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ngu
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ngu
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ngu
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ngu
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ngu
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ngu
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguy
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguy
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguy
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguy
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguy
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguy
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguy
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguy
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguye
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguye
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguye
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguye
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguye
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguye
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguye
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguye
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguyen
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguyen
+2017-08-09 11:46:23 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguyen
+2017-08-09 11:46:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguyen
+2017-08-09 11:46:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguyen
+2017-08-09 11:46:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguyen
+2017-08-09 11:46:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguyen
+2017-08-09 11:46:24 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Nguyen
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Té
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Té
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Té
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Té
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Té
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Té
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Té
+2017-08-09 11:46:25 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Té
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen T
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Te
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tes
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tes
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tes
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tes
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tes
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tes
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tes
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tes
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Testẻ
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Testẻ
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Testẻ
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Testẻ
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Testẻ
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Testẻ
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Testẻ
+2017-08-09 11:46:26 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Testẻ
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Test
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Teste
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tester
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tester
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tester
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tester
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tester
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tester
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tester
+2017-08-09 11:46:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Tester
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:30 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2017
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 01/08/2014
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha te
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha te
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha te
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha te
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha te
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha te
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha te
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha te
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha t
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha té
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha té
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha té
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha té
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha té
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha té
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha té
+2017-08-09 11:46:33 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha té
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha tét
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha tét
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha tét
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha tét
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha tét
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha tét
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha tét
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha tét
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai đ
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai đ
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai đ
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai đ
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai đ
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai đ
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai đ
+2017-08-09 11:46:35 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai đ
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai d
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai dd
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai dd
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai dd
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai dd
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai dd
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai dd
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai dd
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai dd
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai ddf
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai ddf
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai ddf
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai ddf
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai ddf
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai ddf
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai ddf
+2017-08-09 11:46:36 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai ddf
+2017-08-09 11:46:47 info : Text changed $FrmXepLop$lcMain$cmbLopHocDi Lớn 2
+2017-08-09 11:46:47 info : Text changed $FrmXepLop$lcMain$cmbLopHocDi Lớn 2
+2017-08-09 11:46:47 info : Text changed $FrmXepLop$lcMain$cmbLopHocDi Lớn 2
+2017-08-09 11:46:47 info : Text changed $FrmXepLop$lcMain$cmbLopHocDi Lớn 2
+2017-08-09 11:46:48 info : Text changed $FrmXepLop$lcMain$cmbLopHocDi 
+2017-08-09 11:46:48 info : Text changed $FrmXepLop$lcMain$cmbLopHocDi 
+2017-08-09 11:46:48 info : Text changed $FrmXepLop$lcMain$cmbLopHocDi 
+2017-08-09 11:46:48 info : Text changed $FrmXepLop$lcMain$cmbLopHocDi 
+2017-08-09 11:47:57 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
+2017-08-09 11:47:59 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 11:47:59 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 11:48:01 info : Text changed $FrmSoThuTien$lcMain$cmbLop Nhỡ 2
+2017-08-09 11:54:53 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
+2017-08-09 11:54:55 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 11:54:55 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 11:54:57 info : Text changed $FrmSoThuTien$lcMain$cmbLop Nhỡ 2
+2017-08-09 11:56:16 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
+2017-08-09 11:56:18 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 11:56:18 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 11:56:20 info : Text changed $FrmSoThuTien$lcMain$cmbLop Nhỡ 2
+2017-08-09 14:26:57 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
+2017-08-09 14:26:59 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 14:26:59 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 14:27:01 info : Text changed $FrmSoThuTien$lcMain$cmbLop Nhỡ 2
+2017-08-09 14:40:00 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
+2017-08-09 14:40:02 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 14:40:02 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2017-08-09 14:40:04 info : Text changed $FrmSoThuTien$lcMain$cmbLop Nhỡ 2

@@ -141,9 +141,9 @@
             // 
             // gcMain
             // 
-            this.gcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gcMain.DataSource = this.khoanThuHangNamRowBindingSource;
             this.gcMain.Location = new System.Drawing.Point(0, 0);
             this.gcMain.MainView = this.gvMain;
@@ -168,11 +168,15 @@
             this.colSoTien,
             this.colBatBuoc});
             this.gvMain.GridControl = this.gcMain;
+            this.gvMain.GroupCount = 2;
             this.gvMain.Name = "gvMain";
             this.gvMain.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gvMain.OptionsEditForm.FormCaptionFormat = "Chỉnh sửa thông tin Khoản thu hằng năm";
             this.gvMain.OptionsEditForm.PopupEditFormWidth = 500;
             this.gvMain.OptionsView.ShowGroupPanel = false;
+            this.gvMain.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colKhoi, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colName, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gvMain.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.gvMain_CustomColumnDisplayText);
             // 
             // colKhoanThuHangNamId
@@ -185,6 +189,8 @@
             // 
             // colName
             // 
+            this.colName.AppearanceCell.Options.UseTextOptions = true;
+            this.colName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.colName.Caption = "Tên Khoản thu";
             this.colName.FieldName = "KhoanThuId";
             this.colName.Name = "colName";
@@ -194,6 +200,8 @@
             // 
             // colKhoi
             // 
+            this.colKhoi.AppearanceCell.Options.UseTextOptions = true;
+            this.colKhoi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.colKhoi.Caption = "Khối";
             this.colKhoi.FieldName = "KhoiId";
             this.colKhoi.Name = "colKhoi";
@@ -206,7 +214,7 @@
             this.colNam.FieldName = "NgayTinh";
             this.colNam.Name = "colNam";
             this.colNam.Visible = true;
-            this.colNam.VisibleIndex = 3;
+            this.colNam.VisibleIndex = 1;
             // 
             // gridColumn1
             // 
@@ -214,7 +222,7 @@
             this.gridColumn1.FieldName = "NgayKetThuc";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 4;
+            this.gridColumn1.VisibleIndex = 2;
             // 
             // colSoTien
             // 
@@ -224,7 +232,7 @@
             this.colSoTien.FieldName = "SoTien";
             this.colSoTien.Name = "colSoTien";
             this.colSoTien.Visible = true;
-            this.colSoTien.VisibleIndex = 5;
+            this.colSoTien.VisibleIndex = 3;
             this.colSoTien.Width = 354;
             // 
             // colBatBuoc
@@ -233,7 +241,7 @@
             this.colBatBuoc.FieldName = "IsBatBuoc";
             this.colBatBuoc.Name = "colBatBuoc";
             this.colBatBuoc.Visible = true;
-            this.colBatBuoc.VisibleIndex = 6;
+            this.colBatBuoc.VisibleIndex = 4;
             // 
             // khoanThuHangNamTableAdapter
             // 

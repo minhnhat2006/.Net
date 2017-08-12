@@ -832,6 +832,7 @@
     <Compile Include="Utils\VNCurrency.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DB\qlmamnon.sql" />
     <Content Include="favicon.ico" />
     <Content Include="login.png" />
   </ItemGroup>

@@ -75,3 +75,5 @@ D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.SystemSetting.
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.UserControls.UCEditFormUser.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.DanhMuc.FrmBangTinhPhi.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.UserControls.UCEditFormBangTinhPhi.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.DanhMuc.FrmPhanLoaiThu.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.UserControls.UCEditFormPhanLoaiThu.resources

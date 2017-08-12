@@ -11,8 +11,10 @@ using QLMamNon.Components.Command.QLMNDao;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
 using QLMamNon.Facade;
+using QLMamNon.Properties;
 using QLMamNon.Service.Data;
 using QLThuChi;
+using ViewBangThuTienDataTable = QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable;
 using ViewBangThuTienRow = QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow;
 
 namespace QLMamNon.Forms.ThuChi
@@ -44,7 +46,7 @@ namespace QLMamNon.Forms.ThuChi
 
             this.loadLopData();
             this.loadHocSinhData();
-            this.InitForm(null, null, null, this.btnLuu, this.btnHuyBo, this.gvMain, this.viewBangThuTienTableAdapter.Adapter, this.viewBangThuTienRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable);
+            this.InitForm(null, null, null, this.btnLuu, this.btnHuyBo, this.gvMain, this.viewBangThuTienTableAdapter.Adapter, this.viewBangThuTienRowBindingSource.DataSource as ViewBangThuTienDataTable);
         }
 
         private void FrmSoThuTien_Load(object sender, EventArgs e)
@@ -76,7 +78,7 @@ namespace QLMamNon.Forms.ThuChi
                 if (e.Value != DBNull.Value)
                 {
                     DataRowView rowView = gv.GetRow(e.RowHandle) as DataRowView;
-                    QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row = rowView.Row as QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow;
+                    ViewBangThuTienRow row = rowView.Row as ViewBangThuTienRow;
                     BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row,
                         prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(row.HocSinhId) ? prevMonthRowDictionary[row.HocSinhId] : null,
                         bTTKTDataTable, phieuThuDataTable, false, false, false);
@@ -165,13 +167,14 @@ namespace QLMamNon.Forms.ThuChi
 
         protected override void onSaving()
         {
-            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable table = this.DataTable as QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable;
+            ViewBangThuTienDataTable table = this.DataTable as ViewBangThuTienDataTable;
             List<int> bangThuTienIds = new List<int>();
-            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow in table)
+
+            foreach (ViewBangThuTienRow viewBangThuTienRow in table)
             {
-                viewBangThuTienRow.SoTienSXThangTruoc = BangThuTienUtil.SXToSoTienSX(viewBangThuTienRow.SXThangTruoc);
-                viewBangThuTienRow.SoTienAnSangThangTruoc = BangThuTienUtil.SXAnSangToSoTienAnSang(viewBangThuTienRow.AnSangThangTruoc);
-                viewBangThuTienRow.SoTienAnToiThangTruoc = BangThuTienUtil.SXAnToiToSoTienAnToi(viewBangThuTienRow.AnToiThangTruoc);
+                viewBangThuTienRow.SoTienSXThangTruoc = BangThuTienUtil.SXToSoTienSX(viewBangThuTienRow.SXThangTruoc, Settings.Default.TienAnChinh);
+                viewBangThuTienRow.SoTienAnSangThangTruoc = BangThuTienUtil.SXAnSangToSoTienAnSang(viewBangThuTienRow.AnSangThangTruoc, Settings.Default.TienAnSang);
+                viewBangThuTienRow.SoTienAnToiThangTruoc = BangThuTienUtil.SXAnToiToSoTienAnToi(viewBangThuTienRow.AnToiThangTruoc, Settings.Default.TienAnToi);
 
                 if (this.isNeedToUpdateBangThuTienKhoanThu(viewBangThuTienRow))
                 {
@@ -185,8 +188,8 @@ namespace QLMamNon.Forms.ThuChi
 
                 foreach (QLMamNon.Dao.QLMamNonDs.BangThuTienKhoanThuRow bangThuTienKhoanThuRow in bangThuTienKhoanThuDataTable)
                 {
-                    QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow[] viewBangThuTienRows = (ViewBangThuTienRow[])table.Select(String.Format("BangThuTienId={0}", bangThuTienKhoanThuRow.BangThuTienId));
-                    QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow = viewBangThuTienRows[0];
+                    ViewBangThuTienRow[] viewBangThuTienRows = (ViewBangThuTienRow[])table.Select(String.Format("BangThuTienId={0}", bangThuTienKhoanThuRow.BangThuTienId));
+                    ViewBangThuTienRow viewBangThuTienRow = viewBangThuTienRows[0];
                     switch (bangThuTienKhoanThuRow.KhoanThuId)
                     {
                         case BangThuTienConstant.KhoanThuIdTienAnSua:
@@ -220,7 +223,7 @@ namespace QLMamNon.Forms.ThuChi
             qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand = new UpdateSoTienTruyThuOfBangThuTienCommand();
             qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand.CommandParameter.Add(UpdateSoTienTruyThuOfBangThuTienCommand.ParameterViewBangThuTienTableAdapter, this.viewBangThuTienTableAdapter);
 
-            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow in table)
+            foreach (ViewBangThuTienRow viewBangThuTienRow in table)
             {
                 if (viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Original] != DBNull.Value && viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Current] != DBNull.Value)
                 {
@@ -261,7 +264,7 @@ namespace QLMamNon.Forms.ThuChi
             return false;
         }
 
-        private bool isNeedToUpdateBangThuTienKhoanThu(QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow)
+        private bool isNeedToUpdateBangThuTienKhoanThu(ViewBangThuTienRow viewBangThuTienRow)
         {
             List<String> fieldsToCheck = new List<string>() { ViewBangThuTienFieldName.SXThangTruoc,
                 ViewBangThuTienFieldName.TienAnVaSua,
@@ -316,10 +319,10 @@ namespace QLMamNon.Forms.ThuChi
                 return;
             }
 
-            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable table = viewBangThuTienTableAdapter.GetViewBangThuTienByNgayTinhAndLop(ngayTinh, lop);
+            ViewBangThuTienDataTable table = viewBangThuTienTableAdapter.GetViewBangThuTienByNgayTinhAndLop(ngayTinh, lop);
             List<int> bangThuTienIds = new List<int>(table.Rows.Count);
 
-            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row in table)
+            foreach (ViewBangThuTienRow row in table)
             {
                 bangThuTienIds.Add(row.BangThuTienId);
             }
@@ -332,7 +335,7 @@ namespace QLMamNon.Forms.ThuChi
                 SoThuTienService soThuTienService = new SoThuTienService();
                 prevMonthRowDictionary = soThuTienService.EvaluatePrevMonthViewBangThuTienTable(ngayTinh.AddMonths(-1), lop);
 
-                foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row in table)
+                foreach (ViewBangThuTienRow row in table)
                 {
                     row.HoTen = StaticDataUtil.GetHocSinhFullNameByHocSinhId(hocSinhDataTable, row.HocSinhId);
                     BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row,

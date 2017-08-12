@@ -39,9 +39,9 @@ namespace QLMamNon.Service.Data
             }
 
             Dictionary<int, HocSinhLopRow> hocSinhIdsToHocSinhLops = StaticDataUtil.GetHocSinhLopsByHocSinhIds(hocSinhIds, ngayTinh);
-            Dictionary<int, Dictionary<int, ViewBangThuTienRow>> lopToHocSinhToViewBangThuTienRowsMap = buildLopToHocSinhToViewBangThuTienRowsMap(viewBangThuTienTable, hocSinhIdsToHocSinhLops);
+            Dictionary<int, Dictionary<int, ViewBangThuTienRow>> lopToHocSinhToViewBangThuTienRowsMap = buildLopToHocSinhToViewBangThuTienRowsMap(viewBangThuTienTable, ngayTinh);
             Dictionary<int, Dictionary<int, ViewBangThuTienRow>> prevMonthLopToHocSinhToViewBangThuTienRowsMap = getAndSortPrevMonthViewBangThuTienRows(ngayTinh, viewBangThuTienTableAdapter, hocSinhIds, hocSinhIdsToHocSinhLops, lopToHocSinhToViewBangThuTienRowsMap);
-            Dictionary<int, List<int>> generatedLopToSTTs = new Dictionary<int, List<int>>();
+            Dictionary<int, int> generatedLopToSTTs = buildGeneratedLopIdToSTTMap(lopToHocSinhToViewBangThuTienRowsMap);
 
             // Generate SoThuTien for HocSinhs that exist in previous month
             foreach (QLMamNon.Dao.QLMamNonDs.HocSinhRow hocSinh in needToGenerateHocSinhRows)
@@ -67,10 +67,15 @@ namespace QLMamNon.Service.Data
 
                         if (!generatedLopToSTTs.ContainsKey(lopId))
                         {
-                            generatedLopToSTTs.Add(lopId, new List<int>());
+                            generatedLopToSTTs.Add(lopId, 0);
                         }
 
-                        generatedLopToSTTs[lopId].Add(preMonthViewBangThuTien.STT);
+                        int currentSTT = generatedLopToSTTs[lopId];
+
+                        if (currentSTT < preMonthViewBangThuTien.STT)
+                        {
+                            generatedLopToSTTs[lopId] = preMonthViewBangThuTien.STT;
+                        }
                     }
                 }
             }
@@ -97,13 +102,12 @@ namespace QLMamNon.Service.Data
                     {
                         if (!generatedLopToSTTs.ContainsKey(lopId))
                         {
-                            generatedLopToSTTs.Add(lopId, new List<int>());
+                            generatedLopToSTTs.Add(lopId, 0);
                         }
 
-                        List<int> STTs = generatedLopToSTTs[lopId];
-                        int stt = STTs[STTs.Count - 1] + 1;
+                        int stt = generatedLopToSTTs[lopId] + 1;
                         GenerateSoThuTienByHocSinhAndLopAndNgayTinh(hocSinh.HocSinhId, lopId, ngayTinh, stt, preMonthViewBangThuTien);
-                        generatedLopToSTTs[lopId].Add(stt);
+                        generatedLopToSTTs[lopId] = stt;
                     }
                 }
             }
@@ -111,8 +115,28 @@ namespace QLMamNon.Service.Data
             return hocSinhIds.Count;
         }
 
-        private static Dictionary<int, Dictionary<int, ViewBangThuTienRow>> buildLopToHocSinhToViewBangThuTienRowsMap(QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable viewBangThuTienTable, Dictionary<int, HocSinhLopRow> hocSinhIdsToHocSinhLops)
+        private static Dictionary<int, int> buildGeneratedLopIdToSTTMap(Dictionary<int, Dictionary<int, ViewBangThuTienRow>> lopToHocSinhToViewBangThuTienRowsMap)
         {
+            Dictionary<int, int> generatedLopToSTTs = new Dictionary<int, int>();
+
+            foreach (KeyValuePair<int, Dictionary<int, ViewBangThuTienRow>> lopToHocSinhToViewBangThuTienRow in lopToHocSinhToViewBangThuTienRowsMap)
+            {
+                generatedLopToSTTs.Add(lopToHocSinhToViewBangThuTienRow.Key, lopToHocSinhToViewBangThuTienRow.Value.Count);
+            }
+
+            return generatedLopToSTTs;
+        }
+
+        private static Dictionary<int, Dictionary<int, ViewBangThuTienRow>> buildLopToHocSinhToViewBangThuTienRowsMap(QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable viewBangThuTienTable, DateTime ngayTinh)
+        {
+            List<int> hocSinhIds = new List<int>();
+
+            foreach (ViewBangThuTienRow viewBangThuTienRow in viewBangThuTienTable)
+            {
+                hocSinhIds.Add(viewBangThuTienRow.HocSinhId);
+            }
+
+            Dictionary<int, HocSinhLopRow> hocSinhIdsToHocSinhLops = StaticDataUtil.GetHocSinhLopsByHocSinhIds(hocSinhIds, ngayTinh);
             Dictionary<int, Dictionary<int, ViewBangThuTienRow>> lopToHocSinhViewBangThuTienRows = new Dictionary<int, Dictionary<int, ViewBangThuTienRow>>();
 
             foreach (ViewBangThuTienRow viewBangThuTienRow in viewBangThuTienTable)
@@ -166,13 +190,12 @@ namespace QLMamNon.Service.Data
                 int lopId = lopToHocSinhViewBangThuTienRow.Key;
                 Dictionary<int, ViewBangThuTienRow> hocSinhViewBangThuTienRows = lopToHocSinhToViewBangThuTienRowsMap.ContainsKey(lopId) ? lopToHocSinhToViewBangThuTienRowsMap[lopId] : null;
                 SortedList<int, ViewBangThuTienRow> sortedViewBangThuTienRows = new SortedList<int, ViewBangThuTienRow>();
+                int currentMaxSTT = ListUtil.IsEmpty(hocSinhViewBangThuTienRows) ? 0 : hocSinhViewBangThuTienRows.Count;
 
                 foreach (KeyValuePair<int, ViewBangThuTienRow> hocSinhIdToViewBangThuTienRow in lopToHocSinhViewBangThuTienRow.Value)
                 {
                     sortedViewBangThuTienRows.Add(hocSinhIdToViewBangThuTienRow.Value.STT, hocSinhIdToViewBangThuTienRow.Value);
                 }
-
-                int currentMaxSTT = ListUtil.IsEmpty(hocSinhViewBangThuTienRows) ? 0 : hocSinhViewBangThuTienRows[hocSinhViewBangThuTienRows.Count - 1].STT;
 
                 for (int i = 0; i < sortedViewBangThuTienRows.Count; i++)
                 {
@@ -252,12 +275,12 @@ namespace QLMamNon.Service.Data
         {
             List<int> ignoreKhoanThuIds = new List<int>();
 
-            if (preMonthViewBangThuTien.SoTienAnSangThangNay == 0)
+            if (preMonthViewBangThuTien == null || preMonthViewBangThuTien.SoTienAnSangThangNay == 0)
             {
                 ignoreKhoanThuIds.Add(BangThuTienConstant.KhoanThuIdAnSang);
             }
 
-            if (preMonthViewBangThuTien.SoTienAnToiThangNay == 0)
+            if (preMonthViewBangThuTien == null || preMonthViewBangThuTien.SoTienAnToiThangNay == 0)
             {
                 ignoreKhoanThuIds.Add(BangThuTienConstant.KhoanThuIdAnToi);
             }

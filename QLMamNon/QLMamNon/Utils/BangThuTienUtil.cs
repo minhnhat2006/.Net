@@ -1,29 +1,30 @@
-﻿
-using System;
+﻿using System;
 using ACG.Core.WinForm.Util;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
 using QLMamNon.Dao.QLMamNonDsTableAdapters;
 using QLMamNon.Facade;
 using QLMamNon.Properties;
+using BangThuTienGenHistoryDataTable = QLMamNon.Dao.QLMamNonDs.BangThuTienGenHistoryDataTable;
+using BangThuTienGenHistoryRow = QLMamNon.Dao.QLMamNonDs.BangThuTienGenHistoryRow;
 
 namespace QLMamNon
 {
     public static class BangThuTienUtil
     {
-        public static long SXToSoTienSX(int sx)
+        public static long SXToSoTienSX(int sx, long tienAnChinh)
         {
-            return sx * Settings.Default.TienAnChinh;
+            return sx * tienAnChinh;
         }
 
-        public static long SXAnSangToSoTienAnSang(int sx)
+        public static long SXAnSangToSoTienAnSang(int sx, long tienAnSang)
         {
-            return sx * Settings.Default.TienAnSang;
+            return sx * tienAnSang;
         }
 
-        public static long SXAnToiToSoTienAnToi(int sx)
+        public static long SXAnToiToSoTienAnToi(int sx, long tienAnToi)
         {
-            return sx * Settings.Default.TienAnToi;
+            return sx * tienAnToi;
         }
 
         public static long CalculateThanhTien(QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow bangThuTienRow)
@@ -50,9 +51,17 @@ namespace QLMamNon
 
         public static void CalculateSummaryFields(QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row)
         {
-            row.SoTienSXThangTruoc = BangThuTienUtil.SXToSoTienSX(row.SXThangTruoc);
-            row.SoTienAnSangThangTruoc = BangThuTienUtil.SXAnSangToSoTienAnSang(row.AnSangThangTruoc);
-            row.SoTienAnToiThangTruoc = BangThuTienUtil.SXAnToiToSoTienAnToi(row.AnToiThangTruoc);
+            BangThuTienGenHistoryTableAdapter bangThuTienGenHistoryTableAdapter = (BangThuTienGenHistoryTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterBangThuTienGenHistory);
+            BangThuTienGenHistoryDataTable bangThuTienGenHistoryDataTable = bangThuTienGenHistoryTableAdapter.GetDataByLopAndNgay(row.LopId, row.NgayTinh);
+
+            if (!ListUtil.IsEmpty(bangThuTienGenHistoryDataTable.Rows))
+            {
+                BangThuTienGenHistoryRow bangThuTienGenHistoryRow = bangThuTienGenHistoryDataTable[0];
+                row.SoTienSXThangTruoc = BangThuTienUtil.SXToSoTienSX(row.SXThangTruoc, (long)bangThuTienGenHistoryRow.SoTienAnChinh);
+                row.SoTienAnSangThangTruoc = BangThuTienUtil.SXAnSangToSoTienAnSang(row.AnSangThangTruoc, (long)bangThuTienGenHistoryRow.SoTienAnSang);
+                row.SoTienAnToiThangTruoc = BangThuTienUtil.SXAnToiToSoTienAnToi(row.AnToiThangTruoc, (long)bangThuTienGenHistoryRow.SoTienAnSang);
+            }
+
             row.SoTienAnSangConLai = row.SoTienAnSangThangNay - row.SoTienAnSangThangTruoc;
             row.SoTienAnToiConLai = row.SoTienAnToiThangNay - row.SoTienAnToiThangTruoc;
             row.KhoanThuChinh = row.TienAnSua + row.PhuPhi + row.BanTru + row.HocPhi;

@@ -55,13 +55,13 @@ namespace QLMamNon.Forms.ThuChi
 
         private bool isNeedToGenerateSoThuTiens(DateTime ngayTinh, int lop)
         {
-            long genHistoryCount = (long)bangThuTienGenHistoryTableAdapter.countBangThuTienGenHistoryByLopAndNgayTinh(lop, ngayTinh);
+            long genHistoryCount = (long)bangThuTienGenHistoryTableAdapter.CountBangThuTienGenHistoryByLopAndNgayTinh(lop, ngayTinh);
 
             if (genHistoryCount == 0)
             {
                 if (!DateTimeUtil.IsSameMonthYear(ngayTinh, Settings.Default.AppLannchDate))
                 {
-                    long prevMonthGenHistoryCount = (long)bangThuTienGenHistoryTableAdapter.countBangThuTienGenHistoryByLopAndNgayTinh(lop, ngayTinh.AddMonths(-1));
+                    long prevMonthGenHistoryCount = (long)bangThuTienGenHistoryTableAdapter.CountBangThuTienGenHistoryByLopAndNgayTinh(lop, ngayTinh.AddMonths(-1));
 
                     if (prevMonthGenHistoryCount == 0)
                     {
@@ -124,7 +124,7 @@ namespace QLMamNon.Forms.ThuChi
             List<QLMamNon.Dao.QLMamNonDs.HocSinhRow> hocSinhRows = e.Argument as List<QLMamNon.Dao.QLMamNonDs.HocSinhRow>;
             SoThuTienService soThuTienService = new SoThuTienService();
             int generatedRowsCount = soThuTienService.GenerateSoThuTienByHocSinhRows(ngayTinh, hocSinhRows);
-            this.bangThuTienGenHistoryTableAdapter.Insert(ngayTinh, lop, DateTime.Now);
+            this.bangThuTienGenHistoryTableAdapter.Insert(ngayTinh, lop, DateTime.Now, Settings.Default.TienAnSang, Settings.Default.TienAnToi, Settings.Default.TienAnChinh);
         }
 
         private void generatedSoThuTiens(object sender, RunWorkerCompletedEventArgs e)
