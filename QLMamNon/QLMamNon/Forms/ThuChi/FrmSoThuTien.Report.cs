@@ -66,6 +66,7 @@ namespace QLMamNon.Forms.ThuChi
                     SoTienKhoanThuChinh = viewBangThuTienRow.KhoanThuChinh,
                     SoTienDieuHoa = viewBangThuTienRow.SoTienDieuHoa,
                     SoTienNangKhieu = viewBangThuTienRow.SoTienNangKhieu,
+                    SoTienDoDung = viewBangThuTienRow.SoTienDoDung,
                     SoTienNoThangTruoc = viewBangThuTienRow.SoTienTruyThu,
                     SoTienAnSangThuaThangTruoc = viewBangThuTienRow.SoTienAnSangThangTruoc,
                     SoTienAnToiThuaThangTruoc = viewBangThuTienRow.SoTienAnToiThangTruoc,

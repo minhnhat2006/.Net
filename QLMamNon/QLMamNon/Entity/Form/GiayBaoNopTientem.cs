@@ -20,6 +20,8 @@ namespace QLMamNon.Entity.Form
 
         public double SoTienNangKhieu { get; set; }
 
+        public double SoTienDoDung { get; set; }
+
         public double SoTienNoThangTruoc { get; set; }
 
         public double SoXuatAnSangThuaThangTruoc { get; set; }

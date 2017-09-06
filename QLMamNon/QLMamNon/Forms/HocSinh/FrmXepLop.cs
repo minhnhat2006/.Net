@@ -5,10 +5,11 @@ using System.Windows.Forms;
 using ACG.Core.WinForm.Util;
 using DevExpress.XtraGrid.Views.Base;
 using QLMamNon.Components.Data.Static;
-using QLMamNon.Facade;
-using QLMamNon.Forms.Resource;
 using QLMamNon.Constant;
+using QLMamNon.Facade;
+using QLMamNon.Service.Data;
 using QLMamNon.UserControls;
+using HocSinhRow = QLMamNon.Dao.QLMamNonDs.HocSinhRow;
 
 namespace QLMamNon.Forms.HocSinh
 {
@@ -155,7 +156,7 @@ namespace QLMamNon.Forms.HocSinh
 
             foreach (DataRowView rowView in hocSinhRowBindingSourceDen)
             {
-                QLMamNon.Dao.QLMamNonDs.HocSinhRow hocSinhRow = rowView.Row as QLMamNon.Dao.QLMamNonDs.HocSinhRow;
+                HocSinhRow hocSinhRow = rowView.Row as QLMamNon.Dao.QLMamNonDs.HocSinhRow;
                 int hocSinh = hocSinhRow.HocSinhId;
                 hocSinhIds.Add(hocSinh);
 
@@ -179,7 +180,10 @@ namespace QLMamNon.Forms.HocSinh
 
             if (!ListUtil.IsEmpty(deletingHocSinhIds))
             {
-                this.hocSinhLopTableAdapter.DeleteHocSinhLopByHocSinhIds(StringUtil.Join(deletingHocSinhIds, ","), DateTime.Now);
+                this.hocSinhLopTableAdapter.DeleteHocSinhLopByHocSinhIds(StringUtil.Join(deletingHocSinhIds, ","), DateTime.Now.AddDays(-1));
+
+                SoThuTienService soThuTienService = new SoThuTienService();
+                soThuTienService.DeleteBangThuTienByHocSinhIdsAndDate(deletingHocSinhIds, DateTimeUtil.DateEndOfMonth(DateTime.Now));
             }
 
             FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.SavedCaption);

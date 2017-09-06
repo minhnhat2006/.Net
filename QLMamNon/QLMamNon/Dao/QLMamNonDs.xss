@@ -29,7 +29,7 @@
     <Shape ID="DesignTable:ViewBanGiaoTaiSan" ZOrder="15" X="61" Y="555" Height="51" Width="255" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="74" OldDataTableHeight="228" SplitterPosition="23" />
     <Shape ID="DesignTable:PhieuChi" ZOrder="10" X="364" Y="275" Height="54" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="101" OldDataTableHeight="160" SplitterPosition="24" />
     <Shape ID="DesignTable:ViewBangThuTien" ZOrder="11" X="365" Y="524" Height="55" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="101" OldDataTableHeight="228" SplitterPosition="25" />
-    <Shape ID="DesignTable:BangThuTien" ZOrder="12" X="63" Y="404" Height="55" Width="221" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="63" OldDataTableHeight="228" SplitterPosition="25" />
+    <Shape ID="DesignTable:BangThuTien" ZOrder="12" X="63" Y="404" Height="55" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="82" OldDataTableHeight="228" SplitterPosition="25" />
     <Shape ID="DesignTable:GiaoVien" ZOrder="8" X="1192" Y="112" Height="54" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="64" OldDataTableHeight="254" SplitterPosition="24" />
     <Shape ID="DesignTable:User" ZOrder="4" X="736" Y="460" Height="55" Width="275" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="63" OldDataTableHeight="102" SplitterPosition="25" />
     <Shape ID="DesignTable:Privilege" ZOrder="7" X="736" Y="540" Height="54" Width="195" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="45" OldDataTableHeight="64" SplitterPosition="24" />

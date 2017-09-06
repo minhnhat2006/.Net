@@ -37,5 +37,17 @@
     <Setting Name="NamSinhStart" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2005</Value>
     </Setting>
+    <Setting Name="SpeedSMSType" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="SpeedSMSRootUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://api.speedsms.vn/index.php</Value>
+    </Setting>
+    <Setting Name="SpeedSMSAccessToken" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">vVkic2h4PsnEnTRDArJiPxkAoGx7Fsvl</Value>
+    </Setting>
+    <Setting Name="SpeedSMSSender" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MNHongMinh</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

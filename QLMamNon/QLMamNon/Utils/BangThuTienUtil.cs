@@ -59,7 +59,7 @@ namespace QLMamNon
                 BangThuTienGenHistoryRow bangThuTienGenHistoryRow = bangThuTienGenHistoryDataTable[0];
                 row.SoTienSXThangTruoc = BangThuTienUtil.SXToSoTienSX(row.SXThangTruoc, (long)bangThuTienGenHistoryRow.SoTienAnChinh);
                 row.SoTienAnSangThangTruoc = BangThuTienUtil.SXAnSangToSoTienAnSang(row.AnSangThangTruoc, (long)bangThuTienGenHistoryRow.SoTienAnSang);
-                row.SoTienAnToiThangTruoc = BangThuTienUtil.SXAnToiToSoTienAnToi(row.AnToiThangTruoc, (long)bangThuTienGenHistoryRow.SoTienAnSang);
+                row.SoTienAnToiThangTruoc = BangThuTienUtil.SXAnToiToSoTienAnToi(row.AnToiThangTruoc, (long)bangThuTienGenHistoryRow.SoTienAnToi);
             }
 
             row.SoTienAnSangConLai = row.SoTienAnSangThangNay - row.SoTienAnSangThangTruoc;

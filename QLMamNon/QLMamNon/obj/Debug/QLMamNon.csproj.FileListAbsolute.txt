@@ -91,3 +91,6 @@ D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.DanhMuc.FrmBangT
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.UserControls.UCEditFormBangTinhPhi.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.Forms.DanhMuc.FrmPhanLoaiThu.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Debug\QLMamNon.UserControls.UCEditFormPhanLoaiThu.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\bin\Debug\Newtonsoft.Json.pdb
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\bin\Debug\Newtonsoft.Json.xml

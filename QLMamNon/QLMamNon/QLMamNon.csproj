@@ -92,6 +92,9 @@
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.6.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -461,6 +464,9 @@
     <Compile Include="Service\Data\GiaoVienService.cs" />
     <Compile Include="Service\Data\PhieuChiService.cs" />
     <Compile Include="Service\Data\PhieuThuService.cs" />
+    <Compile Include="Service\SMS\SpeedSMS.cs" />
+    <Compile Include="Service\SMS\ESms.cs" />
+    <Compile Include="Service\SMS\ISMS.cs" />
     <Compile Include="UserControls\UCEditFormPhanLoaiThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -873,7 +879,6 @@
     <Folder Include="Forms\Report\" />
     <Folder Include="Forms\Resource\" />
     <Folder Include="Images\icon\" />
-    <Folder Include="Service\SMS\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ACG.Core.WinForm.ActivityTracking\ACG.Core.WinForm.ActivityObserver.csproj">

@@ -134,5 +134,41 @@ namespace QLMamNon.Properties {
                 this["NamSinhStart"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int SpeedSMSType {
+            get {
+                return ((int)(this["SpeedSMSType"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://api.speedsms.vn/index.php")]
+        public string SpeedSMSRootUrl {
+            get {
+                return ((string)(this["SpeedSMSRootUrl"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("vVkic2h4PsnEnTRDArJiPxkAoGx7Fsvl")]
+        public string SpeedSMSAccessToken {
+            get {
+                return ((string)(this["SpeedSMSAccessToken"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("MNHongMinh")]
+        public string SpeedSMSSender {
+            get {
+                return ((string)(this["SpeedSMSSender"]));
+            }
+        }
     }
 }

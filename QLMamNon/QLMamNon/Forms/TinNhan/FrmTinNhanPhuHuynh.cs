@@ -1,13 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Windows.Forms;
+using ACG.Core.WinForm.Util;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Facade;
-using QLMamNon.Properties;
-using System.Net;
-using System.IO;
-using ACG.Core.WinForm.Util;
-using System.Windows.Forms;
-using System.Collections.Generic;
+using QLMamNon.Service.SMS;
 
 namespace QLMamNon.Forms.TinNhan
 {
@@ -88,11 +86,10 @@ namespace QLMamNon.Forms.TinNhan
                 soDienThoais.Add(soDienThoai);
             }
 
-            string requestUrl = String.Format(Settings.Default.SMSWSSendMessageUrl, StringUtil.Join(soDienThoais, ","), this.txtNoiDung.Text);
-
             try
             {
-                this.sendGetRequest(requestUrl);
+                ISMS sms = new SpeedSMS();
+                sms.SendSMS(soDienThoais, this.txtNoiDung.Text);
                 MessageBox.Show("Tin nhắn đã được gửi", "Gửi tin nhắn thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -101,57 +98,6 @@ namespace QLMamNon.Forms.TinNhan
                     String.Format("Xuất hiện lỗi trong quá trình gửi tin nhắn. Chi tiết: {0}", ex.Message),
                     "Gửi tin nhắn không thành công", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private string sendGetRequest(string RequestUrl)
-        {
-            Uri address = new Uri(RequestUrl);
-            HttpWebRequest request;
-            HttpWebResponse response = null;
-            StreamReader reader;
-
-            if (address == null)
-            {
-                throw new ArgumentNullException("address");
-            }
-
-            try
-            {
-                request = WebRequest.Create(address) as HttpWebRequest;
-                request.UserAgent = "QLMamNon";
-                request.KeepAlive = false;
-                request.Timeout = 15 * 1000;
-                response = request.GetResponse() as HttpWebResponse;
-
-                if (request.HaveResponse == true && response != null)
-                {
-                    reader = new StreamReader(response.GetResponseStream());
-                    string result = reader.ReadToEnd();
-                    result = result.Replace("</string>", "");
-                    Console.WriteLine("The SMS was sent with returned message [{0}]", result);
-                    return null;
-                }
-            }
-            catch (WebException wex)
-            {
-                if (wex.Response != null)
-                {
-                    using (HttpWebResponse errorResponse = (HttpWebResponse)wex.Response)
-                    {
-                        string errorMsg = String.Format("The server returned '{0}' with the status code {1} ({2:d}).",
-                            errorResponse.StatusDescription, errorResponse.StatusCode,
-                            errorResponse.StatusCode);
-                        Console.WriteLine(errorMsg);
-                        throw new ApplicationException(errorMsg);
-                    }
-                }
-            }
-            finally
-            {
-                if (response != null) { response.Close(); }
-            }
-
-            return null;
         }
 
         private void txtNoiDung_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)

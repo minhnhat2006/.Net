@@ -77,3 +77,6 @@ D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.DanhMuc.FrmBan
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.UserControls.UCEditFormBangTinhPhi.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.Forms.DanhMuc.FrmPhanLoaiThu.resources
 D:\Projects\Git\.Net\QLMamNon\QLMamNon\obj\Release\QLMamNon.UserControls.UCEditFormPhanLoaiThu.resources
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\bin\Release\Newtonsoft.Json.dll
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\bin\Release\Newtonsoft.Json.pdb
+D:\Projects\Git\.Net\QLMamNon\QLMamNon\bin\Release\Newtonsoft.Json.xml

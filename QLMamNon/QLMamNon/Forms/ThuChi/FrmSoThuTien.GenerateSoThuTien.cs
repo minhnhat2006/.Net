@@ -61,11 +61,11 @@ namespace QLMamNon.Forms.ThuChi
             {
                 if (!DateTimeUtil.IsSameMonthYear(ngayTinh, Settings.Default.AppLannchDate))
                 {
-                    long prevMonthGenHistoryCount = (long)bangThuTienGenHistoryTableAdapter.CountBangThuTienGenHistoryByLopAndNgayTinh(lop, ngayTinh.AddMonths(-1));
+                    long prevMonthGenHistoryCount = (long)bangThuTienGenHistoryTableAdapter.CountBangThuTienGenHistoryByLopAndNgayTinh(lop, DateTimeUtil.DateEndOfMonth(ngayTinh.AddMonths(-1)));
 
                     if (prevMonthGenHistoryCount == 0)
                     {
-                        MessageBox.Show(String.Format("Xin vui lòng tạo sổ thu tiền cho lớp {0} tháng {1:MM/yyyy} trước", lop, ngayTinh.AddMonths(-1)),
+                        MessageBox.Show(String.Format("Xin vui lòng tạo sổ thu tiền cho lớp {0} tháng {1:MM/yyyy} trước", cmbLop.Text, ngayTinh.AddMonths(-1)),
                         "Tạo số thu tiền", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return true;
                     }
