@@ -1,12 +1,12 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using System.Data;
+using ACG.Core.WinForm.Util;
+using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
 using QLMamNon.Dao.QLMamNonDsTableAdapters;
 using QLMamNon.Facade;
-using QLMamNon.Components.Data.Static;
-using System.Collections.Generic;
-using ACG.Core.WinForm.Util;
 namespace QLMamNon
 {
     public static class StaticDataUtil
@@ -241,7 +241,10 @@ namespace QLMamNon
             {
                 foreach (QLMamNon.Dao.QLMamNonDs.HocSinhLopRow row in table)
                 {
-                    hocSinhIdsToHocSinhLops.Add(row.HocSinhId, row);
+                    if (!hocSinhIdsToHocSinhLops.ContainsKey(row.HocSinhId))
+                    {
+                        hocSinhIdsToHocSinhLops.Add(row.HocSinhId, row);
+                    }
                 }
             }
 
@@ -267,7 +270,8 @@ namespace QLMamNon
                 }
 
                 QLMamNon.Dao.QLMamNonDs.LopRow[] rows = lopTable.Select(String.Format("LopId={0}", pair.Value.LopId)) as QLMamNon.Dao.QLMamNonDs.LopRow[];
-                if (!ArrayUtil.IsEmpty(rows))
+
+                if (!ArrayUtil.IsEmpty(rows) && !hocSinhIdsToLopNames.ContainsKey(pair.Key))
                 {
                     hocSinhIdsToLopNames.Add(pair.Key, rows[0]);
                 }

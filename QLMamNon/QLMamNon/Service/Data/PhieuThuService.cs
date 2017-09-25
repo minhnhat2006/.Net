@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using ACG.Core.WinForm.Util;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Facade;
 using HocSinhDataTable = QLMamNon.Dao.QLMamNonDs.HocSinhDataTable;
@@ -44,6 +46,19 @@ namespace QLMamNon.Service.Data
             int? origPhanLoaiThuId = phieuThuRow.IsPhanLoaiThuIdNull() ? (int?)null : phieuThuRow.PhanLoaiThuId;
             phieuThuTableAdapter.Update(soTien, maPhieu, ghiChu, hocSinhId, phanLoaiThuId, ngay, DateTime.Now,
                 phieuThuRow.PhieuThuId, phieuThuRow.SoTien, phieuThuRow.MaPhieu, origHocSinhId, origPhanLoaiThuId, phieuThuRow.Ngay, phieuThuRow.CreatedDate);
+        }
+
+        public QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable LoadPhieuThuByDateRangeWithGroupPhanLoaiThu(DateTime? fromDate, DateTime? toDate, List<int> phanLoaiThuIds)
+        {
+            PhieuThuTableAdapter phieuThuTableAdapter = (PhieuThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterPhieuThu);
+            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable table = phieuThuTableAdapter.GetDataByDateRangeWithGroupPhanLoaiThu(fromDate, toDate, StringUtil.JoinWithCommas(phanLoaiThuIds));
+
+            foreach (PhieuThuRow phieuThuRow in table)
+            {
+                phieuThuRow.PhanLoaiThu = StaticDataUtil.GetPhanLoaiThuById(phieuThuRow.PhanLoaiThuId);
+            }
+
+            return table;
         }
     }
 }

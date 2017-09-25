@@ -82,8 +82,32 @@ namespace QLMamNon.Forms.TinNhan
 
             foreach (int rowHandler in selectedRowHandlers)
             {
-                string soDienThoai = (string)this.gvMain.GetRowCellValue(rowHandler, "DienThoai");
-                soDienThoais.Add(soDienThoai);
+                string soDienThoai = "";
+                object sdtCha = this.gvMain.GetRowCellValue(rowHandler, "DienThoai");
+
+                if (sdtCha != DBNull.Value)
+                {
+                    soDienThoai = (string)sdtCha;
+                }
+
+                if (!StringUtil.IsEmpty(soDienThoai))
+                {
+                    soDienThoais.Add(soDienThoai);
+                }
+                else
+                {
+                    object sdtMe = this.gvMain.GetRowCellValue(rowHandler, "DienThoaiMe");
+
+                    if (sdtMe != DBNull.Value)
+                    {
+                        soDienThoai = (string)sdtMe;
+
+                        if (!StringUtil.IsEmpty(soDienThoai))
+                        {
+                            soDienThoais.Add(soDienThoai);
+                        }
+                    }
+                }
             }
 
             try

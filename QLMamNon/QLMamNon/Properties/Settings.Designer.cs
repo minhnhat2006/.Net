@@ -170,5 +170,17 @@ namespace QLMamNon.Properties {
                 return ((string)(this["SpeedSMSSender"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public string PhanLoaiThuByHocSinh {
+            get {
+                return ((string)(this["PhanLoaiThuByHocSinh"]));
+            }
+            set {
+                this["PhanLoaiThuByHocSinh"] = value;
+            }
+        }
     }
 }

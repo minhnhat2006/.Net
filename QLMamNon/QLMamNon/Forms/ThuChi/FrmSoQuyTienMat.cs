@@ -58,8 +58,10 @@ namespace QLMamNon.Forms.ThuChi
                 phanLoaiChiIds.Add(phanLoaiChiId);
             }
 
+            DateTime fromDate = DateTimeUtil.StartOfDate(this.dateTuNgay.DateTime);
+            DateTime toDate = DateTimeUtil.EndOfDate(this.dateDenNgay.DateTime);
             SoThuTienService soThuTienService = new SoThuTienService();
-            decimal soTienTonDauKy = soThuTienService.GetSoTienTonDauKy(this.dateDenNgay.DateTime);
+            decimal soTienTonDauKy = soThuTienService.GetSoTienTonDauKy(toDate);
             SortedList soQuyTienMatMap = new SortedList();
             SoQuyTienMatItem soQuyTienMatDauKy = new SoQuyTienMatItem()
             {
@@ -68,13 +70,13 @@ namespace QLMamNon.Forms.ThuChi
             };
             soQuyTienMatMap.Add(DateTime.MinValue, soQuyTienMatDauKy);
 
-            addPhieuThuToReport(soQuyTienMatMap, this.dateTuNgay.DateTime, this.dateDenNgay.DateTime);
-            addPhieuChiToReport(soQuyTienMatMap, phanLoaiChiIds);
+            addPhieuThuToReport(soQuyTienMatMap, fromDate, toDate);
+            addPhieuChiToReport(soQuyTienMatMap, fromDate, toDate, phanLoaiChiIds);
             List<SoQuyTienMatItem> soQuyTienMat = calculateSoTienTonForSoQuyTienMatItems(soQuyTienMatMap);
 
             RptSoQuyTienMat rpt = new RptSoQuyTienMat();
-            rpt.FromDate.Value = dateTuNgay.DateTime;
-            rpt.ToDate.Value = dateDenNgay.DateTime;
+            rpt.FromDate.Value = fromDate;
+            rpt.ToDate.Value = toDate;
             rpt.bindingSource.DataSource = soQuyTienMat;
             FormMainFacade.ShowReport(rpt);
         }
@@ -99,18 +101,17 @@ namespace QLMamNon.Forms.ThuChi
             return soQuyTienMat;
         }
 
-        private void addPhieuChiToReport(SortedList soQuyTienMatMap, List<int> phanLoaiChiIds)
+        private void addPhieuChiToReport(SortedList soQuyTienMatMap, DateTime fromDate, DateTime toDate, List<int> phanLoaiChiIds)
         {
             PhieuChiService phieuChiService = new PhieuChiService();
-            QLMamNon.Dao.QLMamNonDs.PhieuChiDataTable phieuChiDataTable = phieuChiService.LoadPhieuChiByDateRange(this.dateTuNgay.DateTime, this.dateDenNgay.DateTime, phanLoaiChiIds);
-            int idxPhieuChi = 1;
+            QLMamNon.Dao.QLMamNonDs.PhieuChiDataTable phieuChiDataTable = phieuChiService.LoadPhieuChiByDateRange(fromDate, toDate, phanLoaiChiIds);
             foreach (QLMamNon.Dao.QLMamNonDs.PhieuChiRow phieuChiRow in phieuChiDataTable)
             {
                 SoQuyTienMatItem soQuyTienMatItemChi = new SoQuyTienMatItem()
                 {
                     DienGiai = phieuChiRow.NoiDung,
                     GhiChu = phieuChiRow.GhiChu,
-                    NgayChungTu = phieuChiRow.Ngay.AddMilliseconds(idxPhieuChi++),
+                    NgayChungTu = phieuChiRow.Ngay.AddMilliseconds(soQuyTienMatMap.Count),
                     SoChungTuChi = phieuChiRow.MaPhieu,
                     SoTienChi = phieuChiRow.SoTien
                 };
@@ -121,11 +122,13 @@ namespace QLMamNon.Forms.ThuChi
         private void addPhieuThuToReport(SortedList soQuyTienMatMap, DateTime fromDate, DateTime toDate)
         {
             PhieuThuTableAdapter phieuThuTableAdapter = (PhieuThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterPhieuThu);
-            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable = phieuThuTableAdapter.GetDataForSoQuyTienMat(this.dateTuNgay.DateTime, this.dateDenNgay.DateTime);
-            Dictionary<int, SoQuyTienMatItem> groupDateToSoQuyTienMatItemsMap = new Dictionary<int, SoQuyTienMatItem>();
+            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable = phieuThuTableAdapter.GetDataForSoQuyTienMat(fromDate, toDate);
+            Dictionary<string, SoQuyTienMatItem> groupDateToSoQuyTienMatItemsMap = new Dictionary<string, SoQuyTienMatItem>();
 
             foreach (QLMamNon.Dao.QLMamNonDs.PhieuThuRow phieuThuRow in phieuThuDataTable)
             {
+                phieuThuRow.PhanLoaiThu = phieuThuRow.IsPhanLoaiThuIdNull() ? "Thu tiền học phí" : StaticDataUtil.GetPhanLoaiThuById(phieuThuRow.PhanLoaiThuId);
+
                 int groupDate = getGroupDate(fromDate, phieuThuRow);
                 DateTime dateOfGroup = fromDate.AddDays((groupDate + 1) * NumberOfDateToGroupPhieuThu - 1);
 
@@ -134,11 +137,13 @@ namespace QLMamNon.Forms.ThuChi
                     dateOfGroup = toDate;
                 }
 
-                if (!groupDateToSoQuyTienMatItemsMap.ContainsKey(groupDate))
+                string key = StringUtil.Join(new int[] { groupDate, phieuThuRow.PhanLoaiThuId }, "~");
+
+                if (!groupDateToSoQuyTienMatItemsMap.ContainsKey(key))
                 {
-                    groupDateToSoQuyTienMatItemsMap.Add(groupDate, new SoQuyTienMatItem()
+                    groupDateToSoQuyTienMatItemsMap.Add(key, new SoQuyTienMatItem()
                     {
-                        DienGiai = "Thu tiền học phí",
+                        DienGiai = phieuThuRow.PhanLoaiThu,
                         NgayChungTu = dateOfGroup,
                         SoTienThu = 0
                     });
@@ -148,13 +153,15 @@ namespace QLMamNon.Forms.ThuChi
             foreach (QLMamNon.Dao.QLMamNonDs.PhieuThuRow phieuThuRow in phieuThuDataTable)
             {
                 int groupDate = getGroupDate(fromDate, phieuThuRow);
-                SoQuyTienMatItem soQuyTienMatItemThu = groupDateToSoQuyTienMatItemsMap[groupDate];
+                string key = StringUtil.Join(new int[] { groupDate, phieuThuRow.PhanLoaiThuId }, "~");
+                SoQuyTienMatItem soQuyTienMatItemThu = groupDateToSoQuyTienMatItemsMap[key];
                 soQuyTienMatItemThu.SoTienThu += phieuThuRow.SoTien;
             }
 
+            int addedCount = 0;
             foreach (SoQuyTienMatItem soQuyTienMatItemThu in groupDateToSoQuyTienMatItemsMap.Values)
             {
-                soQuyTienMatMap.Add(soQuyTienMatItemThu.NgayChungTu, soQuyTienMatItemThu);
+                soQuyTienMatMap.Add(soQuyTienMatItemThu.NgayChungTu.AddMilliseconds(addedCount++), soQuyTienMatItemThu);
             }
         }
 

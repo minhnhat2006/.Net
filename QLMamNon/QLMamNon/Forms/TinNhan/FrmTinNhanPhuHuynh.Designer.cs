@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTinNhanPhuHuynh));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.lcMain = new DevExpress.XtraLayout.LayoutControl();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
-            this.hocSinhRowBindingSource = new System.Windows.Forms.BindingSource();
+            this.hocSinhRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colHoTen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDienThoai = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -40,7 +41,7 @@
             this.colHoTenMe = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.cmbLop = new DevExpress.XtraEditors.LookUpEdit();
-            this.lopRowBindingSource = new System.Windows.Forms.BindingSource();
+            this.lopRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -51,6 +52,7 @@
             this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
             this.btnSend = new DevExpress.XtraEditors.SimpleButton();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.colDienThoaiMe = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
@@ -130,6 +132,7 @@
             this.colHoTen,
             this.colDienThoai,
             this.colHoTenCha,
+            this.colDienThoaiMe,
             this.colHoTenMe});
             this.gvMain.GridControl = this.gcMain;
             this.gvMain.Name = "gvMain";
@@ -150,7 +153,7 @@
             // 
             // colDienThoai
             // 
-            this.colDienThoai.Caption = "Số điện thoại";
+            this.colDienThoai.Caption = "Số điện thoại cha";
             this.colDienThoai.FieldName = "DienThoai";
             this.colDienThoai.Name = "colDienThoai";
             this.colDienThoai.Visible = true;
@@ -172,7 +175,7 @@
             this.colHoTenMe.FieldName = "HoTenMe";
             this.colHoTenMe.Name = "colHoTenMe";
             this.colHoTenMe.Visible = true;
-            this.colHoTenMe.VisibleIndex = 4;
+            this.colHoTenMe.VisibleIndex = 5;
             this.colHoTenMe.Width = 95;
             // 
             // repositoryItemCheckEdit1
@@ -247,9 +250,9 @@
             // 
             // txtNoiDung
             // 
-            this.txtNoiDung.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNoiDung.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNoiDung.Location = new System.Drawing.Point(1, 87);
             this.txtNoiDung.Name = "txtNoiDung";
             this.txtNoiDung.Properties.MaxLength = 160;
@@ -268,13 +271,14 @@
             // 
             // txtGuide
             // 
-            this.txtGuide.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGuide.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGuide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGuide.Location = new System.Drawing.Point(1, 12);
             this.txtGuide.Name = "txtGuide";
             this.txtGuide.Size = new System.Drawing.Size(414, 50);
             this.txtGuide.TabIndex = 0;
+            this.txtGuide.Text = "";
             // 
             // hocSinhTableAdapter
             // 
@@ -292,14 +296,22 @@
             // 
             // memoEdit1
             // 
-            this.memoEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.memoEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.memoEdit1.Location = new System.Drawing.Point(1, 87);
             this.memoEdit1.Name = "memoEdit1";
             this.memoEdit1.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.memoEdit1.Size = new System.Drawing.Size(343, 312);
             this.memoEdit1.TabIndex = 2;
+            // 
+            // colDienThoaiMe
+            // 
+            this.colDienThoaiMe.Caption = "Số điện thoại mẹ";
+            this.colDienThoaiMe.FieldName = "DienThoaiMe";
+            this.colDienThoaiMe.Name = "colDienThoaiMe";
+            this.colDienThoaiMe.Visible = true;
+            this.colDienThoaiMe.VisibleIndex = 4;
             // 
             // FrmTinNhanPhuHuynh
             // 
@@ -353,5 +365,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colHoTenMe;
         private DevExpress.XtraEditors.SimpleButton btnSend;
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn colDienThoaiMe;
     }
 }

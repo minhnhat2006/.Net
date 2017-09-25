@@ -2,4 +2,3 @@ D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Util\bin\Release\ACG.Core.WinForm
 D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Util\bin\Release\ACG.Core.WinForm.Util.pdb
 D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Util\obj\Release\ACG.Core.WinForm.Util.dll
 D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Util\obj\Release\ACG.Core.WinForm.Util.pdb
-D:\Projects\Git\.Net\QLMamNon\ACG.Core.WinForm.Util\obj\Release\ACG.Core.WinForm.Util.csprojResolveAssemblyReference.cache

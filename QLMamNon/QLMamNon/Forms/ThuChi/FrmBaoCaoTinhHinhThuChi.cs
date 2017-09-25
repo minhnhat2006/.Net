@@ -45,6 +45,21 @@ namespace QLMamNon.Forms.ThuChi
                 return;
             }
 
+            List<int> phanLoaiThuIds = new List<int>();
+            int[] selectedThuRowHandlers = this.gvThu.GetSelectedRows();
+
+            if (ArrayUtil.IsEmpty(selectedThuRowHandlers))
+            {
+                MessageBox.Show("Xin vui lòng chọn Phân loại thu", "Chọn Phân loại thu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            foreach (int rowHandler in selectedThuRowHandlers)
+            {
+                int phanLoaiThuId = (int)this.gvThu.GetRowCellValue(rowHandler, "PhanLoaiThuId");
+                phanLoaiThuIds.Add(phanLoaiThuId);
+            }
+
             List<int> phanLoaiChiIds = new List<int>();
             int[] selectedRowHandlers = this.gvMain.GetSelectedRows();
 
@@ -60,16 +75,25 @@ namespace QLMamNon.Forms.ThuChi
                 phanLoaiChiIds.Add(phanLoaiChiId);
             }
 
+            DateTime fromDate = DateTimeUtil.StartOfDate(this.dateTuNgay.DateTime);
+            DateTime toDate = DateTimeUtil.EndOfDate(this.dateDenNgay.DateTime);
+
             UnknownColumnViewTableAdapter unknownColumnViewTableAdapter = (UnknownColumnViewTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterUnknownColumnView);
             RptTinhHinhThuChi rpt = new RptTinhHinhThuChi();
-            rpt.TuNgay.Value = this.dateTuNgay.DateTime;
-            rpt.DenNgay.Value = this.dateDenNgay.DateTime;
-            rpt.TongThu.Value = unknownColumnViewTableAdapter.GetPhieuThuForReportBCHDTC(this.dateTuNgay.DateTime, this.dateDenNgay.DateTime);
-            rpt.TongChi.Value = unknownColumnViewTableAdapter.GetSumSoTienChiByDateRange(this.dateTuNgay.DateTime, this.dateDenNgay.DateTime, StringUtil.JoinWithCommas(phanLoaiChiIds));
-            rpt.ChenhLech.Value = (decimal)rpt.TongThu.Value - (decimal)rpt.TongChi.Value;
+            rpt.TuNgay.Value = fromDate;
+            rpt.DenNgay.Value = toDate;
+            rpt.TongThu.Value = unknownColumnViewTableAdapter.GetSumSoTienThuByDateRange(fromDate, toDate, StringUtil.JoinWithCommas(phanLoaiThuIds));
+            rpt.TongChi.Value = unknownColumnViewTableAdapter.GetSumSoTienChiByDateRange(fromDate, toDate, StringUtil.JoinWithCommas(phanLoaiChiIds));
+
+            SoThuTienService soThuTienService = new SoThuTienService();
+            rpt.Ton.Value = soThuTienService.GetSoTienTonDauKy(toDate);
+            rpt.ChenhLech.Value = (decimal)rpt.Ton.Value + (decimal)rpt.TongThu.Value - (decimal)rpt.TongChi.Value;
+
+            PhieuThuService phieuThuService = new PhieuThuService();
+            rpt.thuDataSource.DataSource = phieuThuService.LoadPhieuThuByDateRangeWithGroupPhanLoaiThu(fromDate, toDate, phanLoaiThuIds);
 
             PhieuChiService phieuChiService = new PhieuChiService();
-            rpt.objectDataSource.DataSource = phieuChiService.LoadPhieuChiByDateRangeWithGroupPhanLoaiChi(this.dateTuNgay.DateTime, this.dateDenNgay.DateTime, phanLoaiChiIds);
+            rpt.chiDataSource.DataSource = phieuChiService.LoadPhieuChiByDateRangeWithGroupPhanLoaiChi(fromDate, toDate, phanLoaiChiIds);
 
             FormMainFacade.ShowReport(rpt);
         }
@@ -77,10 +101,12 @@ namespace QLMamNon.Forms.ThuChi
         private void FrmBaoCaoTinhHinhThuChi_Load(object sender, EventArgs e)
         {
             this.phanLoaiChiRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.PhanLoaiChi);
+            this.phanLoaiThuRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.PhanLoaiThu);
         }
 
         private void FrmBaoCaoTinhHinhThuChi_Shown(object sender, EventArgs e)
         {
+            this.gvThu.SelectAll();
             this.gvMain.SelectAll();
         }
     }

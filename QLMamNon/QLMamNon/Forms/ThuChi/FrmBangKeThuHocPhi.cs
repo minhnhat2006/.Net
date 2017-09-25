@@ -10,6 +10,7 @@ using QLMamNon.Service.Data;
 using QLThuChi;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Dao.QLMamNonDsTableAdapters;
+using ACG.Core.WinForm.Util;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -42,8 +43,9 @@ namespace QLMamNon.Forms.ThuChi
 
             SoThuTienService soThuTienService = new SoThuTienService();
             RptBangKeTongHopThuTienHS rpt = new RptBangKeTongHopThuTienHS();
-            rpt.viewBangThuTienRowbindingSource.DataSource = soThuTienService.GetBangKeTongHopThuTien(dateDenNgay.DateTime, (int?)cmLop.EditValue);
-            rpt.Ngay.Value = dateDenNgay.DateTime;
+            DateTime toDate = DateTimeUtil.EndOfDate(dateDenNgay.DateTime);
+            rpt.viewBangThuTienRowbindingSource.DataSource = soThuTienService.GetBangKeTongHopThuTien(toDate, (int?)cmLop.EditValue);
+            rpt.Ngay.Value = toDate;
             FormMainFacade.ShowReport(rpt);
         }
 

@@ -7,6 +7,8 @@ using QLMamNon.Dao.QLMamNonDsTableAdapters;
 using QLMamNon.Facade;
 using QLMamNon.Service.Data;
 using LayoutVisibility = DevExpress.XtraLayout.Utils.LayoutVisibility;
+using QLMamNon.Properties;
+using ACG.Core.WinForm.Util;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -96,7 +98,7 @@ namespace QLMamNon.Forms.ThuChi
 
             this.luuPhieuThu();
 
-            if ((int)cmbPhanLoaiThu.EditValue == PhanLoaiThuConstant.PhanLoaiThuIdThuTienHocPhi)
+            if (isSelectedPhanLoaiThuByHocSinh())
             {
                 this.updateSoTienTruyThuForBangThuTienNextMonths(this.dateNgay.DateTime, (int)this.cmbHocSinh.EditValue);
             }
@@ -187,9 +189,17 @@ namespace QLMamNon.Forms.ThuChi
 
         private void cmbPhanLoaiThu_EditValueChanged(object sender, EventArgs e)
         {
-            LayoutVisibility enableCmbHocSinhId = (int)cmbPhanLoaiThu.EditValue == PhanLoaiThuConstant.PhanLoaiThuIdThuTienHocPhi ? LayoutVisibility.Always : LayoutVisibility.Never;
+            LayoutVisibility enableCmbHocSinhId = isSelectedPhanLoaiThuByHocSinh() ? LayoutVisibility.Always : LayoutVisibility.Never;
             lciCmbHocSinh.Visibility = enableCmbHocSinhId;
             lciTxtConLai.Visibility = enableCmbHocSinhId;
+        }
+
+        private bool isSelectedPhanLoaiThuByHocSinh()
+        {
+            string selectedPhanLoaiThuId = string.Format("{0}", cmbPhanLoaiThu.EditValue);
+            string[] phanLoaiThuByHocSinhs = StringUtil.Split(Settings.Default.PhanLoaiThuByHocSinh, ",");
+
+            return ArrayUtil.Contains(phanLoaiThuByHocSinhs, selectedPhanLoaiThuId);
         }
     }
 }

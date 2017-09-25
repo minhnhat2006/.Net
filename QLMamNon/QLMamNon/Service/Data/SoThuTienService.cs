@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using ACG.Core.WinForm.Util;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
@@ -302,7 +303,10 @@ namespace QLMamNon.Service.Data
 
             foreach (ViewBangThuTienRow viewBangThuTienRow in rows)
             {
-                hocSinhIdsToViewBangThuTienRows.Add(viewBangThuTienRow.HocSinhId, viewBangThuTienRow);
+                if (!hocSinhIdsToViewBangThuTienRows.ContainsKey(viewBangThuTienRow.HocSinhId))
+                {
+                    hocSinhIdsToViewBangThuTienRows.Add(viewBangThuTienRow.HocSinhId, viewBangThuTienRow);
+                }
             }
 
             if (ListUtil.IsEmpty(hocSinhIdsToViewBangThuTienRows))
@@ -311,7 +315,7 @@ namespace QLMamNon.Service.Data
             }
 
             PhieuThuTableAdapter phieuThuTableAdapter = (PhieuThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterPhieuThu);
-            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable = phieuThuTableAdapter.GetDataByHocSinhIdsAndThangNam(StringUtil.Join(new List<int>(hocSinhIdsToViewBangThuTienRows.Keys), ","), toDate.Year, toDate.Month);
+            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable = phieuThuTableAdapter.GetDataOfMonthByHocSinhIdsAndNgay(StringUtil.Join(new List<int>(hocSinhIdsToViewBangThuTienRows.Keys), ","), toDate);
             int stt = 1;
 
             foreach (PhieuThuRow phieuThuRow in phieuThuDataTable)
@@ -401,15 +405,20 @@ namespace QLMamNon.Service.Data
 
         public List<ViewBangThuTienRow> EvaluateViewBangThuTienRowsForReport(List<ViewBangThuTienRow> viewBangThuTienRows, DateTime toDate)
         {
-            List<int> hocSinhIds = new List<int>();
+            HashSet<int> hocSinhIds = new HashSet<int>();
 
             foreach (ViewBangThuTienRow viewBangThuTienRow in viewBangThuTienRows)
             {
-                hocSinhIds.Add(viewBangThuTienRow.HocSinhId);
+                if (!hocSinhIds.Contains(viewBangThuTienRow.HocSinhId))
+                {
+                    hocSinhIds.Add(viewBangThuTienRow.HocSinhId);
+                }
             }
 
+            LoggerFacade.Info(string.Format("EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[{0}]", StringUtil.JoinWithCommas(hocSinhIds.ToList())));
+
             HocSinhLopTableAdapter hocSinhLopTableAdapter = (HocSinhLopTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterHocSinhLop);
-            Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow> hocSinhIdsToLopNames = StaticDataUtil.GetLopsByHocSinhIds(hocSinhIds, toDate);
+            Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow> hocSinhIdsToLopNames = StaticDataUtil.GetLopsByHocSinhIds(hocSinhIds.ToList(), toDate);
             HocSinhDataTable hocSinhDataTable = this.getHocSinhData();
 
             foreach (ViewBangThuTienRow viewBangThuTienRow in viewBangThuTienRows)
@@ -467,7 +476,7 @@ namespace QLMamNon.Service.Data
         {
             UnknownColumnViewTableAdapter unknownColumnViewTableAdapter = (UnknownColumnViewTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterUnknownColumnView);
             DateTime lastDayOfPrevMonth = DateTimeUtil.DateEndOfMonth(toDate.AddMonths(-1));
-            decimal tongThu = (decimal)unknownColumnViewTableAdapter.GetPhieuThuForReportBCHDTC(Settings.Default.AppLannchDate, lastDayOfPrevMonth);
+            decimal tongThu = (decimal)unknownColumnViewTableAdapter.GetSumSoTienThuByDateRange(Settings.Default.AppLannchDate, lastDayOfPrevMonth, null);
             decimal tongChi = (decimal)unknownColumnViewTableAdapter.GetSumSoTienChiByDateRange(Settings.Default.AppLannchDate, lastDayOfPrevMonth, null);
             decimal chenhLech = tongThu - tongChi + Settings.Default.SoTienTonDauKy;
             return chenhLech;

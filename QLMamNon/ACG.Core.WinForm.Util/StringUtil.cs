@@ -28,9 +28,21 @@ namespace ACG.Core.WinForm.Util
             return String.Join(separator, listStr);
         }
 
+        public static String Join(object[] objs, string separator)
+        {
+            List<object> list = new List<object>(objs);
+
+            return Join(list, separator);
+        }
+
         public static String JoinWithCommas(IList list)
         {
             return Join(list, ",");
+        }
+
+        public static string[] Split(string str, string separator)
+        {
+            return str.Split(new string[] { separator }, StringSplitOptions.RemoveEmptyEntries);
         }
     }
 }

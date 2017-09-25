@@ -14,6 +14,16 @@ namespace ACG.Core.WinForm.Util
             return new DateTime(date.Year, date.Month, DateTime.DaysInMonth(date.Year, date.Month), 23, 59, 59, 999);
         }
 
+        public static DateTime StartOfDate(DateTime date)
+        {
+            return date.Date;
+        }
+
+        public static DateTime EndOfDate(DateTime date)
+        {
+            return date.Date.AddDays(1).AddTicks(-1);
+        }
+
         public static bool IsDateBetweenRange(DateTime fromDate, DateTime toDate, DateTime dateToCompare)
         {
             return dateToCompare >= fromDate && dateToCompare <= toDate;
