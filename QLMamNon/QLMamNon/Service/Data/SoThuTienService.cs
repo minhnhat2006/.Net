@@ -16,6 +16,7 @@ using HocSinhRow = QLMamNon.Dao.QLMamNonDs.HocSinhRow;
 using PhieuThuRow = QLMamNon.Dao.QLMamNonDs.PhieuThuRow;
 using ViewBangThuTienDataTable = QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable;
 using ViewBangThuTienRow = QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow;
+using System.Windows.Forms;
 
 namespace QLMamNon.Service.Data
 {
@@ -198,7 +199,10 @@ namespace QLMamNon.Service.Data
 
                 foreach (KeyValuePair<int, ViewBangThuTienRow> hocSinhIdToViewBangThuTienRow in lopToHocSinhViewBangThuTienRow.Value)
                 {
-                    sortedViewBangThuTienRows.Add(hocSinhIdToViewBangThuTienRow.Value.STT, hocSinhIdToViewBangThuTienRow.Value);
+                    if (!sortedViewBangThuTienRows.ContainsKey(hocSinhIdToViewBangThuTienRow.Value.STT))
+                    {
+                        sortedViewBangThuTienRows.Add(hocSinhIdToViewBangThuTienRow.Value.STT, hocSinhIdToViewBangThuTienRow.Value);
+                    }
                 }
 
                 for (int i = 0; i < sortedViewBangThuTienRows.Count; i++)

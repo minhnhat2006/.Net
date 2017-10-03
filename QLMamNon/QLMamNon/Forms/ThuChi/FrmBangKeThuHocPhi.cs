@@ -35,7 +35,7 @@ namespace QLMamNon.Forms.ThuChi
 
         private void btnXemBaoCao_Click(object sender, EventArgs e)
         {
-            if (this.dateDenNgay.DateTime == null)
+            if (this.dateTuNgay.DateTime == null || this.dateDenNgay.DateTime == null)
             {
                 MessageBox.Show("Xin vui lòng chọn ngày", "Chọn ngày", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -43,9 +43,11 @@ namespace QLMamNon.Forms.ThuChi
 
             SoThuTienService soThuTienService = new SoThuTienService();
             RptBangKeTongHopThuTienHS rpt = new RptBangKeTongHopThuTienHS();
+            DateTime fromDate = DateTimeUtil.StartOfDate(dateTuNgay.DateTime);
             DateTime toDate = DateTimeUtil.EndOfDate(dateDenNgay.DateTime);
+            rpt.FromDate.Value = fromDate;
+            rpt.ToDate.Value = toDate;
             rpt.viewBangThuTienRowbindingSource.DataSource = soThuTienService.GetBangKeTongHopThuTien(toDate, (int?)cmLop.EditValue);
-            rpt.Ngay.Value = toDate;
             FormMainFacade.ShowReport(rpt);
         }
 

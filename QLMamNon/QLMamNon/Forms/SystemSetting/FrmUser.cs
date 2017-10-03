@@ -5,6 +5,10 @@ using QLMamNon.Dao.QLMamNonDsTableAdapters;
 using QLMamNon.Facade;
 using QLMamNon.UserControls;
 using ACG.Core.WinForm.Util;
+using System.Windows.Forms;
+using DevExpress.XtraGrid.EditForm.Helpers.Controls;
+using DevExpress.XtraEditors;
+using QLMamNon.Forms.HocSinh;
 
 namespace QLMamNon.Forms.SystemSetting
 {
@@ -25,10 +29,6 @@ namespace QLMamNon.Forms.SystemSetting
             ucEditFormUser.GridView = this.gvMain;
             this.gvMain.OptionsEditForm.CustomEditFormLayout = ucEditFormUser;
             this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, userTableAdapter.Adapter, this.userRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.UserDataTable);
-        }
-
-        private void FrmUser_Load(object sender, EventArgs e)
-        {
         }
     }
 }

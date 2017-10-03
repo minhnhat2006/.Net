@@ -43,6 +43,7 @@
             this.colTruongId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPassword = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUserPrivileges = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -157,11 +158,12 @@
             this.gvMain.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colTruongId,
             this.colName,
-            this.colPassword});
+            this.colPassword,
+            this.colUserPrivileges});
             this.gvMain.GridControl = this.gcMain;
             this.gvMain.Name = "gvMain";
             this.gvMain.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
-            this.gvMain.OptionsEditForm.FormCaptionFormat = "Chỉnh sửa thông tin Trường học";
+            this.gvMain.OptionsEditForm.FormCaptionFormat = "Chỉnh sửa User";
             this.gvMain.OptionsEditForm.PopupEditFormWidth = 500;
             this.gvMain.OptionsView.ShowGroupPanel = false;
             // 
@@ -187,6 +189,11 @@
             this.colPassword.FieldName = "Password";
             this.colPassword.Name = "colPassword";
             // 
+            // colUserPrivileges
+            // 
+            this.colUserPrivileges.FieldName = "UserPrivileges";
+            this.colUserPrivileges.Name = "colUserPrivileges";
+            // 
             // FrmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,7 +202,6 @@
             this.Controls.Add(this.panelMain);
             this.Name = "FrmUser";
             this.Text = "Tài khoản";
-            this.Load += new System.EventHandler(this.FrmUser_Load);
             this.panelMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -221,5 +227,6 @@
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.BindingSource userRowBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colPassword;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserPrivileges;
     }
 }

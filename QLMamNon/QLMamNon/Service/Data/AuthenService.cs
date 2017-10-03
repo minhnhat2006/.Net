@@ -76,9 +76,9 @@ namespace QLMamNon.Service.Data
         }
 
         public QLMamNon.Dao.QLMamNonDs.UserPrivilegeDataTable LoadUserPrivileges(UserPrivilegeTableAdapter userPrivilegeTableAdapter,
-            int uerId)
+            int userId)
         {
-            QLMamNon.Dao.QLMamNonDs.UserPrivilegeDataTable table = userPrivilegeTableAdapter.GetDataByUserId(uerId);
+            QLMamNon.Dao.QLMamNonDs.UserPrivilegeDataTable table = userPrivilegeTableAdapter.GetDataByUserId(userId);
             return table;
         }
     }

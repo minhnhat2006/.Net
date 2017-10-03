@@ -53,6 +53,8 @@ namespace QLMamNon.Forms.ThuChi
         {
             this.lopRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.LopHoc);
             this.namHocBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.NamHoc);
+            this.cmbNam.Text = DateTime.Now.Year.ToString();
+            this.cmbThang.Text = DateTime.Now.Month.ToString();
         }
 
         private void gvMain_CellValueChanged(object sender, CellValueChangedEventArgs e)
@@ -313,7 +315,7 @@ namespace QLMamNon.Forms.ThuChi
 
         private void loadViewBangThuTiens(DateTime ngayTinh, int lop)
         {
-            if (this.isNeedToGenerateSoThuTiens(ngayTinh, lop))
+            if (this.isNeedToGenerateSoThuTiens(ngayTinh, lop, false))
             {
                 this.showFormGenerateSoThuTiens(true);
                 return;

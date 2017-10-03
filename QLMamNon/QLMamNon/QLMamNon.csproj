@@ -808,6 +808,7 @@
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+PhanLoaiChiRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+PhanLoaiThuRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+PhuongXaRow.datasource" />
+    <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+PrivilegeRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+QuanHuyenRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+ThanhPhoRow.datasource" />
     <None Include="Properties\DataSources\QLMamNon.Dao.QLMamNonDs+TruongRow.datasource" />

@@ -33,5 +33,7 @@ namespace QLMamNon.Components.Data.Static
         public const string AdapterUnknownColumnView = "AdapterUnknownColumnView";
         public const string AdapterKhoanThuHangNam = "AdapterKhoanThuHangNam";
         public const string AdapterUser = "AdapterUser";
+        public const string AdapterPrivilege = "AdapterPrivilege";
+        public const string AdapterUserPrivilege = "AdapterUserPrivilege";
     }
 }

@@ -116,6 +116,8 @@
             this.khoanThuHangNamTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuHangNamTableAdapter();
             this.userTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.UserTableAdapter();
             this.phanLoaiThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhanLoaiThuTableAdapter();
+            this.privilegeTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PrivilegeTableAdapter();
+            this.userPrivilegeTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.UserPrivilegeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -833,6 +835,14 @@
             // 
             this.phanLoaiThuTableAdapter.ClearBeforeFill = true;
             // 
+            // privilegeTableAdapter
+            // 
+            this.privilegeTableAdapter.ClearBeforeFill = true;
+            // 
+            // userPrivilegeTableAdapter
+            // 
+            this.userPrivilegeTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -949,5 +959,7 @@
         private DevExpress.XtraBars.BarButtonItem bbiBangTinhPhi;
         private DevExpress.XtraBars.BarButtonItem bbiPhanLoaiThu;
         private Dao.QLMamNonDsTableAdapters.PhanLoaiThuTableAdapter phanLoaiThuTableAdapter;
+        private Dao.QLMamNonDsTableAdapters.PrivilegeTableAdapter privilegeTableAdapter;
+        private Dao.QLMamNonDsTableAdapters.UserPrivilegeTableAdapter userPrivilegeTableAdapter;
     }
 }

@@ -42,6 +42,8 @@
             this.dxValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnXemBaoCao = new DevExpress.XtraEditors.SimpleButton();
+            this.dateTuNgay = new DevExpress.XtraEditors.DateEdit();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties.CalendarTimeProperties)).BeginInit();
@@ -53,12 +55,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // lcMain
             // 
             this.lcMain.Appearance.Control.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.lcMain.Appearance.Control.Options.UseFont = true;
+            this.lcMain.Controls.Add(this.dateTuNgay);
             this.lcMain.Controls.Add(this.dateDenNgay);
             this.lcMain.Controls.Add(this.lblTaoPhieuThu);
             this.lcMain.Controls.Add(this.cmLop);
@@ -87,7 +93,7 @@
             // dateDenNgay
             // 
             this.dateDenNgay.EditValue = null;
-            this.dateDenNgay.Location = new System.Drawing.Point(72, 36);
+            this.dateDenNgay.Location = new System.Drawing.Point(199, 36);
             this.dateDenNgay.Name = "dateDenNgay";
             this.dateDenNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -96,9 +102,9 @@
             this.dateDenNgay.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
             this.dateDenNgay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateDenNgay.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dateDenNgay.Size = new System.Drawing.Size(191, 26);
+            this.dateDenNgay.Size = new System.Drawing.Size(64, 26);
             this.dateDenNgay.StyleController = this.lcMain;
-            this.dateDenNgay.TabIndex = 1;
+            this.dateDenNgay.TabIndex = 2;
             // 
             // lblTaoPhieuThu
             // 
@@ -127,7 +133,7 @@
             this.cmLop.Properties.ValueMember = "LopId";
             this.cmLop.Size = new System.Drawing.Size(191, 26);
             this.cmLop.StyleController = this.lcMain;
-            this.cmLop.TabIndex = 2;
+            this.cmLop.TabIndex = 3;
             // 
             // lopRowBindingSource
             // 
@@ -142,7 +148,8 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lciLblTaoPhieuThu,
             this.layoutControlItem1,
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.layoutControlItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(275, 104);
@@ -160,9 +167,9 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.dateDenNgay;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem1.Location = new System.Drawing.Point(127, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(255, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(128, 30);
             this.layoutControlItem1.Text = "Đến ngày";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(57, 19);
             // 
@@ -189,7 +196,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(71, 25);
             this.btnClose.StyleController = this.lcMain;
-            this.btnClose.TabIndex = 4;
+            this.btnClose.TabIndex = 5;
             this.btnClose.Text = "Đóng";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -203,9 +210,31 @@
             this.btnXemBaoCao.Name = "btnXemBaoCao";
             this.btnXemBaoCao.Size = new System.Drawing.Size(115, 25);
             this.btnXemBaoCao.StyleController = this.lcMain;
-            this.btnXemBaoCao.TabIndex = 3;
+            this.btnXemBaoCao.TabIndex = 4;
             this.btnXemBaoCao.Text = "Xem báo cáo";
             this.btnXemBaoCao.Click += new System.EventHandler(this.btnXemBaoCao_Click);
+            // 
+            // dateTuNgay
+            // 
+            this.dateTuNgay.EditValue = null;
+            this.dateTuNgay.Location = new System.Drawing.Point(72, 36);
+            this.dateTuNgay.Name = "dateTuNgay";
+            this.dateTuNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateTuNgay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateTuNgay.Size = new System.Drawing.Size(63, 26);
+            this.dateTuNgay.StyleController = this.lcMain;
+            this.dateTuNgay.TabIndex = 1;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.dateTuNgay;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(127, 30);
+            this.layoutControlItem3.Text = "Từ ngày";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(57, 19);
             // 
             // FrmBangKeThuHocPhi
             // 
@@ -233,6 +262,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,5 +283,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.LookUpEdit cmLop;
         private System.Windows.Forms.BindingSource lopRowBindingSource;
+        private DevExpress.XtraEditors.DateEdit dateTuNgay;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

@@ -53,7 +53,7 @@ namespace QLMamNon.Forms.ThuChi
             return true;
         }
 
-        private bool isNeedToGenerateSoThuTiens(DateTime ngayTinh, int lop)
+        private bool isNeedToGenerateSoThuTiens(DateTime ngayTinh, int lop, bool showMessageBox)
         {
             long genHistoryCount = (long)bangThuTienGenHistoryTableAdapter.CountBangThuTienGenHistoryByLopAndNgayTinh(lop, ngayTinh);
 
@@ -63,7 +63,7 @@ namespace QLMamNon.Forms.ThuChi
                 {
                     long prevMonthGenHistoryCount = (long)bangThuTienGenHistoryTableAdapter.CountBangThuTienGenHistoryByLopAndNgayTinh(lop, DateTimeUtil.DateEndOfMonth(ngayTinh.AddMonths(-1)));
 
-                    if (prevMonthGenHistoryCount == 0)
+                    if (prevMonthGenHistoryCount == 0 && showMessageBox)
                     {
                         MessageBox.Show(String.Format("Xin vui lòng tạo sổ thu tiền cho lớp {0} tháng {1:MM/yyyy} trước", cmbLop.Text, ngayTinh.AddMonths(-1)),
                         "Tạo số thu tiền", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -84,7 +84,7 @@ namespace QLMamNon.Forms.ThuChi
                 DateTime ngayTinh = this.GetNgayTinh();
                 int lop = (int)this.cmbLop.EditValue;
 
-                if (!(needToCheckGenerated && this.isNeedToGenerateSoThuTiens(ngayTinh, lop) || !needToCheckGenerated))
+                if (needToCheckGenerated && !this.isNeedToGenerateSoThuTiens(ngayTinh, lop, true))
                 {
                     return;
                 }

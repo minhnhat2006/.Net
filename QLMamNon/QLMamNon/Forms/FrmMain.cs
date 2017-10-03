@@ -73,6 +73,8 @@ namespace QLMamNon.Forms
             StaticDataFacade.Add(StaticDataKeys.AdapterUnknownColumnView, this.unknownColumnViewTableAdapter);
             StaticDataFacade.Add(StaticDataKeys.AdapterKhoanThuHangNam, this.khoanThuHangNamTableAdapter);
             StaticDataFacade.Add(StaticDataKeys.AdapterUser, this.userTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterPrivilege, this.privilegeTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterUserPrivilege, this.userPrivilegeTableAdapter);
         }
 
         private void bbtnHocSinhThongTin_ItemClick(object sender, ItemClickEventArgs e)
