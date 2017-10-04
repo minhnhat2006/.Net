@@ -1,14 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
 using QLMamNon.Dao.QLMamNonDsTableAdapters;
 using QLMamNon.Facade;
+using QLMamNon.Service.Data;
 using QLMamNon.UserControls;
-using ACG.Core.WinForm.Util;
-using System.Windows.Forms;
-using DevExpress.XtraGrid.EditForm.Helpers.Controls;
-using DevExpress.XtraEditors;
-using QLMamNon.Forms.HocSinh;
+using DataRow = System.Data.DataRow;
+using DataTable = System.Data.DataTable;
+using UserRow = QLMamNon.Dao.QLMamNonDs.UserRow;
 
 namespace QLMamNon.Forms.SystemSetting
 {
@@ -29,6 +29,37 @@ namespace QLMamNon.Forms.SystemSetting
             ucEditFormUser.GridView = this.gvMain;
             this.gvMain.OptionsEditForm.CustomEditFormLayout = ucEditFormUser;
             this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, userTableAdapter.Adapter, this.userRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.UserDataTable);
+        }
+
+        protected override void onSaving()
+        {
+            try
+            {
+                DataTable table = this.DataTable.GetChanges();
+
+                if (table != null)
+                {
+                    UserPrivilegeTableAdapter userPrivilegeTableAdapter = (UserPrivilegeTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterUserPrivilege);
+                    AuthenService authenService = new AuthenService();
+
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UserRow userRow = (UserRow)row;
+                        authenService.UpdateUserPrivileges(userPrivilegeTableAdapter, userRow.UserId, (List<int>)userRow.UserPrivileges);
+                    }
+
+                    this.DataAdapter.Update(table);
+                    this.DataTable.Merge(table);
+                }
+
+                this.DataTable.AcceptChanges();
+            }
+            catch (Exception ex)
+            {
+                this.onSavingError(ex);
+            }
+
+            FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.SavedCaption);
         }
     }
 }

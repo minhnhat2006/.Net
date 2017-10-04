@@ -33,7 +33,7 @@
     <Shape ID="DesignTable:GiaoVien" ZOrder="8" X="1192" Y="112" Height="54" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="64" OldDataTableHeight="254" SplitterPosition="24" />
     <Shape ID="DesignTable:User" ZOrder="4" X="736" Y="460" Height="54" Width="170" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="63" OldDataTableHeight="121" SplitterPosition="24" />
     <Shape ID="DesignTable:Privilege" ZOrder="7" X="736" Y="540" Height="54" Width="195" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="45" OldDataTableHeight="64" SplitterPosition="24" />
-    <Shape ID="DesignTable:UserPrivilege" ZOrder="6" X="740" Y="615" Height="55" Width="221" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="63" OldDataTableHeight="102" SplitterPosition="25" />
+    <Shape ID="DesignTable:UserPrivilege" ZOrder="6" X="740" Y="615" Height="55" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="101" OldDataTableHeight="102" SplitterPosition="25" />
     <Shape ID="DesignTable:PhanLoaiThu" ZOrder="5" X="371" Y="434" Height="54" Width="215" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="45" OldDataTableHeight="64" SplitterPosition="24" />
   </Shapes>
   <Connectors />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using ACG.Core.WinForm.Util;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
@@ -80,6 +81,23 @@ namespace QLMamNon.Service.Data
         {
             QLMamNon.Dao.QLMamNonDs.UserPrivilegeDataTable table = userPrivilegeTableAdapter.GetDataByUserId(userId);
             return table;
+        }
+
+        public void UpdateUserPrivileges(UserPrivilegeTableAdapter userPrivilegeTableAdapter, int userId, List<int> privilegeIds)
+        {
+            if (ListUtil.IsEmpty(privilegeIds))
+            {
+                userPrivilegeTableAdapter.DeleteUserPrivileges("0", userId);
+            }
+            else
+            {
+                userPrivilegeTableAdapter.DeleteUserPrivileges(StringUtil.JoinWithCommas(privilegeIds), userId);
+
+                foreach (int privilegeId in privilegeIds)
+                {
+                    userPrivilegeTableAdapter.InsertUserPrivilegeIfNotExists(userId, privilegeId, 1);
+                }
+            }
         }
     }
 }
