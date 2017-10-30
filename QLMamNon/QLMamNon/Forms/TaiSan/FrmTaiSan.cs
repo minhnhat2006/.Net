@@ -21,13 +21,18 @@ namespace QLMamNon.Forms.DanhMuc
         private void loadTaiSanData()
         {
             QLMamNon.Dao.QLMamNonDs.ViewTaiSanDataTable dataTable = this.viewTaiSanTableAdapter.GetData();
+            this.viewTaiSanRowBindingSource.DataSource = dataTable;
+            fillRelativeMainDataTable();
+        }
+
+        protected override void fillRelativeMainDataTable()
+        {
+            QLMamNon.Dao.QLMamNonDs.ViewTaiSanDataTable dataTable = (QLMamNon.Dao.QLMamNonDs.ViewTaiSanDataTable)this.viewTaiSanRowBindingSource.DataSource;
 
             foreach (QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow row in dataTable)
             {
                 row.PhanLoaiTaiSan = StaticDataUtil.GetPhanLoaiChiNameByPhieuChiId(this.phieuChiTableAdapter, row.PhieuChiId);
             }
-
-            this.viewTaiSanRowBindingSource.DataSource = dataTable;
         }
     }
 }

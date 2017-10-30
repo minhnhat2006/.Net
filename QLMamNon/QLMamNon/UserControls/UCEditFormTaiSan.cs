@@ -46,9 +46,9 @@ namespace QLMamNon.UserControls
         {
             QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow row = this.GridView.GetFocusedDataRow() as QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow;
 
-            if (row != null)
+            if (row != null && cmbPhanLoaiChi.IsEditorActive)
             {
-                if (!ControlUtil.IsEditValueNull(txtDonGia))
+                if (!ControlUtil.IsEditValueNull(cmbPhanLoaiChi))
                 {
                     row.PhanLoaiTaiSan = cmbPhanLoaiChi.Text;
                 }

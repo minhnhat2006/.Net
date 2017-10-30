@@ -8664,23 +8664,7 @@ namespace QLMamNon.Dao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ViewBanGiaoTaiSanRow AddViewBanGiaoTaiSanRow(
-                        int TaiSanId, 
-                        string Ten, 
-                        string DonViTinh, 
-                        double SoLuong, 
-                        long DonGia, 
-                        string SoChungTu, 
-                        int PhieuChiId, 
-                        int LopId, 
-                        string LopName, 
-                        string GhiChu, 
-                        int TaiSanLopId, 
-                        double SoLuongBanGiao, 
-                        System.DateTime NgayChungTu, 
-                        System.DateTime NgayBanGiao, 
-                        System.DateTime NgayHetHan, 
-                        System.DateTime NgayNhap) {
+            public ViewBanGiaoTaiSanRow AddViewBanGiaoTaiSanRow(int TaiSanId, string Ten, string DonViTinh, double SoLuong, long DonGia, string SoChungTu, int PhieuChiId, int LopId, string LopName, string GhiChu, double SoLuongBanGiao, System.DateTime NgayChungTu, System.DateTime NgayBanGiao, System.DateTime NgayHetHan, System.DateTime NgayNhap) {
                 ViewBanGiaoTaiSanRow rowViewBanGiaoTaiSanRow = ((ViewBanGiaoTaiSanRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TaiSanId,
@@ -8693,7 +8677,7 @@ namespace QLMamNon.Dao {
                         LopId,
                         LopName,
                         GhiChu,
-                        TaiSanLopId,
+                        null,
                         SoLuongBanGiao,
                         NgayChungTu,
                         NgayBanGiao,
@@ -8793,6 +8777,9 @@ namespace QLMamNon.Dao {
                 this.columnSoChungTu.AllowDBNull = false;
                 this.columnSoChungTu.MaxLength = 21845;
                 this.columnGhiChu.MaxLength = 21845;
+                this.columnTaiSanLopId.AutoIncrement = true;
+                this.columnTaiSanLopId.AutoIncrementSeed = -1;
+                this.columnTaiSanLopId.AutoIncrementStep = -1;
                 this.columnTaiSanLopId.AllowDBNull = false;
                 this.columnTaiSanLopId.Unique = true;
                 this.columnNgayChungTu.AllowDBNull = false;
@@ -23896,6 +23883,13 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             param.Size = 2147483647;
             param.IsNullable = true;
             this._commandCollection[3].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@phanloaithuids";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Text;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            this._commandCollection[3].Parameters.Add(param);
             this._commandCollection[4] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "`qlmamnon`.`getPhieuThuOfMonthByHocSinhIdsAndNgay`";
@@ -23996,7 +23990,7 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual QLMamNonDs.PhieuThuDataTable GetDataForSoQuyTienMat(global::System.Nullable<global::System.DateTime> fromDate, global::System.Nullable<global::System.DateTime> toDate) {
+        public virtual QLMamNonDs.PhieuThuDataTable GetDataForSoQuyTienMat(global::System.Nullable<global::System.DateTime> fromDate, global::System.Nullable<global::System.DateTime> toDate, string phanloaithuids) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((fromDate.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fromDate.Value));
@@ -24009,6 +24003,12 @@ namespace QLMamNon.Dao.QLMamNonDsTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((phanloaithuids == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(phanloaithuids));
             }
             QLMamNonDs.PhieuThuDataTable dataTable = new QLMamNonDs.PhieuThuDataTable();
             this.Adapter.Fill(dataTable);

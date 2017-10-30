@@ -165,6 +165,7 @@
             this.gvLop.OptionsEditForm.FormCaptionFormat = "Chỉnh sửa thông tin bàn giao Tài sản";
             this.gvLop.OptionsEditForm.PopupEditFormWidth = 700;
             this.gvLop.OptionsView.ShowGroupPanel = false;
+            this.gvLop.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gvLop_RowUpdated);
             // 
             // colSTTLop
             // 

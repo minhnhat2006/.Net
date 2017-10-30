@@ -30,10 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.lcMain = new DevExpress.XtraLayout.LayoutControl();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.dateNgayHetHan = new DevExpress.XtraEditors.DateEdit();
+            this.dateNgayBanGiao = new DevExpress.XtraEditors.DateEdit();
             this.txtLop = new DevExpress.XtraEditors.TextEdit();
             this.dateNgayChungTu = new DevExpress.XtraEditors.DateEdit();
             this.txtSoChungTu = new DevExpress.XtraEditors.TextEdit();
@@ -64,10 +66,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayHetHan.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayHetHan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayBanGiao.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayBanGiao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayChungTu.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayChungTu.Properties)).BeginInit();
@@ -103,8 +105,8 @@
             // 
             this.SetBoundPropertyName(this.lcMain, "");
             this.lcMain.Controls.Add(this.memoEdit1);
-            this.lcMain.Controls.Add(this.dateEdit2);
-            this.lcMain.Controls.Add(this.dateEdit1);
+            this.lcMain.Controls.Add(this.dateNgayHetHan);
+            this.lcMain.Controls.Add(this.dateNgayBanGiao);
             this.lcMain.Controls.Add(this.txtLop);
             this.lcMain.Controls.Add(this.dateNgayChungTu);
             this.lcMain.Controls.Add(this.txtSoChungTu);
@@ -143,35 +145,38 @@
             this.memoEdit1.StyleController = this.lcMain;
             this.memoEdit1.TabIndex = 16;
             // 
-            // dateEdit2
+            // dateNgayHetHan
             // 
-            this.SetBoundFieldName(this.dateEdit2, "NgayHetHan");
-            this.SetBoundPropertyName(this.dateEdit2, "EditValue");
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(495, 226);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.SetBoundFieldName(this.dateNgayHetHan, "NgayHetHan");
+            this.SetBoundPropertyName(this.dateNgayHetHan, "EditValue");
+            this.dateNgayHetHan.EditValue = null;
+            this.dateNgayHetHan.Location = new System.Drawing.Point(495, 226);
+            this.dateNgayHetHan.Name = "dateNgayHetHan";
+            this.dateNgayHetHan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateNgayHetHan.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Size = new System.Drawing.Size(174, 20);
-            this.dateEdit2.StyleController = this.lcMain;
-            this.dateEdit2.TabIndex = 15;
+            this.dateNgayHetHan.Size = new System.Drawing.Size(174, 20);
+            this.dateNgayHetHan.StyleController = this.lcMain;
+            this.dateNgayHetHan.TabIndex = 15;
             // 
-            // dateEdit1
+            // dateNgayBanGiao
             // 
-            this.SetBoundFieldName(this.dateEdit1, "NgayBanGiao");
-            this.SetBoundPropertyName(this.dateEdit1, "EditValue");
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(165, 226);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.SetBoundFieldName(this.dateNgayBanGiao, "NgayBanGiao");
+            this.SetBoundPropertyName(this.dateNgayBanGiao, "EditValue");
+            this.dateNgayBanGiao.EditValue = null;
+            this.dateNgayBanGiao.Location = new System.Drawing.Point(165, 226);
+            this.dateNgayBanGiao.Name = "dateNgayBanGiao";
+            this.dateNgayBanGiao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateNgayBanGiao.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(175, 20);
-            this.dateEdit1.StyleController = this.lcMain;
-            this.dateEdit1.TabIndex = 14;
+            this.dateNgayBanGiao.Size = new System.Drawing.Size(175, 20);
+            this.dateNgayBanGiao.StyleController = this.lcMain;
+            this.dateNgayBanGiao.TabIndex = 14;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "This value is not valid";
+            this.dxValidationProvider.SetValidationRule(this.dateNgayBanGiao, conditionValidationRule1);
             // 
             // txtLop
             // 
@@ -263,9 +268,9 @@
             this.txtTen.Size = new System.Drawing.Size(504, 26);
             this.txtTen.StyleController = this.lcMain;
             this.txtTen.TabIndex = 1;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "This value is not valid";
-            this.dxValidationProvider.SetValidationRule(this.txtTen, conditionValidationRule1);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "This value is not valid";
+            this.dxValidationProvider.SetValidationRule(this.txtTen, conditionValidationRule2);
             // 
             // txtSoLuong
             // 
@@ -321,6 +326,9 @@
             this.txtSoLuongBanGiao.Size = new System.Drawing.Size(174, 20);
             this.txtSoLuongBanGiao.StyleController = this.lcMain;
             this.txtSoLuongBanGiao.TabIndex = 13;
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "This value is not valid";
+            this.dxValidationProvider.SetValidationRule(this.txtSoLuongBanGiao, conditionValidationRule3);
             // 
             // Root
             // 
@@ -461,7 +469,7 @@
             // 
             // layoutControlItem12
             // 
-            this.layoutControlItem12.Control = this.dateEdit1;
+            this.layoutControlItem12.Control = this.dateNgayBanGiao;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(330, 24);
@@ -470,7 +478,7 @@
             // 
             // layoutControlItem13
             // 
-            this.layoutControlItem13.Control = this.dateEdit2;
+            this.layoutControlItem13.Control = this.dateNgayHetHan;
             this.layoutControlItem13.Location = new System.Drawing.Point(330, 24);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(329, 24);
@@ -507,10 +515,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).EndInit();
             this.lcMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayHetHan.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayHetHan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayBanGiao.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgayBanGiao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayChungTu.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayChungTu.Properties)).EndInit();
@@ -568,8 +576,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dateNgayHetHan;
+        private DevExpress.XtraEditors.DateEdit dateNgayBanGiao;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;

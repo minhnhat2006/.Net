@@ -273,12 +273,18 @@ namespace QLMamNon.Forms
                 this.DataTable.AcceptChanges();
             }
 
+            fillRelativeMainDataTable();
+
             FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.CanceledCaption);
         }
 
         #endregion
 
         #region Additional utils
+
+        protected virtual void fillRelativeMainDataTable()
+        {
+        }
 
         protected void ShowGridLoadingPanel()
         {

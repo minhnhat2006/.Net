@@ -2,15 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using ACG.Core.WinForm.Util;
+using DevExpress.XtraEditors;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
 using QLMamNon.Dao.QLMamNonDsTableAdapters;
 using QLMamNon.Entity.Form;
 using QLMamNon.Facade;
-using QLMamNon.Properties;
 using QLMamNon.Service.Data;
 using QLThuChi;
-using ACG.Core.WinForm.Util;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -43,6 +43,27 @@ namespace QLMamNon.Forms.ThuChi
                 return;
             }
 
+            if (chkTon.Checked && StringUtil.IsEmpty(txtTon.Text))
+            {
+                MessageBox.Show("Xin vui lòng nhập số tiền tồn tháng trước", "Nhập số tiền tồn tháng trước", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            List<int> phanLoaiThuIds = new List<int>();
+            int[] selectedThuRowHandlers = this.gvThu.GetSelectedRows();
+
+            if (ArrayUtil.IsEmpty(selectedThuRowHandlers))
+            {
+                MessageBox.Show("Xin vui lòng chọn Phân loại thu", "Chọn Phân loại thu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            foreach (int rowHandler in selectedThuRowHandlers)
+            {
+                int phanLoaiThuId = (int)this.gvThu.GetRowCellValue(rowHandler, "PhanLoaiThuId");
+                phanLoaiThuIds.Add(phanLoaiThuId);
+            }
+
             List<int> phanLoaiChiIds = new List<int>();
             int[] selectedRowHandlers = this.gvMain.GetSelectedRows();
 
@@ -60,8 +81,9 @@ namespace QLMamNon.Forms.ThuChi
 
             DateTime fromDate = DateTimeUtil.StartOfDate(this.dateTuNgay.DateTime);
             DateTime toDate = DateTimeUtil.EndOfDate(this.dateDenNgay.DateTime);
-            SoThuTienService soThuTienService = new SoThuTienService();
-            decimal soTienTonDauKy = soThuTienService.GetSoTienTonDauKy(toDate);
+
+            decimal soTienTonDauKy = findSoTienTonDauKy(toDate);
+
             SortedList soQuyTienMatMap = new SortedList();
             SoQuyTienMatItem soQuyTienMatDauKy = new SoQuyTienMatItem()
             {
@@ -70,7 +92,7 @@ namespace QLMamNon.Forms.ThuChi
             };
             soQuyTienMatMap.Add(DateTime.MinValue, soQuyTienMatDauKy);
 
-            addPhieuThuToReport(soQuyTienMatMap, fromDate, toDate);
+            addPhieuThuToReport(soQuyTienMatMap, fromDate, toDate, phanLoaiThuIds);
             addPhieuChiToReport(soQuyTienMatMap, fromDate, toDate, phanLoaiChiIds);
             List<SoQuyTienMatItem> soQuyTienMat = calculateSoTienTonForSoQuyTienMatItems(soQuyTienMatMap);
 
@@ -79,6 +101,18 @@ namespace QLMamNon.Forms.ThuChi
             rpt.ToDate.Value = toDate;
             rpt.bindingSource.DataSource = soQuyTienMat;
             FormMainFacade.ShowReport(rpt);
+        }
+
+        private decimal findSoTienTonDauKy(DateTime toDate)
+        {
+            decimal soTienTonDauKy = txtTon.Value;
+
+            if (!chkTon.Checked)
+            {
+                SoThuTienService soThuTienService = new SoThuTienService();
+                soTienTonDauKy = soThuTienService.GetSoTienTonDauKy(toDate);
+            }
+            return soTienTonDauKy;
         }
 
         private static List<SoQuyTienMatItem> calculateSoTienTonForSoQuyTienMatItems(SortedList soQuyTienMatMap)
@@ -119,10 +153,10 @@ namespace QLMamNon.Forms.ThuChi
             }
         }
 
-        private void addPhieuThuToReport(SortedList soQuyTienMatMap, DateTime fromDate, DateTime toDate)
+        private void addPhieuThuToReport(SortedList soQuyTienMatMap, DateTime fromDate, DateTime toDate, List<int> phanLoaiThuIds)
         {
             PhieuThuTableAdapter phieuThuTableAdapter = (PhieuThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterPhieuThu);
-            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable = phieuThuTableAdapter.GetDataForSoQuyTienMat(fromDate, toDate);
+            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable = phieuThuTableAdapter.GetDataForSoQuyTienMat(fromDate, toDate, StringUtil.JoinWithCommas(phanLoaiThuIds));
             Dictionary<string, SoQuyTienMatItem> groupDateToSoQuyTienMatItemsMap = new Dictionary<string, SoQuyTienMatItem>();
 
             foreach (QLMamNon.Dao.QLMamNonDs.PhieuThuRow phieuThuRow in phieuThuDataTable)
@@ -175,11 +209,19 @@ namespace QLMamNon.Forms.ThuChi
         private void FrmBaoCaoHoatDongTaiChinh_Load(object sender, EventArgs e)
         {
             this.phanLoaiChiRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.PhanLoaiChi);
+            this.phanLoaiThuRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.PhanLoaiThu);
         }
 
         private void FrmSoQuyTienMat_Shown(object sender, EventArgs e)
         {
+            this.gvThu.SelectAll();
             this.gvMain.SelectAll();
+        }
+
+        private void chkTon_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckEdit chk = (CheckEdit)sender;
+            txtTon.Enabled = chk.Checked;
         }
     }
 }
