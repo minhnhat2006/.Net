@@ -35,5 +35,6 @@ namespace QLMamNon.Constant
         public const string FormPreference = "FrmPreference";
         public const string FormUser = "FrmUser";
         public const string FormBangTinhPhi = "FrmBangTinhPhi";
+        public const string FormBackupDb = "FrmBackupDb";
     }
 }

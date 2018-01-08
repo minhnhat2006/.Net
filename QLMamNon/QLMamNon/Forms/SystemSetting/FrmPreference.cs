@@ -44,6 +44,8 @@ namespace QLMamNon.Forms.SystemSetting
             Settings.Default["StartYearForDropDown"] = (int)txtYearForDropDown.Value;
             Settings.Default["NamSinhStart"] = (int)txtTTHSSearchYearFrom.Value;
             Settings.Default["PhanLoaiThuByHocSinh"] = txtThuByHS.Text;
+            Settings.Default["ShowGiayBaoNopTienDieuHoa"] = chkGiayBaoNopTienDieuHoa.Checked;
+            Settings.Default["ShowGiayBaoNopTienNote"] = chkGiayBaoNopTienGhiChu.Checked;
             Settings.Default.Save();
 
             MessageBox.Show("Số liệu đã được lưu thành công", "Đã lưu", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -60,6 +62,8 @@ namespace QLMamNon.Forms.SystemSetting
             txtYearForDropDown.Value = (int)Settings.Default["StartYearForDropDown"];
             txtTTHSSearchYearFrom.Value = (int)Settings.Default["NamSinhStart"];
             txtThuByHS.Text = (string)Settings.Default["PhanLoaiThuByHocSinh"];
+            chkGiayBaoNopTienDieuHoa.Checked = (bool)Settings.Default["ShowGiayBaoNopTienDieuHoa"];
+            chkGiayBaoNopTienGhiChu.Checked = (bool)Settings.Default["ShowGiayBaoNopTienNote"];
 
             phanLoaiThuRowBindingSource.DataSource = StaticDataFacade.Get(StaticDataKeys.PhanLoaiThu);
         }

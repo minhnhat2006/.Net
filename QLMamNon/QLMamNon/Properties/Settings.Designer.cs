@@ -182,5 +182,29 @@ namespace QLMamNon.Properties {
                 this["PhanLoaiThuByHocSinh"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowGiayBaoNopTienDieuHoa {
+            get {
+                return ((bool)(this["ShowGiayBaoNopTienDieuHoa"]));
+            }
+            set {
+                this["ShowGiayBaoNopTienDieuHoa"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowGiayBaoNopTienNote {
+            get {
+                return ((bool)(this["ShowGiayBaoNopTienNote"]));
+            }
+            set {
+                this["ShowGiayBaoNopTienNote"] = value;
+            }
+        }
     }
 }

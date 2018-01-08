@@ -47,7 +47,21 @@ namespace QLMamNon.Forms.ThuChi
             DateTime toDate = DateTimeUtil.EndOfDate(dateDenNgay.DateTime);
             rpt.FromDate.Value = fromDate;
             rpt.ToDate.Value = toDate;
-            rpt.viewBangThuTienRowbindingSource.DataSource = soThuTienService.GetBangKeTongHopThuTien(toDate, (int?)cmLop.EditValue);
+
+            List<BangKeThuTienItem> allBangKeThuTienItems = soThuTienService.GetBangKeTongHopThuTien(toDate, (int?)cmLop.EditValue);
+            List<BangKeThuTienItem> displayedBangKeThuTienItems = new List<BangKeThuTienItem>();
+            int stt = 1;
+
+            foreach (BangKeThuTienItem item in allBangKeThuTienItems)
+            {
+                if (item.NgayNop >= fromDate && item.NgayNop <= toDate)
+                {
+                    item.STT = stt++;
+                    displayedBangKeThuTienItems.Add(item);
+                }
+            }
+
+            rpt.viewBangThuTienRowbindingSource.DataSource = displayedBangKeThuTienItems;
             FormMainFacade.ShowReport(rpt);
         }
 

@@ -227,6 +227,11 @@ namespace QLMamNon.Forms
             FormMainFacade.ShowForm(AppForms.FormDanhMucPhanLoaiThu);
         }
 
+        private void bbiBackupDb_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowDialog(AppForms.FormBackupDb);
+        }
+
         #endregion
     }
 }

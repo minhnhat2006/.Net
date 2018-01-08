@@ -70,6 +70,7 @@
             this.bbiUser = new DevExpress.XtraBars.BarButtonItem();
             this.bbiBangTinhPhi = new DevExpress.XtraBars.BarButtonItem();
             this.bbiPhanLoaiThu = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiBackupDb = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.rpHocSinh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgHocSinh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -167,11 +168,12 @@
             this.bbiPreference,
             this.bbiUser,
             this.bbiBangTinhPhi,
-            this.bbiPhanLoaiThu});
+            this.bbiPhanLoaiThu,
+            this.bbiBackupDb});
             this.ribbon.LargeImages = this.imageCollection1;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbon.MaxItemId = 16;
+            this.ribbon.MaxItemId = 17;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpHocSinh,
@@ -541,6 +543,15 @@
             this.bbiPhanLoaiThu.Name = "bbiPhanLoaiThu";
             this.bbiPhanLoaiThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiPhanLoaiThu_ItemClick);
             // 
+            // bbiBackupDb
+            // 
+            this.bbiBackupDb.Caption = "Sao lưu CSDL";
+            this.bbiBackupDb.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiBackupDb.Glyph")));
+            this.bbiBackupDb.Id = 16;
+            this.bbiBackupDb.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiBackupDb.LargeGlyph")));
+            this.bbiBackupDb.Name = "bbiBackupDb";
+            this.bbiBackupDb.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiBackupDb_ItemClick);
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -710,6 +721,7 @@
             // 
             this.rpgSettings.ItemLinks.Add(this.bbiPreference);
             this.rpgSettings.ItemLinks.Add(this.bbiUser);
+            this.rpgSettings.ItemLinks.Add(this.bbiBackupDb);
             this.rpgSettings.Name = "rpgSettings";
             this.rpgSettings.Text = "Thiết lập";
             // 
@@ -961,5 +973,6 @@
         private Dao.QLMamNonDsTableAdapters.PhanLoaiThuTableAdapter phanLoaiThuTableAdapter;
         private Dao.QLMamNonDsTableAdapters.PrivilegeTableAdapter privilegeTableAdapter;
         private Dao.QLMamNonDsTableAdapters.UserPrivilegeTableAdapter userPrivilegeTableAdapter;
+        private DevExpress.XtraBars.BarButtonItem bbiBackupDb;
     }
 }

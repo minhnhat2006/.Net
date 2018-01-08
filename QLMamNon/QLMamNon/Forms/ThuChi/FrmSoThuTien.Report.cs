@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using ACG.Core.WinForm.Util;
 using QLMamNon.Entity.Form;
-using QLThuChi;
+using QLMamNon.Properties;
 using QLMamNon.Service.Data;
+using QLThuChi;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -39,6 +40,8 @@ namespace QLMamNon.Forms.ThuChi
 
         private void fillRptGiayBaoNopTien(RptGiayBaoNopTien rpt)
         {
+            rpt.ShowDieuHoa.Value = Settings.Default.ShowGiayBaoNopTienDieuHoa;
+            rpt.ShowNote.Value = Settings.Default.ShowGiayBaoNopTienNote;
             rpt.NgayLapPhieu.Value = DateTime.Now;
             DateTime ngayTinh = this.ngayTinh;
             rpt.NgayNop.Value = ngayTinh;
