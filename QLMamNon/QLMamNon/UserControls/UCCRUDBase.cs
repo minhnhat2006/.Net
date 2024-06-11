@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.XtraGrid.Views.Grid;
+﻿using DevExpress.XtraGrid.Views.Grid;
+using QLMamNon.Components.Data.Static;
+using QLMamNon.Dao;
+using QLMamNon.Facade;
 
 namespace QLMamNon.UserControls
 {
@@ -14,8 +9,15 @@ namespace QLMamNon.UserControls
     {
         #region Properties
 
+        protected qlmamnonEntities Entities { get; set; }
+
         public GridView GridView { get; set; }
 
         #endregion
+
+        public UCCRUDBase()
+        {
+            this.Entities = StaticDataFacade.GetQLMNEntities();
+        }
     }
 }

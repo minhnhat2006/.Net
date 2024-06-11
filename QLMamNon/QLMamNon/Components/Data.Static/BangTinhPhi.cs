@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ACG.Core.WinForm.Data.Static;
+using QLMamNon.Dao;
 using System.Linq;
-using System.Text;
-using ACG.Core.WinForm.Data.Static;
 
 namespace QLMamNon.Components.Data.Static
 {
     public class BangTinhPhi : IStaticData
     {
-        private QLMamNon.Dao.QLMamNonDsTableAdapters.BangTinhPhiTableAdapter tableAdapter;
+        private qlmamnonEntities entities;
 
-        public BangTinhPhi(QLMamNon.Dao.QLMamNonDsTableAdapters.BangTinhPhiTableAdapter tableAdapter)
+        public BangTinhPhi(qlmamnonEntities entities)
         {
-            this.tableAdapter = tableAdapter;
+            this.entities = entities;
         }
 
         #region IStaticData Members
 
         public object Retrieve()
         {
-            return tableAdapter.GetData();
+            return entities.bangtinhphis.ToList();
         }
 
         #endregion

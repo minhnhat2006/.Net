@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.HocSinh
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.HocSinh
 {
     partial class FrmThongTinCanDo
     {
@@ -84,7 +86,6 @@
             this.colPhuong = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colQuan = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colTinh = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
             this.gridBand16 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand17 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand18 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -219,7 +220,7 @@
             // 
             // thanhPhoRowBindingSource
             // 
-            this.thanhPhoRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.ThanhPhoRow);
+            this.thanhPhoRowBindingSource.DataSource = typeof(thanhpho);
             // 
             // cmbQuanHuyen
             // 
@@ -246,7 +247,7 @@
             // 
             // quanHuyenRowBindingSource
             // 
-            this.quanHuyenRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.QuanHuyenRow);
+            this.quanHuyenRowBindingSource.DataSource = typeof(quanhuyen);
             // 
             // cmbPhuongXa
             // 
@@ -272,7 +273,7 @@
             // 
             // phuongXaRowBindingSource
             // 
-            this.phuongXaRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhuongXaRow);
+            this.phuongXaRowBindingSource.DataSource = typeof(phuongxa);
             // 
             // cmbTruongHoc
             // 
@@ -299,7 +300,7 @@
             // 
             // truongRowBindingSource
             // 
-            this.truongRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.TruongRow);
+            this.truongRowBindingSource.DataSource = typeof(truong);
             // 
             // cmbNamHoc
             // 
@@ -352,7 +353,7 @@
             // 
             // khoiRowBindingSource
             // 
-            this.khoiRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.KhoiRow);
+            this.khoiRowBindingSource.DataSource = typeof(khoi);
             // 
             // cmbLopHoc
             // 
@@ -378,7 +379,7 @@
             // 
             // lopRowBindingSource
             // 
-            this.lopRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.LopRow);
+            this.lopRowBindingSource.DataSource = typeof(lop);
             // 
             // cmbSoLuong
             // 
@@ -575,7 +576,7 @@
             // 
             // hocSinhRowBindingSource
             // 
-            this.hocSinhRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.HocSinhRow);
+            this.hocSinhRowBindingSource.DataSource = typeof(hocsinh);
             // 
             // gvMain
             // 
@@ -782,10 +783,6 @@
             this.colTinh.OptionsEditForm.Caption = "Tính/thành phố:";
             this.colTinh.OptionsEditForm.StartNewRow = true;
             this.colTinh.Visible = true;
-            // 
-            // hocSinhTableAdapter
-            // 
-            this.hocSinhTableAdapter.ClearBeforeFill = true;
             // 
             // gridBand16
             // 
@@ -1036,7 +1033,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colPhuong;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colQuan;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colTinh;
-        private Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
         private System.Windows.Forms.BindingSource thanhPhoRowBindingSource;
         private System.Windows.Forms.BindingSource quanHuyenRowBindingSource;
         private System.Windows.Forms.BindingSource truongRowBindingSource;

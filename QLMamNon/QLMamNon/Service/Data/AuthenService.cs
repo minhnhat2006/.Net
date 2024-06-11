@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using ACG.Core.WinForm.Util;
+﻿using ACG.Core.WinForm.Util;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
-using QLMamNon.Dao.QLMamNonDsTableAdapters;
+using QLMamNon.Dao;
 using QLMamNon.Entity;
 using QLMamNon.Facade;
-using UserPrivilegeDataTable = QLMamNon.Dao.QLMamNonDs.UserPrivilegeDataTable;
-using UserPrivilegeRow = QLMamNon.Dao.QLMamNonDs.UserPrivilegeRow;
-using UserRow = QLMamNon.Dao.QLMamNonDs.UserRow;
-using UserTableAdapter = QLMamNon.Dao.QLMamNonDsTableAdapters.UserTableAdapter;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace QLMamNon.Service.Data
 {
@@ -27,13 +24,13 @@ namespace QLMamNon.Service.Data
             return isAuthenticated;
         }
 
-        public void SetAuthenticatedUser(UserRow user, UserPrivilegeDataTable table)
+        public void SetAuthenticatedUser(user user, List<user_privilege> table)
         {
             StaticDataFacade.Remove(StaticDataKeys.AuthenticatedData);
             StaticDataFacade.Add(StaticDataKeys.AuthenticatedData, new AuthenticatedEntity(user, table));
         }
 
-        public bool CanAccess(String formKey, UserPrivilegeDataTable table)
+        public bool CanAccess(String formKey, List<user_privilege> table)
         {
             if (!FormPrivilegeConstant.FormKeyToPrivilegeId.ContainsKey(formKey))
             {
@@ -45,15 +42,15 @@ namespace QLMamNon.Service.Data
             return CanAccess(privilegeId, table);
         }
 
-        public bool CanAccess(int privilegeId, UserPrivilegeDataTable table)
+        public bool CanAccess(int privilegeId, List<user_privilege> table)
         {
             bool canAccess = false;
 
             if (table != null)
             {
-                UserPrivilegeRow[] rows = table.Select(String.Format("PrivilegeId={0}", privilegeId)) as UserPrivilegeRow[];
+                List<user_privilege> rows = table.FindAll(u => u.PrivilegeId == privilegeId);
 
-                if (!ArrayUtil.IsEmpty(rows))
+                if (!ListUtil.IsEmpty(rows))
                 {
                     canAccess = rows[0].Value;
                 }
@@ -62,40 +59,37 @@ namespace QLMamNon.Service.Data
             return canAccess;
         }
 
-        public QLMamNon.Dao.QLMamNonDs.UserDataTable GetUsersForLogin(UserTableAdapter userTableAdapter,
-            string userName, string password)
+        public List<user> GetUsersForLogin(qlmamnonEntities entities, string userName, string password)
         {
-            QLMamNon.Dao.QLMamNonDs.UserDataTable table = userTableAdapter.GetDataForLogin(userName, password);
+            List<user> table = entities.getUser(userName, password).ToList();
             return table;
         }
 
-        public QLMamNon.Dao.QLMamNonDs.UserDataTable LoadUsers(UserTableAdapter userTableAdapter,
-            int? tinhTPId, int? quanHuyenId, int? phuongXaId, DateTime? ngaySinh)
+        public List<user> LoadUsers(qlmamnonEntities entities, int? tinhTPId, int? quanHuyenId, int? phuongXaId, DateTime? ngaySinh)
         {
-            QLMamNon.Dao.QLMamNonDs.UserDataTable table = userTableAdapter.GetData();
+            List<user> table = entities.users.ToList();
             return table;
         }
 
-        public QLMamNon.Dao.QLMamNonDs.UserPrivilegeDataTable LoadUserPrivileges(UserPrivilegeTableAdapter userPrivilegeTableAdapter,
-            int userId)
+        public List<user_privilege> LoadUserPrivileges(qlmamnonEntities entities, int userId)
         {
-            QLMamNon.Dao.QLMamNonDs.UserPrivilegeDataTable table = userPrivilegeTableAdapter.GetDataByUserId(userId);
+            List<user_privilege> table = entities.getUserPriviledgeByUserId(userId).ToList();
             return table;
         }
 
-        public void UpdateUserPrivileges(UserPrivilegeTableAdapter userPrivilegeTableAdapter, int userId, List<int> privilegeIds)
+        public void UpdateUserPrivileges(qlmamnonEntities entities, int userId, List<int> privilegeIds)
         {
             if (ListUtil.IsEmpty(privilegeIds))
             {
-                userPrivilegeTableAdapter.DeleteUserPrivileges("0", userId);
+                entities.deleteUserPrivileges("0", userId);
             }
             else
             {
-                userPrivilegeTableAdapter.DeleteUserPrivileges(StringUtil.JoinWithCommas(privilegeIds), userId);
+                entities.deleteUserPrivileges(StringUtil.JoinWithCommas(privilegeIds), userId);
 
                 foreach (int privilegeId in privilegeIds)
                 {
-                    userPrivilegeTableAdapter.InsertUserPrivilegeIfNotExists(userId, privilegeId, 1);
+                    entities.insertUserPrivilegeIfNotExists(userId, privilegeId, 1);
                 }
             }
         }

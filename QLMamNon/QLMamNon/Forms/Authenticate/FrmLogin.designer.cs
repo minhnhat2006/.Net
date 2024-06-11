@@ -35,8 +35,6 @@
             this.txtUsername = new DevExpress.XtraEditors.TextEdit();
             this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
-            this.userTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.UserTableAdapter();
-            this.userPrivilegeTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.UserPrivilegeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +77,7 @@
             this.txtUsername.Properties.Appearance.Options.UseFont = true;
             this.txtUsername.Size = new System.Drawing.Size(183, 26);
             this.txtUsername.TabIndex = 1;
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // txtPassword
             // 
@@ -90,6 +89,7 @@
             this.txtPassword.Properties.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(183, 26);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // btnLogin
             // 
@@ -101,14 +101,6 @@
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // userTableAdapter
-            // 
-            this.userTableAdapter.ClearBeforeFill = true;
-            // 
-            // userPrivilegeTableAdapter
-            // 
-            this.userPrivilegeTableAdapter.ClearBeforeFill = true;
             // 
             // FrmLogin
             // 
@@ -144,7 +136,5 @@
         private DevExpress.XtraEditors.TextEdit txtUsername;
         private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.SimpleButton btnLogin;
-        private QLMamNon.Dao.QLMamNonDsTableAdapters.UserTableAdapter userTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.UserPrivilegeTableAdapter userPrivilegeTableAdapter;
     }
 }

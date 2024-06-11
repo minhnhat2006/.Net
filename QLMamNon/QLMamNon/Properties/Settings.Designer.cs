@@ -12,7 +12,7 @@ namespace QLMamNon.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "10.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -20,17 +20,6 @@ namespace QLMamNon.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;User Id=root;Password=root;Persist Security Info=True;database=q" +
-            "lmamnon;Character Set=utf8;Allow Zero Datetime=True;Convert Zero Datetime=True")]
-        public string qlmamnonConnectionString1 {
-            get {
-                return ((string)(this["qlmamnonConnectionString1"]));
             }
         }
         
@@ -204,6 +193,62 @@ namespace QLMamNon.Properties {
             }
             set {
                 this["ShowGiayBaoNopTienNote"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string POSPrinterName {
+            get {
+                return ((string)(this["POSPrinterName"]));
+            }
+            set {
+                this["POSPrinterName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("12345")]
+        public long LastMaPhieuThu {
+            get {
+                return ((long)(this["LastMaPhieuThu"]));
+            }
+            set {
+                this["LastMaPhieuThu"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Setting {
+            get {
+                return ((string)(this["Setting"]));
+            }
+            set {
+                this["Setting"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("001100{0}81{1}0008aa{2}{3}")]
+        public string PDUSendMessageTemplate {
+            get {
+                return ((string)(this["PDUSendMessageTemplate"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=127.0.0.1;user id=root;password=root;persistsecurityinfo=True;database=qlm" +
+            "amnon;characterset=utf8;allowzerodatetime=True;convertzerodatetime=True")]
+        public string qlmamnonConnectionString1 {
+            get {
+                return ((string)(this["qlmamnonConnectionString1"]));
             }
         }
     }

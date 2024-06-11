@@ -1,8 +1,10 @@
-﻿using System;
-using System.Data;
-using System.Windows.Forms;
-using ACG.Core.WinForm.Util;
+﻿using ACG.Core.WinForm.Util;
+using QLMamNon.Dao;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace QLMamNon.Forms.HocSinh
 {
@@ -10,10 +12,8 @@ namespace QLMamNon.Forms.HocSinh
     {
         private bool isHocSinhExisted(BindingSource hocSinhRowBindingSource, int hocSinhId)
         {
-            foreach (DataRowView rowView in hocSinhRowBindingSource)
+            foreach (hocsinh row in hocSinhRowBindingSource)
             {
-                QLMamNon.Dao.QLMamNonDs.HocSinhRow row = rowView.Row as QLMamNon.Dao.QLMamNonDs.HocSinhRow;
-
                 if (hocSinhId == row.HocSinhId)
                 {
                     return true;
@@ -25,27 +25,22 @@ namespace QLMamNon.Forms.HocSinh
 
         private void loadHocSinhToGridDi()
         {
-            if (this.hocSinhRowBindingSourceDi.DataSource != null)
-            {
-                ((QLMamNon.Dao.QLMamNonDs.HocSinhDataTable)this.hocSinhRowBindingSourceDi.DataSource).Clear();
-            }
-
             int? namHoc = (int?)this.cmbNamHocDi.EditValue;
             int? lopHoc = (int?)this.cmbLopHocDi.EditValue;
-            QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable;
+            List<hocsinh> hocSinhTable;
 
             if (lopHoc == null)
             {
-                hocSinhTable = this.hocSinhTableAdapter.GetHocSinhNotAssignedToLop();
+                hocSinhTable = Entities.getHocSinhNotAssignedToLop().ToList();
             }
             else
             {
-                hocSinhTable = this.hocSinhTableAdapter.GetHocSinhByParams(new DateTime(namHoc.Value + 1, 1, 1), null, lopHoc, null);
+                hocSinhTable = Entities.getHocSinhByParams(new DateTime(namHoc.Value + 1, 1, 1), null, lopHoc, null).ToList();
             }
 
-            ThongTinHocSinhUtil.EvaluateLopInfoForHocSinhTable(hocSinhLopTableAdapter, hocSinhTable);
+            ThongTinHocSinhUtil.EvaluateLopInfoForHocSinhTable(Entities, hocSinhTable);
 
-            this.hocSinhRowBindingSourceDi.DataSource = hocSinhTable;
+            this.hocSinhRowBindingSourceDi.DataSource = new BindingList<hocsinh>(hocSinhTable);
         }
 
         private void loadHocSinhToGridDen()
@@ -55,11 +50,11 @@ namespace QLMamNon.Forms.HocSinh
                 return;
             }
 
-            QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable = this.hocSinhTableAdapter.GetHocSinhByParams(DateTime.Now, null, (int)this.cmbLopHocDen.EditValue, null);
+            List<hocsinh> hocSinhTable = Entities.getHocSinhByParams(DateTime.Now, null, (int)this.cmbLopHocDen.EditValue, null).ToList();
 
-            ThongTinHocSinhUtil.EvaluateLopInfoForHocSinhTable(hocSinhLopTableAdapter, hocSinhTable);
+            ThongTinHocSinhUtil.EvaluateLopInfoForHocSinhTable(Entities, hocSinhTable);
 
-            this.hocSinhRowBindingSourceDen.DataSource = hocSinhTable;
+            this.hocSinhRowBindingSourceDen.DataSource = new BindingList<hocsinh>(hocSinhTable);
         }
     }
 }

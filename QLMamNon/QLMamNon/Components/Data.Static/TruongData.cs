@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ACG.Core.WinForm.Data.Static;
+using QLMamNon.Dao;
 using System.Linq;
-using System.Text;
-using ACG.Core.WinForm.Data.Static;
 
 namespace QLMamNon.Components.Data.Static
 {
     public class TruongData : IStaticData
     {
-        private QLMamNon.Dao.QLMamNonDsTableAdapters.TruongTableAdapter tableAdapter;
+        private qlmamnonEntities entities;
 
-        public TruongData(QLMamNon.Dao.QLMamNonDsTableAdapters.TruongTableAdapter tableAdapter)
+        public TruongData(qlmamnonEntities entities)
         {
-            this.tableAdapter = tableAdapter;
+            this.entities = entities;
         }
 
         #region IStaticData Members
 
         public object Retrieve()
         {
-            return tableAdapter.GetData();
+            return this.entities.truongs.ToList();
         }
 
         #endregion

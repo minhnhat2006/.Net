@@ -6,6 +6,9 @@ using System.Windows.Forms;
 using ACG.Core.WinForm.Util;
 using QLMamNon.Properties;
 using QLMamNon.Service.Data;
+using QLMamNon.Dao;
+using System.Linq;
+using QLMamNon.Facade;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -55,13 +58,13 @@ namespace QLMamNon.Forms.ThuChi
 
         private bool isNeedToGenerateSoThuTiens(DateTime ngayTinh, int lop, bool showMessageBox)
         {
-            long genHistoryCount = (long)bangThuTienGenHistoryTableAdapter.CountBangThuTienGenHistoryByLopAndNgayTinh(lop, ngayTinh);
+            long genHistoryCount = Entities.countBangThuTienGenHistoryByLopAndNgayTinh(lop, ngayTinh).First().Value;
 
             if (genHistoryCount == 0)
             {
                 if (!DateTimeUtil.IsSameMonthYear(ngayTinh, Settings.Default.AppLannchDate))
                 {
-                    long prevMonthGenHistoryCount = (long)bangThuTienGenHistoryTableAdapter.CountBangThuTienGenHistoryByLopAndNgayTinh(lop, DateTimeUtil.DateEndOfMonth(ngayTinh.AddMonths(-1)));
+                    long prevMonthGenHistoryCount = Entities.countBangThuTienGenHistoryByLopAndNgayTinh(lop, DateTimeUtil.DateEndOfMonth(ngayTinh.AddMonths(-1))).First().Value;
 
                     if (prevMonthGenHistoryCount == 0 && showMessageBox)
                     {
@@ -92,16 +95,16 @@ namespace QLMamNon.Forms.ThuChi
                 using (FrmSelectHocSinhsToGenerate frmSelectHocSinhsToGenerate = new FrmSelectHocSinhsToGenerate())
                 {
                     List<int> selectedHocSinhIds = new List<int>();
-                    QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable viewBangThuTienTable = viewBangThuTienTableAdapter.GetViewBangThuTienByNgayTinhAndLop(ngayTinh, lop);
+                    List<viewbangthutien> viewBangThuTienTable = Entities.getViewBangThuTienByNgayTinhAndLop(ngayTinh, lop).ToList();
 
-                    foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow in viewBangThuTienTable)
+                    foreach (viewbangthutien viewBangThuTienRow in viewBangThuTienTable)
                     {
                         selectedHocSinhIds.Add(viewBangThuTienRow.HocSinhId);
                     }
 
                     frmSelectHocSinhsToGenerate.GeneratedHocSinhIds = selectedHocSinhIds;
 
-                    QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable = hocSinhTableAdapter.GetHocSinhByLopAndNgay(lop, ngayTinh);
+                    List<hocsinh> hocSinhTable = Entities.getHocSinhByLopAndNgay(lop, ngayTinh).ToList();
                     frmSelectHocSinhsToGenerate.HocSinhTable = hocSinhTable;
                     DialogResult result = frmSelectHocSinhsToGenerate.ShowDialog(this);
 
@@ -121,10 +124,23 @@ namespace QLMamNon.Forms.ThuChi
         private void generateSoThuTiens(object sender, DoWorkEventArgs e)
         {
             this.persistNgayTinhAndLop();
-            List<QLMamNon.Dao.QLMamNonDs.HocSinhRow> hocSinhRows = e.Argument as List<QLMamNon.Dao.QLMamNonDs.HocSinhRow>;
+            List<hocsinh> hocSinhRows = e.Argument as List<hocsinh>;
             SoThuTienService soThuTienService = new SoThuTienService();
             int generatedRowsCount = soThuTienService.GenerateSoThuTienByHocSinhRows(ngayTinh, hocSinhRows);
-            this.bangThuTienGenHistoryTableAdapter.Insert(ngayTinh, lop, DateTime.Now, Settings.Default.TienAnSang, Settings.Default.TienAnToi, Settings.Default.TienAnChinh);
+
+            bangthutiengenhistory bangThuTienGenHistory = new bangthutiengenhistory()
+            {
+                NgayTinh = ngayTinh,
+                LopId = lop,
+                DateCreated = DateTime.Now,
+                SoTienAnSang = Settings.Default.TienAnSang,
+                SoTienAnToi = Settings.Default.TienAnToi,
+                SoTienAnChinh = Settings.Default.TienAnChinh
+            };
+
+            qlmamnonEntities entities = StaticDataFacade.GetQLMNEntities();
+            entities.bangthutiengenhistories.Add(bangThuTienGenHistory);
+            entities.SaveChanges();
         }
 
         private void generatedSoThuTiens(object sender, RunWorkerCompletedEventArgs e)

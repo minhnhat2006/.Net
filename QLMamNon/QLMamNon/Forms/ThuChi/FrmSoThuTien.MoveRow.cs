@@ -1,6 +1,5 @@
-﻿using System;
-using System.Data;
-using System.Threading;
+﻿using QLMamNon.Dao;
+using System;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -27,8 +26,7 @@ namespace QLMamNon.Forms.ThuChi
 
         private void setCurrentViewBangThuTienRowSTT(object current, int stt)
         {
-            DataRowView rowView = current as DataRowView;
-            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow bangThuTienRow = rowView.Row as QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow;
+            viewbangthutien bangThuTienRow = current as viewbangthutien;
 
             if (bangThuTienRow.STT != stt)
             {
@@ -40,8 +38,7 @@ namespace QLMamNon.Forms.ThuChi
 
         private int getCurrentViewBangThuTienRowSTT(object current)
         {
-            DataRowView rowView = current as DataRowView;
-            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow bangThuTienRow = rowView.Row as QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow;
+            viewbangthutien bangThuTienRow = current as viewbangthutien;
             return bangThuTienRow.STT;
         }
 

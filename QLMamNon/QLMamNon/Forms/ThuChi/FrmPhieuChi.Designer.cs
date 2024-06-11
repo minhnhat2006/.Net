@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.DanhMuc
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.ThuChi
 {
     partial class FrmPhieuChi
     {
@@ -47,8 +49,6 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnChinhSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.phieuChiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuChiTableAdapter();
-            this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuChiRowBindingSource)).BeginInit();
@@ -68,9 +68,9 @@
             // 
             // gcMain
             // 
-            this.gcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gcMain.DataSource = this.phieuChiRowBindingSource;
             this.gcMain.Location = new System.Drawing.Point(0, 0);
             this.gcMain.MainView = this.gvMain;
@@ -83,7 +83,7 @@
             // phieuChiRowBindingSource
             // 
             this.phieuChiRowBindingSource.AllowNew = true;
-            this.phieuChiRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhieuChiRow);
+            this.phieuChiRowBindingSource.DataSource = typeof(QLMamNon.Dao.phieuchi);
             this.phieuChiRowBindingSource.Sort = "Ngay,MaPhieu";
             // 
             // gvMain
@@ -99,6 +99,7 @@
             this.colMaPhieu,
             this.colGhiChu});
             this.gvMain.GridControl = this.gcMain;
+            this.gvMain.GroupCount = 1;
             this.gvMain.Name = "gvMain";
             this.gvMain.OptionsBehavior.Editable = false;
             this.gvMain.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
@@ -108,7 +109,7 @@
             this.gvMain.OptionsView.ShowFooter = true;
             this.gvMain.OptionsView.ShowGroupPanel = false;
             this.gvMain.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colNgay, DevExpress.Data.ColumnSortOrder.Ascending)});
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colNgay, DevExpress.Data.ColumnSortOrder.Descending)});
             this.gvMain.DoubleClick += new System.EventHandler(this.gvMain_DoubleClick);
             // 
             // colSTT
@@ -117,7 +118,7 @@
             this.colSTT.Name = "colSTT";
             this.colSTT.Visible = true;
             this.colSTT.VisibleIndex = 0;
-            this.colSTT.Width = 31;
+            this.colSTT.Width = 41;
             // 
             // colNgay
             // 
@@ -136,7 +137,7 @@
             this.colPhanLoaiChi.FieldName = "PhanLoaiChi";
             this.colPhanLoaiChi.Name = "colPhanLoaiChi";
             this.colPhanLoaiChi.Visible = true;
-            this.colPhanLoaiChi.VisibleIndex = 3;
+            this.colPhanLoaiChi.VisibleIndex = 2;
             this.colPhanLoaiChi.Width = 92;
             // 
             // colNoiDung
@@ -145,7 +146,7 @@
             this.colNoiDung.FieldName = "NoiDung";
             this.colNoiDung.Name = "colNoiDung";
             this.colNoiDung.Visible = true;
-            this.colNoiDung.VisibleIndex = 4;
+            this.colNoiDung.VisibleIndex = 3;
             this.colNoiDung.Width = 83;
             // 
             // colSoLuong
@@ -158,7 +159,7 @@
             this.colSoLuong.FieldName = "SoLuong";
             this.colSoLuong.Name = "colSoLuong";
             this.colSoLuong.Visible = true;
-            this.colSoLuong.VisibleIndex = 5;
+            this.colSoLuong.VisibleIndex = 4;
             this.colSoLuong.Width = 99;
             // 
             // colDonGia
@@ -171,7 +172,7 @@
             this.colDonGia.FieldName = "DonGia";
             this.colDonGia.Name = "colDonGia";
             this.colDonGia.Visible = true;
-            this.colDonGia.VisibleIndex = 6;
+            this.colDonGia.VisibleIndex = 5;
             this.colDonGia.Width = 99;
             // 
             // colSoTien
@@ -184,7 +185,7 @@
             this.colSoTien.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoTien", "{0:n0}")});
             this.colSoTien.Visible = true;
-            this.colSoTien.VisibleIndex = 7;
+            this.colSoTien.VisibleIndex = 6;
             this.colSoTien.Width = 123;
             // 
             // colMaPhieu
@@ -193,7 +194,7 @@
             this.colMaPhieu.FieldName = "MaPhieu";
             this.colMaPhieu.Name = "colMaPhieu";
             this.colMaPhieu.Visible = true;
-            this.colMaPhieu.VisibleIndex = 2;
+            this.colMaPhieu.VisibleIndex = 1;
             this.colMaPhieu.Width = 95;
             // 
             // colGhiChu
@@ -202,7 +203,7 @@
             this.colGhiChu.FieldName = "GhiChu";
             this.colGhiChu.Name = "colGhiChu";
             this.colGhiChu.Visible = true;
-            this.colGhiChu.VisibleIndex = 8;
+            this.colGhiChu.VisibleIndex = 7;
             this.colGhiChu.Width = 67;
             // 
             // panelControl1
@@ -252,14 +253,6 @@
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             // 
-            // phieuChiTableAdapter
-            // 
-            this.phieuChiTableAdapter.ClearBeforeFill = true;
-            // 
-            // hocSinhTableAdapter
-            // 
-            this.hocSinhTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmPhieuChi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,7 +280,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnChinhSua;
         private DevExpress.XtraEditors.SimpleButton btnThem;
-        private Dao.QLMamNonDsTableAdapters.PhieuChiTableAdapter phieuChiTableAdapter;
         private System.Windows.Forms.BindingSource phieuChiRowBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colSTT;
         private DevExpress.XtraGrid.Columns.GridColumn colNgay;
@@ -295,7 +287,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPhanLoaiChi;
         private DevExpress.XtraGrid.Columns.GridColumn colMaPhieu;
         private DevExpress.XtraGrid.Columns.GridColumn colGhiChu;
-        private Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colNoiDung;
         private DevExpress.XtraGrid.Columns.GridColumn colSoLuong;
         private DevExpress.XtraGrid.Columns.GridColumn colDonGia;

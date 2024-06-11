@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.UserControls
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.UserControls
 {
     partial class UCEditFormBanGiaoTaiSan
     {
@@ -496,7 +498,7 @@
             // 
             // phanLoaiChiRowBindingSource
             // 
-            this.phanLoaiChiRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhanLoaiChiRow);
+            this.phanLoaiChiRowBindingSource.DataSource = typeof(phanloaichi);
             // 
             // dxValidationProvider
             // 

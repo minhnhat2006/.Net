@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using ACG.Core.WinForm.Util;
 using DevExpress.XtraGrid.Views.Grid;
-using QLMamNon.Facade;
-using QLMamNon.Forms.Resource;
-using QLThuChi;
 using QLMamNon.Components.Data.Static;
-using QLMamNon.Entity.Form;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
+using QLMamNon.Entity.Form;
+using QLMamNon.Facade;
+using QLMamNon.Reports;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -22,13 +23,17 @@ namespace QLMamNon.Forms.ThuChi
 
         public bool IsEditing { get; set; }
 
-        public QLMamNon.Dao.QLMamNonDs.PhieuThuRow PhieuThuRow { get; set; }
+        public phieuthu PhieuThuRow { get; set; }
+
+        private qlmamnonEntities entities;
 
         #endregion
 
         public FrmSoTheoDoiTaiSan()
         {
             this.FormKey = AppForms.FormBaoCaoChiTietHoatDongTaiChinh;
+            entities = StaticDataFacade.GetQLMNEntities();
+
             InitializeComponent();
         }
 
@@ -46,14 +51,14 @@ namespace QLMamNon.Forms.ThuChi
             }
 
             RptSoTheoDoiTaiSan rpt = new RptSoTheoDoiTaiSan();
-            QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanDataTable table = this.viewBanGiaoTaiSanTableAdapter.GetDataByYear((int)cmbYear.EditValue);
+            List<viewbangiaotaisan> table = entities.getViewBanGiaoTaiSanByYear((int)cmbYear.EditValue).ToList();
             List<SoTheoDoiTaiSanItem> soTheoDoiTaiSan = new List<SoTheoDoiTaiSanItem>();
             SoTheoDoiTaiSanItem prevSoTheoDoiTaiSanItem = null;
             SoTheoDoiTaiSanItem soTheoDoiTaiSanItem = null;
 
-            foreach (QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanRow row in table)
+            foreach (viewbangiaotaisan row in table)
             {
-                row.LopName = StaticDataUtil.GetLopNameByLopId(row.LopId);
+                row.LopName = StaticDataUtil.GetLopNameByLopId(row.LopId.Value);
 
                 if (prevSoTheoDoiTaiSanItem != null && prevSoTheoDoiTaiSanItem.TaiSanId == row.TaiSanId)
                 {
@@ -64,29 +69,29 @@ namespace QLMamNon.Forms.ThuChi
                         LyDoGiam = "Bàn giao",
                         NgayChungTuGiam = row.NgayChungTu,
                         SoChungTuGiam = row.SoChungTu,
-                        SoLuongBanGiao = row.SoLuongBanGiao,
-                        SoTienBanGiao = row.DonGia * row.SoLuongBanGiao,
+                        SoLuongBanGiao = row.SoLuongBanGiao.Value,
+                        SoTienBanGiao = row.DonGia * row.SoLuongBanGiao.Value,
                     };
                 }
                 else
                 {
                     soTheoDoiTaiSanItem = new SoTheoDoiTaiSanItem()
-                        {
-                            TaiSanId = row.TaiSanId,
-                            Ten = row.Ten,
-                            DonGia = row.DonGia,
-                            DonViTinh = row.DonViTinh,
-                            GhiChu = CommonConstant.EMPTY,
-                            LyDoGiam = "Bàn giao",
-                            NgayChungTu = row.NgayChungTu,
-                            NgayChungTuGiam = row.NgayChungTu,
-                            SoChungTu = row.SoChungTu,
-                            SoChungTuGiam = row.SoChungTu,
-                            SoLuong = row.SoLuong,
-                            SoLuongBanGiao = row.SoLuongBanGiao,
-                            SoTienBanGiao = row.DonGia * row.SoLuongBanGiao,
-                            ThanhTien = row.SoLuong * row.DonGia
-                        };
+                    {
+                        TaiSanId = row.TaiSanId,
+                        Ten = row.Ten,
+                        DonGia = row.DonGia,
+                        DonViTinh = row.DonViTinh,
+                        GhiChu = CommonConstant.EMPTY,
+                        LyDoGiam = "Bàn giao",
+                        NgayChungTu = row.NgayChungTu,
+                        NgayChungTuGiam = row.NgayChungTu,
+                        SoChungTu = row.SoChungTu,
+                        SoChungTuGiam = row.SoChungTu,
+                        SoLuong = row.SoLuong,
+                        SoLuongBanGiao = row.SoLuongBanGiao.Value,
+                        SoTienBanGiao = row.DonGia * row.SoLuongBanGiao.Value,
+                        ThanhTien = row.SoLuong * row.DonGia
+                    };
                 }
 
                 soTheoDoiTaiSan.Add(soTheoDoiTaiSanItem);

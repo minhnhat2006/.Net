@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using ACG.Core.WinForm.Util;
 using DevExpress.XtraGrid;
-using QLMamNon.Components.Data.Static;
-using QLMamNon.Dao.QLMamNonDsTableAdapters;
-using QLMamNon.Facade;
+using QLMamNon.Dao;
 using QLMamNon.Service.Data;
-using UserPrivilegeDataTable = QLMamNon.Dao.QLMamNonDs.UserPrivilegeDataTable;
-using UserPrivilegeRow = QLMamNon.Dao.QLMamNonDs.UserPrivilegeRow;
 
 namespace QLMamNon.UserControls
 {
@@ -31,8 +27,7 @@ namespace QLMamNon.UserControls
 
         private void UCEditFormUser_Load(object sender, EventArgs e)
         {
-            PrivilegeTableAdapter privilegeTableAdapter = (PrivilegeTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterPrivilege);
-            this.privilegeRowBindingSource.DataSource = privilegeTableAdapter.GetData();
+            this.privilegeRowBindingSource.DataSource = Entities.privileges;
         }
 
         private void UCEditFormUser_Enter(object sender, EventArgs e)
@@ -40,7 +35,7 @@ namespace QLMamNon.UserControls
             this._selectGvMainRowQuietMode = true;
             object userPrivilegesObj = this.GridView.GetFocusedRowCellValue("UserPrivileges");
 
-            if (userPrivilegesObj == DBNull.Value)
+            if (userPrivilegesObj == null)
             {
                 object userIdObj = this.GridView.GetFocusedRowCellValue("UserId");
 
@@ -50,7 +45,7 @@ namespace QLMamNon.UserControls
                     return;
                 }
 
-                userPrivilegesObj = getUserPrivilegeIds(userIdObj);
+                userPrivilegesObj = getUserPrivilegeIds(Entities, userIdObj);
                 this.GridView.SetFocusedRowCellValue("UserPrivileges", userPrivilegesObj);
             }
 
@@ -69,15 +64,14 @@ namespace QLMamNon.UserControls
             this._selectGvMainRowQuietMode = false;
         }
 
-        private static List<int> getUserPrivilegeIds(object userIdObj)
+        private static List<int> getUserPrivilegeIds(qlmamnonEntities entities, object userIdObj)
         {
             int userId = (int)userIdObj;
             AuthenService authenService = new AuthenService();
-            UserPrivilegeTableAdapter userPrivilegeTableAdapter = (UserPrivilegeTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterUserPrivilege);
-            UserPrivilegeDataTable userPrivilegeDataTable = authenService.LoadUserPrivileges(userPrivilegeTableAdapter, userId);
+            List<user_privilege> userPrivileges = authenService.LoadUserPrivileges(entities, userId);
             List<int> privilegeIds = new List<int>();
 
-            foreach (UserPrivilegeRow row in userPrivilegeDataTable)
+            foreach (user_privilege row in userPrivileges)
             {
                 privilegeIds.Add(row.PrivilegeId);
             }

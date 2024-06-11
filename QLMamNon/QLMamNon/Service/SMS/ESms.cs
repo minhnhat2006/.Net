@@ -9,9 +9,31 @@ namespace QLMamNon.Service.SMS
 {
     public class ESms : ISMS
     {
-        public void SendSMS(List<string> phoneNumbers, string content)
+        private const int MaxPhoneNumbersPerRequest = 50;
+
+        public Dictionary<string, bool> SendSMS(Dictionary<string, string> phoneNumberToSmsContentDic)
         {
-            string requestUrl = String.Format(Settings.Default.SMSWSSendMessageUrl, StringUtil.Join(phoneNumbers, ","), content);
+            // Send message to 50 phone numbers per request
+            List<string> tempPhoneNumbers = new List<string>();
+            int i = 0;
+
+            foreach (var phoneNumberToSmsContent in phoneNumberToSmsContentDic)
+            {
+                tempPhoneNumbers.Add(phoneNumberToSmsContent.Key);
+
+                if (i % MaxPhoneNumbersPerRequest == 0 || i == phoneNumberToSmsContentDic.Count)
+                {
+                    string requestUrl = string.Format(Settings.Default.SMSWSSendMessageUrl, StringUtil.Join(tempPhoneNumbers, ","), phoneNumberToSmsContent.Value);
+                    sendGetRequest(requestUrl);
+
+                    // Reset tempPhoneNumbers
+                    tempPhoneNumbers = new List<string>();
+                }
+
+                i++;
+            }
+
+            return null;
         }
 
         private string sendGetRequest(string RequestUrl)

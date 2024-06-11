@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using ACG.Core.WinForm.Util;
+using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.Entity.Form;
 using QLMamNon.Facade;
-using QLMamNon.Properties;
+using QLMamNon.Reports;
 using QLMamNon.Service.Data;
-using QLThuChi;
-using QLMamNon.Components.Data.Static;
-using QLMamNon.Dao.QLMamNonDsTableAdapters;
-using ACG.Core.WinForm.Util;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -20,11 +18,15 @@ namespace QLMamNon.Forms.ThuChi
 
         protected string FormKey { get; set; }
 
+        private qlmamnonEntities entities;
+
         #endregion
 
         public FrmBangKeThuHocPhi()
         {
-            this.FormKey = AppForms.FormBangKeThuHocPhi;
+            FormKey = AppForms.FormBangKeThuHocPhi;
+            entities = StaticDataFacade.GetQLMNEntities();
+
             InitializeComponent();
         }
 
@@ -48,7 +50,7 @@ namespace QLMamNon.Forms.ThuChi
             rpt.FromDate.Value = fromDate;
             rpt.ToDate.Value = toDate;
 
-            List<BangKeThuTienItem> allBangKeThuTienItems = soThuTienService.GetBangKeTongHopThuTien(toDate, (int?)cmLop.EditValue);
+            List<BangKeThuTienItem> allBangKeThuTienItems = soThuTienService.GetBangKeTongHopThuTien(entities, toDate, (int?)cmLop.EditValue);
             List<BangKeThuTienItem> displayedBangKeThuTienItems = new List<BangKeThuTienItem>();
             int stt = 1;
 

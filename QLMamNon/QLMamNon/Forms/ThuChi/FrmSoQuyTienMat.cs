@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using ACG.Core.WinForm.Util;
 using DevExpress.XtraEditors;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
-using QLMamNon.Dao.QLMamNonDsTableAdapters;
+using QLMamNon.Dao;
 using QLMamNon.Entity.Form;
 using QLMamNon.Facade;
+using QLMamNon.Reports;
 using QLMamNon.Service.Data;
-using QLThuChi;
 
 namespace QLMamNon.Forms.ThuChi
 {
-    public partial class FrmSoQuyTienMat : DevExpress.XtraEditors.XtraForm
+    public partial class FrmSoQuyTienMat : XtraForm
     {
         #region Properties
 
@@ -22,11 +23,15 @@ namespace QLMamNon.Forms.ThuChi
 
         protected string FormKey { get; set; }
 
+        private qlmamnonEntities entities;
+
         #endregion
 
         public FrmSoQuyTienMat()
         {
-            this.FormKey = AppForms.FormSoQuyTienMat;
+            FormKey = AppForms.FormSoQuyTienMat;
+            entities = StaticDataFacade.GetQLMNEntities();
+
             InitializeComponent();
         }
 
@@ -110,7 +115,7 @@ namespace QLMamNon.Forms.ThuChi
             if (!chkTon.Checked)
             {
                 SoThuTienService soThuTienService = new SoThuTienService();
-                soTienTonDauKy = soThuTienService.GetSoTienTonDauKy(toDate);
+                soTienTonDauKy = soThuTienService.GetSoTienTonDauKy(entities, toDate);
             }
             return soTienTonDauKy;
         }
@@ -138,11 +143,12 @@ namespace QLMamNon.Forms.ThuChi
         private void addPhieuChiToReport(SortedList soQuyTienMatMap, DateTime fromDate, DateTime toDate, List<int> phanLoaiChiIds)
         {
             PhieuChiService phieuChiService = new PhieuChiService();
-            QLMamNon.Dao.QLMamNonDs.PhieuChiDataTable phieuChiDataTable = phieuChiService.LoadPhieuChiByDateRange(fromDate, toDate, phanLoaiChiIds);
-            foreach (QLMamNon.Dao.QLMamNonDs.PhieuChiRow phieuChiRow in phieuChiDataTable)
+            List<phieuchi> phieuChiDataTable = phieuChiService.LoadPhieuChiByDateRange(entities, fromDate, toDate, phanLoaiChiIds);
+            foreach (phieuchi phieuChiRow in phieuChiDataTable)
             {
                 SoQuyTienMatItem soQuyTienMatItemChi = new SoQuyTienMatItem()
                 {
+                    MucChi = phieuChiRow.PhanLoaiChi,
                     DienGiai = phieuChiRow.NoiDung,
                     GhiChu = phieuChiRow.GhiChu,
                     NgayChungTu = phieuChiRow.Ngay.AddMilliseconds(soQuyTienMatMap.Count),
@@ -155,13 +161,12 @@ namespace QLMamNon.Forms.ThuChi
 
         private void addPhieuThuToReport(SortedList soQuyTienMatMap, DateTime fromDate, DateTime toDate, List<int> phanLoaiThuIds)
         {
-            PhieuThuTableAdapter phieuThuTableAdapter = (PhieuThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterPhieuThu);
-            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable = phieuThuTableAdapter.GetDataForSoQuyTienMat(fromDate, toDate, StringUtil.JoinWithCommas(phanLoaiThuIds));
+            List<phieuthu> phieuThuDataTable = entities.getPhieuThuForSoQuyTienMat(fromDate, toDate, StringUtil.JoinWithCommas(phanLoaiThuIds)).ToList();
             Dictionary<string, SoQuyTienMatItem> groupDateToSoQuyTienMatItemsMap = new Dictionary<string, SoQuyTienMatItem>();
 
-            foreach (QLMamNon.Dao.QLMamNonDs.PhieuThuRow phieuThuRow in phieuThuDataTable)
+            foreach (phieuthu phieuThuRow in phieuThuDataTable)
             {
-                phieuThuRow.PhanLoaiThu = phieuThuRow.IsPhanLoaiThuIdNull() ? "Thu tiền học phí" : StaticDataUtil.GetPhanLoaiThuById(phieuThuRow.PhanLoaiThuId);
+                phieuThuRow.PhanLoaiThu = phieuThuRow.PhanLoaiThuId == null ? "Thu tiền học phí" : StaticDataUtil.GetPhanLoaiThuById(phieuThuRow.PhanLoaiThuId.Value);
 
                 int groupDate = getGroupDate(fromDate, phieuThuRow);
                 DateTime dateOfGroup = fromDate.AddDays((groupDate + 1) * NumberOfDateToGroupPhieuThu - 1);
@@ -171,7 +176,7 @@ namespace QLMamNon.Forms.ThuChi
                     dateOfGroup = toDate;
                 }
 
-                string key = StringUtil.Join(new int[] { groupDate, phieuThuRow.PhanLoaiThuId }, "~");
+                string key = StringUtil.Join(new int[] { groupDate, phieuThuRow.PhanLoaiThuId.Value }, "~");
 
                 if (!groupDateToSoQuyTienMatItemsMap.ContainsKey(key))
                 {
@@ -184,10 +189,10 @@ namespace QLMamNon.Forms.ThuChi
                 }
             }
 
-            foreach (QLMamNon.Dao.QLMamNonDs.PhieuThuRow phieuThuRow in phieuThuDataTable)
+            foreach (phieuthu phieuThuRow in phieuThuDataTable)
             {
                 int groupDate = getGroupDate(fromDate, phieuThuRow);
-                string key = StringUtil.Join(new int[] { groupDate, phieuThuRow.PhanLoaiThuId }, "~");
+                string key = StringUtil.Join(new int[] { groupDate, phieuThuRow.PhanLoaiThuId.Value }, "~");
                 SoQuyTienMatItem soQuyTienMatItemThu = groupDateToSoQuyTienMatItemsMap[key];
                 soQuyTienMatItemThu.SoTienThu += phieuThuRow.SoTien;
             }
@@ -199,7 +204,7 @@ namespace QLMamNon.Forms.ThuChi
             }
         }
 
-        private static int getGroupDate(DateTime fromDate, QLMamNon.Dao.QLMamNonDs.PhieuThuRow phieuThuRow)
+        private static int getGroupDate(DateTime fromDate, phieuthu phieuThuRow)
         {
             int numberOfDays = (int)(phieuThuRow.Ngay - fromDate).TotalDays;
             int groupDate = numberOfDays / NumberOfDateToGroupPhieuThu;

@@ -1,21 +1,23 @@
 ﻿using ACG.Core.WinForm.Data.Static;
+using QLMamNon.Dao;
+using System.Linq;
 
 namespace QLMamNon.Components.Data.Static
 {
     public class PhanLoaiThu : IStaticData
     {
-        private QLMamNon.Dao.QLMamNonDsTableAdapters.PhanLoaiThuTableAdapter tableAdapter;
+        private qlmamnonEntities entities;
 
-        public PhanLoaiThu(QLMamNon.Dao.QLMamNonDsTableAdapters.PhanLoaiThuTableAdapter tableAdapter)
+        public PhanLoaiThu(qlmamnonEntities entities)
         {
-            this.tableAdapter = tableAdapter;
+            this.entities = entities;
         }
 
         #region IStaticData Members
 
         public object Retrieve()
         {
-            return tableAdapter.GetData();
+            return this.entities.phanloaithus.ToList();
         }
 
         #endregion

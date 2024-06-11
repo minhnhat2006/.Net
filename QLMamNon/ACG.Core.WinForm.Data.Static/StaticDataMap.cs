@@ -65,6 +65,14 @@ namespace ACG.Core.WinForm.Data.Static
             }
         }
 
+        public void Reload(string keyFunction)
+        {
+            if (this.keyFunctionMap.ContainsKey(keyFunction))
+            {
+                this.keyDataMap.Remove(keyFunction);
+            }
+        }
+
         public object Get(string key)
         {
             if (!keyDataMap.ContainsKey(key) || keyDataMap[key] == null)

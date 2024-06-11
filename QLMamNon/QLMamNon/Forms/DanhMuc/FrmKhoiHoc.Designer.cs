@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.DanhMuc
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.DanhMuc
 {
     partial class FrmKhoiHoc
     {
@@ -44,8 +46,6 @@
             this.btnChinhSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.khoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoiTableAdapter();
-            this.khoiTruongTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoiTruongTableAdapter();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoiRowBindingSource)).BeginInit();
@@ -78,7 +78,7 @@
             // khoiRowBindingSource
             // 
             this.khoiRowBindingSource.AllowNew = true;
-            this.khoiRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.KhoiRow);
+            this.khoiRowBindingSource.DataSource = typeof(khoi);
             // 
             // gvMain
             // 
@@ -201,14 +201,6 @@
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             // 
-            // khoiTableAdapter
-            // 
-            this.khoiTableAdapter.ClearBeforeFill = true;
-            // 
-            // khoiTruongTableAdapter
-            // 
-            this.khoiTruongTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmKhoiHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,8 +235,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSTT;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colDescription;
-        private Dao.QLMamNonDsTableAdapters.KhoiTableAdapter khoiTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colTruong;
-        private Dao.QLMamNonDsTableAdapters.KhoiTruongTableAdapter khoiTruongTableAdapter;
     }
 }

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
+using System.Linq;
 using ACG.Core.WinForm.Util;
 using QLMamNon.Components.Command;
 using QLMamNon.Components.Command.QLMNDao;
-using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
-using QLMamNon.Dao.QLMamNonDsTableAdapters;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
 
 namespace QLMamNon.Forms.ThuChi
@@ -15,32 +14,30 @@ namespace QLMamNon.Forms.ThuChi
     {
         private void updateSoTienTruyThuForBangThuTienNextMonths(DateTime ngay, int hocSinhId)
         {
-            ViewBangThuTienTableAdapter viewBangThuTienTableAdapter = (ViewBangThuTienTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterViewBangThuTien);
-            BangThuTienKhoanThuTableAdapter bangThuTienKhoanThuTableAdapter = (BangThuTienKhoanThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterBangThuTienKhoanThu);
-            PhieuThuTableAdapter phieuThuTableAdapter = (PhieuThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterPhieuThu);
+            qlmamnonEntities entities = StaticDataFacade.GetQLMNEntities();
 
             QLMNDaoJobInvoker qlmnDaoJobInvoker = new QLMNDaoJobInvoker();
             qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand = new UpdateSoTienTruyThuOfBangThuTienCommand();
-            qlmnDaoJobInvoker.UpdateSoTienTruyThuOfBangThuTienCommand.CommandParameter.Add(UpdateSoTienTruyThuOfBangThuTienCommand.ParameterViewBangThuTienTableAdapter, viewBangThuTienTableAdapter);
-            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable table = viewBangThuTienTableAdapter.GetDataByNgayTinhAndHocSinhId(ngay.AddMonths(1), hocSinhId);
+            List<viewbangthutien> table = entities.getViewBangThuTienByNgayTinhAndHocSinhId(ngay.AddMonths(1), hocSinhId).ToList();
 
-            if (ListUtil.IsEmpty(table.Rows))
+            if (ListUtil.IsEmpty(table))
             {
                 return;
             }
 
-            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow = table[0];
-            QLMamNon.Dao.QLMamNonDs.BangThuTienKhoanThuDataTable bTTKTDataTable = bangThuTienKhoanThuTableAdapter.GetBangThuTienKhoanThuByBangThuTienIds(viewBangThuTienRow.BangThuTienId.ToString());
-            QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable phieuThuDataTable = phieuThuTableAdapter.GetDataByHocSinhIdAndNgayTinh(-1, ngay);
-            Dictionary<int, QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> prevMonthRowDictionary = evaluatePrevMonthViewBangThuTienTable(ngay.AddMonths(-1), hocSinhId);
+            viewbangthutien viewBangThuTienRow = table[0];
+            List<bangthutien_khoanthu> bTTKTDataTable = entities.getBangThuTienKhoanThuByBangThuTienIds(viewBangThuTienRow.BangThuTienId.ToString()).ToList();
+            List<phieuthu> phieuThuDataTable = entities.getPhieuThuByHocSinhIdAndNgayTinh(-1, ngay).ToList();
+            Dictionary<int, viewbangthutien> prevMonthRowDictionary = evaluatePrevMonthViewBangThuTienTable(ngay.AddMonths(-1), hocSinhId);
             BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(viewBangThuTienRow,
                 prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(viewBangThuTienRow.HocSinhId) ? prevMonthRowDictionary[viewBangThuTienRow.HocSinhId] : null,
                 bTTKTDataTable, phieuThuDataTable, false, false, true);
-
-            if (viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Original] != DBNull.Value && viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Current] != DBNull.Value)
+            
+            if (entities.Entry(viewBangThuTienRow).OriginalValues[ViewBangThuTienFieldName.ThanhTien] != null
+                && entities.Entry(viewBangThuTienRow).CurrentValues[ViewBangThuTienFieldName.ThanhTien] != null)
             {
-                long originalVersionToCompare = (long)viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Original];
-                long currentVersionToCompare = (long)viewBangThuTienRow[ViewBangThuTienFieldName.ThanhTien, DataRowVersion.Current];
+                long originalVersionToCompare = (long)entities.Entry(viewBangThuTienRow).OriginalValues[ViewBangThuTienFieldName.ThanhTien];
+                long currentVersionToCompare = (long)entities.Entry(viewBangThuTienRow).CurrentValues[ViewBangThuTienFieldName.ThanhTien];
 
                 if (originalVersionToCompare != currentVersionToCompare)
                 {
@@ -53,28 +50,25 @@ namespace QLMamNon.Forms.ThuChi
             }
         }
 
-        private Dictionary<int, QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> evaluatePrevMonthViewBangThuTienTable(DateTime ngayTinh, int hocSinhId)
+        private Dictionary<int, viewbangthutien> evaluatePrevMonthViewBangThuTienTable(DateTime ngayTinh, int hocSinhId)
         {
-            ViewBangThuTienTableAdapter viewBangThuTienTableAdapter = (ViewBangThuTienTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterViewBangThuTien);
-            BangThuTienKhoanThuTableAdapter bangThuTienKhoanThuTableAdapter = (BangThuTienKhoanThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterBangThuTienKhoanThu);
-            PhieuThuTableAdapter phieuThuTableAdapter = (PhieuThuTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterPhieuThu);
+            qlmamnonEntities entities = StaticDataFacade.GetQLMNEntities();
+            Dictionary<int, viewbangthutien> prevMonthRowDictionary = null;
+            List<viewbangthutien> prevMonthBangThuTienTable = entities.getViewBangThuTienByNgayTinhAndHocSinhId(ngayTinh, hocSinhId).ToList();
+            List<int> prevMonthBangThuTienIds = new List<int>(prevMonthBangThuTienTable.Count);
 
-            Dictionary<int, QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> prevMonthRowDictionary = null;
-            QLMamNon.Dao.QLMamNonDs.ViewBangThuTienDataTable prevMonthBangThuTienTable = viewBangThuTienTableAdapter.GetDataByNgayTinhAndHocSinhId(ngayTinh, hocSinhId);
-            List<int> prevMonthBangThuTienIds = new List<int>(prevMonthBangThuTienTable.Rows.Count);
-
-            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row in prevMonthBangThuTienTable)
+            foreach (viewbangthutien row in prevMonthBangThuTienTable)
             {
                 prevMonthBangThuTienIds.Add(row.BangThuTienId);
             }
 
             if (!ListUtil.IsEmpty(prevMonthBangThuTienIds))
             {
-                QLMamNon.Dao.QLMamNonDs.BangThuTienKhoanThuDataTable prevMonthBTTKTDataTable = bangThuTienKhoanThuTableAdapter.GetBangThuTienKhoanThuByBangThuTienIds(String.Join(",", prevMonthBangThuTienIds));
-                QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable prevMonthPhieuThuDataTable = phieuThuTableAdapter.GetDataByHocSinhIdAndNgayTinh(-1, ngayTinh);
-                prevMonthRowDictionary = new Dictionary<int, Dao.QLMamNonDs.ViewBangThuTienRow>();
+                List<bangthutien_khoanthu> prevMonthBTTKTDataTable = entities.getBangThuTienKhoanThuByBangThuTienIds(String.Join(",", prevMonthBangThuTienIds)).ToList();
+                List<phieuthu> prevMonthPhieuThuDataTable = entities.getPhieuThuByHocSinhIdAndNgayTinh(-1, ngayTinh).ToList();
+                prevMonthRowDictionary = new Dictionary<int, viewbangthutien>();
 
-                foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow row in prevMonthBangThuTienTable)
+                foreach (viewbangthutien row in prevMonthBangThuTienTable)
                 {
                     BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row, null, prevMonthBTTKTDataTable, prevMonthPhieuThuDataTable, true, false, true);
                     prevMonthRowDictionary.Add(row.HocSinhId, row);

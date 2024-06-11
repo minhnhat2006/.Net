@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.HocSinh
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.HocSinh
 {
     partial class FrmThongTinHocSinh
     {
@@ -100,7 +102,6 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnIn = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
@@ -108,7 +109,6 @@
             this.btnChinhSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.hocSinhLopTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNamSinh.Properties)).BeginInit();
@@ -178,7 +178,7 @@
             // cmbNamSinh
             // 
             this.cmbNamSinh.EditValue = "[Chọn năm]";
-            this.cmbNamSinh.Location = new System.Drawing.Point(698, 39);
+            this.cmbNamSinh.Location = new System.Drawing.Point(692, 39);
             this.cmbNamSinh.Name = "cmbNamSinh";
             this.cmbNamSinh.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbNamSinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -190,7 +190,7 @@
             // 
             // cmbThoiHoc
             // 
-            this.cmbThoiHoc.Location = new System.Drawing.Point(454, 39);
+            this.cmbThoiHoc.Location = new System.Drawing.Point(450, 39);
             this.cmbThoiHoc.Name = "cmbThoiHoc";
             this.cmbThoiHoc.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbThoiHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -213,7 +213,7 @@
             // 
             // cmbLop
             // 
-            this.cmbLop.Location = new System.Drawing.Point(332, 39);
+            this.cmbLop.Location = new System.Drawing.Point(329, 39);
             this.cmbLop.Name = "cmbLop";
             this.cmbLop.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbLop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -232,7 +232,7 @@
             // 
             // lopRowBindingSource
             // 
-            this.lopRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.LopRow);
+            this.lopRowBindingSource.DataSource = typeof(QLMamNon.Dao.lop);
             // 
             // gcMain
             // 
@@ -243,14 +243,14 @@
             this.gcMain.Name = "gcMain";
             this.gcMain.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gcMain.Size = new System.Drawing.Size(1011, 418);
+            this.gcMain.Size = new System.Drawing.Size(1004, 419);
             this.gcMain.TabIndex = 8;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
             // 
             // hocSinhRowBindingSource
             // 
-            this.hocSinhRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.HocSinhRow);
+            this.hocSinhRowBindingSource.DataSource = typeof(QLMamNon.Dao.hocsinh);
             // 
             // gvMain
             // 
@@ -684,7 +684,7 @@
             // btnReset
             // 
             this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
-            this.btnReset.Location = new System.Drawing.Point(949, 39);
+            this.btnReset.Location = new System.Drawing.Point(942, 39);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(58, 22);
             this.btnReset.StyleController = this.lcMain;
@@ -698,7 +698,7 @@
             this.btnTimKiem.Appearance.Options.UseImage = true;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(874, 39);
+            this.btnTimKiem.Location = new System.Drawing.Point(867, 39);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(71, 22);
             this.btnTimKiem.StyleController = this.lcMain;
@@ -708,7 +708,7 @@
             // 
             // cmbQuanHuyen
             // 
-            this.cmbQuanHuyen.Location = new System.Drawing.Point(88, 39);
+            this.cmbQuanHuyen.Location = new System.Drawing.Point(87, 39);
             this.cmbQuanHuyen.Name = "cmbQuanHuyen";
             this.cmbQuanHuyen.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbQuanHuyen.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
@@ -731,11 +731,11 @@
             // 
             // quanHuyenRowBindingSource
             // 
-            this.quanHuyenRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.QuanHuyenRow);
+            this.quanHuyenRowBindingSource.DataSource = typeof(quanhuyen);
             // 
             // cmbPhuongXa
             // 
-            this.cmbPhuongXa.Location = new System.Drawing.Point(210, 39);
+            this.cmbPhuongXa.Location = new System.Drawing.Point(208, 39);
             this.cmbPhuongXa.Name = "cmbPhuongXa";
             this.cmbPhuongXa.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbPhuongXa.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
@@ -757,12 +757,12 @@
             // 
             // phuongXaRowBindingSource
             // 
-            this.phuongXaRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhuongXaRow);
+            this.phuongXaRowBindingSource.DataSource = typeof(QLMamNon.Dao.phuongxa);
             // 
             // cmbNgaySinh
             // 
             this.cmbNgaySinh.EditValue = null;
-            this.cmbNgaySinh.Location = new System.Drawing.Point(820, 39);
+            this.cmbNgaySinh.Location = new System.Drawing.Point(813, 39);
             this.cmbNgaySinh.Name = "cmbNgaySinh";
             this.cmbNgaySinh.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
@@ -779,7 +779,7 @@
             // 
             // cmbThang
             // 
-            this.cmbThang.Location = new System.Drawing.Point(576, 39);
+            this.cmbThang.Location = new System.Drawing.Point(571, 39);
             this.cmbThang.Name = "cmbThang";
             this.cmbThang.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbThang.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F);
@@ -816,7 +816,7 @@
             this.Root.Location = new System.Drawing.Point(0, 0);
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
-            this.Root.Size = new System.Drawing.Size(1027, 507);
+            this.Root.Size = new System.Drawing.Size(1020, 508);
             this.Root.Text = "Tìm kiếm";
             this.Root.TextVisible = false;
             // 
@@ -825,7 +825,7 @@
             this.layoutControlItem6.Control = this.gcMain;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 73);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(1015, 422);
+            this.layoutControlItem6.Size = new System.Drawing.Size(1008, 423);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -845,13 +845,13 @@
             this.layoutControlItem8});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1015, 73);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1008, 73);
             this.layoutControlGroup1.Text = "Tìm kiếm";
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.btnReset;
-            this.layoutControlItem10.Location = new System.Drawing.Point(929, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(922, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(62, 30);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
@@ -860,7 +860,7 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnTimKiem;
-            this.layoutControlItem9.Location = new System.Drawing.Point(854, 0);
+            this.layoutControlItem9.Location = new System.Drawing.Point(847, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(75, 30);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
@@ -869,69 +869,65 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.cmbNgaySinh;
-            this.layoutControlItem4.Location = new System.Drawing.Point(732, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(726, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(122, 30);
+            this.layoutControlItem4.Size = new System.Drawing.Size(121, 30);
             this.layoutControlItem4.Text = "Ngày sinh";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(65, 19);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(64, 19);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.cmbThang;
-            this.layoutControlItem3.Location = new System.Drawing.Point(488, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(484, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(122, 30);
+            this.layoutControlItem3.Size = new System.Drawing.Size(121, 30);
             this.layoutControlItem3.Text = "Tháng sinh";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(65, 19);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(64, 19);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.cmbPhuongXa;
-            this.layoutControlItem2.Location = new System.Drawing.Point(122, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(121, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(122, 30);
+            this.layoutControlItem2.Size = new System.Drawing.Size(121, 30);
             this.layoutControlItem2.Text = "Phường";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(65, 19);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(64, 19);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.cmbQuanHuyen;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(122, 30);
+            this.layoutControlItem5.Size = new System.Drawing.Size(121, 30);
             this.layoutControlItem5.Text = "Quận";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(65, 19);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(64, 19);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.cmbLop;
-            this.layoutControlItem1.Location = new System.Drawing.Point(244, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(242, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(122, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(121, 30);
             this.layoutControlItem1.Text = "Lớp";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(65, 19);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(64, 19);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.cmbThoiHoc;
-            this.layoutControlItem7.Location = new System.Drawing.Point(366, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(363, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(122, 30);
+            this.layoutControlItem7.Size = new System.Drawing.Size(121, 30);
             this.layoutControlItem7.Text = "Trạng thái";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(65, 19);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(64, 19);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.cmbNamSinh;
-            this.layoutControlItem8.Location = new System.Drawing.Point(610, 0);
+            this.layoutControlItem8.Location = new System.Drawing.Point(605, 0);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(122, 30);
+            this.layoutControlItem8.Size = new System.Drawing.Size(121, 30);
             this.layoutControlItem8.Text = "Năm sinh";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(65, 19);
-            // 
-            // hocSinhTableAdapter
-            // 
-            this.hocSinhTableAdapter.ClearBeforeFill = true;
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(64, 19);
             // 
             // panelControl1
             // 
@@ -1020,10 +1016,6 @@
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             // 
-            // hocSinhLopTableAdapter
-            // 
-            this.hocSinhLopTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmThongTinHocSinh
             // 
             this.Appearance.Options.UseFont = true;
@@ -1095,7 +1087,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colPhuong;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colQuan;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colTinh;
-        private Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
         private System.Windows.Forms.BindingSource quanHuyenRowBindingSource;
         private System.Windows.Forms.BindingSource phuongXaRowBindingSource;
         private DevExpress.XtraEditors.LookUpEdit cmbQuanHuyen;
@@ -1124,7 +1115,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colThangSinh;
         private DevExpress.XtraEditors.SimpleButton btnIn;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colLopDangHoc;
-        private Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter hocSinhLopTableAdapter;
         private DevExpress.XtraEditors.LookUpEdit cmbLop;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private System.Windows.Forms.BindingSource lopRowBindingSource;

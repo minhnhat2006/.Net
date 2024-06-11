@@ -1,15 +1,18 @@
-﻿using System;
-using DevExpress.XtraBars;
+﻿using DevExpress.XtraBars;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Components.ModuleMediator.Channel;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
 using QLMamNon.Workflow.Forms;
+using System;
 
 namespace QLMamNon.Forms
 {
     public partial class FrmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        private qlmamnonEntities entities;
+
         #region Public Methods
 
         public void SetManHinhCaption(string caption)
@@ -41,40 +44,41 @@ namespace QLMamNon.Forms
 
             FormMainFacade.InitFormMain(this);
 
+            this.entities = new qlmamnonEntities();
+
             this.initStaticData();
             this.ribbon.Minimized = true;
         }
 
         private void initStaticData()
         {
-            StaticDataFacade.Add(StaticDataKeys.TinhThanhPho, new TinhThanhPhoData(thanhPhoTableAdapter));
-            StaticDataFacade.Add(StaticDataKeys.PhuongXa, new PhuongXaData(phuongXaTableAdapter));
-            StaticDataFacade.Add(StaticDataKeys.QuanHuyen, new QuanHuyenData(quanHuyenTableAdapter));
-            StaticDataFacade.Add(StaticDataKeys.TruongHoc, new TruongData(truongTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.TinhThanhPho, new TinhThanhPhoData(entities));
+            StaticDataFacade.Add(StaticDataKeys.PhuongXa, new PhuongXaData(entities));
+            StaticDataFacade.Add(StaticDataKeys.QuanHuyen, new QuanHuyenData(entities));
+            StaticDataFacade.Add(StaticDataKeys.TruongHoc, new TruongData(entities));
             StaticDataFacade.Add(StaticDataKeys.NamHoc, new NamHocData());
-            StaticDataFacade.Add(StaticDataKeys.KhoiHoc, new KhoiData(khoiTableAdapter));
-            StaticDataFacade.Add(StaticDataKeys.LopHoc, new LopData(lopTableAdapter));
-            StaticDataFacade.Add(StaticDataKeys.KhoanThu, new KhoanThuData(khoanThuTableAdapter));
-            StaticDataFacade.Add(StaticDataKeys.PhanLoaiChi, new PhanLoaiChi(phanLoaiChiTableAdapter));
-            StaticDataFacade.Add(StaticDataKeys.PhanLoaiThu, new PhanLoaiThu(phanLoaiThuTableAdapter));
-            StaticDataFacade.Add(StaticDataKeys.BangTinhPhi, new BangTinhPhi(bangTinhPhiTableAdapter));
+            StaticDataFacade.Add(StaticDataKeys.KhoiHoc, new KhoiData(entities));
+            StaticDataFacade.Add(StaticDataKeys.LopHoc, new LopData(entities));
+            StaticDataFacade.Add(StaticDataKeys.KhoanThu, new KhoanThuData(entities));
+            StaticDataFacade.Add(StaticDataKeys.PhanLoaiChi, new PhanLoaiChi(entities));
+            StaticDataFacade.Add(StaticDataKeys.PhanLoaiThu, new PhanLoaiThu(entities));
+            StaticDataFacade.Add(StaticDataKeys.BangTinhPhi, new BangTinhPhi(entities));
             StaticDataFacade.Add(StaticDataKeys.TrangThaiHS, new TrangThaiHSData());
-
-            StaticDataFacade.Add(StaticDataKeys.AdapterBangTinhPhi, this.bangTinhPhiTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterBangThuTien, this.bangThuTienTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterViewBangThuTien, this.viewBangThuTienTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterHocSinh, this.hocSinhTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterHocSinhLop, this.hocSinhLopTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterLopKhoi, this.lopKhoiTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterPhieuChi, this.phieuChiTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterPhieuThu, this.phieuThuTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterBangThuTienGenHistory, this.bangThuTienGenHistoryTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterBangThuTienKhoanThu, this.bangThuTienKhoanThuTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterUnknownColumnView, this.unknownColumnViewTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterKhoanThuHangNam, this.khoanThuHangNamTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterUser, this.userTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterPrivilege, this.privilegeTableAdapter);
-            StaticDataFacade.Add(StaticDataKeys.AdapterUserPrivilege, this.userPrivilegeTableAdapter);
+            StaticDataFacade.Add(StaticDataKeys.AdapterBangTinhPhi, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterBangThuTien, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterViewBangThuTien, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterHocSinh, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterHocSinhLop, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterLopKhoi, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterPhieuChi, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterPhieuThu, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterBangThuTienGenHistory, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterBangThuTienKhoanThu, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterUnknownColumnView, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterKhoanThuHangNam, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterUser, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterPrivilege, this.entities);
+            StaticDataFacade.Add(StaticDataKeys.AdapterUserPrivilege, this.entities);
         }
 
         private void bbtnHocSinhThongTin_ItemClick(object sender, ItemClickEventArgs e)
@@ -225,6 +229,16 @@ namespace QLMamNon.Forms
         private void bbiPhanLoaiThu_ItemClick(object sender, ItemClickEventArgs e)
         {
             FormMainFacade.ShowForm(AppForms.FormDanhMucPhanLoaiThu);
+        }
+
+        private void bbiBangKeCacLoaiChi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowDialog(AppForms.FormBangKeCacLoaiChi);
+        }
+
+        private void bbiBangKeThuTrongNgay_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormMainFacade.ShowDialog(AppForms.FormBangKeThuTrongNgay);
         }
 
         private void bbiBackupDb_ItemClick(object sender, ItemClickEventArgs e)

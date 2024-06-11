@@ -1,14 +1,14 @@
-﻿using System;
-using System.Data;
-using System.Windows.Forms;
-using QLMamNon.Constant;
+﻿using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
-using QLMamNon.Forms.ThuChi;
 using QLMamNon.Service.Data;
+using System;
+using System.Data.Entity;
+using System.Windows.Forms;
 
-namespace QLMamNon.Forms.DanhMuc
+namespace QLMamNon.Forms.ThuChi
 {
-    public partial class FrmPhieuChi : CRUDForm
+    public partial class FrmPhieuChi : CRUDForm<phieuchi>
     {
         #region Properties
 
@@ -23,13 +23,13 @@ namespace QLMamNon.Forms.DanhMuc
             this.FormKey = AppForms.FormPhieuChi;
 
             this.loadPhieuChi();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, null, null, this.gvMain, this.phieuChiTableAdapter.Adapter, this.phieuChiRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.PhieuChiDataTable);
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, null, null, this.gvMain, this.phieuChiRowBindingSource.DataSource);
         }
 
         private void loadPhieuChi()
         {
             PhieuChiService phieuChiService = new PhieuChiService();
-            this.phieuChiRowBindingSource.DataSource = phieuChiService.LoadPhieuChi(this.phieuChiTableAdapter);
+            this.phieuChiRowBindingSource.DataSource = phieuChiService.LoadPhieuChi(Entities);
         }
 
         protected override void onAdding()
@@ -47,8 +47,7 @@ namespace QLMamNon.Forms.DanhMuc
             FrmTaoPhieuChi frm = (FrmTaoPhieuChi)FormMainFacade.GetForm(AppForms.FormTaoPhieuChi);
             frm.GridView = this.GridViewMain;
             frm.IsEditing = true;
-            DataRowView rowView = this.phieuChiRowBindingSource.Current as DataRowView;
-            frm.PhieuChiRow = rowView.Row as QLMamNon.Dao.QLMamNonDs.PhieuChiRow;
+            frm.PhieuChiRow = this.phieuChiRowBindingSource.Current as phieuchi;
 
             FormMainFacade.ShowDialog(AppForms.FormTaoPhieuChi);
             FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.ModifiedCaption);
@@ -75,7 +74,9 @@ namespace QLMamNon.Forms.DanhMuc
                 double donGia = (double)this.GridViewMain.GetFocusedRowCellValue("DonGia");
                 DateTime createdDate = (DateTime)this.GridViewMain.GetFocusedRowCellValue("CreatedDate");
 
-                this.phieuChiTableAdapter.Delete(phieuChiId, maPhieu, soTien, phanLoaiChiId, soLuong, donGia, ngay, createdDate);
+                phieuchi phieuChi = new phieuchi() { PhieuChiId = phieuChiId };
+                Entities.Entry(phieuChi).State = EntityState.Deleted;
+                Entities.SaveChanges();
                 this.loadPhieuChi();
                 FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.DeletedCaption);
             }

@@ -51,6 +51,8 @@ namespace QLMamNon.Forms.Resource
             formToTypes.Add(AppForms.FormPreference, typeof(FrmPreference).FullName);
             formToTypes.Add(AppForms.FormUser, typeof(FrmUser).FullName);
             formToTypes.Add(AppForms.FormBackupDb, typeof(FrmBackupDb).FullName);
+            formToTypes.Add(AppForms.FormBangKeCacLoaiChi, typeof(FrmBangKeCacLoaiChi).FullName);
+            formToTypes.Add(AppForms.FormBangKeThuTrongNgay, typeof(FrmBangKeThuTrongNgay).FullName);
         }
 
         public Form GetForm(string key)

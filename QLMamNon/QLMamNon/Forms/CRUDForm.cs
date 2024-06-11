@@ -1,17 +1,19 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
-using MySql.Data.MySqlClient;
+using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
 using QLMamNon.Workflow;
 
 namespace QLMamNon.Forms
 {
-    public class CRUDForm : DevExpress.XtraEditors.XtraForm
+    public class CRUDForm<T> : DevExpress.XtraEditors.XtraForm
     {
         #region Properties
 
@@ -27,9 +29,9 @@ namespace QLMamNon.Forms
 
         protected GridView GridViewMain { get; set; }
 
-        protected MySqlDataAdapter DataAdapter { get; set; }
+        protected qlmamnonEntities Entities { get; set; }
 
-        protected DataTable DataTable { get; set; }
+        protected BindingList<T> DataTable { get; set; }
 
         protected string FormKey { get; set; }
 
@@ -44,11 +46,17 @@ namespace QLMamNon.Forms
         public CRUDForm()
         {
             this.GridViewColumnSequenceName = "STT";
+            bool designMode = (LicenseManager.UsageMode == LicenseUsageMode.Designtime);
+            if (!designMode)
+            {
+                this.Entities = StaticDataFacade.GetQLMNEntities();
+            }
         }
 
         #region Construction
 
-        protected void InitForm(SimpleButton buttonAdd, SimpleButton buttonEdit, SimpleButton buttonDelete, SimpleButton buttonSave, SimpleButton buttonCancel, GridView gridView, MySqlDataAdapter dataAdapter, DataTable dataTable)
+        protected void InitForm(SimpleButton buttonAdd, SimpleButton buttonEdit, SimpleButton buttonDelete, SimpleButton buttonSave,
+            SimpleButton buttonCancel, GridView gridView, object dataTable)
         {
             this.ButtonAdd = buttonAdd;
             this.ButtonCancel = buttonCancel;
@@ -56,8 +64,7 @@ namespace QLMamNon.Forms
             this.ButtonEdit = buttonEdit;
             this.ButtonSave = buttonSave;
             this.GridViewMain = gridView;
-            this.DataAdapter = dataAdapter;
-            this.DataTable = dataTable;
+            this.DataTable = dataTable as BindingList<T>;
 
             this.InitEvents();
         }
@@ -87,9 +94,9 @@ namespace QLMamNon.Forms
             {
                 this.ButtonCancel.Click += new System.EventHandler(this.btnCancel_Click);
             }
-            if (this.DataAdapter != null)
+            if (this.Entities != null)
             {
-                this.DataAdapter.RowUpdated += new MySqlRowUpdatedEventHandler(onRowUpdated);
+                //this.Entities.RowUpdated += new MySqlRowUpdatedEventHandler(onRowUpdated);
             }
             if (this.GridViewMain != null)
             {
@@ -118,16 +125,16 @@ namespace QLMamNon.Forms
             FormMainFacade.SetFormCaption(this.FormKey);
         }
 
-        protected void onRowUpdated(object sender, MySqlRowUpdatedEventArgs e)
-        {
-            // Conditionally execute this code block on inserts only. 
-            if (e.StatementType == StatementType.Insert)
-            {
-                MySqlCommand cmdNewID = new MySqlCommand("SELECT @@IDENTITY", this.DataAdapter.SelectCommand.Connection);
-                e.Row[this.TablePrimaryKey] = cmdNewID.ExecuteScalar();
-                e.Status = UpdateStatus.SkipCurrentRow;
-            }
-        }
+        //protected void onRowUpdated(object sender, MySqlRowUpdatedEventArgs e)
+        //{
+        //    // Conditionally execute this code block on inserts only. 
+        //    if (e.StatementType == StatementType.Insert)
+        //    {
+        //        MySqlCommand cmdNewID = new MySqlCommand("SELECT @@IDENTITY", this.Entities.SelectCommand.Connection);
+        //        e.Row[this.TablePrimaryKey] = cmdNewID.ExecuteScalar();
+        //        e.Status = UpdateStatus.SkipCurrentRow;
+        //    }
+        //}
 
         protected void GridViewMain_ShowingPopupEditForm(object sender, DevExpress.XtraGrid.Views.Grid.ShowingPopupEditFormEventArgs e)
         {
@@ -218,15 +225,7 @@ namespace QLMamNon.Forms
         {
             try
             {
-                DataTable table = this.DataTable.GetChanges();
-
-                if (table != null)
-                {
-                    this.DataAdapter.Update(table);
-                    this.DataTable.Merge(table);
-                }
-
-                this.DataTable.AcceptChanges();
+                this.Entities.SaveChanges();
             }
             catch (Exception ex)
             {
@@ -265,13 +264,13 @@ namespace QLMamNon.Forms
 
         protected virtual void onCanceling()
         {
-            DataTable changedTable = this.DataTable.GetChanges();
+            //DataTable changedTable = this.DataTable.GetChanges();
 
-            if (changedTable != null)
-            {
-                this.DataTable.RejectChanges();
-                this.DataTable.AcceptChanges();
-            }
+            //if (changedTable != null)
+            //{
+            //    this.DataTable.RejectChanges();
+            //    this.DataTable.AcceptChanges();
+            //}
 
             fillRelativeMainDataTable();
 

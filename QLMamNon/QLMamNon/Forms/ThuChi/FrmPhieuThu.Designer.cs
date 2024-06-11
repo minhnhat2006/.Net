@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.DanhMuc
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.ThuChi
 {
     partial class FrmPhieuThu
     {
@@ -35,6 +37,7 @@
             this.phieuThuRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSTT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPhanLoaiThu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHocSinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoTien = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -44,9 +47,6 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnChinhSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.phieuThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter();
-            this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
-            this.colPhanLoaiThu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuThuRowBindingSource)).BeginInit();
@@ -81,7 +81,7 @@
             // phieuThuRowBindingSource
             // 
             this.phieuThuRowBindingSource.AllowNew = true;
-            this.phieuThuRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhieuThuRow);
+            this.phieuThuRowBindingSource.DataSource = typeof(phieuthu);
             this.phieuThuRowBindingSource.Sort = "Ngay,MaPhieu";
             // 
             // gvMain
@@ -95,6 +95,9 @@
             this.colMaPhieu,
             this.colGhiChu});
             this.gvMain.GridControl = this.gcMain;
+            this.gvMain.GroupCount = 1;
+            this.gvMain.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoTien", null, "Tổng = {0:n0}")});
             this.gvMain.Name = "gvMain";
             this.gvMain.OptionsBehavior.Editable = false;
             this.gvMain.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
@@ -104,7 +107,7 @@
             this.gvMain.OptionsView.ShowFooter = true;
             this.gvMain.OptionsView.ShowGroupPanel = false;
             this.gvMain.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colNgay, DevExpress.Data.ColumnSortOrder.Ascending)});
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colNgay, DevExpress.Data.ColumnSortOrder.Descending)});
             this.gvMain.DoubleClick += new System.EventHandler(this.gvMain_DoubleClick);
             // 
             // colSTT
@@ -113,7 +116,16 @@
             this.colSTT.Name = "colSTT";
             this.colSTT.Visible = true;
             this.colSTT.VisibleIndex = 0;
-            this.colSTT.Width = 37;
+            this.colSTT.Width = 41;
+            // 
+            // colPhanLoaiThu
+            // 
+            this.colPhanLoaiThu.Caption = "Phân loại thu";
+            this.colPhanLoaiThu.FieldName = "PhanLoaiThu";
+            this.colPhanLoaiThu.Name = "colPhanLoaiThu";
+            this.colPhanLoaiThu.Visible = true;
+            this.colPhanLoaiThu.VisibleIndex = 1;
+            this.colPhanLoaiThu.Width = 145;
             // 
             // colNgay
             // 
@@ -132,7 +144,7 @@
             this.colHocSinh.FieldName = "HocSinh";
             this.colHocSinh.Name = "colHocSinh";
             this.colHocSinh.Visible = true;
-            this.colHocSinh.VisibleIndex = 3;
+            this.colHocSinh.VisibleIndex = 2;
             this.colHocSinh.Width = 85;
             // 
             // colSoTien
@@ -145,7 +157,7 @@
             this.colSoTien.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoTien", "{0:n0}")});
             this.colSoTien.Visible = true;
-            this.colSoTien.VisibleIndex = 4;
+            this.colSoTien.VisibleIndex = 3;
             this.colSoTien.Width = 93;
             // 
             // colMaPhieu
@@ -154,7 +166,7 @@
             this.colMaPhieu.FieldName = "MaPhieu";
             this.colMaPhieu.Name = "colMaPhieu";
             this.colMaPhieu.Visible = true;
-            this.colMaPhieu.VisibleIndex = 5;
+            this.colMaPhieu.VisibleIndex = 4;
             this.colMaPhieu.Width = 153;
             // 
             // colGhiChu
@@ -163,7 +175,7 @@
             this.colGhiChu.FieldName = "GhiChu";
             this.colGhiChu.Name = "colGhiChu";
             this.colGhiChu.Visible = true;
-            this.colGhiChu.VisibleIndex = 6;
+            this.colGhiChu.VisibleIndex = 5;
             this.colGhiChu.Width = 174;
             // 
             // panelControl1
@@ -213,23 +225,6 @@
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             // 
-            // phieuThuTableAdapter
-            // 
-            this.phieuThuTableAdapter.ClearBeforeFill = true;
-            // 
-            // hocSinhTableAdapter
-            // 
-            this.hocSinhTableAdapter.ClearBeforeFill = true;
-            // 
-            // colPhanLoaiThu
-            // 
-            this.colPhanLoaiThu.Caption = "Phân loại thu";
-            this.colPhanLoaiThu.FieldName = "PhanLoaiThu";
-            this.colPhanLoaiThu.Name = "colPhanLoaiThu";
-            this.colPhanLoaiThu.Visible = true;
-            this.colPhanLoaiThu.VisibleIndex = 1;
-            this.colPhanLoaiThu.Width = 145;
-            // 
             // FrmPhieuThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,7 +252,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnChinhSua;
         private DevExpress.XtraEditors.SimpleButton btnThem;
-        private Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter phieuThuTableAdapter;
         private System.Windows.Forms.BindingSource phieuThuRowBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colSTT;
         private DevExpress.XtraGrid.Columns.GridColumn colNgay;
@@ -265,7 +259,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colHocSinh;
         private DevExpress.XtraGrid.Columns.GridColumn colMaPhieu;
         private DevExpress.XtraGrid.Columns.GridColumn colGhiChu;
-        private Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraGrid.Columns.GridColumn colPhanLoaiThu;
     }

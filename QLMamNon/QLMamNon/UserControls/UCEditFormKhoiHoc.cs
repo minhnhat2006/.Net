@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.XtraGrid.Views.Grid;
+﻿using QLMamNon.Components.Data.Static;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
-using QLMamNon.Components.Data.Static;
-using ACG.Core.WinForm.Util;
+using System;
+using System.Data;
 
 namespace QLMamNon.UserControls
 {
@@ -27,11 +20,11 @@ namespace QLMamNon.UserControls
 
         private void UCEditFormKhoiHoc_Enter(object sender, EventArgs e)
         {
-            QLMamNon.Dao.QLMamNonDs.KhoiRow row = this.GridView.GetFocusedDataRow() as QLMamNon.Dao.QLMamNonDs.KhoiRow;
+            DataRow row = this.GridView.GetFocusedDataRow();
 
             if (row != null)
             {
-                this.cmbTruong.EditValue = StaticDataUtil.GetTruongIdByKhoiId(this.khoiTruongTableAdapter, row.KhoiId);
+                this.cmbTruong.EditValue = StaticDataUtil.GetTruongIdByKhoiId(Entities, (int)row["KhoiId"]);
             }
         }
     }

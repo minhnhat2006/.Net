@@ -9,12 +9,14 @@ namespace QLMamNon.Constant
         public const int XemSoQuyTienMat = 3;
         public const int XemBaoCaoThuChi = 4;
         public const int ManageUser = 5;
+        public const int AddEditPhieuThu = 6;
 
         public static Dictionary<string, int> FormKeyToPrivilegeId = new Dictionary<string, int>()
         {
             {AppForms.FormSoQuyTienMat, XemSoQuyTienMat},
             {AppForms.FormBaoCaoTinhHinhThuChi, XemBaoCaoThuChi},
-            {AppForms.FormUser, ManageUser}
+            {AppForms.FormTaoPhieuThu, AddEditPhieuThu},
+            {AppForms.FormUser, ManageUser }
         };
     }
 }

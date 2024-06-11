@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.DanhMuc
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.DanhMuc
 {
     partial class FrmTruongHoc
     {
@@ -31,7 +33,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTruongHoc));
             this.truongRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.truongTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.TruongTableAdapter();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
@@ -55,11 +56,7 @@
             // truongRowBindingSource
             // 
             this.truongRowBindingSource.AllowNew = true;
-            this.truongRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.TruongRow);
-            // 
-            // truongTableAdapter
-            // 
-            this.truongTableAdapter.ClearBeforeFill = true;
+            this.truongRowBindingSource.DataSource = typeof(truong);
             // 
             // panelMain
             // 
@@ -217,7 +214,6 @@
         #endregion
 
         private System.Windows.Forms.BindingSource truongRowBindingSource;
-        private Dao.QLMamNonDsTableAdapters.TruongTableAdapter truongTableAdapter;
         private System.Windows.Forms.Panel panelMain;
         private DevExpress.XtraGrid.GridControl gcMain;
         private DevExpress.XtraGrid.Views.Grid.GridView gvMain;

@@ -1,14 +1,16 @@
-﻿using System;
-using System.Data;
-using ACG.Core.WinForm.Util;
+﻿using ACG.Core.WinForm.Util;
 using DevExpress.XtraGrid.Views.Base;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
+using System;
+using System.ComponentModel;
+using System.Linq;
 
 namespace QLMamNon.Forms.HocSinh
 {
-    public partial class FrmThongTinHocTap : CRUDForm
+    public partial class FrmThongTinHocTap : CRUDForm<viewhoctap>
     {
         #region Properties
 
@@ -25,7 +27,7 @@ namespace QLMamNon.Forms.HocSinh
             this.DanhMuc = DanhMucConstant.ThongTinHocTap;
             this.FormKey = AppForms.FormThongTinHocTap;
             this.loadThongTinHocTap();
-            this.InitForm(null, null, null, this.btnLuu, this.btnHuyBo, this.gvMain, this.viewHocTapTableAdapter.Adapter, this.viewHocTapRowBindingSource.DataSource as DataTable);
+            this.InitForm(null, null, null, this.btnLuu, this.btnHuyBo, this.gvMain, this.viewHocTapRowBindingSource.DataSource);
         }
 
         private void FrmThongTinHocTap_Load(object sender, EventArgs e)
@@ -55,9 +57,9 @@ namespace QLMamNon.Forms.HocSinh
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            this.cmbNam.EditValue = DBNull.Value;
-            this.cmbThang.EditValue = DBNull.Value;
-            this.cmbLop.EditValue = DBNull.Value;
+            this.cmbNam.EditValue = null;
+            this.cmbThang.EditValue = null;
+            this.cmbLop.EditValue = null;
         }
 
         #endregion
@@ -79,17 +81,17 @@ namespace QLMamNon.Forms.HocSinh
             int nam = (int)cmbNam.EditValue;
             int thang = IntUtil.StringToInt((string)cmbThang.EditValue).Value;
             DateTime ngay = new DateTime(nam, thang, DateTime.DaysInMonth(nam, thang));
-            this.viewHocTapRowBindingSource.DataSource = this.viewHocTapTableAdapter.GetDataByLopAndNgay(lopId, ngay);
-            this.DataTable = this.viewHocTapRowBindingSource.DataSource as DataTable;
+            this.DataTable = new BindingList<viewhoctap>(Entities.getViewHocTapByLopAndNgay(lopId, ngay).ToList());
+            this.viewHocTapRowBindingSource.DataSource = this.DataTable;
 
-            foreach (QLMamNon.Dao.QLMamNonDs.ViewHocTapRow row in (this.DataTable as QLMamNon.Dao.QLMamNonDs.ViewHocTapDataTable))
+            foreach (viewhoctap row in this.DataTable)
             {
-                if (row.IsNgayTinhNull())
+                if (row.NgayTinh == null)
                 {
-                    row.NgayTinh = new MySql.Data.Types.MySqlDateTime(nam, thang, DateTime.DaysInMonth(nam, thang), 0, 0, 0, 0);
+                    row.NgayTinh = new DateTime(nam, thang, DateTime.DaysInMonth(nam, thang), 0, 0, 0, 0);
                 }
 
-                if (row.IsSoNgayNghiThangNull())
+                if (row.SoNgayNghiThang == null)
                 {
                     row.SoNgayNghiThang = 0;
                 }

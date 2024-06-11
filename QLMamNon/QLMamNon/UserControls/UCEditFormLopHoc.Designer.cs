@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.UserControls
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.UserControls
 {
     partial class UCEditFormLopHoc
     {
@@ -40,8 +42,6 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.dxValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.khoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoiTableAdapter();
-            this.lopKhoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbKhoi.Properties)).BeginInit();
@@ -103,7 +103,7 @@
             // 
             // khoiRowBindingSource
             // 
-            this.khoiRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.KhoiRow);
+            this.khoiRowBindingSource.DataSource = typeof(khoi);
             // 
             // txtName
             // 
@@ -186,14 +186,6 @@
             // 
             this.dxValidationProvider.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
             // 
-            // khoiTableAdapter
-            // 
-            this.khoiTableAdapter.ClearBeforeFill = true;
-            // 
-            // lopKhoiTableAdapter
-            // 
-            this.lopKhoiTableAdapter.ClearBeforeFill = true;
-            // 
             // UCEditFormLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,10 +219,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider;
         private DevExpress.XtraEditors.MemoEdit txtDescription;
-        private Dao.QLMamNonDsTableAdapters.KhoiTableAdapter khoiTableAdapter;
         private DevExpress.XtraEditors.LookUpEdit cmbKhoi;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private System.Windows.Forms.BindingSource khoiRowBindingSource;
-        private Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter lopKhoiTableAdapter;
     }
 }

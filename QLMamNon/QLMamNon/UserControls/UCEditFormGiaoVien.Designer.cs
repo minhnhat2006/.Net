@@ -246,7 +246,7 @@
             // 
             // thanhPhoRowBindingSource
             // 
-            this.thanhPhoRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.ThanhPhoRow);
+            this.thanhPhoRowBindingSource.DataSource = typeof(ThanhPhoRow);
             // 
             // cmbQuan
             // 
@@ -272,7 +272,7 @@
             // 
             // quanHuyenRowBindingSource
             // 
-            this.quanHuyenRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.QuanHuyenRow);
+            this.quanHuyenRowBindingSource.DataSource = typeof(QuanHuyenRow);
             // 
             // cmbPhuong
             // 
@@ -297,7 +297,7 @@
             // 
             // phuongXaRowBindingSource
             // 
-            this.phuongXaRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhuongXaRow);
+            this.phuongXaRowBindingSource.DataSource = typeof(PhuongXaRow);
             // 
             // Root
             // 

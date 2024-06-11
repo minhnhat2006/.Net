@@ -1,23 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using ACG.Core.WinForm.Util;
+﻿using ACG.Core.WinForm.Util;
+using QLMamNon.Dao;
 using QLMamNon.Entity.Form;
 using QLMamNon.Properties;
+using QLMamNon.Reports;
 using QLMamNon.Service.Data;
-using QLThuChi;
+using System;
+using System.Collections.Generic;
 
 namespace QLMamNon.Forms.ThuChi
 {
     public partial class FrmSoThuTien
     {
-        private List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> getViewBangThuTienRowsFromMainGrid()
+        private List<viewbangthutien> getViewBangThuTienRowsFromMainGrid()
         {
-            List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> rows = new List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow>();
+            List<viewbangthutien> rows = new List<viewbangthutien>();
             for (int i = 0; i < this.GridViewMain.DataRowCount; i++)
             {
-                object dataRow = this.GridViewMain.GetRow(this.GridViewMain.GetVisibleRowHandle(i));
-                QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow = (dataRow as DataRowView).Row as QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow;
+                viewbangthutien viewBangThuTienRow = (viewbangthutien)this.GridViewMain.GetRow(this.GridViewMain.GetVisibleRowHandle(i));
                 rows.Add(viewBangThuTienRow);
             }
 
@@ -27,7 +26,7 @@ namespace QLMamNon.Forms.ThuChi
         private void fillRptSoThuTienTrang1(RptSoThuTienTrang1 rpt)
         {
             SoThuTienService soThuTienService = new SoThuTienService();
-            List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> rows = soThuTienService.EvaluateViewBangThuTienRowsForReport(this.getViewBangThuTienRowsFromMainGrid(), this.ngayTinh);
+            List<viewbangthutien> rows = soThuTienService.EvaluateViewBangThuTienRowsForReport(Entities, this.getViewBangThuTienRowsFromMainGrid(), this.ngayTinh);
             rpt.viewBangThuTienRowbindingSource.DataSource = rows;
             rpt.Ngay.Value = this.ngayTinh;
         }
@@ -50,11 +49,11 @@ namespace QLMamNon.Forms.ThuChi
             List<GiayBaoNopTientem> giayBaoNopTiens = new List<GiayBaoNopTientem>();
 
             SoThuTienService soThuTienService = new SoThuTienService();
-            List<QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow> rows = soThuTienService.EvaluateViewBangThuTienRowsForReport(this.getViewBangThuTienRowsFromMainGrid(), this.ngayTinh);
+            List<viewbangthutien> rows = soThuTienService.EvaluateViewBangThuTienRowsForReport(Entities, this.getViewBangThuTienRowsFromMainGrid(), this.ngayTinh);
 
-            foreach (QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow viewBangThuTienRow in rows)
+            foreach (viewbangthutien viewBangThuTienRow in rows)
             {
-                if (!viewBangThuTienRow.IsNgayNopLan2Null())
+                if (viewBangThuTienRow.NgayNopLan2 != null)
                 {
                     continue;
                 }
@@ -63,20 +62,20 @@ namespace QLMamNon.Forms.ThuChi
                 {
                     HoTen = viewBangThuTienRow.HoTen,
                     Lop = viewBangThuTienRow.Lop,
-                    Lan = viewBangThuTienRow.IsNgayNopLan1Null() ? 1 : 2,
+                    Lan = viewBangThuTienRow.NgayNopLan1 == null ? 1 : 2,
                     SoTienAnSang = viewBangThuTienRow.SoTienAnSangThangNay,
                     SoTienAnToi = viewBangThuTienRow.SoTienAnToiThangNay,
                     SoTienKhoanThuChinh = viewBangThuTienRow.KhoanThuChinh,
-                    SoTienDieuHoa = viewBangThuTienRow.SoTienDieuHoa,
-                    SoTienNangKhieu = viewBangThuTienRow.SoTienNangKhieu,
-                    SoTienDoDung = viewBangThuTienRow.SoTienDoDung,
-                    SoTienNoThangTruoc = viewBangThuTienRow.SoTienTruyThu,
-                    SoTienAnSangThuaThangTruoc = viewBangThuTienRow.SoTienAnSangThangTruoc,
-                    SoTienAnToiThuaThangTruoc = viewBangThuTienRow.SoTienAnToiThangTruoc,
-                    SoTienAnTruaThuaThangTruoc = viewBangThuTienRow.SoTienSXThangTruoc,
-                    SoXuatAnSangThuaThangTruoc = viewBangThuTienRow.AnSangThangTruoc,
+                    SoTienDieuHoa = viewBangThuTienRow.SoTienDieuHoa.Value,
+                    SoTienNangKhieu = viewBangThuTienRow.SoTienNangKhieu.Value,
+                    SoTienDoDung = viewBangThuTienRow.SoTienDoDung.Value,
+                    SoTienNoThangTruoc = viewBangThuTienRow.SoTienTruyThu.Value,
+                    SoTienAnSangThuaThangTruoc = viewBangThuTienRow.SoTienAnSangThangTruoc.Value,
+                    SoTienAnToiThuaThangTruoc = viewBangThuTienRow.SoTienAnToiThangTruoc.Value,
+                    SoTienAnTruaThuaThangTruoc = viewBangThuTienRow.SoTienSXThangTruoc.Value,
+                    SoXuatAnSangThuaThangTruoc = viewBangThuTienRow.AnSangThangTruoc.Value,
                     SoXuatAnToiThuaThangTruoc = viewBangThuTienRow.AnToiThangTruoc,
-                    SoXuatAnTruaThuaThangTruoc = viewBangThuTienRow.SXThangTruoc
+                    SoXuatAnTruaThuaThangTruoc = viewBangThuTienRow.SXThangTruoc.Value
                 };
 
                 giayBaoNopTiens.Add(giayBaoNopTien);

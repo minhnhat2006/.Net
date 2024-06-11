@@ -1,11 +1,13 @@
-﻿using System;
-using DevExpress.XtraGrid.Views.Base;
+﻿using DevExpress.XtraGrid.Views.Base;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.UserControls;
+using System;
+using System.Data.Entity;
 
 namespace QLMamNon.Forms.DanhMuc
 {
-    public partial class FrmKhoanThuHangNam : CRUDForm
+    public partial class FrmKhoanThuHangNam : CRUDForm<khoanthuhangnam>
     {
         public FrmKhoanThuHangNam()
         {
@@ -14,10 +16,10 @@ namespace QLMamNon.Forms.DanhMuc
             this.TablePrimaryKey = "KhoanThuHangNamId";
             this.DanhMuc = DanhMucConstant.KhoanThuHangNam;
             this.FormKey = AppForms.FormDanhMucKhoanThuHangNam;
-
-            this.khoanThuHangNamRowBindingSource.DataSource = this.khoanThuHangNamTableAdapter.GetData();
+            Entities.khoanthuhangnams.Load();
+            this.khoanThuHangNamRowBindingSource.DataSource = Entities.khoanthuhangnams.Local.ToBindingList();
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormKhoanThuHangNam();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.khoanThuHangNamTableAdapter.Adapter, this.khoanThuHangNamRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.KhoanThuHangNamDataTable);
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.khoanThuHangNamRowBindingSource.DataSource);
         }
 
         private void FrmKhoanThuHangNam_Load(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace QLMamNon.Forms.DanhMuc
             {
                 Object khoiIdObj = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "KhoiId");
 
-                if (!DBNull.Value.Equals(khoiIdObj))
+                if (khoiIdObj != null)
                 {
                     int khoiId = (int)khoiIdObj;
                     e.DisplayText = StaticDataUtil.GetKhoiNameByKhoiId(khoiId);
@@ -42,7 +44,7 @@ namespace QLMamNon.Forms.DanhMuc
             {
                 Object khoanThuIdObj = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "KhoanThuId");
 
-                if (!DBNull.Value.Equals(khoanThuIdObj))
+                if (khoanThuIdObj != null)
                 {
                     int khoanThuId = (int)khoanThuIdObj;
                     e.DisplayText = StaticDataUtil.GetKhoanThuNameByKhoanThuId(khoanThuId);

@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.XtraGrid.Views.Grid;
+﻿using QLMamNon.Components.Data.Static;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
-using QLMamNon.Components.Data.Static;
+using System;
+using System.Collections.Generic;
 
 namespace QLMamNon.UserControls
 {
@@ -26,19 +20,19 @@ namespace QLMamNon.UserControls
 
         private void cmbTinh_EditValueChanged(object sender, EventArgs e)
         {
-            if (cmbTinh.EditValue != DBNull.Value)
+            if (cmbTinh.EditValue != null)
             {
-                QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable table = StaticDataFacade.Get(StaticDataKeys.QuanHuyen) as QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable;
-                this.quanHuyenRowBindingSource.DataSource = table.Select(String.Format("ThanhPhoId={0}", cmbTinh.EditValue));
+                List<quanhuyen> table = StaticDataFacade.Get(StaticDataKeys.QuanHuyen) as List<quanhuyen>;
+                this.quanHuyenRowBindingSource.DataSource = table.FindAll(q => q.ThanhPhoId == (int?)cmbTinh.EditValue);
             }
         }
 
         private void cmbQuan_EditValueChanged(object sender, EventArgs e)
         {
-            if (cmbQuan.EditValue != DBNull.Value)
+            if (cmbQuan.EditValue != null)
             {
-                QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable table = StaticDataFacade.Get(StaticDataKeys.PhuongXa) as QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable;
-                this.phuongXaRowBindingSource.DataSource = table.Select(String.Format("QuanHuyenId={0}", cmbQuan.EditValue));
+                List<phuongxa> table = StaticDataFacade.Get(StaticDataKeys.PhuongXa) as List<phuongxa>;
+                this.phuongXaRowBindingSource.DataSource = table.FindAll(p => p.QuanHuyenId == (int?)cmbQuan.EditValue);
             }
         }
     }

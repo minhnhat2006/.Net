@@ -2,14 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="QLMamNon.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="qlmamnonConnectionString1" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=localhost;User Id=root;Password=root;Persist Security Info=True;database=qlmamnon;Character Set=utf8;Allow Zero Datetime=True;Convert Zero Datetime=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=localhost;User Id=root;Password=root;Persist Security Info=True;database=qlmamnon;Character Set=utf8;Allow Zero Datetime=True;Convert Zero Datetime=True</Value>
-    </Setting>
     <Setting Name="AppLannchDate" Type="System.DateTime" Scope="Application">
       <Value Profile="(Default)">2017-06-06</Value>
     </Setting>
@@ -57,6 +49,26 @@
     </Setting>
     <Setting Name="ShowGiayBaoNopTienNote" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="POSPrinterName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastMaPhieuThu" Type="System.Int64" Scope="User">
+      <Value Profile="(Default)">12345</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PDUSendMessageTemplate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">001100{0}81{1}0008aa{2}{3}</Value>
+    </Setting>
+    <Setting Name="qlmamnonConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=127.0.0.1;user id=root;password=root;persistsecurityinfo=True;database=qlmamnon;characterset=utf8;allowzerodatetime=True;convertzerodatetime=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=127.0.0.1;user id=root;password=root;persistsecurityinfo=True;database=qlmamnon;characterset=utf8;allowzerodatetime=True;convertzerodatetime=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

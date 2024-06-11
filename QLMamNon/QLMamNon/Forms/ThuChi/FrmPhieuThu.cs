@@ -1,18 +1,20 @@
-﻿using System;
-using System.Data;
-using System.Windows.Forms;
-using QLMamNon.Constant;
+﻿using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
-using QLMamNon.Forms.ThuChi;
 using QLMamNon.Service.Data;
+using System;
+using System.ComponentModel;
+using System.Data;
+using System.Data.Entity;
+using System.Windows.Forms;
 
-namespace QLMamNon.Forms.DanhMuc
+namespace QLMamNon.Forms.ThuChi
 {
-    public partial class FrmPhieuThu : CRUDForm
+    public partial class FrmPhieuThu : CRUDForm<phieuthu>
     {
         #region Properties
 
-        private QLMamNon.Dao.QLMamNonDs.HocSinhDataTable _hocSinhTable;
+        private BindingList<hocsinh> hocSinhTable;
 
         #endregion
 
@@ -23,16 +25,16 @@ namespace QLMamNon.Forms.DanhMuc
             this.TablePrimaryKey = "PhieuThuId";
             this.DanhMuc = DanhMucConstant.PhieuThu;
             this.FormKey = AppForms.FormPhieuThu;
-
-            this._hocSinhTable = this.hocSinhTableAdapter.GetData();
+            Entities.hocsinhs.Load();
+            this.hocSinhTable = this.Entities.hocsinhs.Local.ToBindingList();
             this.loadPhieuThu();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, null, null, this.gvMain, this.phieuThuTableAdapter.Adapter, this.phieuThuRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.PhieuThuDataTable);
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, null, null, this.gvMain, this.phieuThuRowBindingSource.DataSource);
         }
 
         private void loadPhieuThu()
         {
             PhieuThuService phieuThuService = new PhieuThuService();
-            this.phieuThuRowBindingSource.DataSource = phieuThuService.LoadPhieuThu(this._hocSinhTable);
+            this.phieuThuRowBindingSource.DataSource = phieuThuService.LoadPhieuThu(hocSinhTable);
         }
 
         protected override void onAdding()
@@ -50,8 +52,8 @@ namespace QLMamNon.Forms.DanhMuc
             FrmTaoPhieuThu frm = (FrmTaoPhieuThu)FormMainFacade.GetForm(AppForms.FormTaoPhieuThu);
             frm.GridView = this.GridViewMain;
             frm.IsEditing = true;
-            DataRowView rowView = this.phieuThuRowBindingSource.Current as DataRowView;
-            frm.PhieuThuRow = rowView.Row as QLMamNon.Dao.QLMamNonDs.PhieuThuRow;
+            phieuthu phieuThu = this.phieuThuRowBindingSource.Current as phieuthu;
+            frm.PhieuThuRow = phieuThu;
 
             FormMainFacade.ShowDialog(AppForms.FormTaoPhieuThu);
             FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.ModifiedCaption);
@@ -76,8 +78,11 @@ namespace QLMamNon.Forms.DanhMuc
                 int hocSinhId = (int)this.GridViewMain.GetFocusedRowCellValue("HocSinhId");
                 DateTime createdDate = (DateTime)this.GridViewMain.GetFocusedRowCellValue("CreatedDate");
                 int phanLoaiThuId = (int)this.GridViewMain.GetFocusedRowCellValue("PhanLoaiThuId");
+                // Delete Phieu Thu
+                var phieuThu = new phieuthu() { PhieuThuId=phieuThuId };
+                this.Entities.Entry(phieuThu).State = EntityState.Deleted;
+                this.Entities.SaveChanges();
 
-                this.phieuThuTableAdapter.Delete(phieuThuId, soTien, maPhieu, hocSinhId, phanLoaiThuId, ngay, createdDate);
                 this.loadPhieuThu();
                 FormMainFacade.SetStatusCaption(this.FormKey, StatusCaptions.DeletedCaption);
             }

@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.DanhMuc
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.DanhMuc
 {
     partial class FrmTinhThanhPho
     {
@@ -42,7 +44,6 @@
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colThanhPhoId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.thanhPhoTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ThanhPhoTableAdapter();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -148,7 +149,7 @@
             // 
             // thanhPhoRowBindingSource
             // 
-            this.thanhPhoRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.ThanhPhoRow);
+            this.thanhPhoRowBindingSource.DataSource = typeof(thanhpho);
             // 
             // gvMain
             // 
@@ -175,10 +176,6 @@
             this.colName.Name = "colName";
             this.colName.Visible = true;
             this.colName.VisibleIndex = 1;
-            // 
-            // thanhPhoTableAdapter
-            // 
-            this.thanhPhoTableAdapter.ClearBeforeFill = true;
             // 
             // FrmTinhThanhPho
             // 
@@ -208,7 +205,6 @@
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.BindingSource thanhPhoRowBindingSource;
-        private Dao.QLMamNonDsTableAdapters.ThanhPhoTableAdapter thanhPhoTableAdapter;
         private DevExpress.XtraGrid.GridControl gcMain;
         private DevExpress.XtraGrid.Views.Grid.GridView gvMain;
         private DevExpress.XtraGrid.Columns.GridColumn colThanhPhoId;

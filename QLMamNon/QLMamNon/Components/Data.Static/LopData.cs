@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ACG.Core.WinForm.Data.Static;
+using QLMamNon.Dao;
 using System.Linq;
-using System.Text;
-using ACG.Core.WinForm.Data.Static;
 
 namespace QLMamNon.Components.Data.Static
 {
     public class LopData : IStaticData
     {
-        private QLMamNon.Dao.QLMamNonDsTableAdapters.LopTableAdapter tableAdapter;
+        private qlmamnonEntities entities;
 
-        public LopData(QLMamNon.Dao.QLMamNonDsTableAdapters.LopTableAdapter tableAdapter)
+        public LopData(qlmamnonEntities entities)
         {
-            this.tableAdapter = tableAdapter;
+            this.entities = entities;
         }
 
         #region IStaticData Members
 
         public object Retrieve()
         {
-            return tableAdapter.GetData();
+            return this.entities.lops.ToList();
         }
 
         #endregion

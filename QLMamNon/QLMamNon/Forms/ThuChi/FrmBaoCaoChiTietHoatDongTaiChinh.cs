@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Views.Grid;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
-using QLThuChi;
+using QLMamNon.Reports;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -17,13 +19,17 @@ namespace QLMamNon.Forms.ThuChi
 
         public bool IsEditing { get; set; }
 
-        public QLMamNon.Dao.QLMamNonDs.PhieuThuRow PhieuThuRow { get; set; }
+        public phieuthu PhieuThuRow { get; set; }
+
+        private qlmamnonEntities entities;
 
         #endregion
 
         public FrmBaoCaoChiTietHoatDongTaiChinh()
         {
-            this.FormKey = AppForms.FormBaoCaoChiTietHoatDongTaiChinh;
+            FormKey = AppForms.FormBaoCaoChiTietHoatDongTaiChinh;
+            entities = StaticDataFacade.GetQLMNEntities();
+
             InitializeComponent();
         }
 
@@ -49,7 +55,7 @@ namespace QLMamNon.Forms.ThuChi
 
         private void FrmBaoCaoHoatDongTaiChinh_Load(object sender, EventArgs e)
         {
-            this.phanLoaiChiRowBindingSource.DataSource = this.phanLoaiChiTableAdapter.GetData();
+            this.phanLoaiChiRowBindingSource.DataSource = entities.phanloaichis.ToList();
         }
     }
 }

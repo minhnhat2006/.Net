@@ -4,6 +4,6 @@ namespace QLMamNon.Service.SMS
 {
     public interface ISMS
     {
-        void SendSMS(List<string> phoneNumbers, string content);
+        Dictionary<string, bool> SendSMS(Dictionary<string, string> phoneNumberToSmsContentDic);
     }
 }

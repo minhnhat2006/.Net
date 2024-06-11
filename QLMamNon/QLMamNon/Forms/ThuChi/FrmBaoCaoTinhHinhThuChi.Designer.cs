@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.ThuChi
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.ThuChi
 {
     partial class FrmBaoCaoTinhHinhThuChi
     {
@@ -163,7 +165,7 @@
             // 
             // phanLoaiThuRowBindingSource
             // 
-            this.phanLoaiThuRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhanLoaiThuRow);
+            this.phanLoaiThuRowBindingSource.DataSource = typeof(phanloaithu);
             // 
             // gvThu
             // 
@@ -211,7 +213,7 @@
             // 
             // phanLoaiChiRowBindingSource
             // 
-            this.phanLoaiChiRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhanLoaiChiRow);
+            this.phanLoaiChiRowBindingSource.DataSource = typeof(phanloaichi);
             // 
             // gvMain
             // 

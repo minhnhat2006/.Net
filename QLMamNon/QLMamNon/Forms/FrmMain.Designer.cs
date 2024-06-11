@@ -71,6 +71,8 @@
             this.bbiBangTinhPhi = new DevExpress.XtraBars.BarButtonItem();
             this.bbiPhanLoaiThu = new DevExpress.XtraBars.BarButtonItem();
             this.bbiBackupDb = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiBangKeCacLoaiChi = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiBangKeThuTrongNgay = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.rpHocSinh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgHocSinh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -95,30 +97,6 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.thanhPhoTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ThanhPhoTableAdapter();
-            this.quanHuyenTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.QuanHuyenTableAdapter();
-            this.phuongXaTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhuongXaTableAdapter();
-            this.truongTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.TruongTableAdapter();
-            this.khoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoiTableAdapter();
-            this.lopTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.LopTableAdapter();
-            this.khoanThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuTableAdapter();
-            this.bangTinhPhiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.BangTinhPhiTableAdapter();
-            this.phanLoaiChiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhanLoaiChiTableAdapter();
-            this.bangThuTienTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.BangThuTienTableAdapter();
-            this.viewBangThuTienTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ViewBangThuTienTableAdapter();
-            this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
-            this.phieuThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter();
-            this.phieuChiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuChiTableAdapter();
-            this.bangThuTienKhoanThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.BangThuTienKhoanThuTableAdapter();
-            this.bangThuTienGenHistoryTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.BangThuTienGenHistoryTableAdapter();
-            this.hocSinhLopTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter();
-            this.unknownColumnViewTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.UnknownColumnViewTableAdapter();
-            this.lopKhoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter();
-            this.khoanThuHangNamTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuHangNamTableAdapter();
-            this.userTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.UserTableAdapter();
-            this.phanLoaiThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhanLoaiThuTableAdapter();
-            this.privilegeTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PrivilegeTableAdapter();
-            this.userPrivilegeTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.UserPrivilegeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -169,11 +147,13 @@
             this.bbiUser,
             this.bbiBangTinhPhi,
             this.bbiPhanLoaiThu,
-            this.bbiBackupDb});
+            this.bbiBackupDb,
+            this.bbiBangKeCacLoaiChi,
+            this.bbiBangKeThuTrongNgay});
             this.ribbon.LargeImages = this.imageCollection1;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbon.MaxItemId = 17;
+            this.ribbon.MaxItemId = 19;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpHocSinh,
@@ -552,6 +532,24 @@
             this.bbiBackupDb.Name = "bbiBackupDb";
             this.bbiBackupDb.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiBackupDb_ItemClick);
             // 
+            // bbiBangKeCacLoaiChi
+            // 
+            this.bbiBangKeCacLoaiChi.Caption = "Bảng kê các loại chi";
+            this.bbiBangKeCacLoaiChi.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiBangKeCacLoaiChi.Glyph")));
+            this.bbiBangKeCacLoaiChi.Id = 17;
+            this.bbiBangKeCacLoaiChi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiBangKeCacLoaiChi.LargeGlyph")));
+            this.bbiBangKeCacLoaiChi.Name = "bbiBangKeCacLoaiChi";
+            this.bbiBangKeCacLoaiChi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiBangKeCacLoaiChi_ItemClick);
+            // 
+            // bbiBangKeThuTrongNgay
+            // 
+            this.bbiBangKeThuTrongNgay.Caption = "Bảng kê thu trong ngày";
+            this.bbiBangKeThuTrongNgay.Glyph = ((System.Drawing.Image)(resources.GetObject("bbiBangKeThuTrongNgay.Glyph")));
+            this.bbiBangKeThuTrongNgay.Id = 18;
+            this.bbiBangKeThuTrongNgay.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiBangKeThuTrongNgay.LargeGlyph")));
+            this.bbiBangKeThuTrongNgay.Name = "bbiBangKeThuTrongNgay";
+            this.bbiBangKeThuTrongNgay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiBangKeThuTrongNgay_ItemClick);
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -675,6 +673,8 @@
             this.rpgBaoCaoThuChi.ItemLinks.Add(this.bbỉptSoQuyTienMat);
             this.rpgBaoCaoThuChi.ItemLinks.Add(this.bbiBaoCaoTinhHinhThuChi);
             this.rpgBaoCaoThuChi.ItemLinks.Add(this.bbiBangKeThuHocPhi);
+            this.rpgBaoCaoThuChi.ItemLinks.Add(this.bbiBangKeCacLoaiChi);
+            this.rpgBaoCaoThuChi.ItemLinks.Add(this.bbiBangKeThuTrongNgay);
             this.rpgBaoCaoThuChi.Name = "rpgBaoCaoThuChi";
             this.rpgBaoCaoThuChi.Text = "Báo cáo";
             // 
@@ -759,102 +759,6 @@
             this.xtraTabbedMdiManager1.Images = this.imageCollection1;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // thanhPhoTableAdapter
-            // 
-            this.thanhPhoTableAdapter.ClearBeforeFill = true;
-            // 
-            // quanHuyenTableAdapter
-            // 
-            this.quanHuyenTableAdapter.ClearBeforeFill = true;
-            // 
-            // phuongXaTableAdapter
-            // 
-            this.phuongXaTableAdapter.ClearBeforeFill = true;
-            // 
-            // truongTableAdapter
-            // 
-            this.truongTableAdapter.ClearBeforeFill = true;
-            // 
-            // khoiTableAdapter
-            // 
-            this.khoiTableAdapter.ClearBeforeFill = true;
-            // 
-            // lopTableAdapter
-            // 
-            this.lopTableAdapter.ClearBeforeFill = true;
-            // 
-            // khoanThuTableAdapter
-            // 
-            this.khoanThuTableAdapter.ClearBeforeFill = true;
-            // 
-            // bangTinhPhiTableAdapter
-            // 
-            this.bangTinhPhiTableAdapter.ClearBeforeFill = true;
-            // 
-            // phanLoaiChiTableAdapter
-            // 
-            this.phanLoaiChiTableAdapter.ClearBeforeFill = true;
-            // 
-            // bangThuTienTableAdapter
-            // 
-            this.bangThuTienTableAdapter.ClearBeforeFill = true;
-            // 
-            // viewBangThuTienTableAdapter
-            // 
-            this.viewBangThuTienTableAdapter.ClearBeforeFill = true;
-            // 
-            // hocSinhTableAdapter
-            // 
-            this.hocSinhTableAdapter.ClearBeforeFill = true;
-            // 
-            // phieuThuTableAdapter
-            // 
-            this.phieuThuTableAdapter.ClearBeforeFill = true;
-            // 
-            // phieuChiTableAdapter
-            // 
-            this.phieuChiTableAdapter.ClearBeforeFill = true;
-            // 
-            // bangThuTienKhoanThuTableAdapter
-            // 
-            this.bangThuTienKhoanThuTableAdapter.ClearBeforeFill = true;
-            // 
-            // bangThuTienGenHistoryTableAdapter
-            // 
-            this.bangThuTienGenHistoryTableAdapter.ClearBeforeFill = true;
-            // 
-            // hocSinhLopTableAdapter
-            // 
-            this.hocSinhLopTableAdapter.ClearBeforeFill = true;
-            // 
-            // unknownColumnViewTableAdapter
-            // 
-            this.unknownColumnViewTableAdapter.ClearBeforeFill = true;
-            // 
-            // lopKhoiTableAdapter
-            // 
-            this.lopKhoiTableAdapter.ClearBeforeFill = true;
-            // 
-            // khoanThuHangNamTableAdapter
-            // 
-            this.khoanThuHangNamTableAdapter.ClearBeforeFill = true;
-            // 
-            // userTableAdapter
-            // 
-            this.userTableAdapter.ClearBeforeFill = true;
-            // 
-            // phanLoaiThuTableAdapter
-            // 
-            this.phanLoaiThuTableAdapter.ClearBeforeFill = true;
-            // 
-            // privilegeTableAdapter
-            // 
-            this.privilegeTableAdapter.ClearBeforeFill = true;
-            // 
-            // userPrivilegeTableAdapter
-            // 
-            this.userPrivilegeTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -911,12 +815,6 @@
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarStaticItem bsiManHinh;
         private DevExpress.XtraBars.BarStaticItem bsiTrangThai;
-        private Dao.QLMamNonDsTableAdapters.ThanhPhoTableAdapter thanhPhoTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.QuanHuyenTableAdapter quanHuyenTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.PhuongXaTableAdapter phuongXaTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.TruongTableAdapter truongTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.KhoiTableAdapter khoiTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.LopTableAdapter lopTableAdapter;
         private DevExpress.XtraBars.BarButtonItem bbiTruongHoc;
         private DevExpress.XtraBars.BarButtonItem bbiKhoiHoc;
         private DevExpress.XtraBars.BarButtonItem bbiLopHoc;
@@ -936,8 +834,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgSoThuTien;
         private DevExpress.XtraBars.BarButtonItem bbiKhoanThu;
         private DevExpress.XtraBars.BarButtonItem bbiKhoanThuHangNam;
-        private Dao.QLMamNonDsTableAdapters.KhoanThuTableAdapter khoanThuTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.BangTinhPhiTableAdapter bangTinhPhiTableAdapter;
         private DevExpress.XtraBars.BarButtonItem bbiRptBaoCaoHoatDongTaiChinh;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgBaoCaoThuChi;
         private DevExpress.XtraBars.BarButtonItem bbiRptBaoCaoChiTietHoatDongTaiChinh;
@@ -946,33 +842,19 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgTaiSan;
         private DevExpress.XtraBars.BarButtonItem bbiSoTheoDoiTaiSan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgBaoCaoTaiSan;
-        private Dao.QLMamNonDsTableAdapters.PhanLoaiChiTableAdapter phanLoaiChiTableAdapter;
         private DevExpress.XtraBars.Ribbon.RibbonPage rpTinNhan;
         private DevExpress.XtraBars.BarButtonItem bbiPhuHuynhHS;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgGuiTinNhan;
         private DevExpress.XtraBars.BarButtonItem bbỉptSoQuyTienMat;
         private DevExpress.XtraBars.BarButtonItem bbiBaoCaoTinhHinhThuChi;
         private DevExpress.XtraBars.BarButtonItem bbiBangKeThuHocPhi;
-        private Dao.QLMamNonDsTableAdapters.BangThuTienTableAdapter bangThuTienTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.ViewBangThuTienTableAdapter viewBangThuTienTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter phieuThuTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.PhieuChiTableAdapter phieuChiTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.BangThuTienKhoanThuTableAdapter bangThuTienKhoanThuTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.BangThuTienGenHistoryTableAdapter bangThuTienGenHistoryTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter hocSinhLopTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.UnknownColumnViewTableAdapter unknownColumnViewTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter lopKhoiTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.KhoanThuHangNamTableAdapter khoanThuHangNamTableAdapter;
         private DevExpress.XtraBars.BarButtonItem bbiPreference;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgSettings;
-        private Dao.QLMamNonDsTableAdapters.UserTableAdapter userTableAdapter;
         private DevExpress.XtraBars.BarButtonItem bbiUser;
         private DevExpress.XtraBars.BarButtonItem bbiBangTinhPhi;
         private DevExpress.XtraBars.BarButtonItem bbiPhanLoaiThu;
-        private Dao.QLMamNonDsTableAdapters.PhanLoaiThuTableAdapter phanLoaiThuTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.PrivilegeTableAdapter privilegeTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.UserPrivilegeTableAdapter userPrivilegeTableAdapter;
         private DevExpress.XtraBars.BarButtonItem bbiBackupDb;
+        private DevExpress.XtraBars.BarButtonItem bbiBangKeCacLoaiChi;
+        private DevExpress.XtraBars.BarButtonItem bbiBangKeThuTrongNgay;
     }
 }

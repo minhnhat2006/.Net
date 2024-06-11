@@ -1,8 +1,9 @@
-﻿using System;
+﻿using ACG.Core.WinForm.Util;
 using QLMamNon.Components.Data.Static;
-using QLMamNon.Facade;
-using ACG.Core.WinForm.Util;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
+using QLMamNon.Facade;
+using System;
 
 namespace QLMamNon.UserControls
 {
@@ -24,7 +25,7 @@ namespace QLMamNon.UserControls
 
         private void recalculateThanhTien()
         {
-            QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow row = this.GridView.GetFocusedDataRow() as QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow;
+            viewtaisan row = GridView.GetRow(GridView.FocusedRowHandle) as viewtaisan;
 
             if (row != null && !ControlUtil.IsEditValueNull(txtDonGia) && !ControlUtil.IsEditValueNull(txtSoLuong))
             {
@@ -44,7 +45,7 @@ namespace QLMamNon.UserControls
 
         private void cmbPhanLoaiChi_EditValueChanged(object sender, EventArgs e)
         {
-            QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow row = this.GridView.GetFocusedDataRow() as QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow;
+            viewtaisan row = GridView.GetRow(GridView.FocusedRowHandle) as viewtaisan;
 
             if (row != null && cmbPhanLoaiChi.IsEditorActive)
             {

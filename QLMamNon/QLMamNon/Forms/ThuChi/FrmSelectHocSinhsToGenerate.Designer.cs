@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.ThuChi
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.ThuChi
 {
     partial class FrmSelectHocSinhsToGenerate
     {
@@ -99,7 +101,7 @@
             // 
             // hocSinhRowBindingSource
             // 
-            this.hocSinhRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.HocSinhRow);
+            this.hocSinhRowBindingSource.DataSource = typeof(hocsinh);
             // 
             // gvMain
             // 

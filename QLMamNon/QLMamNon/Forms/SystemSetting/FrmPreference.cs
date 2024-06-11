@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Windows.Forms;
+﻿using ACG.Core.WinForm.Util;
+using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
-using QLMamNon.Entity.Form;
 using QLMamNon.Facade;
 using QLMamNon.Properties;
-using QLMamNon.Service.Data;
-using QLThuChi;
-using QLMamNon.Components.Data.Static;
-using QLMamNon.Dao.QLMamNonDsTableAdapters;
-using ACG.Core.WinForm.Util;
+using System;
+using System.Windows.Forms;
 
 namespace QLMamNon.Forms.SystemSetting
 {

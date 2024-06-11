@@ -1,6 +1,7 @@
-﻿using System;
-using QLMamNon.Components.Data.Static;
+﻿using QLMamNon.Components.Data.Static;
 using QLMamNon.Facade;
+using System;
+using System.Data;
 
 namespace QLMamNon.UserControls
 {
@@ -18,11 +19,11 @@ namespace QLMamNon.UserControls
 
         private void UCEditFormLopHoc_Enter(object sender, EventArgs e)
         {
-            QLMamNon.Dao.QLMamNonDs.LopRow row = this.GridView.GetFocusedDataRow() as QLMamNon.Dao.QLMamNonDs.LopRow;
+            DataRow row = this.GridView.GetFocusedDataRow();
 
             if (row != null)
             {
-                this.cmbKhoi.EditValue = StaticDataUtil.GetKhoiIdByLopId(this.lopKhoiTableAdapter, row.LopId);
+                this.cmbKhoi.EditValue = StaticDataUtil.GetKhoiIdByLopId(Entities, (int)row["LopId"]);
             }
         }
     }

@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using QLMamNon.Components.Data.Static;
-using QLMamNon.Constant;
-using QLMamNon.Dao.QLMamNonDsTableAdapters;
+﻿using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
 using QLMamNon.Service.Data;
 using QLMamNon.UserControls;
-using DataRow = System.Data.DataRow;
-using DataTable = System.Data.DataTable;
-using UserRow = QLMamNon.Dao.QLMamNonDs.UserRow;
+using System;
+using System.Data.Entity;
 
 namespace QLMamNon.Forms.SystemSetting
 {
-    public partial class FrmUser : CRUDForm
+    public partial class FrmUser : CRUDForm<user>
     {
         public FrmUser()
         {
@@ -22,37 +18,27 @@ namespace QLMamNon.Forms.SystemSetting
             this.DanhMuc = DanhMucConstant.User;
             this.FormKey = AppForms.FormUser;
 
-            UserTableAdapter userTableAdapter = (UserTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterUser);
-            this.userRowBindingSource.DataSource = userTableAdapter.GetData();
+            Entities.users.Load();
+            this.userBindingSource.DataSource = Entities.users.Local.ToBindingList();
 
             UCEditFormUser ucEditFormUser = new UCEditFormUser();
             ucEditFormUser.GridView = this.gvMain;
             this.gvMain.OptionsEditForm.CustomEditFormLayout = ucEditFormUser;
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, userTableAdapter.Adapter, this.userRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.UserDataTable);
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.userBindingSource.DataSource);
         }
 
         protected override void onSaving()
         {
             try
             {
-                DataTable table = this.DataTable.GetChanges();
+                AuthenService authenService = new AuthenService();
 
-                if (table != null)
+                foreach (user userRow in DataTable)
                 {
-                    UserPrivilegeTableAdapter userPrivilegeTableAdapter = (UserPrivilegeTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterUserPrivilege);
-                    AuthenService authenService = new AuthenService();
-
-                    foreach (DataRow row in table.Rows)
-                    {
-                        UserRow userRow = (UserRow)row;
-                        authenService.UpdateUserPrivileges(userPrivilegeTableAdapter, userRow.UserId, (List<int>)userRow.UserPrivileges);
-                    }
-
-                    this.DataAdapter.Update(table);
-                    this.DataTable.Merge(table);
+                    authenService.UpdateUserPrivileges(Entities, userRow.UserId, userRow.UserPrivileges);
                 }
 
-                this.DataTable.AcceptChanges();
+                base.onSaving();
             }
             catch (Exception ex)
             {

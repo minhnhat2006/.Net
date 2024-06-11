@@ -1,14 +1,13 @@
 ﻿using System;
+using System.Data.Entity;
 using DevExpress.XtraGrid.Views.Base;
-using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
-using QLMamNon.Dao.QLMamNonDsTableAdapters;
-using QLMamNon.Facade;
+using QLMamNon.Dao;
 using QLMamNon.UserControls;
 
 namespace QLMamNon.Forms.DanhMuc
 {
-    public partial class FrmBangTinhPhi : CRUDForm
+    public partial class FrmBangTinhPhi : CRUDForm<bangtinhphi>
     {
         public FrmBangTinhPhi()
         {
@@ -18,10 +17,10 @@ namespace QLMamNon.Forms.DanhMuc
             this.DanhMuc = DanhMucConstant.BangTinhPhi;
             this.FormKey = AppForms.FormBangTinhPhi;
 
-            BangTinhPhiTableAdapter bangTinhPhiTableAdapter = (BangTinhPhiTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterBangTinhPhi);
-            this.bangTinhPhiRowBindingSource.DataSource = bangTinhPhiTableAdapter.GetData();
+            Entities.bangtinhphis.Load();
+            this.bangTinhPhiRowBindingSource.DataSource = Entities.bangtinhphis.Local.ToBindingList();
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormBangTinhPhi();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, bangTinhPhiTableAdapter.Adapter, this.bangTinhPhiRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.BangTinhPhiDataTable);
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.bangTinhPhiRowBindingSource.DataSource);
         }
 
         private void FrmBangTinhPhi_Load(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace QLMamNon.Forms.DanhMuc
             {
                 Object khoiIdObj = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "KhoiId");
 
-                if (!DBNull.Value.Equals(khoiIdObj))
+                if (khoiIdObj != null)
                 {
                     int khoiId = (int)khoiIdObj;
                     e.DisplayText = StaticDataUtil.GetKhoiNameByKhoiId(khoiId);
@@ -46,7 +45,7 @@ namespace QLMamNon.Forms.DanhMuc
             {
                 Object khoanThuIdObj = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "KhoanThuId");
 
-                if (!DBNull.Value.Equals(khoanThuIdObj))
+                if (khoanThuIdObj != null)
                 {
                     int khoanThuId = (int)khoanThuIdObj;
                     e.DisplayText = StaticDataUtil.GetKhoanThuNameByKhoanThuId(khoanThuId);

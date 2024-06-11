@@ -40,7 +40,6 @@
             this.dxValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnXemBaoCao = new DevExpress.XtraEditors.SimpleButton();
-            this.viewBanGiaoTaiSanTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ViewBanGiaoTaiSanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbYear.Properties)).BeginInit();
@@ -175,10 +174,6 @@
             this.btnXemBaoCao.Text = "Xem báo cáo";
             this.btnXemBaoCao.Click += new System.EventHandler(this.btnXemBaoCao_Click);
             // 
-            // viewBanGiaoTaiSanTableAdapter
-            // 
-            this.viewBanGiaoTaiSanTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmSoTheoDoiTaiSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,6 +213,5 @@
         private DevExpress.XtraEditors.SimpleButton btnXemBaoCao;
         private DevExpress.XtraEditors.LookUpEdit cmbYear;
         private System.Windows.Forms.BindingSource namHocBindingSource;
-        private Dao.QLMamNonDsTableAdapters.ViewBanGiaoTaiSanTableAdapter viewBanGiaoTaiSanTableAdapter;
     }
 }

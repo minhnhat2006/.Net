@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.UserControls
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.UserControls
 {
     partial class UCEditFormUser
     {
@@ -101,7 +103,7 @@
             // 
             // privilegeRowBindingSource
             // 
-            this.privilegeRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PrivilegeRow);
+            this.privilegeRowBindingSource.DataSource = typeof(privilege);
             // 
             // gvMain
             // 

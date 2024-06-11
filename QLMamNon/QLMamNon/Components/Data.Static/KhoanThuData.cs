@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ACG.Core.WinForm.Data.Static;
+using QLMamNon.Dao;
 using System.Linq;
-using System.Text;
-using ACG.Core.WinForm.Data.Static;
 
 namespace QLMamNon.Components.Data.Static
 {
     public class KhoanThuData : IStaticData
     {
-        private QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuTableAdapter tableAdapter;
+        private qlmamnonEntities entities;
 
-        public KhoanThuData(QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuTableAdapter tableAdapter)
+        public KhoanThuData(qlmamnonEntities entities)
         {
-            this.tableAdapter = tableAdapter;
+            this.entities = entities;
         }
 
         #region IStaticData Members
 
         public object Retrieve()
         {
-            return tableAdapter.GetData();
+            return this.entities.khoanthus.ToList();
         }
 
         #endregion

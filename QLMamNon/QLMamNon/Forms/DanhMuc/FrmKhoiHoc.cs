@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
+using System.ComponentModel;
+using System.Data.Entity;
 using DevExpress.XtraGrid.Views.Base;
+using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
+using QLMamNon.Facade;
 using QLMamNon.UserControls;
 
 namespace QLMamNon.Forms.DanhMuc
 {
-    public partial class FrmKhoiHoc : CRUDForm
+    public partial class FrmKhoiHoc : CRUDForm<khoi>
     {
         public FrmKhoiHoc()
         {
@@ -19,7 +23,7 @@ namespace QLMamNon.Forms.DanhMuc
 
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormKhoiHoc();
             this.loadKhoiData();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.khoiTableAdapter.Adapter, this.khoiRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.KhoiDataTable);
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.khoiRowBindingSource.DataSource);
         }
 
         private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
@@ -29,7 +33,7 @@ namespace QLMamNon.Forms.DanhMuc
             {
                 Object truongIdObj = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "TruongId");
 
-                if (!DBNull.Value.Equals(truongIdObj))
+                if (truongIdObj != null)
                 {
                     int truongId = (int)truongIdObj;
                     e.DisplayText = StaticDataUtil.GetTruongNameByTruongId(truongId);
@@ -39,11 +43,12 @@ namespace QLMamNon.Forms.DanhMuc
 
         private void loadKhoiData()
         {
-            QLMamNon.Dao.QLMamNonDs.KhoiDataTable dataTable = this.khoiTableAdapter.GetData();
+            Entities.khois.Load();
+            BindingList<khoi> dataTable = Entities.khois.Local.ToBindingList(); ;
 
-            foreach (QLMamNon.Dao.QLMamNonDs.KhoiRow row in dataTable)
+            foreach (khoi row in dataTable)
             {
-                int? truongId = StaticDataUtil.GetTruongIdByKhoiId(this.khoiTruongTableAdapter, row.KhoiId);
+                int? truongId = StaticDataUtil.GetTruongIdByKhoiId(Entities, row.KhoiId);
                 if (truongId.HasValue)
                 {
                     row.TruongId = truongId.Value;
@@ -55,63 +60,68 @@ namespace QLMamNon.Forms.DanhMuc
 
         protected override void onSaving()
         {
-            DataTable table = this.DataTable.GetChanges();
-            if (table != null)
+            List<khoi> deletedRow = new List<khoi>();
+            List<khoi> addedRow = new List<khoi>();
+            List<khoi> modifiedRow = new List<khoi>();
+
+            foreach (khoi row in DataTable)
             {
-                List<DataRow> deletedRow = new List<DataRow>();
-                List<DataRow> addedRow = new List<DataRow>();
-                List<DataRow> modifiedRow = new List<DataRow>();
-
-                foreach (DataRow row in table.Rows)
+                if (Entities.Entry(row).State == EntityState.Deleted)
                 {
-                    if (row.RowState == DataRowState.Deleted)
-                    {
-                        deletedRow.Add(row);
-                    }
-                    else if (row.RowState == DataRowState.Added)
-                    {
-                        addedRow.Add(row);
-                    }
-                    if (row.RowState == DataRowState.Modified)
-                    {
-                        modifiedRow.Add(row);
-                    }
+                    deletedRow.Add(row);
                 }
-
-                base.onSaving();
-
-                foreach (DataRow row in deletedRow)
+                else if (Entities.Entry(row).State == EntityState.Added)
                 {
-                    QLMamNon.Dao.QLMamNonDs.KhoiRow khoiRow = row as QLMamNon.Dao.QLMamNonDs.KhoiRow;
-                    this.khoiTruongTableAdapter.DeleteKhoiTruongByKhoiId(khoiRow.KhoiId);
+                    addedRow.Add(row);
                 }
-
-                foreach (DataRow row in modifiedRow)
+                if (Entities.Entry(row).State == EntityState.Modified)
                 {
-                    QLMamNon.Dao.QLMamNonDs.KhoiRow khoiRow = row as QLMamNon.Dao.QLMamNonDs.KhoiRow;
-                    QLMamNon.Dao.QLMamNonDs.KhoiTruongRow khoiTruongRow = StaticDataUtil.GetKhoiTruongByKhoiId(this.khoiTruongTableAdapter, khoiRow.KhoiId);
-
-                    if (khoiTruongRow != null)
-                    {
-                        this.khoiTruongTableAdapter.DeleteKhoiTruongByKhoiId(khoiRow.KhoiId);
-                    }
-
-                    if (!khoiRow.IsTruongIdNull())
-                    {
-                        this.khoiTruongTableAdapter.Insert(khoiRow.KhoiId, khoiRow.TruongId);
-                    }
-                }
-
-                foreach (DataRow row in addedRow)
-                {
-                    QLMamNon.Dao.QLMamNonDs.KhoiRow khoiRow = row as QLMamNon.Dao.QLMamNonDs.KhoiRow;
-
-                    if (!khoiRow.IsTruongIdNull())
-                    {
-                        this.khoiTruongTableAdapter.Insert(khoiRow.KhoiId, khoiRow.TruongId);
-                    }
+                    modifiedRow.Add(row);
                 }
             }
+
+            foreach (khoi row in deletedRow)
+            {
+                Entities.deleteKhoiTruongByKhoiId(row.KhoiId);
+            }
+
+            foreach (khoi row in modifiedRow)
+            {
+                khoi_truong khoiTruongRow = StaticDataUtil.GetKhoiTruongByKhoiId(Entities, row.KhoiId);
+
+                if (khoiTruongRow != null)
+                {
+                    Entities.deleteKhoiTruongByKhoiId(row.KhoiId);
+                }
+
+                if (row.TruongId != null)
+                {
+                    khoi_truong khoiTruong = new khoi_truong()
+                    {
+                        KhoiId = row.KhoiId,
+                        TruongId = row.TruongId.Value
+                    };
+                    Entities.khoi_truong.Add(khoiTruong);
+                }
+            }
+
+            foreach (khoi row in addedRow)
+            {
+                if (row.TruongId != null)
+                {
+                    khoi_truong khoiTruong = new khoi_truong()
+                    {
+                        KhoiId = row.KhoiId,
+                        TruongId = row.TruongId.Value
+                    };
+                    Entities.khoi_truong.Add(khoiTruong);
+                }
+            }
+
+            base.onSaving();
+
+            // Reload StaticData for Khoi
+            StaticDataFacade.Reload(StaticDataKeys.KhoiHoc);
         }
     }
 }

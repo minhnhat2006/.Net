@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.HocSinh
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.HocSinh
 {
     partial class FrmPhanBoTaiSan
     {
@@ -74,8 +76,6 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.viewTaiSanTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ViewTaiSanTableAdapter();
-            this.viewBanGiaoTaiSanTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ViewBanGiaoTaiSanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcLop)).BeginInit();
@@ -136,7 +136,7 @@
             // 
             // viewBanGiaoTaiSanRowBindingSource
             // 
-            this.viewBanGiaoTaiSanRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanRow);
+            this.viewBanGiaoTaiSanRowBindingSource.DataSource = typeof(viewbangiaotaisan);
             // 
             // gvLop
             // 
@@ -333,7 +333,7 @@
             // 
             // viewTaiSanRowBindingSource
             // 
-            this.viewTaiSanRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow);
+            this.viewTaiSanRowBindingSource.DataSource = typeof(viewtaisan);
             // 
             // gvTaiSan
             // 
@@ -442,7 +442,7 @@
             // 
             // lopRowBindingSource
             // 
-            this.lopRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.LopRow);
+            this.lopRowBindingSource.DataSource = typeof(lop);
             // 
             // layoutControlGroup1
             // 
@@ -527,14 +527,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // viewTaiSanTableAdapter
-            // 
-            this.viewTaiSanTableAdapter.ClearBeforeFill = true;
-            // 
-            // viewBanGiaoTaiSanTableAdapter
-            // 
-            this.viewBanGiaoTaiSanTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmPhanBoTaiSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -590,8 +582,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSoChungTu;
         private DevExpress.XtraGrid.Columns.GridColumn colNgayChungTu;
         private System.Windows.Forms.BindingSource viewBanGiaoTaiSanRowBindingSource;
-        private Dao.QLMamNonDsTableAdapters.ViewTaiSanTableAdapter viewTaiSanTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.ViewBanGiaoTaiSanTableAdapter viewBanGiaoTaiSanTableAdapter;
         private DevExpress.XtraGrid.GridControl gcLop;
         private DevExpress.XtraGrid.Views.Grid.GridView gvLop;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;

@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.UserControls
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.UserControls
 {
     partial class UCEditFormKhoanThuHangNam
     {
@@ -113,7 +115,7 @@
             // 
             // khoiRowBindingSource
             // 
-            this.khoiRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.KhoiRow);
+            this.khoiRowBindingSource.DataSource = typeof(khoi);
             // 
             // chkIsBatBuoc
             // 
@@ -170,7 +172,7 @@
             // 
             // khoanThuRowBindingSource
             // 
-            this.khoanThuRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.KhoanThuRow);
+            this.khoanThuRowBindingSource.DataSource = typeof(khoanthu);
             // 
             // cmbNam
             // 

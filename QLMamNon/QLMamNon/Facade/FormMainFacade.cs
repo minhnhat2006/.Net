@@ -7,7 +7,7 @@ using QLMamNon.Entity;
 using QLMamNon.Forms;
 using QLMamNon.Forms.Resource;
 using QLMamNon.Service.Data;
-using UserPrivilegeDataTable = QLMamNon.Dao.QLMamNonDs.UserPrivilegeDataTable;
+using QLMamNon.Dao;
 
 namespace QLMamNon.Facade
 {
@@ -66,7 +66,7 @@ namespace QLMamNon.Facade
         private static bool checkPrivilegeToAccessForm(string form)
         {
             AuthenService authenService = new AuthenService();
-            UserPrivilegeDataTable upTable = null;
+            List<user_privilege> upTable = null;
 
             if (authenService.IsAuthenticated())
             {

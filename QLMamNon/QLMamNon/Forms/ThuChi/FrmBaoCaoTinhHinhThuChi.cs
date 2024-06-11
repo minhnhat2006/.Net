@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using ACG.Core.WinForm.Util;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
-using QLMamNon.Dao.QLMamNonDsTableAdapters;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
+using QLMamNon.Reports;
 using QLMamNon.Service.Data;
-using QLThuChi;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -23,13 +24,17 @@ namespace QLMamNon.Forms.ThuChi
 
         public bool IsEditing { get; set; }
 
-        public QLMamNon.Dao.QLMamNonDs.PhieuThuRow PhieuThuRow { get; set; }
+        public phieuthu PhieuThuRow { get; set; }
+
+        private qlmamnonEntities entities;
 
         #endregion
 
         public FrmBaoCaoTinhHinhThuChi()
         {
-            this.FormKey = AppForms.FormBaoCaoTinhHinhThuChi;
+            FormKey = AppForms.FormBaoCaoTinhHinhThuChi;
+            entities = StaticDataFacade.GetQLMNEntities();
+
             InitializeComponent();
         }
 
@@ -85,35 +90,74 @@ namespace QLMamNon.Forms.ThuChi
             DateTime fromDate = DateTimeUtil.StartOfDate(this.dateTuNgay.DateTime);
             DateTime toDate = DateTimeUtil.EndOfDate(this.dateDenNgay.DateTime);
 
-            UnknownColumnViewTableAdapter unknownColumnViewTableAdapter = (UnknownColumnViewTableAdapter)StaticDataFacade.Get(StaticDataKeys.AdapterUnknownColumnView);
             RptTinhHinhThuChi rpt = new RptTinhHinhThuChi();
             rpt.TuNgay.Value = fromDate;
             rpt.DenNgay.Value = toDate;
-            rpt.TongThu.Value = unknownColumnViewTableAdapter.GetSumSoTienThuByDateRange(fromDate, toDate, StringUtil.JoinWithCommas(phanLoaiThuIds));
-            rpt.TongChi.Value = unknownColumnViewTableAdapter.GetSumSoTienChiByDateRange(fromDate, toDate, StringUtil.JoinWithCommas(phanLoaiChiIds));
+            rpt.TongThu.Value = entities.getSumSoTienThuByDateRange(fromDate, toDate, StringUtil.JoinWithCommas(phanLoaiThuIds)).FirstOrDefault();
+            rpt.TongChi.Value = entities.getSumSoTienChiByDateRange(fromDate, toDate, StringUtil.JoinWithCommas(phanLoaiChiIds)).FirstOrDefault();
 
             rpt.Ton.Value = findSoTienTonDauKy(toDate);
-            rpt.ChenhLech.Value = (decimal)rpt.Ton.Value + (decimal)rpt.TongThu.Value - (decimal)rpt.TongChi.Value;
+            rpt.ChenhLech.Value = (long)rpt.Ton.Value + (long)rpt.TongThu.Value - (long)rpt.TongChi.Value;
+            rpt.TruyThu.Value = findSoTienTruyThu(fromDate, toDate, (long)rpt.TongThu.Value);
 
             PhieuThuService phieuThuService = new PhieuThuService();
             rpt.thuDataSource.DataSource = phieuThuService.LoadPhieuThuByDateRangeWithGroupPhanLoaiThu(fromDate, toDate, phanLoaiThuIds);
 
             PhieuChiService phieuChiService = new PhieuChiService();
-            rpt.chiDataSource.DataSource = phieuChiService.LoadPhieuChiByDateRangeWithGroupPhanLoaiChi(fromDate, toDate, phanLoaiChiIds);
+            rpt.chiDataSource.DataSource = phieuChiService.LoadPhieuChiByDateRangeWithGroupPhanLoaiChi(entities, fromDate, toDate, phanLoaiChiIds);
 
             FormMainFacade.ShowReport(rpt);
         }
 
-        private decimal findSoTienTonDauKy(DateTime toDate)
+        private long findSoTienTonDauKy(DateTime toDate)
         {
-            decimal soTienTonDauKy = txtTon.Value;
+            long soTienTonDauKy = (long)txtTon.Value;
 
             if (!chkTon.Checked)
             {
                 SoThuTienService soThuTienService = new SoThuTienService();
-                soTienTonDauKy = soThuTienService.GetSoTienTonDauKy(toDate);
+                soTienTonDauKy = (long)soThuTienService.GetSoTienTonDauKy(entities, toDate);
             }
             return soTienTonDauKy;
+        }
+
+        private decimal findSoTienTruyThu(DateTime fromDate, DateTime toDate, decimal tongThu)
+        {
+            decimal phaiThu = 0;
+            int? lop = null;
+
+            List<viewbangthutien> viewBangThuTienDataTable = entities.getViewBangThuTienByNgayTinhAndLop(toDate, lop).ToList();
+            List<int> bangThuTienIds = new List<int>(viewBangThuTienDataTable.Count);
+
+            foreach (viewbangthutien row in viewBangThuTienDataTable)
+            {
+                bangThuTienIds.Add(row.BangThuTienId);
+            }
+
+            if (!ListUtil.IsEmpty(bangThuTienIds))
+            {
+                List<bangthutien_khoanthu> bTTKTDataTable = entities.getBangThuTienKhoanThuByBangThuTienIds(String.Join(",", bangThuTienIds)).ToList();
+                List<phieuthu> phieuThuDataTable = entities.getPhieuThuByHocSinhIdAndNgayTinh(-1, toDate).ToList();
+                List<hocsinh> hocSinhDataTable = entities.hocsinhs.ToList();
+                SoThuTienService soThuTienService = new SoThuTienService();
+                Dictionary<int, viewbangthutien> prevMonthRowDictionary = soThuTienService.EvaluatePrevMonthViewBangThuTienTable(entities, toDate.AddMonths(-1), lop);
+
+                foreach (viewbangthutien row in viewBangThuTienDataTable)
+                {
+                    row.HoTen = StaticDataUtil.GetHocSinhFullNameByHocSinhId(hocSinhDataTable, row.HocSinhId);
+                    BangThuTienUtil.EvaluateValuesForViewBangThuTienRow(row,
+                        prevMonthRowDictionary != null && prevMonthRowDictionary.ContainsKey(row.HocSinhId) ? prevMonthRowDictionary[row.HocSinhId] : null,
+                        bTTKTDataTable, phieuThuDataTable, false, false, true);
+                    row.PhucVuBanTru = row.HocPhi + row.BanTru;
+                }
+            }
+
+            foreach (viewbangthutien viewBangThuTienRow in viewBangThuTienDataTable)
+            {
+                phaiThu += Convert.ToDecimal(viewBangThuTienRow.ThanhTien);
+            }
+
+            return phaiThu - tongThu;
         }
 
         private void FrmBaoCaoTinhHinhThuChi_Load(object sender, EventArgs e)

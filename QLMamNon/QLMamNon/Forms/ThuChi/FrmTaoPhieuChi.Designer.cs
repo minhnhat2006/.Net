@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.ThuChi
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.ThuChi
 {
     partial class FrmTaoPhieuChi
     {
@@ -60,8 +62,6 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciTxtMaPhieu = new DevExpress.XtraLayout.LayoutControlItem();
             this.dxValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.phieuChiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuChiTableAdapter();
-            this.phanLoaiChiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhanLoaiChiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonGia.Properties)).BeginInit();
@@ -272,7 +272,7 @@
             // 
             // phanLoaiChiRowBindingSource
             // 
-            this.phanLoaiChiRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhanLoaiChiRow);
+            this.phanLoaiChiRowBindingSource.DataSource = typeof(phanloaichi);
             // 
             // layoutControlGroup1
             // 
@@ -416,14 +416,6 @@
             // 
             this.dxValidationProvider.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
             // 
-            // phieuChiTableAdapter
-            // 
-            this.phieuChiTableAdapter.ClearBeforeFill = true;
-            // 
-            // phanLoaiChiTableAdapter
-            // 
-            this.phanLoaiChiTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmTaoPhieuChi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,9 +482,7 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.LookUpEdit cmbPhanLoaiChi;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider;
-        private Dao.QLMamNonDsTableAdapters.PhieuChiTableAdapter phieuChiTableAdapter;
         private System.Windows.Forms.BindingSource phanLoaiChiRowBindingSource;
-        private Dao.QLMamNonDsTableAdapters.PhanLoaiChiTableAdapter phanLoaiChiTableAdapter;
         private DevExpress.XtraEditors.CalcEdit txtDonGia;
         private DevExpress.XtraEditors.CalcEdit txtSoLuong;
         private DevExpress.XtraEditors.MemoEdit txtNoiDung;

@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using DevExpress.XtraGrid.Views.Base;
+﻿using DevExpress.XtraGrid.Views.Base;
+using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
+using QLMamNon.Facade;
 using QLMamNon.UserControls;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.Entity;
 
 namespace QLMamNon.Forms.DanhMuc
 {
-    public partial class FrmLopHoc : CRUDForm
+    public partial class FrmLopHoc : CRUDForm<lop>
     {
         public FrmLopHoc()
         {
@@ -19,7 +24,7 @@ namespace QLMamNon.Forms.DanhMuc
 
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormLopHoc();
             this.loadLopData();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.lopTableAdapter.Adapter, this.lopRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.LopDataTable);
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.lopRowBindingSource.DataSource);
         }
 
         private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
@@ -29,7 +34,7 @@ namespace QLMamNon.Forms.DanhMuc
             {
                 Object khoiIdObj = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "KhoiId");
 
-                if (!DBNull.Value.Equals(khoiIdObj))
+                if (khoiIdObj != null)
                 {
                     int khoiId = (int)khoiIdObj;
                     e.DisplayText = StaticDataUtil.GetKhoiNameByKhoiId(khoiId);
@@ -39,11 +44,12 @@ namespace QLMamNon.Forms.DanhMuc
 
         private void loadLopData()
         {
-            QLMamNon.Dao.QLMamNonDs.LopDataTable dataTable = this.lopTableAdapter.GetData();
+            Entities.lops.Load();
+            BindingList<lop> dataTable = Entities.lops.Local.ToBindingList();
 
-            foreach (QLMamNon.Dao.QLMamNonDs.LopRow row in dataTable)
+            foreach (lop row in dataTable)
             {
-                int? khoiId = StaticDataUtil.GetKhoiIdByLopId(this.lopKhoiTableAdapter, row.LopId);
+                int? khoiId = StaticDataUtil.GetKhoiIdByLopId(Entities, row.LopId);
                 if (khoiId.HasValue)
                 {
                     row.KhoiId = khoiId.Value;
@@ -57,59 +63,69 @@ namespace QLMamNon.Forms.DanhMuc
         {
             if (this.DataTable != null)
             {
-                List<DataRow> deletedRow = new List<DataRow>();
-                List<DataRow> addedRow = new List<DataRow>();
-                List<DataRow> modifiedRow = new List<DataRow>();
+                List<lop> deletedRow = new List<lop>();
+                List<lop> addedRow = new List<lop>();
+                List<lop> modifiedRow = new List<lop>();
 
-                foreach (DataRow row in this.DataTable.Rows)
+                foreach (lop row in this.DataTable)
                 {
-                    if (row.RowState == DataRowState.Deleted)
+                    if (Entities.Entry(row).State == EntityState.Deleted)
                     {
                         deletedRow.Add(row);
                     }
-                    else if (row.RowState == DataRowState.Added)
+                    else if (Entities.Entry(row).State == EntityState.Added)
                     {
                         addedRow.Add(row);
                     }
-                    if (row.RowState == DataRowState.Modified)
+                    if (Entities.Entry(row).State == EntityState.Modified)
                     {
                         modifiedRow.Add(row);
                     }
                 }
 
-                base.onSaving();
 
-                foreach (DataRow row in deletedRow)
+                foreach (lop row in deletedRow)
                 {
-                    QLMamNon.Dao.QLMamNonDs.LopRow lopRow = row as QLMamNon.Dao.QLMamNonDs.LopRow;
-                    this.lopKhoiTableAdapter.DeleteLopKhoiByLopId(lopRow.LopId);
+                    Entities.deleteLopKhoiByLopId(row.LopId);
                 }
 
-                foreach (DataRow row in modifiedRow)
+                foreach (lop row in modifiedRow)
                 {
-                    QLMamNon.Dao.QLMamNonDs.LopRow lopRow = row as QLMamNon.Dao.QLMamNonDs.LopRow;
-                    int? khoiId = StaticDataUtil.GetKhoiIdByLopId(this.lopKhoiTableAdapter, lopRow.LopId);
+                    int? khoiId = StaticDataUtil.GetKhoiIdByLopId(Entities, row.LopId);
 
                     if (khoiId != null)
                     {
-                        this.lopKhoiTableAdapter.DeleteLopKhoiByLopId(lopRow.LopId);
+                        Entities.deleteLopKhoiByLopId(row.LopId);
                     }
 
-                    if (!lopRow.IsKhoiIdNull())
+                    if (row.KhoiId != null)
                     {
-                        this.lopKhoiTableAdapter.Insert(lopRow.LopId, lopRow.KhoiId);
+                        lop_khoi lopKhoi = new lop_khoi()
+                        {
+                            LopId = row.LopId,
+                            KhoiId = row.KhoiId.Value
+                        };
+                        Entities.lop_khoi.Add(lopKhoi);
                     }
                 }
 
-                foreach (DataRow row in addedRow)
+                foreach (lop row in addedRow)
                 {
-                    QLMamNon.Dao.QLMamNonDs.LopRow lopRow = row as QLMamNon.Dao.QLMamNonDs.LopRow;
-
-                    if (!lopRow.IsKhoiIdNull())
+                    if (row.KhoiId != null)
                     {
-                        this.lopKhoiTableAdapter.Insert(lopRow.LopId, lopRow.KhoiId);
+                        lop_khoi lopKhoi = new lop_khoi()
+                        {
+                            LopId = row.LopId,
+                            KhoiId = row.KhoiId.Value
+                        };
+                        Entities.lop_khoi.Add(lopKhoi);
                     }
                 }
+
+                base.onSaving();
+
+                // Reload StaticData for Lop
+                StaticDataFacade.Reload(StaticDataKeys.LopHoc);
             }
         }
     }

@@ -1,12 +1,8 @@
-﻿using System;
+﻿using ACG.Core.WinForm.Util;
+using QLMamNon.Dao;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using ACG.Core.WinForm.Util;
-using DevExpress.XtraGrid.Views.Grid;
-using QLMamNon.Facade;
-using QLMamNon.Forms.Resource;
-using QLThuChi;
-using System.Data;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -14,11 +10,11 @@ namespace QLMamNon.Forms.ThuChi
     {
         #region Properties
 
-        public QLMamNon.Dao.QLMamNonDs.HocSinhDataTable HocSinhTable { get; set; }
+        public List<hocsinh> HocSinhTable { get; set; }
 
         public List<int> GeneratedHocSinhIds { get; set; }
 
-        public List<QLMamNon.Dao.QLMamNonDs.HocSinhRow> HocSinhRows { get; set; }
+        public List<hocsinh> HocSinhRows { get; set; }
 
         #endregion
 
@@ -38,8 +34,7 @@ namespace QLMamNon.Forms.ThuChi
 
             foreach (int rowHandler in this.gvMain.GetSelectedRows())
             {
-                DataRowView rowView = (DataRowView)this.gvMain.GetRow(rowHandler);
-                QLMamNon.Dao.QLMamNonDs.HocSinhRow hocSinhRow = rowView.Row as QLMamNon.Dao.QLMamNonDs.HocSinhRow;
+                hocsinh hocSinhRow = (hocsinh)this.gvMain.GetRow(rowHandler);
 
                 if (this.GeneratedHocSinhIds.Contains(hocSinhRow.HocSinhId))
                 {
@@ -55,13 +50,13 @@ namespace QLMamNon.Forms.ThuChi
 
         private void btnChon_Click(object sender, EventArgs e)
         {
-            this.HocSinhRows = new List<Dao.QLMamNonDs.HocSinhRow>();
+            this.HocSinhRows = new List<hocsinh>();
             int[] selectedRowHandlers = this.gvMain.GetSelectedRows();
 
             for (int i = 0; i < selectedRowHandlers.Length; i++)
             {
-                DataRowView rowView = (DataRowView)this.gvMain.GetRow(selectedRowHandlers[i]);
-                this.HocSinhRows.Add((QLMamNon.Dao.QLMamNonDs.HocSinhRow)rowView.Row);
+                hocsinh rowView = (hocsinh)this.gvMain.GetRow(selectedRowHandlers[i]);
+                this.HocSinhRows.Add(rowView);
             }
 
             if (ListUtil.IsEmpty(this.HocSinhRows))

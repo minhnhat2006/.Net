@@ -10,6 +10,8 @@ namespace QLMamNon.Entity.Form
 
         public string SoChungTuThu { get; set; }
 
+        public string MucChi { get; set; }
+
         public string DienGiai { get; set; }
 
         public double SoTienChi { get; set; }

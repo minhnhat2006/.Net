@@ -1,6 +1,4 @@
-﻿using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraGrid.Views.Base;
-namespace QLMamNon.Forms.ThuChi
+﻿namespace QLMamNon.Forms.ThuChi
 {
     partial class FrmSoThuTien
     {
@@ -49,12 +47,15 @@ namespace QLMamNon.Forms.ThuChi
             this.colHoTen = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand19 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colTienAnSua = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand36 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colTienSua = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colPhuPhi = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand21 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colBanTru = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand22 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colHocPhi = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colPhucVuBanTru = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand23 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colKhoanThuChinh = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand20 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -130,18 +131,7 @@ namespace QLMamNon.Forms.ThuChi
             this.btnTaoSoThuTien = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
-            this.viewBangThuTienTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ViewBangThuTienTableAdapter();
-            this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
-            this.lopKhoiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter();
-            this.bangThuTienGenHistoryTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.BangThuTienGenHistoryTableAdapter();
-            this.bangThuTienTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.BangThuTienTableAdapter();
-            this.bangThuTienKhoanThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.BangThuTienKhoanThuTableAdapter();
-            this.khoanThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuTableAdapter();
-            this.khoanThuHangNamTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuHangNamTableAdapter();
-            this.hocSinhLopTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter();
-            this.viewHocTapTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ViewHocTapTableAdapter();
-            this.soNgayNghiThangByHocSinhIdTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.UnknownColumnViewTableAdapter();
-            this.phieuThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter();
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.namHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoiRowBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopRowBindingSource)).BeginInit();
@@ -167,19 +157,12 @@ namespace QLMamNon.Forms.ThuChi
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // namHocBindingSource
             // 
             this.namHocBindingSource.DataSource = typeof(QLMamNon.Entity.Form.NamHoc);
-            // 
-            // khoiRowBindingSource
-            // 
-            this.khoiRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.KhoiRow);
-            // 
-            // lopRowBindingSource
-            // 
-            this.lopRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.LopRow);
             // 
             // lcMain
             // 
@@ -265,7 +248,6 @@ namespace QLMamNon.Forms.ThuChi
             // 
             // viewBangThuTienRowBindingSource
             // 
-            this.viewBangThuTienRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.ViewBangThuTienRow);
             this.viewBangThuTienRowBindingSource.Sort = "STT";
             // 
             // gvMain
@@ -278,6 +260,7 @@ namespace QLMamNon.Forms.ThuChi
             this.gridBand16,
             this.gridBand17,
             this.gridBand19,
+            this.gridBand36,
             this.gridBand6,
             this.gridBand21,
             this.gridBand22,
@@ -298,9 +281,11 @@ namespace QLMamNon.Forms.ThuChi
             this.colSTT,
             this.colHoTen,
             this.colTienAnSua,
+            this.colTienSua,
             this.colPhuPhi,
             this.colBanTru,
             this.colHocPhi,
+            this.colPhucVuBanTru,
             this.colKhoanThuChinh,
             this.colSXThangTruoc,
             this.colSoTienSXThangTruoc,
@@ -331,6 +316,7 @@ namespace QLMamNon.Forms.ThuChi
             this.gvMain.OptionsView.ShowGroupPanel = false;
             this.gvMain.OptionsView.ShowIndicator = false;
             this.gvMain.CustomDrawFooterCell += new DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventHandler(this.gvMain_CustomDrawFooterCell);
+            this.gvMain.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gvMain_PopupMenuShowing);
             this.gvMain.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvMain_CellValueChanged);
             // 
             // gridBand16
@@ -378,6 +364,7 @@ namespace QLMamNon.Forms.ThuChi
             // 
             this.gridBand19.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand19.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand19.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             resources.ApplyResources(this.gridBand19, "gridBand19");
             this.gridBand19.Columns.Add(this.colTienAnSua);
             this.gridBand19.VisibleIndex = 2;
@@ -396,11 +383,35 @@ namespace QLMamNon.Forms.ThuChi
             new DevExpress.XtraGrid.GridColumnSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("colTienAnSua.Summary"))), resources.GetString("colTienAnSua.Summary1"), resources.GetString("colTienAnSua.Summary2"))});
             resources.ApplyResources(this.colTienAnSua, "colTienAnSua");
             // 
+            // gridBand36
+            // 
+            this.gridBand36.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand36.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            resources.ApplyResources(this.gridBand36, "gridBand36");
+            this.gridBand36.Columns.Add(this.colTienSua);
+            this.gridBand36.VisibleIndex = 3;
+            // 
+            // colTienSua
+            // 
+            this.colTienSua.AppearanceCell.BackColor = ((System.Drawing.Color)(resources.GetObject("colTienSua.AppearanceCell.BackColor")));
+            this.colTienSua.AppearanceCell.Options.UseBackColor = true;
+            this.colTienSua.DisplayFormat.FormatString = "n0";
+            this.colTienSua.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colTienSua.FieldName = "TienSua";
+            this.colTienSua.GroupFormat.FormatString = "n0";
+            this.colTienSua.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colTienSua.Name = "colTienSua";
+            this.colTienSua.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("colTienSua.Summary"))), resources.GetString("colTienSua.Summary1"), resources.GetString("colTienSua.Summary2"))});
+            resources.ApplyResources(this.colTienSua, "colTienSua");
+            // 
             // gridBand6
             // 
+            this.gridBand6.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             resources.ApplyResources(this.gridBand6, "gridBand6");
             this.gridBand6.Columns.Add(this.colPhuPhi);
-            this.gridBand6.VisibleIndex = 3;
+            this.gridBand6.VisibleIndex = 4;
             // 
             // colPhuPhi
             // 
@@ -420,7 +431,7 @@ namespace QLMamNon.Forms.ThuChi
             this.gridBand21.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             resources.ApplyResources(this.gridBand21, "gridBand21");
             this.gridBand21.Columns.Add(this.colBanTru);
-            this.gridBand21.VisibleIndex = 4;
+            this.gridBand21.VisibleIndex = -1;
             // 
             // colBanTru
             // 
@@ -438,8 +449,10 @@ namespace QLMamNon.Forms.ThuChi
             // 
             this.gridBand22.AppearanceHeader.Options.UseTextOptions = true;
             this.gridBand22.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand22.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             resources.ApplyResources(this.gridBand22, "gridBand22");
             this.gridBand22.Columns.Add(this.colHocPhi);
+            this.gridBand22.Columns.Add(this.colPhucVuBanTru);
             this.gridBand22.VisibleIndex = 5;
             // 
             // colHocPhi
@@ -453,6 +466,16 @@ namespace QLMamNon.Forms.ThuChi
             this.colHocPhi.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("colHocPhi.Summary"))), resources.GetString("colHocPhi.Summary1"), resources.GetString("colHocPhi.Summary2"))});
             resources.ApplyResources(this.colHocPhi, "colHocPhi");
+            // 
+            // colPhucVuBanTru
+            // 
+            resources.ApplyResources(this.colPhucVuBanTru, "colPhucVuBanTru");
+            this.colPhucVuBanTru.DisplayFormat.FormatString = "n0";
+            this.colPhucVuBanTru.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colPhucVuBanTru.FieldName = "PhucVuBanTru";
+            this.colPhucVuBanTru.Name = "colPhucVuBanTru";
+            this.colPhucVuBanTru.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(((DevExpress.Data.SummaryItemType)(resources.GetObject("colPhucVuBanTru.Summary"))), resources.GetString("colPhucVuBanTru.Summary1"), resources.GetString("colPhucVuBanTru.Summary2"))});
             // 
             // gridBand23
             // 
@@ -1197,53 +1220,11 @@ namespace QLMamNon.Forms.ThuChi
             this.btnHuyBo.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyBo.Image")));
             this.btnHuyBo.Name = "btnHuyBo";
             // 
-            // viewBangThuTienTableAdapter
+            // imageCollection1
             // 
-            this.viewBangThuTienTableAdapter.ClearBeforeFill = true;
-            // 
-            // hocSinhTableAdapter
-            // 
-            this.hocSinhTableAdapter.ClearBeforeFill = true;
-            // 
-            // lopKhoiTableAdapter
-            // 
-            this.lopKhoiTableAdapter.ClearBeforeFill = true;
-            // 
-            // bangThuTienGenHistoryTableAdapter
-            // 
-            this.bangThuTienGenHistoryTableAdapter.ClearBeforeFill = true;
-            // 
-            // bangThuTienTableAdapter
-            // 
-            this.bangThuTienTableAdapter.ClearBeforeFill = true;
-            // 
-            // bangThuTienKhoanThuTableAdapter
-            // 
-            this.bangThuTienKhoanThuTableAdapter.ClearBeforeFill = true;
-            // 
-            // khoanThuTableAdapter
-            // 
-            this.khoanThuTableAdapter.ClearBeforeFill = true;
-            // 
-            // khoanThuHangNamTableAdapter
-            // 
-            this.khoanThuHangNamTableAdapter.ClearBeforeFill = true;
-            // 
-            // hocSinhLopTableAdapter
-            // 
-            this.hocSinhLopTableAdapter.ClearBeforeFill = true;
-            // 
-            // viewHocTapTableAdapter
-            // 
-            this.viewHocTapTableAdapter.ClearBeforeFill = true;
-            // 
-            // soNgayNghiThangByHocSinhIdTableAdapter
-            // 
-            this.soNgayNghiThangByHocSinhIdTableAdapter.ClearBeforeFill = true;
-            // 
-            // phieuThuTableAdapter
-            // 
-            this.phieuThuTableAdapter.ClearBeforeFill = true;
+            this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
+            this.imageCollection1.InsertGalleryImage("delete_16x16.png", "images/edit/delete_16x16.png", DevExpress.Images.ImageResourceCache.Default.GetImage("images/edit/delete_16x16.png"), 0);
+            this.imageCollection1.Images.SetKeyName(0, "delete_16x16.png");
             // 
             // FrmSoThuTien
             // 
@@ -1279,6 +1260,7 @@ namespace QLMamNon.Forms.ThuChi
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1330,27 +1312,15 @@ namespace QLMamNon.Forms.ThuChi
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colNgayNopLan2;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSoTienNopLan2;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colGhiChu;
-        private Dao.QLMamNonDsTableAdapters.ViewBangThuTienTableAdapter viewBangThuTienTableAdapter;
         private DevExpress.XtraEditors.ComboBoxEdit cmbThang;
         private DevExpress.XtraEditors.LookUpEdit cmbNam;
-        private Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.LopKhoiTableAdapter lopKhoiTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.BangThuTienGenHistoryTableAdapter bangThuTienGenHistoryTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.BangThuTienTableAdapter bangThuTienTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.BangThuTienKhoanThuTableAdapter bangThuTienKhoanThuTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.KhoanThuTableAdapter khoanThuTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.KhoanThuHangNamTableAdapter khoanThuHangNamTableAdapter;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colDieuHoa;
-        private Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter hocSinhLopTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.ViewHocTapTableAdapter viewHocTapTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.UnknownColumnViewTableAdapter soNgayNghiThangByHocSinhIdTableAdapter;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colThuDoDung;
         private DevExpress.XtraEditors.SimpleButton btnPrint2;
         private DevExpress.XtraEditors.SimpleButton btnPrint1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colAnToiThangTruoc;
-        private Dao.QLMamNonDsTableAdapters.PhieuThuTableAdapter phieuThuTableAdapter;
         private DevExpress.XtraEditors.SimpleButton btnTaoSoThuTien;
         private DevExpress.XtraEditors.SimpleButton btnFirst;
         private DevExpress.XtraEditors.SimpleButton btnLast;
@@ -1358,9 +1328,14 @@ namespace QLMamNon.Forms.ThuChi
         private DevExpress.XtraEditors.SimpleButton btnPrev;
         private DevExpress.XtraEditors.SimpleButton btnPrintGiayBaoNopTien;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.LookUpEdit cmbLop;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colPhucVuBanTru;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colTienSua;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand16;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand17;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand19;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand36;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand6;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand21;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand22;
@@ -1393,9 +1368,6 @@ namespace QLMamNon.Forms.ThuChi
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand15;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand18;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand31;
-        private DevExpress.XtraEditors.LookUpEdit cmbLop;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-
-
+        private DevExpress.Utils.ImageCollection imageCollection1;
     }
 }

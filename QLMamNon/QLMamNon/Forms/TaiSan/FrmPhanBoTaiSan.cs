@@ -1,43 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Linq;
 using System.Windows.Forms;
 using ACG.Core.WinForm.Util;
 using DevExpress.XtraGrid.Views.Base;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
 using QLMamNon.UserControls;
-using ViewBanGiaoTaiSanDataTable = QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanDataTable;
-using ViewBanGiaoTaiSanRow = QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanRow;
-using ViewTaiSanDataTable = QLMamNon.Dao.QLMamNonDs.ViewTaiSanDataTable;
-using ViewTaiSanRow = QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow;
 
 namespace QLMamNon.Forms.HocSinh
 {
-    public partial class FrmPhanBoTaiSan : CRUDForm
+    public partial class FrmPhanBoTaiSan : CRUDForm<viewbangiaotaisan>
     {
         private Dictionary<int, double> _taiSanIdToSoLuongDictionary;
+
+        private qlmamnonEntities entities;
 
         public FrmPhanBoTaiSan()
         {
             InitializeComponent();
 
+            entities = StaticDataFacade.GetQLMNEntities();
             this.TablePrimaryKey = "TaiSanLopId";
             this.DanhMuc = DanhMucConstant.PhanBoTaiSan;
             this.FormKey = AppForms.FormPhanBoTaiSan;
             this.gvLop.OptionsEditForm.CustomEditFormLayout = new UCEditFormBanGiaoTaiSan();
-            this.InitForm(null, null, null, this.btnSave, null, this.gvLop, this.viewBanGiaoTaiSanTableAdapter.Adapter, this.viewBanGiaoTaiSanRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanDataTable);
+            this.InitForm(null, null, null, this.btnSave, null, this.gvLop, this.viewBanGiaoTaiSanRowBindingSource.DataSource);
             this.loadTaiSanToGridTaiSan();
         }
 
         private void loadTaiSanToGridTaiSan()
         {
-            this.viewTaiSanRowBindingSource.DataSource = viewTaiSanTableAdapter.GetDataForBanGiaoTaiSan();
+            this.viewTaiSanRowBindingSource.DataSource = new BindingList<viewtaisan>(entities.getViewTaiSanForBanGiaoTaiSan().ToList());
 
             this._taiSanIdToSoLuongDictionary = new Dictionary<int, double>();
 
-            foreach (ViewTaiSanRow viewTaiSanRow in (ViewTaiSanDataTable)this.viewTaiSanRowBindingSource.DataSource)
+            foreach (viewtaisan viewTaiSanRow in (List<viewtaisan>)this.viewTaiSanRowBindingSource.DataSource)
             {
                 if (this._taiSanIdToSoLuongDictionary.ContainsKey(viewTaiSanRow.TaiSanId))
                 {
@@ -53,22 +56,20 @@ namespace QLMamNon.Forms.HocSinh
             {
                 DataView dataView = (DataView)this.viewBanGiaoTaiSanRowBindingSource.List;
 
-                foreach (DataRowView rowView in dataView)
+                foreach (viewbangiaotaisan viewBanGiaoTaiSanRow in dataView)
                 {
-                    ViewBanGiaoTaiSanRow viewBanGiaoTaiSanRow = (ViewBanGiaoTaiSanRow)rowView.Row;
-
-                    if (viewBanGiaoTaiSanRow.IsSoLuongBanGiaoNull())
+                    if (viewBanGiaoTaiSanRow.SoLuongBanGiao == null)
                     {
                         continue;
                     }
 
                     if (this._taiSanIdToSoLuongDictionary.ContainsKey(viewBanGiaoTaiSanRow.TaiSanId))
                     {
-                        this._taiSanIdToSoLuongDictionary[viewBanGiaoTaiSanRow.TaiSanId] += viewBanGiaoTaiSanRow.SoLuongBanGiao;
+                        this._taiSanIdToSoLuongDictionary[viewBanGiaoTaiSanRow.TaiSanId] += viewBanGiaoTaiSanRow.SoLuongBanGiao.Value;
                     }
                     else
                     {
-                        this._taiSanIdToSoLuongDictionary.Add(viewBanGiaoTaiSanRow.TaiSanId, viewBanGiaoTaiSanRow.SoLuongBanGiao);
+                        this._taiSanIdToSoLuongDictionary.Add(viewBanGiaoTaiSanRow.TaiSanId, viewBanGiaoTaiSanRow.SoLuongBanGiao.Value);
                     }
                 }
             }
@@ -81,9 +82,9 @@ namespace QLMamNon.Forms.HocSinh
                 return;
             }
 
-            this.viewBanGiaoTaiSanRowBindingSource.DataSource = this.viewBanGiaoTaiSanTableAdapter.GetByLopId((int)this.cmbLopHoc.EditValue);
+            this.viewBanGiaoTaiSanRowBindingSource.DataSource = new BindingList<viewbangiaotaisan>(Entities.getViewBanGiaoTaiSanByLopId((int)this.cmbLopHoc.EditValue).ToList());
             this.viewBanGiaoTaiSanRowBindingSource.Filter = String.Format("[NgayHetHan] IS NULL OR [NgayHetHan]>#{0:yyyy-MM-dd}#", DateTime.Now);
-            this.DataTable = this.viewBanGiaoTaiSanRowBindingSource.DataSource as DataTable;
+            this.DataTable = this.viewBanGiaoTaiSanRowBindingSource.DataSource as BindingList<viewbangiaotaisan>;
         }
 
         private void FrmPhanBoTaiSan_Load(object sender, EventArgs e)
@@ -122,8 +123,7 @@ namespace QLMamNon.Forms.HocSinh
                 return;
             }
 
-            DataRowView rowView = this.viewTaiSanRowBindingSource.Current as DataRowView;
-            QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow oldRow = rowView.Row as QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow;
+            viewtaisan oldRow = this.viewTaiSanRowBindingSource.Current as viewtaisan;
 
             int existedIndex = this.viewBanGiaoTaiSanRowBindingSource.Find("TaiSanId", oldRow.TaiSanId);
 
@@ -133,8 +133,7 @@ namespace QLMamNon.Forms.HocSinh
             }
             else
             {
-                DataRowView newRowView = this.viewBanGiaoTaiSanRowBindingSource.AddNew() as DataRowView;
-                QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanRow newRow = newRowView.Row as QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanRow;
+                viewbangiaotaisan newRow = this.viewBanGiaoTaiSanRowBindingSource.AddNew() as viewbangiaotaisan;
                 newRow.Ten = oldRow.Ten;
                 newRow.TaiSanId = oldRow.TaiSanId;
                 newRow.LopId = (Int32)cmbLopHoc.EditValue;
@@ -160,22 +159,19 @@ namespace QLMamNon.Forms.HocSinh
                 return;
             }
 
-            DataRowView oldRowView = this.viewBanGiaoTaiSanRowBindingSource.Current as DataRowView;
-            QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanRow oldRow = oldRowView.Row as QLMamNon.Dao.QLMamNonDs.ViewBanGiaoTaiSanRow;
+            viewbangiaotaisan oldRow = this.viewBanGiaoTaiSanRowBindingSource.Current as viewbangiaotaisan;
 
             int existedIndex = this.viewTaiSanRowBindingSource.Find("TaiSanId", oldRow.TaiSanId);
 
             if (existedIndex >= 0)
             {
                 this.viewTaiSanRowBindingSource.Position = existedIndex;
-                DataRowView rowView = this.viewTaiSanRowBindingSource.Current as DataRowView;
-                QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow newRow = rowView.Row as QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow;
-                newRow.SoLuong += oldRow.SoLuongBanGiao;
+                viewtaisan newRow = this.viewTaiSanRowBindingSource.Current as viewtaisan;
+                newRow.SoLuong += oldRow.SoLuongBanGiao.Value;
             }
             else
             {
-                DataRowView newRowView = this.viewTaiSanRowBindingSource.AddNew() as DataRowView;
-                QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow newRow = newRowView.Row as QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow;
+                viewtaisan newRow = this.viewTaiSanRowBindingSource.AddNew() as viewtaisan;
                 newRow.Ten = oldRow.Ten;
                 newRow.TaiSanId = oldRow.TaiSanId;
                 newRow.SoChungTu = oldRow.SoChungTu;
@@ -192,22 +188,17 @@ namespace QLMamNon.Forms.HocSinh
 
         private void cmbLopHoc_EditValueChanged(object sender, EventArgs e)
         {
-            if (this.DataTable != null)
+            if (!ListUtil.IsEmpty(DataTable))
             {
-                DataTable table = this.DataTable.GetChanges();
+                DialogResult result = MessageBox.Show("Bạn có muốn lưu thay đổi không?", "Lưu thay đổi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-                if (table != null && !ListUtil.IsEmpty(table.Rows))
+                if (result == System.Windows.Forms.DialogResult.OK)
                 {
-                    DialogResult result = MessageBox.Show("Bạn có muốn lưu thay đổi không?", "Lưu thay đổi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-                    if (result == System.Windows.Forms.DialogResult.OK)
-                    {
-                        this.btnSave_Click(null, null);
-                    }
-                    else
-                    {
-                        this.btnCancel_Click(null, null);
-                    }
+                    this.btnSave_Click(null, null);
+                }
+                else
+                {
+                    this.btnCancel_Click(null, null);
                 }
             }
 
@@ -217,16 +208,14 @@ namespace QLMamNon.Forms.HocSinh
 
         private void gvLop_RowUpdated(object sender, RowObjectEventArgs e)
         {
-            DataRowView dataRowView = (DataRowView)e.Row;
-            ViewBanGiaoTaiSanRow viewBanGiaoTaiSanRow = (ViewBanGiaoTaiSanRow)dataRowView.Row;
+            viewbangiaotaisan viewBanGiaoTaiSanRow = (viewbangiaotaisan)e.Row;
             int taiSanRowIndex = this.viewTaiSanRowBindingSource.Find("TaiSanId", viewBanGiaoTaiSanRow.TaiSanId);
 
             if (taiSanRowIndex >= 0)
             {
                 this.viewTaiSanRowBindingSource.Position = taiSanRowIndex;
-                DataRowView rowView = this.viewTaiSanRowBindingSource.Current as DataRowView;
-                QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow taiSanRow = rowView.Row as QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow;
-                taiSanRow.SoLuong = this._taiSanIdToSoLuongDictionary[viewBanGiaoTaiSanRow.TaiSanId] - viewBanGiaoTaiSanRow.SoLuongBanGiao;
+                viewtaisan taiSanRow = this.viewTaiSanRowBindingSource.Current as viewtaisan;
+                taiSanRow.SoLuong = this._taiSanIdToSoLuongDictionary[viewBanGiaoTaiSanRow.TaiSanId] - viewBanGiaoTaiSanRow.SoLuongBanGiao.Value;
 
                 if (taiSanRow.SoLuong <= 0)
                 {
@@ -235,14 +224,13 @@ namespace QLMamNon.Forms.HocSinh
             }
             else
             {
-                if (viewBanGiaoTaiSanRow.RowState == DataRowState.Modified)
+                if (Entities.Entry(viewBanGiaoTaiSanRow).State == EntityState.Modified)
                 {
-                    double remainSoLuong = (this._taiSanIdToSoLuongDictionary[viewBanGiaoTaiSanRow.TaiSanId] - viewBanGiaoTaiSanRow.SoLuongBanGiao);
+                    double remainSoLuong = (this._taiSanIdToSoLuongDictionary[viewBanGiaoTaiSanRow.TaiSanId] - viewBanGiaoTaiSanRow.SoLuongBanGiao.Value);
 
                     if (remainSoLuong > 0)
                     {
-                        DataRowView newRowView = this.viewTaiSanRowBindingSource.AddNew() as DataRowView;
-                        QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow newRow = newRowView.Row as QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow;
+                        viewtaisan newRow = this.viewTaiSanRowBindingSource.AddNew() as viewtaisan;
                         newRow.Ten = viewBanGiaoTaiSanRow.Ten;
                         newRow.TaiSanId = viewBanGiaoTaiSanRow.TaiSanId;
                         newRow.SoChungTu = viewBanGiaoTaiSanRow.SoChungTu;
@@ -260,7 +248,6 @@ namespace QLMamNon.Forms.HocSinh
         protected override void onSaving()
         {
             base.onSaving();
-            ((ViewBanGiaoTaiSanDataTable)this.viewBanGiaoTaiSanRowBindingSource.DataSource).AcceptChanges();
         }
     }
 }

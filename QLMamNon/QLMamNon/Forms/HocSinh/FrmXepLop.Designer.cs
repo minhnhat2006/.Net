@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.HocSinh
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.HocSinh
 {
     partial class FrmXepLop
     {
@@ -69,8 +71,6 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciLopHoc = new DevExpress.XtraLayout.LayoutControlItem();
-            this.hocSinhTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter();
-            this.hocSinhLopTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcChuyenDen)).BeginInit();
@@ -177,7 +177,7 @@
             // hocSinhRowBindingSourceDen
             // 
             this.hocSinhRowBindingSourceDen.AllowNew = true;
-            this.hocSinhRowBindingSourceDen.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.HocSinhRow);
+            this.hocSinhRowBindingSourceDen.DataSource = typeof(hocsinh);
             // 
             // gvDen
             // 
@@ -270,7 +270,7 @@
             // 
             // hocSinhRowBindingSourceDi
             // 
-            this.hocSinhRowBindingSourceDi.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.HocSinhRow);
+            this.hocSinhRowBindingSourceDi.DataSource = typeof(hocsinh);
             // 
             // gridView1
             // 
@@ -385,7 +385,7 @@
             // 
             // lopRowBindingSourceDi
             // 
-            this.lopRowBindingSourceDi.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.LopRow);
+            this.lopRowBindingSourceDi.DataSource = typeof(lop);
             // 
             // cmbLopHocDen
             // 
@@ -410,7 +410,7 @@
             // 
             // lopRowBindingSourceDen
             // 
-            this.lopRowBindingSourceDen.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.LopRow);
+            this.lopRowBindingSourceDen.DataSource = typeof(lop);
             // 
             // layoutControlGroup1
             // 
@@ -524,14 +524,6 @@
             this.lciLopHoc.Text = "Lớp học";
             this.lciLopHoc.TextSize = new System.Drawing.Size(41, 13);
             // 
-            // hocSinhTableAdapter
-            // 
-            this.hocSinhTableAdapter.ClearBeforeFill = true;
-            // 
-            // hocSinhLopTableAdapter
-            // 
-            this.hocSinhLopTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmXepLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -595,7 +587,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colHoDem1;
         private DevExpress.XtraGrid.Columns.GridColumn colGioiTinh1;
         private DevExpress.XtraGrid.Columns.GridColumn colNgaySinh1;
-        private Dao.QLMamNonDsTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnMoveLeft;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
@@ -608,7 +599,6 @@
         private System.Windows.Forms.BindingSource namHocBindingSource;
         private System.Windows.Forms.BindingSource lopRowBindingSourceDi;
         private System.Windows.Forms.BindingSource lopRowBindingSourceDen;
-        private Dao.QLMamNonDsTableAdapters.HocSinhLopTableAdapter hocSinhLopTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colNgayVaoLop;
         private DevExpress.XtraGrid.Columns.GridColumn colLopDangHoc;
         private DevExpress.XtraGrid.Columns.GridColumn colLopDangHoc1;

@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLMamNon", "QLMamNon\QLMamNon.csproj", "{D2834F9C-A281-4C93-9004-FEE72F3BABB3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACG.Core.WinForm.Mediator", "ACG.Core.WinForm.Mediator\ACG.Core.WinForm.Mediator.csproj", "{746984E1-AAE2-4B55-8A77-A1A19FBA7E43}"
@@ -46,5 +48,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {161CBD5C-CF6F-4D86-882E-1902620DF685}
 	EndGlobalSection
 EndGlobal

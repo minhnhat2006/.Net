@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.SystemSetting
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.SystemSetting
 {
     partial class FrmPreference
     {
@@ -182,7 +184,7 @@
             // 
             // phanLoaiThuRowBindingSource
             // 
-            this.phanLoaiThuRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhanLoaiThuRow);
+            this.phanLoaiThuRowBindingSource.DataSource = typeof(phanloaithu);
             // 
             // txtThuByHS
             // 

@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Views.Grid;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
 using QLMamNon.Service.Data;
 
@@ -19,19 +21,23 @@ namespace QLMamNon.Forms.ThuChi
 
         public bool IsLoading { get; set; }
 
-        public QLMamNon.Dao.QLMamNonDs.PhieuChiRow PhieuChiRow { get; set; }
+        public phieuchi PhieuChiRow { get; set; }
+
+        private qlmamnonEntities entities;
 
         #endregion
 
         public FrmTaoPhieuChi()
         {
             this.FormKey = AppForms.FormTaoPhieuChi;
+            entities = StaticDataFacade.GetQLMNEntities();
             InitializeComponent();
         }
 
         private void FrmTaoPhieuChi_Load(object sender, EventArgs e)
         {
-            this.phanLoaiChiRowBindingSource.DataSource = this.phanLoaiChiTableAdapter.GetData();
+            entities.phanloaichis.Load();
+            this.phanLoaiChiRowBindingSource.DataSource = entities.phanloaichis.Local.ToBindingList();
 
             if (this.IsEditing)
             {
@@ -83,13 +89,8 @@ namespace QLMamNon.Forms.ThuChi
             this.txtSoLuong.Value = (decimal)this.PhieuChiRow.SoLuong;
             this.txtDonGia.Value = (decimal)this.PhieuChiRow.DonGia;
             this.txtSoTien.Value = this.PhieuChiRow.SoTien;
-            this.txtMaPhieu.Text = this.PhieuChiRow.IsMaPhieuNull() ? null : this.PhieuChiRow.MaPhieu;
-
-            if (!this.PhieuChiRow.IsGhiChuNull())
-            {
-                this.txtGhiChu.Text = this.PhieuChiRow.GhiChu;
-            }
-
+            this.txtMaPhieu.Text = this.PhieuChiRow.MaPhieu;
+            this.txtGhiChu.Text = this.PhieuChiRow.GhiChu;
             this.cmbPhanLoaiChi.EditValue = this.PhieuChiRow.PhanLoaiChiId;
             this.txtNoiDung.Text = this.PhieuChiRow.NoiDung;
         }
@@ -109,7 +110,7 @@ namespace QLMamNon.Forms.ThuChi
             {
                 BindingSource phieuChiBindingSource = this.GridView.GridControl.DataSource as BindingSource;
                 PhieuChiService phieuChiService = new PhieuChiService();
-                phieuChiBindingSource.DataSource = phieuChiService.LoadPhieuChi(this.phieuChiTableAdapter);
+                phieuChiBindingSource.DataSource = phieuChiService.LoadPhieuChi(entities);
             }
         }
 
@@ -124,7 +125,7 @@ namespace QLMamNon.Forms.ThuChi
             double donGia = (double)txtDonGia.Value;
             long soTien = (long)this.txtSoTien.Value;
             PhieuChiService phieuChiService = new PhieuChiService();
-            phieuChiService.InsertPhieuChi(this.phieuChiTableAdapter, ngay, soTien, maPhieu, ghiChu, phanLoaiChiId, noiDung, soLuong, donGia);
+            phieuChiService.InsertPhieuChi(entities, ngay, soTien, maPhieu, ghiChu, phanLoaiChiId, noiDung, soLuong, donGia);
         }
 
         private void updatePhieuChi()
@@ -138,7 +139,7 @@ namespace QLMamNon.Forms.ThuChi
             double donGia = (double)txtDonGia.Value;
             long soTien = (long)this.txtSoTien.Value;
             PhieuChiService phieuChiService = new PhieuChiService();
-            phieuChiService.UpdatePhieuChi(this.phieuChiTableAdapter, this.PhieuChiRow, ngay, soTien, maPhieu, ghiChu, phanLoaiChiId, noiDung, soLuong, donGia);
+            phieuChiService.UpdatePhieuChi(entities, this.PhieuChiRow, ngay, soTien, maPhieu, ghiChu, phanLoaiChiId, noiDung, soLuong, donGia);
         }
 
         private void resetForm()

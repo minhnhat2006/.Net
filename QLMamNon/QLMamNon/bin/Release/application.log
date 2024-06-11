@@ -1,788 +1,245 @@
-2017-06-21 17:29:49 info : Text changed $FrmThongTinHocSinh$lcMain$cmbLop$ [Chọn lớp]
-2017-06-21 17:29:49 info : Text changed $FrmThongTinHocSinh$lcMain$cmbQuanHuyen$ [Chọn quận huyện]
-2017-06-21 17:29:49 info : Text changed $FrmThongTinHocSinh$lcMain$cmbPhuongXa$ [Chọn phường xã]
-2017-06-29 21:08:04 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
-2017-06-29 21:08:06 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
-2017-07-01 10:48:23 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
-2017-07-01 10:48:26 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
-2017-07-03 13:00:22 info : Text changed $FrmSoThuTien$lcMain$cmbLop$ [Chọn lớp]
-2017-07-03 13:00:26 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
-2017-07-03 13:00:28 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
-2017-07-03 13:00:29 info : Text changed $FrmSoThuTien$lcMain$cmbLop$ 
-2017-07-03 13:00:29 info : Text changed $FrmSoThuTien$lcMain$cmbLop$ Lớn 1
-2017-07-03 16:37:18 info : Text changed $FrmSoThuTien$lcMain$cmbLop$ [Chọn lớp]
-2017-07-03 16:37:21 info : Text changed $FrmSoThuTien$lcMain$cmbNam$ 2017
-2017-07-03 16:37:23 info : Text changed $FrmSoThuTien$lcMain$cmbThang$ 6
-2017-07-03 16:37:24 info : Text changed $FrmSoThuTien$lcMain$cmbLop$ 
-2017-07-03 16:37:25 info : Text changed $FrmSoThuTien$lcMain$cmbLop$ Lớn 1
-2017-07-04 08:35:02 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-07-04 08:35:08 info : Text changed $FrmSoThuTien$lcMain$cmbThang 6
-2017-07-04 08:35:08 info : Text changed $FrmSoThuTien$lcMain$cmbThang 6
-2017-07-04 08:35:11 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-07-04 08:35:21 info : Text changed $FrmSoThuTien$lcMain$cmbThang 7
-2017-07-04 08:35:21 info : Text changed $FrmSoThuTien$lcMain$cmbThang 7
-2017-07-04 08:36:25 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 2
-2017-07-04 08:36:27 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-07-04 08:37:02 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 2
-2017-07-04 08:37:30 info : Text changed $FrmSoThuTien$lcMain$cmbLop Nhỡ 1
-2017-07-04 08:37:36 info : Text changed $FrmSoThuTien$lcMain$cmbLop Nhỡ 2
-2017-07-04 08:38:41 info : Text changed $FrmSoThuTien$lcMain$cmbLop Bé 1
-2017-07-04 08:38:57 info : Text changed $FrmSoThuTien$lcMain$cmbLop Bé 2
-2017-07-04 08:40:02 info : Text changed $FrmSoThuTien$lcMain$cmbLop Trẻ 1
-2017-07-04 08:40:22 info : Text changed $FrmSoThuTien$lcMain$cmbLop Trẻ 2
-2017-07-13 14:57:17 info : Text changed $FrmThongTinHocSinh$lcMain$cmbThoiHoc Đang học
-2017-07-13 14:57:17 info : Text changed $FrmThongTinHocSinh$lcMain$cmbThoiHoc Đang học
-2017-08-07 09:50:49 info : Text changed $FrmThongTinHocSinh$lcMain$cmbThoiHoc Đang học
-2017-08-07 16:35:35 info : Text changed $$$$UCEditFormKhoanThu$layoutControl1$txtTenhoanThu Tiền ăn & sữa
-2017-08-07 16:35:35 info : Text changed $$$$UCEditFormKhoanThu$layoutControl1$txtTenhoanThu Tiền ăn & sữa
-2017-08-07 16:35:35 info : Text changed $$$$UCEditFormKhoanThu$layoutControl1$txtTenhoanThu Tiền ăn & sữa
-2017-08-07 16:35:35 info : Text changed $$$$UCEditFormKhoanThu$layoutControl1$txtTenhoanThu Tiền ăn & sữa
-2017-08-07 16:35:35 info : Text changed $$$$UCEditFormKhoanThu$layoutControl1$txtTenhoanThu Tiền ăn & sữa
-2017-08-07 16:35:35 info : Text changed $$$$UCEditFormKhoanThu$layoutControl1$txtTenhoanThu Tiền ăn & sữa
-2017-08-29 16:40:25 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-08-29 16:40:28 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
-2017-08-29 16:40:28 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
-2017-08-29 16:40:29 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-08-29 16:43:00 info : Text changed $FrmSoThuTien$lcMain$cmbNam 
-2017-08-29 16:43:00 info : Text changed $FrmSoThuTien$lcMain$cmbThang 
-2017-08-29 16:43:00 info : Text changed $FrmSoThuTien$lcMain$cmbThang 
-2017-08-29 16:43:04 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-08-29 16:43:06 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
-2017-08-29 16:43:06 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
-2017-09-02 11:09:22 info : Text changed $FrmThongTinHocSinh$lcMain$cmbThoiHoc Đang học
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 905111874
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 905111874
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 905111874
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 905111874
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha Tô 6 Nại Tú 3
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha Tô 6 Nại Tú 3
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha Tô 6 Nại Tú 3
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha Tô 6 Nại Tú 3
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe Lê Thị Nhơn
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe Lê Thị Nhơn
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe Lê Thị Nhơn
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe Lê Thị Nhơn
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha Nguyễn Linh Sơn
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha Nguyễn Linh Sơn
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha Nguyễn Linh Sơn
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha Nguyễn Linh Sơn
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 06/10/2012
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 06/10/2012
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 06/10/2012
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 06/10/2012
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 06/10/2012
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 06/10/2012
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 06/10/2012
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 06/10/2012
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Quỳnh
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Quỳnh
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Quỳnh
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Quỳnh
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ng Lê Diễm
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ng Lê Diễm
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ng Lê Diễm
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Ng Lê Diễm
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan Sơn Trà
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan Sơn Trà
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan Sơn Trà
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan Sơn Trà
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong Nại Hiên Đông
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong Nại Hiên Đông
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong Nại Hiên Đông
-2017-09-02 11:09:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong Nại Hiên Đông
-2017-09-02 11:09:41 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-09-02 11:09:41 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-09-02 11:09:41 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-09-02 11:09:41 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-09-02 11:09:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-02 11:09:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-02 11:09:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-02 11:09:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-02 11:09:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-02 11:09:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-02 11:09:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-02 11:09:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-02 11:09:49 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-09-02 11:09:49 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-09-02 11:09:49 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-09-02 11:09:49 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-09-05 09:59:57 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-09-05 09:59:59 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-05 09:59:59 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-05 10:00:01 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-09-05 10:02:48 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-09-05 10:02:50 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-05 10:02:50 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-05 10:02:52 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-09-20 17:32:59 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,243,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,46,33,28,58,51,97,98,99,115,113,110,125,55,178,175,48,232,124,116,101,95,35,91,104,119,34,47,32,106,114,100,103,121,234,233,244,54,105,107,108,130,131,63,79,186,173,194,197,181,185,74,62,176,71,192,182,187,172,81,61,229,60,179,59,73,65,183,184,227,240,228,245]
-2017-09-20 17:33:17 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,46,33,28,58,51,97,98,99,115,113,110,125,55,178,175,48,232,124,116,101,95,35,91,104,119,34,47,32,106,114,100,103,121,234,233,244,54,105,107,108,130,131,63,79,186,173,194,197,181,185,74,62,176,71,192,182,187,172,81,61,229,60,179,59,73,65,183,184,227,240,228,245]
-2017-09-20 17:33:24 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,243,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,46,33,28,58,51,97,98,99,115,113,110,125,55,178,175,48,232,124,116,101,95,35,91,104,119,34,47,32,106,114,100,103,121,234,233,54,105,107,108,130,131,63,79,186,173,194,197,181,185,228,74,62,176,71,192,182,187,172,81,61,229,60,179,59,73,65,183,184,240,227,2,226,13,82,235,206,222,86,77,76,84,80,1,9,225,7,83,78,224,200,195,191,193,196,204,190,198,3,5,10,238,15,4,6,239,218,203,75,16,19,12,219,217,14,8,20,211,212,221,18,17,214,220,213,210,216,215]
-2017-09-20 17:33:36 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,243,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,46,33,28,58,51,97,98,99,115,113,110,125,55,178,175,48,232,124,116,101,95,35,91,104,119,34,47,32,106,114,100,103,121,234,233,54,105,107,108,130,131,63,79,186,173,194,197,181,185,228,74,62,176,71,192,182,187,172,81,61,229,60,179,59,73,65,183,184,240,227,2,226,13,82,235,206,222,86,77,76,84,80,1,9,225,7,83,78,224,200,195,191,193,196,204,190,198,3,5,10,238,15,4,6,239,218,203,75,16,19,12,219,217,14,8,20,211,212,221,18,17,214,220,213,210,216,215]
-2017-09-20 17:33:45 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,243,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,46,33,28,58,51,97,98,99,115,113,110,125,55,178,175,48,232,124,116,101,95,35,91,104,119,34,47,32,106,114,100,103,121,234,233,54,105,107,108,130,131,63,79,186,173,194,197,181,185,228,74,62,176,71,192,182,187,172,81,61,229,60,179,59,73,65,183,184,240,227,2,226,13,82,235,206,222,86,77,76,84,80,1,9,225,7,83,78,224,200,195,191,193,196,204,190,198,3,5,10,238,15,4,6,239,218,203,75,16,19,12,219,217,14,8,20,211,212,221,18,17,214,220,213,210,216,215]
-2017-09-20 17:33:55 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,243,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,46,33,28,58,51,97,98,99,115,113,110,125,55,178,175,48,232,124,116,101,95,35,91,104,119,34,47,32,106,114,100,103,121,234,233,54,105,107,108,130,131,63,79,186,173,194,197,181,185,228,74,62,176,71,192,182,187,172,81,61,229,60,179,59,73,65,183,184,240,227,2,226,13,82,235,206,222,86,77,76,84,80,1,9,225,7,83,78,224,200,195,191,193,196,204,190,198,3,5,10,238,15,4,6,239,218,203,75,16,19,12,219,217,14,8,20,211,212,221,18,17,214,220,213,210,216,215]
-2017-09-20 17:34:06 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,243,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,46,33,28,58,51,97,98,99,115,113,110,125,55,178,175,48,232,124,116,101,95,35,91,104,119,34,47,32,106,114,100,103,121,234,233,54,105,107,108,130,131,63,79,186,173,194,197,181,185,228,74,62,176,71,192,182,187,172,81,61,229,60,179,59,73,65,183,184,240,227,2,226,13,82,235,206,222,86,77,76,84,80,1,9,225,7,83,78,224,200,195,191,193,196,204,190,198,3,5,10,238,15,4,6,239,218,203,75,16,19,12,219,217,14,8,20,211,212,221,18,17,214,220,213,210,216,215]
-2017-09-29 16:19:48 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-09-29 16:19:49 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-29 16:19:49 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-29 16:19:51 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-09-29 16:19:55 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,243]
-2017-09-29 16:21:12 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-09-29 16:21:12 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-29 16:21:12 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-09-29 16:21:15 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-09-29 16:21:17 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,243]
-2017-10-02 14:43:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ú
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ú
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ú
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ú
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername úe
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername úe
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername úe
-2017-10-02 14:43:57 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername úe
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ú
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ú
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ú
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ú
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ue
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ue
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ue
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ue
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ues
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ues
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ues
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ues
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ue
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ue
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ue
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ue
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:43:59 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:59 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:59 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:59 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:43:59 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername us
-2017-10-02 14:43:59 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername us
-2017-10-02 14:43:59 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername us
-2017-10-02 14:43:59 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername us
-2017-10-02 14:44:00 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername use
-2017-10-02 14:44:00 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername use
-2017-10-02 14:44:00 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername use
-2017-10-02 14:44:00 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername use
-2017-10-02 14:44:00 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-02 14:44:00 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-02 14:44:00 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-02 14:44:00 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 123
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 123
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 123
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 123
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1234
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1234
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1234
-2017-10-02 14:44:01 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1234
-2017-10-02 14:44:02 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12345
-2017-10-02 14:44:02 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12345
-2017-10-02 14:44:02 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12345
-2017-10-02 14:44:02 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12345
-2017-10-02 14:47:51 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:47:51 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:47:51 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:47:51 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:47:52 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:47:52 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:47:52 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:47:52 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ú
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ú
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ú
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername ú
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername 
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername u
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername us
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername us
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername us
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername us
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername use
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername use
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername use
-2017-10-02 14:47:53 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername use
-2017-10-02 14:47:54 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-02 14:47:54 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-02 14:47:54 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-02 14:47:54 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 123
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 123
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 123
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 123
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1234
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1234
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1234
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1234
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12345
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12345
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12345
-2017-10-02 14:47:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12345
-2017-10-02 14:48:42 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-02 14:48:42 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-02 14:48:42 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-02 14:48:42 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-02 14:48:44 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1
-2017-10-02 14:48:44 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1
-2017-10-02 14:48:44 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1
-2017-10-02 14:48:44 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 1
-2017-10-02 14:48:44 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12
-2017-10-02 14:48:44 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12
-2017-10-02 14:48:44 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12
-2017-10-02 14:48:44 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 12
-2017-10-02 14:48:44 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 123
-2017-10-02 14:48:44 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 123
-2017-10-02 14:48:44 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 123
-2017-10-02 14:48:44 info : Text changed $$$$UCEditFormUser$layoutControl1$txtPassword 123
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-10-02 15:35:00 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-10-03 11:29:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-03 11:29:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-03 11:29:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-03 11:29:58 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-03 11:30:08 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername admin
-2017-10-03 11:30:08 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername admin
-2017-10-03 11:30:08 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername admin
-2017-10-03 11:30:08 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername admin
-2017-10-03 11:50:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-03 11:50:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-03 11:50:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-03 11:50:55 info : Text changed $$$$UCEditFormUser$layoutControl1$txtUsername user
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-10-04 10:33:50 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-10-24 09:52:08 info : Text changed $FrmPhanBoTaiSan$lcMain$cmbLopHoc Lớn 1
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$memoEdit1 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$memoEdit1 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$memoEdit1 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$memoEdit1 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$memoEdit1 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$memoEdit1 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtLop Lớn 1
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtLop Lớn 1
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtLop Lớn 1
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtLop Lớn 1
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtLop Lớn 1
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtLop Lớn 1
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoChungTu 123456
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoChungTu 123456
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoChungTu 123456
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoChungTu 123456
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoChungTu 123456
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoChungTu 123456
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtTen Ghế học sinh
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtTen Ghế học sinh
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtTen Ghế học sinh
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtTen Ghế học sinh
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtTen Ghế học sinh
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtTen Ghế học sinh
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuong 2
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuong 2
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuong 2
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuong 2
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuong 2
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuong 2
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtDonGia 55.000
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtDonGia 55.000
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtDonGia 55.000
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtDonGia 55.000
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtDonGia 55.000
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtDonGia 55.000
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 
-2017-10-24 09:52:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 
-2017-10-24 09:52:40 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 09:52:40 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 09:52:40 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 09:52:40 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 09:52:40 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 09:52:40 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 09:52:41 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 2,00
-2017-10-24 09:52:41 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 2,00
-2017-10-24 09:52:41 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 2,00
-2017-10-24 09:52:41 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 2,00
-2017-10-24 09:52:41 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 2,00
-2017-10-24 09:52:41 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 2,00
-2017-10-24 09:52:46 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 15/10/2017
-2017-10-24 09:52:46 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 15/10/2017
-2017-10-24 09:52:46 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 15/10/2017
-2017-10-24 09:52:46 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 15/10/2017
-2017-10-24 09:52:46 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 15/10/2017
-2017-10-24 09:52:46 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 15/10/2017
-2017-10-24 09:52:46 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 15/10/2017
-2017-10-24 09:52:46 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 15/10/2017
-2017-10-24 09:52:46 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 15/10/2017
-2017-10-24 09:52:46 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 15/10/2017
-2017-10-24 09:52:46 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 15/10/2017
-2017-10-24 09:52:46 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 15/10/2017
-2017-10-24 09:52:55 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 09:52:55 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 09:52:55 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 09:52:55 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 09:52:55 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 09:52:55 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 14:42:35 info : Text changed $FrmPhanBoTaiSan$lcMain$cmbLopHoc Lớn 1
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$memoEdit1 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$memoEdit1 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$memoEdit1 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$memoEdit1 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayHetHan 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 24/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 24/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 24/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 24/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 24/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 24/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 24/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayBanGiao 24/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtLop 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtLop 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtLop 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtLop 
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayChungTu 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoChungTu 123456
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoChungTu 123456
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoChungTu 123456
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoChungTu 123456
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$dateNgayNhap 05/10/2017
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$cmbDonViTinh Cái
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtTen Ghế học sinh
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtTen Ghế học sinh
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtTen Ghế học sinh
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtTen Ghế học sinh
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuong 2
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuong 2
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuong 2
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuong 2
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtDonGia 55.000
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtDonGia 55.000
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtDonGia 55.000
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtDonGia 55.000
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 2,00
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 2,00
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 2,00
-2017-10-24 14:42:39 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 2,00
-2017-10-24 14:42:40 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 14:42:40 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 14:42:40 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-10-24 14:42:40 info : Text changed $$$$UCEditFormBanGiaoTaiSan$lcMain$txtSoLuongBanGiao 1,00
-2017-11-01 09:48:57 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,243,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,46,33,28,58,51,97,98,99,115,113,110,125,55,178,175,48,232,124,116,101,95,35,91,104,119,34,47,32,106,114,100,103,121,234,233,54,105,107,108,130,131,63,79,186,173,194,197,181,185,228,74,62,176,71,192,182,187,172,81,61,229,60,179,59,73,65,183,184,240,227,2,226,13,82,235,206,222,86,77,76,84,80,1,9,225,7,83,78,224,200,195,191,193,196,204,190,198,3,5,10,238,15,4,6,239,218,203,75,16,19,12,219,217,14,8,20,211,212,221,18,17,214,220,213,210,216,215]
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbPhanLoaiChi 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayChungTu 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoChungTu 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$dateNgayNhap 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtThanhTien 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtDonGia 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtSoLuong 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$cmbDonViTinh 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-12-18 15:47:26 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen 
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen T
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen T
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen T
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen T
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Te
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Te
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Te
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Te
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen T
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen T
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen T
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen T
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Té
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Té
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Té
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Té
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen T
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen T
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen T
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen T
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Te
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Te
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Te
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Te
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Tes
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Tes
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Tes
-2017-12-18 15:47:28 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Tes
-2017-12-18 15:47:29 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Test
-2017-12-18 15:47:29 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Test
-2017-12-18 15:47:29 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Test
-2017-12-18 15:47:29 info : Text changed $$$$UCEditFormTaiSan$lcMain$txtTen Test
-2017-12-18 15:47:45 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-12-18 15:47:45 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-12-18 15:47:45 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-12-18 15:47:45 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-12-18 15:47:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 12
-2017-12-18 15:47:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 12
-2017-12-18 15:47:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 12
-2017-12-18 15:47:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 12
-2017-12-18 15:47:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 12
-2017-12-18 15:47:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 12
-2017-12-18 15:47:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 12
-2017-12-18 15:47:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 12
-2017-12-18 15:47:52 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-12-18 15:47:52 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-12-18 15:47:52 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-12-18 15:47:52 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-12-18 15:48:04 info : Text changed $FrmSoThuTien$lcMain$cmbThang 10
-2017-12-18 15:48:04 info : Text changed $FrmSoThuTien$lcMain$cmbThang 10
-2017-12-18 15:48:04 info : Text changed $FrmSoThuTien$lcMain$cmbThang 10
-2017-12-18 15:48:04 info : Text changed $FrmSoThuTien$lcMain$cmbThang 10
-2017-12-18 15:48:04 info : Text changed $FrmSoThuTien$lcMain$cmbThang 10
-2017-12-18 15:48:04 info : Text changed $FrmSoThuTien$lcMain$cmbThang 10
-2017-12-18 15:48:04 info : Text changed $FrmSoThuTien$lcMain$cmbThang 10
-2017-12-18 15:48:04 info : Text changed $FrmSoThuTien$lcMain$cmbThang 10
-2017-12-18 15:48:12 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-12-18 15:48:12 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-12-18 15:48:12 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-12-18 15:48:12 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-12-18 15:48:12 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-12-18 15:48:12 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-12-18 15:48:12 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-12-18 15:48:12 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-12-18 15:48:15 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,243]
-2017-12-18 15:48:33 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,243]
-2017-12-18 15:48:53 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,243]
-2017-12-18 15:49:06 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-12-18 15:49:06 info : Text changed $FrmSoThuTien$lcMain$cmbThang 12
-2017-12-18 15:49:06 info : Text changed $FrmSoThuTien$lcMain$cmbThang 12
-2017-12-18 15:49:09 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-12-18 15:49:09 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-12-18 15:49:12 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-12-18 15:49:13 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,243]
-2017-12-18 15:51:00 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2017-12-18 15:51:00 info : Text changed $FrmSoThuTien$lcMain$cmbThang 12
-2017-12-18 15:51:00 info : Text changed $FrmSoThuTien$lcMain$cmbThang 12
-2017-12-18 15:51:03 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-12-18 15:51:03 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2017-12-18 15:51:06 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2017-12-18 15:51:09 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,243]
-2017-12-18 15:51:23 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,243]
-2018-01-02 14:01:24 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2018
-2018-01-02 14:01:28 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
-2018-01-02 14:01:28 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
-2018-01-02 14:01:30 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2018-01-02 14:01:40 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2018-01-02 14:01:45 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,243,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102]
-2018-01-02 14:03:31 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2018
-2018-01-02 14:03:34 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2018-01-02 14:03:36 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2018-01-02 14:03:36 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2018-01-02 14:03:38 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2018-01-02 14:03:40 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,243]
-2018-01-02 14:05:17 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2018
-2018-01-02 14:05:21 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2017
-2018-01-02 14:05:23 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2018-01-02 14:05:23 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
-2018-01-02 14:05:25 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
-2018-01-02 14:05:28 info : EvaluateViewBangThuTienRowsForReport for list HocSinhIds=[151,165,163,231,96,117,118,127,123,126,242,109,94,188,208,168,89,120,230,64,128,164,148,147,150,149,161,122,111,112,177,174,92,129,90,102,243]
+2020-01-06 11:18:25 info : Text changed $FrmThongTinHocSinh$lcMain$cmbThoiHoc Đang học
+2020-01-06 11:18:36 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2020
+2020-01-06 11:18:36 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2020
+2020-01-06 11:18:39 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2019
+2020-01-06 11:18:39 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2019
+2020-01-06 11:18:42 info : Text changed $FrmSoThuTien$lcMain$cmbThang 7
+2020-01-06 11:18:42 info : Text changed $FrmSoThuTien$lcMain$cmbThang 7
+2020-01-06 11:18:42 info : Text changed $FrmSoThuTien$lcMain$cmbThang 7
+2020-01-06 11:18:42 info : Text changed $FrmSoThuTien$lcMain$cmbThang 7
+2020-01-06 11:18:43 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
+2020-01-06 11:18:43 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
+2020-05-03 16:20:05 info : Text changed $FrmThongTinHocSinh$lcMain$cmbThoiHoc Đang học
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 0973839729
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 0973839729
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 0973839729
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoaiMe 0973839729
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha Số 34 Tổ 68 Ngô Trí Hòa
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha Số 34 Tổ 68 Ngô Trí Hòa
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha Số 34 Tổ 68 Ngô Trí Hòa
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtSoNha Số 34 Tổ 68 Ngô Trí Hòa
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe Tăng Thị Nhung
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe Tăng Thị Nhung
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe Tăng Thị Nhung
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtMe Tăng Thị Nhung
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha Lê Quang Nhật
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha Lê Quang Nhật
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha Lê Quang Nhật
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtCha Lê Quang Nhật
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 0973839729
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 0973839729
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 0973839729
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtDienThoai 0973839729
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 17/09/2014
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 17/09/2014
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 17/09/2014
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 17/09/2014
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 17/09/2014
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 17/09/2014
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 17/09/2014
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 17/09/2014
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Quyên
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Quyên
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Quyên
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtTen Quyên
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Lê Tăng Nhã
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Lê Tăng Nhã
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Lê Tăng Nhã
+2020-05-03 16:20:27 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtHoDem Lê Tăng Nhã
+2020-05-03 16:20:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
+2020-05-03 16:20:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
+2020-05-03 16:20:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
+2020-05-03 16:20:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbTinh 
+2020-05-03 16:20:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan Sơn Trà
+2020-05-03 16:20:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan Sơn Trà
+2020-05-03 16:20:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan Sơn Trà
+2020-05-03 16:20:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbQuan Sơn Trà
+2020-05-03 16:20:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong Nại Hiên Đông
+2020-05-03 16:20:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong Nại Hiên Đông
+2020-05-03 16:20:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong Nại Hiên Đông
+2020-05-03 16:20:28 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$cmbPhuong Nại Hiên Đông
+2020-05-03 16:20:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 18/09/2014
+2020-05-03 16:20:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 18/09/2014
+2020-05-03 16:20:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 18/09/2014
+2020-05-03 16:20:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 18/09/2014
+2020-05-03 16:20:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 18/09/2014
+2020-05-03 16:20:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 18/09/2014
+2020-05-03 16:20:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 18/09/2014
+2020-05-03 16:20:31 info : Text changed $$$$UCEditFormThongTinHocSinh$layoutControl1$txtNgaySinh 18/09/2014
+2020-05-03 16:20:41 info : Text changed $FrmThongTinHocSinh$lcMain$cmbLop Lớn 1
+2020-05-03 16:20:41 info : Text changed $FrmThongTinHocSinh$lcMain$cmbLop Lớn 1
+2020-05-03 16:20:52 info : Text changed $FrmThongTinHocSinh$lcMain$cmbLop 
+2020-05-03 16:20:52 info : Text changed $FrmThongTinHocSinh$lcMain$cmbLop 
+2020-05-05 11:04:21 info : Text changed $FrmThongTinHocSinh$lcMain$cmbThoiHoc Đang học
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Chọn Khối
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Chọn Khối
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Chọn Khối
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Chọn Khối
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Chọn Khối
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Chọn Khối
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Chọn Khối
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Chọn Khối
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtDescription 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtDescription 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtDescription 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtDescription 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtDescription 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtDescription 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtDescription 
+2020-05-05 11:04:36 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtDescription 
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Lớn
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Lớn
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Lớn
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Lớn
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Lớn
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Lớn
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Lớn
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Lớn
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Nhỡ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Nhỡ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Nhỡ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Nhỡ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Nhỡ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Nhỡ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Nhỡ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Nhỡ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Bé
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Bé
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Bé
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Bé
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Bé
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Bé
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Bé
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Bé
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Trẻ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Trẻ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Trẻ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Trẻ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Trẻ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Trẻ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Trẻ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi Trẻ
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:38 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:39 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi FF1
+2020-05-05 11:04:39 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi FF1
+2020-05-05 11:04:39 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi FF1
+2020-05-05 11:04:39 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi FF1
+2020-05-05 11:04:39 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi FF1
+2020-05-05 11:04:39 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi FF1
+2020-05-05 11:04:39 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi FF1
+2020-05-05 11:04:39 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi FF1
+2020-05-05 11:04:40 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:40 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:40 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:40 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:40 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:40 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:40 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:40 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$cmbKhoi HH1
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName H
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName H
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName H
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName H
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName H
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName H
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName H
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName H
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH
+2020-05-05 11:04:45 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH
+2020-05-05 11:04:46 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH2
+2020-05-05 11:04:46 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH2
+2020-05-05 11:04:46 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH2
+2020-05-05 11:04:46 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH2
+2020-05-05 11:04:46 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH2
+2020-05-05 11:04:46 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH2
+2020-05-05 11:04:46 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH2
+2020-05-05 11:04:46 info : Text changed $$$$UCEditFormLopHoc$layoutControl1$txtName HH2
+2020-05-05 11:18:42 info : Text changed $FrmThongTinHocSinh$lcMain$cmbThoiHoc Đang học
+2020-05-09 08:38:32 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2020
+2020-05-09 08:38:32 info : Text changed $FrmSoThuTien$lcMain$cmbThang 5
+2020-05-09 08:38:32 info : Text changed $FrmSoThuTien$lcMain$cmbThang 5
+2020-05-09 08:38:48 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2019
+2020-05-09 08:38:50 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
+2020-05-09 08:38:50 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
+2020-05-09 08:38:52 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
+2020-05-09 09:00:02 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2020
+2020-05-09 09:00:02 info : Text changed $FrmSoThuTien$lcMain$cmbThang 5
+2020-05-09 09:00:02 info : Text changed $FrmSoThuTien$lcMain$cmbThang 5
+2020-05-09 09:01:49 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2019
+2020-05-09 09:01:52 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
+2020-05-09 09:01:52 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
+2020-05-09 09:01:54 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
+2020-05-09 09:02:47 info : Text changed $FrmSoThuTien$lcMain$cmbThang 1
+2020-05-09 09:02:47 info : Text changed $FrmSoThuTien$lcMain$cmbThang 1
+2020-05-09 09:03:42 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2020-05-09 09:03:42 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2020-05-09 09:03:51 info : Text changed $FrmSoThuTien$lcMain$cmbThang 10
+2020-05-09 09:03:51 info : Text changed $FrmSoThuTien$lcMain$cmbThang 10
+2020-05-09 09:03:56 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
+2020-05-09 09:03:56 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
+2020-05-10 15:37:37 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2020
+2020-05-10 15:37:37 info : Text changed $FrmSoThuTien$lcMain$cmbThang 5
+2020-05-10 15:37:37 info : Text changed $FrmSoThuTien$lcMain$cmbThang 5
+2020-05-10 15:37:41 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2019
+2020-05-10 15:37:43 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
+2020-05-10 15:37:43 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
+2020-05-10 15:37:44 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
+2020-05-11 10:32:15 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2020
+2020-05-11 10:32:15 info : Text changed $FrmSoThuTien$lcMain$cmbThang 5
+2020-05-11 10:32:15 info : Text changed $FrmSoThuTien$lcMain$cmbThang 5
+2020-05-11 10:32:19 info : Text changed $FrmSoThuTien$lcMain$cmbNam 2019
+2020-05-11 10:32:21 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
+2020-05-11 10:32:21 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
+2020-05-11 10:32:23 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
+2020-05-11 10:50:27 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 2
+2020-05-11 10:50:38 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2020-05-11 10:50:38 info : Text changed $FrmSoThuTien$lcMain$cmbThang 8
+2020-05-11 10:50:40 info : Text changed $FrmSoThuTien$lcMain$cmbLop Lớn 1
+2020-05-11 10:50:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
+2020-05-11 10:50:45 info : Text changed $FrmSoThuTien$lcMain$cmbThang 9
+2020-05-14 16:47:15 error : FrmTinNhanPhuHuynh-The given port name does not start with COM/com or does not resolve to a valid serial port.
+Parameter name: portName
+   at System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   at System.IO.Ports.SerialPort.Open()
+   at QLMamNon.Service.SMS.USB3GSms.sendSmsMessage(String phoneNumber, String message)
+2020-05-14 16:47:15 error : FrmTinNhanPhuHuynh-The given port name does not start with COM/com or does not resolve to a valid serial port.
+Parameter name: portName
+   at System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   at System.IO.Ports.SerialPort.Open()
+   at QLMamNon.Service.SMS.USB3GSms.sendSmsMessage(String phoneNumber, String message)
+2020-05-14 16:47:15 error : FrmTinNhanPhuHuynh-The given port name does not start with COM/com or does not resolve to a valid serial port.
+Parameter name: portName
+   at System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   at System.IO.Ports.SerialPort.Open()
+   at QLMamNon.Service.SMS.USB3GSms.sendSmsMessage(String phoneNumber, String message)
+2020-05-14 16:52:06 error : FrmTinNhanPhuHuynh-The given port name does not start with COM/com or does not resolve to a valid serial port.
+Parameter name: portName
+   at System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   at System.IO.Ports.SerialPort.Open()
+   at QLMamNon.Service.SMS.USB3GSms.sendSmsMessage(String phoneNumber, String message)
+2020-05-14 16:52:26 error : FrmTinNhanPhuHuynh-The given port name does not start with COM/com or does not resolve to a valid serial port.
+Parameter name: portName
+   at System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   at System.IO.Ports.SerialPort.Open()
+   at QLMamNon.Service.SMS.USB3GSms.sendSmsMessage(String phoneNumber, String message)

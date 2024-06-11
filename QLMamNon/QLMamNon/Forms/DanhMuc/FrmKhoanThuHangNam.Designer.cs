@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.DanhMuc
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.DanhMuc
 {
     partial class FrmKhoanThuHangNam
     {
@@ -47,7 +49,6 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoTien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBatBuoc = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.khoanThuHangNamTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoanThuHangNamTableAdapter();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -155,7 +156,7 @@
             // 
             // khoanThuHangNamRowBindingSource
             // 
-            this.khoanThuHangNamRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.KhoanThuHangNamRow);
+            this.khoanThuHangNamRowBindingSource.DataSource = typeof(khoanthuhangnam);
             // 
             // gvMain
             // 
@@ -243,10 +244,6 @@
             this.colBatBuoc.Visible = true;
             this.colBatBuoc.VisibleIndex = 4;
             // 
-            // khoanThuHangNamTableAdapter
-            // 
-            this.khoanThuHangNamTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmKhoanThuHangNam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,7 +277,6 @@
         private DevExpress.XtraEditors.SimpleButton btnChinhSua;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnThem;
-        private Dao.QLMamNonDsTableAdapters.KhoanThuHangNamTableAdapter khoanThuHangNamTableAdapter;
         private System.Windows.Forms.BindingSource khoanThuHangNamRowBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colBatBuoc;
         private DevExpress.XtraGrid.Columns.GridColumn colKhoi;

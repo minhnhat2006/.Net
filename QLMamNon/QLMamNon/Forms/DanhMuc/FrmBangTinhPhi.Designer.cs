@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.DanhMuc
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.DanhMuc
 {
     partial class FrmBangTinhPhi
     {
@@ -153,7 +155,7 @@
             // 
             // bangTinhPhiRowBindingSource
             // 
-            this.bangTinhPhiRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.BangTinhPhiRow);
+            this.bangTinhPhiRowBindingSource.DataSource = typeof(bangtinhphi);
             this.bangTinhPhiRowBindingSource.Sort = "KhoiId,KhoanThuId";
             // 
             // gvMain
@@ -243,7 +245,7 @@
             this.ClientSize = new System.Drawing.Size(792, 733);
             this.Controls.Add(this.panelMain);
             this.Name = "FrmBangTinhPhi";
-            this.Text = "Các Khoản thu hàng năm";
+            this.Text = "Bảng tính phí";
             this.Load += new System.EventHandler(this.FrmBangTinhPhi_Load);
             this.panelMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

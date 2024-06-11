@@ -15,9 +15,10 @@ namespace QLMamNon.Service.SMS
         public const int TYPE_BRANDNAME_NOTIFY = 4; // Gửi sms sử dụng brandname Notify
         public const int TYPE_GATEWAY = 5; // Gửi sms sử dụng app android từ số di động cá nhân, download app tại đây: https://play.google.com/store/apps/details?id=com.speedsms.gateway
 
-        public void SendSMS(List<string> phoneNumbers, string content)
+        public Dictionary<string, bool> SendSMS(Dictionary<string, string> phoneNumberToSmsContentDic)
         {
-            string response = this.sendSMS(phoneNumbers.ToArray(), content, Settings.Default.SpeedSMSType, Settings.Default.SpeedSMSSender);
+            //string response = this.sendSMS(phoneNumbers.ToArray(), content, Settings.Default.SpeedSMSType, Settings.Default.SpeedSMSSender);
+            return null;
         }
 
         public String getUserInfo()

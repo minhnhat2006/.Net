@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Linq;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.UserControls;
 
 namespace QLMamNon.Forms.DanhMuc
 {
-    public partial class FrmTruongHoc : CRUDForm
+    public partial class FrmTruongHoc : CRUDForm<truong>
     {
         public FrmTruongHoc()
         {
@@ -14,9 +16,9 @@ namespace QLMamNon.Forms.DanhMuc
             this.DanhMuc = DanhMucConstant.TruongHoc;
             this.FormKey = AppForms.FormDanhMucTruongHoc;
 
-            this.truongRowBindingSource.DataSource = this.truongTableAdapter.GetData();
+            this.truongRowBindingSource.DataSource = Entities.truongs.ToList();
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormTruongHoc();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.truongTableAdapter.Adapter, this.truongRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.TruongDataTable);
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.truongRowBindingSource.DataSource);
         }
 
         private void FrmTruongHoc_Load(object sender, EventArgs e)

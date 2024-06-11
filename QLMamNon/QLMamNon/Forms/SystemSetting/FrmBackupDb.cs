@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using QLMamNon.Facade;
 using QLMamNon.Properties;
 using System.IO;
+using System.Windows.Forms;
 
 namespace QLMamNon.Forms.Authenticate
 {
@@ -38,7 +39,14 @@ namespace QLMamNon.Forms.Authenticate
                 }, uiScheduler).
                 ContinueWith((x) =>
                 {
-                    GDriveFacade.UploadFile("", sqlFileName);
+                    try
+                    {
+                        GDriveFacade.UploadFile("", sqlFileName);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                     return sqlFileName;
                 }).
                 ContinueWith((x) =>

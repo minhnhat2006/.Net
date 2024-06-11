@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ACG.Core.WinForm.Mediator;
-using ACG.Core.WinForm.Data.Static;
+﻿using ACG.Core.WinForm.Data.Static;
+using QLMamNon.Dao;
 
 namespace QLMamNon.Facade
 {
@@ -26,14 +22,35 @@ namespace QLMamNon.Facade
             staticDataMap.Remove(key);
         }
 
+        public static void Reload(string key)
+        {
+            ((StaticDataMap)staticDataMap).Reload(key);
+        }
+
+        public static qlmamnonEntities GetQLMNEntities()
+        {
+            qlmamnonEntities entities = new qlmamnonEntities();
+            return entities;
+        }
+
         public static object Get(string key)
         {
-            return staticDataMap.Get(key);
+            if (staticDataMap != null)
+            {
+                return staticDataMap.Get(key);
+            }
+
+            return null;
         }
 
         public static bool Contains(string key)
         {
-            return staticDataMap.Contains(key);
+            if (staticDataMap != null)
+            {
+                return staticDataMap.Contains(key);
+            }
+
+            return false;
         }
     }
 }

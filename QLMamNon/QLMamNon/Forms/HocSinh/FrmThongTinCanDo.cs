@@ -30,7 +30,7 @@ namespace QLMamNon.Forms.HocSinh
 
             this.hocSinhRowBindingSource.DataSource = this.hocSinhTableAdapter.GetData();
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormThongTinHocSinh();
-            this.InitForm(null, null, null, this.btnLuu, this.btnHuyBo, this.gvMain, this.hocSinhTableAdapter.Adapter, this.hocSinhRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.HocSinhDataTable);
+            this.InitForm(null, null, null, this.btnLuu, this.btnHuyBo, this.gvMain, this.hocSinhTableAdapter.Adapter, this.hocSinhRowBindingSource.DataSource as List<hocsinh>);
         }
 
         private void FrmThongTinCanDo_Load(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace QLMamNon.Forms.HocSinh
                 object tinhId = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "TinhThanhPhoId");
                 if (tinhId != DBNull.Value)
                 {
-                    e.DisplayText = StaticDataUtil.GetThanhPhoById(StaticDataFacade.Get(StaticDataKeys.TinhThanhPho) as QLMamNon.Dao.QLMamNonDs.ThanhPhoDataTable, (int)tinhId);
+                    e.DisplayText = StaticDataUtil.GetThanhPhoById(StaticDataFacade.Get(StaticDataKeys.TinhThanhPho) as ThanhPhoDataTable, (int)tinhId);
                 }
             }
             else if (e.Column.FieldName == "QuanHuyenId" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
@@ -65,7 +65,7 @@ namespace QLMamNon.Forms.HocSinh
                 object quanHuyenId = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "QuanHuyenId");
                 if (quanHuyenId != DBNull.Value)
                 {
-                    e.DisplayText = StaticDataUtil.GetQuanHuyenById(StaticDataFacade.Get(StaticDataKeys.QuanHuyen) as QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable, (int)quanHuyenId);
+                    e.DisplayText = StaticDataUtil.GetQuanHuyenById(StaticDataFacade.Get(StaticDataKeys.QuanHuyen) as QuanHuyenDataTable, (int)quanHuyenId);
                 }
             }
             else if (e.Column.FieldName == "PhuongXaId" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
@@ -73,7 +73,7 @@ namespace QLMamNon.Forms.HocSinh
                 object phuongXaId = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "PhuongXaId");
                 if (phuongXaId != DBNull.Value)
                 {
-                    e.DisplayText = StaticDataUtil.GetPhuongXaById(StaticDataFacade.Get(StaticDataKeys.PhuongXa) as QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable, (int)phuongXaId);
+                    e.DisplayText = StaticDataUtil.GetPhuongXaById(StaticDataFacade.Get(StaticDataKeys.PhuongXa) as PhuongXaDataTable, (int)phuongXaId);
                 }
             }
             else if (e.Column.FieldName == "NgaySinh" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle && e.Value != DBNull.Value)
@@ -100,7 +100,7 @@ namespace QLMamNon.Forms.HocSinh
 
         private void cmbThanhPho_EditValueChanged(object sender, EventArgs e)
         {
-            QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable table = StaticDataFacade.Get(StaticDataKeys.QuanHuyen) as QLMamNon.Dao.QLMamNonDs.QuanHuyenDataTable;
+            QuanHuyenDataTable table = StaticDataFacade.Get(StaticDataKeys.QuanHuyen) as QuanHuyenDataTable;
             if (cmbThanhPho.EditValue != DBNull.Value && cmbThanhPho.EditValue != null)
             {
                 this.quanHuyenRowBindingSource.DataSource = table.Select(String.Format("ThanhPhoId={0}", cmbThanhPho.EditValue));
@@ -113,7 +113,7 @@ namespace QLMamNon.Forms.HocSinh
 
         private void cmbQuanHuyen_EditValueChanged(object sender, EventArgs e)
         {
-            QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable table = StaticDataFacade.Get(StaticDataKeys.PhuongXa) as QLMamNon.Dao.QLMamNonDs.PhuongXaDataTable;
+            PhuongXaDataTable table = StaticDataFacade.Get(StaticDataKeys.PhuongXa) as PhuongXaDataTable;
             if (cmbQuanHuyen.EditValue != DBNull.Value && cmbQuanHuyen.EditValue != null)
             {
                 this.phuongXaRowBindingSource.DataSource = table.Select(String.Format("QuanHuyenId={0}", cmbQuanHuyen.EditValue));

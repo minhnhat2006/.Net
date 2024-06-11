@@ -1,10 +1,12 @@
-﻿using System;
-using QLMamNon.Constant;
+﻿using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.UserControls;
+using System;
+using System.Data.Entity;
 
 namespace QLMamNon.Forms.DanhMuc
 {
-    public partial class FrmPhanLoaiThu : CRUDForm
+    public partial class FrmPhanLoaiThu : CRUDForm<phanloaithu>
     {
         public FrmPhanLoaiThu()
         {
@@ -13,10 +15,10 @@ namespace QLMamNon.Forms.DanhMuc
             this.TablePrimaryKey = "PhanLoaiThuId";
             this.DanhMuc = DanhMucConstant.PhanLoaiThu;
             this.FormKey = AppForms.FormDanhMucPhanLoaiThu;
-
-            this.phanLoaiThuRowBindingSource.DataSource = this.phanLoaiThuTableAdapter.GetData();
+            Entities.phanloaithus.Load();
+            this.phanLoaiThuRowBindingSource.DataSource = Entities.phanloaithus.Local.ToBindingList();
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormPhanLoaiThu();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.phanLoaiThuTableAdapter.Adapter, this.phanLoaiThuRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.PhanLoaiThuDataTable);
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.phanLoaiThuRowBindingSource.DataSource);
         }
 
         private void FrmPhanLoaiThu_Load(object sender, EventArgs e)

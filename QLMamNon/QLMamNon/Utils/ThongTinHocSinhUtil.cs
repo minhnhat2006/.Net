@@ -1,38 +1,36 @@
-﻿using System;
+﻿using QLMamNon.Dao;
+using System;
 using System.Collections.Generic;
-using QLMamNon.Dao.QLMamNonDsTableAdapters;
 
 namespace QLMamNon
 {
     public static class ThongTinHocSinhUtil
     {
-        public static void EvaluateLopInfoForHocSinhTable(HocSinhLopTableAdapter hocSinhLopTableAdapter, QLMamNon.Dao.QLMamNonDs.HocSinhDataTable hocSinhTable)
+        public static void EvaluateLopInfoForHocSinhTable(qlmamnonEntities entities, List<hocsinh> hocSinhTable)
         {
-            List<int> hocSinhIds = new List<int>(hocSinhTable.Rows.Count);
-            foreach (QLMamNon.Dao.QLMamNonDs.HocSinhRow row in hocSinhTable)
+            List<int> hocSinhIds = new List<int>(hocSinhTable.Count);
+            foreach (hocsinh row in hocSinhTable)
             {
                 hocSinhIds.Add(row.HocSinhId);
             }
 
-            Dictionary<int, QLMamNon.Dao.QLMamNonDs.HocSinhLopRow> hocSinhIdsToHocSinhLops = StaticDataUtil.GetHocSinhLopsByHocSinhIds(hocSinhIds, DateTime.Now);
-            Dictionary<int, QLMamNon.Dao.QLMamNonDs.LopRow> hocSinhIdsToLops = StaticDataUtil.GetLopsByHocSinhIds(hocSinhIds, DateTime.Now);
+            Dictionary<int, hocsinh_lop> hocSinhIdsToHocSinhLops = StaticDataUtil.GetHocSinhLopsByHocSinhIds(entities, hocSinhIds, DateTime.Now);
+            Dictionary<int, lop> hocSinhIdsToLops = StaticDataUtil.GetLopsByHocSinhIds(entities, hocSinhIds, DateTime.Now);
 
-            foreach (QLMamNon.Dao.QLMamNonDs.HocSinhRow row in hocSinhTable)
+            foreach (hocsinh row in hocSinhTable)
             {
                 if (hocSinhIdsToLops.ContainsKey(row.HocSinhId))
                 {
-                    QLMamNon.Dao.QLMamNonDs.LopRow lop = hocSinhIdsToLops[row.HocSinhId];
+                    lop lop = hocSinhIdsToLops[row.HocSinhId];
                     row.LopDangHoc = lop.Name;
                 }
 
                 if (hocSinhIdsToHocSinhLops.ContainsKey(row.HocSinhId))
                 {
-                    QLMamNon.Dao.QLMamNonDs.HocSinhLopRow hocSinhLop = hocSinhIdsToHocSinhLops[row.HocSinhId];
+                    hocsinh_lop hocSinhLop = hocSinhIdsToHocSinhLops[row.HocSinhId];
                     row.NgayVaoLop = hocSinhLop.DateJoin;
                 }
             }
-
-            hocSinhTable.AcceptChanges();
         }
     }
 }

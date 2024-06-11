@@ -1,18 +1,18 @@
-﻿using UserPrivilegeDataTable = QLMamNon.Dao.QLMamNonDs.UserPrivilegeDataTable;
-using UserRow = QLMamNon.Dao.QLMamNonDs.UserRow;
+﻿using QLMamNon.Dao;
+using System.Collections.Generic;
 
 namespace QLMamNon.Entity
 {
     public class AuthenticatedEntity
     {
-        public AuthenticatedEntity(UserRow user, UserPrivilegeDataTable table)
+        public AuthenticatedEntity(user user, List<user_privilege> table)
         {
             this.User = user;
             this.UserPrivilegeTable = table;
         }
 
-        public UserRow User { get; set; }
+        public user User { get; set; }
 
-        public UserPrivilegeDataTable UserPrivilegeTable { get; set; }
+        public List<user_privilege> UserPrivilegeTable { get; set; }
     }
 }

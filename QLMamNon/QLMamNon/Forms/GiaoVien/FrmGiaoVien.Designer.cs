@@ -66,7 +66,6 @@
             this.btnChinhSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.giaoVienTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.GiaoVienTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
@@ -131,7 +130,7 @@
             // 
             // giaoVienRowBindingSource
             // 
-            this.giaoVienRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.GiaoVienRow);
+            this.giaoVienRowBindingSource.DataSource = typeof(GiaoVien);
             // 
             // gvMain
             // 
@@ -334,7 +333,7 @@
             // 
             // quanHuyenRowBindingSource
             // 
-            this.quanHuyenRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.QuanHuyenRow);
+            this.quanHuyenRowBindingSource.DataSource = typeof(QuanHuyenRow);
             // 
             // cmbPhuongXa
             // 
@@ -360,7 +359,7 @@
             // 
             // phuongXaRowBindingSource
             // 
-            this.phuongXaRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhuongXaRow);
+            this.phuongXaRowBindingSource.DataSource = typeof(PhuongXaRow);
             // 
             // Root
             // 
@@ -588,8 +587,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colQuanHuyenId;
         private DevExpress.XtraGrid.Columns.GridColumn colPhuongXaId;
         private DevExpress.XtraGrid.Columns.GridColumn colDiaChi;
-        private Dao.QLMamNonDsTableAdapters.GiaoVienTableAdapter giaoVienTableAdapter;
-
-
     }
 }

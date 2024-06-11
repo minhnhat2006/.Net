@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.DanhMuc
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.DanhMuc
 {
     partial class FrmPhanLoaiThu
     {
@@ -42,7 +44,6 @@
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colPhanLoaiThuId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.phanLoaiThuTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhanLoaiThuTableAdapter();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -150,7 +151,7 @@
             // 
             // phanLoaiThuRowBindingSource
             // 
-            this.phanLoaiThuRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.PhanLoaiThuRow);
+            this.phanLoaiThuRowBindingSource.DataSource = typeof(phanloaithu);
             // 
             // gvMain
             // 
@@ -180,10 +181,6 @@
             this.colDescription.Visible = true;
             this.colDescription.VisibleIndex = 1;
             this.colDescription.Width = 354;
-            // 
-            // phanLoaiThuTableAdapter
-            // 
-            this.phanLoaiThuTableAdapter.ClearBeforeFill = true;
             // 
             // FrmPhanLoaiThu
             // 
@@ -217,7 +214,6 @@
         private DevExpress.XtraEditors.SimpleButton btnChinhSua;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnThem;
-        private Dao.QLMamNonDsTableAdapters.PhanLoaiThuTableAdapter phanLoaiThuTableAdapter;
         private System.Windows.Forms.BindingSource phanLoaiThuRowBindingSource;
     }
 }

@@ -29,22 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBackupDb));
-            this.userTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.UserTableAdapter();
-            this.userPrivilegeTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.UserPrivilegeTableAdapter();
             this.progressBarControl1 = new DevExpress.XtraEditors.ProgressBarControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lblState = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // userTableAdapter
-            // 
-            this.userTableAdapter.ClearBeforeFill = true;
-            // 
-            // userPrivilegeTableAdapter
-            // 
-            this.userPrivilegeTableAdapter.ClearBeforeFill = true;
             // 
             // progressBarControl1
             // 
@@ -110,8 +100,6 @@
 
         #endregion
 
-        private QLMamNon.Dao.QLMamNonDsTableAdapters.UserTableAdapter userTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.UserPrivilegeTableAdapter userPrivilegeTableAdapter;
         private DevExpress.XtraEditors.ProgressBarControl progressBarControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl lblState;

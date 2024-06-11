@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.HocSinh
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.HocSinh
 {
     partial class FrmThongTinHocTap
     {
@@ -69,7 +71,6 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
-            this.viewHocTapTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ViewHocTapTableAdapter();
             this.colNgayTinh = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
@@ -143,7 +144,7 @@
             // 
             // lopRowBindingSource
             // 
-            this.lopRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.LopRow);
+            this.lopRowBindingSource.DataSource = typeof(lop);
             // 
             // gcMain
             // 
@@ -161,7 +162,7 @@
             // 
             // viewHocTapRowBindingSource
             // 
-            this.viewHocTapRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.ViewHocTapRow);
+            this.viewHocTapRowBindingSource.DataSource = typeof(viewhoctap);
             // 
             // gvMain
             // 
@@ -565,10 +566,6 @@
             this.btnHuyBo.TabIndex = 0;
             this.btnHuyBo.Text = "Hủy bỏ";
             // 
-            // viewHocTapTableAdapter
-            // 
-            this.viewHocTapTableAdapter.ClearBeforeFill = true;
-            // 
             // colNgayTinh
             // 
             this.colNgayTinh.FieldName = "NgayTinh";
@@ -649,7 +646,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand28;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand6;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
-        private Dao.QLMamNonDsTableAdapters.ViewHocTapTableAdapter viewHocTapTableAdapter;
         private DevExpress.XtraEditors.ComboBoxEdit cmbThang;
         private System.Windows.Forms.BindingSource namHocBindingSource;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colHocSinhLopId;

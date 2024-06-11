@@ -1,9 +1,11 @@
 ﻿using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.UserControls;
+using System.Data.Entity;
 
 namespace QLMamNon.Forms.DanhMuc
 {
-    public partial class FrmTinhThanhPho : CRUDForm
+    public partial class FrmTinhThanhPho : CRUDForm<thanhpho>
     {
         public FrmTinhThanhPho()
         {
@@ -12,10 +14,10 @@ namespace QLMamNon.Forms.DanhMuc
             this.TablePrimaryKey = "ThanhPhoId";
             this.DanhMuc = DanhMucConstant.TinhThanhPho;
             this.FormKey = AppForms.FormDanhMucTruongHoc;
-
-            this.thanhPhoRowBindingSource.DataSource = this.thanhPhoTableAdapter.GetData();
+            Entities.thanhphoes.Load();
+            this.thanhPhoRowBindingSource.DataSource = Entities.thanhphoes.Local.ToBindingList();
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormTinhThanhPho();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.thanhPhoTableAdapter.Adapter, this.thanhPhoRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.ThanhPhoDataTable);
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.thanhPhoRowBindingSource.DataSource);
         }
     }
 }

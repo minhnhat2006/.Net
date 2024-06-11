@@ -13,5 +13,6 @@ namespace QLMamNon.Constant
         public const int KhoanThuIdHocPhi = 4;
         public const int KhoanThuIdAnSang = 5;
         public const int KhoanThuIdAnToi = 6;
+        public const int KhoanThuIdTienSua = 7;
     }
 }

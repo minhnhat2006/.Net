@@ -1,9 +1,14 @@
-﻿using QLMamNon.Constant;
+﻿using System;
+using DevExpress.XtraGrid.Views.Base;
+using QLMamNon.Constant;
 using QLMamNon.UserControls;
+using QLMamNon.Dao;
+using System.ComponentModel;
+using System.Data.Entity;
 
 namespace QLMamNon.Forms.DanhMuc
 {
-    public partial class FrmTaiSan : CRUDForm
+    public partial class FrmTaiSan : CRUDForm<taisan>
     {
         public FrmTaiSan()
         {
@@ -15,23 +20,26 @@ namespace QLMamNon.Forms.DanhMuc
 
             this.gvMain.OptionsEditForm.CustomEditFormLayout = new UCEditFormTaiSan();
             this.loadTaiSanData();
-            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.viewTaiSanTableAdapter.Adapter, this.viewTaiSanRowBindingSource.DataSource as QLMamNon.Dao.QLMamNonDs.ViewTaiSanDataTable);
+            this.InitForm(this.btnThem, this.btnChinhSua, this.btnXoa, this.btnLuu, this.btnHuyBo, this.gvMain, this.viewTaiSanRowBindingSource.DataSource);
         }
 
         private void loadTaiSanData()
         {
-            QLMamNon.Dao.QLMamNonDs.ViewTaiSanDataTable dataTable = this.viewTaiSanTableAdapter.GetData();
+            Entities.viewtaisans.Load();
+            BindingList<viewtaisan> dataTable = Entities.viewtaisans.Local.ToBindingList();
             this.viewTaiSanRowBindingSource.DataSource = dataTable;
-            fillRelativeMainDataTable();
         }
 
-        protected override void fillRelativeMainDataTable()
+        private void gvMain_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
         {
-            QLMamNon.Dao.QLMamNonDs.ViewTaiSanDataTable dataTable = (QLMamNon.Dao.QLMamNonDs.ViewTaiSanDataTable)this.viewTaiSanRowBindingSource.DataSource;
-
-            foreach (QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow row in dataTable)
+            ColumnView view = sender as ColumnView;
+            if (e.Column.FieldName == "PhanLoaiTaiSan" && e.ListSourceRowIndex != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
             {
-                row.PhanLoaiTaiSan = StaticDataUtil.GetPhanLoaiChiNameByPhieuChiId(this.phieuChiTableAdapter, row.PhieuChiId);
+                object objPhieuChiId = view.GetListSourceRowCellValue(e.ListSourceRowIndex, "PhieuChiId");
+                if (objPhieuChiId != null)
+                {
+                    e.DisplayText = StaticDataUtil.GetPhanLoaiChiNameByPhieuChiId(Entities, (int)objPhieuChiId);
+                }
             }
         }
     }

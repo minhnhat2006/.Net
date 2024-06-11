@@ -1,19 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using ACG.Core.WinForm.Util;
 using QLMamNon.Components.Data.Static;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
 using QLMamNon.Service.Data;
 using FormShowType = QLMamNon.Facade.FormMainFacade.FormShowType;
-using UserDataTable = QLMamNon.Dao.QLMamNonDs.UserDataTable;
-using UserPrivilegeDataTable = QLMamNon.Dao.QLMamNonDs.UserPrivilegeDataTable;
 
 namespace QLMamNon.Forms.Authenticate
 {
     public partial class FrmLogin : DevExpress.XtraEditors.XtraForm
     {
+        private qlmamnonEntities entities;
+
         public FrmLogin()
         {
+            entities = StaticDataFacade.GetQLMNEntities();
+
             InitializeComponent();
         }
 
@@ -22,7 +26,7 @@ namespace QLMamNon.Forms.Authenticate
             AuthenService authenService = new AuthenService();
             string username = txtUsername.Text;
             string password = PasswordUtil.GetMd5Hash(txtPassword.Text);
-            UserDataTable userDataTable = authenService.GetUsersForLogin(this.userTableAdapter, username, password);
+            List<user> userDataTable = authenService.GetUsersForLogin(entities, username, password);
 
             if (userDataTable.Count == 0)
             {
@@ -31,7 +35,7 @@ namespace QLMamNon.Forms.Authenticate
             }
             else
             {
-                UserPrivilegeDataTable upTable = authenService.LoadUserPrivileges(this.userPrivilegeTableAdapter, userDataTable[0].UserId);
+                List<user_privilege> upTable = authenService.LoadUserPrivileges(entities, userDataTable[0].UserId);
                 authenService.SetAuthenticatedUser(userDataTable[0], upTable);
                 this.Close();
 
@@ -51,6 +55,24 @@ namespace QLMamNon.Forms.Authenticate
             else
             {
                 FormMainFacade.ShowDialog(form);
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                e.Handled = true;
+                btnLogin_Click(sender, null);
+            }
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                e.Handled = true;
+                btnLogin_Click(sender, null);
             }
         }
     }

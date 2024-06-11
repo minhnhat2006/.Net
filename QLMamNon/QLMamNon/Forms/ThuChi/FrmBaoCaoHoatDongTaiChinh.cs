@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using ACG.Core.WinForm.Util;
+﻿using ACG.Core.WinForm.Util;
 using DevExpress.XtraGrid.Views.Grid;
 using QLMamNon.Components.Data.Static;
 using QLMamNon.Constant;
+using QLMamNon.Dao;
 using QLMamNon.Facade;
-using QLThuChi;
+using QLMamNon.Reports;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace QLMamNon.Forms.ThuChi
 {
@@ -20,7 +21,7 @@ namespace QLMamNon.Forms.ThuChi
 
         public bool IsEditing { get; set; }
 
-        public QLMamNon.Dao.QLMamNonDs.PhieuThuRow PhieuThuRow { get; set; }
+        public phieuthu PhieuThuRow { get; set; }
 
         #endregion
 

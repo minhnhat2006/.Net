@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.Forms.DanhMuc
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.Forms.DanhMuc
 {
     partial class FrmTaiSan
     {
@@ -51,9 +53,6 @@
             this.btnChinhSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.viewTaiSanTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.ViewTaiSanTableAdapter();
-            this.phanLoaiChiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhanLoaiChiTableAdapter();
-            this.phieuChiTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.PhieuChiTableAdapter();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewTaiSanRowBindingSource)).BeginInit();
@@ -73,9 +72,9 @@
             // 
             // gcMain
             // 
-            this.gcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gcMain.DataSource = this.viewTaiSanRowBindingSource;
             this.gcMain.Location = new System.Drawing.Point(0, 0);
             this.gcMain.MainView = this.gvMain;
@@ -87,7 +86,7 @@
             // 
             // viewTaiSanRowBindingSource
             // 
-            this.viewTaiSanRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.ViewTaiSanRow);
+            this.viewTaiSanRowBindingSource.DataSource = typeof(viewtaisan);
             // 
             // gvMain
             // 
@@ -110,6 +109,7 @@
             this.gvMain.OptionsEditForm.FormCaptionFormat = "Chỉnh sửa thông tin Tài sản";
             this.gvMain.OptionsEditForm.PopupEditFormWidth = 700;
             this.gvMain.OptionsView.ShowGroupPanel = false;
+            this.gvMain.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.gvMain_CustomColumnDisplayText);
             // 
             // colSTT
             // 
@@ -289,18 +289,6 @@
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             // 
-            // viewTaiSanTableAdapter
-            // 
-            this.viewTaiSanTableAdapter.ClearBeforeFill = true;
-            // 
-            // phanLoaiChiTableAdapter
-            // 
-            this.phanLoaiChiTableAdapter.ClearBeforeFill = true;
-            // 
-            // phieuChiTableAdapter
-            // 
-            this.phieuChiTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmTaiSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,8 +323,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTen;
         private DevExpress.XtraGrid.Columns.GridColumn colSoLuong;
         private DevExpress.XtraGrid.Columns.GridColumn colDonViTinh;
-        private Dao.QLMamNonDsTableAdapters.ViewTaiSanTableAdapter viewTaiSanTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.PhanLoaiChiTableAdapter phanLoaiChiTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colPhanLoaiChi;
         private DevExpress.XtraGrid.Columns.GridColumn colDonGia;
         private DevExpress.XtraGrid.Columns.GridColumn colThanhTien;
@@ -345,6 +331,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colNgayChungTu;
         private System.Windows.Forms.BindingSource viewTaiSanRowBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colPhanLoaiChiId;
-        private Dao.QLMamNonDsTableAdapters.PhieuChiTableAdapter phieuChiTableAdapter;
     }
 }

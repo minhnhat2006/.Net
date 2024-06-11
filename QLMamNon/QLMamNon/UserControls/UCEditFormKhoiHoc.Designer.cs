@@ -1,4 +1,6 @@
-﻿namespace QLMamNon.UserControls
+﻿using QLMamNon.Dao;
+
+namespace QLMamNon.UserControls
 {
     partial class UCEditFormKhoiHoc
     {
@@ -40,8 +42,6 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.dxValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.truongTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.TruongTableAdapter();
-            this.khoiTruongTableAdapter = new QLMamNon.Dao.QLMamNonDsTableAdapters.KhoiTruongTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTruong.Properties)).BeginInit();
@@ -104,7 +104,7 @@
             // 
             // truongRowBindingSource
             // 
-            this.truongRowBindingSource.DataSource = typeof(QLMamNon.Dao.QLMamNonDs.TruongRow);
+            this.truongRowBindingSource.DataSource = typeof(truong);
             // 
             // txtName
             // 
@@ -187,14 +187,6 @@
             // 
             this.dxValidationProvider.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
             // 
-            // truongTableAdapter
-            // 
-            this.truongTableAdapter.ClearBeforeFill = true;
-            // 
-            // khoiTruongTableAdapter
-            // 
-            this.khoiTruongTableAdapter.ClearBeforeFill = true;
-            // 
             // UCEditFormKhoiHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,7 +223,5 @@
         private DevExpress.XtraEditors.LookUpEdit cmbTruong;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private System.Windows.Forms.BindingSource truongRowBindingSource;
-        private Dao.QLMamNonDsTableAdapters.TruongTableAdapter truongTableAdapter;
-        private Dao.QLMamNonDsTableAdapters.KhoiTruongTableAdapter khoiTruongTableAdapter;
     }
 }
